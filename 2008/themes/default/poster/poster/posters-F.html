@@ -1,0 +1,964 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+* { font-size:13px; font-family: Verdana, "Trebuchet MS", Arial, sans-serif; }
+div { width:800px; margin:5px 0; padding-bottom:5px;}
+div.titolo_pagina { font-weight:bold; font-size:15px; margin-bottom:20px; }
+div.poster { font-weight:bold; border-bottom:1px solid silver; font-size:14px; margin-top:20px;}
+div.titolo { font-weight:bold; font-size:14px; }
+div.autori { border-bottom:1px solid silver; }
+div.inst { border-bottom:1px solid silver; }
+div.shabs { font-style:italic; font-size:12px; border-bottom:1px solid gray;}
+div.exabs { font-size:12px;}
+div.keys { color:gray; }
+</style>
+</head>
+<body>
+<div class="titolo_pagina">
+Poster Abstracts for Category F: Transcriptomics
+</div>
+<a name="1
+"></a>
+<div class="poster">
+Poster F01
+</div>
+<div class="titolo">
+Design and Implementation of a MicroRNAs-mRNAs cancer warehouse
+</div>
+<div class="autori">
+Reinier Frederic, Orsini Massimiliano, Enrico Capobianco
+</div>
+<div class="inst">
+CRS4 Bioinformatics Lab
+</div>
+<div class="shabs">
+MicroRNAs represent a challenging research areas in cancer genomics. An  individual microRNA molecule can regulate many distinct mRNA targets and is involved in key biological processes, particularly disease-related processes. Starting from two major public repositories, Array Express (AE) and Gene Expression Omnibus (GEO), we organize MicroRNAs and Target Genes in a matrix such that statistics inference methods and models can be applied to explore and interpret their associations. Relevance of this result is clearly for cancer studies, and starting by brain we plan to extend to other cancers.
+</div>
+<div class="exabs">
+MicroRNAs are a quite rich class of short, noncoding RNA molecules, approximately 22 nucleotides in length, which regulate gene expression by inhibiting the translation of target genes. 
+The first discovery goes back to Lee R.C., Feinbaum R.L., Ambros V., 1993. The C. elegans heterochronic gene lin-4 encodes small RNAs with antisense complementary to lin-14. Cell 75, 843-854. 
+Currently, this area has become a challenging research field, as microRNAs can silence the expression of target mRNAs by binding to their complementary sequences within the 3' UTR (i.e. 3' untranslated region). 
+It is expected that an individual microRNA molecule can regulate many distinct mRNA targets; thus, microRNAs are probably involved in several key biological processes, and their regulative control mechanisms can be very relevant for understanding disease-related processes. 
+Naturally enough, there are several open problems. We consider some aspects concerning the way the available public information about relationships between microRNAs and their targets can be optimally used with reference to a specific application domain, cancer in this case.
+The questions we started to address are mainly these:
+1.What is currently available and usable about the association of interest, i.e. microRNas-mRNAs, in the main public repositories?
+1.1	We have considered Array Express (AE) from EBI (UK), and Gene Expression Omnibus (GEO) from NCBI (USA) repositories - both have MIAME-compliant microarray datasets, thus based on specific check-listed criteria 
+(see Brazma et al., Minimum information about a microarray experiment (MIAME)—toward standards for microarray data, 2001, Nature Genetics, 29, 365 – 371)
+1.2	We have taken brain cancer as our pilot study
+2. What effort is required in terms of data mining to achieve what we call a microRNAs-mRNAs warehouse matrix (W-matrix)? 
+2.1 We have adopted different approaches for AE and GEO, the former being a "direct" one and the latter an “inverse” one.
+Direct approach for microRNAs (AE): MicroRNAs-TO-Target genes
+a - search Experiments on Brain Cancer
+b - microRNA’s gene list from AE warehouse
+c – target gene list from Mirbase warehouse
+d – microRNAs and targets expressions 
+e - W-Matrix construction
+Outcome: 
+Experiments --> MicroRNAs --> --/Mirbase/-- --> Target Genes --> Expressions 
+==> W-Matrix
+Inverse approach for microRNAs (GEO): Target Genes-TO-MicroRNAs
+a - search Experiments on Brain Cancer
+b - target gene list
+c - search transcripts & corresponding miRNAs in Mirbase  warehouse
+d - W-Matrix construction
+Outcome:
+Experiments --> Target Genes --> ---/Mirbase/-- --> MicroRNAs --> Expressions 
+==> W-Matrix
+2.2 Given the complexity of gene-transcript matches that we found, we have pursued some procedures whose steps can be described as follows: 
+a – from GEO we obtained a list of gene analyzed for the chosen pathology
+b – for each gene in this list we obtained a list of transcripts in the current version of Ensembl (http://www.ensembl.org) – joint effort betweeb EMBL, EBI and Sanger, Wellcome Trust funded - and VEGA (http://vega.sanger.ac.uk/index.html)  - from Sanger.
+c – for each transcript we mapped microRNA target sites on the basis of Miranda prediction
+d – [optional] clustering 
+e – download expressions for both microRNAs and targets
+3. What level of data and method integration is required to achieve satisfactory results which allow to support association studies with regard to regulation aspects of microRNAs towards target genes involved in cancer? 
+3.1 goal 1 - obtain expression profiles for microRNAs and mRNAs
+3.2 goal 2 - adopt a data integration approach to complement the limited information core embedded in AE and GEO
+3.3 goal 3 - once available the W-matrix, is to perform data analysis via statistical and machine learning tools and techniques
+3.4 goal 4 - extend the analysis to other cancer types
+</div>
+<div class="keys">
+Keywords: transcriptomics, MicroRNA, data warehousing, cancer
+</div>
+<a name="2
+"></a>
+<div class="poster">
+Poster F02
+</div>
+<div class="titolo">
+Meta-analysis of expression signatures of muscle atrophy: gene interaction networks in early and late stages
+</div>
+<div class="autori">
+Calura E. (1), Cagnin S. (2), Raffaello A.  (2), Lanfranchi G. (2), Romualdi C. (2)
+</div>
+<div class="inst">
+(1) Department of Biology, University of Ferrara, Via L. Borsari 46 I-44100 Ferrara,Italy, (2) CRIBI Biotechnology Centre and Department of Biology, University of Padova, via U. Bassi 58/B 30121 Padova
+</div>
+<div class="shabs">
+In this study we applied meta-analysis on gene expression signatures pertaining to different types of muscle atrophy for the identification of novel key regulatory signals implicated in atrophy. We found six functional pathways (such as TGF-β, apoptosis, and NFKB) occupying key positions in the reconstructed regulatory network obtained by the integration of atrophy transcriptome and molecular interaction data. Furthermore we suggest that SMAD3/4, RACK1, MYC, MAX and JUN transcription factors, could play important roles in regulating muscle response to atrophy.
+</div>
+<div class="exabs">
+Background. Skeletal muscle mass can be markedly reduced though a process called atrophy, as a consequence of many diseases or critical physiological and environmental situations. Atrophy is characterised by loss of contractile proteins and reduction of fiber cross-sectional area. Although in the last decade molecular aspects of several types of atrophy have received increased attention, the fine mechanisms controlling muscle degeneration are still incomplete. In this study we applied meta-analysis on gene expression signatures pertaining to different types of muscle atrophy for the identification of novel key regulatory signals implicated in atrophy.
+Results We found a general down-regulation of genes involved in energy production and carbohydrate metabolism and a complete up-regulation of genes for protein degradation and catabolism. Six functional pathways occupy central positions in the regulatory network obtained by the integration of atrophy transcriptome and molecular interaction data. They are TGF-β pathway, apoptosis, membrane trafficking/cytoskeleton organization, NFKB pathways, inflammation and reorganization of the extracellular matrix. Protein degradation pathway is evident only in the network specific of short-term muscle response to atrophy. TGF-β pathway plays a central role with proteins SMAD3/4, cMYC, MAX and CDKN1A in the general networks, and JUN, MYC, RACK1 in the short-term muscle response network. 
+Conclusions Our study offers a general overview of the molecular pathways and cellular processes regulating the establishment and maintenance of atrophic state in skeletal muscle, showing also how the different pathways are interconnected. This analysis identifies also novel key factors that could be further studied as potential targets for therapeutic purpose. We suggest that SMAD3/4, RACK1, MYC, MAX and JUN transcription factors, whose functions have been studied extensively in tumours but only marginally in muscle, appear instead to play important roles in regulating muscle response to atrophy.
+</div>
+<div class="keys">
+Keywords: skeletal muscle, atrophy, meta-analysis, gene expression, microarray, statistics
+</div>
+<a name="3
+"></a>
+<div class="poster">
+Poster F03
+</div>
+<div class="titolo">
+Combinatorial regulation across species: co-regulatory associations, hierarchy of regulation and evolutionary dynamics
+</div>
+<div class="autori">
+Nitin Bhardwaj, Mark Gerstein
+</div>
+<div class="inst">
+Dept of Molecular Biophysics and Biochemistry, Yale University, 266 Whitney Ave., New Haven, CT 06511, USA
+</div>
+<div class="shabs">
+Co-regulation networks between transcription factors regulating the same gene are built and analyzed for five diverse species revealing many ubiquitous interesting properties: the presence of two kinds of regulatory hubs (integrative hubs that make many co-regulatory associations and autonomous that regulate their target genes in isolation); decentralized connectivity instead of a power-law behavior; interesting co-regulation association patterns between different layers in the regulation hierarchy; a rapid evolutionary divergence by a high rate of gain/loss regulatory interactions.
+</div>
+<div class="exabs">
+Relatively small number of TFs can set up strikingly complex spatial and temporal gene expression patterns. Appropriately, combinatorial gene regulation by various transcription factors (TFs) cooperatively has been an active area of research. While many context- and subsystem-specific rules have emerged, our understanding of the general principles behind combinatorial regulation still remains limited. Here, we build and analyze co-regulation network between TFs for five species displaying a large spectrum of evolution: E coli to Human. We use a network transformation procedure to obtain co-regulatory network describing associations between TFs to regulate common genes.  Analysis of co-regulatory network reveals many interesting properties, such as the presence of two kinds of regulatory hubs: (i) those that make more co-regulatory interactions, thus serving as integrators, and (ii) those that make few co-regulatory interactions, thereby specifically regulating one or few cellular processes. We also find that the degree distribution of co-regulation networks does not follow a power law and shows a decentralized architecture unlike many biological networks that follow power law. Interestingly, the co-regulatory interactions vary as logarithmic of the number of target genes suggesting that the number of co-regulatory interactions reaches a certain value and then stabilizes, except for E coli for which the relationship is linear. We also analyze the co-regulatory network in the context of the hierarchy of gene regulation and, interestingly, we find that co-regulatory interactions occur more frequently between the TFs at the same level of hierarchy than between TFs from different levels. Finally, analysis of the evolutionary dynamics of the co-regulatory network and estimation the growth of these networks by duplication, inheritance, loss of homologous interactions and gain of novel ones reveals that these networks grew predominantly by loss/gain of interactions than by duplication and inheritance. Interestingly, we find that in spite of huge variation in the size and complexity of these networks in different species, these properties show relatively lesser variation across species indicating that these qualities might be inherent properties of these networks.
+</div>
+<div class="keys">
+Keywords: regulatory network, co-regulation, hierarchy
+</div>
+<a name="4
+"></a>
+<div class="poster">
+Poster F04
+</div>
+<div class="titolo">
+A comparison on effects of normalizations in the detection of differentially expressed genes
+</div>
+<div class="autori">
+Risso D. (2), Chiogna M. (1), Massa MS. (1), Romualdi C. (2)
+</div>
+<div class="inst">
+(1) Department of Statistical Sciences, University of Padova, via C. Battisti 241, 35121 Padova, Italy, (2) CRIBI biotechnology Center, University of Padova, via U. Bassi 58/B 35121 Padova, Italy
+</div>
+<div class="shabs">
+In our work we discuss the impact of the normalization techniques for two-channel array on the process of identification of genes differentially expressed. Through three simulation plans (and then with real data), we quantify the impact of normalization procedures: on the sensitivity and specificity and on the gene ranking induced by the test statistic. Although we find a similar impact of different normalizations on sensitivity/specificity, the study highlights an evident impact in terms of gene ranking agreement resulting in different levels of agreement between competing normalizations. 
+</div>
+<div class="exabs">
+Various normalization techniques have been developed in the context of microarray analysis to try to correct expression measurements for experimental bias and random fluctuations. Major techniques include total intensity normalization, intensity dependent normalization, variance stabilizing normalization. Aim of this paper is to discuss the impact of some normalization techniques for two-channel array technology on the process of identification of genes that are differentially expressed.
+ 
+Through three precise simulation plans, we quantify the impact of normalization procedures: (a) on the sensitivity and specificity of a specified test statistic used for the identification of differentially expressed genes, (b) on the gene ranking induced by the statistic.
+As simulation plans we considered two mixture models (Kendziorski et al. 2003), the Gamma-Gamma (GG) and the lognormal-normal (LNN) models and Albers’ et al. (2006) model. In the GG models the intensities for the replicates in both conditions are assumed to be independently generated from Gamma distributions with a gene-specific random scales assumed to have a Gamma distribution, while in the LNN, the log intensities are assumed to be normally distributed, with gene-specific random means themselves normally distributed. Differently from the previous models, Albers et al. (2006) proposes a model specifically drawn to include several layers of bias representative of possible experimental factors influencing microarray experiments. To identify differentially expressed genes, we employ the moderated t test as proposed by Tusher et al. (2001), i.e., the so-called SAM statistic.
+Summarizing our results, we are able to say that in general comparison of the sensitivities and specificities for the significance test performances shows limited difference in impact of preprocessing over the range of operating conditions. On the other side, the study highlights an evident impact in terms of gene ranking agreement. With equal levels of specificity and sensitivity gene lists share an average of 60% of the genes with Albers’ simulation model and 80% with GG and LNN. This might have important effects on some microarray-based research, where through gene ranking and discriminant analysis a small set of genes is selected and to become markers of the studied pathology. Thus, putative marker genes obtained with different normalizations could be substantially different. 
+In case of replacement of null or negative values, the higher the number of replacements, the lower the sensitivity and specificity of the test and the lower the percentage of agreement of gene ranking.  Glog and qsplines show a worse performance; on the other hand, with negatives values, normalizations based on log ratio regression show a poor performance. Then, the best pre-processing action might depend upon the distribution of the data, so that a careful exploratory analysis is called for before applying normalization. 
+Finally, analysing real datasets we obtained results highly similar, in terms of of gene ranking, with Albers’ model, suggesting that this simulation model is a realistic model for microarray data simulation.
+</div>
+<div class="keys">
+Keywords: gene expression, normalization, specificity and sensitivity, statistic, gene ranking, microarrays
+</div>
+<a name="5
+"></a>
+<div class="poster">
+Poster F05
+</div>
+<div class="titolo">
+waviCGH: Web Analysis Visualization and Integration of CGH data.
+</div>
+<div class="autori">
+Angel Carro, Daniel Rico, Eduardo Andres, Francesco Acquadro, Cristina I. Gomez, Gonzalo Gomez-Lopez, David G. Pisano
+</div>
+<div class="inst">
+CNIO - Centro Nacional de Investigaciones Oncologicas
+</div>
+<div class="shabs">
+waviCGH is a web application for the analysis of aCGH data in a genomic and clinical context. The software includes typical analysis of aCGH arrays, including segmentation or finding of common regions gained or lost between patients.  The main feature of waviCGH is that allows the user to visualize the results overlaid in chromosomes, and the gain or losses of each patient can be displayed together other genomic high throughput data – as mRNA or mirRNA expression data. Clinical data from patients can be also uploaded, and cytogenetic browsing can be easily done per each patient.
+</div>
+<div class="exabs">
+waviCGH is a web application for the analysis of aCGH data in a genomic and clinical context. Preprocessing and segmentation is done with snapCGH and calling of gains and losses with CGHcall – both packages from Bioconductor. A new algorithm (superSORI) for curating segments and finding minimal common regions is used, permitting to tune parameters as minimal size of a segment, minimal number of probes per segment, and gap size to allow binding of adjacent segments. Minimal common regions among curated segments are found using Set::IntRange perl library. If researchers prefer to introduce their own thresholds for gains and losses instead of CGHcall calling, desired cut-offs can be also introduced for each sample. 
+A human karyotype browser with chromosomal bands (obtained from ensembl) and the gained and lost segments from each patient is generated by kWWW – a visualization software made with PHP, Ajax, perl, SVG and html. Individual chromosomes can be also explored at higher resolution, and genomic features of the regions of interest can be obtained with the ensembl API. Other high throughput genomic data, as mRNA or mirRNA expression, can be displayed along the chromosome. Clinical data from patients can be also uploaded, and the karyotype of each patient can be viewed together with the corresponding clinical information. 
+superSORI and kWWW can be used directly with the adequate input, so they can be used with aCGH data analyzed by different methods that the ones available in waviCGH. waviCGH offers a user-friendly workflow for the analysis of aCGH data, and allows cytogenetists to integrate the aCGH results with other genomic features without any bioinfomatic knowledge.
+</div>
+<div class="keys">
+Keywords: aCGH, minimal common regions, karyotype, segments
+</div>
+<a name="6
+"></a>
+<div class="poster">
+Poster F06
+</div>
+<div class="titolo">
+Multi-Class Kernel-Imbedded Gaussian Processes for Microarray Data Analysis
+</div>
+<div class="autori">
+Cheung L.W.K. (1), Zhao X. (2)
+</div>
+<div class="inst">
+(1) Loyola University Medical Center, (2) University of Hawaii
+</div>
+<div class="shabs">
+A multi-class kernel-imbedded Gaussian process (mKIGP) was developed under a hierarchical Bayesian framework for disease classification. With a multinomial probit regression setting, a novel adaptive algorithm with a cascading structure was designed to discover significant genes and to make optimal cancer class predictions. The mKIGP allows both linear and non-linear model fitting, so it uniquely provides a unifying approach for the analysis of multi-class microarray data. It outperformed most current state-of-the-art methods in simulated and real microarray studies.
+</div>
+<div class="exabs">
+Identifying significant differentially expressed genes related to a disease can help understand the disease at the genomic and transcriptomic levels. Beyond a lot of machine learning methods, a common approach for microarray data analysis is to build models under a hierarchical Bayesian framework followed by Bayesian inference. There are two main ways to set up a hierarchical probabilistic Bayesian model. One is to build a generative model for a microarray dataset and the other is to adopt a discriminative method. With the generative approach, differential gene expression data were assumed to follow a hierarchical mixture Gaussian distribution and significant differentially expressed genes were selected through Bayesian inference. With the discriminative approach, on the other hand, one needs to suggest a class decision function defined over the microarray data. Most research in the literature focus on using linear decision functions. All these methods have been shown with various levels of effectiveness in finding significant genes in a wide range of real experiments, but they all share one critical limitation: a linear model is not necessarily a good approximation to the underlying biomedical phenomenon. To overcome this disadvantage, a non-linear term has been suggested to add to the regular linear probit regression model in order to form a generalized linear model. 
+Generally speaking, a unifying comprehensive framework for both linear model and non-linear model is extremely useful in real applications. Originated from the dual representation of linear machine learning methods for a binary classification problem, kernel-induced learning is one of the approaches that shows promising potential to achieve this goal. As a mater of fact, kernel-induced support vector machines (SVMs) have been generally accepted as a class of tools for many classification and regression problems, especially because their performance can approximately achieve Bayesian bound without being given a precise probabilistic generative model. By exploring the close relationship between the misclassification rate of SVMs and the generalized comparative Kullback-Leibler distance, it has been showed that if the regularization parameter is appropriately chosen and the dimension of the feature space is high enough then the solution of a kernel-induced SVM approaches to the Bayesian bound when the training sample size is sufficiently large. Least square support vector machines (LSSVMs) conceptually are close to SVMs, but they differ from SVMs in that they use equality constraints instead of inequality constraints and they use a squared error penalty function. The solution of a LSSVM only involves solving a set of linear equations, which though loses the sparseness featured in a SVM, it makes a LSSVM easier to be implemented in a dynamic system. Bayesian probability theory can help construct a unifying framework for modeling data and facilitate tuning of the involved parameters and hyper-parameters. More importantly, Bayesian analysis provides an estimate of the uncertainty in prediction and can shed light for making decisions in many real-world applications. Gaussian processes (GPs) have been shown to be very effective to capture both linear and non-linear relationships in many applications. Furthermore, GPs have a straightforward probabilistic model form. These facts first motivated us to develop a new Bayesian learning framework, kernel-imbedded Gaussian process (KIGP), for microarray gene expression data analysis. In our recent work (Zhao & Cheung, 2007. BMC Bioinformatics, 8:67), we successfully built a KIGP model via a probit regression setting to analyze microarray data for a binary disease classification problem. In this poster, we extend our work to solve a multi-classification problem.
+A hierarchical multi-class statistical model named the kernel-imbedded Gaussian process (mKIGP) was developed under a Bayesian framework for a multi-class disease classification problem using microarray gene expression data. Specifically, based on a multinomial probit regression setting, a novel empirically adaptive algorithm with a cascading structure was designed to find appropriate kernels, to discover significant genes, and to make optimal tumor/cancer class predictions. A Gibbs sampler was adopted as the core of the algorithm to perform Bayesian inference. Since the mKIGP was designed to allow both linear and non-linear model fitting, it uniquely provides a unifying approach for the analysis of multi-class DNA microarray data. The mKIGP performed very close to the Bayesian bound and outperformed most current state-of-the-art methods in simulated studies, including a linear case setting, a non-linear case setting and a non-linear case with a mislabeled training sample. The mKIGP was also applied to three published real microarray datasets, and it was very effective for identifying significant differentially expressed genes in all of these datasets.
+</div>
+<div class="keys">
+Keywords: Multi-class, non-linear, gene expression
+</div>
+<a name="7
+"></a>
+<div class="poster">
+Poster F07
+</div>
+<div class="titolo">
+SSHscreen and SSHdb, a software pipeline for microarray based screening and sequence management of cDNA libraries.
+</div>
+<div class="autori">
+Coetzer N.  (1), Berger D.K. (2), Gazendam I.  (3)
+</div>
+<div class="inst">
+(1) ACGT Computational Biology and Bioinformatics unit, University of Pretoria, 0002, South Africa, (2) Department of Plant Science, Forestry and Agricultural Biotechnology Institute (FABI), University of Pretoria, 0002, South Africa, (3) Biotechnology Division, Agricultural Research Council-Vegetable and Ornamental Plant Institute, Private Bag X293, Pretoria, 0001, South Africa
+</div>
+<div class="shabs">
+SSHscreen is an R package using limma functions from the BioConductor project for screening SSH cDNA libraries on glass slide microarrays. It quantitatively describes each clone in terms of up/down regulation and rare/abundance. SSHdb is a database for managing sequence and annotation data for clones after SSHscreen analysis.
+</div>
+<div class="exabs">
+Suppression subtraction hybridization (SSH) is a method for the construction of enriched cDNA libraries. cDNA microarrays provide a high throughput method to screen the resulting SSH libraries. SSHscreen is an R package employing limma functions from the BioConductor project to analyze the microarray data. SSHscreen calculates a range of statistics and enrichment ratio values for each clone to identify whether it is significantly differentially expressed, as well as whether it is rare or abundant in the treated sample. SSHscreen calculations from microarray-based screening of a cowpea stress response library were validated by quantitative PCR (qPCR). Thus SSHscreen not only facilitates the choice of clones from the library for further analysis but it can also be useful in determining whether Northern blotting or a more sensitive method such as qPCR would be necessary to study the expression of individual mRNAs in detail. 
+SSHdb is an interactive web-based tool for sequence management of SSH cDNA libraries. Input to this database include ranked gene-lists or top tables where each clone is annotated with various statistics calculated by SSHscreen, as well as available FASTA sequences for individual clones. In order to further annotate the clones with putative functions and identify redundant partners in the library, BLAST searches are performed on each input sequence against the NCBI nr database, as well as against sequences already in SSHdb. 
+The software is publicly available at http://microarray.up.ac.za/SSHscreen/.
+</div>
+<div class="keys">
+Keywords: Suppression subtraction hybridization, SSH, cDNA library, microarrays
+</div>
+<a name="8
+"></a>
+<div class="poster">
+Poster F08
+</div>
+<div class="titolo">
+Dissecting an alternative splicing analysis pipe-line for Exon 1.0 ST Affymetrix arrays.
+</div>
+<div class="autori">
+Cristina Della Beffa (1), Francesca Cordero (2), Raffaele A. Calogero (1)
+</div>
+<div class="inst">
+(1) Bioinformatics & Genomics Unit, Dept of Clinical and Biological Sciences, University of Torino, (2) Dept. of Informatics, University of Torino
+</div>
+<div class="shabs">
+Recently a new microarray platform (GeneChip Exon 1.0 ST) was developed by Affymetrix. This platform allows genome-wide exploration of alternative splicing events (AS) and it also has a good agreement, in terms of sensitivity, with previous Affymetrix 3’IVT array technology. In this work, computational tools for exon-level data analysis are evaluated for their ability to detect alternative splicing events. Specifically we have observed that RMA probe sets summarization works better than PLIER and data pre-filtering is mandatory to reduce the number of false AS.
+</div>
+<div class="exabs">
+BACKGROUND
+GeneChip Exon 1.0 ST is a new microarray platform developed and commercialized by Affymetrix (www.affymetrix.com). This microarray platform changes the conventional view of transcript analysis since it allows the evaluation of the expression level of a transcript querying each exon component of the transcript. Offering the possibility to study specific alterations in splicing patterns like those found in association with cancers. 
+GeneChip Exon 1.0 ST is based on methods quite different from the consolidated 3' IVT arrays expression detection. To generate the target, GeneChip Exon 1.0 ST technology uses T7 linked random hexamers for cDNA synthesis as opposed to all previous Affymetrix 3’IVT expression arrays, which employ an oligo-dT linked T7 and thus require an intact poly-A tail. Importantly, this new WT Sense Target Labeling Assay generates DNA targets and therefore results in DNA/DNA duplex formation during hybridization, as opposed to DNA/RNA hetero-duplexes in conventional arrays. GeneChip Exon 1.0 ST sensitivity of gene expression detection was shown to be in the same range of the 3'IVT arrays.
+However, this change of technology opens some issues about the computational instruments to be used for the analysis of data derived by these arrays. One of these issues regards the approaches to be used to identify alternative splicing events (AS). Affymetrix proposed a pipe-line based on pre-filtering of the expression data, transformation of exon-level intensity data in gene-level normalized values called Splicing Index (SI) and statistical validation based on an ANOVA based method based on measuring differences between exon-level signal and aggregate gene level signal called MiDAS (Microarray Detection of Alternative Splicing). However, up to now there are no way to define the efficacy of this pipe-line or the various statistical methods in the detection of AS. The ideal instruments to evaluate the effect of data preprocessing and the efficacy of different statistical methods on differential expression are spike-in experiments, where a limited number of transcripts are spiked-in at various concentration in a common mRNA background. In spike-in based experiments it is therefore possible to investigate differential expression sensitivity as function of the false discovery rate (FDR). In this work, we present the results obtained investigating the effect of data preprocessing as well as that of MiDAS, Rank Product and Outlier sum statistics on alternative splicing detection. This work was done using a semi-synthetic exon skipping experiment, encompassing 804 exon skipping events. The exon skipping data set was generated starting from the spike-in experiment published on PLOS ONE in 2007 by Abueva.
+RESULTS
+A benchmark experiment was assembled to investigate the efficacy of alternative splicing detection process using Exon 1.0 ST arrays. Probe set intensities were calculated using the .CEL files kindly provided by Abdueva and gene/exon-level data were generated using the Bioconductor package oneChannelGUI. Probe set summaries were calculated both with RMA or PLIER respectively for gene and exon-level. Summarized data were log2 transformed. Normalization was performed using sketch-quantile method, which is a quantile normalization done using a subset (sketch) of the data, which results in much smaller memory usage. For the construction of the exon skipping benchmark experiment we used 4 out of the 5 groups of spike-in genes. We focus on those because they were all part of GeneChip Exon 1.0 ST core annotation subset. For each of the exons of the 20 genes we produced three sets of synthetic exon skipping events exchanging the intensities associated to the 128 pM spike-in with those of the 32 pM (128-32), the 32 pM spike-in with the 2 pM (32-2) and the 2 pM spike-in with 0 pM (2-0).
+It is notable that mean SI (i.e. the amount of Splice Index difference between exons) is not particularly homogeneous and it is somehow compressed with respect to the theoretical one. Furthermore, this compression is associated to genes group.
+We have initially investigated the effects induced on FDR by the application of different filters acting on the quality of the signal (DABG p-value), on the specificity of the probe set probes (cross hybridizing probe sets), on mean SI and selecting only those genes annotated as encompassing at least two isoforms.
+Mean SI filter improves the FDR, instead the filter based on probe set specificity does not affect it. However, the best improvement in FDR was obtained selecting only the subset of genes found, in ensembl database, associated to multiple transcriptional isoforms.
+Furthermore, our tests on the efficacy, in AS detection, of other statistics than MiDAS, clearly indicate that the statistics used to select differential splicing events is a critical issue and more work is needed to optimize statistics, already used for gene-level differential expression, to obtain reasonable performances at exon-level.
+CONCLUSIONS
+We have designed a semi-synthetic data set to investigate the effects of the various steps of alternative splicing pipe-line. Our data seems to be a good benchmark instrument to define the basic steps of an analytical pipe-line and to test new statistics for the detection of AS.
+</div>
+<div class="keys">
+Keywords: alternative, splicing, microarray, statistics
+</div>
+<a name="9
+"></a>
+<div class="poster">
+Poster F09
+</div>
+<div class="titolo">
+Creation of expression compendia from cross-platform microarray data
+</div>
+<div class="autori">
+Engelen K, Qiang F, Lemmens K, Desmet R, Carolina F, Thijs I, Marchal K
+</div>
+<div class="inst">
+bioi\CMPG, Deparment of Microbial and Molecular Systems, KULeuven, Kasteelpark Arenberg 20, 3000 Leuven
+</div>
+<div class="shabs">
+We have created a (semi-automatic) system to create expression compendia, i.e. to collect, homogenize, and annotate public microarray data for a specified organism.  The combination of different platforms offers the advantage of maximally exploiting publicly available information.
+Currently cross-platform expression compendia are being set up (and will be made available) for Escherichia coli, Salmonella enterica and Bacillus subtilis.  Future plans include the creation of expression compendia for other prokaryote, as well as eukaryote organisms.  
+</div>
+<div class="exabs">
+Public microarray databases, such as Gene Expression Omnibus (GEO) (Barrett et al, 2007), ArrayExpress (AE)(Parkinson et al, 2007), and the Stanford Microarray Database (SMD) (Demeter et al, 2007), contain freely accessible data for thousands of experiments and a multitude of different organisms.  These data are not useful as such however, due to a large inherent heterogeneity: different experimenters/origins, different technological platforms, single channel vs. dual channel, cDNA vs. oligonucleotide probes, fluorescence vs. radioactivity, etc.  We have created a (semi-automatic) system to create expression compendia, i.e. to collect, homogenize, and annotate public microarray data for a specified organism.  The combination of different platforms offers the advantage of maximally exploiting publicly available information.
+A first step in the methodology is the automatic retrieval of data from GEO, AE, and SMD.  These data are parsed, and then stored as available in a uniform format.  Since reporting standards regarding the measurement units of expression don’t exist, ‘as available’ does not necessarily mean raw scanner output, but could also be preprocessed data in those cases when raw data are not reported.
+The central part in the methodology is the homogenization of the data: several preprocessing procedures are conducted to render expression levels comparable between different experimental conditions and platforms. Crucial steps in this preprocessing are array-specific and depend on the technological platform, as well as reported units of expression (whenever possible, raw intensities are preferred as data source over normalized data provided by the public repository).
+As a final step, the system allows for a formal, parameterized description of the experimental conditions that are incorporated in the compendium.  Although this condition annotation is labor intensive (manual curation), it is done in an attempt to structure the large amounts of potentially useful information that remain untapped due to the cryptic, non-standardized condition descriptions in public databases.  Incorporation of these formalized condition descriptions in the analysis of a proof-of-principle cross-platform Escherichia coli compendium showed promising results. 
+ 
+Currently cross-platform expression compendia are being set up (and will be made available) for Escherichia coli, Salmonella enterica and Bacillus subtilis.  Future plans include the creation of expression compendia for other prokaryote, as well as eukaryote organisms.  
+Barrett T, Troup DB, Wilhite SE, Ledoux P, Rudnev D, Evangelista C, Kim IF, Soboleva A, Tomashevsky M, Edgar R (2007). NCBI GEO: mining tens of millions of expression profiles--database and tools update. Nucleic Acids Res 35: D760-D765
+Demeter J, Beauheim C, Gollub J, Hernandez-Boussard T, Jin H, Maier D, Matese JC, Nitzberg M, Wymore F, Zachariah ZK, Brown PO, Sherlock G, Ball CA (2007). The Stanford Microarray Database: implementation of new analysis tools and open source release of software. Nucleic Acids Res 35: D766-D770.
+Parkinson H, Kapushesky M, Shojatalab M, Abeygunawardena N, Coulson R, Farne A, Holloway E, Kolesnykov N, Lilja P, Lukk M, Mani R, Rayner T, Sharma A, William E, Sarkans U, Brazma A (2007). ArrayExpress--a public database of microarray experiments and gene expression profiles. Nucleic Acids Res 35: D747-D750.
+</div>
+<div class="keys">
+Keywords: expression compendia, microarrays, cross-platform
+</div>
+<a name="10
+"></a>
+<div class="poster">
+Poster F10
+</div>
+<div class="titolo">
+Accounting for the presence of paralogs in microarray gene-set analyses using Indygene
+</div>
+<div class="autori">
+Andre J. Faure, Cathal Seoighe, Nicola Mulder
+</div>
+<div class="inst">
+University of Cape Town
+</div>
+<div class="shabs">
+Performing gene-set analysis (GSA) on microarray experiments is a powerful way to reveal biological themes implicated in the response under study. We show that paralogs, which typically have high sequence identity and similar molecular functions, also exhibit high correlation in their expression patterns and therefore introduce a confounding factor to all GSA methods. We propose a solution in the form of Indygene, a web pre-processing tool that reduces a supplied list of genes to one that is maximally independent with respect to pairwise paralogous relationships.
+</div>
+<div class="exabs">
+In order to interpret the results obtained from a microarray experiment, researchers often shift focus from analysis of individual differentially expressed genes to analyses of sets of genes. These gene-set analysis (GSA) methods use previously accumulated biological knowledge from databases such as the Gene Ontology (GO) or KEGG to group genes into sets based on their annotations. They aim to rank these gene sets in a way that reflects their relative importance in the experimental situation in question. The hope is that this approach reveals sets of genes with subtle but coordinated behaviour implicating specific biological processes or pathways in the response under study.
+Several GSA methods have been proposed and debates have ensued on the statistical foundations of the different approaches and the various hypothesis tests used. In particular, criticism has been directed at methods that rely on a strict cut-off to determine significant genes and those that assume genes are expressed independently. 
+We show that paralogs, which typically have high sequence identity and similar molecular functions also exhibit high correlation in their expression patterns. This, together with the fact that the calculation of gene-set significance by all GSA methods is influenced by the number of genes in the gene set, means that sets with high numbers of paralogs are ranked in a biased manner that reflects more the redundant and dependent nature of paralogs than any true biological state.
+We investigate the extent of this confounding factor common to all GSA methods and propose a solution in the form of Indygene, a web tool that reduces a supplied list of genes to one that is maximally independent with respect to pairwise paralogous relationships. We use the tool to re-analyse published microarray data and compare the results to those obtained previously to determine utility of this pre-processing step.
+</div>
+<div class="keys">
+Keywords: microarray, paralog, graph theory
+</div>
+<a name="11
+"></a>
+<div class="poster">
+Poster F11
+</div>
+<div class="titolo">
+Bayesian population models to learn gene networks from multiple expression experiments
+</div>
+<div class="autori">
+Ferrazzi F.  (1), Rinaldi S.  (1), Parikh A. (2,3), Shaulsky G. (2,3), Zupan B. (3,4), Bellazzi R. (1)
+</div>
+<div class="inst">
+(1) Department of Computer Engineering and Systems Science, University of Pavia, Pavia, Italy, (2) Graduate Program in Structural Computational Biology and Molecular Biophysics, Baylor College of Medicine, Houston, USA, (3) Department of Molecular and Human Genetics, Baylor College of Medicine,  Houston, USA , (4) Faculty of Computer and Information Science, University of Ljubljana, Ljubljana, Slovenia
+</div>
+<div class="shabs">
+We propose a Bayesian approach to combine the information coming from multiple gene expression time series. The method was applied to expression data relative to five D. discoideum genes involved in the protein-kinase A pathway. Results showed that the proposed approach improves the learning with respect to using a simple pooling of the data or to combining the results obtained independently from each of the datasets. 
+</div>
+<div class="exabs">
+Dynamic Bayesian networks (DBNs) represent a very interesting framework to model gene networks as they can take into account the variability of biological systems and the presence of experimental noise in the data. Existing methods can automatically learn DBNs from gene expression time series. However, these series usually contain only a few time points and this data paucity makes the discovery of regulatory relationships between genes very challenging. It is thus extremely interesting to develop methodologies able to exploit the information coming from different experiments and/or make use of the available prior knowledge to guide the learning process. We here present a Bayesian approach to combine, in a principled way, the information coming from multiple experiments on the same cellular process performed under different conditions. 
+Assuming that temporal expression measurements for n genes in N experiments are available, our method jointly learns a DBN for each experiment and a population matrix containing the probabilities of existence of a link between any two genes. Thanks to the population matrix, the learning of each DBN takes into account not only the data from the single experiment but also the information coming from all other experiments. 
+Following the framework of hierarchical models, the main variables to be estimated from data are: the population matrix PM and the individual matrices Mi, each representing the structure of the DBN reconstructed from the data Di of i-th experiment. More specifically, each Mi is a matrix whose element (k,j) is equal to 1 if a link exists from gene k to gene j; equal to 0 otherwise. In order to estimate PM and Mi we decided to follow a Bayesian approach and calculate their maximum a posteriori estimates using the conditional maximization algorithm. Conditional maximization is an iterative algorithm that, starting from an initial estimate for parameters, maximizes the posterior probability of one parameter at a time, given the others and the data, until convergence. Thus, at each step of the conditional maximization algorithm, we have to calculate max p(PM|Di,Mi) and max p(Mi|Di,PM). In order to learn models Mi, a DBN inference algorithm developed under the assumption of models a priori equally likely (hereafter called 'DBN algorithm') was modified in order to take into account the presence of a varying prior probability for models.
+The method was applied to the analysis of gene expression data on five Dictyostelium discoideum genes involved in the protein-kinase A pathway, essential for the multicellular development of the organism. The dataset contains time series measured for the AX2 wild-type and for 9 different mutant strains resulting from the knockout of one or two genes. Each experiment was replicated at least twice, so that the total number of knockout time series is 35, with an average number of time points equal to 12. The real network was assumed to be that reported by Van Driessche et al. (Nat Genet, 2005). Results were evaluated in terms of ability to infer the true connections between variables (measured by recall, precision and their harmonic mean, the F-measure).
+In the study we used nine individual datasets (Di). For each knockout time series, we considered the corresponding wild-type series, i.e. the AX2 time series sampled at the same time points. Each dataset was created by concatenating the replicated time series for a certain mutant and having them preceded by the corresponding wildtype time series, connected as well. Moreover we introduced a binary auxiliary variable set to 0 in correspondence of the wildtype time series values, and to 1 in correspondence of the knockout time series values. 
+The accuracy of the models independently learned from each of the 9 datasets using the DBN algorithm is very low: 5 out of 9 models have zero true positives and the average F-measure of the other 4 models is 0.27. The accuracy of the individual models inferred with our algorithm shows an improvement: 5 models still have recall=0 and precision=0, but the average F of the other 4 is 0.31. 
+It is also extremely interesting to consider the learned 'population network', i.e. the network containing the links whose estimated probabilities in PM are greater than a certain threshold s. We varied s from 0 to 1 and we built a recall-precision curve, obtaining AUC=0.23. We compared this result with that obtainable deriving a 'consensus network' from the independently learned individual models. The consensus network is built by comparing the proportion of individual models that contain the link from gene k to gene j with the threshold s. In this case the AUC of the recall-precision curve is 0.16. We further compared the population model obtained with s=0.1 with the consensus model obtained with s=0.1 and with the model obtainable applying the DBN algorithm on the data for the 9 individuals concatenated one after the other. We observed that the population model achieves a higher F-measure (0.4 vs 0.24 for the consensus and 0.35 for the DBN algorithm), and a higher precision (0.33 vs 0.15 and 0.23), which is related to a lower number of false positives. 
+We can thus observe that even if models independently learned from the single datasets show a very poor ability to infer the true relationships between variables, our algorithm can effectively combine information from these different datasets and achieve a higher F-measure. Moreover the use of our algorithm improves the learning also with respect to using a simple pooling of the data or to combining the results independently obtained by single datasets. 
+</div>
+<div class="keys">
+Keywords: gene network, Bayesian population model
+</div>
+<a name="12
+"></a>
+<div class="poster">
+Poster F12
+</div>
+<div class="titolo">
+Comparative analysis of gene expression across species
+</div>
+<div class="autori">
+Ana Carolina Fierro (1), Peyman Zarrineh (1), Kristof Engelen (1), Mieke Verstuyf (2), Guy Eelen (2), Lieve Verlinden (2), Kathleen Marchal (1)
+</div>
+<div class="inst">
+(1) Department of Microbial and Molecular system, Katholieke Universiteit Leuven, Kasteelpark Arenberg 20, 3001 Leuven, Belgium, (2) Laboratorium voor Experimentele Geneeskunde en Endocrinologie, Katholieke Universiteit Leuven, 3000 Leuven, Belgium
+</div>
+<div class="shabs">
+In this study we compared the response to vitaminD in human and mouse based on the gene coexpression derived from microarray experiments using the Differential Clustering Approach.
+</div>
+<div class="exabs">
+Gene expression analyses on model organisms have been widely used to study the genetic response to a certain stimulus, but this response can vary between species. A comparative study of gene expression levels between two species can give us valuable information about how conserved the mechanism is that responds to a given stimulus.  
+In this study we compared the response to vitaminD in human and mouse based on the gene coexpression derived from microarray experiments. In order to distinguish between general differences due to the used species and cell type from those induced by the stimulus of interest (vitaminD), we performed for each organism a control and a treatment response experiment. In a first step, to associate orthologs from each species to each other, we applied a more flexible association based on sequence and gene expression profiles instead of using a standard ortholog association based on sequence data only. In a second step we used the Differential Clustering Approach [1] to evaluate the degree of conservation of gene expression between both, human and mouse. 
+References
+[1] Ihmels J, Bergmann S, Berman J, Barkai N. Comparative gene expression analysis by differential clustering approach: application to the Candida albicans transcription program. PLoS Genet. 2005 Sep;1(3):e39.
+</div>
+<div class="keys">
+Keywords: comparative analysis, gene expression
+</div>
+<a name="13
+"></a>
+<div class="poster">
+Poster F13
+</div>
+<div class="titolo">
+Systematic detection errors of alternative splicing caused by variable probe response characteristics in exon arrays
+</div>
+<div class="autori">
+Gaidatzis D., Oakeley E., Stadler M.B.
+</div>
+<div class="inst">
+Friedrich Miescher Institute (FMI), Maulbeerstrasse 66, 4058 Basel
+</div>
+<div class="shabs">
+Alternative exon usage is a major mechanism increasing transcriptome diversity in higher eukaryotes. With the availability of exon microarrays, it becomes possible to measure exon levels independently and identify alternative exons. In such data, we discovered a systematic relationship between transcript fold change and alternative exons quantified by splicing index, which can be modeled based on the primary sequence of microarray probes. If not corrected, this technical bias leads to many wrongly detected alternative exons, even when filtered by conservation across multiple species’.
+</div>
+<div class="exabs">
+In higher eukaryotes, alternative splicing is a common mechanism used to increase the diversity of the transcriptome. Exon arrays are capable of monitoring the expression of hundreds of thousands of exons and can therefore be used to detect alternative splicing events. For DNA arrays in general, the interpretation of the primary readout (luminescence) requires a substantial amount of preprocessing. The reasons for that are manifold and encompass effects like background luminescence, variable probe affinities, non linear probe response curves and cross hybridization. While there exist many solutions for regular 3' expression arrays, exon arrays are relatively new and much less characterized. 
+We have performed an exon array study using data from many tissues in human and mouse and discovered a systematic relationship between transcript fold change and alternative splicing quantified by the splicing index. In principle this should not be the case because in the calculation of the splicing index, the transcript expression fold change is explicitly factored out. The observed phenomenon could be caused by variable probe response characteristics, in particular variable probe response slopes. To ensure that this signal is of technical and not biological origin, we have performed dilution experiments hybridizing different amounts of mouse brain RNA to exon arrays. We detected a significant correlation between the technical dilution experiment and the real tissue panel data. Additionally, using a simple positional dinucleotide model we were able to predict the outcome of the dilution experiment solely based on the primary sequence of the probes. This supports the idea that the origin of our observed effect is purely technical. By cross species exon array comparison we could further show that the systematic bias persists across species boundaries and is caused by sequence similarity between probes on the human and the mouse exon array. Finally we have written a software that for any given set of new exon array experiments removes these observed biases and improves the detection of purely biological alternative splicing events.
+</div>
+<div class="keys">
+Keywords: exon, microarray, oligo, probe, detection, alternative splicing
+</div>
+<a name="14
+"></a>
+<div class="poster">
+Poster F14
+</div>
+<div class="titolo">
+Physiology, pathology and relatedness of human tissues from gene expression meta-analysis.
+</div>
+<div class="autori">
+Greco D (1), Somervuo P (1), Di Lieto A (2), Raitila T (1), Nitsch L (3), Castrén E (2), Auvinen P (1)
+</div>
+<div class="inst">
+(1) Institute of Biotechnology, University of Helsinki, Finland, (2) Neuroscience Centre, University of Helsinki, Finland, (3) University of Naples, Italy
+</div>
+<div class="shabs">
+We have surveyed the gene expression in 78 normal human tissues integrating publicly available microarray gene expression data. A total amount of 1601 genes were identified as selectively expressed in one or more tissues. the tissue-selective genes covered a wide range of cellular and molecular functions, and could be linked to 361 human diseases. Based on the gene expression profiles, we were able to form a network of tissues reflecting their functional relatedness and, to certain extent, their development.
+</div>
+<div class="exabs">
+LONG
+BACKGROUND: Development and maintenance of the identity of tissues is of central importance for multicellular organisms. Based on gene expression profiles, it is possible to divide genes in housekeeping genes and those whose expression is preferential in one or a few tissues and which provide specialized functions that have a strong effect on the physiology of the whole organism. 
+RESULTS: We have surveyed the gene expression in 78 normal human tissues integrating publicly available microarray gene expression data. A total amount of 1601 genes were identified as selectively expressed in one or more tissues. The tissue-selective genes covered a wide range of cellular and molecular functions, and could be linked to 361 human diseases with Mendelian inheritance. Based on the gene expression profiles, we were able to form a network of tissues reflecting their functional relatedness and, to certain extent, their development. 
+CONCLUSIONS: Here we propose that integration of gene expression data from Affymetrix GeneChip experiments is possible through re-annotation and commonly used pre-processing methods. We suggest that some functional aspects of the tissues can be explained by the regulation of the expression of selected groups of genes.
+</div>
+<div class="keys">
+Keywords: tissue-selectivity, gene expression, connectome, meta-analysis, Affymetrix GeneChip
+</div>
+<a name="15
+"></a>
+<div class="poster">
+Poster F15
+</div>
+<div class="titolo">
+Sequence and structure requirements for miRNA-dependent RISC binding and mRNA degradation
+</div>
+<div class="autori">
+Hausser J. (1), Landthaler M. (2), Gaidatzis D. (1), Tuschl T. (2), Zavolan M. (1)
+</div>
+<div class="inst">
+(1) Biozentrum, University of Basel and Swiss Institute of Bioinformatics, (2) Howard Hughes Medical Institute, Laboratory for RNA Biology, The Rockefeller University
+</div>
+<div class="shabs">
+MiRNAs are important regulators of mRNA translation and stability
+in plants and animals. Initial studies indicated that miRNAs induce
+translational repression, while more recent experiments demonstrated
+that miRNAs also trigger degradation of their mRNA targets. Combining
+an Ago-Immunoprecipitation (IP) approach for miRNA target identification
+with computational analysis, we investigate what sequence and structure
+features of the miRNA targets determine the efficiency of RISC binding
+and the subsequent degradation of the mRNA.
+</div>
+<div class="exabs">
+Objective:
+MiRNAs are important regulators of mRNA translation and stability
+in plants and animals. Initial studies indicated that miRNAs induce
+translational repression, while more recent experiments demonstrated
+that miRNAs also trigger degradation of their mRNA targets. Combining
+an Ago-Immunoprecipitation (IP) approach for miRNA target identification
+with computational analysis, we investigate what sequence and structure
+features of the miRNA targets determine the efficiency of RISC binding
+and the subsequent degradation of the mRNA.
+Results:
+We demonstrate that the accessibility of the target site and the energy of
+miRNA "seed" interaction with the target influence the efficiency of
+RISC binding, whereas the sequence composition of the environment of the
+miRNA target site influences the rate of subsequent mRNA degradation. We
+further find that compositional biases that promote mRNA degradation also
+characterize the environment of predicted miRNA target sites that are
+evolutionarily conserved, suggesting that the miRNA-induced degradation of
+target mRNAs is a common phenomenon that has been selected evolutionarily.
+Combining a small subset of the features that we studied, we can
+train a model to predict degradation of mRNAs carrying miRNA target
+sites at an accuracy comparable to that of a program that is most used
+currently. Furthermore, we are able to predict miRNA targets sites that
+have only limited complementarity with the miRNA 5’ ends.
+Conclusion:
+We show that sequence and structure features of miRNA target sites and of
+their immediate neighborhood contribute to different extents to individual
+steps in the miRNA-dependent silencing cascade. Furthermore, we show that
+evolution favored sites whose sequence environments are supportive of
+mRNA degradation. These environments are mostly U-rich and are probably
+bound by various RNA-binding proteins that may modulate miRNA activity.
+</div>
+<div class="keys">
+Keywords: miRNA, target prediction, seed, RISC, binding, mRNA degradation
+</div>
+<a name="16
+"></a>
+<div class="poster">
+Poster F16
+</div>
+<div class="titolo">
+Transcriptome Analysis by High-Throughput Sequencing of cDNA using the Illumina® Genome Analyzer
+</div>
+<div class="autori">
+Khrebtukova I., Luo S., Yan J., Vermaas E., Quijano V., Schroth G.P.
+</div>
+<div class="inst">
+Illumina, Inc, 25861 Industrial Blvd., Hayward, CA, 94545 
+</div>
+<div class="shabs">
+Using the Illumina Genome Analyzer we have sequenced full-length mRNA from more than 15 human tissues and cell lines generating up to 75 million single and pair-end reads per sample. The data show that this level of sequencing affords deep, unbiased coverage of most expressed transcripts sufficient to identify nucleotide variants, alternative splicing and quantitative levels of RNA expression. We will show examples of data analysis and visualization.
+</div>
+<div class="exabs">
+Comprehensive deep sequencing of full length mRNA is useful for annotation of sequenced genomes, quantitating levels of RNA expression, discovery of novel transcripts, characterization of alternative splicing, and calling of coding SNPs (cSNPs) and other point mutations in the mRNA. Using the Illumina Genome Analyzer we have sequenced full-length mRNA from more than 15 human tissues and cell lines generating up to 75 million single and pair-end reads per sample. The data show that this level of sequencing affords deep, unbiased coverage of most expressed transcripts sufficient to identify nucleotide variants, alternative splicing and quantitative levels of RNA expression. We will show examples of data analysis and visualization. The affordable deep sequencing of mRNA gives us the potential to study diseases processes, such as cancer, for discovery of disease-associated biomarkers and identifying aberrant expression in diseased tissue.
+</div>
+<div class="keys">
+Keywords: deep cDNA sequencing, Illumina Genome Analyzer
+</div>
+<a name="17
+"></a>
+<div class="poster">
+Poster F17
+</div>
+<div class="titolo">
+Gene Ontology Assisted Clustering of Microarrays
+</div>
+<div class="autori">
+Geoff Macintyre (1,2), James Bailey (1,2), Daniel Gustafsson (4), Alex Boussioutas (3,2), Izhak Haviv (3,5,2), Adam Kowalczyk (1,2)
+</div>
+<div class="inst">
+(1) National ICT Australia, (2) The University of Melbourne, Australia, (3) Peter MacCallum Cancer Centre, Australia, (4) La Trobe University, Australia, (5) Baker Medical Research, Australia
+</div>
+<div class="shabs">
+Clustering gene expression profiles can facilitate the identification of the biological program causing genes’ co-expression. Standard clustering methods may fail to capture weak expression correlations causing genes in the same biological process to be grouped separately. We have developed a novel clustering algorithm which incorporates functional gene information from The Gene Ontology into the clustering process, resulting in more biologically meaningfull clusters. We validated our method on a multi-cancer microarray dataset highlighting its potential for exploration of cancer etiology.
+</div>
+<div class="exabs">
+INTRODUCTION
+Gene expression profiling using microarrays has become a key tool in the analysis of biological systems at a molecular level. Clustering is used in interpreting microarrays under the assumption that genes with shared expression patterns have are involved in similar biological processes. While clustering has been shown to be successful in many cases, clusters may suffer from being dominated by strong or noisy expression patterns potentially forcing genes of similar function with less correlated expression, to join another cluster. These resulting clusters may not represent a biological process in its entirety making it hard to determine which molecular processes a particular cluster of genes represents.
+To improve the clustering process additional information such as The Gene Ontology (GO) can be introduced to ensure genes with similar function can be clustered together. While previous attempts have been made to utilize the GO, they suffer from two fundamental drawbacks. Firstly, the GO is constructed as a directed acyclic graph, with terms lower in the tree being specialisations, or parts of, terms higher in the tree. Genes are annotated to one or more terms in the tree, at the lowest, most specific level possible. Drawing a path from one gene to another through this tree to determine similarity of the genes does not necessarily imply shared biology. The abstraction of terms across each level of the ontology can be such that two genes with a single shared parent term, may be extremely diverse in terms of their specific function.  Secondly, having genes annotated to the same term does not necessarily imply they have similar function or share a biological pathway, in the context of their expression patterns. A single gene can act differently in various biological contexts and thus have context specific roles.
+A method is needed which looks for commonalities between genes based on the GO that does not traverse the GO hierarchy and is relevant to the gene set of interest (the gene's biological context). We have developed GOMAC: Gene Ontology assisted MicroArray Clustering, a modified k-means clustering algorithm which incorporates GO information only when it is relevant to the gene's context, thus avoiding problems with irrelevant gene similarities. 
+METHODS
+The key difference between our approach and previous attempts at clustering using the GO is that only terms that are statistically over-represented within a cluster are used to calculate the similarity between genes. This ensures that only GO terms within the gene’s context are used. To achieve this an expression profile (EP) and annotation profile (AP) are generated for each cluster.
+As each gene can be viewed as a vector of its expression values across all samples, the EP (centroid) of a cluster is defined as the vector consisting of the average expression values for each gene in the cluster across all samples.
+GeneMerge1.2 is used to find all GO terms annotated to the genes in a cluster which are statistically over-represented, i.e. those terms that have sufficiently low probability of being present if we sample a random selection of genes. We assign a weight to each of these terms proportional to the number of genes in the cluster that are annotated to that term, normalised over all of a cluster’s GO terms. The weight shows the degree in which a term is associated with a particular cluster. A cluster’s AP is denoted as a vector of each of these weights. 
+Algorithm:
+1. Initialise gene clusters using k-means.
+2. Determine the annotation (AP) and expression profiles (EP) for each cluster
+3. Use a gene’s match to a cluster's AP to scale the Euclidean expression distance of the gene from a cluster and assign the gene to the nearest cluster.
+4. Repeat steps 2 and 3 until convergence.
+RESULTS
+The biological significance of the clusters output by GOMAC was tested with respect to their usefullness in biological hypothesis generation. In the case of the multi-class cancer dataset analysed, this was the ability to uncover clusters which had well defined differential expression across various cancer types. To do this, additional hierarchical clustering of the samples of each cluster was performed to partition the cancers into two groups. Then considering a single partition, the hypergeometric distribution was used to determine the probability of observing a particular enrichment of cancer types by chance. GOMAC provided 3 additional biologically significant clusters over regular k-means clustering and improved the biological significance of approximately 55% of the partionable clusters. In addition, GOMAC resulted in a greater number of GO descriptors (terms) for the clusters. Ingenuity Pathway Analysis (IPA) was also carried out on each cluster of genes to provide an external source of semantic validation. The IPA overlay demonstrated that genes associated with the correct cancer processes were identified and that all of the enriched GO terms were relevant.
+DISCUSSION
+We demonstrate that incorporation of additional biological information into the microarray clustering process in a biologically justified manner, can enhance the interpretability of microarray data. Specifically, we show the potential of such a method to unravel the complex nature of the biological processes involved in cancer. The success in linking cancer types, with gene expression profiles and a statistically significant semantic description of the underlying biology, provides an excellent starting point for the exploration of the similarities and dissimilarities of various types of cancers.  Ideally, our method would be repeated multiple times, while alternating the source of the ontology, the cancer types, and genes. A key benefit of such an exercise would be hypothesis generation, in the field of cancer etiology with an organ specific focus.
+</div>
+<div class="keys">
+Keywords: clustering, gene ontology, gene expression, cancer
+</div>
+<a name="18
+"></a>
+<div class="poster">
+Poster F18
+</div>
+<div class="titolo">
+Modeling gene expression in biological networks
+</div>
+<div class="autori">
+Lahti, L. (1), Knuuttila, J.E.A. (2), Kaski, S. (1)
+</div>
+<div class="inst">
+(1) Department of Computer and Information Science, PO Box 5400, 02015-TKK, Helsinki University of Technology, Finland, (2) Neuroscience Centre, PO Box 56, 00014 University of Helsinki, Finland
+</div>
+<div class="shabs">
+Cell-biological processes are regulated in a complex network of
+interactions between genes and their products. Study of network
+activation patterns can reveal how the network genes are co-activated
+and in which contexts. We apply a recently developed computational
+approach to detect local, functionally coherent regions of a protein
+interaction network that have coordinated expression across a range of
+normal human tissues.
+</div>
+<div class="exabs">
+Cell-biological processes are regulated in a complex network of
+interactions between genes and their products. Understanding the
+co-activation patterns of the genes and their associations with
+various biological contexts is central for obtaining systems-level
+understanding of biological processes. We investigate gene expression
+in a protein interaction network across a versatile collection of
+normal human tissues.  A recently developed subspace clustering
+approach is used to identify functionally coherent local regions in
+the network that have coordinated expression over various biological
+conditions and are often associated with known biological
+processes. Interestingly, many of the detected subnetworks exhibit
+alternative co-expression patterns that are activated in different
+biological contexts. This sheds light on the relationships between
+different biological processes and their role in varying
+cell-biological environments.
+</div>
+<div class="keys">
+Keywords: gene expression, network, machine learning, clustering
+</div>
+<a name="19
+"></a>
+<div class="poster">
+Poster F19
+</div>
+<div class="titolo">
+A model based approach to probe design for high-performance microarrays
+</div>
+<div class="autori">
+German Gaston Leparc (1), Thomas Tüchler (1), Gerald Striedner (2), Karl Bayer (2), Peter Sykacek (1), Ivo Hofacker (3)
+</div>
+<div class="inst">
+(1) WWTF Chair of Bioinformatics, Universität für Bodenkultur Wien, (2) Institute of Applied Microbiology, Universität für Bodenkultur Wien, (3) Theoretical Biochemistry Group, Institute for Theoretical Chemistry, University of Vienna
+</div>
+<div class="shabs">
+We introduce and describe a novel microarray design framework incorporating several advanced features for improved microarray performance. Quantitative models for the effects of probe placement on actual target labelling efficiency,
+secondary structure of probes and target molecules, and cross-hybridization are employed. We deploy a calibrated sequence based heuristic to reduce computational complexity and perform a full global probe set optimization rather than a greedy search. Configurable target groups supports applications that require the handling of highly similar sequences.
+</div>
+<div class="exabs">
+DNA microarray technology has become a well-established, powerful high-throughput tool in biological research. Despite the huge success of microarray analyses, the interpretation of gene expression data remains a challenge. Many modern methods for microarray data analysis aim to detect biologically meaningful patterns or signatures in the data, and thus particularly rely on accurate measurements. Highly specific probes with uniform hybridization behaviour are therefore crucial for accurate quantitative modelling and further advancement of
+inference methods in microarray analysis.
+The main challenge in high-performance microarray design is the selection of highly specific oligonucleotide probes for all targeted genes of interest while, at the same time, maintaining thermodynamic probe uniformity.
+We introduce and describe a novel microarray design framework incorporating several advanced features for improved microarray performance and genome-scale designs. Our method improves on a number of aspects central to probe design: Flexibly configurable target groups support applications that require the handling of highly similar sequences. A quantitative model captures experimentally determined effects of probe placement along the target on labelling efficiency. In addition, the prediction of probe--target hybridization was improved by considering both probe and target structure. For efficiency, probe cross-hybridization predictions on genome scale usually exploit fast sequence-similarity based heuristics as filter
+before employing thermodynamic models. Of course, this brings a necessary trade-off between speed and sensitivity. There have, however, been no published studies so far examining the degree to which these heuristics may miss cross-hybridization targets. We present the results of a rigorous calibration of sequence based heuristics through sensitive thermodynamic calculations. The calibrated heuristic can then serve as conservative filter.
+Finally, we formulate a novel compound score, combining all probe features calculated in a principled way. This permits an objective selection of discriminative probe candidates while, at the same time, maintaining probe uniformity. By applying full global set optimization rather than a greedy search, our approach delivers maximally specific and unusually uniform probe sets.
+We demonstrate the performance of our novel probe design framework using results from a variety of species and genome sizes.
+</div>
+<div class="keys">
+Keywords: microarray design, probe design, oligonucleotide probes, thermodynamic hybridization models
+</div>
+<a name="20
+"></a>
+<div class="poster">
+Poster F20
+</div>
+<div class="titolo">
+Sequencing the transcriptome in prostate cancer
+</div>
+<div class="autori">
+Nacu S., Kan Z., Seshagiri S., Wu T.
+</div>
+<div class="inst">
+Genentech, South San Francisco CA 94080, USA
+</div>
+<div class="shabs">
+With several "next generation" technologies already on the market, the cost of DNA sequencing is dropping rapidly; this opens up exciting possibilities in biology and medicine. The new technologies generate massive amounts of data, whose analysis will require new statistical and computational techniques. 
+In a pilot project, we sequenced the transcriptome of several prostate cancer tumors on the Solexa platform. Here we present our first analysis, including computational tools we built for alignment, visualization, and analysis of gene expression, alternative splicing, and translocations.
+</div>
+<div class="exabs">
+With several "next generation" technologies already on the market, the cost of DNA sequencing is dropping rapidly, and the goal of the $1000 genome appears within reach during the next few years. This opens up exciting possibilities in biology and medicine. 
+Sequencing platforms such as Solexa, 454 and Solid generate massive amounts of data: one run can produce more than one billion base pairs. The structure of these large data sets is not well understood, and their analysis raises some challenging statistical and computational issues. 
+In a pilot project, we sequenced the transcriptome of three prostate cancer tumors and one matched normal on the Solexa platform. We also ran the same samples on Affymetrix expression arrays, exon arrays and SNP chips, and on Agilent CGH arrays, in order to compare the power of sequencing and array technologies. Here we describe our preliminary results and some of the computational infrastructure we built. 
+Solexa produces short reads of length 30-40 bases, which need to be aligned to the human genome. We wrote a program called GSNAP that computes fast alignment of short reads using genome-wide indexing. It has several useful features for transcriptome analysis, including the ability to find exon-exon junctions and fusion transcripts. We also wrote software for visualization, gene expression analysis and detection of alternative splice forms. 
+We compare gene expression measurements using sequencing and microarrays. Arrays have several known limitations: they can only detect genes for which (good) probes are present, and absolute expression measurements are difficult to obtain because of variable probe affinities. In theory sequencing can overcome these limitations, but its cost remains for now significantly higher. Hence in the near future sample sizes are likely to remain small, and statistical analysis must use a parametric model. We present evidence that the transcriptome coverage is uneven, and hence a simple Poisson model is not adequate, along with some ideas on how to overcome this problem. 
+Finally, we present some preliminary results on non-standard transcript forms. We find that alternative splicing is fairly common, and computationally recover previously known translocations.
+</div>
+<div class="keys">
+Keywords: sequencing, transcriptome, splicing, Solexa
+</div>
+<a name="21
+"></a>
+<div class="poster">
+Poster F21
+</div>
+<div class="titolo">
+Segmentation of gene expression helps to discover parts of the genome correlated with Copy Number alterations
+</div>
+<div class="autori">
+Ortiz M., Rubio A.
+</div>
+<div class="inst">
+CEIT and TECNUN, University of Navarra
+</div>
+<div class="shabs">
+It is known that copy number alterations affect gene expression. However,gene expression is affected by other factors too. To remove the factors different from copy number we perform a segmentation of the expression data. We have compared segmented and standard gene expression values with copy number using the Kendall correlation coefficient.The results of this analysis performed on a set of 29 cell lines, confirm the known targets of amplifications(BCL-2,for example)and have provided new candidates to study(Cadherins family).Segmented data correlate better with locus of the genome with CNAs.
+</div>
+<div class="exabs">
+Several studies have identified multiple chromosomal abnormalities in different types of cancer. These studies usually employ microarray-based Comparative Genomic Hybridization (aCGH) or SNPs arrays which measure DNA copy number alterations (CNAs). It is assumed that in turn, these abnormalities affect gene expression. However, the relationship between DNA copy number and gene expression is complex: there are genes whose expression is not apparently affected by copy number alterations and genes that show their expression strongly correlated with copy number. 
+There is a large number of described genetic alterations in cancer (we have focused in lymphomas), but molecular consequences of such alterations in most cases remain unclear. Our aim is to identify copy number alterations which pinpoint genes whose expression is directly influenced by these events.
+It is known that the regulation of the expression of a particular gene is a complex process in which a number of factors are involved –among them its own number of copies. To discern the impact of copy number in gene expression it is needed to filter out other factors. Our hypothesis is that other factors (different from copy number) that affect gene expression do not depend on the position in the genome. To remove these other factors, we propose to perform a segmentation of the expression data and compare segmented gene expression with copy number data. We have selected a segmentation algorithm instead of a filter because it provides sharp edges between different parts of the genome: if copy number value has sharp edges, its effect is also expected to have sharp edges. If a standard linear filter were used, the final signal would have a smooth behaviour.
+Using SNPs and gene expression arrays for a set of 29 DLBCL (diffuse large B-cell lymphomas) lines, we have compared segmented and standard relative gene expression data with copy number values. The comparison was done using the Kendall correlation coefficient. We propose this coefficient because 1) it is non-parametric (it is not reasonable to assume a linear behaviour between gene expression and copy number as the Pearson correlation coefficient does), 2) works better with ties than the Spearman correlation coefficient (and in this case there are many ties since most of the copy number are two) and 3) we can assign an exact p-value to the result.
+The p-values of the correlation between copy number and the standard expression data provide individual genes whose expression and copy number values are significantly correlated. On the other hand, p-values obtained using segmented data show locus with large correlation. Both p-values are informative: genes with large correlation in a locus uncorrelated have more chances to be false positives and should be taken cautiously. Large correlation in standard expression within a locus with large correlation may pinpoint the target of the amplification. 
+The results of this analysis performed on the cell lines confirm the known targets of amplifications (BCL-2, for example) and have provided new candidates to study (the Cadherins family).
+</div>
+<div class="keys">
+Keywords: copy number, expression, analysis, kendall correlation coefficients
+</div>
+<a name="22
+"></a>
+<div class="poster">
+Poster F22
+</div>
+<div class="titolo">
+Semiparametric models with many smoothers for the analysis of microarray data
+</div>
+<div class="autori">
+Marcin Przystalski, Pawel Krajewski
+</div>
+<div class="inst">
+Institute of Plant Genetics, Polish Academy of Sciences
+</div>
+<div class="shabs">
+We propose a method of analyzing microarray data using an additive model which includes one or more smooth terms allowingto take into account physical properties of the probes (e.g. GC-content, G-content, C-content, melting temperature). Using the method of estimation of gene effects under linear constraints we test hypotheses concerning comparisons of genes within and between
+microarrays. Applications of the proposed methodology are illustrated on a real data set.
+</div>
+<div class="exabs">
+We propose a method of analyzing microarray data using an additive model [1] which includes one or more smooth terms allowing to take into account physical properties of the probes [2, 4] (e.g. GC-content, G-content, C-content, melting temperature). Using the method of estimation of gene effects under linear constraints [3] we test hypotheses concerning comparisons of genes within and between microarrays. Applications of the proposed methodology are illustrated on a real data set.
+References
+[1] Buja, A., Hastie, T., Tibshirani, R. (1989). Linear smoothers and additive
+models. Ann. Statist. 17 , 453-555.
+[2] Ma S., Kosorok M. R., Huang J., Xie H., Manzella L., and
+Soares M. B. (2006). Robust semiparametric normalization and significance
+analysis. Biometrics 62, 555-561.
+[3] Przystalski M., Krajewski P., Constrained estimators of treatment parameters
+in semiparametric models, Statist. Probab. Lett 77, 914-919.
+[4] Wu Z., Irizarry, Gentleman R., Martinez-Murrillo F., and
+Spancer F. (2004). A model based background adjustment for oligonucletide
+expression arrays. J. Amer. Stat. Assoc. 99, 909-917.
+</div>
+<div class="keys">
+Keywords: Gene expression,  semiparametric model, hypothesis testing
+</div>
+<a name="23
+"></a>
+<div class="poster">
+Poster F23
+</div>
+<div class="titolo">
+KIRMES: Kernel-based Identification of Regulatory Modules in Euchromatic Sequences
+</div>
+<div class="autori">
+Schultheiss S.J. (1,2), Busch W. (2), Lohmann J.U. (2), Kohlbacher O. (3), Raetsch G. (1)
+</div>
+<div class="inst">
+(1) Friedrich Miescher Laboratory of the Max Planck Society, Spemannstr. 39, 72076 Tuebingen, Germany, (2) Max Planck Institute for Developmental Biology, Spemannstr. 35-37, 72076 Tuebingen, Germany, (3) University of Tuebingen, Wilhelm Schickard Institute for Computer Science, Division of Simulation of Biological Systems, Sand 14, 72076 Tuebingen, Germany
+</div>
+<div class="shabs">
+We predict transcription factor (TF) binding sites from promoter regions of target genes. Typically, position weight matrix-based motif identification algorithms are used, but such algorithms succeed only in identifying well conserved binding sites and fail to find cis-regulatory modules. We propose an algorithm that combines existing motif finding with Support Vector Machines for modeling degenerate motifs in order to improve the modeling of regulatory modules. In microarray experiments from A. thaliana we can show that our strategy significantly improves the recognition of TF targets.
+</div>
+<div class="exabs">
+One of the most important problems in understanding transcriptional regulation is the prediction of transcription factor target genes based on their promoter sequence.  A transcription factor binding site (TFBS) is a short sequence segment (~10 bp) located near a gene's transcription start site (TSS) and is recognized by respective transcription factors (TFs) for gene regulation. TFBSs
+recognized by the same TF usually show a conserved pattern, which is often called a TF binding motif (TFBM). Such TFBMs are typically identified by considering overrepresented motifs in promoter sequences of a set of genes that is enriched with targets for a specific transcription factor. The simplest approaches include the identification of overrepresented oligomers relative to a background model (e.g. MEME). More sophisticated models include Gibbs-sampling methods (Lawrence, 1993) that try to identify position weight matrices (Schneider, 1986) characterizing binding sites in the candidate promoter sequences (Stormo, 2000).
+Although these methods have been very successful for bacterial and yeast genomes, their success was limited in higher eukaryotes for which TFBMs are often degenerated and the search space is considerably larger. While some recent techniques have improved the state-of-the-art, they all tend to fail if the motif is defined only weakly or in the context of other motifs. "Despite these challenges, there are two possible redeeming factors: (i) many eukaryotic genomes have been or are being sequenced, and comparative genomic analysis can be extremely powerful; and (ii) most eukaryotic genes are controlled by a combination of factors with the corresponding binding sites forming homotypic or heterotypic clusters known as 'cis-regulatory modules' (CRMs)" (Gupta & Liu, 2005).
+In this work we develop novel methods that are able to classify genes as being either TF targets or not, based on the presence of motifs and features capable of describing CRMs. This is done by a two-step procedure. We first use de novo motif finding tools or known motif databases like Transfac (Matys, 2003) or Jaspar (Sandelin, 2004) to identify a set of potential motifs. Then we use
+Support Vector Machines (SVMs) employing a newly developed kernel that is capable of capturing information about the motifs and their relative location to classify promoter sequences. Additionally, we demonstrate the potential of our approach to exploit conservation information to improve the classification performance.
+Most previous approaches for discovering CRMs are based on the identification of motifs and their co-occurrences e.g. Frith (2008) and Sinha (2002). Other approaches exploit site-clustering information with de novo motif discovery to build rules discriminating modules that preserve the ordering of motifs e.g. Segal (2004). Finally, Yada (1998) suggested to use Hidden Markov Models to represent CRMs and Gupta & Liu (2005) developed a Monte Carlo method and dynamic programming approach to screen motif candidates. The main difference between our
+approach and most previous approaches is that we use discriminative methods that allow us to model the TFBSs more accurately. In particular, instead of using zeroth-order inhomogeneous Markov chains, we use Support Vector kernels to model higher order sequence information around putative TF binding sites.
+From our results, we can make the following observations: (i) All four versions show a significantly improved performance relative to the base-line methods. (ii) Motif-finding using oligo-counting seems to work considerably better in combination with SVMs than Gibbs-sampling. A possible reason may be that the number of considered oligos (100-200) is higher than the number of motifs generated by the Gibbs-sampler (less than 50). (iii) Using conservation as weighting for the WDS kernel considerably improves the recognition performance.
+These results clearly illustrate the power of our approach in exploiting the relationship between motifs as well as the conservation to improve the recognition of transcription factor targets.
+Availability: The Python source code (open source - licensed under GPL), the data for the experiments and a web-service will be available at http://www.fml.tuebingen.mpg.de/raetsch/projects/kirmes
+Contact: sebi@tuebingen.mpg.de
+</div>
+<div class="keys">
+Keywords: transcription, kernel methods, CRM, TFBS
+</div>
+<a name="24
+"></a>
+<div class="poster">
+Poster F24
+</div>
+<div class="titolo">
+Comparison of exon array analysis methods for detecting splice variants
+</div>
+<div class="autori">
+Axel Rasche, Ralf Herwig
+</div>
+<div class="inst">
+MPI for Molecular Genetics
+</div>
+<div class="shabs">
+Splicing prediction for exon arrays is still under research. Some first methods have been proposed, but no methods have been systematically compared and evaluated. Since the validation rate is still low for the different methods, identification of improved methods is crucial for the use of the technology.
+</div>
+<div class="exabs">
+Affymetrix provides a recent chip technology called exon arrays that are supposed to yield a higher resolution picture of the transcriptome compared to  standard 3’ IVT gene expression arrays. The expression of a gene can now be dissected by the expression of its transcripts and isoforms. On the one hand, known transcripts can be analysed on the other hand new transcripts may be detected.
+An important prerequisite for data analysis is the question which splicing events can be detected. Theoretically, the microarrays are able to identify the most interesting splicing events, however, not all possible splicing can be detected. 
+In this work we highlight the possible splice variants that are detectable and conduct a comparative study of existing methods on a defined set of experiments and validation resources.
+Goal of our work is to assess performance of different methods for the identification of alternative splicing from exon microarrays. Simple approaches like the computation of Splicing Indices or PAC calculate a numerical value from the expression means. Alternatively, analysis of variance has also been proposed in a variant called ANOSVA. The major drawback in developing and comparing new methods is the lack of controlled data sets like Spike-In data set or similar data sets as available for the standard arrays. Affymetrix publishes several datasets on its homepage. With the accompanying publications at least some validated genes are at hand. 
+In a first phase a pipeline was implemented in the R/BioC framework covering the quality control, preprocessing and analysis on exon/gene level. The different results of the alternative splicing evaluation methods are compared on the same data sets and with the same preprocessing. Where available, true positives were used for assessment, e.g. with ROC curve analysis. Validation using external data is a crucial element of the work.
+</div>
+<div class="keys">
+Keywords: alternative splicing, exon arrays, splicing prediction
+</div>
+<a name="25
+"></a>
+<div class="poster">
+Poster F25
+</div>
+<div class="titolo">
+Genomic and transcriptomic mapping of microarray probes at locus and exon level to achieve accurate expression profiles
+</div>
+<div class="autori">
+Risueno A., Fontanillo C., De Las Rivas J.
+</div>
+<div class="inst">
+Cancer Research Center (CIC, CSIC/USAL)
+</div>
+<div class="shabs">
+Our knowledge about transcriptomes is very dynamic and human gene entities are in many cases not well defined and change with each genome release version. Genome-wide expression microarrays are a widely used technology to obtain transcriptomic profiles, but it has a heavy reliance on the transcriptomic knowledge that existed several years ago. In the absence of a stable data for gene definition we have chosen a new method for microarrays signal mapping based on allocating the probes at exon level in the genomic context. The exons are associated with transcripts and placed at locus gene level.
+</div>
+<div class="exabs">
+MOTIVATION: Our knowledge about transcriptomes is at the present very dynamic and gene entities are in many cases not well defined and change with each genome release version [1][2]. Genome-wide expression microarrays from Affymetrix [3] are a widely used technology to obtain transcriptomic profiles, but it has a heavy reliance on the biological knowledge that existed several years ago [1]. In the absence of a stable data for gene definition we have chosen a new method of microarrays signal mapping based on allocating the probes at exon level in the genomic context. The exons are associated with transcripts and all placed at locus gene level.
+BACKGROUND:  In the genomic context for metazoa (human, mouse, etc) the concept of gene is not clear, because our knowledge of the genome coding regions is changing very fast due to the discovery of new different transcript entities produced from a given gene locus. In fact, for most of the human genes we do not know the exact length of the coding regions or the exact number of transcritps produced. Therefore, more than the “genes” the biological entities can be considered the “transcripts” and when we refer to the genome these are mapped on specifc locus and exons. Moveover, most of the gene expression analysis published consider as genes the sets of oligonucleotide probes defined by the manufactures (i.e. Affymetrix), and this implies a lot of the biological noise [4][5]. Some recent efforts have reported re-mapping of the micorarray probes to the currently defined compendium of genes, but most of them do not address the concept of “gene” in metazoa and do not allow a graphic and dynamic exploration of the mapping in a genomic context with adequate localization of the probes that are responsible for the signal obtained from the expression microarrays.
+METHODS and RESULTS All probe sequences from main Affymetrix expression microarrays (including new exon chips) for human, mouse and rat were used to search for identical sequences within the cDNA data from Ensembl (v49) [6] using BLAST algorithm. cDNA coordinates resulting from BLAST running were converted into genomic coordinates by allocating the transcripts in specific chromosomal loci, identifying the exons and placing the probes on them for each locus (including  the inter-exonic probes). To show up the specific expression signals derived from this mapping, some expression data from several tissues for human, mouse and rat [7] were also analysed and processed at probe level.  All this work is included in a new interactive bioinformatic web tool (using LAMP architecture) similar to a genome browser, where it is possible to navigate through the genes and transcripts and to find all probes mapping within them. The tool also includes for each gene locus a expression viewer to visualize the corresponding signals. The bioinformatic web tool is called GATE (Genomic and Transcriptomic Explorer) and it is fully accessible at http://bioinfow.dep.usal.es/gate. As indicated it allows clear location and visualization of the each gene locus and its transcript structure and it includes a tissue expression profile.
+In conclusion, we provide a complete remapping of all oligonucleotide probes from microarrays on exons and gene locus according to current genome structure knowledge, including the mapping to all known transcripts within each locus. Moreover, this information can be downladed from GATE in tabulated .csv format. We also provide an R package to use our complete mapping with Bioconductor tools [8] and perform microarray analysis with improved accuracy and reduced noise. Finally, our mapping methodology also allows to study the alternative splicing occurred in some specific gene locus. Mapping at exon level allows to identify probes that capture signal from only one specific transcript or from all transcripts within a given gene locus. As far as we know, previous studies do not provided this possibility [1][2][9][10].
+BIBLIOGRAPHY
+1.Gautier L, Moller M, Friis-Hansen L, Knudsen S. (2004). Alternative mapping of probes to genes for Affymetrix chips. BMC Bioinformatics.
+2.Carter SL, Eklund A.C, Mecham BH, Kohane IS, Szallasi Z. (2005). Redefinition of Affymetrix probe sets by sequence overlap with cDNA microarray probes reduced cross-platform inconsistencies in cancer-associated gene expression measurements. BMC Bioinformatics.
+3.http://www.affymetrix.com 
+4.Liang S, Li Y, Be X, Howes S,Liu W. (2006). Detecting and profiling tissue-selective genes.Physiol Genomics.
+5.Roth RB, Hevezi P, Lee J, Willhite D, Lechner SM, Foster AC, Zlotnik A. (2006). Gene expression analyses reveal molecular relationships among 20 regions of the human CSN.
+6.http://www.ensembl.org 
+7.http://symatlas.gnf.org/SymAtlas/
+8.http://www.bioconductor.org 
+9.Harbig J, Sprinkle R, Enkemann SA. (2005). A sequence-based indentificationof the genes detected by probesets on the affymetrix U133 plus 2.0 array. Nucleic Acids Research.
+10.Dai M, Wang P, Boyd AD, Kostov G, Athey B, Jones EG, Bunney WE, Myers RM, Speed TP, Akil H, Watson SJ Meng F. (2005). Evolving gene/transcript definitions significantly alter the interpretation of GeneChips data. Nucleic Acids Research.
+</div>
+<div class="keys">
+Keywords: probe,probeset,mapping,transcriptome,affymetrix,expression
+</div>
+<a name="26
+"></a>
+<div class="poster">
+Poster F26
+</div>
+<div class="titolo">
+Finding temporal patterns of GO processes in DNA microarray experiments
+</div>
+<div class="autori">
+Sacchi L., Nuzzo A., Decontardi F., Bellazzi R.
+</div>
+<div class="inst">
+Dept of Computer Engineering and Systems Science - University of Pavia - Via Ferrata 1, 27100 Pavia - Italy
+</div>
+<div class="shabs">
+We present a technique to identify temporal patterns of GO processes from time course gene expression experiments. We developed a novel algorithm for gene annotation based on a strategy which allows to cut term nodes all over the GO tree, regardless of the level they belong to. We tested the approach on a public available gene expression dataset about mouse embryo development. Our preliminary results show a snapshot of the GO processes being activated/deactivated during the distinct development phases.
+</div>
+<div class="exabs">
+MOTIVATION.
+Time course DNA microarray experiments are nowadays a widely used instrument for the analysis and the formulation of hypotheses about the behaviour of complex molecular systems.
+In a typical scenario, the available data undergo some kind of analysis which allow to extract groups of interesting genes characterized by a similar temporal expression pattern. Usually, the biological validation of those groups consists in retrieving the available knowledge about the role they play in biological processes. These processes are identified by annotating the genes on the Gene Ontology (GO). However, as each gene may be involved in different biological processes, the temporal behaviour of gene expression profiles may not reflect the temporal evolution of the represented GO categories. Besides evaluating temporal patterns of co-expression, additional information can therefore be extracted by studying how different GO processes are activated/deactivated during the observation period.
+Current annotation tools usually provide the most specific annotation available for each gene or at most they allow to cut the GO tree at a predefined level. However, biologists often need to group genes according to categories which do not belong to the same level of the GO. Defining a method to fulfil this need is still an open issue. In this work we propose an approach to perform this task and to provide a suitable annotation for the identification of interesting temporal patterns of GO processes.
+METHODS.
+The overall strategy is made up of the following steps: i) selection of a set of interesting genes for each time point; ii) annotation of each gene set through our proposed technique; iii) visualization of the temporal patterns through a heat map.
+Interesting genes can be selected according to suitable criteria defined by the user. In a typical time course experiment, these genes will be selected as the ones which are differentially expressed in the considered time point.
+The annotation algorithm is designed to take into account the GO structure, and it is based on three steps. First, each interesting gene is annotated with its most specific available term and with all its parent terms (ancestors) in the considered GO tree (biological process, molecular function or cellular component). In this way we are able to determine the number of genes which can be annotated to each of the extracted GO terms; at this stage each gene can be associated to more than one term. As a second step, the user has to specify a parameter k, representing the minimum number of allowed gene annotation instances in a node: terms containing less than k genes are cut off from the tree. Using this pruning criterion, cutting nodes may be scattered all over the GO tree, regardless of the level they belong to. Finally, each gene is annotated with the most specific term resulting from the pruned tree. The introduction and definition of parameter k allows the user to personalize the association between a gene and the corresponding GO term: low values for k lead to a more specific annotation, while high values lead to an annotation with more general categories in the GO. Of course the setting for the parameter k depends on the analysis requirements, and must be established by a domain expert on the basis of the results one wants to achieve.
+RESULTS.
+We tested the proposed methodology on gene expression data published by Wang et al in 2004 in a study concerning mouse embryo development. Transcription profiles were generated using the Affymetrix Murine Genome Array U74Av2, and the data of about 12500 probe sets are available. The whole data set is made up of gene expression time series of 12 points, describing embryo developmental course from germinal vesicle oocyte to expanded blastocyst. First of all, up-regulated genes for each time point were extracted; in this case, a gene was identified as up-regulated if its expression value in a specific time point results greater than the mean expression value along the whole time series. We obtained a mean of about 3000 up-regulated genes for each time point. As a second step, each sub-set of genes was annotated with the above described annotation algorithm. In this case we focused on GO biological processes, with the aim of  extracting a sort of picture of their temporal evolution. This information allows to get an insight into the dynamics of the biological processes during different phases, in order to extract the most important GO processes which regulate the complex events taking place during development. The status of each GO process was monitored by counting the number of up-regulated genes annotated with it, and the results were represented through a heat map. The algorithm was implemented in Matlab and all the analyses were performed using the Bioinformatics Toolbox. The results of the analysis based on our approach show that all the considered GO processes were turned on at the beginning of the developmental time course (in particular in the germinal vesicle and in the metaphase II stages), then they become less active during the middle stages of development (zygote, early 2-cell, middle 2-cell and 4-cell), and finally they turn on again in the later stages (8-cell, early, mid and late blastocyst). Within the more represented processes following this temporal pattern we can find "Growth", "Developmental Process" and "Cell Killing", which are key processes for the embryonic development. These results, and in particular the ones concerning the re-activation of specific biological processes during the late phases of development, are in accordance with Wang’s conclusions and with other works on zygotic gene activation.
+</div>
+<div class="keys">
+Keywords: gene ontology annotation, DNA microarrays, gene expression time series
+</div>
+<a name="27
+"></a>
+<div class="poster">
+Poster F27
+</div>
+<div class="titolo">
+The prediction of differential expression in transcriptomic data from co-expression in A. Thaliana
+</div>
+<div class="autori">
+Shanahan, H
+</div>
+<div class="inst">
+Department of Computer Science, Royal Holloway, University of London
+</div>
+<div class="shabs">
+To explore the relationship between differential expression (DE) and co-expression in A. Thaliana, p-values for DE for all genes in a subset of experiments are computed and a comparison is made between pairs of p-values for highly correlated genes to determine how information of one p-value in the pair determines the other p-value. Sensitivities and specificities are found to be smaller than expected.  It is demonstrated that this is not because the subset of experiments are deviating unexpectedly but that even highly correlated data allows variances which generate large fluctuations in DE. 
+</div>
+<div class="exabs">
+Differential expression in transcriptomic data in a gene between different factors in a given experiment is the key characteristic in implicating the gene’s involvement in that experiment. On the other hand, the use of correlations, in pairs of genes between the absolute levels expressions of many experiments, to infer functional relationships (and possibly networks) has been employed for some time. More recently, the relationship between these two related, but distinct, variables has been considered, though there appear to be few studies for Arabidopsis, for which there are a very large number of transcriptomic data sets available. 
+Transcriptomic (ATH1) data from NASC was gathered from 139 experiments, corresponding to approximately 1800 individual slides (.cel files). For each experiment, the data was normalized using the mas5 normalisation procedure. Linear pearson correlations were computed for the log of the expressions for all gene pairs. Each individual normalized measurement determined to be absent according to the  mas5 present filter was censored from the calculation of the correlation coefficient. 
+For a subset of experiments (not included in the calculation of the correlation coefficients), which included single and double factor experiments, p-values were computed using ANOVA F-tests. For each such experiment, those pairs of genes which are most correlated, the correlation is above a cutoff and have measurements of the expression values for that experiment which are all labeled as present were identified. For an arbitrary cutoff of the p-value each gene in the pair is labeled as being differentially expressed (DE) or non-differentially expressed (non-DE). Using this data one can determine how well knowing the classification of one gene in a pair will predict the classification of the other and ROC curves are determined by varying the p-value cutoff. 
+It is found that for even high minimum correlation coefficients, the sensitivities and specificities to be not as large as one would expect. It is demonstrated that this is not because the expression patterns found in the subset of experiments where the p-values are computed are behaving in a radically different fashion from the remainder of the data. By means of a relatively simple model, it is shown that a distinct change in the expression levels of a given gene can allow a wide variance in the change in expression levels for genes that are highly correlated to it. As a result, high correlations do not necessarily imply that genes will both be DE or non-DE for a given experiment.
+It is hypothesized that this result explains why co-expression in transcriptomic data is not as strong an indicator of functional relationships as hoped despite a strong level of correlation. 
+</div>
+<div class="keys">
+Keywords: microarray, arabidopsis thaliana,  coexpression, differential expression, correlation
+</div>
+<a name="28
+"></a>
+<div class="poster">
+Poster F28
+</div>
+<div class="titolo">
+Correcting for sequence dependencies in whole genome methylation measurements in mammals
+</div>
+<div class="autori">
+Sylvia Tippmann, Michael Stadler, Dimosthenis Gaidatzis, Fabio Mohn, Michael Weber, Dirk Schuebeler
+</div>
+<div class="inst">
+Friedrich Miescher Institute for Biomedical Research, Maulbeerstrasse 66, 4058 Basel, Switzerland
+</div>
+<div class="shabs">
+A technique to profile methylation on a genome wide level is methylated DNA Immunoprecipitation (MeDIP). Its readout is not a measure for absolute methylation due to local sequence dependencies. Our aim was to combine the measured value with local sequence features in order to derive an unbiased methylation measure. Using a SVM based approach and a training-set of 444 independently quantified methylation levels, we were able to increase correlation between true and MeDIP derived methylation substantially.
+</div>
+<div class="exabs">
+Methylation of Cytosines in CpG dinucleotide context is the most studied epigenetic modification in eukaryotes. Present at promoter sites it inhibits transcription and has been shown to play a role in development, health and disease. 
+One common technique to profile methylation on a genome wide level is MeDIP (methylated DNA Immunoprecipitation). Genomic DNA is randomly sheared by sonication and immunoprecipitated with an antibody that specifically recognizes 5-methylcytidine (5mC). The fragments are then subjected to a microarray to identify enriched sequences in the genome (MeDIP-chip).
+However, the readout of such an experiment is not a measure for absolute methylation. The immunoprecipitation is affected by the sequence composition, in particular the density and distribution of CpG dinucleotides. 
+To correct for that we aim to transform the microarray derived raw data from chip into an absolute methylation measure, that is easier to interpret. 
+Here we present an approach based on a Support Vector Machine (SVM). It incorporates the MeDIP raw data and additional features expected to influence IP enrichment. All additional features are sequence-derived such as relative number of Cytosine and Guanine residues, CpG dinucleotides and the ratio of observed over expected CpGs, the distance between CpGs and occurrence of clusters smaller than 10 nt containing 2 or 3 CpG dinucleotides. Since the antibody used for MeDIP is likely to also bind non-methylated C residues, although with lower affinity, we furthermore included the distance between those. 
+As a training set we used MeDIP-chip enrichment values and corresponding sequence-derived features for which the true percentage methylation has been determined by an alternative method: bisulfate sequencing, which is considered the Gold Standard for determination of metylation levels. It uses the property of bisulfate to covert unmethylated C to T residue but leaves methylated Cs unchanged. Methylation is calculated as the fraction of observed non-converted Cs amongst all sequences covering a given CpG. 
+ 
+Genomic DNA fragments generated by sonication and hybridized to a microarray are 500 nt and microarray probes are 50 nt in length. Consequently, fragments hybridizing to a given probe will cover a genomic neighborhood around the probe that should be used to derive the sequence features for that probe. To account for the probability of a sequence feature and the region complementary to the microarray probe being on the same fragment, we subjected each observed features as well as the response variable to a weighting function that was approximated with the normal distribution with a standard deviation equal to the average fragment size.
+For this study three different datasets comprising MeDIP data and Bisulfate data were available: (1) human fibroblast cells, (2) mouse embryonic stem cells and (3) terminal neurons. Combining all these 3 sets a total number of 444 training points were available. The correlation of raw MeDIP-chip values with methylation measured by bisulfate sequencing results is ~0.5; a simple linear model using the same features as the SVM fitted by least squares improves the correlation to 0.7; the svm reaches a correlation up to 0.8, verified by cross validation. With more bisulfate sequencing data becoming available due to high throughput sequencing techniques the training set can be extended. A greater variety of sequence features and different genomes in the training set will extend the training and refine prediction even more without over fitting, making the Support Vector Machine a promising method to correct for experimental biases in MeDIP data and obtain absolute methylation measurements on a genome wide scale.
+</div>
+<div class="keys">
+Keywords: DNA methylation, MeDIP, bisulfate sequencing, SVM, microarray
+</div>
+<a name="29
+"></a>
+<div class="poster">
+Poster F29
+</div>
+<div class="titolo">
+Indentification of stress responsive protein subnetworks
+</div>
+<div class="autori">
+Dr Frances Turner
+</div>
+<div class="inst">
+Imperial College, Exhibition Road, South Kensington, London, UK,SW7 2AZ
+</div>
+<div class="shabs">
+Microarray experiments measuring gene expression changes to pathologically relevant stresses are a frequently used tool in the study of microbial pathology. The identification of groups of functionally related genes showing coordinated changes in expression may be more useful than the identification of individual genes showing greatest changes in expression. Here we present a method to do this that supplements the often poor functional annotation of pathological relevant bacteria genomes with recently available protein interaction data.
+</div>
+<div class="exabs">
+Introduction
+A large and increasing volume of microarray data from studies assessing a cell/organism's  response to a stress (genetic or environmental) is publicly available. However, the elucidation of biological meaning from such large and often noisy data sets represents an important challenge. The genes whose expression levels show greatest change in response to the stress are easily identified, although selection of the genes most relevant to the response may be challenging. Individual genes may show large changes in expression but may not be the most biologically relevant, whilst groups of genes that have the same function or are in the same pathway and show smaller but coordinated changes may be of more interest. Further analyse of such data often involves the addition of functional gene annotation. For example a common approach is to look for groups of genes sharing the same Gene Ontology (GO) terms that show coordinated changes in expression, thus revealing the biological pathways relevant to the stress response. However some organisms for which microarray data is available have functional annotation of poor coverage and/or low quality. Genome wide protein interaction datasets are becoming available for many organisms, including those with poor functional annotation. Groups of interacting proteins are likely to be functionally related and can be identified from this data. By integrating protein interaction data and microarray data it is possible to identify groups of potentially functionally related genes that show coordinated changes in expression in response to a stress.
+Methods
+All genes from a microarray experiment are ordered by their change in expression. All possible sub networks in a protein interaction network are considered.
+For each possible sub network the genes encoding the proteins in the sub network are tested to see if they are enriched among the top of the ordered list (the most differentially expressed genes). Each sub network is given a score based on its enrichment among the differentially expressed genes (measured using the Fisher's exact test). The data set is randomly permutated by switching the gene labels and the   enrichment of all sub networks among the differentially expressed genes scored. Comparison of the scores from the real data with the randomised datasets allows the scores to be converted in to a p-value that is corrected for multiple testing.
+Results
+This method is applied to microarray datasets from Campylobacter jejuni and Mycobacterium tuberculosis , two organisms that have genome-wide protein interaction data. Protein sub networks responding to pathogenically relevant conditions are identified, focusing on the role of capsule synthesis and survival of C.jejuni. Results show that groups of interacting proteins often show coordinated response to stress and tend to be functionally related.
+Conclusion
+These organisms include two pathological bacteria of medical importance including C.jejuni and M.tuberculosis. Most functional annotation available for these bacteria is transferred from E.coli and may be inaccurate. Therefore it is of particular interest to analyse microarray data from these organisms in a way that does not rely on such functional annotation.
+</div>
+<div class="keys">
+Keywords: microarray, protien interaction, stress response
+</div>
+<a name="30
+"></a>
+<div class="poster">
+Poster F30
+</div>
+<div class="titolo">
+COMPARATIVE expression analysis of human and canine breast tumors
+</div>
+<div class="autori">
+Uva P., Palombo F., Aurisicchio L., Mesiti G., Lahm A., La Monica N., De Rinaldis, E.
+</div>
+<div class="inst">
+IRBM/Merck Research Laboratories, Via Pontina km 30,600, 00040 Pomezia, Rome, Italy
+</div>
+<div class="shabs">
+Dog breast tumors share many features with human tumors and therefore provide a promising alternative to transgenic or xenograft mouse models.
+The comparative transcriptional analysis of human and canine breast tumors reveals a great degree of similarity regarding the perturbation of many cancer related pathways. This confirms the value of the canine breast cancers as preclinical models.
+</div>
+<div class="exabs">
+Spontaneous dog tumors have been demonstrated to share many features with human tumors, including histological appearance, tumour genetics, molecular targets, biological behavior and response to conventional therapies. Breast tumors in dog therefore provide an attractive alternative to more classical mouse models such as transgenics or xenografts.
+Here we present a comparative analysis of transcriptional changes occurring in the breast tumors of dog and humans. Starting from different human and dog transcriptional studies, we have identified the orthologous genes represented on the two array platforms and compared the expression values in the tumor and normal tissues of the two species. 
+A significant number of genes differentially expressed in human breast tumors were also found deregulated in the canine model. The pathway focused analysis of these genes reveals a great degree of similarity regarding the perturbation of many cancer related pathways. These include the Ras and the Wnt pathways and also a pathway specific for human breast cancer initiating cells. Moreover, by systematically exploring the expression level of various gene signatures (e.g. “prognosis”, “grading”, “wound”) we observed that the correlation between different signatures present in human is also maintained in the canine model. Taken together these data confirm and strengthen the value of the canine breast cancer as a preclinical model for the development and the evaluation of novel cancer therapeutics.
+</div>
+<div class="keys">
+Keywords: Dog breast cancer, oncology, pathway analysis
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+BODY{
+	text-align: justify;
+	font-family: Arial;
+	background : White;
+	}
+A {
+	text-decoration: none;
+	font-family: Arial;
+	color : blue;
+}
+A:Hover {
+	text-decoration: underline;
+	font-family: Arial;
+}
+A:VISITED {
+	color : blue;
+}

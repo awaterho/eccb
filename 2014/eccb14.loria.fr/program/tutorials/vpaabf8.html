@@ -1,0 +1,108 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+
+
+<!-- Mirrored from eccb14.loria.fr/program/tutorials/vpa?tmpl=component&print=1&page= by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jul 2015 15:49:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <script type="text/javascript">
+var siteurl='../../index.html';
+var tmplurl='../../templates/ja_elastica/index.html';
+var isRTL = false;
+</script>
+
+  <base  />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="ECCB'14, ECCB2014, Computational Biology, Bioinformatics, Conference, Strasbourg, ECCB, European Conference on Computational Biology, ECCB14" />
+  <meta name="author" content="Adrien" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="ECCB'14 is the key European computational biology event in 2014 uniting scientists working in a broad range of disciplines, including bioinformatics, computational biology, biology, medicine, and systems biology." />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>ECCB'14 - T10 - Viral Population Analysis: Detection of Rare Variants and Full-Length Genomes from Next-Generation Sequencing Data</title>
+  <link href="http://eccb14.loria.fr/program/tutorials/vpa?tmpl=component&amp;print=1&amp;page=" rel="canonical" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/media/jui/css/icomoon.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/." type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/addons.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/template-j30.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/layout.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/template.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/usertools.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/css3.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/component.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/print.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/menu/mega.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/typo.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/template-j30.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/template.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/modules.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-mobile.css" type="text/css" media="only screen and (max-width:719px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-mobile-port.css" type="text/css" media="only screen and (max-width:479px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-tablet.css" type="text/css" media="only screen and (min-width:720px) and (max-width: 985px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-normal.css" type="text/css" media="only screen and (min-width:986px) and (max-width: 1235px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-wide.css" type="text/css" media="only screen and (min-width:1236px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/css3.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/component.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/menu/mega.css" type="text/css" />
+  <script src="http://eccb14.loria.fr/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/mootools-more.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/anchor.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/js/core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/mega.rjd.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.noconflict.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.masonry.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.mediaqueries.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/menu/mega.js" type="text/javascript"></script>
+  <script type="text/javascript">
+jQuery.noConflict();
+  </script>
+
+<!--[if ie]><link href="/plugins/system/jat3/jat3/base-themes/default/css/template-ie.css" type="text/css" rel="stylesheet" /><![endif]--> 
+<!--[if ie 7]><link href="/plugins/system/jat3/jat3/base-themes/default/css/template-ie7.css" type="text/css" rel="stylesheet" /><![endif]--> 
+<!--[if ie 7]><link href="/templates/ja_elastica/css/template-ie7.css" type="text/css" rel="stylesheet" /><![endif]--> 
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes"/>
+<meta name="HandheldFriendly" content="true" />
+
+
+<link href="http://eccb14.loria.fr/templates/ja_elastica/images/favicon.ico" rel="shortcut icon" type="image/x-icon" /></head>
+
+<body id="bd" class="fs3 com_content contentpane">
+    
+<div id="system-message-container">
+<div id="system-message">
+</div>
+</div>
+    <div class="item-page clearfix">
+	<h2 class="contentheading">
+			T10 - Viral Population Analysis: Detection of Rare Variants and Full-Length Genomes from Next-Generation Sequencing Data		</h2>
+
+	
+<div class="article-tools clearfix">
+	<ul class="actions">
+			<li>
+		<a href="#" onclick="window.print();return false;"><span class="icon-print"></span>&#160;Print&#160;</a>		</li>
+		
+	</ul>
+
+
+
+	
+</div>
+	<p><span>This tutorial has been cancelled.</span></p>
+<p><span>Apologies for the inconvenience this may cause. </span></p>
+<p><span><strong><span><em><span> </span></em></span></strong></span></p>
+<p><span><strong><span><em><span>Page Last Updated: Sept. 1st, 2014</span></em></span></strong></span></p>
+		
+
+	</div>
+</body>
+
+
+<!-- Mirrored from eccb14.loria.fr/program/tutorials/vpa?tmpl=component&print=1&page= by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jul 2015 15:49:19 GMT -->
+</html>

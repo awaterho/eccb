@@ -1,0 +1,163 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+
+
+<!-- Mirrored from eccb14.loria.fr/program/tutorials/pea?tmpl=component&print=1&page= by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jul 2015 15:49:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <script type="text/javascript">
+var siteurl='../../index.html';
+var tmplurl='../../templates/ja_elastica/index.html';
+var isRTL = false;
+</script>
+
+  <base  />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="ECCB'14, ECCB2014, Computational Biology, Bioinformatics, Conference, Strasbourg, ECCB, European Conference on Computational Biology, ECCB14" />
+  <meta name="author" content="Adrien" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="ECCB'14 is the key European computational biology event in 2014 uniting scientists working in a broad range of disciplines, including bioinformatics, computational biology, biology, medicine, and systems biology." />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>ECCB'14 - T05 - Protein Evolution Analysis: on the Use of Phylogenetic Trees</title>
+  <link href="http://eccb14.loria.fr/program/tutorials/pea?tmpl=component&amp;print=1&amp;page=" rel="canonical" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/media/jui/css/icomoon.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/." type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/addons.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/template-j30.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/layout.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/template.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/usertools.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/css3.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/component.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/print.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/menu/mega.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/typo.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/template-j30.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/template.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/modules.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-mobile.css" type="text/css" media="only screen and (max-width:719px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-mobile-port.css" type="text/css" media="only screen and (max-width:479px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-tablet.css" type="text/css" media="only screen and (min-width:720px) and (max-width: 985px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-normal.css" type="text/css" media="only screen and (min-width:986px) and (max-width: 1235px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-wide.css" type="text/css" media="only screen and (min-width:1236px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/css3.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/component.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/menu/mega.css" type="text/css" />
+  <script src="http://eccb14.loria.fr/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/mootools-more.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/anchor.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/js/core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/mega.rjd.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.noconflict.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.masonry.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.mediaqueries.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/menu/mega.js" type="text/javascript"></script>
+  <script type="text/javascript">
+jQuery.noConflict();
+  </script>
+
+<!--[if ie]><link href="/plugins/system/jat3/jat3/base-themes/default/css/template-ie.css" type="text/css" rel="stylesheet" /><![endif]--> 
+<!--[if ie 7]><link href="/plugins/system/jat3/jat3/base-themes/default/css/template-ie7.css" type="text/css" rel="stylesheet" /><![endif]--> 
+<!--[if ie 7]><link href="/templates/ja_elastica/css/template-ie7.css" type="text/css" rel="stylesheet" /><![endif]--> 
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes"/>
+<meta name="HandheldFriendly" content="true" />
+
+
+<link href="http://eccb14.loria.fr/templates/ja_elastica/images/favicon.ico" rel="shortcut icon" type="image/x-icon" /></head>
+
+<body id="bd" class="fs3 com_content contentpane">
+    
+<div id="system-message-container">
+<div id="system-message">
+</div>
+</div>
+    <div class="item-page clearfix">
+	<h2 class="contentheading">
+			T05 - Protein Evolution Analysis: on the Use of Phylogenetic Trees		</h2>
+
+	
+<div class="article-tools clearfix">
+	<ul class="actions">
+			<li>
+		<a href="#" onclick="window.print();return false;"><span class="icon-print"></span>&#160;Print&#160;</a>		</li>
+		
+	</ul>
+
+
+
+	
+</div>
+	<p><strong>Presenters:</strong></p>
+<p><strong>Brandon Invergo</strong> - EMBL-EBI, Cambridge, UK (invergo [at] ebi.ac.uk)</p>
+<p><strong>David Ochao</strong>       - EMBL-EBI, Cambridge, UK (ochoa [at] ebi.ac.uk)</p>
+<p><strong>Romain Studer</strong>   - EMBL-EBI, Cambridge, UK (rstuder [at] ebi.ac.uk)</p>
+<p> </p>
+<p> </p>
+<p><strong><span style="text-decoration: underline;">Motivation</span></strong></p>
+<p style="text-align: justify;">Homologous proteins, that share a common ancestor, can be classified into families. These homologs can be orthologs, that were separated by a speciation event, or paralogs, that were separated by a duplication event. Within a protein family, all members are related by a phylogenetic tree, which consists of a root (the last common ancestor of the protein family), nodes (which are speciation/duplication events), branches (whose lengths correspond to the number of substitutions) and tips (which correspond to modern sequences). The tree is helpful for inferring the evolutionary history of the protein family. For example, we can reconstruct the ancestral sequences at each node of the tree. These ancestral sequences can be used for homology modelling, to reveal the ancestral 3D structures, or synthesised in vitro. Or we can compare trees to reveal similar evolutionary history between protein families (co-evolution). Manipulating tree topologies are complex operations that require tools to perform operations such as reading, pruning, collapsing, rerooting. These operations can be done with programs with graphical user interfaces (GUI). However, in the area of large-scale data, in which hundreds or thousands of trees may be manipulated, it is impractical to use such programs.  To this end, new software/libraries have been developed to deal with such large data sets in an automated manner.</p>
+<p> </p>
+<p><strong><span style="text-decoration: underline;">Goal</span></strong></p>
+<p style="text-align: justify;">This tutorial will present recent concepts regarding the evolution and adaptation of protein sequences. It will be divided into three sections, in which we will present methods relating to the use of phylogenetic trees to infer protein function. These sections will be 1) using scripts to manipulate trees, 2) using ancestral sequence reconstruction to infer history of a protein family and 3) the detection of coevolution between protein families. Each section will have an introduction explaining the concepts underlying any analysis methods, and a discussion of the power and limitations of different methods and tools used to explore these concepts and which participants will learn how to use during the practical for that section.</p>
+<p> </p>
+<p><strong><span style="text-decoration: underline;">Outline</span></strong></p>
+<p>The first part will focus on tools to detect adaptation in protein sequences. It will start with a brief introduction on multiple alignment and phylogenetic trees followed by a more detailed presentation of tools available to estimate selective pressures and detect adaptation in protein sequences with <a href="http://abacus.gene.ucl.ac.uk/software/paml.html">CodeML / PAML</a>. The second part will focus on the reconstruction of ancestral sequences and ancestral structures by homology modelling. The third part will focus on the identification of co-evolution between protein families. The organiser will provide protein datasets, or participants can bring their own sequences. Then, they will be able to use the different programs/libraries in a practical way.</p>
+<p> </p>
+<p><strong>1) Performing phylogenetic analyses with Biopython</strong></p>
+<p style="text-align: justify;">The efficient analysis of large phylogenetic data sets necessitates robust scripting tools. We can cite <a href="http://cegg.unige.ch/newick_utils">Newick utilities</a> (Junier <em>et al.,</em> Bioinformatics 2010), <a href="http://ape-package.ird.fr/">R package “ape”:</a> Analyses of Phylogenetics and Evolution (Paradis <em>et al.,</em> Bioinformatics 2004), <a href="http://ete.cgenomics.org/">ETE [a Python Environment for phylogenetic Tree Exploration]</a> (Huerta-Cepas, <em>et al. </em>BMC Bioinformatics 2010) or <a href="http://biopython.org/wiki/Phylo">Bio.Phylo for Biopython</a> (Talevich <em>et al.,</em> BMC Bioinformatics 2012). To this end, this part of the tutorial will focus on using the Bio.Phylo in order to explore, manipulate and analyse phylogenetic trees. Biopython is a library for the Python programming language that implements a variety of commonly needed methods for bioinformatics analysis, such as handling sequences and sequence alignments. The Bio.Phylo module of Biopython consists of methods specific to phylogenetic analyses.</p>
+<p style="text-align: justify;">The tutorial will begin with an overview of reading and writing phylogenetic tree files as well as a review of the methods for visualising and producing publication-quality trees. Next, methods will be presented for programmatically traversing, exploring and modifying a tree. Finally, a brief overview will be given of the available interfaces to external programs for generating phylogenetic trees, such as PhyML, which facilitate the production of pipelines.</p>
+<p style="text-align: justify;">Lastly, special attention will be given to the Bio.Phylo interface to the PAML software package (&gt;5,000 citations, Ziheng Yang, UCL), which include the widely used programs CodeML and BaseML. These programs are typically used to estimate the rates of fixation of non-synonymous (dN) and synonymous (dS) substitutions. Their ratio (dN/dS) is commonly used as an estimate of the evolutionary forces acting on a protein: a dN/dS ratio less than one indicates purifying selection, a ratio of one indicates neutral evolution and a ratio greater than one points to positive (adaptive) selection. Furthermore, CodeML provides the capability to perform several statistical tests of positive selection at specific codons and specific phylogenetic branches. While these programs are notoriously difficult to reliably include in an analysis pipeline, the Bio.Phylo.PAML sub-module simplifies the dynamic generation of control files and the parsing of results files. This part of the tutorial will begin with a basic theoretical overview of the methods implemented by the PAML programs, focusing on CodeML. Next, an introduction to the programs' basic usage will be presented. Finally, the functionality of the Bio.Phylo.PAML sub-module will be explained.</p>
+<p style="text-align: justify;">The participants will have the opportunity to build a basic phylogenetic analysis pipeline using Biopython, PhyML and PAML: starting with a set of gene sequence alignments, trees will be generated, modified and analysed in an automated manner.</p>
+<p><strong> </strong></p>
+<p><strong>2) Ancestral sequence reconstruction and homology modelling</strong></p>
+<p style="text-align: justify;">Ancestral sequence reconstruction allows the identification of the ancestral character at a particular point of the evolution. The inference of ancestral structure allows a better understanding of protein evolution and protein function. Recent studies using ancestral sequence reconstruction have focused on old proteins (<a href="http://rsbl.royalsocietypublishing.org/content/9/5/20130608.full">Groussin <em>et al.,</em> Biol Lett. 2013</a>), nuclear receptors (<a href="http://www.pnas.org/content/110/28/11475.full">Harms <em>et al.,</em> PNAS 2013</a>) or RuBisCO enzyme (<a href="http://www.pnas.org/content/early/2014/01/23/1310811111">Studer <em>et al.,</em> PNAS 2014</a>). A recent review explored this area: “Harms MJ, Thornton JW. <a href="http://www.nature.com/nrg/journal/v14/n8/full/nrg3540.html">Evolutionary biochemistry: revealing the historical and physical causes of protein properties</a>. Nat Rev Genet. 2013 Aug;14(8):559-71”.</p>
+<p style="text-align: justify;">Different methods exist, and CodeML allows performing such analysis under maximum likelihood. CodeML provides many informative details in its output, such as the probability of a particular amino acid to be present at this point of evolution. The participants will learn how to read the CodeML output and how to convert them into ancestral sequences, with all the potential problems they could encounter. The reconstructed sequences will be then used as target for homology modelling and the structure will be visualised with PyMOL (DeLano, 2002).</p>
+<p style="text-align: justify;"> </p>
+<p style="text-align: justify;"><strong>3) Studying molecular co-evolution</strong></p>
+<p style="text-align: justify;">The detection of molecular co-evolution remains as one of the most challenging applications of phylogenetic trees beyond phylogeny reconstruction (Juan et al., Nat Rev Genet 2013). The hypothesis that functionally related molecules share similar phylogenetic trees has been largely studied at protein-protein and protein-DNA level (Kuo, Genome res 2010), generating a plethora of different methodologies. The most popular approach, <a href="http://csbg.cnb.csic.es/mtserver/">Mirrortree</a>, predicts the similarity of a pair of phylogenetic trees by calculating the Pearson correlation between the cophenetic distances of the corresponding ortholog sequences (<a href="http://peds.oxfordjournals.org/content/14/9/609.long">Pazos and Valencia, Protein Eng. 2001</a>). This naïve approach gave birth to an area of research that improved our understanding of molecular co-evolution during the last decade.</p>
+<p style="text-align: justify;">In this part of the workshop, the participants will be guided on the study of protein co-evolution using the Mirrortree Server (<a href="http://csbg.cnb.csic.es/mtserver/">http://csbg.cnb.csic.es/mtserver/</a>) (Ochoa <em>et al.</em>, Bioinformatics 2010). The attendees will familiarize themselves with the generation of appropriate phylogenetic trees given the particular characteristics of this type of analysis, as well as the difficulties of correct taxonomic sampling (Herman, Ochoa, <em>et al.</em>, BMC Bioinformatics 2011). The attendees will be introduced to the possibility of analysing high-quality phylogenetic trees for highly detailed analysis or using the automatic pipeline to quickly generate phylogenetic trees. By using the web interface, the participants will be able to compare a pair of phylogenetic trees, improve their visualisation, select sub-regions for further analysis or export their selection in a completely interactive way. All these features will allow the users to perform robust co-evolution analysis in different pairs of phylogenetic trees, as well as to detect evolutionary events such as Horizontal Gene Transfers.</p>
+<p style="text-align: justify;">The last part of the tutorial will explore the limitations of studying individual pairs of proteins and will dig into the advantages of using context-based approaches for detecting specific signals of co-evolution (Juan <em>et al.</em>, PNAS 2008). Finally, the attendees will explore some of the protein interaction networks produced by these genome-wide approaches, in order to understand the final applicability of this type of study.</p>
+<p><strong><span style="text-decoration: underline;">Level:</span></strong> Introductory</p>
+<p><strong><span style="text-decoration: underline;">Schedule (Sunday, September 7<sup>th</sup></span></strong><span style="text-decoration: underline;">):</span></p>
+<p> <strong>Morning session: Performing phylogenetic analyses with Biopython.</strong></p>
+<p> 9:00 Talk (45min): <strong>Performing phylogenetic analyses with Biopython</strong> (B. Invergo, EBI)</p>
+<p> 9:45 Practical (30min): <strong>Performing phylogenetic analyses with Biopython</strong> (B. Invergo, EBI)</p>
+<p>10:15 Coffee break</p>
+<p>10:45 Practical (1h30): <strong>Performing phylogenetic analyses with Biopython</strong> (B. Invergo, EBI)</p>
+<p><strong>12:15 Lunch</strong></p>
+<p><strong> </strong></p>
+<p><strong>Afternoon session: ancestral sequence reconstuction and molecular co-evolution.</strong></p>
+<p>13:15 Talk (30min): <strong>Ancestral sequence reconstruction </strong>(R. Studer, EBI)</p>
+<p>13:45 Practical (1h30): <strong>Ancestral sequence reconstruction </strong>(R. Studer, EBI)</p>
+<p>15h:15: Coffee break</p>
+<p>15h45: Talk (30 min): <strong>Studying molecular co-evolution</strong> (D. Ochoa, EBI)</p>
+<p>16h15: Practical (45min): <strong>Studying molecular co-evolution</strong> (D. Ochoa, EBI)</p>
+<p><strong>17:00 End</strong></p>
+<p> </p>
+<p><strong><span style="text-decoration: underline;">Intended audience: </span></strong></p>
+<p>- Evolutionary biologists, biochemists, computational biologists, structural biologists.</p>
+<p> </p>
+<p><strong><span style="text-decoration: underline;">Possible prerequisites:</span></strong></p>
+<p>- Unix command line.</p>
+<p>- We strongly encourage participants to learn the basics of the Python programming language.</p>
+<p><strong><span style="text-decoration: underline;"> </span></strong></p>
+<p><strong><span style="text-decoration: underline;">CV of the organisers:</span></strong></p>
+<p style="text-align: justify;"><strong>Brandon Invergo </strong>is a post-doctoral fellow at the European Bioinformatics Institute (EMBL-EBI) and the Sanger Institute in the laboratories of Drs. Pedro Beltrao (EBI), Oliver Billker (Sanger), Julian Rayner (Sanger) and Jyoti Choudhary (Sanger). He is studying the structure and evolution of post-translational modification networks in malaria parasite <em>Plasmodium</em> species. Brandon obtained his PhD in the laboratory of Prof. Jaume Bertranpetit at the Institute of Evolutionary Biology (Pompeu Fabra University - CSIC, Barcelona, Spain). His thesis focused on the molecular evolution of the proteins comprising the mammalian visual phototransduction system and the influence of the structure and dynamics of the system on the action of natural selection. He specialised in the analysis of protein evolution using CodeML and in systems biology techniques such as network analysis and dynamic system modelling. During the course of his research, he developed a Python library for automating phylogenetic analysis with CodeML, which he later expanded and contributed to the Biopython project to become Bio.Phylo.PAML. He has previously taught tutorial courses as an assistant lecturer on introductory programming for biologists and the use of R for statistical analysis (MSc level), and he has been an invited lecturer for an introductory course on systems biology (BSc level).</p>
+<p> </p>
+<p style="text-align: justify;"><strong>David Ochoa</strong> is a post-doctoral fellow in the laboratory of Pedro Beltrao at the European Bioinformatics Institute. His current research focuses on the study of the functional and evolutionary aspects of the human phosphoproteome. He obtained his PhD in the laboratory of Florencio Pazos (CNB, Madrid). During that time, his research was focused on the improvement of mirrortree-based approaches, in order to detect protein interactions. Besides developing the <a href="http://csbg.cnb.csic.es/mtserver/">Mirrortree Server</a>, he participated in other co-evolution studies in collaboration with Alfonso Valencia’s group (CNIO, Madrid). On the first, he analysed the effect of incorporating predicted solvent accessibility to the co-evolution-based prediction of protein interactions. On the second, he studied the optimal taxonomic sampling required to predict different types of interactions. Moreover, during the last 3 years, he participated as assistant professor in the Master of Bioinformatics and Computational Biology organized by the Universidad Complutense de Madrid and recently by the Instituto de Salud Carlos III.</p>
+<p> </p>
+<p><strong>Romain Studer</strong> is a senior post-doc research scientist in the laboratory of Dr. Pedro Beltrao, EMBL-EBI. He obtained his PhD in the laboratory of Prof. Marc Robinson-Rechavi (Lausanne, Switzerland) and work as post-doc with Prof. Christine Orengo (University College London). His PhD work in evolutionary bioinformatics focused on protein evolution in the context of whole-genome duplication. He specialised in various methods to identify adaptation at genetic levels, such as CodeML/PAML. Using CodeML and other softwares, he studied the prevalence of positive selection in Vertebrates and the characteristics of shifts in evolutionary rate in Animals proteins. Based on the CodeML pipeline he built for his own research, he participated in the development of the web resource Selectome, a database of positive selection (<a href="http://selectome.unil.ch/">http://selectome.unil.ch/</a>). He participated in two studies revealing the relationship between structure and evolution, both in a <a href="http://mbe.oxfordjournals.org/content/26/4/753.short">nuclear receptor in insects</a> and in a <a href="http://mbe.oxfordjournals.org/content/27/10/2360.short">MHC family in birds</a>. At University College London, using ancestral sequence reconstruction and homology modelling, he studied the <a href="http://www.pnas.org/content/111/6/2223.long">evolution and adaption of RubisCO in plants</a>. Romain was also assistant for the practical of bioinformatics (B.Sc/M.Sc levels) at University of Lausanne, as well as involved in the EMBnet course of phylogeny. He also tutored a previous tutorial at ECCB’12, entitled “<a href="http://www.eccb12.org/t2">Protein Evolution: From Sequence to Structure to Function</a>”. He now continues to work on the topic of protein evolution with respect to the 3D structures and post-translational modification.</p>
+		
+
+	</div>
+</body>
+
+
+<!-- Mirrored from eccb14.loria.fr/program/tutorials/pea?tmpl=component&print=1&page= by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jul 2015 15:49:19 GMT -->
+</html>

@@ -1,0 +1,189 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+
+
+<!-- Mirrored from eccb14.loria.fr/program/tutorials/mixomics?tmpl=component&print=1&page= by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jul 2015 15:49:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <script type="text/javascript">
+var siteurl='../../index.html';
+var tmplurl='../../templates/ja_elastica/index.html';
+var isRTL = false;
+</script>
+
+  <base  />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="ECCB'14, ECCB2014, Computational Biology, Bioinformatics, Conference, Strasbourg, ECCB, European Conference on Computational Biology, ECCB14" />
+  <meta name="author" content="Adrien" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="ECCB'14 is the key European computational biology event in 2014 uniting scientists working in a broad range of disciplines, including bioinformatics, computational biology, biology, medicine, and systems biology." />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>ECCB'14 - T04 - Multivariate Projection Methodologies for Big Data and Application in R Using the mixOmics Package</title>
+  <link href="http://eccb14.loria.fr/program/tutorials/mixomics?tmpl=component&amp;print=1&amp;page=" rel="canonical" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/media/jui/css/icomoon.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/." type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/addons.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/template-j30.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/layout.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/template.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/usertools.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/css3.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/component.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/print.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/menu/mega.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/typo.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/template-j30.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/template.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/modules.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-mobile.css" type="text/css" media="only screen and (max-width:719px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-mobile-port.css" type="text/css" media="only screen and (max-width:479px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-tablet.css" type="text/css" media="only screen and (min-width:720px) and (max-width: 985px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-normal.css" type="text/css" media="only screen and (min-width:986px) and (max-width: 1235px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-wide.css" type="text/css" media="only screen and (min-width:1236px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/css3.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/component.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/menu/mega.css" type="text/css" />
+  <script src="http://eccb14.loria.fr/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/mootools-more.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/anchor.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/js/core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/mega.rjd.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.noconflict.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.masonry.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.mediaqueries.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/menu/mega.js" type="text/javascript"></script>
+  <script type="text/javascript">
+jQuery.noConflict();
+  </script>
+
+<!--[if ie]><link href="/plugins/system/jat3/jat3/base-themes/default/css/template-ie.css" type="text/css" rel="stylesheet" /><![endif]--> 
+<!--[if ie 7]><link href="/plugins/system/jat3/jat3/base-themes/default/css/template-ie7.css" type="text/css" rel="stylesheet" /><![endif]--> 
+<!--[if ie 7]><link href="/templates/ja_elastica/css/template-ie7.css" type="text/css" rel="stylesheet" /><![endif]--> 
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes"/>
+<meta name="HandheldFriendly" content="true" />
+
+
+<link href="http://eccb14.loria.fr/templates/ja_elastica/images/favicon.ico" rel="shortcut icon" type="image/x-icon" /></head>
+
+<body id="bd" class="fs3 com_content contentpane">
+    
+<div id="system-message-container">
+<div id="system-message">
+</div>
+</div>
+    <div class="item-page clearfix">
+	<h2 class="contentheading">
+			T04 - Multivariate projection methodologies for  the exploration of large biological data sets. Application in R using the mixOmics package		</h2>
+
+	
+<div class="article-tools clearfix">
+	<ul class="actions">
+			<li>
+		<a href="#" onclick="window.print();return false;"><span class="icon-print"></span>&#160;Print&#160;</a>		</li>
+		
+	</ul>
+
+
+
+	
+</div>
+	<p>The objective of this tutorial is to introduce the fundamental concepts behind projection-based approaches and illustrate their application on some exemplar studies using the R package mixOmics.</p>
+<p>Multivariate projection approaches are useful exploratory tools to get a first understanding of large and complex data sets. These approaches are extremely efficient on large data sets, and can also answer complex questions. Such approaches include Principal Component Analysis (PCA, Joliffe 2002) and other variants, Partial Least Squares regression (PLS, Wold 2001), PLS-Discriminant Analysis, Canonical Correlation Analysis (CCA, Hotelling 1936). These approaches enable the reduction of the dimension of the data by projecting them into a smaller subspace. Recent developments proposed the so-called `sparse’ approaches, which include Lasso penalisations to allow variable selection (Tibshirani 2001).<span style="line-height: 1.3em;"> </span></p>
+<p>PCA is the oldest and most popular multivariate technique but often, little is known about how this approach is solved and what are the limitations. More sophisticated approaches like PLS and CCA have recently been extended to deal with the large dimension (sparse PLS, or regularized CCA) and were proven to bring biologically meaningful results in many studies. Contrary to PCA, PLS and CCA enable the integration of two types of data sets.</p>
+<p> <span style="line-height: 1.3em;">Since 2009, we have implemented many multivariate approaches and their sparse variants in the R package mixOmics to be used by the statistical and bioinformatics community. Full tutorials are given on our: </span><span style="line-height: 1.3em;"><a href="http://perso.math.univ-toulouse.fr/mixomics/" style="line-height: 1.3em;">http://perso.math.univ-toulouse.fr/mixomics/</a></span></p>
+<p> <span style="line-height: 1.3em;">In this tutorial, we will focus on the application of these approaches to medium and high throughput biological data (transcriptomics, metabolomics, proteomics data) using PCA, CCA, PLS, PLS-DA and the variants that the mixOmics team and collaborators have developed.</span></p>
+<p><span style="font-size: medium;"><strong> </strong></span></p>
+<p><span style="font-size: medium;"><strong>Outline of the one-day tutorial</strong></span></p>
+<ol>
+<li><em><span style="line-height: 1.3em;">Concept about the key methodologies in mixOmics and their variants</span></em></li>
+<ol style="list-style-type: lower-alpha;">
+<li><span style="line-height: 1.3em;">Principal Component Analysis: PCA, sparse PCA, NIPALS</span></li>
+<li>Canonical Correlation Analysis: CCA, regularized CCA</li>
+<li>Partial Least Squares regression: PLS, sparse PLS</li>
+<li>Partial Least Squares Discriminant Analysis: PLS-DA, sparse PLS-DA</li>
+</ol>
+<li><em><span style="line-height: 1.3em;">Review on the graphical outputs that are implemented in mixOmics</span></em></li>
+<ol style="list-style-type: lower-alpha;">
+<li><span style="line-height: 1.3em;">Sample plots</span></li>
+<li><span style="line-height: 1.3em;">Correlation circles</span></li>
+<li><span style="line-height: 1.3em;">Integrating two data sets: relevance networks and clustered image map</span></li>
+</ol>
+<li><em><span style="line-height: 1.3em;">Case studies and applications</span></em></li>
+<ol style="list-style-type: lower-alpha;">
+<li>Example with PCA: Nutrimouse</li>
+<li>Example with CCA: Multidrug</li>
+<li>Example with PLS: Liver toxicity</li>
+<li>Example with PLS-DA: SRBCT study</li>
+</ol></ol>
+<p><span style="line-height: 1.3em;">The course will be delivered in a form of a lectures followed by practicals in R. Course material will be available.</span></p>
+<p><span style="line-height: 1.3em;"> </span></p>
+<p><strong style="line-height: 1.3em;"><span style="font-size: medium;">Date and Venue</span></strong></p>
+<p><strong>Date</strong>: Sunday Sept 7, 2014</p>
+<p><strong>Venue</strong>: FORUM building, Faculté de Médecine, 4, rue Kirschleger, Strasbourg</p>
+<p><strong>Time</strong>: 9am – 5.30pm (registration starts from 8 am)</p>
+<p><span style="font-size: medium;"><strong style="line-height: 1.3em;"> </strong></span></p>
+<p><span style="font-size: medium;"><strong style="line-height: 1.3em;">Target Audience</strong></span></p>
+<p>Postgraduate students, postdoctoral fellows and researchers with good statistical knowledge, in need to</p>
+<p>            -explore large data sets</p>
+<p>            -use graphical techniques to better visualize data</p>
+<p>            -understand and/or apply multivariate projection methodologies to large data sets.</p>
+<p> </p>
+<p><strong style="font-size: medium; line-height: 1.3em;">Prerequisite and requirements</strong></p>
+<p>We expect the audience to have a good working knowledge in R.</p>
+<p>Attendees are requested to bring their own laptops, having installed the software RStudio <a href="http://www.rstudio.com/">http://www.rstudio.com/</a> and the package mixOmics.</p>
+<p> </p>
+<p> <strong style="font-size: medium; line-height: 1.3em;">Presenters</strong></p>
+<p>The presenters are all key developers of mixOmics:</p>
+<p>Dr <strong>Kim-Anh Lê Cao </strong>(The University of Queensland Dimantina Insitute, Brisbane, Australia, k.lecao[at]uq.edu.au). Kim-Anh is a biostatistician researcher in the University of Queensland, Brisbane, Australia. Her institute <span style="line-height: 1.3em;">has a particular focus on severe and chronic diseases such as cancer and diseases involving the immune system, including arthritis, chronic infections, and diabetes. Together with the mixOmics team, Kim-Anh continues to develop methodologies to analyse complex biological studies.</span></p>
+<p>Dr <strong>Sébastien Déjean</strong> (Institut de Mathématiques de Toulouse, Université de Toulouse, France, sebastien.dejean[at]math.univ-toulouse.fr). Sebastien is a statistician research engineer in the Universite de Toulouse. <span style="line-height: 1.3em;">Through his support activities to research, he contribues to various projects particularly in the fields of high throughput biology and information retrieval systems. </span></p>
+<p><span style="line-height: 1.3em;">Dr <strong>Ignacio Gonz</strong><strong>ález</strong> (Institut de Mathématiques de Toulouse, Université de Toulouse, Institut National de la Recherche Agronomique, France). Ignacio is working at the plateforme de bioinformatique et biostatistique de Toulouse. Ignacio has been working in several wet laboratories (INSERM, INRA, CNRS, INSA) where he provided statistical support. He has considerable experience in analyzing a vast range of biological data. </span></p>
+<p><span style="font-size: medium;"><strong>Contact</strong></span><span style="line-height: 1.3em;"> </span></p>
+<p> Any enquiries about the tutorial? Contact the mixOmics team: mixomics[at]math.univ-toulouse.fr (replace [at] by @)</p>
+<p><strong style="font-size: medium; line-height: 1.3em;"> </strong></p>
+<p><strong style="font-size: medium; line-height: 1.3em;">Related literature</strong></p>
+<ul>
+<li><strong>González I., Lê Cao K.-A., Davis, M.D. and Déjean S. </strong>(2013) Insightful graphical outputs to explore relationships between two ‘omics’ data sets. <em>BioData Mining</em> 5:19. See a full version of the manuscript with enclosed figures <a href="http://perso.math.univ-toulouse.fr/mixomics/files/2012/03/Visualising_JDataMining.pdf">here</a>.</li>
+</ul>
+<ul>
+<li><strong>Yao F., Coquery J., Lê Cao K.-A. </strong>(2012) Independent Principal Component Analysis for biologically meaningful dimension reduction of large biological data sets<strong>, </strong><em>BMC Bioinformatics</em> 13:24<strong>.</strong> [<a href="http://www.biomedcentral.com/1471-2105/13/24">link</a>]</li>
+</ul>
+<ul>
+<li><strong>Lê Cao K.-A., Boitard S. and Besse P.</strong> (2011) Sparse PLS Discriminant Analysis: biologically relevant feature selection and graphical displays for multiclass problems, <em>BMC Bioinformatics</em>, 22:253. [<a href="http://www.biomedcentral.com/1471-2105/12/253" target="_blank">link</a>]</li>
+</ul>
+<ul>
+<li><strong>Lê Cao K.-A., González I. and Déjean S. </strong>(2009) integrOmics: an R package to unravel relationships between two omics data sets. Bioinformatics, 25(21):2855-2856. [<a href="http://eccb14.loria.fr/program/tutorials/http:" target="_blank">link</a>] <em style="line-height: 1.3em;">NOTE: the package ‘integrOmics’ has been renamed ‘mixOmics’.</em></li>
+</ul>
+<ul>
+<li><strong>González I., Déjean S., Martin P. and Baccini A.</strong> (2008) CCA: An R package to extend canonical correlation analysis<em>. Journal of Statistical Sofware</em><span><span><em>, </em><strong>23(12)</strong>. [<a href="http://www.jstatsoft.org/v23/i12/paper" target="_blank">link</a>]</span></span></li>
+</ul>
+<ul>
+<li><span><span><strong>González I., Déjean S., Martin </strong></span></span><span><span><strong>P.G.P., </strong></span></span><span><span><strong>Gonçalves O., Besse P. and Baccini A.</strong></span></span><span><span>(2009)</span></span><span><span> Highlighting Relationships Between Heteregeneous Biological Data Through Graphical Displays Based On Regularized Canonical Correlation Analysis.<em> Journal of Biological Systems</em> 17(2), pp 173-199. [<a href="http://www.worldscinet.com/cgi-bin/details.cgi?id=pii:S0218339009002831&amp;type=html" target="_blank">link</a>]</span></span></li>
+</ul>
+<ul>
+<li><span><span><strong>Lê Cao K.-A., Martin P.G.P, Robert-Granié C. and Besse, P.</strong> (2009) Sparse Canonical Methods for Biological Data Integration: application to a cross-platform study<em>. BMC Bioinformatics, </em><strong>10</strong><strong>:</strong>34. [<a href="http://www.biomedcentral.com/1471-2105/10/34/abstract" target="_blank">link</a>]<br /></span></span></li>
+</ul>
+<ul>
+<li><strong>Yergeau E., Schoondermark-Stolk S.A., Brodie E.L., Déjean S., DeSantis T.Z., Gonçalves O., Piceno Y.M., Andersen G.L. and Kowalchuk G.A.</strong>(2009) Environmental microarray analyses of Antarctic soil microbial communities<em>. The International Society for Microbial Ecology Journal</em>, <strong>3</strong>(3), pp 340-351. [<a href="http://www.nature.com/ismej/journal/v3/n3/abs/ismej2008111a.html" target="_blank">link</a>]</li>
+</ul>
+<ul>
+<li><span><span><strong>Lê Cao K.-A., Rossouw D., Robert-Granié C. and Besse P. </strong>(2008) A Sparse PLS for Variable Selection when Integrating Omics data<em>. Statistical Applications in Genetics and Molecular Biology</em> <strong>7</strong>(1), Article 35. [<a href="http://www.bepress.com/sagmb/vol7/iss1/art35/" target="_blank">link</a>]</span></span><em><br /></em></li>
+</ul>
+<ul>
+<li><strong>Combes S., González I., Déjean S., Baccini A., Jehl N., Juin H., Cauquil L., Gabinaud B., Lebas F. and Larzul C. </strong>(2008) Relationships between sensorial and physicochemical measurements in meat of rabbit from three different breeding systems using canonical correlation analysis<em>. Meat Science</em> <strong>3</strong>, pp 835-841. [<a href="http://www.sciencedirect.com/science?_ob=ArticleURL&amp;_udi=B6T9G-4S80XNB-1&amp;_user=331728&amp;_rdoc=1&amp;_fmt=&amp;_orig=search&amp;_sort=d&amp;_docanchor=&amp;view=c&amp;_searchStrId=972562930&amp;_rerunOrigin=google&amp;_acct=C000016898&amp;_version=1&amp;_urlVersion=0&amp;_userid=331728&amp;md5=3510db76b9cf28e4b5bf54154479613c" target="_blank">link</a>]</li>
+</ul>
+<p><strong style="font-size: medium; line-height: 1.3em;"> </strong></p>
+		
+
+	</div>
+</body>
+
+
+<!-- Mirrored from eccb14.loria.fr/program/tutorials/mixomics?tmpl=component&print=1&page= by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jul 2015 15:49:19 GMT -->
+</html>

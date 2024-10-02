@@ -1,0 +1,203 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+
+
+<!-- Mirrored from eccb14.loria.fr/program/tutorials/cis-r?tmpl=component&print=1&page= by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jul 2015 15:49:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <script type="text/javascript">
+var siteurl='../../index.html';
+var tmplurl='../../templates/ja_elastica/index.html';
+var isRTL = false;
+</script>
+
+  <base  />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="ECCB'14, ECCB2014, Computational Biology, Bioinformatics, Conference, Strasbourg, ECCB, European Conference on Computational Biology, ECCB14" />
+  <meta name="author" content="Adrien" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="ECCB'14 is the key European computational biology event in 2014 uniting scientists working in a broad range of disciplines, including bioinformatics, computational biology, biology, medicine, and systems biology." />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>ECCB'14 - T01 - Analysis of Cis-Regulatory Motifs from High-Throughput Sequence Sets</title>
+  <link href="http://eccb14.loria.fr/program/tutorials/cis-r?tmpl=component&amp;print=1&amp;page=" rel="canonical" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/media/jui/css/icomoon.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/." type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/addons.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/template-j30.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/layout.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/template.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/usertools.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/css3.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/component.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/print.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/menu/mega.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/typo.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/template-j30.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/template.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/modules.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-mobile.css" type="text/css" media="only screen and (max-width:719px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-mobile-port.css" type="text/css" media="only screen and (max-width:479px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-tablet.css" type="text/css" media="only screen and (min-width:720px) and (max-width: 985px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-normal.css" type="text/css" media="only screen and (min-width:986px) and (max-width: 1235px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-wide.css" type="text/css" media="only screen and (min-width:1236px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/css3.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/component.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/menu/mega.css" type="text/css" />
+  <script src="http://eccb14.loria.fr/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/mootools-more.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/anchor.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/js/core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/mega.rjd.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.noconflict.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.masonry.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.mediaqueries.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/menu/mega.js" type="text/javascript"></script>
+  <script type="text/javascript">
+jQuery.noConflict();
+  </script>
+
+<!--[if ie]><link href="/plugins/system/jat3/jat3/base-themes/default/css/template-ie.css" type="text/css" rel="stylesheet" /><![endif]--> 
+<!--[if ie 7]><link href="/plugins/system/jat3/jat3/base-themes/default/css/template-ie7.css" type="text/css" rel="stylesheet" /><![endif]--> 
+<!--[if ie 7]><link href="/templates/ja_elastica/css/template-ie7.css" type="text/css" rel="stylesheet" /><![endif]--> 
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes"/>
+<meta name="HandheldFriendly" content="true" />
+
+
+<link href="http://eccb14.loria.fr/templates/ja_elastica/images/favicon.ico" rel="shortcut icon" type="image/x-icon" /></head>
+
+<body id="bd" class="fs3 com_content contentpane">
+    
+<div id="system-message-container">
+<div id="system-message">
+</div>
+</div>
+    <div class="item-page clearfix">
+	<h2 class="contentheading">
+			T01 - Analysis of Cis-Regulatory Motifs from High-Throughput Sequence Sets		</h2>
+
+	
+<div class="article-tools clearfix">
+	<ul class="actions">
+			<li>
+		<a href="#" onclick="window.print();return false;"><span class="icon-print"></span>&#160;Print&#160;</a>		</li>
+		
+	</ul>
+
+
+
+	
+</div>
+	<p><span style="font-family: tahoma,arial,helvetica,sans-serif;">-date: Saturday 6th september 2014</span></p>
+<p><span style="font-family: tahoma,arial,helvetica,sans-serif;">-venue : Forum building of the Faculty of Medicine of Strasbourg.<br /> <br /> Faculté de Médecine<br /> Forum (Building)<br /> 4, rue Kirschleger<br /> 67085 Strasbourg<br /></span></p>
+<p><span style="font-family: tahoma,arial,helvetica,sans-serif;">-short description: This tutorial aims at introducing the theoretical principles and giving practical skills to use specialized software tools to extract motifs from full-scaled NGS datasets (typically covering tens of Mb). </span></p>
+<p><span style="font-family: tahoma,arial,helvetica,sans-serif;">-name of the chair(s): Jacques van Helden &amp; Morgane Thomas-Chollier<br /></span></p>
+<p><span style="font-family: tahoma,arial,helvetica,sans-serif;">-contact e-mail: 
+ <script type='text/javascript'>
+ <!--
+ var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+ var path = 'hr' + 'ef' + '=';
+ var addy21137 = 'mth&#111;m&#97;s' + '&#64;';
+ addy21137 = addy21137 + 'b&#105;&#111;l&#111;g&#105;&#101;' + '&#46;' + '&#101;ns' + '&#46;' + 'fr';
+ document.write('<a ' + path + '\'' + prefix + ':' + addy21137 + '\'>');
+ document.write(addy21137);
+ document.write('<\/a>');
+ //-->\n </script><script type='text/javascript'>
+ <!--
+ document.write('<span style=\'display: none;\'>');
+ //-->
+ </script>This email address is being protected from spambots. You need JavaScript enabled to view it.
+ <script type='text/javascript'>
+ <!--
+ document.write('</');
+ document.write('span>');
+ //-->
+ </script></span></p>
+<p><span style="font-family: tahoma,arial,helvetica,sans-serif;"><br />Note: <span style="background-color: #ffff99;">bring your own laptop</span><br /></span></p>
+<h2><span style="font-family: tahoma,arial,helvetica,sans-serif;"><strong>Motivation</strong></span></h2>
+<p><span style="font-family: tahoma,arial,helvetica,sans-serif;">Next Generation Sequencing led to the development of novel methods (ChIP-seq, FAIRE-seq, clip-seq, ) to acquire massive data about diverse signals involved in genome regulation and function (cis-regulation, chromatin conformation, RNA maturation, recombination, replication, …).  Extracting relevant information from the raw data requires not only specialized software tools, but also a good understanding of their principles and parameters.</span></p>
+<h2><span style="font-family: tahoma,arial,helvetica,sans-serif;"><strong>Goals</strong></span></h2>
+<p>In this tutorial we will demonstrate how to analyze ChIP-seq data using the Regulatory Sequence Analysis Tools (<a href="http://www.rsat.eu/">http://www.rsat.eu/</a>), via their different ways of access: web-interface, command-line, and web-services.</p>
+<p>This tutorial aims at introducing the theoretical principles and giving practical skills to use specialized software tools to extract motifs from full-scaled NGS datasets (typically covering tens of Mb).</p>
+<h2><span style="font-family: tahoma,arial,helvetica,sans-serif;"><strong> Topics covered</strong></span></h2>
+<p>The tutorial will be organized in 2 half days:</p>
+<p>1)     Analysis of cis-regulatory elements with the Regulatory Sequence Analysis Tools (RSAT): methods and website utilization (http://www.rsat.eu/).</p>
+<p>2)     Using RSAT in command-line and via web services (SOAP/WSDL).</p>
+<h3><span style="font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">Topics</span></h3>
+<ul>
+<li>Motif discovery in NGS peak sets.</li>
+<li>Impact of the background models.</li>
+<li>Comparison between motifs.</li>
+<li>Motif enrichment in peak sequences.</li>
+<li>Evaluating the quality of motifs extracted from NGS peaks.</li>
+<li><span style="font-family: tahoma,arial,helvetica,sans-serif;">Building control sets to estimate the rates of false positives.</span></li>
+</ul>
+<h3><span style="color: #000000; font-family: tahoma,arial,helvetica,sans-serif;">Topics not covered</span></h3>
+<p>Other steps for the analysis of ChIP-seq data (e.g. read mapping, peak calling, functional enrichment of peaks, other tools for pattern discovery and matching).</p>
+<h2><strong><span style="color: #000000; font-family: tahoma,arial,helvetica,sans-serif;">Intended audience and possible prerequisites</span></strong></h2>
+<p>The course is addressed to bioinformaticians and biologists. The afternoon will require being familiar with the Unix shell (Linux) and basic programming skills (Perl or Python) to implement clients for web services.</p>
+<h2><strong><span style="font-family: tahoma,arial,helvetica,sans-serif;">In practice:</span></strong></h2>
+<ul>
+<li>Participants will need to bring their own laptop</li>
+<li>All command-line programs will be run on the IFB (Institut Français de Bioinformatique)'s cloud platform managed by Christophe Blanchet (IBCP, Lyon, France). Each participant will be given a (free) account to access this cloud and thereby a fully functional virtual machine with RSAT.</li>
+<li>Wireless internet will be available at the conference venue. In the worse case, where the network would become unavailable during the day, we would still be able to give a demo on the teacher laptops.</li>
+<li>An indicative reading list will be available a few weeks before the tutorial.</li>
+<li>The hands-on will be organized in a cookbook mode: we will distribute protocols explaining the steps to solve selected test cases.</li>
+<li>For the practicals, we ensure that there is no need to transfer data from the conference room to the servers.</li>
+</ul>
+<h2><strong><span style="font-family: tahoma,arial,helvetica,sans-serif;">Presenters:</span></strong></h2>
+<p><strong><span style="font-family: tahoma,arial,helvetica,sans-serif;">Jacques van Helden</span></strong><span style="font-family: tahoma,arial,helvetica,sans-serif;">, professor at </span><span style="font-family: tahoma,arial,helvetica,sans-serif;">Aix-Marseille Université (France)</span><span style="font-family: tahoma,arial,helvetica,sans-serif;"><br /></span></p>
+<p><strong><span style="font-family: tahoma,arial,helvetica,sans-serif;">Morgane Thomas-Chollier</span></strong><span style="font-family: tahoma,arial,helvetica,sans-serif;">, associate professor at Ecole Normale Supérieure (France)</span><strong><span style="font-family: tahoma,arial,helvetica,sans-serif;"><br /></span></strong></p>
+<p><span style="font-family: tahoma,arial,helvetica,sans-serif;"><strong>Carl Herrmann</strong>, </span>Assistant professor in bioinformatics, University Heidelberg (Germany). Previously Associate professor <span style="font-family: tahoma,arial,helvetica,sans-serif;">at </span><span style="font-family: tahoma,arial,helvetica,sans-serif;">Aix-Marseille Université (France)</span><span style="font-family: tahoma,arial,helvetica,sans-serif;"><br /></span></p>
+<p><span style="font-family: tahoma,arial,helvetica,sans-serif;"><strong>Alejandra Medina-Rivera</strong>, </span>Postdoctoral Fellow at SickKids Research Institute, Toronto (Canada)</p>
+<p>Do not hesitate to contact us  ! <span style="font-family: tahoma,arial,helvetica,sans-serif;">e-mail: 
+ <script type='text/javascript'>
+ <!--
+ var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+ var path = 'hr' + 'ef' + '=';
+ var addy23743 = 'mth&#111;m&#97;s' + '&#64;';
+ addy23743 = addy23743 + 'b&#105;&#111;l&#111;g&#105;&#101;' + '&#46;' + '&#101;ns' + '&#46;' + 'fr';
+ document.write('<a ' + path + '\'' + prefix + ':' + addy23743 + '\'>');
+ document.write(addy23743);
+ document.write('<\/a>');
+ //-->\n </script><script type='text/javascript'>
+ <!--
+ document.write('<span style=\'display: none;\'>');
+ //-->
+ </script>This email address is being protected from spambots. You need JavaScript enabled to view it.
+ <script type='text/javascript'>
+ <!--
+ document.write('</');
+ document.write('span>');
+ //-->
+ </script></span></p>
+<p> </p>
+<h2><strong><span style="font-family: tahoma,arial,helvetica,sans-serif;">Reading list:</span></strong></h2>
+<p><strong><span style="font-family: tahoma,arial,helvetica,sans-serif;">main reference is the general description of the RSAT tools:<br /></span></strong><span style="font-family: tahoma,arial,helvetica,sans-serif;">Nucleic Acids Res. 2011 Jul;39(Web Server issue):W86-91. doi: 10.1093/nar/gkr377.</span><span style="font-family: tahoma,arial,helvetica,sans-serif;"><br />RSAT 2011: regulatory sequence analysis tools.<br /></span><span style="font-family: tahoma,arial,helvetica,sans-serif;">Thomas-Chollier M, Defrance M, Medina-Rivera A, Sand O, Herrmann C, Thieffry D, van Helden J.</span><strong><span style="font-family: tahoma,arial,helvetica,sans-serif;"><br /><a href="http://www.ncbi.nlm.nih.gov/pubmed/21715389" target="_blank">http://www.ncbi.nlm.nih.gov/pubmed/21715389</a></span></strong></p>
+<p><strong><span style="font-family: tahoma,arial,helvetica,sans-serif;">two articles about RSAT peak-motifs</span></strong></p>
+<p><span style="font-family: tahoma,arial,helvetica,sans-serif;">Nucleic Acids Res. 2012 Feb;40(4):e31. doi: 10.1093/nar/gkr1104. Epub 2011 Dec 8.<br />RSAT peak-motifs: motif analysis in full-size ChIP-seq datasets.<br /></span><span style="font-family: tahoma,arial,helvetica,sans-serif;">Thomas-Chollier M, Herrmann C, Defrance M, Sand O, Thieffry D, van Helden J.</span><strong><span style="font-family: tahoma,arial,helvetica,sans-serif;"><br /><a href="http://www.ncbi.nlm.nih.gov/pubmed/22156162" target="_blank">http://www.ncbi.nlm.nih.gov/pubmed/22156162</a><br /><br /></span></strong><span style="font-family: tahoma,arial,helvetica,sans-serif;">Nat Protoc. 2012 Jul 26;7(8):1551-68. doi: 10.1038/nprot.2012.088.</span><span style="font-family: tahoma,arial,helvetica,sans-serif;"><br />A complete workflow for the analysis of full-size ChIP-seq (and similar) data sets using peak-motifs.<br /></span><span style="font-family: tahoma,arial,helvetica,sans-serif;">Thomas-Chollier M, Darbo E, Herrmann C, Defrance M, Thieffry D, van Helden J.</span><strong><span style="font-family: tahoma,arial,helvetica,sans-serif;"><br /><a href="http://www.ncbi.nlm.nih.gov/pubmed/22836136" target="_blank">http://www.ncbi.nlm.nih.gov/pubmed/22836136</a></span></strong></p>
+<p><strong>For the peak enrichment in sites of the immunoprecipitated factor, we will use RSAT matrix-quality</strong></p>
+<p>Nucleic Acids Res. 2011 Feb;39(3):808-24. doi: 10.1093/nar/gkq710. Epub 2010 Oct 4.<br />Theoretical and empirical quality assessment of transcription factor-binding motifs.<br />Medina-Rivera A, Abreu-Goodger C, Thomas-Chollier M, Salgado H, Collado-Vides J, van Helden J.<br /><a href="http://www.ncbi.nlm.nih.gov/pubmed/20923783" target="_blank">http://www.ncbi.nlm.nih.gov/pubmed/20923783</a></p>
+<p><strong>As we will not cover the other steps for the analysis of ChIP-seq data (e.g. read mapping, peak calling, functional enrichment of peaks, other tools for pattern discovery and matching), we encourage the participants not familiar with these steps to read the following review:</strong></p>
+<p>Bailey, T. et al. Practical Guidelines for the Comprehensive Analysis of ChIP-seq Data. PLoS Comput Biol 9, e1003326 (2013).</p>
+<p><a href="http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003326">http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003326</a></p>
+<h2><span style="font-family: tahoma,arial,helvetica,sans-serif;"> <strong>Support</strong></span></h2>
+<p><a href="http://www.allbioinformatics.eu/" target="_blank" title="ALLBIO"><span style="font-family: tahoma,arial,helvetica,sans-serif;"><strong><img src="http://eccb14.loria.fr/images/allbioLogo_23.png" alt="" width="269" height="179" /></strong></span></a></p>
+<p> <img src="http://www.france-bioinformatique.fr/sites/default/files/logo-ifb_web_PL - petit_0.png" width="291" height="79" /></p>
+<h2> </h2>
+<p> </p>
+<p> </p>
+		
+
+	</div>
+</body>
+
+
+<!-- Mirrored from eccb14.loria.fr/program/tutorials/cis-r?tmpl=component&print=1&page= by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jul 2015 15:49:19 GMT -->
+</html>

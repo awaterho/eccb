@@ -1,0 +1,23 @@
+/* Variazioni di stile specifiche per IE */
+ul.links
+{
+    margin-left: 2em;
+    list-style-position: outside;
+}
+ul.links li
+{
+	
+}
+ul.links li a
+{
+	margin-left: 0.5em;
+}
+ul.list
+{
+	  margin-left: 2em;
+	  list-style-position: outside;
+}
+ul.list li
+{
+	
+}

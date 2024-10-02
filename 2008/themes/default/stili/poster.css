@@ -1,0 +1,5 @@
+div.poster_index { font-weight:bold; font-size:13px; line-height:20px; margin-bottom:20px;}
+div.poster_index a { font-size:12px; color:#84898d;}
+div.poster_category { font-size:12px; font-weight:bold; width:670px; border:1px solid #67ede4; }
+table.poster { margin-bottom:10px; width:670px;}
+table.poster td { vertical-align:top; border-bottom: 1px solid silver; padding:2px 1px;}

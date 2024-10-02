@@ -1,0 +1,260 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+
+
+<!-- Mirrored from eccb14.loria.fr/program/tutorials/tadbit?tmpl=component&print=1&page= by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jul 2015 15:49:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <script type="text/javascript">
+var siteurl='../../index.html';
+var tmplurl='../../templates/ja_elastica/index.html';
+var isRTL = false;
+</script>
+
+  <base  />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="ECCB'14, ECCB2014, Computational Biology, Bioinformatics, Conference, Strasbourg, ECCB, European Conference on Computational Biology, ECCB14" />
+  <meta name="author" content="Adrien" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="ECCB'14 is the key European computational biology event in 2014 uniting scientists working in a broad range of disciplines, including bioinformatics, computational biology, biology, medicine, and systems biology." />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>ECCB'14 - T09 - TADbit: Automated Analysis and Three-Dimensional Modeling of Genomic Domains</title>
+  <link href="http://eccb14.loria.fr/program/tutorials/tadbit?tmpl=component&amp;print=1&amp;page=" rel="canonical" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/media/jui/css/icomoon.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/." type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/addons.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/template-j30.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/layout.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/template.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/usertools.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/css3.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/component.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/print.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/menu/mega.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/typo.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/template-j30.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/template.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/modules.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-mobile.css" type="text/css" media="only screen and (max-width:719px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-mobile-port.css" type="text/css" media="only screen and (max-width:479px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-tablet.css" type="text/css" media="only screen and (min-width:720px) and (max-width: 985px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-normal.css" type="text/css" media="only screen and (min-width:986px) and (max-width: 1235px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-wide.css" type="text/css" media="only screen and (min-width:1236px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/css3.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/component.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/menu/mega.css" type="text/css" />
+  <script src="http://eccb14.loria.fr/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/mootools-more.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/anchor.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/js/core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/mega.rjd.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.noconflict.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.masonry.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.mediaqueries.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/menu/mega.js" type="text/javascript"></script>
+  <script type="text/javascript">
+jQuery.noConflict();
+  </script>
+
+<!--[if ie]><link href="/plugins/system/jat3/jat3/base-themes/default/css/template-ie.css" type="text/css" rel="stylesheet" /><![endif]--> 
+<!--[if ie 7]><link href="/plugins/system/jat3/jat3/base-themes/default/css/template-ie7.css" type="text/css" rel="stylesheet" /><![endif]--> 
+<!--[if ie 7]><link href="/templates/ja_elastica/css/template-ie7.css" type="text/css" rel="stylesheet" /><![endif]--> 
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes"/>
+<meta name="HandheldFriendly" content="true" />
+
+
+<link href="http://eccb14.loria.fr/templates/ja_elastica/images/favicon.ico" rel="shortcut icon" type="image/x-icon" /></head>
+
+<body id="bd" class="fs3 com_content contentpane">
+    
+<div id="system-message-container">
+<div id="system-message">
+</div>
+</div>
+    <div class="item-page clearfix">
+	<h2 class="contentheading">
+			T09 - TADbit: Automated Analysis and Three-Dimensional Modeling of Genomic Domains		</h2>
+
+	
+<div class="article-tools clearfix">
+	<ul class="actions">
+			<li>
+		<a href="#" onclick="window.print();return false;"><span class="icon-print"></span>&#160;Print&#160;</a>		</li>
+		
+	</ul>
+
+
+
+	
+</div>
+	<p><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: small;">Davide Bau<sup>1,2</sup>, François Serra<sup>1,2</sup>, Guillaume Filion<sup>1</sup>, and Marc A. Marti-Renom<sup>1,2,3</sup> </span><br /><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: xx-small;"><sup>1</sup> National Center for Genomic Analysis (CNAG), Barcelona, Spain. <sup>2</sup> Gene Regulation, Stem Cells and Cancer Program, Centre de Regulació Genòmica (CRG), Barcelona, Spain, and <sup>3</sup> Institució Catalana de Recerca i Estudis Avançats (ICREA), Barcelona, Spain.</span></p>
+<h2><span style="font-family: tahoma, arial, helvetica, sans-serif;">Abstract</span></h2>
+<p><span style="font-family: tahoma, arial, helvetica, sans-serif;">The sequence of a genome alone does not carry enough information to understand how genomic processes are carried out in the cell nucleus. To achieve this, the knowledge of its three-dimensional (3D) architecture is necessary. Advances in genomic technologies and the development of new analytical methods, such as Chromosome Conformation Capture (3C)-based methods, have allowed getting insights at unprecedented resolution into how the genome is organized. Recently, it has been shown that chromatin is organized in Topologically Associating Domains (TADs), large interaction domains that appear to be conserved among different cell types and even between species. In this tutorial, attendants will learn to use the TADbit library for the analysis and 3D modeling of TADs and genomes. TADbit is a python library that uses the Integrative Modeling Platform (IMP, http://www.integrativemodeling.org) to model 3C data for determining the 3D architecture of genomic domains and entire genomes at unprecedented resolutions.</span></p>
+<h2><span style="font-family: tahoma, arial, helvetica, sans-serif;">Motivation</span></h2>
+<p><span style="font-family: tahoma, arial, helvetica, sans-serif;">The genome is non-randomly organized within the cell nucleus, with chromosomes occupying precise nuclear regions, the so called "chromosome territories", separated by inter-chromatin compartments. It has been shown that chromosomes undergo additional levels of arrangements and organize themselves into Topologically Associating Domains (TADs), regions of the DNA that frequently interact with each other. Knowing how chromatin is arranged within these compartments is necessary for understanding how genes and their regulatory elements get spatially close to carry out their function. </span><br /><span style="font-family: tahoma, arial, helvetica, sans-serif;">Chromosome Conformation Capture (3C) derived methods have shown to be particularly efficient in revealing the three-dimensional (3D) spatial arrangement of genomic regions; in particular, the Hi-C method allows to identify genome-wide inter-loci interaction patterns. Although inter-loci interaction frequencies can be used as a proxy for their spatial distance, they do not give direct information on their 3D organization. Nonetheless, this information can be inferred with computational methods. </span><br /><span style="font-family: tahoma, arial, helvetica, sans-serif;">The attendants of this tutorial will learn, through TADbit, how to build up computational pipelines for the analysis and 3D modeling of Hi-C data. TADbit takes as input Hi-C interaction matrices, which are then used to calculate TAD boundaries. Next, TADbit can build 3D models of selected TADs. This computational library allows building models to directly visualize and analyze looping interactions between distal regulatory elements and can be used for statistical or genomic analysis. TADbit will help in the characterization of global chromatin features and their relation to gene expression and other phenotypic variations genomic functions.</span></p>
+<h2><span style="font-family: tahoma, arial, helvetica, sans-serif;">Overall Goals</span></h2>
+<p><span style="font-family: tahoma, arial, helvetica, sans-serif;">This tutorial will provide basic knowledge of the 3D modeling of genomic domains; in particular, the attendants will learn:</span></p>
+<ul>
+<li><span style="font-family: tahoma, arial, helvetica, sans-serif; line-height: 1.3em;">Fundamentals of structure prediction</span></li>
+<li><span style="font-family: tahoma, arial, helvetica, sans-serif; line-height: 1.3em;">Interpretation and analysis of 3C-like data</span></li>
+<li><span style="font-family: tahoma, arial, helvetica, sans-serif; line-height: 1.3em;">Topologically Associated Domains detection and analysis</span></li>
+<li><span style="font-family: tahoma, arial, helvetica, sans-serif; line-height: 1.3em;">3D structure determination and analysis of genomic domains</span></li>
+</ul>
+<h2><span style="font-family: tahoma, arial, helvetica, sans-serif;">Tutorial Outline</span></h2>
+<table style="height: 290px; width: 647px;" border="0">
+<tbody>
+<tr>
+<td style="width: 100px;" valign="top">
+<p>09:00 - 10:30</p>
+</td>
+<td style="width: 600px;" scope="col" align="left" valign="top">
+<p><strong>Chromatin structure and Hi-C data: introduction and principles</strong></p>
+<p>In this session, we will go through the principles of structure determination, with particular emphasis to chromatin structure.<br />We will see real Hi-C data and how to interpret them, what information such data can provide and its limitations.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100px;" valign="top"> 10:30 - 11:00</td>
+<td style="width: 600px;" scope="col" align="left" valign="top"> Coffee Break</td>
+</tr>
+<tr>
+<td style="width: 100px;" valign="top">
+<p> 11:00 - 12:30<span style="line-height: 1.3em;"><br /></span></p>
+</td>
+<td style="width: 600px;" scope="col" align="left" valign="top">
+<p><strong>Introduction to TADbit</strong></p>
+<p>In this session we will have a quick hands on the Integrative Modeling Platform, on which TADbit is based for determining the 3D structure of a genomic region. We will also have a look at TADbit, its implementation and capabilities.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100px;" valign="top"> 12:30 - 13:30</td>
+<td style="width: 600px;" scope="col" align="left" valign="top">Lunch Break</td>
+</tr>
+<tr>
+<td style="width: 100px;" valign="top"> 13:30 - 15:00</td>
+<td style="width: 600px;" scope="col" align="left" valign="top">
+<p><strong>3D Modeling of real Hi-C data with TADbit</strong></p>
+<p>During the second part of the tutorial, we will work on some real publicly available Hi-C data. </p>
+</td>
+</tr>
+<tr>
+<td style="width: 100px;" valign="top"> 15:00 - 15:30</td>
+<td style="width: 600px;" scope="col" align="left" valign="top">Coffee Break</td>
+</tr>
+<tr>
+<td style="width: 100px;" valign="top"> 15:30 - 17:00</td>
+<td style="width: 600px;" scope="col" align="left" valign="top">
+<p><strong>Analysis of the results</strong></p>
+<p>Continuing with the data used in the last session, we will analyze the results obtained using TADbit and try to draw some conclusions/observation from them.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 14px; line-height: 1.3em;">  <br /></span></p>
+<p><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 14px; line-height: 1.3em;">Prerequisites and intended audience</span></p>
+<p><span style="font-family: tahoma, arial, helvetica, sans-serif;">The course is oriented to experimental or computational researchers (PhD students, Master students or postdocs) with basic computational skills. The attendants to this tutorial are to be interested in the genome organization and could be involved in generating Hi-C data for chromosome structure. Linux and basic Python programming skills are highly recommended.</span></p>
+<p><span style="font-family: tahoma, arial, helvetica, sans-serif;"> </span></p>
+<p> </p>
+<p><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 14px; line-height: 1.3em;">Address for the registration and conduct of the tutorial is: <br /> </span></p>
+<p style="padding-left: 60px;"><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 14px; line-height: 1.3em;"><br /> <span style="font-size: small;">Faculté de Médecine</span><br /><span style="font-size: small;"> Forum Building</span><br /><span style="font-size: small;"> 4, rue Kirschleger</span><br /><span style="font-size: small;"> 67085 Strasbourg</span></span></p>
+<p><span style="font-family: tahoma, arial, helvetica, sans-serif;"> </span></p>
+<h2><span style="font-family: tahoma, arial, helvetica, sans-serif;">Material</span></h2>
+<p><span style="font-family: tahoma, arial, helvetica, sans-serif;">Attendees may bring their own laptops preferentially with IMP (http://www.integrativemodeling.org) installed. In case the installation is not possible we will provide a Linux virtual machine (https://www.virtualbox.org) with all prerequisite software installed. The tutorial will be given using the IPython notebook (http://ipython.org/notebook.html) environment.</span></p>
+<h2><span style="font-family: tahoma, arial, helvetica, sans-serif;">Tutors</span></h2>
+<p><span style="font-family: tahoma, arial, helvetica, sans-serif;">Davide Baù and François Serra taught an extended version of this tutorial at the Gulbenkian Training Program in Bioinformatics, Lisbon, in November 2013 (http://gtpb.igc.gulbenkian.pt/bicourses/CSDM13/)</span></p>
+<h3><span style="font-family: tahoma, arial, helvetica, sans-serif;"> </span></h3>
+<h3><br /><span style="font-family: tahoma, arial, helvetica, sans-serif;"><img src="http://www.cnag.cat/image/2/120/160/5/uploads/07_mg_8629-1331722357.jpg" width="120" height="160" style="float: left; margin-left: 10px; margin-right: 10px;" />Davide Baù</span></h3>
+<p><span style="font-family: tahoma, arial, helvetica, sans-serif;"><span style="line-height: 1.3em;">After obtaining a Master degree in Chemistry at the University of Padua and completing a one-year course in bioinformatics at the University of Cologne, Davide moved to the University College Dublin, where, in 2008, he got his PhD at the School of Computer Science and Informatics under the supervision of Dr. Gianluca Pollastri. His thesis focused on the development of an optimization algorithm for ab initio protein structure prediction.</span></span></p>
+<p><span style="font-family: tahoma, arial, helvetica, sans-serif; line-height: 1.3em;">After his PhD, Davide moved to Dr. Marc A. Marti-Renom’s laboratory where he started to work on genomic domains and genome structures determination by integrating 3C-based and FISH data into the Integrative Modeling Platform (IMP). During this time, he developed the methods that led to the determination of high-resolution models of genomic regions od different species. He is currently involved in different collaborations that aim at determining the genome architecture of several organisms including Human, Yeast, Mycoplasma Pneumoniae, Fly and Mouse.</span></p>
+<h3><span style="font-family: tahoma, arial, helvetica, sans-serif;"> </span></h3>
+<h3><span style="font-family: tahoma, arial, helvetica, sans-serif;"> </span></h3>
+<h3><span style="font-family: tahoma, arial, helvetica, sans-serif;"><img src="http://www.cnag.cat/image/2/120/160/5/uploads/2francois-1371725307.jpg" width="120" height="160" style="margin-left: 10px; margin-right: 10px; float: left;" />François Serra</span></h3>
+<p><span style="font-family: tahoma, arial, helvetica, sans-serif;">François Serra obtained his Degree in Biology, specialized in Physiology and Neurophysiology, his Master's Degree in Structural genomics and bioinformatics (Strasbourg I University, France) and it's PhD in Evolutionary Genomics in the Department of Bioinformatics at the CIPF (Valencia). He is now part of the Structural Genomic team of Marc A. Marti-Renom at CNAG and at CRG (Barcelona).</span></p>
+<p><span style="font-family: tahoma, arial, helvetica, sans-serif;">His main research interests are grounded on comparative genomics and evolution with a special focus on the effect of evolution in the structural arrangement of genomes. In the past 5 years, he has taught international courses at the GTPB, the CIPF (Valencia, ES) and the Department of Genetics of the University of Cambridge, UK.</span></p>
+<h2><span style="font-family: tahoma, arial, helvetica, sans-serif;"> </span></h2>
+<h2><span style="font-family: tahoma, arial, helvetica, sans-serif;"> </span></h2>
+<h2><span style="font-family: tahoma, arial, helvetica, sans-serif; line-height: 1.3em;">Contact Information</span></h2>
+<p><span style="font-family: tahoma, arial, helvetica, sans-serif;">Davide Baù: 
+ <script type='text/javascript'>
+ <!--
+ var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+ var path = 'hr' + 'ef' + '=';
+ var addy70826 = 'db&#97;&#117;' + '&#64;';
+ addy70826 = addy70826 + 'pcb' + '&#46;' + '&#117;b' + '&#46;' + 'c&#97;t';
+ document.write('<a ' + path + '\'' + prefix + ':' + addy70826 + '\'>');
+ document.write(addy70826);
+ document.write('<\/a>');
+ //-->\n </script><script type='text/javascript'>
+ <!--
+ document.write('<span style=\'display: none;\'>');
+ //-->
+ </script>This email address is being protected from spambots. You need JavaScript enabled to view it.
+ <script type='text/javascript'>
+ <!--
+ document.write('</');
+ document.write('span>');
+ //-->
+ </script></span><br /><span style="font-family: tahoma, arial, helvetica, sans-serif;">François Serra: 
+ <script type='text/javascript'>
+ <!--
+ var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+ var path = 'hr' + 'ef' + '=';
+ var addy44537 = 'fjs&#101;rr&#97;' + '&#64;';
+ addy44537 = addy44537 + 'pcb' + '&#46;' + '&#117;b' + '&#46;' + 'c&#97;t';
+ document.write('<a ' + path + '\'' + prefix + ':' + addy44537 + '\'>');
+ document.write(addy44537);
+ document.write('<\/a>');
+ //-->\n </script><script type='text/javascript'>
+ <!--
+ document.write('<span style=\'display: none;\'>');
+ //-->
+ </script>This email address is being protected from spambots. You need JavaScript enabled to view it.
+ <script type='text/javascript'>
+ <!--
+ document.write('</');
+ document.write('span>');
+ //-->
+ </script></span><br /><span style="font-family: tahoma, arial, helvetica, sans-serif;">Marc A. Marti-Renom: 
+ <script type='text/javascript'>
+ <!--
+ var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+ var path = 'hr' + 'ef' + '=';
+ var addy97346 = 'mm&#97;rt&#105;' + '&#64;';
+ addy97346 = addy97346 + 'pcb' + '&#46;' + '&#117;b' + '&#46;' + 'c&#97;t';
+ document.write('<a ' + path + '\'' + prefix + ':' + addy97346 + '\'>');
+ document.write(addy97346);
+ document.write('<\/a>');
+ //-->\n </script><script type='text/javascript'>
+ <!--
+ document.write('<span style=\'display: none;\'>');
+ //-->
+ </script>This email address is being protected from spambots. You need JavaScript enabled to view it.
+ <script type='text/javascript'>
+ <!--
+ document.write('</');
+ document.write('span>');
+ //-->
+ </script></span></p>
+<p><span style="font-family: tahoma, arial, helvetica, sans-serif;">Structural Genomics Team, CNAG - Centre Nacional de Anàlisi Genòmica &amp; </span><br /><span style="font-family: tahoma, arial, helvetica, sans-serif;">Structural Genomics Group - Gene Regulation, Stem Cells and Cancer Program – CRG - Center for Genomic Regulation</span></p>
+<p><span style="font-family: tahoma, arial, helvetica, sans-serif;">Parc Cientific de Barcelona - Torre I</span><br /><span style="font-family: tahoma, arial, helvetica, sans-serif;">Baldiri Reixac, 4 - 2a.p</span><br /><span style="font-family: tahoma, arial, helvetica, sans-serif;">08028 Barcelona</span></p>
+<p><span style="font-family: tahoma, arial, helvetica, sans-serif;">Tel <span class="skype_c2c_print_container">+34 9340 20828</span><span class="skype_c2c_container" dir="ltr"><span class="skype_c2c_highlighting_inactive_common" dir="ltr"><span class="skype_c2c_textarea_span"><img class="skype_c2c_logo_img" src="resource://skype_ff_extension-at-jetpack/skype_ff_extension/data/call_skype_logo.png" /><span class="skype_c2c_text_span">+34 9340 20828</span></span></span></span></span><br /><span style="font-family: tahoma, arial, helvetica, sans-serif;">Fax +34 9340 37279</span></p>
+<div id="skype_c2c_menu_container" class="skype_c2c_menu_container" style="display: none;">
+<div class="skype_c2c_menu_click2call"><a id="skype_c2c_menu_click2call_action" class="skype_c2c_menu_click2call_action"></a>Call</div>
+<div class="skype_c2c_menu_click2sms"><a id="skype_c2c_menu_click2sms_action" class="skype_c2c_menu_click2sms_action"></a>Send SMS</div>
+<div class="skype_c2c_menu_add2skype"><a id="skype_c2c_menu_add2skype_text" class="skype_c2c_menu_add2skype_text"></a>Add to Skype</div>
+<div class="skype_c2c_menu_toll_info"><span class="skype_c2c_menu_toll_callcredit">You'll need Skype Credit</span><span class="skype_c2c_menu_toll_free">Free via Skype</span></div>
+</div>
+		
+
+	</div>
+</body>
+
+
+<!-- Mirrored from eccb14.loria.fr/program/tutorials/tadbit?tmpl=component&print=1&page= by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jul 2015 15:49:19 GMT -->
+</html>

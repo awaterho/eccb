@@ -1,0 +1,203 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+
+
+<!-- Mirrored from eccb14.loria.fr/program/tutorials/sndm?tmpl=component&print=1&page= by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jul 2015 15:49:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <script type="text/javascript">
+var siteurl='../../index.html';
+var tmplurl='../../templates/ja_elastica/index.html';
+var isRTL = false;
+</script>
+
+  <base  />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="ECCB'14, ECCB2014, Computational Biology, Bioinformatics, Conference, Strasbourg, ECCB, European Conference on Computational Biology, ECCB14" />
+  <meta name="author" content="Adrien" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="ECCB'14 is the key European computational biology event in 2014 uniting scientists working in a broad range of disciplines, including bioinformatics, computational biology, biology, medicine, and systems biology." />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>ECCB'14 - T08 - Statistics and Numerics for Dynamical Modeling</title>
+  <link href="http://eccb14.loria.fr/program/tutorials/sndm?tmpl=component&amp;print=1&amp;page=" rel="canonical" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/media/jui/css/icomoon.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/." type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/addons.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/template-j30.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/layout.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/template.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/usertools.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/css3.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/component.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/print.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/menu/mega.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/typo.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/template-j30.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/template.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/modules.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-mobile.css" type="text/css" media="only screen and (max-width:719px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-mobile-port.css" type="text/css" media="only screen and (max-width:479px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-tablet.css" type="text/css" media="only screen and (min-width:720px) and (max-width: 985px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-normal.css" type="text/css" media="only screen and (min-width:986px) and (max-width: 1235px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-wide.css" type="text/css" media="only screen and (min-width:1236px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/css3.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/component.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/menu/mega.css" type="text/css" />
+  <script src="http://eccb14.loria.fr/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/mootools-more.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/anchor.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/js/core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/mega.rjd.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.noconflict.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.masonry.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.mediaqueries.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/menu/mega.js" type="text/javascript"></script>
+  <script type="text/javascript">
+jQuery.noConflict();
+  </script>
+
+<!--[if ie]><link href="/plugins/system/jat3/jat3/base-themes/default/css/template-ie.css" type="text/css" rel="stylesheet" /><![endif]--> 
+<!--[if ie 7]><link href="/plugins/system/jat3/jat3/base-themes/default/css/template-ie7.css" type="text/css" rel="stylesheet" /><![endif]--> 
+<!--[if ie 7]><link href="/templates/ja_elastica/css/template-ie7.css" type="text/css" rel="stylesheet" /><![endif]--> 
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes"/>
+<meta name="HandheldFriendly" content="true" />
+
+
+<link href="http://eccb14.loria.fr/templates/ja_elastica/images/favicon.ico" rel="shortcut icon" type="image/x-icon" /></head>
+
+<body id="bd" class="fs3 com_content contentpane">
+    
+<div id="system-message-container">
+<div id="system-message">
+</div>
+</div>
+    <div class="item-page clearfix">
+	<h2 class="contentheading">
+			T08 - Statistics and Numerics for Dynamical Modeling		</h2>
+
+	
+<div class="article-tools clearfix">
+	<ul class="actions">
+			<li>
+		<a href="#" onclick="window.print();return false;"><span class="icon-print"></span>&#160;Print&#160;</a>		</li>
+		
+	</ul>
+
+
+
+	
+</div>
+	<div class="column"><address><em>Clemens Kreutz*, Bernhard Steiert</em></address><address><em>*
+ <script type='text/javascript'>
+ <!--
+ var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+ var path = 'hr' + 'ef' + '=';
+ var addy72969 = 'cl&#101;m&#101;ns.kr&#101;&#117;tz' + '&#64;';
+ addy72969 = addy72969 + 'fdm' + '&#46;' + '&#117;n&#105;-fr&#101;&#105;b&#117;rg' + '&#46;' + 'd&#101;';
+ document.write('<a ' + path + '\'' + prefix + ':' + addy72969 + '\'>');
+ document.write(addy72969);
+ document.write('<\/a>');
+ //-->\n </script><script type='text/javascript'>
+ <!--
+ document.write('<span style=\'display: none;\'>');
+ //-->
+ </script>This email address is being protected from spambots. You need JavaScript enabled to view it.
+ <script type='text/javascript'>
+ <!--
+ document.write('</');
+ document.write('span>');
+ //-->
+ </script></em></address>
+<p style="text-align: justify;"><strong><span style="line-height: 1.3em;"> </span></strong></p>
+<p style="text-align: justify;"><strong><span style="line-height: 1.3em;">Description</span></strong></p>
+<p style="text-align: justify;"><span style="line-height: 1.3em;">A successful mathematical description of cell biological processes based on experimental data requires efficient and reliable numerical methods for parameter estimation as well as a suitable statistical methodology to reconstruct the underlying biochemical reaction networks. In this tutorial, statistical and numerical aspects for dynamic modeling in Systems Biology are discussed and the computational implementation is demonstrated. One major focus is the assessment of uncertainties of both, parameters and model predictions, which is efficiently and intuitively judged by the profile likelihood.</span></p>
+<p><span>In summary, the following aspects are discussed:</span></p>
+<ul>
+<li><span style="line-height: 1.3em;">appropriate numerical algorithms for parameter estimation [1]</span></li>
+<li><span style="line-height: 1.3em;">judging the quality of experimental data</span></li>
+<li><span style="line-height: 1.3em;">model discrimination by the likelihood ratio tests</span></li>
+<li><span style="line-height: 1.3em;">identifiability analysis and confidence intervals for estimated parameters [2]</span></li>
+<li><span style="line-height: 1.3em;">observability analysis and confidence intervals for model predictions [3]</span></li>
+<li><span style="line-height: 1.3em;">selection of informative new experimental conditions [4]</span></li>
+</ul>
+<p style="line-height: 1.3em; text-align: justify;"><span style="line-height: 1.3em;">In the tutorial, we use a basic system of ordinary differential equations (ODEs) to implement and illustrate the methods in MATLAB together with the participants. In addition, a published model for JAK-STAT signaling [5] and a comprehensive software package for quantitative dynamic modelling [1] is introduced. The illustrated methodology has been awarded three times </span><span style="line-height: 1.3em;">as “Best Performer” in </span><span style="line-height: 1.3em;">parameter estimation challenges within the Dialogue for Reverse Engineering Assessment and Methods (DREAM) competitions [6-8].</span></p>
+<div class="column">
+<p style="line-height: 1.3em;"> </p>
+<p style="line-height: 1.3em;"><strong>References</strong></p>
+<p style="line-height: 1.3em;">[1] Raue A, Schilling M, Bachmann J, Matteson A, Schelker M, Kaschek D, Hug S, Kreutz C, Harms BD, Theis F, Klingmüller U and Timmer J.: Lessons Learned from Quantitative Dynamical Modeling in Systems Biology. <em>PLoS ONE</em> 8(9), e74335, 2013<br /> [2] Raue A, Kreutz C, Maiwald T, Bachmann J, Schilling M, Klingmüller U, Timmer J.: Structural and practical identifiability analysis of partially observed dynamical models by exploiting the profile likelihood. <em>Bioinformatics</em>. 2009 Aug 1;25(15):1923-9.<br /> [3] Kreutz C, Raue A, Timmer J: Likelihood based observability analysis and confidence intervals for predictions of dynamic models. <em>BMC Systems Biology</em> 2012; 6.<br /> [4] Steiert B, Raue A, Timmer J, Kreutz C: Experimental design for parameter estimation of gene regulatory networks. <em>PLoS ONE</em> 2012; 7, e40052.<br /> [5] Becker V, Schilling M, Bachmann J, Baumann U, Raue A, Maiwald T, Timmer J and Klingmueller U, Covering a broad dynamic range: information processing at the erythropoietin receptor, <em>Science</em> 328(5984), 1404-1408, 2010.<br /> [6] DREAM6 – Estimation of Model Parameters Challenge, 2011. http://www.the-dream-project.org/challenges/dream6-estimation-model-parameters-challenge<br /> [7] DREAM7 – Network Topology and Parameter Inference Challenge, 2012. http://www.the-dream-project.org/challenges/network-topology-and-parameter-inference-challenge<br /><span style="line-height: 1.3em;">[8] DREAM8 – Whole Cell parameter estimation challenge, 2013. https://www.synapse.org/#!Synapse:syn1876068 </span></p>
+</div>
+<p style="line-height: 1.3em;"> </p>
+<div class="section">
+<div class="layoutArea">
+<div class="column">
+<p><strong>Provisional schedule</strong></p>
+<p>Date: September 7th, 2014.</p>
+<table border="0" align="left">
+<tbody>
+<tr valign="top">
+<td width="100">9:00 – 10:00</td>
+<td>Introduction and Motivation, some applications of dynamic modelling based on experimental data are presented.</td>
+</tr>
+<tr valign="top">
+<td>10:00 – 10:30</td>
+<td>Coffee Break</td>
+</tr>
+<tr valign="top">
+<td>10:30 – 11:00</td>
+<td>A basic example and computational implementation of parameter estimation and calculation of the profile likelihood to assess parameter uncertainties and detect non-identifiabilities.</td>
+</tr>
+<tr valign="top">
+<td>11:00 – 12:30</td>
+<td>Hands on session 1:<br /><span style="line-height: 1.3em;">- Simulation of data for the basic example and a slightly changed setting</span><br /><span style="line-height: 1.3em;">- Parameter estimation, Profile likelihood</span></td>
+</tr>
+<tr valign="top">
+<td>12:30 – 13:30</td>
+<td>Lunch</td>
+</tr>
+<tr valign="top">
+<td>13:30 – 15:00</td>
+<td>Presentation of the comprehensive methodology and its introduction of its implementation in the publicly available “Data 2 Dynamics Software”. https://bitbucket.org/d2d-development/d2d-software/wiki/Home</td>
+</tr>
+<tr valign="top">
+<td>15:00 - 16:00</td>
+<td>Hand on session 2:<br /> Analysis of real experimental data using the “Data 2 Dynamics Software”</td>
+</tr>
+<tr valign="top">
+<td>16:00 – 17:00</td>
+<td>Presentation of other methodological aspects and recently published approaches. Discussion and Summary.</td>
+</tr>
+</tbody>
+</table>
+<p><span style="line-height: 1.3em;"> </span></p>
+</div>
+</div>
+<div class="layoutArea">
+<div class="column">
+<p><strong>Technical requirements and intended audience</strong></p>
+<p class="p1">For parts of the tutorial the D2D data2dynamics software package is used which runs under MATLAB. To be able to perform the hand-on part of the tutorial, the participants should bring their own computers. WLAN is recommended to be able to distribute code between the participants. MATLAB (best R2010 or newer) including the Symbolic and Optimization Toolbox is required. Further information concerning the system requirements as well as for the software itself are found at <a href="https://bitbucket.org/d2d-development/d2d-software/wiki/Installation">https://bitbucket.org/d2d-development/d2d-software/wiki/Installation</a></p>
+<p><span>The tutorial is given for scientists with a theoretical background (bioinformatics, physics, theoretical biology, statistics) or for biologists working in the Systems Biology field.<br /> The participants should have at least an educational level of a master- or PhD student. The room is limited to a maximum of 45 people.</span></p>
+</div>
+</div>
+</div>
+<p style="line-height: 1.3em;"> </p>
+<div class="column">
+<p><strong>Instructors </strong></p>
+<p><span>The tutorial is given by Bernhard Steiert and Clemens Kreutz. They have long-term experience in data-based modelling and published several new statistical approaches for modelling in Systems Biology as well as applications with experimental collaborators. </span></p>
+<p><span>Bernhard Steiert and Clemens Kreutz participated three times in the DREAM (Dialogue for Reverse Engineering Assessment and Methods) parameter estimation challenges and were awarded as best performing every time.</span></p>
+</div>
+</div>
+		
+
+	</div>
+</body>
+
+
+<!-- Mirrored from eccb14.loria.fr/program/tutorials/sndm?tmpl=component&print=1&page= by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jul 2015 15:49:19 GMT -->
+</html>

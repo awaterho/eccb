@@ -1,0 +1,1260 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>ISMB/ECCB 2007 &raquo; PLoS Track</title>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+
+<script type="text/javascript">
+/***********************************************
+* Switch Content script- © Dynamic Drive (www.dynamicdrive.com)
+* This notice must stay intact for legal use. Last updated April 2nd, 2005.
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var enablepersist="on" //Enable saving state of content structure using session cookies? (on/off)
+var collapseprevious="no" //Collapse previously open content when opening present? (yes/no)
+
+var contractsymbol='- ' //HTML for contract symbol. For image, use: <img src="whatever.gif">
+var expandsymbol='+ ' //HTML for expand symbol.
+
+
+if (document.getElementById){
+document.write('<style type="text/css">')
+document.write('.switchcontent{display:none;}')
+document.write('</style>')
+}
+
+function getElementbyClass(rootobj, classname){
+var temparray=new Array()
+var inc=0
+var rootlength=rootobj.length
+for (i=0; i<rootlength; i++){
+if (rootobj[i].className==classname)
+temparray[inc++]=rootobj[i]
+}
+return temparray
+}
+
+function sweeptoggle(ec){
+var thestate=(ec=="expand")? "block" : "none"
+var inc=0
+while (ccollect[inc]){
+ccollect[inc].style.display=thestate
+inc++
+}
+revivestatus()
+}
+
+
+function contractcontent(omit){
+var inc=0
+while (ccollect[inc]){
+if (ccollect[inc].id!=omit)
+ccollect[inc].style.display="none"
+inc++
+}
+}
+
+function expandcontent(curobj, cid){
+var spantags=curobj.getElementsByTagName("SPAN")
+var showstateobj=getElementbyClass(spantags, "showstate")
+if (ccollect.length>0){
+if (collapseprevious=="yes")
+contractcontent(cid)
+document.getElementById(cid).style.display=(document.getElementById(cid).style.display!="block")? "block" : "none"
+if (showstateobj.length>0){ //if "showstate" span exists in header
+if (collapseprevious=="no")
+showstateobj[0].innerHTML=(document.getElementById(cid).style.display=="block")? contractsymbol : expandsymbol
+else
+revivestatus()
+}
+}
+}
+
+function revivecontent(){
+contractcontent("omitnothing")
+selectedItem=getselectedItem()
+selectedComponents=selectedItem.split("|")
+for (i=0; i<selectedComponents.length-1; i++)
+document.getElementById(selectedComponents[i]).style.display="block"
+}
+
+function revivestatus(){
+var inc=0
+while (statecollect[inc]){
+if (ccollect[inc].style.display=="block")
+statecollect[inc].innerHTML=contractsymbol
+else
+statecollect[inc].innerHTML=expandsymbol
+inc++
+}
+}
+
+function get_cookie(Name) { 
+var search = Name + "="
+var returnvalue = "";
+if (document.cookie.length > 0) {
+offset = document.cookie.indexOf(search)
+if (offset != -1) { 
+offset += search.length
+end = document.cookie.indexOf(";", offset);
+if (end == -1) end = document.cookie.length;
+returnvalue=unescape(document.cookie.substring(offset, end))
+}
+}
+return returnvalue;
+}
+
+function getselectedItem(){
+if (get_cookie(window.location.pathname) != ""){
+selectedItem=get_cookie(window.location.pathname)
+return selectedItem
+}
+else
+return ""
+}
+
+function saveswitchstate(){
+var inc=0, selectedItem=""
+while (ccollect[inc]){
+if (ccollect[inc].style.display=="block")
+selectedItem+=ccollect[inc].id+"|"
+inc++
+}
+
+document.cookie=window.location.pathname+"="+selectedItem
+}
+
+function do_onload(){
+uniqueidn=window.location.pathname+"firsttimeload"
+var alltags=document.all? document.all : document.getElementsByTagName("*")
+ccollect=getElementbyClass(alltags, "switchcontent")
+statecollect=getElementbyClass(alltags, "showstate")
+if (enablepersist=="on" && ccollect.length>0){
+document.cookie=(get_cookie(uniqueidn)=="")? uniqueidn+"=1" : uniqueidn+"=0" 
+firsttimeload=(get_cookie(uniqueidn)==1)? 1 : 0 //check if this is 1st page load
+if (!firsttimeload)
+revivecontent()
+}
+if (ccollect.length>0 && statecollect.length>0)
+revivestatus()
+}
+
+if (window.addEventListener)
+window.addEventListener("load", do_onload, false)
+else if (window.attachEvent)
+window.attachEvent("onload", do_onload)
+else if (document.getElementById)
+window.onload=do_onload
+
+if (enablepersist=="on" && document.getElementById)
+window.onunload=saveswitchstate
+
+</script><style type="text/css">
+.switchcontent{display:none;}body {
+	background-image: url();
+	background-color: #017DBB;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.style1 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.style5 {color: #017DBB}
+</style>
+
+
+
+
+
+
+
+	<link rel="stylesheet" href="../wp-content/themes/crayonworld-10/style.css" type="text/css" media="screen">
+
+
+	<link rel="alternate" type="application/rss+xml" title="ISMB/ECCB 2007 &raquo; PLoS Track Comments Feed" href="plostrack/feedhtml.html">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.html?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml"> 
+<link rel='index' title='ISMB/ECCB 2007' href='index.html'>
+<link rel='up' title='Program' href='../program.html'>
+<meta name="generator" content="WordPress 2.8.4">
+
+<a name="top"></a>
+</head>
+
+<body>	
+<div id="container">
+
+<!-- <div id="header"> -->
+
+
+<div id="header" onclick="location.href='../index.html';" style="cursor: pointer;">
+
+
+ <h1><a href="index.html" title="ISMB/ECCB 2007"> 	 ISMB/ECCB 2007 </a></h1>  
+
+</div>
+
+<!--
+<ul id="gnav">
+	<li ><a href="index.html" title="Home">Home</a></li>
+	<li class="page_item page-item-7"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/agenda" title="Agenda-at-a-Glance">Agenda-at-a-Glance</a></li>
+<li class="page_item page-item-46"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/airtravel" title="Air Travel">Air Travel</a></li>
+<li class="page_item page-item-209"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/bof" title="Birds of a Feather (BoF)">Birds of a Feather (BoF)</a></li>
+<li class="page_item page-item-208"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters-latecall" title="Call for Late Posters">Call for Late Posters</a></li>
+<li class="page_item page-item-83"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/papers" title="Call for Papers">Call for Papers</a></li>
+<li class="page_item page-item-220"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/childcare" title="Child Care">Child Care</a></li>
+<li class="page_item page-item-202"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/activities" title="Children/Family Activities">Children/Family Activities</a></li>
+<li class="page_item page-item-90"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees" title="Committees">Committees</a></li>
+<li class="page_item page-item-130"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/promotion" title="Conference Promotion">Conference Promotion</a></li>
+<li class="page_item page-item-112"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsors" title="Conference Sponsors">Conference Sponsors</a></li>
+<li class="page_item page-item-132"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/venue" title="Conference Venue">Conference Venue</a></li>
+<li class="page_item page-item-9"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/contacts" title="Contact Us">Contact Us</a></li>
+<li class="page_item page-item-68"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/demonstrations" title="Demonstrations">Demonstrations</a></li>
+<li class="page_item page-item-119"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitfloorplan" title="Exhibit Floor Plan">Exhibit Floor Plan</a></li>
+<li class="page_item page-item-186"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitorinfo" title="Exhibitor Information">Exhibitor Information</a></li>
+<li class="page_item page-item-194"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitresources" title="Exhibitor Resources">Exhibitor Resources</a></li>
+<li class="page_item page-item-193"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitschedule" title="Exhibitor Schedule">Exhibitor Schedule</a></li>
+<li class="page_item page-item-2"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/faq" title="FAQ">FAQ</a></li>
+<li class="page_item page-item-138"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/housing" title="Housing">Housing</a></li>
+<li class="page_item page-item-12"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/subscribe" title="How to Subscribe">How to Subscribe</a></li>
+<li class="page_item page-item-210"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/volunteers" title="ISMB/ECCB 2007 Conference Volunteers">ISMB/ECCB 2007 Conference Volunteers</a></li>
+<li class="page_item page-item-45"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/deadlines" title="ISMB/ECCB 2007 Deadlines">ISMB/ECCB 2007 Deadlines</a></li>
+<li class="page_item page-item-58"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/highlights" title="ISMB/ECCB 2007 Highlights Track: Call for Proposals">ISMB/ECCB 2007 Highlights Track: Call for Proposals</a></li>
+<li class="page_item page-item-86"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/industry" title="ISMB/ECCB 2007 Industry Track: Call for Proposals">ISMB/ECCB 2007 Industry Track: Call for Proposals</a></li>
+<li class="page_item page-item-125"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/registration" title="ISMB/ECCB 2007 Registration">ISMB/ECCB 2007 Registration</a></li>
+<li class="page_item page-item-78"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/keynotes" title="Keynotes">Keynotes</a></li>
+<li class="page_item page-item-48"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/keynotespresentations" title="Keynotes Presentations">Keynotes Presentations</a></li>
+<li class="page_item page-item-85"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/plostrack" title="PLoS Track at ISMB/ECCB 2007">PLoS Track at ISMB/ECCB 2007</a></li>
+<li class="page_item page-item-121"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters" title="Posters">Posters</a></li>
+<li class="page_item page-item-134 current_page_ancestor current_page_parent"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program" title="Program">Program</a></li>
+<li class="page_item page-item-54"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sigs" title="Special Interest Group Meetings (SIGs)">Special Interest Group Meetings (SIGs)</a></li>
+<li class="page_item page-item-35"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/specialsessions" title="Special Sessions">Special Sessions</a></li>
+<li class="page_item page-item-103"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsorbrochure" title="Sponsor Brochure">Sponsor Brochure</a></li>
+<li class="page_item page-item-100"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps" title="Sponsor Opportunities">Sponsor Opportunities</a></li>
+<li class="page_item page-item-174"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/scs3" title="Student Council Symposium (SCS3)">Student Council Symposium (SCS3)</a></li>
+<li class="page_item page-item-108"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/submissioncontacts" title="Submission Contacts">Submission Contacts</a></li>
+<li class="page_item page-item-139"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/tours" title="Tours">Tours</a></li>
+<li class="page_item page-item-111"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/travelsupport" title="Travel Fellowships">Travel Fellowships</a></li>
+<li class="page_item page-item-59"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/tutorials" title="Tutorials">Tutorials</a></li>
+<li class="page_item page-item-147"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/transit" title="Vienna Transit Pass">Vienna Transit Pass</a></li>
+<li class="page_item page-item-43"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/weather" title="Weather Today">Weather Today</a></li>
+ 
+</ul> --><div id="content">
+
+
+	  
+		<div class="post">	
+			<h2 class="post-title"><a href="plostrack.html" rel="bookmark" title="Permanent Link: PLoS Track">PLoS Track</a></h2>
+			<p class="post-info">posted <em>04 Jul 2007</em> </p>
+			<div class="post-content">
+	<p><a name="plos01"></a><strong>PLoS Track: 01<br>
+Computational Neuroscience for Computational Biologists: A Brief Tour</strong></p>
+<p>Sunday, July 22, 9:30 a.m. &#8211; 9:55 a.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Lyle J. Graham, Université Paris Descartes</p>
+<p>Abstract: </p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos02"></a><strong>PLoS Track: 02<br>
+New methods for tracing the flow of information and computational operations in cortical networks of neurons</strong></p>
+<p>Sunday, July 22, 10:00 a.m. &#8211; 10:25 a.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Wolfgang Maass, Technische Universitaet Graz</p>
+<p>Abstract: pending<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/maass_20070502185256.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/maass_20070502185256.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos03"></a><strong>PLoS Track: 03<br>
+Semantics for Integrating Forest Structure Data</strong></p>
+<p>Sunday, July 22, 10:50 a.m. &#8211; 11:15 a.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Judith Cushing, The Evergreen State College</p>
+<p>Abstract: Describing and categorizing the complex and dynamic structural and spatial components of forests is needed to compare, understand, and manage forests, and forest structure. Of the 87,564 forest-related citations in Forestry Abstracts, 11% list “canopy structure” or “forest structure” as keywords. Unfortunately, there is no single system by which ecologists conceptualize, measure, visualize, categorize, or classify forest structure. In contrast to how taxonomists identify, name, and classify organisms, forest ecologists have no unified approach to name and classify forest structure. Rather, systems to classify forest structure have focused on particular attributes of the forest: tree physiognomy, tree architecture, height diversity, or stratification. The lack of an established framework to effectively categorize conceptual views of forest structure precludes the asking of important ecological synthesis questions and the data integration required to achieve it.</p>
+<p>Our conceptual framework broadly classifies forest structure, allowing one to categorize how different components of forest structure are perceived and described. We separate forest structural components into three major representations (groups of components, networks of components, continuous media), and assign three descriptors to each (reactivity, dimensionality, and spatial referencing). The framework was populated with 500 forest structure studies. Certain categories were more heavily used than others, but only nine were not populated at all. Potential applications of this framework include: data integration; exploring associated function attributes of each category to discern structure/function patterns; prioritizing ecoinformatics tool development.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/judyc_20070602142248.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/judyc_20070602142248.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos04"></a><strong>PLoS Track: 04<br>
+An ontology for the semantic modelling of natural systems</strong></p>
+<p>Sunday, July 22, 11:20 a.m. &#8211; 11:45 a.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Gary Johnson, University of Vermont</p>
+<p>Abstract: This contribution outlines the fundamentals of a novel conceptualization of scientific observations that unifies the conceptual treatment of datasets and dynamic models, and enables unprecedented opportunities for automation of validation, analysis and processing of natural system data and models. We present the conceptualization and discuss applications to multi-disciplinary scenarios of integration in the environmental and agricultural fields. In addition to developing the conceptualization, we are providing open source software that enables novel ways of describing, modelling and simulating heterogeneous systems and connecting them with available datasets. This work represents a summation of a decade of efforts in ecoinformatics that has spanned multiple funded projects and applications in many fields of applied and theoretical science.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/ferdinando.villa_20070531224800.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/ferdinando.villa_20070531224800.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos05"></a><strong>PLoS Track: 05<br>
+Nested Systems Modeling: A Hierarchical Approach to Individual Based Models</strong></p>
+<p>Sunday, July 22, 11:50 a.m. &#8211; 12:15 p.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Bert van der Werf, Alterra</p>
+<p>Abstract: A method for simulating complex individual based models will be presented. This method is still understandable for biologists with little mathematical and programming background. So it fits nicely in the PLOS Goals.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070405042648_Bert.vanderWerf.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070405042648_Bert.vanderWerf.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos06"></a><strong>PLoS Track: 06<br>
+Statistics of network connectivity optimizing information storage</strong></p>
+<p>Sunday, July 22, 2:30 p.m. &#8211; 2:55 p.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Nicolas Brunel, Université Paris Descartes</p>
+<p>Abstract: Pending<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/nicolas.brunel_20070502184649.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/nicolas.brunel_20070502184649.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos07"></a><strong>PLoS Track: 07<br>
+Cortical Network Dynamics</strong></p>
+<p>Sunday, July 22, 3:00 p.m. &#8211; 3:25 p.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Ad Aersten, Albert-Ludwigs-University</p>
+<p>Abstract: Invited by Lyle Graham<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070403133640_aertsen.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070403133640_aertsen.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos08"></a><strong>PLoS Track: 08<br>
+Comparative Analysis of Primate Alternative Splicing Using Exon Arrays</strong></p>
+<p>Sunday, July 22, 3:50 p.m. &#8211; 4:15 p.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Augix Guohua Xu, CAS-MPG Partner Institute for Computational Biology</p>
+<p>Abstract: Alternative splicing is a major source of transcriptome diversity for higher eukaryotic organisms. A combination of laboratory and computational approaches have revealed a high frequency of alternative splicing, indicate the biological significance of this event. However, relatively little is known about how alternative splicing evolves, and more specifically about how humans and chimpanzees differ in RNA splicing. To understand the evolution of alternative splicing, we have analyzed expression of splice variants within and between four tissues in humans and chimpanzees using exon array technology and applying various novel computational approaches. For the first time, this comparison provides a whole genome scale view of primate RNA splicing occurring in human and our closest relatives, and indicates that evolutionary constraints affect the alternative splicing patterns in different tissues and species differently. Furthermore, the comparative analysis at the DNA sequence level shows how differences in regulatory signals including splice sites and splicing enhancers are involved in differences in splicing between species.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406004942_augix.com.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406004942_augix.com.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos09"></a><strong>PLoS Track: 09<br>
+The Human Phylome</strong></p>
+<p>Sunday, July 22, 4:20 p.m. &#8211; 4:45 p.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Jaime Huerta-Cepas, CIPF</p>
+<p>Abstract: The reconstruction of high-quality complete phylomes have been traditionally prevented by the large demands of time and computer power involved. In the present analysis , we have overcome this challenge and reconstructed the human phylome. Our results provide a valuable source of information about the evolutionary relationships among genes of different eukaryotic model species that can be used for deeper evolutionary analyses or comparative genomics studies. The work presented here involves not only reconstructing a set of high-quality phylogenies and alignments for more than 20.000 human genes but also the development of new methods and algorithms that pave the way for the generation and analyses of other genomes. The results obtained from the analysis of the human phylome are very relevant for the research community and range from the quantification of speciation and duplication events throughout the evolution of the human genome or the topological analyses based on thousands of trees to support different evolutionary scenarios. Therefore we are convinced that this work suits the aims of the call for plos track and that will be of interest for the audience in ismb/eccb as well as for plos readers.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/jhuerta_20070416032633.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/jhuerta_20070416032633.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos10"></a><strong>PLoS Track: 10<br>
+Origin of bacterial transmembrane beta-barrels by duplication of a beta-beta hairpin</strong></p>
+<p>Sunday, July 22, 4:50 p.m. &#8211; 5:15 p.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Johannes Soeding, Max-Planck Insitute for Developmental Biology</p>
+<p>Abstract: How did complex protein domains evolve? At the basis of our studies on protein evolution is the hypothesis that protein domains were combined from peptide modules that originally evolved as cofactors in the RNA world. We are gathering fascinating examples for descendents of these ancestral modules that we found in otherwise disparate protein folds and that still carry the traces of their common origin in their sequences and structures [1]. The beta hairpin that forms the repeating structural unit of the transmembrane beta barrels (TMBBs) is perhaps the most impressive example yet, since by simple duplication it has given rise to an entire class of very particular proteins. Two independent lines of evidence are provided for this hypothesis. First we show that most bacterial TMBBs may be linked by a novel remote homology detection method [2,3], to the exclusion of analogous non-membrane beta-barrel folds. Second, using a new method for de-novo repeat detection [to be published], we detect a clear repeat pattern in the sequences of many TMBBs, the repeat unit each time coinciding with the beta hairpins. Apart from the general importance of these results for the earliest evolutionary past of proteins, we demonstrate the capabilities of several new and powerful tools that are finding applications in many areas of biology and computational biology.<br>[1] J. Soding, AN.Lupas (2003) Bioessays 25:837-846.<br>[2] J. Soding (2005) Bioinformatics 21:951-960.<br>[3] J. Soding, M. Remmert, A. Biegert, AN. Lupas. (2006) NAR 34:W374-378.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/johannes.soeding_20070603214542.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/johannes.soeding_20070603214542.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos11"></a><strong>PLoS Track: 11<br>
+Inferring ancestral states of the bZIP transcription factor interaction network</strong></p>
+<p>Sunday, July 22, 5:20 p.m. &#8211; 5:45 p.m.<br>
+Room: Hall NO</p>
+<p>Presented by: John Pinney, University of Manchester</p>
+<p>Abstract: This work represents an important step forward in the study of the evolution of biological networks. Using the bZIP transcription factor interaction network as a model system, we are able to develop a simple Bayesian model for the evolution and measurement of protein-protein interactions. We show that the Bayesian approach is much more robust to the presence of noise in the observed present-day interaction networks than a naive parsimony-based method. The extension of this approach to more general classes of protein-protein interactions would result in a platform both for the inference of ancestral networks and the reduction of experimental noise in networks derived from high-throughput data.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/john.pinney_20070531203253.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/john.pinney_20070531203253.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos12"></a><strong>PLoS Track: 12<br>
+Visual Tools for Managing Taxonomic Concepts in Ecological and Biodiversity Research</strong></p>
+<p>Monday, July 23, 9:30 a.m. &#8211; 9:55 a.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Jessie Kennedy, Napier University</p>
+<p>Abstract: This presentation will give an overview of the SEEK project focussing on the visualisation tools developed for use by ecologists. The problem of ambiguity of taxonomic names is becoming more important with the move to e-science environments. The user interaction tools developed incorporate novel information visualisation techniques and their application to taxonomy for use in ecology and biodiversity is internationally leading.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070405094554_j.kennedy.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070405094554_j.kennedy.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos13"></a><strong>PLoS Track: 13<br>
+Computable Field Guides: Time and Place Dependent Species Identification and Reporting</strong></p>
+<p>Monday, July 23, 10:00 a.m &#8211; 10:25 a.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Robert Morris, UMASS-Boston</p>
+<p>Abstract: Biotic monitoring provides early warning of the impact of climate change and habitat loss. The accelerating pace of species loss and range changes make it urgent that software for identifying species and monitoring their occurrence can be quickly and easily configured and deployed, and that the resulting data is widely and quickly available. The accessibility of associated biodiversity data supporting the observation system, and the feedback available from the resulting observation data, radically multiplies the utility of all parties to the data interchange. Our basic Electronic Field Guide tools and the ways they are deployed address these needs.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/ram_20070602145856.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/ram_20070602145856.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos14"></a><strong>PLoS Track: 14<br>
+Changing patterns of selective pressure in Human Influenza H3</strong></p>
+<p>Monday, July 23, 10:50 a.m. &#8211; 11:15 a.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Richard Goldstein, National Institute for Medical Research</p>
+<p>Abstract: Understanding how influenza evolves to avoid the immune system is important in developing strategies towards containing an illness that causes 250K-500K deaths per year. Most of the immune response responds to the haemagglutinin protein. Antigenic properties can be experimentally measured, and structures can be solved and (in the case of glycosylation) predicted. By analysing the pattern of sequence change, we can relate the changes in antigenic properties, structural properties, and sequence properties. Our results indicate that the relationship between host and virus is continually modulating, resulting in significant changes in selective pressure coincident with changes in antigenic properties. There was much interest in how changing glycosylation patterns might be responsible. Surprisingly, we find no correlation between changing glycosylation patterns and changes in antigenic properties. Nor do glycosylation changes result in changes in selective pressure.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070405114620_richard.goldstein.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070405114620_richard.goldstein.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos15"></a><strong>PLoS Track: 15<br>
+Comparative docking on protein structure models from ten tropical disease genomes</strong></p>
+<p>Monday, July 23, 11:20 a.m. &#8211; 11:45 a.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Marc Marti-Renom, Centro de Investigación Príncipe Felipe</p>
+<p>Abstract: Dr. Marti-Renom and Prof. Sali are active members of the Tropical Diseases Initiative (TDI, http://www.tropicaldisease.org), an “open source” approach to drug development for “unprofitable” diseases such as Malaria or Chagas. In this presentation we will introduce the first large-scale automatic modelling exercise for ten genomes of organisms that cause tropical diseases. We have applied our computational methods with the aim of predicting new lead candidates for drug discovery in tropical diseases. We believe that the talk will be of interest to a broad audience of computational biologists and biologists with interest in the application of comparative methods for protein structure and function prediction.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/mmarti_20070514014340.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/mmarti_20070514014340.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos16"></a><strong>PLoS Track: 16<br>
+Genome wide identification of off-site protein targets for major pharmaceuticals using functional site similarity and protein-ligand docking</strong></p>
+<p>Monday, July 23, 11:50 a.m &#8211; 12:15 p.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Daniel Goodman, University of California, San Diego</p>
+<p>Abstract: Our work focuses on the identification of off-site (secondary) targets for pharmaceuticals, which is crucial in understanding the molecular basis of therapeutic side-effects. We have developed a robust and scalable method to identify such targets for known therapeutics on a proteomic-wide scale. The method combines novel ligand binding site similarity searching and protein-ligand docking profiles from a wide range of the affinity spectrum. Using this methodology, the estrogen receptor antagonist binding site for tamoxifen is found to be similar to a potential binding site of a Ca2+ ion channel protein. This finding provides molecular insight into reducing the side effect of breast cancer therapeutics that are found to inhibit Ca2+ uptake in sacroplasmic reticulum vesicles. Several potential off-targets are also identified for the well known drug target, SAM methyltransferase familiy. The technique is useful for biologist and chemsit to either identify leads in which the secondary sites represent important therapies, or reduce side effects by better tailoring the drug to the primary site.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070329141642_lxie.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070329141642_lxie.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos17"></a><strong>PLoS Track: 17<br>
+Systems-level Exploration of the Breast and Colorectal Cancer Genomes</strong></p>
+<p>Monday, July 23, 2:30 p.m. &#8211; 2:55 p.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Jimmy Lin, Johns Hopkins Medical Institutions</p>
+<p>Abstract: Since our initial survey of the breast and colorectal cancer genomes (Sjoblom et al., Science 2006), similar large-scale cancer genome re-sequencing efforts have been performed for known oncogenes and kinases (Greenman et al., Nature 2007; Thomas et al., Nature Genetics 2007). The US National Institute of Health is proposing to allocate $1.5 billion for an extensive investigation of up to 50 of tumor types, which is named the Cancer Genome Atlas (TCGA) project. Without doubt, we are entering a new era of cancer genomics.</p>
+<p>As more data is produced, computer scientists, statisticians, mathematicians, and bioinformaticians will all be called upon to help decipher the information and uncover the wealth of knowledge contained in this mutational landscape. In preparation, we offer some initial thoughts on systems-level analyses that can be performed on these datasets, from sequence and function to pathways and networks. We provide an initial framework from different perspectives to profile and understand these cancer genomes. We hope to start a conversation among the computational community about applying existing methods or developing novel algorithms to better characterize and understand cancer genomic data. It is our sincere hope that experts from all disciplines of computational and experimental biology will join together in unraveling the mysteries of this complex disease. Only with deeper understanding, can we develop novel therapeutic and diagnostic methods against this illness that has ravaged the lives of so many. Together, we will understand cancer. Together, we will find a cure.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406073726_jimmy.lin.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406073726_jimmy.lin.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos18"></a><strong>PLoS Track: 18<br>
+A Conserved Network of Human MAPK Interactions</strong></p>
+<p>Monday, July 23, 3:00 p.m. &#8211; 3:25 p.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Trey Ideker, UC San Diego</p>
+<p>Abstract: Dear Maricel,</p>
+<p>Please find attached the abstract you requested for my presentation. The particular work I plan to talk about is a study of protein-protein interactions among human MAP-family kinase proteins. As you know, MAPKs are extraordinarily important in human disease and inflammation pathways. They are also frequent drug targets. </p>
+<p>The point of departure for this work is a large yeast-two-hybrid (Y2H) screen using MAPK proteins as baits. The significant computational task we are then dealing with is how to cope with the substantial noise in yeast-two-hybrid measurements. We take a comparative approach to this problem, by accepting only those Y2H results which can be assembled into conserved signaling pathways between human and yeast. </p>
+<p>This is not the first time my group has performed comparative network analysis. However, the bioinformatic novelty of this study is that we perform a quantitative analysis to show, for the first time, that conserved interaction networks are far more sensitive and specific than the raw interaction data produced by Y2H methods.</p>
+<p>Hope to see you in Vienna,<br>Trey<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406185328_trey.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406185328_trey.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos19"></a><strong>PLoS Track: 19<br>
+Identification of New AP-Zalpha Regulated Genes: A Biological and Bioinformatic Approach</strong></p>
+<p>Monday, July 23, 3:50 p.m. &#8211; 4:15 p.m<br>
+Room: Hall NO</p>
+<p>Presented by: Francesca Orso, IRCC and University of Turin</p>
+<p>Abstract: The aim of this work is to identify the isoform-specfic AP-2 transcription factor binding site sequences. The identification of these sequences and of AP-2 regulated genes will be extremely relevant to understand the biological roles and the molecular mechanism of action of these proteins. We strongly believe that joining our bioinformatic and biological knowledges will help us to reach our goals.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406015931_francesca.orso.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406015931_francesca.orso.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos20"></a><strong>PLoS Track: 20<br>
+Subtle donor splice variation at the verge of regulation</strong></p>
+<p>Monday, July 23, 4:20 p.m. &#8211; 4:45 p.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Ralf Bortfeldt, Friedrich-Schiller University Jena</p>
+<p>Abstract: A few studies have been reported the occurrence of small donor (<6 nucleotides) variation during alternative splicing of human, mouse and plant exons. However the characterization of these closely located competitve splice signals is uncomplete and many questions are still open. We have combined computational and experimental analyses to shed more light on this phenomenon and focused especially on the among alternative splice events most frequently observed variations of 4 nucleotides. The mandatory frameshift due to this alternative splice event opens several possibilities for the cell to regulate the respective transcripts. Since the prediction of subtle splice variation poses a particular challenge itself, a detailed characterisation is necessary to find additional criteria for their recognition among potential false positive events. Altogether subtle donor splice variant provide an excellent example where different computational and experimental techniques have to converge in order to find the bits and pieces of the intention that nature keeps behind this splice pattern.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/bortfeldt_20070602152837.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/bortfeldt_20070602152837.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos21"></a><strong>PLoS Track: 21<br>
+Novel toxin-like proteins in non-venomous tissues of mammals and insects</strong></p>
+<p>Tuesday, July 24, 9:30 a.m. &#8211; 9:55 a.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Noam Kaplan, The Weizmann Institute</p>
+<p>Abstract: Our work develops, through evolutionary reasoning, the concept of toxin-like proteins which are homologs of toxic venom proteins but function in non-venom contexts.<br>Next, we address the task of computationally characterizing toxin-like proteins by using sequence information. Since toxin-like proteins are extremely varied in terms of biochemical function, standard motif-based and fold-recognition approaches fail in this task. By using some structural insights combined with machine learning methodology, we are able to construct a computational classifier that successfully passes rigorous testing. Surprisingly, we show that although the classifier is trained only on a specific subfamily of toxins, it is able to generalize so that it recognizes other unrelated toxin families, suggesting that toxins are a valid functional &#8220;superfamily&#8221;.<br>Finally, we scan whole genomes using our classifier and detect new classes of toxin-like proteins. Of particular interest is OCLP1 which is significantly similar to known cone-snail venom proteins but surprisingly is expressed in the bee brain. We have cloned and expressed this protein, and tested it experimentally using standard toxicity assays. Remarkably, we found that the protein induces reversible paralyzation in fish. Additionaly, we have detected a novel mamallian cluster of proteins that are similar to snake neurotoxins. We suggest their involvement in sperm-egg fusion.<br>Altogether, our work presents an interesting biological concept, application of non-standard computational techniques, strong computational results that are extremely interesting biologically and experimental validation of some predictions.<br>As such, the work is of interest to a wide range of biologists (computational and experimental) and contains some pharmaceutical implications.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/noam.kaplan_20070531202241.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/noam.kaplan_20070531202241.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos22"></a><strong>PLoS Track: 22<br>
+Spatially-resolved, multiscale modeling permits detailed simulation of eukaryotic chemosensing that predicts the importance of local regulatory signaling mechanisms</strong></p>
+<p>Tuesday, July 24, 9:30 a.m. &#8211; 9:55 a.m.<br>
+Room: Hall L</p>
+<p>Presented by: Martin Meier-Schellersheim, NIH</p>
+<p>Abstract: Our presentation introduces a modeling approach that makes it possible also for experimental biologists (non-computer scientists) to define detailed models of cellular signaling processes, ranging from interactions between molecular binding sites to the resulting behavior of populations of cells. We demonstrate how this approach can be used to explore the spatio-temporal dynamics of intracellular reaction networks like those regulating the chemotactic behavior of eukaryotic cells. The novel biological insights about eukaryotic chemosensing mechanisms that were obtained using the approach and that will be presented have led to several follow-up studies and will contribute to encouraging experimental biologists to engage in quantitative studies and invest in projects moving between simulation and experiment in the formulation and testing of biological hypotheses that cover multiple spatial scales. In describing the biological results we illustrate some new approaches for encoding interactions between molecular complexes and for simulating and visualizing reaction network dynamics.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406135200_mms.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406135200_mms.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos23"></a><strong>PLoS Track: 23<br>
+Tandem Block Signatures Are Shared Across Multiple Bacterial Genomes</strong></p>
+<p>Tuesday, July 24, 10:00 a.m. &#8211; 10:25 a.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Stephen Beckstrom-Sternberg, Translational Genomics Research Institute (TGen)</p>
+<p>Abstract: This tool uses a new metric (tandem array blocks) for cross-comparative visualization of structural similarities/differences among 2 or more bacterial or archaeal whole genomes. It uses a commonly available program (exact-tandems, from MUMmer 3.19) to create a data set of tandems found in each genome, and combines these data with the genome sequence and GenBank annotation for each taxon, to provide an interactive tool for visual analysis/inspection, detailed analyses of underlying patterns and structures tied to annotations and sequence polymorphisms, diagram/figure generation, and marker selection. Tandemizer provides a novel way to assess rearrangements and relationships among genomes of related taxa.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406162719_sbeckstrom.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406162719_sbeckstrom.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos24"></a><strong>PLoS Track: 24<br>
+Patterns of Mesenchymal Condensation in a Multiscale, Quasi-3D Discrete Stochastic Model</strong></p>
+<p>Tuesday, July 24, 10:00 a.m. &#8211; 10:25 a.m.<br>
+Room: Hall L</p>
+<p>Presented by: Mark Alber, University of Notre Dame</p>
+<p>Abstract: In this talk, the authors will describe a biologically motivated discrete stochastic model that shows that the patterns of spots and stripes of tightly packed cells observed in cultures derived from the embryonic vertebrate limb can occur by a mechanism that employs only cell-cell signaling via diffusible molecules (morphogens) and cell substratum adhesion (haptotaxis).<br>The model is multiscale (i.e., cell and molecular dynamics occur on distinct scales) and the cells are represented as spatially extended objects that can change their shape. It demonstrates that similar-looking patterns can arise both from stationary and transient dynamics of the same underlying core molecular-genetic mechanism. Simulations also show that spot and stripe patterns (which also correspond to the nodules and bars of the developing limb skeleton in vivo), are close in parameter space and can be generated in multiple ways with single parameter variations.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070402024201_malber.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070402024201_malber.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos25"></a><strong>PLoS Track: 25<br>
+Predictive Modeling of Signaling Crosstalk during C. elegans Vulval Development</strong></p>
+<p>Tuesday, July 24, 10:50 a.m. &#8211; 11:15 a.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Jasmin Fisher, Swiss Federal Institute of Technology (EPFL)</p>
+<p>Abstract: This work focuses on the application of formal computational methods to model and analyze the process of cell fate determination during C. elegans vulval development. The new biological insights obtained by this modeling work are directly relevant to developmental biologists; however, the modeling methodology presented here can be successfully applied to many other areas of cell biology and therefore could be appealing to the broad audience of computational biologists and biologists.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/jasmin.fisher_20070602152339.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/jasmin.fisher_20070602152339.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos26"></a><strong>PLoS Track: 26<br>
+Recombination and linkage disequilibrium in Arabidopsis thaliana</strong></p>
+<p>Tuesday, July 24, 10:50 a.m. &#8211; 11:15 a.m.<br>
+Room: Hall L</p>
+<p>Presented by: Magnus Nordborg, University of Southern California</p>
+<p>Abstract: This work describes our analysis of the genome-wide haplotype structure in Arabidopsis thaliana at a resolution not available in any other non-human organisms. Our results lay the ground for genome-wide association mapping in this species, and are of general interest to anyone interested in population genetics and natural variation.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406123408_magnus.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406123408_magnus.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos27"></a><strong>PLoS Track: 27<br>
+S. cerevisiae Mitochondria: Validating Predictions from Microarray Integration</strong></p>
+<p>Tuesday, July 24, 11:20 a.m. &#8211; 11:45 a.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Curtis Huttenhower, Princeton University</p>
+<p>Abstract: Our investigation of S. cerevisiae mitochondria approaches a problem of both scientific and clinical interest; mitochondrial organization plays a key role in aging and in several human disorders, and it also provides a model system encompassing a variety of essential cellular functions. Moreover, our laboratory experiments have been motivated and directed by predictions produced from large scale computational integration of existing microarray data using the MEFIT system. That is, by simultaneously analyzing a large body of existing expression data, we have elucidated gene function in areas beyond the specific intents of the original microarray conditions. This microarray integration methodology is applicable to many organisms and biological processes, and the related work we have carried out on mitochondrial organization serves to demonstrate this and to explore novel yeast biology.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406132545_chuttenh.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406132545_chuttenh.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos28"></a><strong>PLoS Track: 28<br>
+A novel graphical model approach for identifying host mediated selection pressure on viral evolution reveals the surprisingly strong influence of HLA class I alleles on HIV-1 evolution</strong></p>
+<p>Tuesday, July 24, 11:20 a.m. &#8211; 11:45 a.m.<br>
+Room: Hall L</p>
+<p>Presented by: Jonathan Carlson, University of Washington</p>
+<p>Abstract: HIV-1 T-cell vaccines hold promise because, unlike traditional antibody-based vaccines that can target only exposed surface antigens, the range of potential epitopes covers all viral peptide fragments. Nevertheless, the process of T-cell-based immunity is poorly understood and it is unclear how effective the cellular immune response is in controlling HIV-1 infection. We have developed a novel computational approach for measuring cellular immune pressure on viral sequence evolution, eliminating confounding due to the phylogenetic relationships among the HIV sequences. Using this method, we show that a high proportion of HIV-1 evolution is likely due to selection pressure from the cellular arm of the immune system, making T-cell-based vaccines a viable option. Furthermore, we are able to accurately predict the pathways of escape mutations that lead to resistance. These results can be used in vaccine design to find target epitopes and their escape variants.</p>
+<p>Our method not only sheds light on a significant open problem in HIV pathogenesis, it also opens the door to numerous related studies. For example, we are currently using it to study sources of immune pressure on HCV and influenza evolution, as well as pathways of compensatory substitutions in viral proteins. In addition, as our method assumes only that the sequences are hierarchically related (not necessarily due to phylogeny) and makes no assumptions about the distribution of the environmental variable, it can be used to eliminate confounding effects in genome-wide associations studies, as we have demonstrated in studies on Arabidopsis and mice.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406233443_jcarlson.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406233443_jcarlson.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos29"></a><strong>PLoS Track: 29<br>
+Integrating computational methods and high-throughput technology to map the global yeast genetic interaction network</strong></p>
+<p>Tuesday, July 24, 11:50 a.m. &#8211; 12:15 p.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Chad Myers, Princeton University</p>
+<p>Abstract: Our work on a hybrid computational-experimental approach for mapping the entire yeast genetic interaction network is an ideal fit for the PLoS Track. First, large-scale studies of genetic interactions will be central to many future efforts in systems biology because they offer unique information about pathway structure that cannot be obtained from other types of data. Although the current experimental technology is powerful, we stand to benefit much more from these data if we use the technology in the most efficient way possible. The combinatorial space of possible interactions renders brute-force approaches infeasible. This presents both new opportunities and challenges for computational methods, which until now, have only been used in rather limited studies to drive experimental efforts. This work illustrates an instance where several months of experiments were directed entirely by computational means. In short, our work presents novel biological results and data that will no doubt be highly relevant to much of the ISMB community as well as a novel use of computational methods to drive a significant experimental effort.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/clmyers_20070531225349.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/clmyers_20070531225349.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos30"></a><strong>PLoS Track: 30<br>
+Saccharomyces yeasts as a model organism for finding Dobzhansky-Muller determinants</strong></p>
+<p>Tuesday, July 24, 11:50 a.m. &#8211; 12:15 p.m.<br>
+Room: Hall L</p>
+<p>Presented by: Katy Kao, Stanford University Medical School</p>
+<p>Abstract: This work aims to answer a biologically interesting question of whether Dobzhansky-Muller genic incompatibilities exist between members of the Saccharomyces yeasts (which includes the baker’s yeast, S. cerevisiae). The work is possible largely due to the recent completion of genome sequences of the Saccharomyces yeasts. Our strategy involves the isolation of rare viable F2 hybrids between different members of the Saccharomyces sensu stricto group. And using two-species microarrays designed in our laboratory, we can assay the genome content of the viable F2s. This is the first work, as far as the authors are aware of, using the Saccharomyces yeasts as a model organism for finding Dobzhansky-Muller speciation genes. In addition, the analysis of the novel type of data generated would be appealing to computational biologists.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/katy_20070502192137.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/katy_20070502192137.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos31"></a><strong>PLoS Track: 31<br>
+Bayesian gene networks predict regulators of apoptosis and inflammation</strong></p>
+<p>Tuesday, July 24, 1:30 p.m. &#8211; 1:55 p.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Cristin Print, University of Auckland</p>
+<p>Abstract: This project has involved the generation of a large disruptant and time course Codelink Uniset I microarray dataset in human endothelial cells. Endothelial cells line blood vessels, and are at the centre of many human pathologies. We have used this dataset to develop novel correlation-based and Bayesian gene network-based analysis, and then used this analysis to better understand the pathological process of inflammation. This work is a collaboration between vascular biologists, biocomputing experts and statisticians. Importantly, we have validated a subset of our results in human cells. Therefore, we believe that this project will be of interest to a broad audience including statisticians, computational biologists biologists and physicians. We would like to thank the committee for considering our manuscript.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/c.print_20070520191527.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/c.print_20070520191527.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos32"></a><strong>PLoS Track: 32<br>
+Population Genetic Analysis of Tiled DNA Data</strong></p>
+<p>Tuesday, July 24, 1:30 p.m. &#8211; 1:55 p.m.<br>
+Room: Hall L</p>
+<p>Presented by: Innes Hellman, University of Copenhagen</p>
+<p>Abstract: Please see abstract&#8230;<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070326040946_rasmus.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070326040946_rasmus.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos33"></a><strong>PLoS Track: 33<br>
+Influence Flow: Integrating Pathway-specific RNAi data and Protein Interaction Data</strong></p>
+<p>Tuesday, July 24, 2:00 p.m. &#8211; 2:25 p.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Rohit Singh, MIT</p>
+<p>Abstract: We describe a method for integrating pathway-specific RNAi data with genome-wide protein interaction (PPI) data to produce hypotheses about a specific signaling network&#8217;s topology. Pathway-specific RNAi experiments identify the genes/proteins that are involved in that signaling pathway. Our method combines this data with PPI data to suggest the topological arrangement of these proteins in the signaling network. To the best of our knowledge, this is the first method that integrates RNAi data and PPI data to generate such hypotheses about signaling networks. Our method is guided by biological intuitions gained during collaborations with biologists. The resulting output network structures contain surprisingly plausible connections. They provide hypotheses which, if true, may contribute significantly to our biological knowledge of signaling pathways. Furthermore, the method we introduce&#8211; based on multicommodity network flow formulation&#8211; is novel and may be of use in many other data-integration scenarios as well.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406163614_rsingh.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406163614_rsingh.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos34"></a><strong>PLoS Track: 34<br>
+Maximum likelihood methods to infer the recent demographic and adaptive history of Drosophila melanogaster from chromosome-wide SNP data</strong></p>
+<p>Tuesday, July 24, 2:00 p.m. &#8211; 2:25 p.m.<br>
+Room: Hall L</p>
+<p>Presented by: Haipeng Li, University of Cologne</p>
+<p>Abstract: We provide evidence for the recent action of positive selection in the fruit fly Drosophila melanogaster. We describe a new statistical method and Monte-Carlo simulations to detect footprints of selection in the genome of this species and apply it to a large set of DNA polymorphism data from the X chromosome and the autosome. We find that numerous selective events occurred in the past 60,000 years, while D. melanogaster expanded its ancestral range in Africa and subsequently colonized temperate zones in the rest of the world after the last ice age. The findings are important as they indicate where in the genome the genes are located that have been involved in the adaptation of D. melanogaster to environmental changes in the recent past. The approach developed here for the model species D. melanogaster can be readily extended to study adaptation in humans and also other species.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070404103831_li.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070404103831_li.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos35"></a><strong>PLoS Track: 35<br>
+Inferring the ancestral vertebrate transcriptome: investigating the evolution of vertebrate gene expression and regulation</strong></p>
+<p>Tuesday, July 24, 2:30 p.m. &#8211; 2:55 p.m.<br>
+Room: Hall C</p>
+<p>Presented by: Esther Chan, University of Toronto</p>
+<p>Abstract: It is clear from vertebrate genome sequencing projects that there is a surprising amount of sequence under negative selection outside of protein-coding sequence. Much of this “dark matter” of the genome, predicted to encompass over a million conserved sequence elements (Siepel et al., Genome Res., 2005) across the vertebrates, has been postulated to have roles in gene regulation based on sequence analyses. To our knowledge, there have not been any systematic efforts to undertake an integrative comparative genomics and transcriptomics approach to investigate whether genes associated with conserved non-coding sequence elements exhibit conserved expression patterns and regulation. We have taken the first steps towards such an effort by integrating:</p>
+<p>1) Experimental measurements of gene expression across tissues using custom-designed oligonucleotide microarrays across phylogenetically diverse species.<br>2) A computational model to capture conservation and divergence of orthologous gene expression profiles with respect to the known organism phylogeny. <br>3) A novel phylogentic-footprinting method to align non-coding upstream and downstream flanking regions of orthologous genes that is sensitive to re-arrangements.</p>
+<p>This body of work represents a true multi-disciplinary effort aimed towards addressing a fundamental biological question with new computational techniques. Our analyses complement and extend current efforts to infer ancestral genome sequences (Blanchette et al., Genome Res., 2004 and Ma et al., Genome Res., 2006), and our results present exciting new challenges in computational biology.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/esther.chan_20070531214202.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/esther.chan_20070531214202.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos36"></a><strong>PLoS Track: 36<br>
+Structural bioinformatics reveals probable biological interfaces in protein crystals</strong></p>
+<p>Tuesday, July 24, 2:30 p.m. &#8211; 2:55 p.m.<br>
+Room: Hall E1</p>
+<p>Presented by: Roland Dunbrack, Fox Chase Cancer Center</p>
+<p>Abstract: Many proteins function as homooligomers, and mutations in interfaces may be associated with disease. For instance, mutations that disturb the dimer interface of superoxide dismutase are associated with Lou Gehrig&#8217;s disease (ALS). For most proteins, the actual interfaces that are involved in oligomerization are inferred only from X-ray structures using assumptions about interface surface areas and physical properties.</p>
+<p>We have taken a structural bioinformatics approach to identify interfaces in protein crystals that are likely to be biologically relevant. Rather than deriving empirical rules of surface area or amino acid interactions based on supposedly &#8220;true&#8221; interfaces, we compared the interfaces in different crystal forms of proteins in each protein family present in the structure database. </p>
+<p>There were 164 families with five or more crystal forms where all crystal forms have at least one interface in common. The same interface in many crystal forms indicates strongly favorable interactions that are likely to be biologically relevant. For instance, for HIV protease, all 28 crystal forms contain the dimer interface present in the NMR structure.  In these families, we find small numbers of likely false positives. For instance, for HIV protease, there are three small interfaces that are seen in two crystal forms each out of the 28. We find many families with a large number of crystal forms, but not all, containing a particular interface. These are usually confined to a particular branch of a phylogenetic tree, indicating evolutionary development or loss of some interfaces as a family has diverged from a common ancestor.  </p>
+<p><a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/Roland.Dunbrack_20070530000000.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/Roland.Dunbrack_20070530000000.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos37"></a><strong>PLoS Track: 37<br>
+Beyond Epistasis Analysis: Combinatorial Perturbation Analysis by Dynamic Modeling</strong></p>
+<p>Tuesday, July 24, 2:30 p.m. &#8211; 2:55 p.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Sven Nelander, Memorial Sloan Kettering Cancer Center</p>
+<p>Abstract: We have proposed a new and broadly applicable methodology for automatically building models for combinatorial perturbation responses.Biological significance: <br>On a general level, our work contributes to a better understanding of the complex relationship between pathway organization and perturbation responses. Our methodology opens for a new and enhanced approach to pathway deregulation by multiple combined mutations in cancer. </p>
+<p>Novelty: Combinatorial perturbation analysis has been partially explored in the sense that useful calculation procedures exist by which pairwise perturbations can be analyzed in acyclical systems. Our approach extends existing methods in several relevant ways (see abstract).</p>
+<p>Broad Appeal: Our approach is generally applicable for many types of systems, as illustrated by several real-life examples (see abstract). Furthermore, the subject of the talk is highly interdisciplinary with connections to fields such as reverse engineering, high-throughput screening, and targeted cancer therapy.</p>
+<p><a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/nelander_20070602185117.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/nelander_20070602185117.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos38"></a><strong>PLoS Track: 38<br>
+Widespread Positive Selection in Synonymous Sites of Mammalian Genes</strong></p>
+<p>Tuesday, July 24, 2:30 p.m. &#8211; 2:55 p.m.<br>
+Room: Hall L</p>
+<p>Presented by: Alissa Resch, National Institutes of Health (NIH)</p>
+<p>Abstract: We ask a fundamental question about evolution: are silent synonymous sites in protein-coding genes subject to selection, and in particular, positive selection? In the previous literature on this subject, studies from different groups have yielded contradicting results as to the existence and extent of purifying selection in synonymous sites; the existence of positive selection in these sites, to our knowledge, has not been specifically studied. In order to address this question, we developed a robust statistical test to identify cases of purifying and positive selection acting on synonymous sites of rodent genes using shuffled intron sequences as a baseline for neutral evolution. Unlike other methods, our computational approach takes into account the inherent differences in nucleotide composition between coding sequence and introns. Using this methodology, we discovered positive selection in synonymous sites of a substantial fraction of mammalian genes. We further investigated the correlation between the type of selection affecting the synonymous sites and various characteristics of genes, and discovered a significant link between selection and the stability of the predicted secondary structure of the mRNA. Thus, this computational study reports a previously unnoticed, major biological phenomenon and offers a plausible explanation for it.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070405130808_resch.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070405130808_resch.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos39"></a><strong>PLoS Track: 39<br>
+Unbiased Discovery of Common Histone Modification Patterns In The Human ENCODE Regions</strong></p>
+<p>Wednesday, July 25, 9:45 a.m. &#8211; 10:10 a.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Gary Hon, UCSD</p>
+<p>Abstract: Computational methods to identify functional genomic elements have widely focused on sequence. While these methods have been successful in determining gene structure, the problem of identifying regulatory elements is still an open problem.</p>
+<p>But it has become increasingly clear that sequence data at the genetic level is not the only discrete information that cells function on. The epigenetic layer, especially in the form of post-translational histone modifications, has also been thought to be discrete.</p>
+<p>Previously, we show that active promoters and enhancers are marked by distinct histone modification patterns, leading to the logical question of what other functional genomic elements are also marked by similar histone modification patterns.</p>
+<p>This question is made more difficult as we do not know most of the functional genomic elements. Thus, we flip the question, asking instead what are the common histone modification patterns observed, and what functions are associated with these elements.</p>
+<p>Here, using ChIP-chip data for 6 histone marks, we identify four commonly-occurring histone modification patterns, two of which are novel. That we recover only 4 patterns indicates a high amount of degeneracy among the different histone modifications. We show that one of the novel patterns marks repressed enhancers and promoters.</p>
+<p>Our approach has its roots in motif finding, but over a continuous rather than a discrete space. It will aid in uncovering additional functional elements as histone modification maps are expanded. In presenting this work, I hope to excite future development of computational tools to identify functional elements using histone modification data.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406143959_ghon.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406143959_ghon.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos40"></a><strong>PLoS Track: 40<br>
+Markov chain-based promoter structure modeling</strong></p>
+<p>Wednesday, July 25, 10:15 a.m. &#8211; 10:40 a.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Alexis Vandenbon, The University of Tokyo</p>
+<p>Abstract: We believe that this study is a nice example of how probabilistic methods and computational biology can be used to guide &#8220;wet&#8221; experiments. In fact &#8211; as described in the submitted abstract &#8211; some in situ hybridization experiments have already been done based on the predictions of the Ciona intestinalis muscle promoter model. In the near future the predictions for C. elegans might be used as a starting point for wet experiments as well. This link between in silico biology and wet biology should be appealing to a wider audience. Moreover, the proposed promoter structure model is not mathematically complex and should be easy to understand for both people from a mathematical or computer science background as well as for people with a biological background. </p>
+<p>Secondly, understanding how the genome encodes the information for regulating when and where a gene will be expressed is a major challenge in biology. Progress in this field has been difficult due to the length of the regulatory regions and the high false positive rates inherent to the problem of transcription factor binding site identification. The main topic of this study is the analysis and modeling of promoter sequence architecture, a topic that is still relatively untouched and poorly understood. Together with the recent increase in genome and expression data, our approach could be a valuable way to increase our understanding of gene expression regulation.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070405192020_alexvdb.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070405192020_alexvdb.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos41"></a><strong>PLoS Track: 41<br>
+Computational design of a thioredoxin protein with esterase activity</strong></p>
+<p>Wednesday, July 25, 11:10 a.m. &#8211; 11:35 a.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Pablo Tortosa, Ecole Polytechnique</p>
+<p>Abstract: Existing site-directed mutagenesis methods to graft an active site into a protein scaffold cannot be general due to the loss of stability produced by the mutations. Alternatively, directed evolution allows the exploration of many simultaneous mutations while selecting for protein stability. But here the number of explored sequences (size of the combinatorial library) is much smaller than can be achieved by the latest computational optimisation techniques and, on the other hand, the computational approach can simulate unnatural situations. In addition, computational methods improve our understanding on protein structure and function and are highly complementary to directed evolution: the combination of wide sequence space search of the former (thanks to modelisation) and of final optimization in the real system of the latter will likely provide the best results. Our automatic methodology proposes a new systematic approach to the problem of introducing a binding site into an inert protein scaffold, with the aim of designing new proteins with targeted function. Further research in this new field will provide answers to fundamental questions regarding the genesis and evolution of protein folds and enzymatic functions. It will have an important impact in society in areas like: Medicine: treatment of neurodegenerative diseases, cancer (through the design of therapeutical antibodies that would bind to tumor-associated antigenic determinants while maintaining a small immunogenicity) and autoimmune diseases, as well as development of peptide-based vaccines. Biotechnology: biosensors, biocatalysts (by designing enzymes with activity in non-natural environments), environmental science (by designing enzymes that would reduce waste by-products and toxicity) and designing new genetic/metabolic circuits or incorporating proteins in nanotechnological devices.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406110833_Pablo.Tortosa.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406110833_Pablo.Tortosa.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos42"></a><strong>PLoS Track: 42<br>
+Predicting activated conformations of substrates in enzyme binding sites</strong></p>
+<p>Wednesday, July 25, 11:40 a.m. &#8211; 12:05 p.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Joannis Apostolakis, LMU</p>
+<p>Abstract: In the suggested talk we introduce the concept of the activated conformation ensemble (ACE) for substrates undergoing chemical reactions and present a simple approach for its representation. We validate the concept by showing its suitability for representing transition state analogues of reactions. </p>
+<p>The ACE concept has a number of interesting consequences and we focus here on its application to predicting the structure of enzymes with their substrates bound in an activated conformation in the active site. This problem is significantly more complex than standard protein ligand docking as it entails the solution of a multibody optimization. Nevertheless we obtain reasonable solutions within 15 min. on average. This allows the application of these methods on a proteome wide basis.</p>
+<p>We believe that the concepts introduced in this work as well as the methods suggested provide a significant further step in the direction of establishing the field of theoretical structural metabolomics, i.e. the study of the principles guiding metabolome regulation by the proteome. Finally the reported work has significant consequences for inhibitor screening and prediction of enzyme specificity that will be illustrated with single examples from our current research.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070405073256_apostola.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070405073256_apostola.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos43"></a><strong>PLoS Track: 43<br>
+SimShiftDB: Chemical-Shift-Based Homology Modeling</strong></p>
+<p>Wednesday, July 25, 12:10 p.m. &#8211; 12:35 p.m.<br>
+Room: Hall E1</p>
+<p>Presented by: Simon Ginzinger, LMU München</p>
+<p>Abstract: SimShiftDB is the first method to include chemical shift values in the calculation of protein-protein alignments. Chemical shifts are routinely measured at the beginning of an NMR experiment. The alignments calculated using SimShiftDB are of direct interest to people working in NMR spectroscopy, as being able to construct a model for a target protein at this early stage of an experiment saves a lot of time.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070404034603_Simon.Ginzinger.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070404034603_Simon.Ginzinger.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+<p><a name="plos44"></a><strong>PLoS Track: 44<br>
+Identification of druggable binding sites of proteins by computational fragment mapping using novel FFT correlation based algorithm</strong></p>
+<p>Wednesday, July 25, 12:10 p.m. &#8211; 12:35 p.m.<br>
+Room: Hall NO</p>
+<p>Presented by: Dima Kozakov, Boston University</p>
+<p>Abstract: Fragment-based drug design starts with finding the most druggable pockets in the target protein binding site, and identifying molecular fragments or functional groups that tend to bind there. This information is usually obtained, at considerable costs, by NMR or X-ray based screening programs using libraries of fragment-sized compounds. We present a very efficient protein mapping algorithm that provides similar information computationally, and hence has major potential impact in drug design.<br>
+<a href="http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406181054_vajda.pdf">http://www.iscb.org/cms_addon/conferences/uploaded/css/20070406181054_vajda.pdf</a></p>
+<p><font size="2"><a href="#top">top</a></font></p>
+<p>&nbsp;</p>
+			<!--	<p>PLoS Track: 01<br />
+Computational Neuroscience for Computational Biologists: A Brief Tour<br />
+Sunday, July 22, 9:30 a.m. &#8211; 9:55 a.m.<br />
+Room: Hall NO<br />
+Presented by: Lyle J. Graham, Université Paris Descartes<br />
+Abstract:<br />
+top<br />
+&nbsp;<br />
+PLoS Track: 02<br />
+New methods for tracing the flow of information and computational operations in cortical networks of neurons<br />
+Sunday, July 22, 10:00 a.m. &#8211; 10:25 a.m.<br />
+Room: Hall NO<br />
+Presented by: Wolfgang [...]</p>
+   -->
+	
+<!-- turned comments off -->
+<!-- 		
+                        <p class="post-bot">
+			<a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/plostrack#respond" title="Comment on PLoS Track">No Comments &#187;</a>			</p> 
+-->
+			<!--
+			<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				xmlns:dc="http://purl.org/dc/elements/1.1/"
+				xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+			<rdf:Description rdf:about="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/plostrack"
+    dc:identifier="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/plostrack"
+    dc:title="PLoS Track"
+    trackback:ping="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/plostrack/trackback" />
+</rdf:RDF>			-->
+		</div>
+		
+<!-- You can start editing here. -->
+
+
+  		<!-- If comments are closed. -->
+		<p class="nocomments"><font size="1"><a href="#top">top</a></font></p>
+		
+	
+
+	</div>
+   
+	<div class="pagenav"></div>
+	</div>
+<div id="sidebar">
+	<div id="intro">
+		
+	<div class="post">	
+		<h2 class="post-title">15th Annual International Conference on Intelligent Systems for Molecular Biology (ISMB)<br>& 6th European Conference on Computational Biology (ECCB)</h2>
+		<p class="post-info">Vienna, Austria: July 21-25, 2007</p>
+
+
+<!--	
+<img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/themes/crayonworld-10/img/profile.jpg" class="profile" /> 
+			<p><strong>ISMB/ECCB 2007</strong></p>
+			<p>Vienna, Austria: July 21-25, 2007</p>
+-->
+<!--			
+<p>There are 92 posts and 0 comments so far.</p>		      -->
+	</div>	
+</div>	
+		
+<div id="sideone"> 
+
+<!--
+
+	<h2>Quick Bits</h2>
+						<p>This is for the Asides functionality.<br/> Enter the id of the category you want to be treated as Asides, in the Main Template (index.php) <br/></p>
+			
+
+-->
+
+
+<!-- KEYNOTES START 
+
+	<h2>Keynotes</h2>
+
+  <div>
+
+<span class="feed">
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-f.gif" align="right" width="41" height="41"><strong>Keynote Speaker</strong><br>blah blah blah blah blah blah<br>
+
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-m.gif" align="right" width="41" height="41"><strong>Keynote Speaker</strong><br>yada yada yada yada yada yada<br>
+
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-m.gif" align="right" width="41" height="41"><strong>Keynote Speaker</strong><br>yada yada yada blah blah blah<br>
+
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-f.gif" align="right" width="41" height="41"><strong>Keynote Speaker</strong><br>blah blah blah blah blah blah<br>
+
+</span></div>
+
+ KEYNOTES END -->
+
+
+<!-- SPONSORS START 
+
+	<h2>Premier Sponsors</h2>
+
+
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-f.gif" width="41" height="41"><br>
+
+ SPONSORS END -->
+
+<!-- WEATHER START
+
+<div>
+
+<h2>Venue</h2>
+<p class="post-info">
+<a href="http://www.acv.at/evo/web/acv/1584_DE">Austria Center Vienna</a><br><a href="http://www.acv.at/evo/web/acv/1584_DE"><img id="image31" src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/centre.png" alt="Austria Center Vienna" border="0"></a>
+</p>
+
+<span class="feed">
+<br><script language=javascript>var LocationID = 'AUXX0025';</script>
+<script language=javascript src='http://www.theweathernetwork.com/weatherbutton/wxbutton.js'></script>
+
+</span>
+</div>
+
+-->
+
+
+<!--
+		<h2>Links</h2>
+	<ul> </ul>	
+
+-->
+		
+</div>
+		
+	<div id="sidetwo">
+
+<!-- <h2><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/">Home</a></h2> -->
+
+<!-- <h2>Menu</h2> -->
+
+<!-- MENU START -->
+
+          <!--Optional Expand/ Contact All links. Remove if desired-->
+        <p class="post-info">    <a href="javascript:sweeptoggle('expand')">+Expand 
+            All</a> | <a href="javascript:sweeptoggle('contract')">-Contract All</a></p>
+            <div></div>
+
+			
+<!--PROGRAM-->
+            <p onclick="expandcontent(this, 'sc1')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Program</b></p>
+            <div id="sc1" class="switchcontent"> 
+        <ul>
+         <li><a href="../agenda.html">Agenda-at-a-Glance</a></li>
+         <li><a href="schedule.html">Conference Schedule</a></li>
+         <li><a href="bof.html">Birds of a Feather</a></li>
+         <li><a href="demonstrations.html">Demonstrations</a></li>
+         <li><a href="highlights.html">Highlights Track</a></li>
+         <li><a href="industry.html">Industry Posters</a></li>
+         <li><a href="industrytrack.html">Industry Track</a></li>
+         <li><a href="papers.html">Papers</a></li>
+         <li><a href="plostrack.html">PLoS Track</a></li>
+         <li><a href="posters.html">Posters</a></li>
+         <li><a href="sigs.html">Satellite Meetings and SIGs</a></li>
+         <li><a href="scientific.html">Scientific Program Information</a></li>
+         <li><a href="social.html">Social Events</a></li>
+         <li><a href="specialsessions.html">Special Sessions</a></li>
+         <li><a href="scs.html">Student Council Symposium</a></li>
+         <li><a href="tutorials.html">Tutorials</a></li>
+        </ul>
+            </div>
+
+
+<!--KEYNOTES-->
+
+            <div> 
++ <strong><font color="black"><a href="../keynotes.html">Keynotes</a></font></strong>
+            </div>
+
+			
+<!--DEADLINES-->
+<!--
+            <p onClick="expandcontent(this, 'sc2')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Deadlines</b></p>
+
+            <div id="sc2" class="switchcontent"> 
+              <ul>
+                 <li><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/deadlines/">Deadlines</a></li>
+              </ul>
+            </div>
+-->
+
+            <div> 
++ <strong><a href="../deadlines.html">Deadlines</a></strong>
+            </div>
+
+
+<!--SUBS GUIDELINES-->
+
+            <p onclick="expandcontent(this, 'sc3')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Submissions/Guidelines</b></p>
+            <div id="sc3" class="switchcontent"> 
+
+        <ul>         
+         <li><a href="../bof.html">Birds of a Feather (BoF)</a></li>
+         <li><a href="../posters-latecall.html">Call for Late Posters</a></li>
+         <li><a href="../papers.html">Call for Papers</a></li>
+         <li><a href="../specialsessions.html">Special Sessions</a></li>
+         <li><a href="../highlights.html">Highlights Track</a></li>
+         <li><a href="../plostrack.html">PLoS Track</a></li>
+         <li><a href="../posters.html">Posters</a></li>
+         <li><a href="../demonstrations.html">Demonstrations</a></li>
+         <li><a href="../tutorials.html">Tutorials</a></li>
+         <li><a href="../industry.html">Industry Track</a></li>
+         <li><a href="../sigs.html">Special Interest Groups (SIGs)</a></li>
+         <li><a href="../scs3.html">Student Council Symposium (SCS3)</a></li>
+         <li><a href="../travelsupport.html">Travel Fellowships</a></li>
+        </ul>
+            </div>
+
+		
+			<!--submissions-->
+			<!--
+            <p onClick="expandcontent(this, 'sc4')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Submissions</b></p>
+            <div id="sc4" class="switchcontent"> 
+              <ul>
+                <li>Call for Papers</li>
+                <li>Call for Tutorials</li>
+                <li>Late Breaking Poster Session Call</li>
+                <li>Call for PLoS Track</li>
+                <li>Call for SCS2 Posters</li>
+                <li>Academic Demos</li>
+                <li>Industry Demos</li>
+                <li>Travel Fellowships</li>
+                <li>Poster Guidelines &amp; Schedule</li>
+                <li>BOF Sign-up</li>
+                <li>Paper Guidelines</li>
+              </ul>
+            </div>
+			-->
+			
+
+<!--REGISTRATION-->
+
+            <div> 
++ <strong><a href="../registration.html">Registration</a></strong>
+            </div>
+
+		
+			<!--registration-->
+			<!--
+            <p onClick="expandcontent(this, 'sc5')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Registration</b></p>
+
+            <div id="sc5" class="switchcontent"> 
+              <ul>
+                <li><a href="">Keynotes</a></li>
+                <li><a href="">Tutorials</a></li>
+                <li><a href="">Demos</a></li>
+              </ul>
+            </div>
+			-->
+			
+
+<!--GENERAL INFO-->
+            <p onclick="expandcontent(this, 'sc6')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>General Information</b> </p>
+
+            <div id="sc6" class="switchcontent"> 
+
+<ul>
+<li><a href="../faq.html">FAQ</a></li>
+<li><a href="../airtravel.html">Air Travel</a></li>
+<li><a href="../activities.html">Children/Family Activities</a></li>
+<li><a href="../childcare.html">Child Care</a></li>
+<li><a href="../venue.html">Conference Venue</a></li>
+<li><a href="../housing.html">Housing</a></li>
+<li><a href="../tours.html">Tours</a></li>
+<li><a href="../transit.html">Transit Passes</a></li>
+<li><a href="../volunteers.html">Volunteers</a></li>
+</ul>
+
+            </div>
+
+
+
+<!--SPONSORS/EXHIBITORS-->
+
+            <p onclick="expandcontent(this, 'sc7a')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Sponsors & Exhibitors</b></p>
+            <div id="sc7a" class="switchcontent"> 
+              <ul>
+                 <li><a href="../sponsors.html">Conference Sponsors</a></li>
+                 <li><a href="../exhibitfloorplan.html">Conference Exhibitors</a></li>
+              </ul>
+            </div>
+
+
+
+<!--SPONSORS/EXHIBITORS INFO-->
+
+            <p onclick="expandcontent(this, 'sc7')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Sponsors/Exhibitors Information</b></p>
+            <div id="sc7" class="switchcontent"> 
+              <ul>
+                 <li><a href="../sponsoropps.html">Sponsor Opportunities</a></li>
+                 <li><a href="../sponsorbrochure.html">Sponsor Brochure</a></li>
+                 <li><a href="http://www.iscb.org/cms_addon/conferences/ismb07/sponsor_signup.php">Sponsor & Exhibitor Sign-up</a></li>
+                 <li><a href="../exhibitorinfo.html">Exhibitor Information</a></li> 
+            <!--     <li><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitresources/">Exhibitor Resources</a></li> -->
+            <li><a href="../exhibitschedule.html">Exhibitor Schedule</a></li> 
+                <li><a href="../exhibitfloorplan.html">Exhibitor Floor Plan</a></li> 
+              </ul>
+            </div>
+			
+			<!--committees-->
+            <p onclick="expandcontent(this, 'sc8')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Committees</b></p>
+
+            <div id="sc8" class="switchcontent"> 
+              <ul>
+<!-- <li><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/">All Committees</a></li> -->
+<li><a href="../committees/chairs.html">Conference Chairs</a></li>
+<li><a href="../committees/steeringcommittee.html">Steering Committee</a></li>
+<li><a href="../committees/soc.html">Scientific Organizing Committee</a></li>
+<li><a href="../committees/areachairs.html">Area Chairs</a></li>
+<li><a href="../committees/highlights.html">Highlights Track</a></li>
+<li><a href="../committees/plostrack.html">PLoS Track</a></li>
+            </ul>
+            </div>
+
+			<!--press pass-->
+<!--
+            <p onClick="expandcontent(this, 'sc9')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Press Pass</b> </p>
+            <div id="sc9" class="switchcontent"> 
+              <ul>
+                <li><a href="http://ismb.org/">Press Pass</a></li>
+              </ul>
+            </div>
+-->
+			
+<!--CONTACTS-->
+
+            <p onclick="expandcontent(this, 'sc10')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Contact Us</b> </p>
+            <div id="sc10" class="switchcontent"> 
+              <ul>
+                <li><a href="../contacts.html">Contacts</a></li>
+                <li><a href="../submissioncontacts.html">Submission Contacts</a></li>
+              </ul>
+            </div>
+
+
+
+<!--CONFERENCE PROMO-->
+
+            <div> 
++ <strong><a href="../promotion.html">Conference Promotion</a></strong>
+            </div>
+
+
+<!--PRESS PASS-->
+
+            <div> 
++ <strong><a href="http://www.iscb.org/cms_addon/conferences/ismb/presspass.php">Press Pass</a></strong>
+            </div>
+
+
+<!--UPDATES-->
+
+            <p onclick="expandcontent(this, 'sc11')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Blog Updates</b> </p>
+            <div id="sc11" class="switchcontent"> 
+
+              <ul><li><a href="../feedhtml.html" title="Subscribe to Updates using RSS">Subscribe<img src="../wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"></a></li>
+
+<li><a href="http://www.feedpass.com/ISMBECCB2007">How to Subscribe</a></li>
+
+
+		<li><a href='../2007/09.html' title='September 2007'>September 2007</a>&nbsp;(2)</li>
+	<li><a href='../2007/07.html' title='July 2007'>July 2007</a>&nbsp;(4)</li>
+	<li><a href='../2007/06.html' title='June 2007'>June 2007</a>&nbsp;(2)</li>
+	<li><a href='../2007/05.html' title='May 2007'>May 2007</a>&nbsp;(1)</li>
+	<li><a href='../2007/03.html' title='March 2007'>March 2007</a>&nbsp;(2)</li>
+	<li><a href='../2007/01.html' title='January 2007'>January 2007</a>&nbsp;(2)</li>
+	<li><a href='../2006/12.html' title='December 2006'>December 2006</a>&nbsp;(3)</li>
+	<li><a href='../2006/11.html' title='November 2006'>November 2006</a>&nbsp;(1)</li>
+	<li><a href='../2006/10.html' title='October 2006'>October 2006</a>&nbsp;(1)</li>
+	<li><a href='../2006/09.html' title='September 2006'>September 2006</a>&nbsp;(1)</li>
+	<li><a href='../2006/07.html' title='July 2006'>July 2006</a>&nbsp;(1)</li>
+</ul>
+            </div>
+
+<!--MENU END-->
+
+
+
+<!--TAGS-->
+<!--	
+        <h2>Tags</h2>
+	<ul>
+			<li class="cat-item cat-item-4"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/category/announcements" title="View all posts filed under announcements">announcements</a> (11)
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/category/uncategorized" title="View all posts filed under Uncategorized">Uncategorized</a> (9)
+</li>
+	</ul>		
+-->
+
+
+<!--OLD UPDATES-->
+<!--
+	<h2>Updates</h2>
+
+<p class="post-info"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/feed" title="Syndicate this site using RSS"><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"> updates</a></span><br>
+
+	<ul>	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/09' title='September 2007'>September 2007</a>&nbsp;(2)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/07' title='July 2007'>July 2007</a>&nbsp;(4)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/06' title='June 2007'>June 2007</a>&nbsp;(2)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/05' title='May 2007'>May 2007</a>&nbsp;(1)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/03' title='March 2007'>March 2007</a>&nbsp;(2)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/01' title='January 2007'>January 2007</a>&nbsp;(2)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/12' title='December 2006'>December 2006</a>&nbsp;(3)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/11' title='November 2006'>November 2006</a>&nbsp;(1)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/10' title='October 2006'>October 2006</a>&nbsp;(1)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/09' title='September 2006'>September 2006</a>&nbsp;(1)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/07' title='July 2006'>July 2006</a>&nbsp;(1)</li>
+</ul>	
+-->
+
+
+<!-- 
+<a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/comments/feed" title="The latest comments to all posts in RSS"><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"> comments</a></span>
+-->
+
+<!--PAGES-->
+<!--	
+        <h2>Pages</h2>
+	<ul><li class="page_item page-item-7"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/agenda" title="Agenda-at-a-Glance">Agenda-at-a-Glance</a></li>
+<li class="page_item page-item-46"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/airtravel" title="Air Travel">Air Travel</a></li>
+<li class="page_item page-item-209"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/bof" title="Birds of a Feather (BoF)">Birds of a Feather (BoF)</a></li>
+<li class="page_item page-item-208"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters-latecall" title="Call for Late Posters">Call for Late Posters</a></li>
+<li class="page_item page-item-83"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/papers" title="Call for Papers">Call for Papers</a></li>
+<li class="page_item page-item-220"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/childcare" title="Child Care">Child Care</a></li>
+<li class="page_item page-item-202"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/activities" title="Children/Family Activities">Children/Family Activities</a></li>
+<li class="page_item page-item-90"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees" title="Committees">Committees</a>
+<ul>
+	<li class="page_item page-item-89"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/areachairs" title="Area Chairs">Area Chairs</a></li>
+	<li class="page_item page-item-87"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/papers-chairs" title="Call for Papers Area Chairs">Call for Papers Area Chairs</a></li>
+	<li class="page_item page-item-10"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/chairs" title="Conference Chairs">Conference Chairs</a></li>
+	<li class="page_item page-item-205"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/highlights" title="Highlights Track Area Chairs">Highlights Track Area Chairs</a></li>
+	<li class="page_item page-item-164"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/plostrack" title="PLoS Track">PLoS Track</a></li>
+	<li class="page_item page-item-42"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/soc" title="Scientific Organizing Committee">Scientific Organizing Committee</a></li>
+	<li class="page_item page-item-41"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/steeringcommittee" title="Steering Committee">Steering Committee</a></li>
+</ul>
+</li>
+<li class="page_item page-item-130"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/promotion" title="Conference Promotion">Conference Promotion</a></li>
+<li class="page_item page-item-112"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsors" title="Conference Sponsors">Conference Sponsors</a></li>
+<li class="page_item page-item-132"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/venue" title="Conference Venue">Conference Venue</a></li>
+<li class="page_item page-item-9"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/contacts" title="Contact Us">Contact Us</a></li>
+<li class="page_item page-item-68"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/demonstrations" title="Demonstrations">Demonstrations</a></li>
+<li class="page_item page-item-119"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitfloorplan" title="Exhibit Floor Plan">Exhibit Floor Plan</a></li>
+<li class="page_item page-item-186"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitorinfo" title="Exhibitor Information">Exhibitor Information</a></li>
+<li class="page_item page-item-194"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitresources" title="Exhibitor Resources">Exhibitor Resources</a></li>
+<li class="page_item page-item-193"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitschedule" title="Exhibitor Schedule">Exhibitor Schedule</a></li>
+<li class="page_item page-item-2"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/faq" title="FAQ">FAQ</a></li>
+<li class="page_item page-item-138"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/housing" title="Housing">Housing</a></li>
+<li class="page_item page-item-12"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/subscribe" title="How to Subscribe">How to Subscribe</a></li>
+<li class="page_item page-item-210"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/volunteers" title="ISMB/ECCB 2007 Conference Volunteers">ISMB/ECCB 2007 Conference Volunteers</a></li>
+<li class="page_item page-item-45"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/deadlines" title="ISMB/ECCB 2007 Deadlines">ISMB/ECCB 2007 Deadlines</a></li>
+<li class="page_item page-item-58"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/highlights" title="ISMB/ECCB 2007 Highlights Track: Call for Proposals">ISMB/ECCB 2007 Highlights Track: Call for Proposals</a></li>
+<li class="page_item page-item-86"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/industry" title="ISMB/ECCB 2007 Industry Track: Call for Proposals">ISMB/ECCB 2007 Industry Track: Call for Proposals</a></li>
+<li class="page_item page-item-125"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/registration" title="ISMB/ECCB 2007 Registration">ISMB/ECCB 2007 Registration</a>
+<ul>
+	<li class="page_item page-item-165"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/registration/membership" title="ISCB Membership Fee Chart">ISCB Membership Fee Chart</a></li>
+</ul>
+</li>
+<li class="page_item page-item-78"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/keynotes" title="Keynotes">Keynotes</a></li>
+<li class="page_item page-item-48"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/keynotespresentations" title="Keynotes Presentations">Keynotes Presentations</a></li>
+<li class="page_item page-item-85"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/plostrack" title="PLoS Track at ISMB/ECCB 2007">PLoS Track at ISMB/ECCB 2007</a></li>
+<li class="page_item page-item-121"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters" title="Posters">Posters</a>
+<ul>
+	<li class="page_item page-item-124"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters/posterboard" title="Poster Board Dimensions">Poster Board Dimensions</a></li>
+</ul>
+</li>
+<li class="page_item page-item-134"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program" title="Program">Program</a>
+<ul>
+	<li class="page_item page-item-185"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/papers" title="Accepted Papers">Accepted Papers</a></li>
+	<li class="page_item page-item-177"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/affiliate" title="Affiliate Meetings">Affiliate Meetings</a></li>
+	<li class="page_item page-item-234"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/bof" title="Birds of a Feather (BoF)">Birds of a Feather (BoF)</a></li>
+	<li class="page_item page-item-223"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/demonstrations" title="Demonstrations">Demonstrations</a></li>
+	<li class="page_item page-item-229"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/highlights" title="Highlights Track">Highlights Track</a></li>
+	<li class="page_item page-item-222"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/industry" title="Industry Posters">Industry Posters</a></li>
+	<li class="page_item page-item-228"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/industrytrack" title="Industry Track">Industry Track</a></li>
+	<li class="page_item page-item-219"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/schedule" title="ISMB/ECCB 2007 Conference Schedule">ISMB/ECCB 2007 Conference Schedule</a></li>
+	<li class="page_item page-item-227"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/plostrack" title="PLoS Track">PLoS Track</a></li>
+	<li class="page_item page-item-152"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/sigs" title="Satellite Meetings and SIGs">Satellite Meetings and SIGs</a></li>
+	<li class="page_item page-item-79"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/scientific" title="Scientific Program Information">Scientific Program Information</a></li>
+	<li class="page_item page-item-146"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/social" title="Social Events">Social Events</a></li>
+	<li class="page_item page-item-158"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/specialsessions" title="Special Sessions">Special Sessions</a>
+	<ul>
+		<li class="page_item page-item-167"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/specialsessions/details" title="Special Sessions Details">Special Sessions Details</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-153"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/scs" title="Student Council Symposium (SCS3)">Student Council Symposium (SCS3)</a></li>
+	<li class="page_item page-item-136"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/tutorials" title="Tutorials Program">Tutorials Program</a></li>
+</ul>
+</li>
+<li class="page_item page-item-54"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sigs" title="Special Interest Group Meetings (SIGs)">Special Interest Group Meetings (SIGs)</a></li>
+<li class="page_item page-item-35"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/specialsessions" title="Special Sessions">Special Sessions</a></li>
+<li class="page_item page-item-103"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsorbrochure" title="Sponsor Brochure">Sponsor Brochure</a></li>
+<li class="page_item page-item-100"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps" title="Sponsor Opportunities">Sponsor Opportunities</a>
+<ul>
+	<li class="page_item page-item-114"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/addpkg" title="Additional Sponsor Opportunities">Additional Sponsor Opportunities</a></li>
+	<li class="page_item page-item-116"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/demopkg" title="Demonstration Package">Demonstration Package</a></li>
+	<li class="page_item page-item-115"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/exhibitpkg" title="Exhibitor Package">Exhibitor Package</a></li>
+	<li class="page_item page-item-117"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/posterpkg" title="Industry Poster Package">Industry Poster Package</a></li>
+	<li class="page_item page-item-118"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/pastsponsors" title="Past Sponsors and Exhibitors">Past Sponsors and Exhibitors</a></li>
+	<li class="page_item page-item-113"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/sponsorpkg" title="Sponsor Package">Sponsor Package</a></li>
+</ul>
+</li>
+<li class="page_item page-item-174"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/scs3" title="Student Council Symposium (SCS3)">Student Council Symposium (SCS3)</a></li>
+<li class="page_item page-item-108"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/submissioncontacts" title="Submission Contacts">Submission Contacts</a></li>
+<li class="page_item page-item-139"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/tours" title="Tours">Tours</a></li>
+<li class="page_item page-item-111"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/travelsupport" title="Travel Fellowships">Travel Fellowships</a></li>
+<li class="page_item page-item-59"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/tutorials" title="Tutorials">Tutorials</a></li>
+<li class="page_item page-item-147"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/transit" title="Vienna Transit Pass">Vienna Transit Pass</a></li>
+<li class="page_item page-item-43"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/weather" title="Weather Today">Weather Today</a></li>
+</ul>	
+-->
+
+<!--SEARCH-->
+<!--	
+        <form id="searchform" method="get" action="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/">
+		<input type="text" class="text" name="s" id="s" value="" size="15" /><br/>
+		<input type="submit" name="submit" value="Search " />
+	</form>
+-->
+
+<div>
+
+<!--LOGOS-->
+
+<br>
+<!--
+<a id="p73" href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/12/FullPageAdvert.pdf"><img id="image26" src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/flyer.png" alt="2007 Flyer - 306 KB PDF" title="306 KB PDF" border="0" vspace="1"></a>
+-->
+
+<a href="sigs.html"><img id="image171" src="../wp-content/uploads/2007/03/meetings1.png" alt="SIGs &amp; Satellite Meetings" vspace="1"></a>
+
+<a href="http://iscbsc.org/scs3/index.htm"><img id="image182" src="../wp-content/uploads/2007/03/scs3-border2.jpg" alt="Student Council Symposium (SCS)" vspace="1" border="0"></a>
+
+<a href="affiliate.html">
+<img id="image175" src="../wp-content/uploads/2007/03/affiliate.png" alt="Affiliate Meetings" vspace="1"></a>
+
+<a href="http://www.iscb.org/"><img src="../wp-images/iscblogo.jpg" alt="International Society for Computational Biology" vspace="1" border="0"></a>
+
+</div>
+
+
+<!--       <h2>Subscribe</h2> 
+<p class="post-info"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/feed" title="Syndicate this site using RSS"><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"> updates</a></span><br>
+
+<a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/comments/feed" title="The latest comments to all posts in RSS"><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"> comments</a></span>
+-->
+
+<!--
+<div>
+<ul><br>
+<a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-login.php">Log in</a><br>
+</ul>
+</div>
+-->
+
+<br>
+<br>
+<p class="post-rss"><a href="../wp-login.html">Log in</a></p>
+</div></div><div id="footer">
+
+<!--
+  <div><span class="feed"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/feed" title="Syndicate this site using RSS">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></span><br/>
+		<span class="feed"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/comments/feed" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></span>
+</div>
+-->
+
+		<center><strong>ISMB/ECCB 2007 &copy; 2009</strong> <a href="http://www.iscb.org/ismbeccb2007/?feed=rss2"><img src="../wp-content/uploads/2006/07/feed-icon-10x10.gif" vspace="0" align="absmiddle" border="0" hspace="0"></a> </center>
+</div>
+</div>
+
+<!-- 
+<center>based on wordpress theme <a href="http://wpthemes.info/crayon-world/"target="_blank">CrayonWorld</a></center>
+-->
+
+</body>
+
+
+</html>

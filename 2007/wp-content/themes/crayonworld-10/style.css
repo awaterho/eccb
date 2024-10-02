@@ -1,0 +1,405 @@
+/*  
+Theme Name: CrayonWorld
+Description: First 3 Column Theme from <a href="http://wpthemes.info">WPThemes.Info</a>,
+with Thanks to FreeWebPageHeaders.com
+Version: 1.0
+Author: Sadish Bala
+Author URI: http://wpthemes.info
+*/
+a:link, a:visited {
+color: #017BBC;
+text-decoration:1px solid;
+}
+a:hover, a:active {
+color: #8D2E32;
+text-decoration:none;
+border-bottom:1px dotted;
+}
+
+blockquote{
+	margin: 1em;
+	padding: 1em;
+	border: 1px solid #ddd;
+	background:#edf1f4;
+}
+a img
+{
+	border:none;	
+}
+fieldset 
+{
+	border:none;
+}
+ul, ol 
+{
+	margin:0.5em 1em;
+	padding:0.5em 1em;
+}
+ul li, ol li 
+{
+	margin: 0 1em;	
+	padding:0;	
+}
+ul li 
+{
+	list-style-type:circle;	
+}
+
+input.text {
+border: 1px solid #ccc;
+margin:3px 0;
+padding:2px 0;
+}
+p 
+{
+	line-height: 1.4em;
+	margin:0.4em 0;	
+}
+
+/* 
+and now onto the meat and potatoes... 
+*/
+
+/* General Configs */
+
+body 
+{
+	margin:0;
+	padding:0;	
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size:small;
+	font-size: 0.8em;
+	line-height: 1.4em;
+	color: #333;
+	background:#017DBB;	
+	text-align: center;
+        border:#017DBB 1px solid;
+}
+h1 {
+font-family: Arial, Verdana, Helvetica, sans-serif;
+font-size:16px;
+line-height: 1em;
+font-weight: bold;
+}
+
+/*
+url(img/f1.jpg) no-repeat bottom center
+*/
+
+#header 
+{
+	margin:0 auto;
+	padding:0;
+	height: 120px;	
+	background:#027CBB url(img/ismb-eccb.jpg) no-repeat top center;
+	width:799px;
+	border:#027CBB 0px solid;
+}
+
+
+#header h1 {
+padding: 90px 0px 0px 0px;
+font-size: 13px;
+font-weight: bold;
+margin: 0px 0px 0px 675px;
+color:#f0f0f0;
+}
+#header h1 a{
+color:#f0f0f0;
+}
+
+#topa
+{
+	display: none
+}
+
+#container 
+{
+	position:relative;	
+	text-align: left;
+	width: 799px;
+	margin:0 auto;	
+	font-size:1em;
+	background:#fff url(img/container-l-4.jpg) repeat-y right;
+	border:#017DBB 0px solid;
+}
+
+h2, h3 
+{
+	font-size:1.1em;
+	margin:0.5em 0 0 0;
+	color:#8D2E32;
+	border-bottom:#ccc 1px dashed;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+}
+.note 
+{
+	font-size:1em;
+}
+.note em 
+{
+	float:right;
+	font-style:normal;
+	font-weight:normal;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	margin:0;
+	padding:0;
+}
+
+#content {
+	float: right;
+	padding: 0px 5px 0px 5px;
+	margin: 0px 0px 0;
+	width: 530px;
+}
+#sidebar 
+{
+	width: 242px; 
+	float: left; 
+    overflow: hidden;
+    /*border-left: thin solid #CCCCCC; 
+    border-bottom: thin solid #CCCCCC; */
+ /*  padding-left:20px !important; */
+    padding-left:1px;
+padding-right:2px;
+    padding-top:0px; 
+    padding-bottom:5px;
+    font-size:0.9em;
+}
+
+
+#sideone 
+{
+	float: right;
+	padding: 5px 5px 5px 10px;
+	/* margin-left: 475px; */
+	width: 10px;
+}
+
+
+#sidetwo 
+{
+	float: left;
+	padding: 5px 0 0px 10px;
+	width: 235px;
+}
+
+
+.post 
+{
+	margin:2px 0;
+	padding:0 5px;
+}
+.post-title a:link,.post-title a:visited, .post-title a:hover, .post-title a:active 
+{
+	color:#8D2E32;
+        text-decoration:none;
+}
+.note a:link,.note a:visited, .note a:hover, .note a:active 
+{
+	color:#00718a;
+}
+.post-info
+{
+	font-size:0.9em;
+	color:#999;
+}
+.post-info em 
+{
+	font-style:normal;
+}
+.post-content 
+{
+	margin:1em 0;
+	padding:0 5px 0 0;		
+}
+.post-bot 
+{
+	font-size:0.9em;
+	margin:2em 0;
+}
+.post-rss a:link,.post-rss a:visited, .post-rss a:hover, .post-rss a:active 
+{
+	color:#EFEFEF;
+        font-size:0.7em;
+        text-decoration:none;
+}
+#intro 
+{
+	margin:0px 0;
+	padding:0;
+	background:#F2F2F2;		
+	border:#F2F2F2 1px solid;		
+}
+#intro .profile
+{
+	border:#ccc 1px solid;
+	padding:2px;
+	margin:0 5px 0 0;
+}
+#sidebar form 
+{
+	margin:5px 5px;
+	padding:2px;
+}
+#sidebar ul 
+{
+	margin:2px;
+	padding:2px;
+}
+#sidebar h2
+{
+	font-size:1.1em;		
+}
+#sidebar ul ul 
+{
+	margin:0;
+	padding:0;
+}
+#sidebar a 
+{
+	color:#000000;
+}
+#footer 
+{
+	clear:both;	
+	font-size:0.9em;
+	margin:0 auto;
+	padding:1px;
+	background:#000000;	
+	color:#ffffff;
+}
+#footer div 
+{
+	float:right;
+	width:20%;
+	margin:0;
+	padding:0 0 10px 0;
+}
+#footer a:link, #footer a:visited
+{
+	color:#ccc;	
+}
+#footer a:hover, #footer a:active
+{
+	color:#fff;		
+}
+#footer strong 
+{
+    font-size:0.9em;
+    color:#fff;
+}
+.pagenav 
+{
+	margin:0;
+	padding:5px 0;
+	text-align:right;
+}
+.pagenav .navleft 
+{
+	float:left;
+	margin:0;
+	padding:0;
+}
+#comments, #respond{
+	margin: 2em 0 0 5px;
+}
+.commentlist 
+{
+	margin:10px;
+	padding:10px 20px;
+}
+#commentform 
+{
+	margin:10px;
+	padding:10px;
+}
+.commentlist {
+	margin: 0;
+	padding: 0;
+}
+.commentlist li 
+{
+	list-style:none;
+	margin: 0.5em 0;
+	padding: 0.5em;	
+}
+.commentlist li .cmtinfo 
+{
+	font-size:1em;	
+	border-bottom: #eee 1px solid;
+}
+.commentlist li cite 
+{
+	font-style:normal;
+	font-weight:bold;
+}
+.commentlist li .cmtinfo em 
+{
+	float:right;
+	margin:0;
+	padding:0;
+	font-style:normal;
+	font-size:0.9em;
+	color:#999;
+}
+textarea{
+	width: 90%;
+	padding:5px;
+	height: 20em;
+	border: 1px solid #ccc;	
+}
+ul.authorposts
+{
+	margin:0;
+	padding:0 10px;
+}
+ul.authorposts li
+{
+	margin:0;
+	padding:5px 0;	
+}
+ul.authorposts li em 
+{
+	float:right;
+	font-style:normal;
+}
+#footer .feed 
+{
+	background:url(img/feed.png) no-repeat left center;
+	padding-left:17px;
+}
+#gnav 
+{
+	margin:-20px 0 0 0;
+	padding:0;
+	list-style:none;	
+}
+#gnav li 
+{
+	margin:0;
+	padding:0 10px;
+	list-style:none;
+	display:inline;
+}
+#gnav li a:link, #gnav li a:visited
+{
+	color:#f0f0f0;
+	text-decoration:none;
+	padding:2px 0;
+	border-bottom:none;	
+}
+#gnav li a:hover, #gnav li a:active
+{
+	color:#ccf;
+	border-bottom:#ccf 2px solid;
+}
+#gnav li.current_page_item a:link, #gnav li.current_page_item a:visited, #gnav li.current_page_item a:hover, #gnav li.current_page_item a:active
+{
+	color:#ccf;
+	border-bottom:#ccf 2px solid;
+}
+#s 
+{
+	background:url(img/input.jpg) no-repeat center;
+}

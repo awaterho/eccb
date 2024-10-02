@@ -1,0 +1,928 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>ISMB/ECCB 2007 &raquo; ISMB/ECCB 2007 Highlights Track: Call for Proposals</title>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+
+<script type="text/javascript">
+/***********************************************
+* Switch Content script- © Dynamic Drive (www.dynamicdrive.com)
+* This notice must stay intact for legal use. Last updated April 2nd, 2005.
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var enablepersist="on" //Enable saving state of content structure using session cookies? (on/off)
+var collapseprevious="no" //Collapse previously open content when opening present? (yes/no)
+
+var contractsymbol='- ' //HTML for contract symbol. For image, use: <img src="whatever.gif">
+var expandsymbol='+ ' //HTML for expand symbol.
+
+
+if (document.getElementById){
+document.write('<style type="text/css">')
+document.write('.switchcontent{display:none;}')
+document.write('</style>')
+}
+
+function getElementbyClass(rootobj, classname){
+var temparray=new Array()
+var inc=0
+var rootlength=rootobj.length
+for (i=0; i<rootlength; i++){
+if (rootobj[i].className==classname)
+temparray[inc++]=rootobj[i]
+}
+return temparray
+}
+
+function sweeptoggle(ec){
+var thestate=(ec=="expand")? "block" : "none"
+var inc=0
+while (ccollect[inc]){
+ccollect[inc].style.display=thestate
+inc++
+}
+revivestatus()
+}
+
+
+function contractcontent(omit){
+var inc=0
+while (ccollect[inc]){
+if (ccollect[inc].id!=omit)
+ccollect[inc].style.display="none"
+inc++
+}
+}
+
+function expandcontent(curobj, cid){
+var spantags=curobj.getElementsByTagName("SPAN")
+var showstateobj=getElementbyClass(spantags, "showstate")
+if (ccollect.length>0){
+if (collapseprevious=="yes")
+contractcontent(cid)
+document.getElementById(cid).style.display=(document.getElementById(cid).style.display!="block")? "block" : "none"
+if (showstateobj.length>0){ //if "showstate" span exists in header
+if (collapseprevious=="no")
+showstateobj[0].innerHTML=(document.getElementById(cid).style.display=="block")? contractsymbol : expandsymbol
+else
+revivestatus()
+}
+}
+}
+
+function revivecontent(){
+contractcontent("omitnothing")
+selectedItem=getselectedItem()
+selectedComponents=selectedItem.split("|")
+for (i=0; i<selectedComponents.length-1; i++)
+document.getElementById(selectedComponents[i]).style.display="block"
+}
+
+function revivestatus(){
+var inc=0
+while (statecollect[inc]){
+if (ccollect[inc].style.display=="block")
+statecollect[inc].innerHTML=contractsymbol
+else
+statecollect[inc].innerHTML=expandsymbol
+inc++
+}
+}
+
+function get_cookie(Name) { 
+var search = Name + "="
+var returnvalue = "";
+if (document.cookie.length > 0) {
+offset = document.cookie.indexOf(search)
+if (offset != -1) { 
+offset += search.length
+end = document.cookie.indexOf(";", offset);
+if (end == -1) end = document.cookie.length;
+returnvalue=unescape(document.cookie.substring(offset, end))
+}
+}
+return returnvalue;
+}
+
+function getselectedItem(){
+if (get_cookie(window.location.pathname) != ""){
+selectedItem=get_cookie(window.location.pathname)
+return selectedItem
+}
+else
+return ""
+}
+
+function saveswitchstate(){
+var inc=0, selectedItem=""
+while (ccollect[inc]){
+if (ccollect[inc].style.display=="block")
+selectedItem+=ccollect[inc].id+"|"
+inc++
+}
+
+document.cookie=window.location.pathname+"="+selectedItem
+}
+
+function do_onload(){
+uniqueidn=window.location.pathname+"firsttimeload"
+var alltags=document.all? document.all : document.getElementsByTagName("*")
+ccollect=getElementbyClass(alltags, "switchcontent")
+statecollect=getElementbyClass(alltags, "showstate")
+if (enablepersist=="on" && ccollect.length>0){
+document.cookie=(get_cookie(uniqueidn)=="")? uniqueidn+"=1" : uniqueidn+"=0" 
+firsttimeload=(get_cookie(uniqueidn)==1)? 1 : 0 //check if this is 1st page load
+if (!firsttimeload)
+revivecontent()
+}
+if (ccollect.length>0 && statecollect.length>0)
+revivestatus()
+}
+
+if (window.addEventListener)
+window.addEventListener("load", do_onload, false)
+else if (window.attachEvent)
+window.attachEvent("onload", do_onload)
+else if (document.getElementById)
+window.onload=do_onload
+
+if (enablepersist=="on" && document.getElementById)
+window.onunload=saveswitchstate
+
+</script><style type="text/css">
+.switchcontent{display:none;}body {
+	background-image: url();
+	background-color: #017DBB;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.style1 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.style5 {color: #017DBB}
+</style>
+
+
+
+
+
+
+
+	<link rel="stylesheet" href="wp-content/themes/crayonworld-10/style.css" type="text/css" media="screen">
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="feedhtml.html">
+	<link rel="alternate" type="text/xml" title="RSS .92" href="feed/rsshtml.html">
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="feed/atomhtml.html">
+	<link rel="pingback" href="xmlrpc.html">
+
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.html?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml"> 
+<link rel='index' title='ISMB/ECCB 2007' href='index.html'>
+<meta name="generator" content="WordPress 2.8.4">
+
+<a name="top"></a>
+</head>
+
+<body>	
+<div id="container">
+
+<!-- <div id="header"> -->
+
+
+<div id="header" onclick="location.href='index.html';" style="cursor: pointer;">
+
+
+ <h1><a href="index.html" title="ISMB/ECCB 2007"> 	 ISMB/ECCB 2007 </a></h1>  
+
+</div>
+
+<!--
+<ul id="gnav">
+	<li ><a href="index.html" title="Home">Home</a></li>
+	<li class="page_item page-item-7"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/agenda" title="Agenda-at-a-Glance">Agenda-at-a-Glance</a></li>
+<li class="page_item page-item-46"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/airtravel" title="Air Travel">Air Travel</a></li>
+<li class="page_item page-item-209"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/bof" title="Birds of a Feather (BoF)">Birds of a Feather (BoF)</a></li>
+<li class="page_item page-item-208"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters-latecall" title="Call for Late Posters">Call for Late Posters</a></li>
+<li class="page_item page-item-83"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/papers" title="Call for Papers">Call for Papers</a></li>
+<li class="page_item page-item-220"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/childcare" title="Child Care">Child Care</a></li>
+<li class="page_item page-item-202"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/activities" title="Children/Family Activities">Children/Family Activities</a></li>
+<li class="page_item page-item-90"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees" title="Committees">Committees</a></li>
+<li class="page_item page-item-130"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/promotion" title="Conference Promotion">Conference Promotion</a></li>
+<li class="page_item page-item-112"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsors" title="Conference Sponsors">Conference Sponsors</a></li>
+<li class="page_item page-item-132"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/venue" title="Conference Venue">Conference Venue</a></li>
+<li class="page_item page-item-9"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/contacts" title="Contact Us">Contact Us</a></li>
+<li class="page_item page-item-68"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/demonstrations" title="Demonstrations">Demonstrations</a></li>
+<li class="page_item page-item-119"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitfloorplan" title="Exhibit Floor Plan">Exhibit Floor Plan</a></li>
+<li class="page_item page-item-186"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitorinfo" title="Exhibitor Information">Exhibitor Information</a></li>
+<li class="page_item page-item-194"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitresources" title="Exhibitor Resources">Exhibitor Resources</a></li>
+<li class="page_item page-item-193"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitschedule" title="Exhibitor Schedule">Exhibitor Schedule</a></li>
+<li class="page_item page-item-2"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/faq" title="FAQ">FAQ</a></li>
+<li class="page_item page-item-138"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/housing" title="Housing">Housing</a></li>
+<li class="page_item page-item-12"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/subscribe" title="How to Subscribe">How to Subscribe</a></li>
+<li class="page_item page-item-210"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/volunteers" title="ISMB/ECCB 2007 Conference Volunteers">ISMB/ECCB 2007 Conference Volunteers</a></li>
+<li class="page_item page-item-45"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/deadlines" title="ISMB/ECCB 2007 Deadlines">ISMB/ECCB 2007 Deadlines</a></li>
+<li class="page_item page-item-58 current_page_item"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/highlights" title="ISMB/ECCB 2007 Highlights Track: Call for Proposals">ISMB/ECCB 2007 Highlights Track: Call for Proposals</a></li>
+<li class="page_item page-item-86"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/industry" title="ISMB/ECCB 2007 Industry Track: Call for Proposals">ISMB/ECCB 2007 Industry Track: Call for Proposals</a></li>
+<li class="page_item page-item-125"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/registration" title="ISMB/ECCB 2007 Registration">ISMB/ECCB 2007 Registration</a></li>
+<li class="page_item page-item-78"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/keynotes" title="Keynotes">Keynotes</a></li>
+<li class="page_item page-item-48"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/keynotespresentations" title="Keynotes Presentations">Keynotes Presentations</a></li>
+<li class="page_item page-item-85"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/plostrack" title="PLoS Track at ISMB/ECCB 2007">PLoS Track at ISMB/ECCB 2007</a></li>
+<li class="page_item page-item-121"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters" title="Posters">Posters</a></li>
+<li class="page_item page-item-134"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program" title="Program">Program</a></li>
+<li class="page_item page-item-54"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sigs" title="Special Interest Group Meetings (SIGs)">Special Interest Group Meetings (SIGs)</a></li>
+<li class="page_item page-item-35"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/specialsessions" title="Special Sessions">Special Sessions</a></li>
+<li class="page_item page-item-103"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsorbrochure" title="Sponsor Brochure">Sponsor Brochure</a></li>
+<li class="page_item page-item-100"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps" title="Sponsor Opportunities">Sponsor Opportunities</a></li>
+<li class="page_item page-item-174"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/scs3" title="Student Council Symposium (SCS3)">Student Council Symposium (SCS3)</a></li>
+<li class="page_item page-item-108"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/submissioncontacts" title="Submission Contacts">Submission Contacts</a></li>
+<li class="page_item page-item-139"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/tours" title="Tours">Tours</a></li>
+<li class="page_item page-item-111"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/travelsupport" title="Travel Fellowships">Travel Fellowships</a></li>
+<li class="page_item page-item-59"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/tutorials" title="Tutorials">Tutorials</a></li>
+<li class="page_item page-item-147"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/transit" title="Vienna Transit Pass">Vienna Transit Pass</a></li>
+<li class="page_item page-item-43"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/weather" title="Weather Today">Weather Today</a></li>
+ 
+</ul> --><div id="content">
+
+
+
+
+	  
+		<div class="post">	
+			<h2 class="post-title"><a href="highlights.html" rel="bookmark" title="Permanent Link: ISMB/ECCB 2007 Highlights Track: Call for Proposals">ISMB/ECCB 2007 Highlights Track: Call for Proposals</a></h2>
+			<p class="post-info">posted <em>04 Oct 2006</em> </p>
+			<div class="post-content">
+	<p><font color="red"><strong>***Highlights Track Submissions to ISMB/ECCB 2007 is Now Closed***</strong></font></p>
+<p><strong>**<a href="http://www.iscb.org/cms_addon/conferences/ismb07/highlights.php">Highlights Track Submission Site</a>**</strong></p>
+<p><a href="#about">Highlights Track: About</a><br>
+<a href="#deadlines">Highlights Track: Deadlines</a><br>
+<a href="#criteria">Highlights Track: Review Criteria</a><br>
+<a href="#submission">Highlights Track: Submission Guidelines</a></p>
+<p><font color="white">.</font></p>
+<p><a name="about"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong>Highlights Track: About</strong>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Manuscripts submitted to the ISMB/ECCB proceedings must be original, unpublished research work; if accepted it will not be publishable elsewhere.</p>
+<p>We invite the submission of full papers that have been published between 2006 and the submission deadline (or are in press). A group of experts will select the papers to be presented at the meeting considering the impact of the work on the field, the likelihood that the work makes a good presentation, and the relevance for molecular and medical biology, in general.<br>
+Submissions must include a 250-word abstract-like argument that explains how the submitted paper(s) suit the goal of presenting highlights that impacted the field. More details are given below.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="deadlines"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong>Highlights Track: Deadlines</strong>
+</td>
+</tr>
+</tbody>
+</table>
+<p><em>Submission Schedule Highlights Track</em><br>
+November 17, 2006 &#8212; Highlights Track Call for Papers Opens<br>
+<strong>April 6, 2007</strong> &#8212; Highlights Track Paper Submission Deadline (any time zone)<br>
+April 23, 2007 &#8212; Highlights Track Acceptance Notification</p>
+<p>All submissions will be evaluated by a group of editors. Upon submission, the authors will identify the editor/expert most suitable to suitable to review their work. </p>
+<p>All papers published in peer-review journals (no book chapters) between 2006 and February 2007 are eligible to be presented as talks. Papers in press are acceptable only if the authors submit the PDF with the proofs. Up to 2 papers can be submitted as one single PDF if the authors intent to compose their presentations of multiple papers.</p>
+<p>All PDFs with the covering 250-word argument that explains how the papers suit the selection criteria will have to be submitted through the automated system by <strong>April 6, 2007 (midnight by any time zone)</strong>. No reason will exempt submissions from this deadline.</p>
+<p>The editors will notify authors of the acceptance by April 23, 2007.<br>
+The selected Highlights will be presented in tracks that run in parallel to the main ISMB/ECCB meeting, July 22-25, 2007. All presentations will have to be completed within 20 minutes and will be followed by 5-minute discussions. While presenters are expected to focus mostly on the chosen paper(s), short infusions of more recent data are welcome.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="criteria"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong>Highlights Track: Review Criteria</strong>
+</td>
+</tr>
+</tbody>
+</table>
+<p>All submissions will be evaluated by a group of editors to be named. Editors will consider the following criteria: </p>
+<ul>
+<li>Relevance, interest, and value of the topic to ISMB/ECCB attendees,</li>
+<li>Impact of the paper(s) on biology (while the impact of papers on science is not fully reflected by ISI/Google-like impact factors or high number of downloads, high values in such factors will clearly stand as a strong argument for acceptance),</li>
+<li>&#8220;Presentability&#8221; of the work to a large, diverse audience,</li>
+<li>Quality of oral presentations by the submitter (if none).</li>
+</ul>
+<p>These &#8220;soft&#8221; criteria attempt to capture the underlying concept, namely the presentation of exciting and thought-provoking seminars that will both contribute to the success and attraction-value of ISMB/ECCB and to the impact the meeting has on advancing computational biology and bioinformatics.<br>
+The criterion of &#8220;presentability&#8221; accounts for the fact that some papers that will completely change the field, or will become citation records may not translate to exciting seminars.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="submission"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong>Highlights Track: Submission Guidelines</strong>
+</td>
+</tr>
+</tbody>
+</table>
+<p>All PDFs with the covering 250-word argument that explains how the papers suit the selection criteria will have to be submitted through the automated system by April 6, 2007 (midnight by any time zone). There will be no exception.<br>
+Submissions will have to be made to the automatic system at:<br>
+<a href="http://www.iscb.org/cms_addon/conferences/ismb07/highlights.php">http://www.iscb.org/cms_addon/conferences/ismb07/highlights.php</a></p>
+<p>Submissions will include the following:</p>
+<ul>
+<li>Name/affiliation of submitter (assumed to be the presenter)</li>
+<li>Names/affiliations of coauthors</li>
+<li>Contact information (for presenter)</li>
+<li>250-word limited abstract-like Argument that explains the adequacy of this work</li>
+<li>Sources of original publication(s) (Year, Journal, Vol., pages)</li>
+<li>PDF with paper(s) <em>(note: in case of the submission of 2 papers, both have to be merged into one single PDF; all reviews will be based on the content of this PDF)</em>.</li>
+<li>optional: link to Google Video demonstrating presentation skills of presenter</li>
+</ul>
+<p>Note that we will need PDF submissions; the system will neither be able to handle ASCII, nor Word, nor LaTeX, nor anything other than PDF. It is the responsibility of the submitter to verify that the PDF is completely viewable/printable by all major operating systems (LINUX, MacOS, Windows).</p>
+<p><strong>**<a href="http://www.iscb.org/cms_addon/conferences/ismb07/highlights.php">Highlights Track Submission Site</a>**</strong></p>
+			<!--	<p>***Highlights Track Submissions to ISMB/ECCB 2007 is Now Closed***<br />
+**Highlights Track Submission Site**<br />
+Highlights Track: About<br />
+Highlights Track: Deadlines<br />
+Highlights Track: Review Criteria<br />
+Highlights Track: Submission Guidelines<br />
+.</p>
+<p>Highlights Track: About</p>
+<p>Manuscripts submitted to the ISMB/ECCB proceedings must be original, unpublished research work; if accepted it will not be publishable elsewhere.<br />
+We invite the submission of full papers that have been published between 2006 [...]</p>
+   -->
+	
+<!-- turned comments off -->
+<!-- 		
+                        <p class="post-bot">
+			<span>Comments Off</span>			</p> 
+-->
+			<!--
+			<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				xmlns:dc="http://purl.org/dc/elements/1.1/"
+				xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+			<rdf:Description rdf:about="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/highlights"
+    dc:identifier="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/highlights"
+    dc:title="ISMB/ECCB 2007 Highlights Track: Call for Proposals"
+    trackback:ping="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/highlights/trackback" />
+</rdf:RDF>			-->
+		</div>
+		
+<!-- You can start editing here. -->
+
+
+  		<!-- If comments are closed. -->
+		<p class="nocomments"><font size="1"><a href="#top">top</a></font></p>
+		
+	
+
+	</div>
+   
+	<div class="pagenav"></div>
+	</div>
+<div id="sidebar">
+	<div id="intro">
+		
+	<div class="post">	
+		<h2 class="post-title">15th Annual International Conference on Intelligent Systems for Molecular Biology (ISMB)<br>& 6th European Conference on Computational Biology (ECCB)</h2>
+		<p class="post-info">Vienna, Austria: July 21-25, 2007</p>
+
+
+<!--	
+<img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/themes/crayonworld-10/img/profile.jpg" class="profile" /> 
+			<p><strong>ISMB/ECCB 2007</strong></p>
+			<p>Vienna, Austria: July 21-25, 2007</p>
+-->
+<!--			
+<p>There are 92 posts and 0 comments so far.</p>		      -->
+	</div>	
+</div>	
+		
+<div id="sideone"> 
+
+<!--
+
+	<h2>Quick Bits</h2>
+						<p>This is for the Asides functionality.<br/> Enter the id of the category you want to be treated as Asides, in the Main Template (index.php) <br/></p>
+			
+
+-->
+
+
+<!-- KEYNOTES START 
+
+	<h2>Keynotes</h2>
+
+  <div>
+
+<span class="feed">
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-f.gif" align="right" width="41" height="41"><strong>Keynote Speaker</strong><br>blah blah blah blah blah blah<br>
+
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-m.gif" align="right" width="41" height="41"><strong>Keynote Speaker</strong><br>yada yada yada yada yada yada<br>
+
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-m.gif" align="right" width="41" height="41"><strong>Keynote Speaker</strong><br>yada yada yada blah blah blah<br>
+
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-f.gif" align="right" width="41" height="41"><strong>Keynote Speaker</strong><br>blah blah blah blah blah blah<br>
+
+</span></div>
+
+ KEYNOTES END -->
+
+
+<!-- SPONSORS START 
+
+	<h2>Premier Sponsors</h2>
+
+
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-f.gif" width="41" height="41"><br>
+
+ SPONSORS END -->
+
+<!-- WEATHER START
+
+<div>
+
+<h2>Venue</h2>
+<p class="post-info">
+<a href="http://www.acv.at/evo/web/acv/1584_DE">Austria Center Vienna</a><br><a href="http://www.acv.at/evo/web/acv/1584_DE"><img id="image31" src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/centre.png" alt="Austria Center Vienna" border="0"></a>
+</p>
+
+<span class="feed">
+<br><script language=javascript>var LocationID = 'AUXX0025';</script>
+<script language=javascript src='http://www.theweathernetwork.com/weatherbutton/wxbutton.js'></script>
+
+</span>
+</div>
+
+-->
+
+
+<!--
+		<h2>Links</h2>
+	<ul> </ul>	
+
+-->
+		
+</div>
+		
+	<div id="sidetwo">
+
+<!-- <h2><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/">Home</a></h2> -->
+
+<!-- <h2>Menu</h2> -->
+
+<!-- MENU START -->
+
+          <!--Optional Expand/ Contact All links. Remove if desired-->
+        <p class="post-info">    <a href="javascript:sweeptoggle('expand')">+Expand 
+            All</a> | <a href="javascript:sweeptoggle('contract')">-Contract All</a></p>
+            <div></div>
+
+			
+<!--PROGRAM-->
+            <p onclick="expandcontent(this, 'sc1')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Program</b></p>
+            <div id="sc1" class="switchcontent"> 
+        <ul>
+         <li><a href="agenda.html">Agenda-at-a-Glance</a></li>
+         <li><a href="program/schedule.html">Conference Schedule</a></li>
+         <li><a href="program/bof.html">Birds of a Feather</a></li>
+         <li><a href="program/demonstrations.html">Demonstrations</a></li>
+         <li><a href="program/highlights.html">Highlights Track</a></li>
+         <li><a href="program/industry.html">Industry Posters</a></li>
+         <li><a href="program/industrytrack.html">Industry Track</a></li>
+         <li><a href="program/papers.html">Papers</a></li>
+         <li><a href="program/plostrack.html">PLoS Track</a></li>
+         <li><a href="program/posters.html">Posters</a></li>
+         <li><a href="program/sigs.html">Satellite Meetings and SIGs</a></li>
+         <li><a href="program/scientific.html">Scientific Program Information</a></li>
+         <li><a href="program/social.html">Social Events</a></li>
+         <li><a href="program/specialsessions.html">Special Sessions</a></li>
+         <li><a href="program/scs.html">Student Council Symposium</a></li>
+         <li><a href="program/tutorials.html">Tutorials</a></li>
+        </ul>
+            </div>
+
+
+<!--KEYNOTES-->
+
+            <div> 
++ <strong><font color="black"><a href="keynotes.html">Keynotes</a></font></strong>
+            </div>
+
+			
+<!--DEADLINES-->
+<!--
+            <p onClick="expandcontent(this, 'sc2')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Deadlines</b></p>
+
+            <div id="sc2" class="switchcontent"> 
+              <ul>
+                 <li><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/deadlines/">Deadlines</a></li>
+              </ul>
+            </div>
+-->
+
+            <div> 
++ <strong><a href="deadlines.html">Deadlines</a></strong>
+            </div>
+
+
+<!--SUBS GUIDELINES-->
+
+            <p onclick="expandcontent(this, 'sc3')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Submissions/Guidelines</b></p>
+            <div id="sc3" class="switchcontent"> 
+
+        <ul>         
+         <li><a href="bof.html">Birds of a Feather (BoF)</a></li>
+         <li><a href="posters-latecall.html">Call for Late Posters</a></li>
+         <li><a href="papers.html">Call for Papers</a></li>
+         <li><a href="specialsessions.html">Special Sessions</a></li>
+         <li><a href="highlights.html">Highlights Track</a></li>
+         <li><a href="plostrack.html">PLoS Track</a></li>
+         <li><a href="program/posters.html">Posters</a></li>
+         <li><a href="demonstrations.html">Demonstrations</a></li>
+         <li><a href="tutorials.html">Tutorials</a></li>
+         <li><a href="industry.html">Industry Track</a></li>
+         <li><a href="sigs.html">Special Interest Groups (SIGs)</a></li>
+         <li><a href="scs3.html">Student Council Symposium (SCS3)</a></li>
+         <li><a href="travelsupport.html">Travel Fellowships</a></li>
+        </ul>
+            </div>
+
+		
+			<!--submissions-->
+			<!--
+            <p onClick="expandcontent(this, 'sc4')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Submissions</b></p>
+            <div id="sc4" class="switchcontent"> 
+              <ul>
+                <li>Call for Papers</li>
+                <li>Call for Tutorials</li>
+                <li>Late Breaking Poster Session Call</li>
+                <li>Call for PLoS Track</li>
+                <li>Call for SCS2 Posters</li>
+                <li>Academic Demos</li>
+                <li>Industry Demos</li>
+                <li>Travel Fellowships</li>
+                <li>Poster Guidelines &amp; Schedule</li>
+                <li>BOF Sign-up</li>
+                <li>Paper Guidelines</li>
+              </ul>
+            </div>
+			-->
+			
+
+<!--REGISTRATION-->
+
+            <div> 
++ <strong><a href="registration.html">Registration</a></strong>
+            </div>
+
+		
+			<!--registration-->
+			<!--
+            <p onClick="expandcontent(this, 'sc5')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Registration</b></p>
+
+            <div id="sc5" class="switchcontent"> 
+              <ul>
+                <li><a href="">Keynotes</a></li>
+                <li><a href="">Tutorials</a></li>
+                <li><a href="">Demos</a></li>
+              </ul>
+            </div>
+			-->
+			
+
+<!--GENERAL INFO-->
+            <p onclick="expandcontent(this, 'sc6')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>General Information</b> </p>
+
+            <div id="sc6" class="switchcontent"> 
+
+<ul>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="airtravel.html">Air Travel</a></li>
+<li><a href="activities.html">Children/Family Activities</a></li>
+<li><a href="childcare.html">Child Care</a></li>
+<li><a href="venue.html">Conference Venue</a></li>
+<li><a href="housing.html">Housing</a></li>
+<li><a href="tours.html">Tours</a></li>
+<li><a href="transit.html">Transit Passes</a></li>
+<li><a href="volunteers.html">Volunteers</a></li>
+</ul>
+
+            </div>
+
+
+
+<!--SPONSORS/EXHIBITORS-->
+
+            <p onclick="expandcontent(this, 'sc7a')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Sponsors & Exhibitors</b></p>
+            <div id="sc7a" class="switchcontent"> 
+              <ul>
+                 <li><a href="sponsors.html">Conference Sponsors</a></li>
+                 <li><a href="exhibitfloorplan.html">Conference Exhibitors</a></li>
+              </ul>
+            </div>
+
+
+
+<!--SPONSORS/EXHIBITORS INFO-->
+
+            <p onclick="expandcontent(this, 'sc7')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Sponsors/Exhibitors Information</b></p>
+            <div id="sc7" class="switchcontent"> 
+              <ul>
+                 <li><a href="sponsoropps.html">Sponsor Opportunities</a></li>
+                 <li><a href="sponsorbrochure.html">Sponsor Brochure</a></li>
+                 <li><a href="http://www.iscb.org/cms_addon/conferences/ismb07/sponsor_signup.php">Sponsor & Exhibitor Sign-up</a></li>
+                 <li><a href="exhibitorinfo.html">Exhibitor Information</a></li> 
+            <!--     <li><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitresources/">Exhibitor Resources</a></li> -->
+            <li><a href="exhibitschedule.html">Exhibitor Schedule</a></li> 
+                <li><a href="exhibitfloorplan.html">Exhibitor Floor Plan</a></li> 
+              </ul>
+            </div>
+			
+			<!--committees-->
+            <p onclick="expandcontent(this, 'sc8')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Committees</b></p>
+
+            <div id="sc8" class="switchcontent"> 
+              <ul>
+<!-- <li><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/">All Committees</a></li> -->
+<li><a href="committees/chairs.html">Conference Chairs</a></li>
+<li><a href="committees/steeringcommittee.html">Steering Committee</a></li>
+<li><a href="committees/soc.html">Scientific Organizing Committee</a></li>
+<li><a href="committees/areachairs.html">Area Chairs</a></li>
+<li><a href="committees/highlights.html">Highlights Track</a></li>
+<li><a href="committees/plostrack.html">PLoS Track</a></li>
+            </ul>
+            </div>
+
+			<!--press pass-->
+<!--
+            <p onClick="expandcontent(this, 'sc9')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Press Pass</b> </p>
+            <div id="sc9" class="switchcontent"> 
+              <ul>
+                <li><a href="http://ismb.org/">Press Pass</a></li>
+              </ul>
+            </div>
+-->
+			
+<!--CONTACTS-->
+
+            <p onclick="expandcontent(this, 'sc10')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Contact Us</b> </p>
+            <div id="sc10" class="switchcontent"> 
+              <ul>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="submissioncontacts.html">Submission Contacts</a></li>
+              </ul>
+            </div>
+
+
+
+<!--CONFERENCE PROMO-->
+
+            <div> 
++ <strong><a href="promotion.html">Conference Promotion</a></strong>
+            </div>
+
+
+<!--PRESS PASS-->
+
+            <div> 
++ <strong><a href="http://www.iscb.org/cms_addon/conferences/ismb/presspass.php">Press Pass</a></strong>
+            </div>
+
+
+<!--UPDATES-->
+
+            <p onclick="expandcontent(this, 'sc11')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Blog Updates</b> </p>
+            <div id="sc11" class="switchcontent"> 
+
+              <ul><li><a href="feedhtml.html" title="Subscribe to Updates using RSS">Subscribe<img src="wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"></a></li>
+
+<li><a href="http://www.feedpass.com/ISMBECCB2007">How to Subscribe</a></li>
+
+
+		<li><a href='2007/09.html' title='September 2007'>September 2007</a>&nbsp;(2)</li>
+	<li><a href='2007/07.html' title='July 2007'>July 2007</a>&nbsp;(4)</li>
+	<li><a href='2007/06.html' title='June 2007'>June 2007</a>&nbsp;(2)</li>
+	<li><a href='2007/05.html' title='May 2007'>May 2007</a>&nbsp;(1)</li>
+	<li><a href='2007/03.html' title='March 2007'>March 2007</a>&nbsp;(2)</li>
+	<li><a href='2007/01.html' title='January 2007'>January 2007</a>&nbsp;(2)</li>
+	<li><a href='2006/12.html' title='December 2006'>December 2006</a>&nbsp;(3)</li>
+	<li><a href='2006/11.html' title='November 2006'>November 2006</a>&nbsp;(1)</li>
+	<li><a href='2006/10.html' title='October 2006'>October 2006</a>&nbsp;(1)</li>
+	<li><a href='2006/09.html' title='September 2006'>September 2006</a>&nbsp;(1)</li>
+	<li><a href='2006/07.html' title='July 2006'>July 2006</a>&nbsp;(1)</li>
+</ul>
+            </div>
+
+<!--MENU END-->
+
+
+
+<!--TAGS-->
+<!--	
+        <h2>Tags</h2>
+	<ul>
+			<li class="cat-item cat-item-4"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/category/announcements" title="View all posts filed under announcements">announcements</a> (11)
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/category/uncategorized" title="View all posts filed under Uncategorized">Uncategorized</a> (9)
+</li>
+	</ul>		
+-->
+
+
+<!--OLD UPDATES-->
+<!--
+	<h2>Updates</h2>
+
+<p class="post-info"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/feed" title="Syndicate this site using RSS"><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"> updates</a></span><br>
+
+	<ul>	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/09' title='September 2007'>September 2007</a>&nbsp;(2)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/07' title='July 2007'>July 2007</a>&nbsp;(4)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/06' title='June 2007'>June 2007</a>&nbsp;(2)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/05' title='May 2007'>May 2007</a>&nbsp;(1)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/03' title='March 2007'>March 2007</a>&nbsp;(2)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/01' title='January 2007'>January 2007</a>&nbsp;(2)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/12' title='December 2006'>December 2006</a>&nbsp;(3)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/11' title='November 2006'>November 2006</a>&nbsp;(1)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/10' title='October 2006'>October 2006</a>&nbsp;(1)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/09' title='September 2006'>September 2006</a>&nbsp;(1)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/07' title='July 2006'>July 2006</a>&nbsp;(1)</li>
+</ul>	
+-->
+
+
+<!-- 
+<a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/comments/feed" title="The latest comments to all posts in RSS"><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"> comments</a></span>
+-->
+
+<!--PAGES-->
+<!--	
+        <h2>Pages</h2>
+	<ul><li class="page_item page-item-7"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/agenda" title="Agenda-at-a-Glance">Agenda-at-a-Glance</a></li>
+<li class="page_item page-item-46"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/airtravel" title="Air Travel">Air Travel</a></li>
+<li class="page_item page-item-209"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/bof" title="Birds of a Feather (BoF)">Birds of a Feather (BoF)</a></li>
+<li class="page_item page-item-208"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters-latecall" title="Call for Late Posters">Call for Late Posters</a></li>
+<li class="page_item page-item-83"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/papers" title="Call for Papers">Call for Papers</a></li>
+<li class="page_item page-item-220"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/childcare" title="Child Care">Child Care</a></li>
+<li class="page_item page-item-202"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/activities" title="Children/Family Activities">Children/Family Activities</a></li>
+<li class="page_item page-item-90"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees" title="Committees">Committees</a>
+<ul>
+	<li class="page_item page-item-89"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/areachairs" title="Area Chairs">Area Chairs</a></li>
+	<li class="page_item page-item-87"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/papers-chairs" title="Call for Papers Area Chairs">Call for Papers Area Chairs</a></li>
+	<li class="page_item page-item-10"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/chairs" title="Conference Chairs">Conference Chairs</a></li>
+	<li class="page_item page-item-205"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/highlights" title="Highlights Track Area Chairs">Highlights Track Area Chairs</a></li>
+	<li class="page_item page-item-164"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/plostrack" title="PLoS Track">PLoS Track</a></li>
+	<li class="page_item page-item-42"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/soc" title="Scientific Organizing Committee">Scientific Organizing Committee</a></li>
+	<li class="page_item page-item-41"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/steeringcommittee" title="Steering Committee">Steering Committee</a></li>
+</ul>
+</li>
+<li class="page_item page-item-130"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/promotion" title="Conference Promotion">Conference Promotion</a></li>
+<li class="page_item page-item-112"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsors" title="Conference Sponsors">Conference Sponsors</a></li>
+<li class="page_item page-item-132"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/venue" title="Conference Venue">Conference Venue</a></li>
+<li class="page_item page-item-9"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/contacts" title="Contact Us">Contact Us</a></li>
+<li class="page_item page-item-68"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/demonstrations" title="Demonstrations">Demonstrations</a></li>
+<li class="page_item page-item-119"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitfloorplan" title="Exhibit Floor Plan">Exhibit Floor Plan</a></li>
+<li class="page_item page-item-186"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitorinfo" title="Exhibitor Information">Exhibitor Information</a></li>
+<li class="page_item page-item-194"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitresources" title="Exhibitor Resources">Exhibitor Resources</a></li>
+<li class="page_item page-item-193"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitschedule" title="Exhibitor Schedule">Exhibitor Schedule</a></li>
+<li class="page_item page-item-2"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/faq" title="FAQ">FAQ</a></li>
+<li class="page_item page-item-138"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/housing" title="Housing">Housing</a></li>
+<li class="page_item page-item-12"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/subscribe" title="How to Subscribe">How to Subscribe</a></li>
+<li class="page_item page-item-210"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/volunteers" title="ISMB/ECCB 2007 Conference Volunteers">ISMB/ECCB 2007 Conference Volunteers</a></li>
+<li class="page_item page-item-45"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/deadlines" title="ISMB/ECCB 2007 Deadlines">ISMB/ECCB 2007 Deadlines</a></li>
+<li class="page_item page-item-58"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/highlights" title="ISMB/ECCB 2007 Highlights Track: Call for Proposals">ISMB/ECCB 2007 Highlights Track: Call for Proposals</a></li>
+<li class="page_item page-item-86"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/industry" title="ISMB/ECCB 2007 Industry Track: Call for Proposals">ISMB/ECCB 2007 Industry Track: Call for Proposals</a></li>
+<li class="page_item page-item-125"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/registration" title="ISMB/ECCB 2007 Registration">ISMB/ECCB 2007 Registration</a>
+<ul>
+	<li class="page_item page-item-165"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/registration/membership" title="ISCB Membership Fee Chart">ISCB Membership Fee Chart</a></li>
+</ul>
+</li>
+<li class="page_item page-item-78"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/keynotes" title="Keynotes">Keynotes</a></li>
+<li class="page_item page-item-48"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/keynotespresentations" title="Keynotes Presentations">Keynotes Presentations</a></li>
+<li class="page_item page-item-85"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/plostrack" title="PLoS Track at ISMB/ECCB 2007">PLoS Track at ISMB/ECCB 2007</a></li>
+<li class="page_item page-item-121"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters" title="Posters">Posters</a>
+<ul>
+	<li class="page_item page-item-124"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters/posterboard" title="Poster Board Dimensions">Poster Board Dimensions</a></li>
+</ul>
+</li>
+<li class="page_item page-item-134"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program" title="Program">Program</a>
+<ul>
+	<li class="page_item page-item-185"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/papers" title="Accepted Papers">Accepted Papers</a></li>
+	<li class="page_item page-item-177"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/affiliate" title="Affiliate Meetings">Affiliate Meetings</a></li>
+	<li class="page_item page-item-234"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/bof" title="Birds of a Feather (BoF)">Birds of a Feather (BoF)</a></li>
+	<li class="page_item page-item-223"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/demonstrations" title="Demonstrations">Demonstrations</a></li>
+	<li class="page_item page-item-229"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/highlights" title="Highlights Track">Highlights Track</a></li>
+	<li class="page_item page-item-222"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/industry" title="Industry Posters">Industry Posters</a></li>
+	<li class="page_item page-item-228"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/industrytrack" title="Industry Track">Industry Track</a></li>
+	<li class="page_item page-item-219"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/schedule" title="ISMB/ECCB 2007 Conference Schedule">ISMB/ECCB 2007 Conference Schedule</a></li>
+	<li class="page_item page-item-227"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/plostrack" title="PLoS Track">PLoS Track</a></li>
+	<li class="page_item page-item-152"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/sigs" title="Satellite Meetings and SIGs">Satellite Meetings and SIGs</a></li>
+	<li class="page_item page-item-79"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/scientific" title="Scientific Program Information">Scientific Program Information</a></li>
+	<li class="page_item page-item-146"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/social" title="Social Events">Social Events</a></li>
+	<li class="page_item page-item-158"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/specialsessions" title="Special Sessions">Special Sessions</a>
+	<ul>
+		<li class="page_item page-item-167"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/specialsessions/details" title="Special Sessions Details">Special Sessions Details</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-153"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/scs" title="Student Council Symposium (SCS3)">Student Council Symposium (SCS3)</a></li>
+	<li class="page_item page-item-136"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/tutorials" title="Tutorials Program">Tutorials Program</a></li>
+</ul>
+</li>
+<li class="page_item page-item-54"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sigs" title="Special Interest Group Meetings (SIGs)">Special Interest Group Meetings (SIGs)</a></li>
+<li class="page_item page-item-35"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/specialsessions" title="Special Sessions">Special Sessions</a></li>
+<li class="page_item page-item-103"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsorbrochure" title="Sponsor Brochure">Sponsor Brochure</a></li>
+<li class="page_item page-item-100"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps" title="Sponsor Opportunities">Sponsor Opportunities</a>
+<ul>
+	<li class="page_item page-item-114"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/addpkg" title="Additional Sponsor Opportunities">Additional Sponsor Opportunities</a></li>
+	<li class="page_item page-item-116"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/demopkg" title="Demonstration Package">Demonstration Package</a></li>
+	<li class="page_item page-item-115"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/exhibitpkg" title="Exhibitor Package">Exhibitor Package</a></li>
+	<li class="page_item page-item-117"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/posterpkg" title="Industry Poster Package">Industry Poster Package</a></li>
+	<li class="page_item page-item-118"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/pastsponsors" title="Past Sponsors and Exhibitors">Past Sponsors and Exhibitors</a></li>
+	<li class="page_item page-item-113"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/sponsorpkg" title="Sponsor Package">Sponsor Package</a></li>
+</ul>
+</li>
+<li class="page_item page-item-174"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/scs3" title="Student Council Symposium (SCS3)">Student Council Symposium (SCS3)</a></li>
+<li class="page_item page-item-108"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/submissioncontacts" title="Submission Contacts">Submission Contacts</a></li>
+<li class="page_item page-item-139"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/tours" title="Tours">Tours</a></li>
+<li class="page_item page-item-111"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/travelsupport" title="Travel Fellowships">Travel Fellowships</a></li>
+<li class="page_item page-item-59"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/tutorials" title="Tutorials">Tutorials</a></li>
+<li class="page_item page-item-147"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/transit" title="Vienna Transit Pass">Vienna Transit Pass</a></li>
+<li class="page_item page-item-43"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/weather" title="Weather Today">Weather Today</a></li>
+</ul>	
+-->
+
+<!--SEARCH-->
+<!--	
+        <form id="searchform" method="get" action="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/">
+		<input type="text" class="text" name="s" id="s" value="" size="15" /><br/>
+		<input type="submit" name="submit" value="Search " />
+	</form>
+-->
+
+<div>
+
+<!--LOGOS-->
+
+<br>
+<!--
+<a id="p73" href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/12/FullPageAdvert.pdf"><img id="image26" src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/flyer.png" alt="2007 Flyer - 306 KB PDF" title="306 KB PDF" border="0" vspace="1"></a>
+-->
+
+<a href="program/sigs.html"><img id="image171" src="wp-content/uploads/2007/03/meetings1.png" alt="SIGs &amp; Satellite Meetings" vspace="1"></a>
+
+<a href="http://iscbsc.org/scs3/index.htm"><img id="image182" src="wp-content/uploads/2007/03/scs3-border2.jpg" alt="Student Council Symposium (SCS)" vspace="1" border="0"></a>
+
+<a href="program/affiliate.html">
+<img id="image175" src="wp-content/uploads/2007/03/affiliate.png" alt="Affiliate Meetings" vspace="1"></a>
+
+<a href="http://www.iscb.org/"><img src="wp-images/iscblogo.jpg" alt="International Society for Computational Biology" vspace="1" border="0"></a>
+
+</div>
+
+
+<!--       <h2>Subscribe</h2> 
+<p class="post-info"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/feed" title="Syndicate this site using RSS"><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"> updates</a></span><br>
+
+<a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/comments/feed" title="The latest comments to all posts in RSS"><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"> comments</a></span>
+-->
+
+<!--
+<div>
+<ul><br>
+<a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-login.php">Log in</a><br>
+</ul>
+</div>
+-->
+
+</p>
+</div></div><div id="footer">
+
+<!--
+  <div><span class="feed"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/feed" title="Syndicate this site using RSS">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></span><br/>
+		<span class="feed"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/comments/feed" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></span>
+</div>
+-->
+
+		<center><strong>ISMB/ECCB 2007 &copy; 2009</strong> <a href="http://www.iscb.org/ismbeccb2007/?feed=rss2"><img src="wp-content/uploads/2006/07/feed-icon-10x10.gif" vspace="0" align="absmiddle" border="0" hspace="0"></a> </center>
+</div>
+</div>
+
+<!-- 
+<center>based on wordpress theme <a href="http://wpthemes.info/crayon-world/"target="_blank">CrayonWorld</a></center>
+-->
+
+</body>
+
+
+</html>

@@ -1,0 +1,118 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+
+
+<!-- Mirrored from eccb14.loria.fr/program/tutorials/biojs?tmpl=component&print=1&page= by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jul 2015 15:49:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <script type="text/javascript">
+var siteurl='../../index.html';
+var tmplurl='../../templates/ja_elastica/index.html';
+var isRTL = false;
+</script>
+
+  <base  />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="ECCB'14, ECCB2014, Computational Biology, Bioinformatics, Conference, Strasbourg, ECCB, European Conference on Computational Biology, ECCB14" />
+  <meta name="author" content="Adrien" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="ECCB'14 is the key European computational biology event in 2014 uniting scientists working in a broad range of disciplines, including bioinformatics, computational biology, biology, medicine, and systems biology." />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>ECCB'14 - T06 - Reuse, Develop and Share Biological Visualisation with BioJS</title>
+  <link href="http://eccb14.loria.fr/program/tutorials/biojs?tmpl=component&amp;print=1&amp;page=" rel="canonical" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/media/jui/css/icomoon.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/." type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/addons.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/template-j30.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/layout.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/template.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/usertools.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/css3.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/component.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/print.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/menu/mega.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/typo.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/template-j30.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/template.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/modules.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-mobile.css" type="text/css" media="only screen and (max-width:719px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-mobile-port.css" type="text/css" media="only screen and (max-width:479px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-tablet.css" type="text/css" media="only screen and (min-width:720px) and (max-width: 985px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-normal.css" type="text/css" media="only screen and (min-width:986px) and (max-width: 1235px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-wide.css" type="text/css" media="only screen and (min-width:1236px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/css3.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/component.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/menu/mega.css" type="text/css" />
+  <script src="http://eccb14.loria.fr/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/mootools-more.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/anchor.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/js/core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/mega.rjd.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.noconflict.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.masonry.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.mediaqueries.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/menu/mega.js" type="text/javascript"></script>
+  <script type="text/javascript">
+jQuery.noConflict();
+  </script>
+
+<!--[if ie]><link href="/plugins/system/jat3/jat3/base-themes/default/css/template-ie.css" type="text/css" rel="stylesheet" /><![endif]--> 
+<!--[if ie 7]><link href="/plugins/system/jat3/jat3/base-themes/default/css/template-ie7.css" type="text/css" rel="stylesheet" /><![endif]--> 
+<!--[if ie 7]><link href="/templates/ja_elastica/css/template-ie7.css" type="text/css" rel="stylesheet" /><![endif]--> 
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes"/>
+<meta name="HandheldFriendly" content="true" />
+
+
+<link href="http://eccb14.loria.fr/templates/ja_elastica/images/favicon.ico" rel="shortcut icon" type="image/x-icon" /></head>
+
+<body id="bd" class="fs3 com_content contentpane">
+    
+<div id="system-message-container">
+<div id="system-message">
+</div>
+</div>
+    <div class="item-page clearfix">
+	<h2 class="contentheading">
+			T06 - Reuse, Develop and Share Biological Visualisation with BioJS		</h2>
+
+	
+<div class="article-tools clearfix">
+	<ul class="actions">
+			<li>
+		<a href="#" onclick="window.print();return false;"><span class="icon-print"></span>&#160;Print&#160;</a>		</li>
+		
+	</ul>
+
+
+
+	
+</div>
+	<p class="p1"><strong>ABSTRACT</strong></p>
+<p class="p1">BioJS is a community project aiming to create a collection of JavaScript components to present biological information following a common guideline. This workshop aims to introduce the BioJS project and provide enough skills to use BioJS components. For people interested in contributing to BioJS we will also provide a hello world tutorial to quickly have a taste on how to create a BioJS component. </p>
+<p class="p1"> </p>
+<p class="p1"><strong>AUDIENCE</strong><br /> This tutorial is for bioinformaticians and developers interested in presenting biological information on the web. Basic programming knowledge is required to attend this tutorial. Though the workshop can be easily followed without no knowledge in JavaScript it would be desirable to have some scripting experience in JavaScript. <br /> <br /> <strong>LEARNING OBJECTIVES</strong><br /> Learn how to use BioJS components and get a taste on how to create a BioJS component. </p>
+<p class="p1"> </p>
+<p class="p1"><strong>REQUIREMENTS</strong></p>
+<p class="p1">Good Internet connection.</p>
+<p class="p1">People need to bring their laptops.</p>
+<p class="p1">Big paper sheets for group discussion.<br /> <br /> <strong>PROPOSED SCHEDULE</strong></p>
+<p class="p1">• 9:00 - 9:45 -- Introduction to the BioJS project. Here we show BioJS’s approach to visualising biological data and how this makes it easier for target users to reutilise, share and develop JavaScript software using the BioJS framework. We will introduce some representative use cases.<br /> <br /> • 9:45 - 10:15 -- Coffee break <br /> <br /> • 10:15 - 10:30 -- Developer environment, quick check. Check that everybody have all they need; ask them to download, install, and test the proxy from the BioJS GitHub repository, necessary to do the coding part.<br /> <br /> • 10:30 - 11:00 -- How to use a BioJS component. We will provide examples in which people can copy and paste code. We will provide some challenges for students to work on their own. We will work on simple tasks like retrieving specific data from public databases using a BioJS component<br /> <br /> • 11:00 - 11:30 -- How to integrate multiple BioJS components. We will extend the previous session to have some extra tasks to be solved by participants.<br /> <br /> • 11:30 - 11:45 -- BioJS registry, will show how to use the BioJS registry, how it is used and its benefits.<br /> <br /> • 11:45 - 12:00 -- Creating a BioJS development environment. Here they download BioJS code from the GitHub repository, run the registry and make sure everything is working.<br /> <br /> • 12:00 - 12:30 -- A biological version of "Hello World" component. An introductory example for a component from scratch.<br /> <br /> • 12:30 - 1:30 -- Lunch - 60 minutes<br /> <br /> • 1:30 - 3:00 -- Design exercise. Here students work on an interesting<br /> but simple example to be done by groups, with pen and paper. We would require big paper sheets for further discussion and creative input. <br /> <br /> • 3:00 - 3:30 -- Coffee break - 30 minutes<br /> <br /> • 3:30 - 4:30 – Developing a BioJS component. Here groups start working on the example worked on in the previous session. We give them some code and clues on how to begin.<br /> <br /> • 4:30 - 5:00 -- Wrap up. We collect feedback about current BioJS components, improvements and future applications. We also tell students how to become involved in the BioJS community.</p>
+<p class="p2"> </p>
+<p class="p1"><strong>INSTRUCTORS</strong></p>
+<p class="p1">Manuel Corpas, The Genome Analysis Centre, UK</p>
+<p class="p1">Rafael Jimenez, ELIXIR Hub, Hinxton, UK</p>
+		
+
+	</div>
+</body>
+
+
+<!-- Mirrored from eccb14.loria.fr/program/tutorials/biojs?tmpl=component&print=1&page= by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jul 2015 15:49:19 GMT -->
+</html>

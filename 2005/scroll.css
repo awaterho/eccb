@@ -1,0 +1,32 @@
+body {
+	
+  scrollbar-3dlight-color:#cccccc;
+  scrollbar-arrow-color:#FFFFFF;
+  scrollbar-base-color:#FEC6FB;
+  scrollbar-track-color:#CBCBCB;
+  scrollbar-darkshadow-color:#81186E;
+  scrollbar-face-color:#81186E;
+  scrollbar-highlight-color:#FEC6FB;
+  scrollbar-shadow-color:#81186E;
+}.textomorado {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-weight: bold;
+	color: 561452;
+}
+.blanco {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #FFFFFF;
+	font-weight: normal;
+	text-transform: none;
+	white-space: normal;
+	text-align: justify;
+}
+.ul02 {
+	list-style-image: url(images/icono_blanco.gif);
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #000000;
+	clip:    rect(auto auto auto auto);
+}

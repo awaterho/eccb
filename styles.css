@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 24px;
+    background-color: #f0f0f0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 100vw;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    padding: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    position: relative; /* Needed for absolute positioning inside */
+    aspect-ratio: 1/1;
+}
+
+.grid-item:hover {
+    background-color: #2980b9;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+.grid-item:hover img {
+    transform: scale(1.1); /* Zooms the image slightly on hover */
+}

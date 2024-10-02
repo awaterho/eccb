@@ -1,0 +1,1121 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>ISMB/ECCB 2007 &raquo; Keynotes Presentations</title>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+
+<script type="text/javascript">
+/***********************************************
+* Switch Content script- © Dynamic Drive (www.dynamicdrive.com)
+* This notice must stay intact for legal use. Last updated April 2nd, 2005.
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var enablepersist="on" //Enable saving state of content structure using session cookies? (on/off)
+var collapseprevious="no" //Collapse previously open content when opening present? (yes/no)
+
+var contractsymbol='- ' //HTML for contract symbol. For image, use: <img src="whatever.gif">
+var expandsymbol='+ ' //HTML for expand symbol.
+
+
+if (document.getElementById){
+document.write('<style type="text/css">')
+document.write('.switchcontent{display:none;}')
+document.write('</style>')
+}
+
+function getElementbyClass(rootobj, classname){
+var temparray=new Array()
+var inc=0
+var rootlength=rootobj.length
+for (i=0; i<rootlength; i++){
+if (rootobj[i].className==classname)
+temparray[inc++]=rootobj[i]
+}
+return temparray
+}
+
+function sweeptoggle(ec){
+var thestate=(ec=="expand")? "block" : "none"
+var inc=0
+while (ccollect[inc]){
+ccollect[inc].style.display=thestate
+inc++
+}
+revivestatus()
+}
+
+
+function contractcontent(omit){
+var inc=0
+while (ccollect[inc]){
+if (ccollect[inc].id!=omit)
+ccollect[inc].style.display="none"
+inc++
+}
+}
+
+function expandcontent(curobj, cid){
+var spantags=curobj.getElementsByTagName("SPAN")
+var showstateobj=getElementbyClass(spantags, "showstate")
+if (ccollect.length>0){
+if (collapseprevious=="yes")
+contractcontent(cid)
+document.getElementById(cid).style.display=(document.getElementById(cid).style.display!="block")? "block" : "none"
+if (showstateobj.length>0){ //if "showstate" span exists in header
+if (collapseprevious=="no")
+showstateobj[0].innerHTML=(document.getElementById(cid).style.display=="block")? contractsymbol : expandsymbol
+else
+revivestatus()
+}
+}
+}
+
+function revivecontent(){
+contractcontent("omitnothing")
+selectedItem=getselectedItem()
+selectedComponents=selectedItem.split("|")
+for (i=0; i<selectedComponents.length-1; i++)
+document.getElementById(selectedComponents[i]).style.display="block"
+}
+
+function revivestatus(){
+var inc=0
+while (statecollect[inc]){
+if (ccollect[inc].style.display=="block")
+statecollect[inc].innerHTML=contractsymbol
+else
+statecollect[inc].innerHTML=expandsymbol
+inc++
+}
+}
+
+function get_cookie(Name) { 
+var search = Name + "="
+var returnvalue = "";
+if (document.cookie.length > 0) {
+offset = document.cookie.indexOf(search)
+if (offset != -1) { 
+offset += search.length
+end = document.cookie.indexOf(";", offset);
+if (end == -1) end = document.cookie.length;
+returnvalue=unescape(document.cookie.substring(offset, end))
+}
+}
+return returnvalue;
+}
+
+function getselectedItem(){
+if (get_cookie(window.location.pathname) != ""){
+selectedItem=get_cookie(window.location.pathname)
+return selectedItem
+}
+else
+return ""
+}
+
+function saveswitchstate(){
+var inc=0, selectedItem=""
+while (ccollect[inc]){
+if (ccollect[inc].style.display=="block")
+selectedItem+=ccollect[inc].id+"|"
+inc++
+}
+
+document.cookie=window.location.pathname+"="+selectedItem
+}
+
+function do_onload(){
+uniqueidn=window.location.pathname+"firsttimeload"
+var alltags=document.all? document.all : document.getElementsByTagName("*")
+ccollect=getElementbyClass(alltags, "switchcontent")
+statecollect=getElementbyClass(alltags, "showstate")
+if (enablepersist=="on" && ccollect.length>0){
+document.cookie=(get_cookie(uniqueidn)=="")? uniqueidn+"=1" : uniqueidn+"=0" 
+firsttimeload=(get_cookie(uniqueidn)==1)? 1 : 0 //check if this is 1st page load
+if (!firsttimeload)
+revivecontent()
+}
+if (ccollect.length>0 && statecollect.length>0)
+revivestatus()
+}
+
+if (window.addEventListener)
+window.addEventListener("load", do_onload, false)
+else if (window.attachEvent)
+window.attachEvent("onload", do_onload)
+else if (document.getElementById)
+window.onload=do_onload
+
+if (enablepersist=="on" && document.getElementById)
+window.onunload=saveswitchstate
+
+</script><style type="text/css">
+.switchcontent{display:none;}body {
+	background-image: url();
+	background-color: #017DBB;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.style1 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.style5 {color: #017DBB}
+</style>
+
+
+
+
+
+
+
+	<link rel="stylesheet" href="wp-content/themes/crayonworld-10/style.css" type="text/css" media="screen">
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="feedhtml.html">
+	<link rel="alternate" type="text/xml" title="RSS .92" href="feed/rsshtml.html">
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="feed/atomhtml.html">
+	<link rel="pingback" href="xmlrpc.html">
+
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.html?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml"> 
+<link rel='index' title='ISMB/ECCB 2007' href='index.html'>
+<meta name="generator" content="WordPress 2.8.4">
+
+<a name="top"></a>
+</head>
+
+<body>	
+<div id="container">
+
+<!-- <div id="header"> -->
+
+
+<div id="header" onclick="location.href='index.html';" style="cursor: pointer;">
+
+
+ <h1><a href="index.html" title="ISMB/ECCB 2007"> 	 ISMB/ECCB 2007 </a></h1>  
+
+</div>
+
+<!--
+<ul id="gnav">
+	<li ><a href="index.html" title="Home">Home</a></li>
+	<li class="page_item page-item-7"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/agenda" title="Agenda-at-a-Glance">Agenda-at-a-Glance</a></li>
+<li class="page_item page-item-46"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/airtravel" title="Air Travel">Air Travel</a></li>
+<li class="page_item page-item-209"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/bof" title="Birds of a Feather (BoF)">Birds of a Feather (BoF)</a></li>
+<li class="page_item page-item-208"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters-latecall" title="Call for Late Posters">Call for Late Posters</a></li>
+<li class="page_item page-item-83"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/papers" title="Call for Papers">Call for Papers</a></li>
+<li class="page_item page-item-220"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/childcare" title="Child Care">Child Care</a></li>
+<li class="page_item page-item-202"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/activities" title="Children/Family Activities">Children/Family Activities</a></li>
+<li class="page_item page-item-90"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees" title="Committees">Committees</a></li>
+<li class="page_item page-item-130"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/promotion" title="Conference Promotion">Conference Promotion</a></li>
+<li class="page_item page-item-112"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsors" title="Conference Sponsors">Conference Sponsors</a></li>
+<li class="page_item page-item-132"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/venue" title="Conference Venue">Conference Venue</a></li>
+<li class="page_item page-item-9"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/contacts" title="Contact Us">Contact Us</a></li>
+<li class="page_item page-item-68"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/demonstrations" title="Demonstrations">Demonstrations</a></li>
+<li class="page_item page-item-119"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitfloorplan" title="Exhibit Floor Plan">Exhibit Floor Plan</a></li>
+<li class="page_item page-item-186"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitorinfo" title="Exhibitor Information">Exhibitor Information</a></li>
+<li class="page_item page-item-194"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitresources" title="Exhibitor Resources">Exhibitor Resources</a></li>
+<li class="page_item page-item-193"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitschedule" title="Exhibitor Schedule">Exhibitor Schedule</a></li>
+<li class="page_item page-item-2"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/faq" title="FAQ">FAQ</a></li>
+<li class="page_item page-item-138"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/housing" title="Housing">Housing</a></li>
+<li class="page_item page-item-12"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/subscribe" title="How to Subscribe">How to Subscribe</a></li>
+<li class="page_item page-item-210"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/volunteers" title="ISMB/ECCB 2007 Conference Volunteers">ISMB/ECCB 2007 Conference Volunteers</a></li>
+<li class="page_item page-item-45"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/deadlines" title="ISMB/ECCB 2007 Deadlines">ISMB/ECCB 2007 Deadlines</a></li>
+<li class="page_item page-item-58"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/highlights" title="ISMB/ECCB 2007 Highlights Track: Call for Proposals">ISMB/ECCB 2007 Highlights Track: Call for Proposals</a></li>
+<li class="page_item page-item-86"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/industry" title="ISMB/ECCB 2007 Industry Track: Call for Proposals">ISMB/ECCB 2007 Industry Track: Call for Proposals</a></li>
+<li class="page_item page-item-125"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/registration" title="ISMB/ECCB 2007 Registration">ISMB/ECCB 2007 Registration</a></li>
+<li class="page_item page-item-78"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/keynotes" title="Keynotes">Keynotes</a></li>
+<li class="page_item page-item-48 current_page_item"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/keynotespresentations" title="Keynotes Presentations">Keynotes Presentations</a></li>
+<li class="page_item page-item-85"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/plostrack" title="PLoS Track at ISMB/ECCB 2007">PLoS Track at ISMB/ECCB 2007</a></li>
+<li class="page_item page-item-121"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters" title="Posters">Posters</a></li>
+<li class="page_item page-item-134"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program" title="Program">Program</a></li>
+<li class="page_item page-item-54"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sigs" title="Special Interest Group Meetings (SIGs)">Special Interest Group Meetings (SIGs)</a></li>
+<li class="page_item page-item-35"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/specialsessions" title="Special Sessions">Special Sessions</a></li>
+<li class="page_item page-item-103"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsorbrochure" title="Sponsor Brochure">Sponsor Brochure</a></li>
+<li class="page_item page-item-100"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps" title="Sponsor Opportunities">Sponsor Opportunities</a></li>
+<li class="page_item page-item-174"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/scs3" title="Student Council Symposium (SCS3)">Student Council Symposium (SCS3)</a></li>
+<li class="page_item page-item-108"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/submissioncontacts" title="Submission Contacts">Submission Contacts</a></li>
+<li class="page_item page-item-139"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/tours" title="Tours">Tours</a></li>
+<li class="page_item page-item-111"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/travelsupport" title="Travel Fellowships">Travel Fellowships</a></li>
+<li class="page_item page-item-59"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/tutorials" title="Tutorials">Tutorials</a></li>
+<li class="page_item page-item-147"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/transit" title="Vienna Transit Pass">Vienna Transit Pass</a></li>
+<li class="page_item page-item-43"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/weather" title="Weather Today">Weather Today</a></li>
+ 
+</ul> --><div id="content">
+
+
+
+
+	  
+		<div class="post">	
+			<h2 class="post-title"><a href="keynotespresentations.html" rel="bookmark" title="Permanent Link: Keynotes Presentations">Keynotes Presentations</a></h2>
+			<p class="post-info">posted <em>23 Sep 2006</em> </p>
+			<div class="post-content">
+	<p><a href="#segal">Eran Segal</a></p>
+<p><a href="#smith">Temple F. Smith</a></p>
+<p><a href="#brunak">Søren Brunak</a></p>
+<p><a href="#burley">Stephen K. Burley</a></p>
+<p><a href="#eisen">Michael Eisen</a></p>
+<p><a href="#gavin">Anne-Claude Gavin</a></p>
+<p><a href="#mattick">John Mattick</a></p>
+<p><a href="#oshea">Erin K. O&#8217;Shea</a></p>
+<p><a href="#schroeder">Renee Schroeder</a></p>
+<p><a href="#speed">Terry Speed</a></p>
+<p></p>
+<table width="100%" border="0">
+<tr>
+<td bgcolor="#F2F2F2"><a name="segal"></a><strong>Eran Segal</strong><br>
+<font color="blue"><strong><em>ISCB Overton Prize</em></strong></font><br>
+Computer Science and Applied Mathematics<br>
+<a href="http://www.weizmann.ac.il/">Department Weizmann Institute of Science</a></td>
+</tr>
+<tr>
+<td>
+<p><strong>Date:</strong> Monday, July 23<br>
+        <strong>Time:</strong> 1:35 p.m. <br>
+        <strong>Room:</strong> Hall A</p>
+<p><strong>Biography:</strong><br>
+<img id="image49" src="wp-content/uploads/2007/02/segal.png" align="right" height="128" width="100" hspace="5" vspace="5" alt="Eran Segal"></p>
+<p>Eran Segal received a B.Sc. (summa cum laude) in Computer Science from Tel-Aviv University in 1998, and a Ph.D. in Computer Science and Genetics from Stanford University in 2004, for work done with Daphne Koller. His doctoral research focused on developing a statistical modeling language that can integrate heterogeneous types of genomic data. Three of his thesis publications received the best paper and best student paper awards at ISMB and RECOMB. Following a research fellow position at the center for physics and biology at Rockefeller University, Dr. Segal joined the Weizmann Institute as a senior scientist in 2005. His lab at Weizmann develops quantitative statistical models, aimed at understanding how molecular components interact to carry out complex biological functions. His current focus is on transcriptional control, translational control, and chromatin structure. Work in the latter direction culminated in the discovery that genomes encode an additional layer of genetic information, superimposed on top of the genetic code, which specifies the preferred placement of nucleosomes on the genome. The results suggested that genomes utilize this nucleosome positioning code to facilitate specific chromosome functions, including transcription factor binding and transcription initiation. These discoveries were published in Nature, and in the July 25, 2006 issue of The New York Times.</p>
+<p><strong>Presentation Title:</strong></p>
+<p>Quantitative Models for Chromatin and Transcription Regulation</p>
+<p><strong>Presentation Abstract:</strong></p>
+<p>Precise control of gene expression lies at the heart of nearly all biological processes. However, despite enormous advances in understanding this process from both experimental and theoretical perspectives, we are still missing a quantitative description of the underlying transcriptional control mechanisms, and the remaining questions, such as how regulatory sequence elements ‘compute’ expression from the inputs they receive, are still very basic.</p>
+<p>In this talk, I will present our progress towards the ultimate goal of developing integrated quantitative models for transcription regulation, spanning all aspects of the process, including the DNA sequence, regulators, expression patterns, and chromatin structure. I will first describe a novel thermodynamic model that computes expression patterns as a function of cis-regulatory sequence and the binding site preferences and expression of participating transcription factors. I will show that when applied to the segmentation gene network of Drosophila, the model accurately predicts the expression of many known cis-regulatory modules, even across species, and reveals important organizing principles of transcriptional regulation in the network: that both strong and large numbers of weaker binding sites contribute, leading to high occupancy of the module DNA, and conferring robustness against mutation; and that clustering of weaker sites permits cooperative binding, which is necessary to sharpen the patterns. I will then describe quantitative models for chromatin, that capture the DNA sequence preferences of nucleosomes and the way in which they specify the genome-wide nucleosome organization, and show that these predictions have significant correspondence to measured nucleosome positions in vivo. Our results suggest that genomes utilize a nucleosome positioning code to facilitate specific chromosome functions, including transcription factor binding and transcription initiation.</p>
+<p><strong>Homepage:</strong><br>
+<a href="http://genie.weizmann.ac.il/">http://genie.weizmann.ac.il</a></p>
+<p><font size="1"><a href="#top">top</a></font></p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#F2F2F2"><a name="smith"></a><strong>Temple F. Smith</strong><br>
+<font color="blue"><strong><em>ISCB Senior Scientist Accomplishment Award</em></strong></font><br>
+Boston University, College of Engineering, Department of Biomedical Engineering<br>
+<a href="http://bmerc.bu.edu/">BioMolecular Engineering Research Center</a></td>
+</tr>
+<tr>
+<td>
+<p>        <b>Date:</b> Wednesday, July 25<br>
+        <b>Time:</b> 1:50 p.m.<br>
+        <b>Room:</b> Hall A</p>
+<p><strong>Biography:</strong><br>
+<img id="image49" src="wp-content/uploads/2007/03/smith.png" align="right" height="128" width="100" hspace="5" vspace="5" alt="Temple F. Smith"></p>
+<p>Dr. Temple Smith graduated with a Ph.D. in Nuclear Physics from the University of Colorado in 1969.  During a joint postdoctoral fellowship under the direction of the mathematician, Stanislaw Ulam, and the molecular biologist, John Sadler, he helped carry out a detailed analysis of the E. coli Lac operator mutations.  In 1979, Dr. Smith was a founder of GenBank at Los Alamos.  There he developed with Walter Goad a statistical mechanical model of the Lac operon system similar to those now being developed in system biology.  Dr. Smith is also a co-developer with Michael Waterman of the Smith-Waterman sequence alignment algorithm, the standard tool underlying most DNA and protein sequence comparison.</p>
+<p>Dr. Smith spent a sabbatical year working with Harold Morowitz at Yale resulting in a paper on the relationship between biology, physics and history. In 1988 he moved to the Harvard School of Public Health in Boston, there organizing a computational biology research center and initiating a series of international meetings on the application of computers in modern biology.  In 1991 the center moved to Boston University, becoming the BioMolecular Engineering Research Center in the College of Engineering where Dr. Smith has served as director and professor of Biomedical Engineering ever since.  Working there with Dr. Richard Lathrop and others, he helped develop new protein threading and Discrete State software.  Dr. Smith has continued his research in many areas, including the time calibration of HIV viral evolution, the modeling of the WD-repeat protein family (with the late Dr. Eva Neer), a full-genome comparative evolutionary analysis of the Drosophila clade, and the implications for the origin of the eukaryotic cell of the evolutionary analysis of the ribosomal proteins.</p>
+<p>Dr. Smith is an avid skier, ice climber, sailor, hockey coach and family man with four sons.  He is also the co-founder of the gene and protein engineering company, Modular Genetics, Inc. in Cambridge, Massachusetts.</p>
+<p><strong>Presentation Title:</strong></p>
+<p>Computational Biology: What is next?</p>
+<p><strong>Presentation Abstract:</strong></p>
+<p>It is often helpful to know your past in order to project the future.  Clearly part of the discipline of biology dates back at least to J.B.S. Haldane and D&#8217;arcy Thompson in the first half of the 20th century. Then there is the critical statistical work of Luria and Delbrueck (1943) demonstrating that genetic mutations arise in bacteria in the absence of selection, rather than being a response to selection.  This is to say nothing of the mathematical challenges in the earliest structural analyses of John Kendrew.  Today we like to think of bioinformatics or computational biology as having become a leading example of interdisciplinary research, yet most of us are not aware of the 1964 Rutgers symposium attended by over 200 researchers from physics, chemistry, microbiology, medicine and others at which many of today&#8217;s comparative and evolutionary computational challenges were clearly laid out! </p>
+<p>Given this history, what is new?  Obviously the wealth of data, and the fact that biological systems appear even more complex than we had imagined.  Composed of vast numbers of both interactions and unique components, they are assembled via a long history of near random selective forces.  The increased complexity would seem to require some completely new models and novel approaches toward thinking about such systems, as well as better educational approaches to train those who will help tackle these challenges.</p>
+<p><strong>Homepage:</strong><br>
+<a href="http://bmerc.bu.edu/bmerc_info/temple.html">http://bmerc.bu.edu/bmerc_info/temple.html</a></p>
+<p><font size="1"><a href="#top">top</a></font>
+      </p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#F2F2F2"><a name="brunak"></a><strong>Søren Brunak</strong><br>
+<a href="http://www.cbs.dtu.dk/index.shtml">Center for Biological Sequence Analysis</a>, BioCentrum-DTU<br>Technical University of Denmark
+</td>
+</tr>
+<tr>
+<td>
+<p>        <b>Date:</b> Sunday, July 22<br>
+        <b>Time:</b> 1:35 p.m.<br>
+        <b>Room:</b> Hall A </p>
+<p><strong>Biography:</strong><br>
+<img id="image75" src="wp-content/uploads/2006/11/brunak.png" align="right" height="128" width="100" hspace="5" vspace="5" alt="Søren Brunak"></p>
+<p>Søren Brunak, Ph.D., is professor of bioinformatics at the Technical University of Denmark. Prof. Brunak completed his early studies at the Niels Bohr Institute, University of Copenhagen, and his doctoral work in Computational Biology at the Technical University of Denmark, where he for more than 15 years has served as a researcher in the Departments of Physics, Chemistry and Biotechnology (most recently under the name BioCentrum-DTU). M.Sc. in Physics, Niels Bohr Institute, University of Copenhagen, Denmark (1987). Ph.D. in Computational Biology, Department of Structural Properties of Materials, Technical University of Denmark (1991). Dr.phil. (honoris causa), Natural Science Faculty, Stockholm University (2002). Søren Brunak is member of the Danish Academy for the Natural Sciences (1997), Board of directors, International Society for Computational Biology (2001), The Danish Academy of Technical Sciences (2002), The Danish Royal Society of Science and Letters (2004). Prof. Brunak is also highly active as member of several biotech advisory boards, as well as the Scientific Advisory Committee at EMBL, Heidelberg, the Ensembl Advisory board at the EBI/Sanger Centre (chairman), the Bioinformatics Advisory Committee at the European Bioinformatics Institute (chairman), as well as the Scientific Advisory Board at the Max Planck Institute for Molecular Genetics (Berlin).</p>
+<p>Søren Brunak has published more than 130 papers with peer-review. Most cited paper has more than 3,000 citations. Several papers have been on the Institute for Scientific Information Red Hot List, most recently in January 2006, where a paper appeared as the most cited paper within all of biology receiving around one citation per day in the period (Bendtsen et al., J. Mol. Biol. 340, 783-795, 2004), now at more than 450 citations. Most recent high-impact publications: &#8220;Dynamic protein complex formation during the cell cycle&#8221;, de Lichtenberg, Jensen, Brunak and Bork, Science, 307, 724-727, 2005. &#8220;Co-evolution of transcriptional and posttranslational cell cycle regulation&#8221;, Jensen, Jensen, de Lichtenberg, Brunak and Bork, Nature, 443, 594-597, 2006.</p>
+<p><strong>Presentation Title:</strong></p>
+<p>Understanding interactomes by data integration</p>
+<p><strong>Presentation Abstract:</strong></p>
+<p>Improved understanding of many complex, cellular mechanisms, such as the eukaryotic cell cycle, necessitates the identification of genes and proteins that belong to broad &#8220;systemic&#8221; categories, where the diversity in terms of molecular functionality is high. This also holds true for most cellular compartments, for example the nucleolus or the mitochondrion.  </p>
+<p>The talk will describe a functional classification approach that can be used to establish better &#8220;components lists&#8221; for such diverse groups of proteins, where putative posttranslational modifications, sorting signals, predicted structural features, and calculated features such as chain length, amino acid composition, isoelectric point, hydrophobicity are integrated and used to infer the functional class.</p>
+<p>The approach predicts functional role categories in the &#8220;feature&#8221; space of the proteome, rather than using the &#8220;sequence&#8221; space of the genome. One important result from the work is that many proteins seem to display conservation in feature space rather than in sequence space, and the method is therefore able to transfer functional information from one species to another in new ways.</p>
+<p>This type of prediction can be integrated with experimental data, such as gene expression data and protein-protein interaction data, and interaction networks can be extracted and characterized. The talk will focus on cell cycle regulated proteins, including a comparative analysis across eukaryotic organisms.</p>
+<p><em>References:</em><br>
+Protein feature-based identification of cell cycle regulated proteins in yeast, U. de Lichtenberg, T.S. Jensen, L.J. Jensen, S. Brunak,  J.  Mol. Biol., 329:663-674, 2003. </p>
+<p>Dynamic protein complex formation during the cell cycle, U. de Lichtenberg, L. Juhl Jensen, S. Brunak, P. Bork, Science, 307:724-727, 2005.</p>
+<p>A Wiring of the Human Nucleolus, A.M. Hinsby, L. Kiemer, E.O. Karlberg, K.L.<br>
+Hansen, A. Fausbøll, A.S. Juncker, J.S. Andersen, ´M. Mann, S. Brunak, Molecular Cell 22:285-295, 2006. </p>
+<p>Co-evolution of transcriptional and posttranslational cell cycle regulation, L.J. Jensen, T.S. Jensen, U. de Lichtenberg, S. Brunak and P. Bork, Nature, 443, 594-597, 2006.</p>
+<p><font size="1"><a href="#top">top</a></font>
+      </p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#F2F2F2"><a name="burley"></a><strong>Stephen K. Burley</strong><br><a href="http://www.sgxpharma.com/">SGX Pharmaceuticals, Inc.</a></td>
+</tr>
+<tr>
+<td>
+<p>        <b>Date:</b> Tuesday, July 24<br>
+        <b>Time:</b> 8:30 a.m.<br>
+        <b>Room:</b> Hall A </p>
+<p><strong>Biography:</strong><br>
+<img id="image49" src="wp-content/uploads/2006/11/burley.png" align="right" height="128" width="100" hspace="5" vspace="5" alt="Stephen Burley"></p>
+<p>Stephen Burley is the chief scientific officer of SGX Pharmaceuticals, Inc. (SGX; http://www.sgxpharma.com/), located in San Diego, California. SGX is an oncology focused drug discovery and development company, with Troxatyl® in clinical trials and multiple protein kinase inhibitors in preclinical development, including compounds targeting imatinib resistant BCR-ABL. Prior to joining SGX, Burley was the Richard M. and Isabel P. Furlaud professor and chief academic officer at The Rockefeller University, and a full investigator in the Howard Hughes Medical Institute. He has authored or coauthored more than 160 scholarly scientific articles. He is a fellow of the Royal Society of Canada and of the New York Academy of Sciences. Burley received an M.D. degree from Harvard Medical School in the joint Harvard-MIT Health Sciences and Technology program and, as a Rhodes Scholar, received a D.Phil. in Molecular Biophysics from Oxford University. He trained in internal medicine at the Brigham and Women\&#8217;s Hospital, and did post-doctoral work with William N. Lipscomb at Harvard University and Gregory A. Petsko at the Massachusetts Institute of Technology. With William J. Rutter and others at the University of California, San Francisco and The Rockefeller University, Burley co-founded Prospect Genomics, Inc., which was subsequently acquired by SGX.</p>
+<p><strong>Presentation Title:</strong></p>
+<p>Fragment-based discovery of BCR-ABL inhibitors for treatment of chronic myelogenous leukemia </p>
+<p><strong>Presentation Abstract:</strong></p>
+<p>SGX Pharmaceuticals, Inc. (SGX) has developed a fragment based drug discovery platform that utilizes high-throughput X-ray crystallography for lead identification/optimization. The proprietary FAST™ (Fragments of Active Structures) process exploits crystallographic screening to detect, visualize, and identify small ligands (MW 150-200) that are bound to the target protein. Each member of the FAST™ fragment/scaffold library was selected to be amenable to rapid chemical elaboration at two or three points of chemical diversity using parallel organic synthesis. Initial lead optimization involves using our knowledge of the co-crystal structure of the target-fragment complex and advanced computational chemistry tools to guide synthesis of small focused linear (one-dimensional) libraries. These linearly elaborated fragments/scaffolds are then evaluated with in vitro biochemical and cellular assays and co-crystal structure determinations. Thereafter, optimal variations at each point of chemical diversity are combined to synthesize focused combinatorial (two- or three-dimensional) libraries that are again examined with assays and crystallography. (The potential chemical diversity of the fully elaborated FAST™ fragment/scaffold library far exceeds 160 million compounds.) Active compound series are prioritized for further medicinal chemistry and compound development efforts using the results of in vitro and in vivo ADME and in vitro toxicology studies  Successful applications of the FAST™ fragment-based lead discovery/optimization process will be presented for a portfolio of well validated oncology targets, including wild-type and Gleevec-resistant BCR-ABL.</p>
+<p><font size="1"><a href="#top">top</a></font>
+      </p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#F2F2F2"><a name="eisen"></a><strong>Micheal Eisen</strong><br>Assistant Professor of Genetics, Genomics and Development<br>
+Center for Integrative Genomics<br>
+Department of Molecular and Cell Biology<br>
+<a href="http://www.berkeley.edu/">University of California, Berkeley</a>
+</td>
+</tr>
+<tr>
+<td>
+<p>        <b>Date: </b>Sunday, July 22<br>
+        <b>Time: </b>5:50 p.m.<br>
+        <b>Room: </b>Hall A </p>
+<p><strong>Biography:</strong><br>
+<img id="image80" src="wp-content/uploads/2006/11/eisen.png" align="right" height="128" width="100" hspace="5" vspace="5" alt="Micheal Eisen"></p>
+<p>Michael B. Eisen received his undergraduate degree in mathematics in 1989 and his Ph.D. in biophysics in 1996 from Harvard. His doctoral research with Don Wiley focused on the structure and evolution of influenza virus proteins. After a brief stint as the play-by-play voice of the Columbia Mules, a minor league baseball team in Tennessee, he moved to Stanford Medical School where he was a postdoctoral fellow with Pat Brown and David Botstein. He joined the Brown and Botstein labs right as DNA microarrays was being developed, and developed the methods for analyzing microarray data that transformed this technology into an invaluable tool for exploring biology. His seminal 1998 paper on cluster analysis that demonstrated the close relationship between expression patterns and gene function has been cited over 5,000 times and is the foundation for extensive subsequence research in computational analysis of genomic data. In 2000, he established his own research group at Lawrence Berkeley National Lab and the University of California, Berkeley that has focused on understanding the function and evolution of regulatory sequences. For his research accomplishments, he was named a Pew Scholar in the Biomedical Sciences in 2001 and received the 2004 Presidential Early-Career Award for Scientists and Engineers, the highest honor bestowed by the US government on young researchers.</p>
+<p>Dr. Eisen has been a forceful and effective advocate for the open exchange of scientific information. In 2000, he co-founded the Public Library of Science (PLoS), a non-profit scientific publisher and advocacy organization that is dedicated to making the world’s scientific and medical research a freely available public resource. PLoS’s success with publishing open access journals (like the ISCB’s PLoS Computational Biology) is leading to the rapid transformation of the scientific publishing industry away from the restrictive access system of subscription journals towards a fully open system that will benefit researchers across the world and the public. For his work on PLoS, Dr. Eisen has received the Benjamin Franklin Award Bioinformatics and a Wired Rave Award and been named one of Scientific American’s 50 leaders in science and technology. </p>
+<p><strong>Presentation Title:</strong></p>
+<p>Understanding and exploiting the evolution of the sequences that control gene expression</p>
+<p><strong>Presentation Abstract:</strong></p>
+<p>My lab studies how the genomic sequences that control gene expression function and evolve. We are driven by a desire to understand the molecular basis of organismal diversity, and the belief that many differences in physiology, morphology and behavior arise from changes in gene regulation. Our ultimate goal is to be able to interpret the regulatory information encoded in genomic DNA, so that we can routinely identify regulatory sequences, discern their function, predict the consequences of their perturbation, and reconstruct how they evolved. </p>
+<p>My talk will focus primarily on recent work on the evolution of regulatory sequences that control gene expression during early development of fruitflies in the genus Drosophila. I will draw on our analyses of the now 12 fully-sequenced members of this genus, as well as extensive experimental genomic data we are generating on the in vivo binding of transcription factors and the spatio-temporal patterns of gene expression in embryos of the model species D. melanogaster and several other members of the genus. </p>
+<p>I will discuss the development and application of transcription-factor specific evolutionary models to characterize the landscape of selection on transcription-factor binding sites and the gain and loss of functional transcription factor binding sites, relating both purifying selection and binding site turnover to their effects on transcription factor binding and gene expression. Our methods and results will, I hope, demonstrate the ways that our fusion of computational and experimental characterizations of biological systems is addressing fundamental questions in molecular, developmental and evolutionary biology. </p>
+<p><strong>Homepage: </strong><br>
+<a href="http://rana.lbl.gov/">http://rana.lbl.gov/</a></p>
+<p><font size="1"><a href="#top">top</a></font>
+      </p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#F2F2F2"><a name="gavin"></a><strong>Anne-Claude Gavin</strong><br><a href="http://www.embl-heidelberg.de/">European Molecular Biology Laboratory, EMBL, Heidelberg, Germany</a></td>
+</tr>
+<tr>
+<td>
+<p>        <b>Date:</b> Monday, July 23<br>
+        <b>Time:</b> 8:30 a.m.<br>
+        <b>Room: </b>Hall A </p>
+<p><strong>Biography:</strong><br>
+<img id="image52" src="wp-content/uploads/2006/09/Gavin.jpg" align="right" height="128" width="100" hspace="5" vspace="5" alt="Anne-Claude Gavin"></p>
+<p>Anne-Claude Gavin is Team Leader in the Structural and Computational Biology Unit at the European Molecular Biology Laboratory, Heidelberg. Before joining the EMBL she was a scientific director at Cellzome AG. In 2002 she received the Genome Technology All-Stars Award in proteomics. Her group has been proponent and pioneer of more general strategies aiming at understanding complex biological systems. With more than 1’200 citations, the system-wide characterization of protein complexes in a model eukaryote, Saccharomyces cerevisiae, by affinity purification and mass spectrometry is generally considered as a breakthrough. Her main research interest includes the study of biomolecular interaction, the understanding of the principles that govern the assembly and dynamics of protein networks.</p>
+<p><strong>Presentation Title:</strong><br>
+Interaction Networks Probed by Mass Spectrometry</p>
+<p><strong>Presentation Abstract:</strong></p>
+<p>Anne-Claude Gavin (1,3), Patrick Aloy (1), Robert B. Russell (1) &#038; Giulio Superti-Furga (2,3) EMBL, Meyerhofstrasse 1, 69117 Heidelberg, Germany</p>
+<p>1. EMBL, Meyerhofstrasse 1, 69117 Heidelberg, Germany.<br>
+2. Center for Molecular Medicine of the Austrian Academy of Sciences, Lazarettgasse 19, 1090 Vienna, Austria<br>
+3. Cellzome AG, Meyerhofstrasse 1, 69117 Heidelberg, Germany</p>
+<p>Recent developments in the -omics field have provided comprehensive repertoires of RNAs, proteins, metabolites that constitute the cell building blocks. The next challenge resides in the understanding of how the &#8220;pieces&#8221; of this puzzle assemble, combine and contribute to the assembly of a coherent entity; a cell. Biology relies on the concerted action of a number interacting proteins and metabolites operationally organized in cellular pathways or networks. However, current appreciation of the &#8220;wiring diagram&#8221; or &#8220;molecular maps&#8221; of these pathways is scanty. We used tandem-affinity purification and mass spectrometry (TAP/MS) to perform a system-wide analysis for protein complexes in a model organism, budding yeast. The study provides one of the largest collections of physically-determined eukaryotic cellular machines; 491 complexes, of which 257 were novel. Beyond the repertoire, the analysis captures the modular nature of proteomes, where protein complexes differentially combine with additional attachment proteins or protein modules to enable a diversification of functions. Support for this organisation comes from integration with available data on expression, localisation, function, evolutionary conservation, protein structure and binary interactions. The innovative scoring system developed measures the potency of proteins to associate. It represents the first attempt to move from static interaction networks to more dynamic maps. This first &#8220;proteome equation&#8221; captures some biochemical properties of protein-protein interaction: the likelihood to be in direct physical contact and, weakly, the dissociation constants. We believe that in the future, experimental and computational refinements may turn such scoring approaches into suitable parameters for rational modeling of (entire) systems.</p>
+<p><strong>Homepage:</strong><br>
+<a href="http://www-db.embl.de/jss/EmblGroupsHD/g_280.html">http://www-db.embl.de/jss/EmblGroupsHD/g_280.html</a></p>
+<p><font size="1"><a href="#top">top</a></font>
+      </p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#F2F2F2"><a name="mattick"></a><strong>John Mattick</strong><br>
+      <a href="http://www.imb.uq.edu.au/index.html">Institute for Molecular Bioscience, University of Queensland</a>
+</td>
+</tr>
+<tr>
+<td>
+<p>        <b>Date:</b> Monday, July 23<br>
+        <b>Time: </b>5:50 p.m.<br>
+        <b>Room: </b>Hall A </p>
+<p><strong>Biography:</strong></p>
+<p><img id="image50" src="wp-content/uploads/2006/09/JohnMattick.jpg" align="right" height="128" width="100" hspace="5" vspace="5" alt="John Mattick"></p>
+<p>John Mattick is Professor of Molecular Biology and Australian Research Council Federation Fellow at the Institute for Molecular Bioscience at the University of Queensland. He received his B.Sc. with First Class Honours from the University of Sydney in 1972, followed by his Ph.D. from Monash University in 1978. </p>
+<p>He has worked at Baylor College of Medicine in Houston Texas, the CSIRO Division of Molecular Biology in Sydney, and at the Universities of Cambridge, Oxford, Cologne and Queensland, where he has been based since 1988. He was the Foundation Director of the ARC Special Research Centre for Molecular and Cellular Biology, the ARC Special Research Centre for Functional and Applied Genomics, the Australian Genome Research Facility, and the Institute for Molecular Bioscience. </p>
+<p>He is a member of the Council of Scientists of the Human Frontier Science Program and a member of the Governing Body of the Asia-Pacific International Molecular biology Network. He was appointed an Officer in the Order of Australia in 2001, and awarded an Honorary Fellowship of the Royal College of Pathologists of Australasia in 2002 as well as the Australian Government Centenary Medal in 2003. </p>
+<p>His major scientific contributions have been the first delineation of the molecular architecture of a multifunctional enzyme complex (fatty acid synthase), the first genetically engineered vaccine developed in Australia, discovery of most of the genes involved in twitching motility and the biogenesis of type IV pili in bacterial pathogens, and most recently a new theory of the genomic programming of complex organisms. </p>
+<p><strong>Presentation Title:</strong><br>
+The majority of the genome of complex organisms is devoted to an RNA regulatory system that directs differentiation and development</p>
+<p><strong>Presentation Abstract:</strong><br>
+John S. Mattick<br>
+Institute for Molecular Bioscience, University of Queensland, St Lucia QLD 4072, Australia.</p>
+<p>It appears that the genetic programming of the higher organisms has been fundamentally misunderstood for the past 50 years, because of the presumption &#8211; largely true in prokaryotes, but not in eukaryotes &#8211; that most genetic information is expressed and transacted by proteins, which are the analog components of cells. Although only about 1.2% encodes proteins, most of the human genome is in fact transcribed, the vast majority (~98%) of which is non-protein-coding RNA (ncRNA), comprising introns of protein-coding genes and introns and exons of ncRNA genes. These transcripts include complex interlaced clusters of overlapping sense and antisense transcripts, and &#8220;intergenic&#8221; transcripts. Many of these transcripts are cell- or tissue-specific, and we have identified large numbers of ncRNAs that are dynamically regulated during embryonal stem cell differentiation, muscle cell differentiation, macrophage and T-cell activation, and male and female gonadal development, among others. Some of these transcripts are processed to small RNAs, including miRNAs that regulate the translation or stability of mRNAs to control many aspects of development, snoRNAs that direct modification of other RNAs, and piRNAs that are expressed in testis. RNA signaling is also involved in chromosome dynamics and chromatin modification. Most snoRNAs and miRNAs remain to be identified, and it appears likely that there may be tens or even hundreds of thousands of these and other classes of yet-to-be-discovered regulatory RNAs in humans and other mammals. </p>
+<p>These observations, combined with theoretical and empirical studies that show that regulation scales non-linearly with complexity, and the increasing number of genetic phenomena shown to be RNA-directed, suggest that the majority of the genomes of complex organisms is not comprised of evolutionary debris but rather is devoted to an advanced and highly parallel genetic operating system transacted by regulatory RNAs that direct the trajectories of differentiation and development via control of epigenetic memory, promoter selection, splicing, RNA editing, mRNA stability and mRNA translation. The evolution of this system was almost certainly the prerequisite for the metazoan radiation. RNA regulation occurs in all organisms, but progressively dominates genomic programming as developmental complexity increases. Regulatory RNA networks also likely underpin most developmental and phenotypic differences between species and individuals, as well as many complex diseases and cancer.
+</p>
+<p><strong>Homepage:</strong><br>
+        <a href="http://www.imb.uq.edu.au/index.html?page=11681&pid=11669">http://www.imb.uq.edu.au/index.html?page=11681&#038;pid=11669</a></p>
+<p><font size="1"><a href="#top">top</a></font>
+      </p>
+</td>
+</tr>
+<tr>
+</tr><tr>
+<td bgcolor="#F2F2F2"><a name="oshea"></a><strong>Erin K. O&#8217;Shea</strong><br><a href="http://www.hhmi.org/">Howard Hughes Medical Institute</a><br>
+<a href="http://www.mcb.harvard.edu/">Harvard University, Department of Molecular and Cellular Biology</a><br>
+<a href="http://sysbio.harvard.edu/csb/">Harvard University, FAS Center for Systems Biology</a></td>
+</tr>
+<tr>
+<td>
+<p>        <b>Date: </b>Sunday, July 22<br>
+        <b>Time:</b> 8:30 a.m.<br>
+        <b>Room:</b> Hall A </p>
+<p><strong>Biography:</strong><br>
+<img id="image77" src="wp-content/uploads/2006/11/oshea.png" align="right" height="128" width="100" hspace="5" vspace="5" alt="Erin K. O'Shea"></p>
+<p>Dr. O&#8217;Shea is an Investigator of the Howard Hughes Medical Institute, Director of the Harvard FAS Center for Systems Biology and Professor of Molecular and Cellular Biology at Harvard University. She received her undergraduate degree in biochemistry from Smith College and her Ph.D. degree in chemistry from the Massachusetts Institute of Technology, for work done with Peter Kim. She carried out postdoctoral research with Robert Tjian at the University of California, Berkeley, and with Ira Herskowitz at the University of California, San Francisco. Dr. O&#8217;Shea&#8217;s honors include the National Academy of Sciences Award in Molecular Biology, a David and Lucile Packard Foundation Fellowship, a Presidential Faculty Fellow Award, the American Society for Cell Biology–Promega Early Career Life Science Award, and the Irving Sigal Young Investigator Award from the Protein Society.  She is a member of the American Academy of Microbiology, the American Academy of Arts and Sciences, and the National Academy of Sciences. </p>
+<p><strong>Presentation Title:</strong></p>
+<p>Dissecting Transcriptional Network Structure and Function</p>
+<p><strong>Presentation Abstract:</strong></p>
+<p><em>Dissecting Transcriptional Network Structure and Function</em><br>
+Andrew Capaldi, Kristen Cook, Ying Liu, Tommy Kaplan, Naomi Habib, Aviv Regev, Nir Friedman and Erin O’Shea*</p>
+<p>*Howard Hughes Medical Institute, FAS Center for Systems Biology, Department of Molecular and Cellular Biology, Harvard University, Cambridge MA 02138</p>
+<p>To gain insight into transcriptional network structure and function we are studying the response of budding yeast to hyper-osmotic stress.  A single kinase, Hog1, controls the expression of over 300 genes by modulating the activity of several transcription factors.  We have determined the influence that each transcription factor has on gene expression, both alone and in combination, by conducting systematic microarray and ChIP-chip experiments in different genetic backgrounds.  Computational analyses of these data have allowed us to construct a detailed model of the interactions and activities underlying this transcriptional response.  Our findings reveal a dense overlapping network structure where the Hog1 dependent transcription factors act in different combinations, at different genes, to precisely define the output.  This architecture allows Hog1 to control a highly diverse transcriptional program by incorporating both osmotic stress-specific and general stress transcription factors.  Most remarkably, however, we find that this network structure also allows Hog1 to activate alternate expression programs in other stress conditions, by integrating information from other pathways.  We demonstrate that condition specific changes in the activity of Hog1, or the general stress transcription factors, leads to a range of expression changes at the gene level, due to the variety of transcription factor combinations and differences in their combinatorial logic.  Therefore, an overlapping network architecture allows the cell to create a fine-tuned response over hundreds of genes using a minimal number of signaling pathways and transcription factors, providing an explanation for its overrepresentation among biological network motifs.</p>
+<p><font size="1"><a href="#top">top</a></font>
+      </p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#F2F2F2"><a name="schroeder"></a><strong>Renée Schroeder</strong><br><a href="http://www.mfpl.ac.at/">Max F. Perutz Laboratories</a>, University of Vienna
+</td>
+</tr>
+<tr>
+<td>
+<p>        <b>Date:</b> Wednesday, July 25<br>
+        <b>Time:</b> 8:45 a.m.<br>
+        <b>Room: </b>Hall A </p>
+<p><strong>Biography:</strong></p>
+<p><img id="image81" src="wp-content/uploads/2006/12/schroeder.png" align="right" height="128" width="100" hspace="5" vspace="5" alt="Renée Schroeder"></p>
+<p><strong>Presentation Title:</strong></p>
+<p>Genomic SELEX for the identification of novel non-coding RNAs independent of their expression level</p>
+<p><strong>Co-authors:</strong></p>
+<p>Christina Lorenz, Frederike von Pelchrzim</p>
+<p><strong>Presentation Abstract:</strong> </p>
+<p>The genome wide analysis of the transcriptional activity within cells relies on the discovery and detection of their RNAs. It was initially assumed, that most parts of the human genome are silent and do not code for essential functions. We are now realizing that probably all parts of the human genome are transcribed and massive efforts are being undertaken to detect and identify the complete transcriptomes. Bioinformatics are a successful approach for predicting transcripts with known and predictable characteristics. RNomics is an approach, during which all expressed RNAs are cloned and sequenced. Here, we proposed an additional strategy to detect functional RNAs independently of their expression levels. For “Genomic SELEX” a genomic library is constructed and used in cycles of selection and amplification to isolate RNAs with chosen properties, for example protein-binding RNAs or RNAs that bind to small ligands. I will present the results and analyses of transcripts from the human and E. coli genomes, that have high affinity to RNA polymerase II and the RNA chaperone Hfq. </p>
+<p><strong>Homepage:</strong> </p>
+<p><a href="http://www.mfpl.ac.at/index.php?cid=72">http://www.mfpl.ac.at/index.php?cid=72</a>    </p>
+<p><font size="1"><a href="#top">top</a></font>
+      </p>
+</td>
+</tr>
+<tr>
+<td bgcolor="#F2F2F2"><a name="speed"></a><strong>Terry Speed</strong><br>
+Department of Statistics, <a href="http://www.stat.berkeley.edu/">University of California at Berkeley</a><br>
+<a href="http://bioinf.wehi.edu.au/">Bioinformatics Division, Walter &#038; Eliza Hall Institute of Medical Research</a>, Australia
+</td>
+</tr>
+<tr>
+<td>
+<p>        <b>Date:</b> Tuesday, July 24<br>
+        <b>Time:</b> 5:00 p.m.<br>
+        <b>Room:</b> Hall A </p>
+<p><strong>Biography:</strong></p>
+<p><img id="image81" src="wp-content/uploads/2006/11/speed.png" align="right" height="128" width="100" hspace="5" vspace="5" alt="Terry Speed"></p>
+<p>Terry Speed splits his time roughly 50:50 between the Department of Statistics at the University of California, Berkeley (Jan-May) and WEHI (June-Dec) each year. Originally trained in mathematics and statistics, he has had a life-long interest in genetics. After teaching mathematics and statistics in universities in Australia and the United Kingdom, and a spell in the Australian Commonwealth Scientific and Industrial Research Organization, he came to Berkeley 20 years ago. Since that time, his research and teaching interests have concerned the application of statistics to genetics and molecular biology. Within that subfield, eventually to be named bioinformatics, his interests are broad, including biomolecular sequence analysis, the mapping of genes in experimental crosses and human pedigrees, and functional genomics. he has been particularly involved in the low level analysis of microarray data.</p>
+<p><strong>Presentation Title:</strong></p>
+<p>Genome-wide genotyping: the great classification challenge </p>
+<p><strong>Presentation Abstract:</strong></p>
+<p>Twenty years ago the first genome-wide linkage map of the human genome involved just over 400 polymorphic loci, mostly restriction fragment length polymorphisms. Ten years ago, a comprehensive human genetic map had several thousand polymorphic loci, these being principally short tandem repeat polymorphisms, while routine genotyping would typically involve 100-400 such markers. Currently, we know over 10 million single-nucleotide polymorphisms<br>
+(SNPs) in the human genome, and have technologies for routinely genotyping an<br>
+individual at half a million of these. Several large surveys around the world plan to do just this for thousands of individuals.  There is only room for one more scale-up by a factor of 10. We are just a few years away from being able to identify all places at which an individual&#8217;s genome differs from a reference genome. Regardless of  the technology, genotyping an individual will then consist of assaying their genomic DNA,  and on the basis of the data collected, assigning them to one of a small number of categories, typically 3, at millions of loci. Doing this well on thousands of individuals, is a classification challenge of immense proportions.  It is not unprecedented, as we are already doing it well for hundreds of thousands of loci, on hundreds of people. What is a good strategy with which to meet this challenge? What novel computational ideas seem to be necessary? What old ideas seem to work?</p>
+<p><strong>Homepage:</strong></p>
+<p><a href="http://www.stat.berkeley.edu/~terry/">http://www.stat.berkeley.edu/~terry/</a><br>
+<a href="http://bioinf.wehi.edu.au/contacts/details_speed.html">http://bioinf.wehi.edu.au/contacts/details_speed.html</a>
+</p></td>
+</tr>
+</table>
+			<!--	<p>Eran Segal<br />
+Temple F. Smith<br />
+Søren Brunak<br />
+Stephen K. Burley<br />
+Michael Eisen<br />
+Anne-Claude Gavin<br />
+John Mattick<br />
+Erin K. O&#8217;Shea<br />
+Renee Schroeder<br />
+Terry Speed</p>
+<p>Eran Segal<br />
+ISCB Overton Prize<br />
+Computer Science and Applied Mathematics<br />
+Department Weizmann Institute of Science</p>
+<p>Date: Monday, July 23<br />
+        Time: 1:35 p.m.<br />
+        Room: Hall A<br />
+Biography:</p>
+<p>Eran Segal received a B.Sc. (summa cum [...]</p>
+   -->
+	
+<!-- turned comments off -->
+<!-- 		
+                        <p class="post-bot">
+			<span>Comments Off</span>			</p> 
+-->
+			<!--
+			<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				xmlns:dc="http://purl.org/dc/elements/1.1/"
+				xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+			<rdf:Description rdf:about="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/keynotespresentations"
+    dc:identifier="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/keynotespresentations"
+    dc:title="Keynotes Presentations"
+    trackback:ping="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/keynotespresentations/trackback" />
+</rdf:RDF>			-->
+		</div>
+		
+<!-- You can start editing here. -->
+
+
+  		<!-- If comments are closed. -->
+		<p class="nocomments"><font size="1"><a href="#top">top</a></font></p>
+		
+	
+
+	</div>
+   
+	<div class="pagenav"></div>
+	</div>
+<div id="sidebar">
+	<div id="intro">
+		
+	<div class="post">	
+		<h2 class="post-title">15th Annual International Conference on Intelligent Systems for Molecular Biology (ISMB)<br>& 6th European Conference on Computational Biology (ECCB)</h2>
+		<p class="post-info">Vienna, Austria: July 21-25, 2007</p>
+
+
+<!--	
+<img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/themes/crayonworld-10/img/profile.jpg" class="profile" /> 
+			<p><strong>ISMB/ECCB 2007</strong></p>
+			<p>Vienna, Austria: July 21-25, 2007</p>
+-->
+<!--			
+<p>There are 92 posts and 0 comments so far.</p>		      -->
+	</div>	
+</div>	
+		
+<div id="sideone"> 
+
+<!--
+
+	<h2>Quick Bits</h2>
+						<p>This is for the Asides functionality.<br/> Enter the id of the category you want to be treated as Asides, in the Main Template (index.php) <br/></p>
+			
+
+-->
+
+
+<!-- KEYNOTES START 
+
+	<h2>Keynotes</h2>
+
+  <div>
+
+<span class="feed">
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-f.gif" align="right" width="41" height="41"><strong>Keynote Speaker</strong><br>blah blah blah blah blah blah<br>
+
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-m.gif" align="right" width="41" height="41"><strong>Keynote Speaker</strong><br>yada yada yada yada yada yada<br>
+
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-m.gif" align="right" width="41" height="41"><strong>Keynote Speaker</strong><br>yada yada yada blah blah blah<br>
+
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-f.gif" align="right" width="41" height="41"><strong>Keynote Speaker</strong><br>blah blah blah blah blah blah<br>
+
+</span></div>
+
+ KEYNOTES END -->
+
+
+<!-- SPONSORS START 
+
+	<h2>Premier Sponsors</h2>
+
+
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-f.gif" width="41" height="41"><br>
+
+ SPONSORS END -->
+
+<!-- WEATHER START
+
+<div>
+
+<h2>Venue</h2>
+<p class="post-info">
+<a href="http://www.acv.at/evo/web/acv/1584_DE">Austria Center Vienna</a><br><a href="http://www.acv.at/evo/web/acv/1584_DE"><img id="image31" src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/centre.png" alt="Austria Center Vienna" border="0"></a>
+</p>
+
+<span class="feed">
+<br><script language=javascript>var LocationID = 'AUXX0025';</script>
+<script language=javascript src='http://www.theweathernetwork.com/weatherbutton/wxbutton.js'></script>
+
+</span>
+</div>
+
+-->
+
+
+<!--
+		<h2>Links</h2>
+	<ul> </ul>	
+
+-->
+		
+</div>
+		
+	<div id="sidetwo">
+
+<!-- <h2><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/">Home</a></h2> -->
+
+<!-- <h2>Menu</h2> -->
+
+<!-- MENU START -->
+
+          <!--Optional Expand/ Contact All links. Remove if desired-->
+        <p class="post-info">    <a href="javascript:sweeptoggle('expand')">+Expand 
+            All</a> | <a href="javascript:sweeptoggle('contract')">-Contract All</a></p>
+            <div></div>
+
+			
+<!--PROGRAM-->
+            <p onclick="expandcontent(this, 'sc1')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Program</b></p>
+            <div id="sc1" class="switchcontent"> 
+        <ul>
+         <li><a href="agenda.html">Agenda-at-a-Glance</a></li>
+         <li><a href="program/schedule.html">Conference Schedule</a></li>
+         <li><a href="program/bof.html">Birds of a Feather</a></li>
+         <li><a href="program/demonstrations.html">Demonstrations</a></li>
+         <li><a href="program/highlights.html">Highlights Track</a></li>
+         <li><a href="program/industry.html">Industry Posters</a></li>
+         <li><a href="program/industrytrack.html">Industry Track</a></li>
+         <li><a href="program/papers.html">Papers</a></li>
+         <li><a href="program/plostrack.html">PLoS Track</a></li>
+         <li><a href="program/posters.html">Posters</a></li>
+         <li><a href="program/sigs.html">Satellite Meetings and SIGs</a></li>
+         <li><a href="program/scientific.html">Scientific Program Information</a></li>
+         <li><a href="program/social.html">Social Events</a></li>
+         <li><a href="program/specialsessions.html">Special Sessions</a></li>
+         <li><a href="program/scs.html">Student Council Symposium</a></li>
+         <li><a href="program/tutorials.html">Tutorials</a></li>
+        </ul>
+            </div>
+
+
+<!--KEYNOTES-->
+
+            <div> 
++ <strong><font color="black"><a href="keynotes.html">Keynotes</a></font></strong>
+            </div>
+
+			
+<!--DEADLINES-->
+<!--
+            <p onClick="expandcontent(this, 'sc2')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Deadlines</b></p>
+
+            <div id="sc2" class="switchcontent"> 
+              <ul>
+                 <li><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/deadlines/">Deadlines</a></li>
+              </ul>
+            </div>
+-->
+
+            <div> 
++ <strong><a href="deadlines.html">Deadlines</a></strong>
+            </div>
+
+
+<!--SUBS GUIDELINES-->
+
+            <p onclick="expandcontent(this, 'sc3')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Submissions/Guidelines</b></p>
+            <div id="sc3" class="switchcontent"> 
+
+        <ul>         
+         <li><a href="bof.html">Birds of a Feather (BoF)</a></li>
+         <li><a href="posters-latecall.html">Call for Late Posters</a></li>
+         <li><a href="papers.html">Call for Papers</a></li>
+         <li><a href="specialsessions.html">Special Sessions</a></li>
+         <li><a href="highlights.html">Highlights Track</a></li>
+         <li><a href="plostrack.html">PLoS Track</a></li>
+         <li><a href="program/posters.html">Posters</a></li>
+         <li><a href="demonstrations.html">Demonstrations</a></li>
+         <li><a href="tutorials.html">Tutorials</a></li>
+         <li><a href="industry.html">Industry Track</a></li>
+         <li><a href="sigs.html">Special Interest Groups (SIGs)</a></li>
+         <li><a href="scs3.html">Student Council Symposium (SCS3)</a></li>
+         <li><a href="travelsupport.html">Travel Fellowships</a></li>
+        </ul>
+            </div>
+
+		
+			<!--submissions-->
+			<!--
+            <p onClick="expandcontent(this, 'sc4')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Submissions</b></p>
+            <div id="sc4" class="switchcontent"> 
+              <ul>
+                <li>Call for Papers</li>
+                <li>Call for Tutorials</li>
+                <li>Late Breaking Poster Session Call</li>
+                <li>Call for PLoS Track</li>
+                <li>Call for SCS2 Posters</li>
+                <li>Academic Demos</li>
+                <li>Industry Demos</li>
+                <li>Travel Fellowships</li>
+                <li>Poster Guidelines &amp; Schedule</li>
+                <li>BOF Sign-up</li>
+                <li>Paper Guidelines</li>
+              </ul>
+            </div>
+			-->
+			
+
+<!--REGISTRATION-->
+
+            <div> 
++ <strong><a href="registration.html">Registration</a></strong>
+            </div>
+
+		
+			<!--registration-->
+			<!--
+            <p onClick="expandcontent(this, 'sc5')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Registration</b></p>
+
+            <div id="sc5" class="switchcontent"> 
+              <ul>
+                <li><a href="">Keynotes</a></li>
+                <li><a href="">Tutorials</a></li>
+                <li><a href="">Demos</a></li>
+              </ul>
+            </div>
+			-->
+			
+
+<!--GENERAL INFO-->
+            <p onclick="expandcontent(this, 'sc6')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>General Information</b> </p>
+
+            <div id="sc6" class="switchcontent"> 
+
+<ul>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="airtravel.html">Air Travel</a></li>
+<li><a href="activities.html">Children/Family Activities</a></li>
+<li><a href="childcare.html">Child Care</a></li>
+<li><a href="venue.html">Conference Venue</a></li>
+<li><a href="housing.html">Housing</a></li>
+<li><a href="tours.html">Tours</a></li>
+<li><a href="transit.html">Transit Passes</a></li>
+<li><a href="volunteers.html">Volunteers</a></li>
+</ul>
+
+            </div>
+
+
+
+<!--SPONSORS/EXHIBITORS-->
+
+            <p onclick="expandcontent(this, 'sc7a')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Sponsors & Exhibitors</b></p>
+            <div id="sc7a" class="switchcontent"> 
+              <ul>
+                 <li><a href="sponsors.html">Conference Sponsors</a></li>
+                 <li><a href="exhibitfloorplan.html">Conference Exhibitors</a></li>
+              </ul>
+            </div>
+
+
+
+<!--SPONSORS/EXHIBITORS INFO-->
+
+            <p onclick="expandcontent(this, 'sc7')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Sponsors/Exhibitors Information</b></p>
+            <div id="sc7" class="switchcontent"> 
+              <ul>
+                 <li><a href="sponsoropps.html">Sponsor Opportunities</a></li>
+                 <li><a href="sponsorbrochure.html">Sponsor Brochure</a></li>
+                 <li><a href="http://www.iscb.org/cms_addon/conferences/ismb07/sponsor_signup.php">Sponsor & Exhibitor Sign-up</a></li>
+                 <li><a href="exhibitorinfo.html">Exhibitor Information</a></li> 
+            <!--     <li><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitresources/">Exhibitor Resources</a></li> -->
+            <li><a href="exhibitschedule.html">Exhibitor Schedule</a></li> 
+                <li><a href="exhibitfloorplan.html">Exhibitor Floor Plan</a></li> 
+              </ul>
+            </div>
+			
+			<!--committees-->
+            <p onclick="expandcontent(this, 'sc8')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Committees</b></p>
+
+            <div id="sc8" class="switchcontent"> 
+              <ul>
+<!-- <li><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/">All Committees</a></li> -->
+<li><a href="committees/chairs.html">Conference Chairs</a></li>
+<li><a href="committees/steeringcommittee.html">Steering Committee</a></li>
+<li><a href="committees/soc.html">Scientific Organizing Committee</a></li>
+<li><a href="committees/areachairs.html">Area Chairs</a></li>
+<li><a href="committees/highlights.html">Highlights Track</a></li>
+<li><a href="committees/plostrack.html">PLoS Track</a></li>
+            </ul>
+            </div>
+
+			<!--press pass-->
+<!--
+            <p onClick="expandcontent(this, 'sc9')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Press Pass</b> </p>
+            <div id="sc9" class="switchcontent"> 
+              <ul>
+                <li><a href="http://ismb.org/">Press Pass</a></li>
+              </ul>
+            </div>
+-->
+			
+<!--CONTACTS-->
+
+            <p onclick="expandcontent(this, 'sc10')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Contact Us</b> </p>
+            <div id="sc10" class="switchcontent"> 
+              <ul>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="submissioncontacts.html">Submission Contacts</a></li>
+              </ul>
+            </div>
+
+
+
+<!--CONFERENCE PROMO-->
+
+            <div> 
++ <strong><a href="promotion.html">Conference Promotion</a></strong>
+            </div>
+
+
+<!--PRESS PASS-->
+
+            <div> 
++ <strong><a href="http://www.iscb.org/cms_addon/conferences/ismb/presspass.php">Press Pass</a></strong>
+            </div>
+
+
+<!--UPDATES-->
+
+            <p onclick="expandcontent(this, 'sc11')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Blog Updates</b> </p>
+            <div id="sc11" class="switchcontent"> 
+
+              <ul><li><a href="feedhtml.html" title="Subscribe to Updates using RSS">Subscribe<img src="wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"></a></li>
+
+<li><a href="http://www.feedpass.com/ISMBECCB2007">How to Subscribe</a></li>
+
+
+		<li><a href='2007/09.html' title='September 2007'>September 2007</a>&nbsp;(2)</li>
+	<li><a href='2007/07.html' title='July 2007'>July 2007</a>&nbsp;(4)</li>
+	<li><a href='2007/06.html' title='June 2007'>June 2007</a>&nbsp;(2)</li>
+	<li><a href='2007/05.html' title='May 2007'>May 2007</a>&nbsp;(1)</li>
+	<li><a href='2007/03.html' title='March 2007'>March 2007</a>&nbsp;(2)</li>
+	<li><a href='2007/01.html' title='January 2007'>January 2007</a>&nbsp;(2)</li>
+	<li><a href='2006/12.html' title='December 2006'>December 2006</a>&nbsp;(3)</li>
+	<li><a href='2006/11.html' title='November 2006'>November 2006</a>&nbsp;(1)</li>
+	<li><a href='2006/10.html' title='October 2006'>October 2006</a>&nbsp;(1)</li>
+	<li><a href='2006/09.html' title='September 2006'>September 2006</a>&nbsp;(1)</li>
+	<li><a href='2006/07.html' title='July 2006'>July 2006</a>&nbsp;(1)</li>
+</ul>
+            </div>
+
+<!--MENU END-->
+
+
+
+<!--TAGS-->
+<!--	
+        <h2>Tags</h2>
+	<ul>
+			<li class="cat-item cat-item-4"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/category/announcements" title="View all posts filed under announcements">announcements</a> (11)
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/category/uncategorized" title="View all posts filed under Uncategorized">Uncategorized</a> (9)
+</li>
+	</ul>		
+-->
+
+
+<!--OLD UPDATES-->
+<!--
+	<h2>Updates</h2>
+
+<p class="post-info"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/feed" title="Syndicate this site using RSS"><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"> updates</a></span><br>
+
+	<ul>	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/09' title='September 2007'>September 2007</a>&nbsp;(2)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/07' title='July 2007'>July 2007</a>&nbsp;(4)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/06' title='June 2007'>June 2007</a>&nbsp;(2)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/05' title='May 2007'>May 2007</a>&nbsp;(1)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/03' title='March 2007'>March 2007</a>&nbsp;(2)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/01' title='January 2007'>January 2007</a>&nbsp;(2)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/12' title='December 2006'>December 2006</a>&nbsp;(3)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/11' title='November 2006'>November 2006</a>&nbsp;(1)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/10' title='October 2006'>October 2006</a>&nbsp;(1)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/09' title='September 2006'>September 2006</a>&nbsp;(1)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/07' title='July 2006'>July 2006</a>&nbsp;(1)</li>
+</ul>	
+-->
+
+
+<!-- 
+<a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/comments/feed" title="The latest comments to all posts in RSS"><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"> comments</a></span>
+-->
+
+<!--PAGES-->
+<!--	
+        <h2>Pages</h2>
+	<ul><li class="page_item page-item-7"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/agenda" title="Agenda-at-a-Glance">Agenda-at-a-Glance</a></li>
+<li class="page_item page-item-46"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/airtravel" title="Air Travel">Air Travel</a></li>
+<li class="page_item page-item-209"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/bof" title="Birds of a Feather (BoF)">Birds of a Feather (BoF)</a></li>
+<li class="page_item page-item-208"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters-latecall" title="Call for Late Posters">Call for Late Posters</a></li>
+<li class="page_item page-item-83"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/papers" title="Call for Papers">Call for Papers</a></li>
+<li class="page_item page-item-220"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/childcare" title="Child Care">Child Care</a></li>
+<li class="page_item page-item-202"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/activities" title="Children/Family Activities">Children/Family Activities</a></li>
+<li class="page_item page-item-90"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees" title="Committees">Committees</a>
+<ul>
+	<li class="page_item page-item-89"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/areachairs" title="Area Chairs">Area Chairs</a></li>
+	<li class="page_item page-item-87"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/papers-chairs" title="Call for Papers Area Chairs">Call for Papers Area Chairs</a></li>
+	<li class="page_item page-item-10"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/chairs" title="Conference Chairs">Conference Chairs</a></li>
+	<li class="page_item page-item-205"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/highlights" title="Highlights Track Area Chairs">Highlights Track Area Chairs</a></li>
+	<li class="page_item page-item-164"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/plostrack" title="PLoS Track">PLoS Track</a></li>
+	<li class="page_item page-item-42"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/soc" title="Scientific Organizing Committee">Scientific Organizing Committee</a></li>
+	<li class="page_item page-item-41"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/steeringcommittee" title="Steering Committee">Steering Committee</a></li>
+</ul>
+</li>
+<li class="page_item page-item-130"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/promotion" title="Conference Promotion">Conference Promotion</a></li>
+<li class="page_item page-item-112"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsors" title="Conference Sponsors">Conference Sponsors</a></li>
+<li class="page_item page-item-132"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/venue" title="Conference Venue">Conference Venue</a></li>
+<li class="page_item page-item-9"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/contacts" title="Contact Us">Contact Us</a></li>
+<li class="page_item page-item-68"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/demonstrations" title="Demonstrations">Demonstrations</a></li>
+<li class="page_item page-item-119"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitfloorplan" title="Exhibit Floor Plan">Exhibit Floor Plan</a></li>
+<li class="page_item page-item-186"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitorinfo" title="Exhibitor Information">Exhibitor Information</a></li>
+<li class="page_item page-item-194"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitresources" title="Exhibitor Resources">Exhibitor Resources</a></li>
+<li class="page_item page-item-193"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitschedule" title="Exhibitor Schedule">Exhibitor Schedule</a></li>
+<li class="page_item page-item-2"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/faq" title="FAQ">FAQ</a></li>
+<li class="page_item page-item-138"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/housing" title="Housing">Housing</a></li>
+<li class="page_item page-item-12"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/subscribe" title="How to Subscribe">How to Subscribe</a></li>
+<li class="page_item page-item-210"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/volunteers" title="ISMB/ECCB 2007 Conference Volunteers">ISMB/ECCB 2007 Conference Volunteers</a></li>
+<li class="page_item page-item-45"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/deadlines" title="ISMB/ECCB 2007 Deadlines">ISMB/ECCB 2007 Deadlines</a></li>
+<li class="page_item page-item-58"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/highlights" title="ISMB/ECCB 2007 Highlights Track: Call for Proposals">ISMB/ECCB 2007 Highlights Track: Call for Proposals</a></li>
+<li class="page_item page-item-86"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/industry" title="ISMB/ECCB 2007 Industry Track: Call for Proposals">ISMB/ECCB 2007 Industry Track: Call for Proposals</a></li>
+<li class="page_item page-item-125"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/registration" title="ISMB/ECCB 2007 Registration">ISMB/ECCB 2007 Registration</a>
+<ul>
+	<li class="page_item page-item-165"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/registration/membership" title="ISCB Membership Fee Chart">ISCB Membership Fee Chart</a></li>
+</ul>
+</li>
+<li class="page_item page-item-78"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/keynotes" title="Keynotes">Keynotes</a></li>
+<li class="page_item page-item-48"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/keynotespresentations" title="Keynotes Presentations">Keynotes Presentations</a></li>
+<li class="page_item page-item-85"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/plostrack" title="PLoS Track at ISMB/ECCB 2007">PLoS Track at ISMB/ECCB 2007</a></li>
+<li class="page_item page-item-121"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters" title="Posters">Posters</a>
+<ul>
+	<li class="page_item page-item-124"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters/posterboard" title="Poster Board Dimensions">Poster Board Dimensions</a></li>
+</ul>
+</li>
+<li class="page_item page-item-134"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program" title="Program">Program</a>
+<ul>
+	<li class="page_item page-item-185"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/papers" title="Accepted Papers">Accepted Papers</a></li>
+	<li class="page_item page-item-177"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/affiliate" title="Affiliate Meetings">Affiliate Meetings</a></li>
+	<li class="page_item page-item-234"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/bof" title="Birds of a Feather (BoF)">Birds of a Feather (BoF)</a></li>
+	<li class="page_item page-item-223"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/demonstrations" title="Demonstrations">Demonstrations</a></li>
+	<li class="page_item page-item-229"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/highlights" title="Highlights Track">Highlights Track</a></li>
+	<li class="page_item page-item-222"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/industry" title="Industry Posters">Industry Posters</a></li>
+	<li class="page_item page-item-228"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/industrytrack" title="Industry Track">Industry Track</a></li>
+	<li class="page_item page-item-219"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/schedule" title="ISMB/ECCB 2007 Conference Schedule">ISMB/ECCB 2007 Conference Schedule</a></li>
+	<li class="page_item page-item-227"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/plostrack" title="PLoS Track">PLoS Track</a></li>
+	<li class="page_item page-item-152"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/sigs" title="Satellite Meetings and SIGs">Satellite Meetings and SIGs</a></li>
+	<li class="page_item page-item-79"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/scientific" title="Scientific Program Information">Scientific Program Information</a></li>
+	<li class="page_item page-item-146"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/social" title="Social Events">Social Events</a></li>
+	<li class="page_item page-item-158"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/specialsessions" title="Special Sessions">Special Sessions</a>
+	<ul>
+		<li class="page_item page-item-167"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/specialsessions/details" title="Special Sessions Details">Special Sessions Details</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-153"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/scs" title="Student Council Symposium (SCS3)">Student Council Symposium (SCS3)</a></li>
+	<li class="page_item page-item-136"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/tutorials" title="Tutorials Program">Tutorials Program</a></li>
+</ul>
+</li>
+<li class="page_item page-item-54"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sigs" title="Special Interest Group Meetings (SIGs)">Special Interest Group Meetings (SIGs)</a></li>
+<li class="page_item page-item-35"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/specialsessions" title="Special Sessions">Special Sessions</a></li>
+<li class="page_item page-item-103"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsorbrochure" title="Sponsor Brochure">Sponsor Brochure</a></li>
+<li class="page_item page-item-100"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps" title="Sponsor Opportunities">Sponsor Opportunities</a>
+<ul>
+	<li class="page_item page-item-114"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/addpkg" title="Additional Sponsor Opportunities">Additional Sponsor Opportunities</a></li>
+	<li class="page_item page-item-116"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/demopkg" title="Demonstration Package">Demonstration Package</a></li>
+	<li class="page_item page-item-115"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/exhibitpkg" title="Exhibitor Package">Exhibitor Package</a></li>
+	<li class="page_item page-item-117"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/posterpkg" title="Industry Poster Package">Industry Poster Package</a></li>
+	<li class="page_item page-item-118"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/pastsponsors" title="Past Sponsors and Exhibitors">Past Sponsors and Exhibitors</a></li>
+	<li class="page_item page-item-113"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/sponsorpkg" title="Sponsor Package">Sponsor Package</a></li>
+</ul>
+</li>
+<li class="page_item page-item-174"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/scs3" title="Student Council Symposium (SCS3)">Student Council Symposium (SCS3)</a></li>
+<li class="page_item page-item-108"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/submissioncontacts" title="Submission Contacts">Submission Contacts</a></li>
+<li class="page_item page-item-139"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/tours" title="Tours">Tours</a></li>
+<li class="page_item page-item-111"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/travelsupport" title="Travel Fellowships">Travel Fellowships</a></li>
+<li class="page_item page-item-59"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/tutorials" title="Tutorials">Tutorials</a></li>
+<li class="page_item page-item-147"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/transit" title="Vienna Transit Pass">Vienna Transit Pass</a></li>
+<li class="page_item page-item-43"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/weather" title="Weather Today">Weather Today</a></li>
+</ul>	
+-->
+
+<!--SEARCH-->
+<!--	
+        <form id="searchform" method="get" action="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/">
+		<input type="text" class="text" name="s" id="s" value="" size="15" /><br/>
+		<input type="submit" name="submit" value="Search " />
+	</form>
+-->
+
+<div>
+
+<!--LOGOS-->
+
+<br>
+<!--
+<a id="p73" href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/12/FullPageAdvert.pdf"><img id="image26" src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/flyer.png" alt="2007 Flyer - 306 KB PDF" title="306 KB PDF" border="0" vspace="1"></a>
+-->
+
+<a href="program/sigs.html"><img id="image171" src="wp-content/uploads/2007/03/meetings1.png" alt="SIGs &amp; Satellite Meetings" vspace="1"></a>
+
+<a href="http://iscbsc.org/scs3/index.htm"><img id="image182" src="wp-content/uploads/2007/03/scs3-border2.jpg" alt="Student Council Symposium (SCS)" vspace="1" border="0"></a>
+
+<a href="program/affiliate.html">
+<img id="image175" src="wp-content/uploads/2007/03/affiliate.png" alt="Affiliate Meetings" vspace="1"></a>
+
+<a href="http://www.iscb.org/"><img src="wp-images/iscblogo.jpg" alt="International Society for Computational Biology" vspace="1" border="0"></a>
+
+</div>
+
+
+<!--       <h2>Subscribe</h2> 
+<p class="post-info"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/feed" title="Syndicate this site using RSS"><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"> updates</a></span><br>
+
+<a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/comments/feed" title="The latest comments to all posts in RSS"><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"> comments</a></span>
+-->
+
+<!--
+<div>
+<ul><br>
+<a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-login.php">Log in</a><br>
+</ul>
+</div>
+-->
+
+</p>
+</div></div><div id="footer">
+
+<!--
+  <div><span class="feed"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/feed" title="Syndicate this site using RSS">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></span><br/>
+		<span class="feed"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/comments/feed" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></span>
+</div>
+-->
+
+		<center><strong>ISMB/ECCB 2007 &copy; 2009</strong> <a href="http://www.iscb.org/ismbeccb2007/?feed=rss2"><img src="wp-content/uploads/2006/07/feed-icon-10x10.gif" vspace="0" align="absmiddle" border="0" hspace="0"></a> </center>
+</div>
+</div>
+
+<!-- 
+<center>based on wordpress theme <a href="http://wpthemes.info/crayon-world/"target="_blank">CrayonWorld</a></center>
+-->
+
+</body>
+
+
+</html>

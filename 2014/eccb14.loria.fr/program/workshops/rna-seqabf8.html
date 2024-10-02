@@ -1,0 +1,207 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+
+
+<!-- Mirrored from eccb14.loria.fr/program/workshops/rna-seq?tmpl=component&print=1&page= by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jul 2015 15:49:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <script type="text/javascript">
+var siteurl='../../index.html';
+var tmplurl='../../templates/ja_elastica/index.html';
+var isRTL = false;
+</script>
+
+  <base  />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="ECCB'14, ECCB2014, Computational Biology, Bioinformatics, Conference, Strasbourg, ECCB, European Conference on Computational Biology, ECCB14" />
+  <meta name="author" content="Adrien" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="ECCB'14 is the key European computational biology event in 2014 uniting scientists working in a broad range of disciplines, including bioinformatics, computational biology, biology, medicine, and systems biology." />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>ECCB'14 - W01 - Analysis of Differential Isoform Usage by RNA-seq</title>
+  <link href="http://eccb14.loria.fr/program/workshops/rna-seq?tmpl=component&amp;print=1&amp;page=" rel="canonical" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/media/jui/css/icomoon.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/." type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/addons.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/template-j30.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/layout.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/template.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/usertools.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/css3.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/component.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/print.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/css/menu/mega.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/typo.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/template-j30.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/template.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/modules.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-mobile.css" type="text/css" media="only screen and (max-width:719px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-mobile-port.css" type="text/css" media="only screen and (max-width:479px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-tablet.css" type="text/css" media="only screen and (min-width:720px) and (max-width: 985px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-normal.css" type="text/css" media="only screen and (min-width:986px) and (max-width: 1235px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/layout-wide.css" type="text/css" media="only screen and (min-width:1236px)"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/css3.css" type="text/css" />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/component.css" type="text/css" media="all"  />
+  <link rel="stylesheet" href="http://eccb14.loria.fr/templates/ja_elastica/css/menu/mega.css" type="text/css" />
+  <script src="http://eccb14.loria.fr/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/mootools-more.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/media/system/js/anchor.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/plugins/system/jat3/jat3/base-themes/default/js/core.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/mega.rjd.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.noconflict.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.masonry.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/jquery.mediaqueries.js" type="text/javascript"></script>
+  <script src="http://eccb14.loria.fr/templates/ja_elastica/js/menu/mega.js" type="text/javascript"></script>
+  <script type="text/javascript">
+jQuery.noConflict();
+  </script>
+
+<!--[if ie]><link href="/plugins/system/jat3/jat3/base-themes/default/css/template-ie.css" type="text/css" rel="stylesheet" /><![endif]--> 
+<!--[if ie 7]><link href="/plugins/system/jat3/jat3/base-themes/default/css/template-ie7.css" type="text/css" rel="stylesheet" /><![endif]--> 
+<!--[if ie 7]><link href="/templates/ja_elastica/css/template-ie7.css" type="text/css" rel="stylesheet" /><![endif]--> 
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes"/>
+<meta name="HandheldFriendly" content="true" />
+
+
+<link href="http://eccb14.loria.fr/templates/ja_elastica/images/favicon.ico" rel="shortcut icon" type="image/x-icon" /></head>
+
+<body id="bd" class="fs3 com_content contentpane">
+    
+<div id="system-message-container">
+<div id="system-message">
+</div>
+</div>
+    <div class="item-page clearfix">
+	<h2 class="contentheading">
+			W01 RADIANT Workshop		</h2>
+
+	
+<div class="article-tools clearfix">
+	<ul class="actions">
+			<li>
+		<a href="#" onclick="window.print();return false;"><span class="icon-print"></span>&#160;Print&#160;</a>		</li>
+		
+	</ul>
+
+
+
+	
+</div>
+	<p><span style="font-size: x-large;"><strong>Analysis of Differential Isoform Usage by RNA-seq: Statistical Methodologies and Open Software</strong></span></p>
+<p><span style="font-size: large;"><strong>7th September 2014</strong></span></p>
+<p><span style="line-height: 1.3em; font-size: medium;">There are many computational and statistical challenges in the analysis of differential isoform usage by RNA-Seq. The workshop addresses users and method developers who are interested in better understanding the features of current tools and exploring approaches to method benchmarking. The workshop will cover the most important current statistical and computational challenges, including:</span></p>
+<ul type="square">
+<li><span style="font-size: medium;">Statistical characterisation of exon/isoform quantitative variation across samples/conditions</span></li>
+</ul>
+<ul type="square">
+<li><span style="font-size: medium;">Methods for identification of differential exon/isoform usage</span></li>
+</ul>
+<ul type="square">
+<li><span style="font-size: medium;">Methods for transcript discovery in non-model organisms</span></li>
+</ul>
+<ul type="square">
+<li><span style="font-size: medium;">Inference algorithms for large-scale datasets</span></li>
+</ul>
+<ul type="square">
+<li><span style="font-size: medium;">Establishing best practice in method benchmarking</span></li>
+</ul>
+<ul type="square">
+<li><span style="font-size: medium;">Open software and end-to-end pipelines</span></li>
+</ul>
+<ul type="square">
+<li><span style="font-size: medium;">Emerging long-read and small sample technologies, and future perspectives</span></li>
+</ul>
+<div title="Page 2">
+<p><span style="font-size: medium;">The workshop is aimed at computational biologists, statisticians and genome biologists with an interest in data analysis and statistical methods and applications in transcriptomics.</span></p>
+<p><span style="font-size: medium;"><strong>Invited Speakers</strong></span></p>
+<p><span style="font-size: medium;"><a href="http://www2.warwick.ac.uk/fac/sci/csc/people/members/david_kreil/">David Kreil</a> (University of Warwick and Boku University Vienna)</span></p>
+<p><span style="font-size: medium;"><a href="http://iris.ucl.ac.uk/iris/browse/profile?upi=JULEX61">Jernej Ule</a> (University College London)</span></p>
+<p><span style="font-size: medium;"><a href="http://www.biostat.jhsph.edu/people/student/frazee.shtml">Alyssa Frazee</a> (John Hopkins Bloomberg School of Public Health)</span></p>
+<p><span style="font-size: medium;"><a href="http://cbio.ensmp.fr/~ebernard/">Elsa Bernard</a> (Mines Paris Tech/Institut Marie Curie)</span></p>
+<p><span style="font-size: medium;"><a href="http://www2.warwick.ac.uk/fac/sci/statistics/staff/academic-research/rossell/">David Rossell</a> (University of Warwick)</span></p>
+<p><span style="font-size: medium;"><a href="http://www.embl.de/research/units/genome_biology/huber/members/index.php?s_personId=CP-60012180">Alejandro Reyes</a> (EMBL)</span></p>
+<p><span style="font-size: medium;"><a href="https://www.ebi.ac.uk/about/people/mar-gonzalez-porta">Mar Gonzalez Porta</a> (EBI)</span></p>
+<p><span style="font-size: medium;"> </span></p>
+<p><span style="font-size: medium;"><strong>Workshop schedule </strong></span></p>
+<p class="Textbody"><span style="font-size: medium;"><strong>Session 1 </strong>(9.00-9.05 Welcome)</span></p>
+<p class="Textbody"><span style="font-size: medium;">9.05-9.40 Jernej Ule (Institute of Neurology, University College London, UK): <em>Regulation of cryptic splicing elements within long neuronal genes</em></span></p>
+<p class="Textbody"><span style="font-size: medium;">9.40-10.15 Mar Gonzales-Porta (EMBL-EBI, Cambridge, UK): <em>Identification, annotation and visualisation of extreme changes in splicing from RNA-seq experiments with SwitchSeq</em></span></p>
+<p class="Textbody"><span style="font-size: medium;">10.15-10.30 Axel Rasche (Max Planck Institute for Molecular Genetics, Berlin, Germany): <em>ARH/ARH-Seq – Discovery tool for differential splicing in High-throughput data</em></span></p>
+<p class="Textbody"><span style="font-size: medium;">10.30-10.45 <strong>Coffee Break </strong></span></p>
+<p class="Textbody"><span style="font-size: medium;"><strong>Session 2</strong></span></p>
+<p class="Textbody"><span style="font-size: medium;">10.45-11.20 Alejandro Reyes (EMBL, Heidelberg, Germany): <em>Studying differential usage of exons with the DEXSeq package </em></span></p>
+<p class="Textbody"><span style="font-size: medium;">11.20-11.35 Thomas Risch (Max Planck Institute for Molecular Genetics, Berlin, Germany): <em>Prediction of subtype-specific alternative exon usage in medulloblastoma</em></span></p>
+<p class="Textbody"><span style="font-size: medium;">11.35-11.50 Jose M. Garcia-Manteiga (OSR, Milan, Italy): <em>Alternative splicing in response to hypoxia in HUVEC cells by differential exon usage and differential expression of isoforms</em></span></p>
+<p class="Textbody"><span style="font-size: medium;">11.50-12.00 Benchmarking team activity</span></p>
+<p class="Textbody"><span style="font-size: medium;">12.00-13.30 <strong>Lunch </strong></span></p>
+<p class="Textbody"><span style="font-size: medium;"><strong>Session 3</strong></span></p>
+<p class="Textbody"><span style="font-size: medium;">13.30-14.05 Alyssa Frazee (John Hopkins Bloomberg School of Public Health, Baltimore, USA): <em>Engineering annotation-agnostic tools for differential expression analysis</em></span></p>
+<p class="Textbody"><span style="font-size: medium;">14.05-14.20 Daniel Gautheret (Insitut de Génétique et Microbiologie, Paris, France): <em>Detecting Differential RNA-processing Events from RNA-seq data</em></span></p>
+<p class="Textbody"><span style="font-size: medium;">14.20-14.55 David Rossell (Dept. of Statistics, University of Warwick): <em>Casper for efficient summarization and design of RNA-seq studies</em></span></p>
+<p class="Textbody"><span style="font-size: medium;">14.55-15.30 Elsa Bernard (Institut Curie, Paris): <em>Fast isoform detection from RNA-Seq data with network flow techniques</em></span></p>
+<p class="Textbody"><span style="font-size: medium;">15.30-15.45 Malgorzata Nowicka (Institute of Molecular Sciences, University of Zurich, Switzerland): <em>Dirichlet-multinomial model for differential splicing detection in RNA-seq data</em></span></p>
+<p class="Textbody"><span style="font-size: medium;">15.45-16.00 Panos Papastamoulis (Faculty of Life Sciences, University of Manchester, UK): <em>Identifying differentially expressed transcripts via a Reversible Jump MCMC sampler</em></span></p>
+<p class="Textbody"><span style="font-size: medium;">16.00-16.20<strong><span> </span>Coffee Break </strong></span></p>
+<p class="Textbody"><span style="font-size: medium;"><strong>Session 4</strong></span></p>
+<p class="Textbody"><span style="font-size: medium;">16.20-16.55 David Kreil (Bioinformatics Research Group, Boku University Vienna, Austria) : <em>Benchmarking gene transcript expression profiling - challenges and platform specific results</em></span></p>
+<p class="Textbody"><span style="font-size: medium;">16.55-17.10 Azra Krek (Memorial Sloan-Kettering Cancer Center, New York, USA): <em>Comparison of isoform quantification methods for short-reads sequencing data using SEQC data</em></span></p>
+<p class="Textbody"><span style="font-size: medium;">17.10-18.00 Benchmarking team presentations and discussion</span></p>
+<p><span style="font-size: medium;"> </span></p>
+<p><span style="font-size: medium;"><strong>Submissions</strong></span></p>
+<p><span style="font-size: medium;">Short abstracts (max. 1500 chars) can be submitted through EasyChair via the <a href="https://www.easychair.org/conferences/?conf=radiant2014" target="_blank">RADIANT workshop submission page</a>.<br /></span></p>
+<p><span style="font-size: medium;">Abstract submission deadline: <strong>June 30th, 2014</strong></span></p>
+<p><span style="font-size: medium;">Notification of acceptance:<strong> July 14th, 2014</strong></span></p>
+<p><span style="font-size: medium;"><strong><span>Talk abstract submission is now closed. If you would like to submit a poster abstract then email a short abstract to 
+ <script type='text/javascript'>
+ <!--
+ var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+ var path = 'hr' + 'ef' + '=';
+ var addy13819 = 'm&#97;gn&#117;s.r&#97;ttr&#97;y' + '&#64;';
+ addy13819 = addy13819 + 'm&#97;nch&#101;st&#101;r' + '&#46;' + '&#97;c' + '&#46;' + '&#117;k';
+ document.write('<a ' + path + '\'' + prefix + ':' + addy13819 + '\'>');
+ document.write(addy13819);
+ document.write('<\/a>');
+ //-->\n </script><script type='text/javascript'>
+ <!--
+ document.write('<span style=\'display: none;\'>');
+ //-->
+ </script>This email address is being protected from spambots. You need JavaScript enabled to view it.
+ <script type='text/javascript'>
+ <!--
+ document.write('</');
+ document.write('span>');
+ //-->
+ </script></span> </strong></span></p>
+<p><span style="font-size: medium;"><strong> </strong></span></p>
+<p><span style="font-size: medium;"><strong>Organising committee</strong></span></p>
+<p><span style="font-size: medium;"><a href="http://www.embl.de/research/units/genome_biology/huber/members/index.php?s_personId=CP-60002977">Simon Anders</a> (EMBL)</span></p>
+<p><span style="font-size: medium;"><a href="http://www.embl.de/research/units/genome_biology/huber/members/index.php?s_personId=5825">Wolfgang Huber</a> (EMBL)</span></p>
+<p><span style="font-size: medium;"><a href="http://www.ls.manchester.ac.uk/people/profile/?personid=10584">Magnus Rattray</a> (University of Manchester)</span></p>
+<p><span style="font-size: medium;"><a href="http://www.imls.uzh.ch/research/robinson.html">Mark Robinson</a> (University of Zurich)</span></p>
+<p><span style="font-size: medium;"> </span><span style="font-size: medium; line-height: 1.3em;"> </span></p>
+<p><strong><span style="font-size: medium;">Workshop Venue</span></strong></p>
+<p><span style="font-size: medium;"><span><span>Palais de la Musique et des Congrès</span><br /><span>Place de Bordeaux</span><br /><span>67082 Strasbourg</span></span></span></p>
+<p><span style="font-size: medium;"><span><span> </span></span></span></p>
+<p><span style="font-size: medium;"><span>Sponsored by <a href="http://radiant-project.eu/" target="_blank">RADIANT</a> </span></span><span style="line-height: 1.3em;"> </span></p>
+<p><span style="font-size: medium;"><strong>RADIANT</strong> is funded by the European Union’s Seventh Framework Programme for research, technological development and demonstration under grant agreement no 305626.</span></p>
+<p> </p>
+<p><span> </span></p>
+<p><span style="font-size: medium;"><span><span> </span></span></span></p>
+<p><span style="font-size: medium;"><span><span> </span></span></span></p>
+<p><span style="font-size: medium;"><span><span> </span></span></span></p>
+</div>
+		
+
+	</div>
+</body>
+
+
+<!-- Mirrored from eccb14.loria.fr/program/workshops/rna-seq?tmpl=component&print=1&page= by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jul 2015 15:49:19 GMT -->
+</html>

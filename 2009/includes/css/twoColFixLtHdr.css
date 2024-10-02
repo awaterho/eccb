@@ -1,0 +1,170 @@
+@charset "utf-8";
+body  {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #666666;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+	background: #FFF454;
+}
+.twoColFixLtHdr #container { 
+	width: 800px;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */
+	background: #FFFFFF;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+	background-image:url(../images/header/sidelft.gif);
+	background-position:left;
+	background-repeat:repeat-y;
+} 
+.twoColFixLtHdr #header { 
+	background: #DDDDDD; 
+	padding: 0 0px 0 0px;  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+} 
+.twoColFixLtHdr #header h1 {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this is not necessary as that also avoids the margin collapse */
+	padding: 0px 0; /* using padding instead of margin will allow you to keep the element away from the edges of the div */
+}
+.twoColFixLtHdr #sidebar1 {
+	float: left; /* since this element is floated, a width must be given */
+	width: 178px; /* the actual width of this div, in standards-compliant browsers, or standards mode in Internet Explorer will include the padding and border in addition to the width */
+	/*background: #EBEBEB;  the background color will be displayed for the length of the content in the column, but no further */
+	padding: 0px 0px 0px 0px;
+	
+
+}
+.twoColFixLtHdr #mainContent { 
+	margin: 0 0 0 178px; /* the left margin on this div element creates the column down the left side of the page - no matter how much content the sidebar1 div contains, the column space will remain. You can remove this margin if you want the #mainContent div's text to fill the #sidebar1 space when the content in #sidebar1 ends. */
+	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+} 
+.twoColFixLtHdr #footer { 
+	padding: 0 10px 0 20px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	background:#DDDDDD; 
+} 
+.twoColFixLtHdr #footer p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+}
+.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+
+.style1{
+	color:#333333;
+	font-family:Arial,Verdana,Helvetica,sans-serif;
+	font-size: 12.8px;
+	line-height: 18px;
+	text-align:left;
+}
+.smhead{
+font-size: 14px;
+font-family:Arial,Verdana,Helvetica,sans-serif;
+}
+.smhead1{
+color:#8D2E32;
+font-size: 16px;
+font-family:Arial,Verdana,Helvetica,sans-serif;
+}
+.smhead2{
+color:#8D2E32;
+font-size: 13px;
+font-family:Arial,Verdana,Helvetica,sans-serif;
+}
+.styleh1{
+	color:#230000;
+	font-family:Arial,Verdana,Helvetica,sans-serif;
+	font-size: 17px;
+	line-height: 18px;
+	text-align:left;
+}
+.posted{
+color:#999999;
+line-height:1.4em
+margin:0.4em 0pt;
+font-size:0.9em;
+}
+.styleblue1{
+	color:#00A3E3;
+	font-family:Arial,Verdana,Helvetica,sans-serif;
+	font-size: 12.0px;
+	line-height: 18px;
+	text-align:left;
+}
+
+table.schedule1{ text-align: center;
+background-color:#FFFFFF;
+width: 540px;
+border: 1px #339999 solid;
+}
+.schedulehd{
+	width:526px;
+	height:28;
+	background-color: #00A3E3;
+}
+.trsep{
+background-color:#00A3E3;
+height:14px;
+}
+.tdsched1{
+	height:23px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+.ul1{
+	margin-left: 1.0em; padding-left: 0;
+
+}
+.li1{
+	margin-left: 0; 	
+	padding-left: 0;
+	color:#333333;
+	font-family:Arial,Verdana,Helvetica,sans-serif;
+	font-size: 12.8px;
+	line-height: 18px;
+	text-align:left;
+}
+blockquote {
+background:#EDF1F4 none repeat scroll 0%;
+border:1px solid #DDDDDD;
+margin:1em;
+padding:1em;
+}
+
+.para {
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:11px;
+font-style:normal;
+text-decoration:none;
+}
+.subheading1{
+background-color:#e1e1e1
+}
+.subheading2{
+background-color:#e1e1e1;
+font-weight:bold;
+}
+.fontfade{
+color:#A7A7A7;
+}
+.picright{
+margin: 0px 0px 0px 8px;
+border:solid thin;
+border-color:#000000;
+}
+
+
+
+
+

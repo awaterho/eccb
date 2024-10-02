@@ -1,0 +1,1407 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>ISMB/ECCB 2007 &raquo; Exhibit Floor Plan</title>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+
+<script type="text/javascript">
+/***********************************************
+* Switch Content script- © Dynamic Drive (www.dynamicdrive.com)
+* This notice must stay intact for legal use. Last updated April 2nd, 2005.
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var enablepersist="on" //Enable saving state of content structure using session cookies? (on/off)
+var collapseprevious="no" //Collapse previously open content when opening present? (yes/no)
+
+var contractsymbol='- ' //HTML for contract symbol. For image, use: <img src="whatever.gif">
+var expandsymbol='+ ' //HTML for expand symbol.
+
+
+if (document.getElementById){
+document.write('<style type="text/css">')
+document.write('.switchcontent{display:none;}')
+document.write('</style>')
+}
+
+function getElementbyClass(rootobj, classname){
+var temparray=new Array()
+var inc=0
+var rootlength=rootobj.length
+for (i=0; i<rootlength; i++){
+if (rootobj[i].className==classname)
+temparray[inc++]=rootobj[i]
+}
+return temparray
+}
+
+function sweeptoggle(ec){
+var thestate=(ec=="expand")? "block" : "none"
+var inc=0
+while (ccollect[inc]){
+ccollect[inc].style.display=thestate
+inc++
+}
+revivestatus()
+}
+
+
+function contractcontent(omit){
+var inc=0
+while (ccollect[inc]){
+if (ccollect[inc].id!=omit)
+ccollect[inc].style.display="none"
+inc++
+}
+}
+
+function expandcontent(curobj, cid){
+var spantags=curobj.getElementsByTagName("SPAN")
+var showstateobj=getElementbyClass(spantags, "showstate")
+if (ccollect.length>0){
+if (collapseprevious=="yes")
+contractcontent(cid)
+document.getElementById(cid).style.display=(document.getElementById(cid).style.display!="block")? "block" : "none"
+if (showstateobj.length>0){ //if "showstate" span exists in header
+if (collapseprevious=="no")
+showstateobj[0].innerHTML=(document.getElementById(cid).style.display=="block")? contractsymbol : expandsymbol
+else
+revivestatus()
+}
+}
+}
+
+function revivecontent(){
+contractcontent("omitnothing")
+selectedItem=getselectedItem()
+selectedComponents=selectedItem.split("|")
+for (i=0; i<selectedComponents.length-1; i++)
+document.getElementById(selectedComponents[i]).style.display="block"
+}
+
+function revivestatus(){
+var inc=0
+while (statecollect[inc]){
+if (ccollect[inc].style.display=="block")
+statecollect[inc].innerHTML=contractsymbol
+else
+statecollect[inc].innerHTML=expandsymbol
+inc++
+}
+}
+
+function get_cookie(Name) { 
+var search = Name + "="
+var returnvalue = "";
+if (document.cookie.length > 0) {
+offset = document.cookie.indexOf(search)
+if (offset != -1) { 
+offset += search.length
+end = document.cookie.indexOf(";", offset);
+if (end == -1) end = document.cookie.length;
+returnvalue=unescape(document.cookie.substring(offset, end))
+}
+}
+return returnvalue;
+}
+
+function getselectedItem(){
+if (get_cookie(window.location.pathname) != ""){
+selectedItem=get_cookie(window.location.pathname)
+return selectedItem
+}
+else
+return ""
+}
+
+function saveswitchstate(){
+var inc=0, selectedItem=""
+while (ccollect[inc]){
+if (ccollect[inc].style.display=="block")
+selectedItem+=ccollect[inc].id+"|"
+inc++
+}
+
+document.cookie=window.location.pathname+"="+selectedItem
+}
+
+function do_onload(){
+uniqueidn=window.location.pathname+"firsttimeload"
+var alltags=document.all? document.all : document.getElementsByTagName("*")
+ccollect=getElementbyClass(alltags, "switchcontent")
+statecollect=getElementbyClass(alltags, "showstate")
+if (enablepersist=="on" && ccollect.length>0){
+document.cookie=(get_cookie(uniqueidn)=="")? uniqueidn+"=1" : uniqueidn+"=0" 
+firsttimeload=(get_cookie(uniqueidn)==1)? 1 : 0 //check if this is 1st page load
+if (!firsttimeload)
+revivecontent()
+}
+if (ccollect.length>0 && statecollect.length>0)
+revivestatus()
+}
+
+if (window.addEventListener)
+window.addEventListener("load", do_onload, false)
+else if (window.attachEvent)
+window.attachEvent("onload", do_onload)
+else if (document.getElementById)
+window.onload=do_onload
+
+if (enablepersist=="on" && document.getElementById)
+window.onunload=saveswitchstate
+
+</script><style type="text/css">
+.switchcontent{display:none;}body {
+	background-image: url();
+	background-color: #017DBB;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.style1 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.style5 {color: #017DBB}
+</style>
+
+
+
+
+
+
+
+	<link rel="stylesheet" href="wp-content/themes/crayonworld-10/style.css" type="text/css" media="screen">
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="feedhtml.html">
+	<link rel="alternate" type="text/xml" title="RSS .92" href="feed/rsshtml.html">
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="feed/atomhtml.html">
+	<link rel="pingback" href="xmlrpc.html">
+
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.html?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml"> 
+<link rel='index' title='ISMB/ECCB 2007' href='index.html'>
+<meta name="generator" content="WordPress 2.8.4">
+
+<a name="top"></a>
+</head>
+
+<body>	
+<div id="container">
+
+<!-- <div id="header"> -->
+
+
+<div id="header" onclick="location.href='index.html';" style="cursor: pointer;">
+
+
+ <h1><a href="index.html" title="ISMB/ECCB 2007"> 	 ISMB/ECCB 2007 </a></h1>  
+
+</div>
+
+<!--
+<ul id="gnav">
+	<li ><a href="index.html" title="Home">Home</a></li>
+	<li class="page_item page-item-7"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/agenda" title="Agenda-at-a-Glance">Agenda-at-a-Glance</a></li>
+<li class="page_item page-item-46"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/airtravel" title="Air Travel">Air Travel</a></li>
+<li class="page_item page-item-209"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/bof" title="Birds of a Feather (BoF)">Birds of a Feather (BoF)</a></li>
+<li class="page_item page-item-208"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters-latecall" title="Call for Late Posters">Call for Late Posters</a></li>
+<li class="page_item page-item-83"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/papers" title="Call for Papers">Call for Papers</a></li>
+<li class="page_item page-item-220"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/childcare" title="Child Care">Child Care</a></li>
+<li class="page_item page-item-202"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/activities" title="Children/Family Activities">Children/Family Activities</a></li>
+<li class="page_item page-item-90"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees" title="Committees">Committees</a></li>
+<li class="page_item page-item-130"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/promotion" title="Conference Promotion">Conference Promotion</a></li>
+<li class="page_item page-item-112"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsors" title="Conference Sponsors">Conference Sponsors</a></li>
+<li class="page_item page-item-132"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/venue" title="Conference Venue">Conference Venue</a></li>
+<li class="page_item page-item-9"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/contacts" title="Contact Us">Contact Us</a></li>
+<li class="page_item page-item-68"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/demonstrations" title="Demonstrations">Demonstrations</a></li>
+<li class="page_item page-item-119 current_page_item"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitfloorplan" title="Exhibit Floor Plan">Exhibit Floor Plan</a></li>
+<li class="page_item page-item-186"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitorinfo" title="Exhibitor Information">Exhibitor Information</a></li>
+<li class="page_item page-item-194"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitresources" title="Exhibitor Resources">Exhibitor Resources</a></li>
+<li class="page_item page-item-193"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitschedule" title="Exhibitor Schedule">Exhibitor Schedule</a></li>
+<li class="page_item page-item-2"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/faq" title="FAQ">FAQ</a></li>
+<li class="page_item page-item-138"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/housing" title="Housing">Housing</a></li>
+<li class="page_item page-item-12"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/subscribe" title="How to Subscribe">How to Subscribe</a></li>
+<li class="page_item page-item-210"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/volunteers" title="ISMB/ECCB 2007 Conference Volunteers">ISMB/ECCB 2007 Conference Volunteers</a></li>
+<li class="page_item page-item-45"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/deadlines" title="ISMB/ECCB 2007 Deadlines">ISMB/ECCB 2007 Deadlines</a></li>
+<li class="page_item page-item-58"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/highlights" title="ISMB/ECCB 2007 Highlights Track: Call for Proposals">ISMB/ECCB 2007 Highlights Track: Call for Proposals</a></li>
+<li class="page_item page-item-86"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/industry" title="ISMB/ECCB 2007 Industry Track: Call for Proposals">ISMB/ECCB 2007 Industry Track: Call for Proposals</a></li>
+<li class="page_item page-item-125"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/registration" title="ISMB/ECCB 2007 Registration">ISMB/ECCB 2007 Registration</a></li>
+<li class="page_item page-item-78"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/keynotes" title="Keynotes">Keynotes</a></li>
+<li class="page_item page-item-48"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/keynotespresentations" title="Keynotes Presentations">Keynotes Presentations</a></li>
+<li class="page_item page-item-85"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/plostrack" title="PLoS Track at ISMB/ECCB 2007">PLoS Track at ISMB/ECCB 2007</a></li>
+<li class="page_item page-item-121"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters" title="Posters">Posters</a></li>
+<li class="page_item page-item-134"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program" title="Program">Program</a></li>
+<li class="page_item page-item-54"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sigs" title="Special Interest Group Meetings (SIGs)">Special Interest Group Meetings (SIGs)</a></li>
+<li class="page_item page-item-35"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/specialsessions" title="Special Sessions">Special Sessions</a></li>
+<li class="page_item page-item-103"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsorbrochure" title="Sponsor Brochure">Sponsor Brochure</a></li>
+<li class="page_item page-item-100"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps" title="Sponsor Opportunities">Sponsor Opportunities</a></li>
+<li class="page_item page-item-174"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/scs3" title="Student Council Symposium (SCS3)">Student Council Symposium (SCS3)</a></li>
+<li class="page_item page-item-108"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/submissioncontacts" title="Submission Contacts">Submission Contacts</a></li>
+<li class="page_item page-item-139"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/tours" title="Tours">Tours</a></li>
+<li class="page_item page-item-111"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/travelsupport" title="Travel Fellowships">Travel Fellowships</a></li>
+<li class="page_item page-item-59"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/tutorials" title="Tutorials">Tutorials</a></li>
+<li class="page_item page-item-147"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/transit" title="Vienna Transit Pass">Vienna Transit Pass</a></li>
+<li class="page_item page-item-43"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/weather" title="Weather Today">Weather Today</a></li>
+ 
+</ul> --><div id="content">
+
+
+
+
+	  
+		<div class="post">	
+			<h2 class="post-title"><a href="exhibitfloorplan.html" rel="bookmark" title="Permanent Link: Exhibit Floor Plan">Exhibit Floor Plan</a></h2>
+			<p class="post-info">posted <em>25 Jan 2007</em> </p>
+			<div class="post-content">
+	<p><img id="image226" src="wp-content/uploads/2007/06/FloorPlan20072.jpg" alt="ISMB-ECCB 2007 Exhibitor Floor Plan"></p>
+<p>View the <a id="p120" href="wp-content/uploads/2007/01/ISMB%2007%2C%20exhibition%20layout%2024-1-07.pdf">Exhibit Floor Plan [584 KB PDF]</a> <img id="image56" src="wp-content/uploads/2006/10/pdf.gif" alt="PDF" align="absmiddle"></p>
+<table width="100%" border="0">
+<tr>
+<td width="30" align="left" valign="top"><strong>Booth</strong></td>
+<td width="200" align="left" valign="top"><strong>Exhibitor</strong></td>
+<td width="30" align="left" valign="top"><strong>Booth</strong></td>
+<td width="200" align="left" valign="top"><strong>Exhibitor</strong></td>
+</tr>
+<tr>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>1</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#1">Hewlett-Packard Company</a></td>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>20</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#20">Active Motif</a></td>
+</tr>
+<tr>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>2</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#2-3">SGI</a></td>
+<td width="30" align="left" valign="top" bgcolor="#E9E9E9"><strong>21</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#E9E9E9">&nbsp;</td>
+</tr>
+<tr>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>3</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#2-3">SGI</a></td>
+<td width="30" align="left" valign="top" bgcolor="#E9E9E9"><strong>22</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#E9E9E9">&nbsp;</td>
+</tr>
+<tr>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>4</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#4">IBM</a></td>
+<td width="30" align="left" valign="top" bgcolor="#E9E9E9"><strong>23</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#E9E9E9">&nbsp;</td>
+</tr>
+<tr>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>5</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#5">Synamatix</a></td>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>24</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#24">EMBL — European Bioinformatics Institute</a></td>
+</tr>
+<tr>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>6</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#6-7">Taylor &amp; Francis Group</a></td>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>25</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#25">EMBL — European Molecular Biology Laboratory</a></td>
+</tr>
+<tr>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>7</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#6-7">Taylor &amp; Francis</a></td>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>26</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#26">BioMed Central</a></td>
+</tr>
+<tr>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>8</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#8">Accelrys Inc.</a></td>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>27</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#27">BIOBASE GmbH</a></td>
+</tr>
+<tr>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>9</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#9">Biomax Informatics AG</a></td>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>28</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#28">Geneious Software</a></td>
+</tr>
+<tr>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>10</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#10">Apple Inc.</a></td>
+<td width="30" align="left" valign="top" bgcolor="#E9E9E9"><strong>29</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#E9E9E9">&nbsp;</td>
+</tr>
+<tr>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>11</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#11">Cambridge University Press</a></td>
+<td width="30" align="left" valign="top" bgcolor="#E9E9E9"><strong>30</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#E9E9E9">&nbsp;</td>
+</tr>
+<tr>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>12</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#12">International Society for Computational Biology (ISCB)</a></td>
+<td width="30" align="left" valign="top" bgcolor="#E9E9E9"><strong>31</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#E9E9E9">&nbsp;</td>
+</tr>
+<tr>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>13</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#13">PLoS Computational Biology</a></td>
+<td width="30" align="left" valign="top" bgcolor="#E9E9E9"><strong>32</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#E9E9E9">&nbsp;</td>
+</tr>
+<tr>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>14</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#14">CLC bio A/S</a></td>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>33</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#33">Journal of the Royal Society</a></td>
+</tr>
+<tr>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>15</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#15">The MIT Press</a></td>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>34</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#34">The Mathworks GmbH</a></td>
+</tr>
+<tr>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>16</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#16">Oxford Journals</a></td>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>35</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#35">Springer</a></td>
+</tr>
+<tr>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>17</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#17">Elsevier B.V.</a></td>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>36</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#36">EGEE &#8212; Enabling Grids for E-sciencE</a></td>
+</tr>
+<tr>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>18</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#18">IOP Publishing</a></td>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>37</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#37">Chemical Computing Group (CCG)</a></td>
+</tr>
+<tr>
+<td width="30" align="left" valign="top" bgcolor="#faf4a6"><strong>19</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#faf4a6"><a href="#19">John Wiley &#038; Sons Ltd.</a></td>
+<td width="30" align="left" valign="top" bgcolor="#E9E9E9"><strong>38</strong></td>
+<td width="200" align="left" valign="top" bgcolor="#E9E9E9">&nbsp;</td>
+</tr>
+</table>
+<p><a name="1"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong> Booth 1</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hewlett-Packard Company</strong><br>
+<a href="http://www.hp.com/go/lifesciences">www.hp.com/go/lifesciences</a></p>
+<p>HP innovations enable researchers to focus on what matters to them &#8211; science.  HP provides expertise, innovative products, services and partnerships to help you achieve scientific breakthroughs.  HP offers a choice of industry-standard, high-performance solutions to give you the flexibility and confidence to implement the technology you need to achieve success.<br>
+For more information:  <a href="http://%20www.hp.com/go/lifesciences">www.hp.com/go/lifesciences</a></p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="2-3"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong> Booth 2 &#038; 3</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>SGI</strong><br>
+<a href="http://www.sgi.com/">www.sgi.com</a></p>
+<p>SGI delivers a complete range of high-performance server and storage solutions along with industry-leading professional services and support that enable its customers in to overcome the challenges of complex data-intensive workflows and accelerate breakthrough discoveries, innovation and information transformation. SGI helps customers solve their computing challenges whether it’s enhancing the quality of life through drug research, designing and manufacturing safer and more efficient cars and airplanes, studying global climate, providing technologies for homeland security and defense, or helping enterprise manage large data. With offices worldwide, the company is headquartered in Sunnyvale, California, and can be found at <a href="http://%20www.sgi.com/">www.sgi.com</a>.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="4"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong>Booth 4</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>IBM</strong><br>
+<a href="http://www.ibm.com/servers/deepcomputing">www.ibm.com/servers/deepcomputing</a></p>
+<p>IBM’s Computational Biology research and its Blue Gene petaflop computing initiative spans pattern recognition in sequences, structures and processes, the studying of systems ranging from single protein molecules through to complex molecular interactions, and the data analysis, interpretation and reverse-engineering of complex disease-lifestyle-genomic interactions for fuller biological understanding.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="5"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong>Booth 5</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Synamatix</strong><br>
+<a href="http://www.synamatix.com/">www.synamatix.com</a></p>
+<p>Synamatix is a bioinformatics company focused upon leveraging its core SynaBASE technology for acceleration and enhancement of sequence analysis. Software applications built upon the SynaBASE structured-network pattern database platform are able to process and analyse data from 2nd generation sequencers faster than it is generated.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="6-7"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong> Booth 6 &#038; 7</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Taylor &#038; Francis</strong><br>
+<a href="http://www.crcpress.com/">www.crcpress.com</a></p>
+<p>Chapman &#038; Hall/CRC, a member of the Taylor &#038; Francis group, is a premier publisher of books, journals and electronic databases in the sciences.  Stop by our booth to peruse our large collection of titles in computational biology and bioinformatics, including Uri Alon&#8217;s &#8220;Introduction to Systems Biology&#8221;, and take advantage of the convention discount.  For more information about our company visit <a href="http://www.crcpress.com/">www.crcpress.com</a>.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="8"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong> Booth 8</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Accelrys Inc.</strong><br>
+<a href="http://www.accelrys.com/">www.accelrys.com</a></p>
+<p>Accelrys delivers superior scientific software solutions that help to transform the discovery and development of innovative pharmaceuticals, chemicals and materials.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="9"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong> Booth 9</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Biomax Informatics AG</strong><br>
+<a href="http://www.biomax.com/">www.biomax.com</a></p>
+<p>Biomax Informatics AG provides bioinformatics tools and services for knowledge management (BioXM software), workflow-driven, customizable sequence analysis (Pedant-Pro suite), and data management and retrieval (BioRS system). The innovative BioXM Knowledge Management Framework is a system for high-throughput knowledge data management, semantic integration, and modeling of scientific relationships and processes.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="10"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong> Booth 10</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Apple Inc.</strong><br>
+<a href="www.apple.com/science.html">www.apple.com/science</a></p>
+<p>Apple ignited the personal computer revolution in the 1970s and reinvented the personal computer in the 1980s with the Macintosh. Apple continues to lead the industry in innovation with award-winning computers and the Mac OS X operating system. Apple is also spearheading the digital media revolution with the iPod and iTunes, and will enter the mobile phone market this year with its revolutionary iPhone.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="11"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong> Booth 11</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cambridge University Press</strong><br>
+<a href="http://www.cambridge.org/">www.cambridge.org</a></p>
+<p>Cambridge University Press advances learning, knowledge and research worldwide. It is an integral part of the University of Cambridge and for centuries has extended its research and teaching activities by making available worldwide through its printing and publishing a remarkable range of academic and educational books, journals, examination papers and Bibles. For millions of people around the globe, the publications of the Press represent their only real link with the University of Cambridge.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="12"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong>Booth 12</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>International Society for Computational Biology (ISCB)</strong><br>
+<a href="http://www.iscb.org/">www.iscb.org</a></p>
+<p>The International Society for Computational Biology (ISCB &#8212; <a href="http://www.iscb.org/">www.iscb.org</a>) organizes and hosts the Annual International Conference on Intelligent Systems for Molecular Biology (ISMB), now in its 15th year and presented this year as a joint meeting with the 6th European Conference on Computational Biology (ECCB). </p>
+<p>The mission of ISCB is to advance the scientific understanding of living systems through computation. On behalf of its global membership, ISCB communicates the significance of our science to the larger scientific community, governments, and the public at large, thus impacting government and scientific policies. </p>
+<p>Primary activities include providing high quality publications and meetings, and distributing valuable information about training, education, employment and relevant news from related fields. ISCB membership offers many benefits including reduced conference registration fees to several high impact events, most prominently ISMB, ECCB, PSB and RECOMB, as well as reduced subscription prices for a selection of journals related to computational biology and bioinformatics. ISCB proudly offers the open-access PLoS Computational Biology as its official journal, and publishes the ISMB conference proceedings in partnership with Oxford University Press in open-access format as part of a regular issue of Bioinformatics.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="13"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong>Booth 13</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>PLoS Computational Biology</strong><br>
+<a href="http://www.ploscompbiol.org/">www.ploscompbiol.org</a></p>
+<p>PLoS Computational Biology (<a href="http://www.ploscompbiol.org/">www.ploscompbiol.org</a>) is an online, peer-reviewed journal publishing works of exceptional significance that further our understanding of living systems through application of computational methods. It features high-quality Research Articles, invited Reviews and Perspectives, Tutorials, and the popular editorial series of “Ten Simple Rules.” As the official journal of the ISCB, it also includes a Message from the Society. All PLoS journals are open access and freely available to read, copy, distribute and use without limits.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="14"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong>Booth 14</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>CLC bio A/S</strong><br>
+<a href="http://www.clcbio.com/">www.clcbio.com</a></p>
+<p>CLC bio, the world&#8217;s leading full-service bioinformatics solution provider, focusing on:</p>
+<p>Software for highly advanced RNA, DNA, and protein sequence analysis, nested in user-friendly and well-supported environment.</p>
+<p>Hardware: high-performance computing using advanced FPGA technology to dramatically accelerate resource intensive database searches on your laptop.</p>
+<p>Consulting: development of customized bioinformatics software.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="15"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong>Booth 15</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>The MIT Press</strong><br>
+<a href="http://mitpress.mit.edu/">mitpress.mit.edu</a></p>
+<p>The MIT Press is a distinguished publisher of books and journals in computational molecular biology and related fields: a full range of titles will be on display and available at a 20% conference discount. New titles in 2007 include <em>Biological Emergences: Evolution by Natural Experiment</em>, by Robert G. B. Reid,  a critique of selectionism and the proposal of an alternate theory of emergent evolution that is causally sufficient for evolutionary biology.  <em>Modeling Biology: Structures, Behaviors, Evolution</em>, edited by Manfred D. Laubichler and Gerd B. Müller, experts examine new modeling strategies for the interpretation of biological data and their integration into the conceptual framework of theoretical biology, detailing approaches that focus on morphology, development, behavior, or evolution.</p>
+<p><em>Biological Theory: Integrating Development, Evolution, and Cognition</em>. A journal devoted to theoretical advances in the biological and cognitive sciences, with an emphasis on the conceptual integration afforded by evolutionary and developmental approaches, and will appeal to a wide audience of scientists, social scientists, philosophers and historians of biology.  <a href="http://www.mitpressjournals.org/loi/biot">http://www.mitpressjournals.org/loi/biot</a></p>
+<p>For information on submitting proposals and manuscripts please contact: Robert Prior, Executive Editor, The MIT Press, 55 Hayward Street, Cambridge MA 02142, USA.  <a href="mailto:prior@mit.edu">prior@mit.edu</a><br>
+For marketing and order queries please contact: The MIT Press, 11 Chenies Street, London WC1E 7EY, UK  <a href="mailto:info@hup-mitpress.co.uk">info@hup-mitpress.co.uk</a></p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="16"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong>Booth 16</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Oxford Journals</strong><br>
+<a href="http://www.oxfordjournals.org/">www.oxfordjournals.org</a></p>
+<p>Oxford Journals is a premier publisher whose titles include the fully Open Access <em>Nucleic Acids Research</em>.  Oxford also publishes the leading journal in its field, Bioinformatics, as well as <em>Briefings in Bioinformatics</em> and <em>Briefings in Functional Genomics and Proteomics</em>.  Visit our booth for a free sample copy of these journals.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="17"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong>Booth 17</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Elsevier B.V.</strong><br>
+<a href="http://www.elsevier.com/">www.elsevier.com</a></p>
+<p>Elsevier is a leading publisher of science books and journals, with titles available across a variety of media &#8211; print, online and CD-ROM, we are able to supply the information you need in the most convenient format. Visit our booth, number 17 to pick up your free journal sample copies and browse our titles on display.<br>
+<font size="1"><a href="#top">top</a></font></p>
+<p><a name="18"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong>Booth 18</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>IOP Publishing</strong><br>
+<a href="http://www.iop.org/">www.iop.org</a></p>
+<p>Physical Biology fosters the integration of biology with the traditionally more quantitative fields of physics, chemistry, computer science and other mathematics-based disciplines. Its primary aim is to further the quantitative characterization and understanding of biological systems at different levels of complexity.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="19"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong>Booth 19</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>John Wiley &#038; Sons Ltd.</strong><br>
+<a href="http://www.wiley.com/">www.wiley.com</a></p>
+<p>Founded in 1807, John Wiley &#038; Sons has been a valued source of information and understanding for 200 years, helping people around the world meet their needs and fulfil their aspirations.<br>
+Visit us at our stand to view the latest resources and to take advantage of a 20% conference discount on all our books. </p>
+<p>NEW &#8211; BLACKWELL PUBLISHING IS NOW PART OF WILEY!<br>
+Browse all Blackwell titles published in your area of research at <a href="http://www.blackwellpublishing.com/">www.blackwellpublishing.com</a></p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="20"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong>Booth 20</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Active Motif</strong><br>
+<a href="http://www.activemotif.com/">www.activemotif.com</a></p>
+<p>Active Motif is a biotechnology company developing bioinformatics software/hardware tools, and molecular/cellular biology research tools, in the form of reagent kits, to study functional genomics and the role of cell signaling and other pathways. These products apply an innovative approach to accelerate current techniques and provide more reliable data.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="24"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong> Booth 24</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>EMBL &#8212; European Bioinformatics Institute</strong><br>
+<a href="http://www.ebi.ac.uk/">www.ebi.ac.uk</a></p>
+<p>EMBL-EBI is the hub of bioinformatics in Europe.  Our mission is to provide freely available data and bioinformatics services to the whole scientific community in ways that promote scientific progress.  Also, to contribute to biological advancement through basic investigator-driven research in bioinformatics, to provide advanced bioinformatics training and to help disseminate cutting-edge technologies to industry.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="25"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong> Booth 25</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>EMBL &#8212; European Molecular Biology Laboratory</strong><br>
+<a href="http://www.ebi.ac.uk/">www.ebi.ac.uk</a></p>
+<p>The European Molecular Biology Laboratory is Europe’s flagship laboratory for basic research in molecular biology. It is supported by 19 member states. Its mission is: to perform basic research in molecular biology; to train scientists; to offer vital services to scientists and to actively engage in technology transfer activities.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="26"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong> Booth 26</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>BioMed Central</strong><br>
+<a href="http://www.biomedcentral.com/">www.biomedcentral.com</a></p>
+<p>BioMed Central is the open access publisher committed to the free widespread dissemination of scientific research.   BioMed Central publishes over 170 peer-reviewed open access journals, including BMC Bioinformatics and BMC Systems Biology.  Visit the BioMed Central stand to learn more about the journals and the benefits of open access publishing.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="27"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong>Booth 27</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>BIOBASE GmbH</strong><br>
+<a href="http://www.biobase-international.com/">www.biobase-international.com</a></p>
+<p>BIOBASE is a leading provider of expertly curated biological databases. The BIOBASE Knowledge Library (BKL) includes industry standards such as TRANSFAC&reg;, TRANSPATH&reg;, YPD™ and HumanPSD™ databases. In combination with BIOBASE’s powerful systems biology tool ExPlain™ BKL is used to analyse complex regulatory networks and identify key molecules linked to human disease.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="28"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong>Booth 28</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Geneious Software</strong><br>
+<a href="http://www.geneious.com/">www.geneious.com</a></p>
+<p>The company behind Geneious(TM) is Biomatters Ltd.  A leading edge scientific software development company headquartered in<br>
+New Zealand, Biomatters develops unique and easy to use bioinformatics software.  Biomatters continues to pursue innovative<br>
+solutions with a vision to improve science in the areas of disease research, human health and environmental issues.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="33"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong>Booth 33</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Journal of the Royal Society</strong><br>
+<a href="http://www.publishing.royalsoc.ac.uk/interface">www.publishing.royalsoc.ac.uk/interface</a></p>
+<p>Journal of the Royal Society Interface is an international journal publishing articles from the interface between the physical and life sciences. </p>
+<p>It is a high-quality forum for rapid publication, applying research in the physical sciences to the biological and medical sciences; whilst also highlighting discoveries in the life sciences that allow advances in the physical sciences.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="34"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong>Booth 34</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>The MathWorks</strong><br>
+<a href="http://www.mathworks.com/">www.mathworks.com</a></p>
+<p>Pharmaceutical and biotech companies are standardizing on the MATLAB and Simulink platforms to perform their tasks all in one computing environment. MathWorks engineers will demonstrate how you can accelerate your research and gain deeper scientific insight by using computational methods. Case studies and demonstrations will cover application areas such as: Bioinformatics &#8211; Biostatistics &#8211; Bioimage processing and analysis &#8211; Pathway modeling &#8211; Pharmacokinetic modelling.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="35"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong>Booth 35</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Springer</strong><br>
+<a href="http://www.springer.com/">www.springer.com</a></p>
+<p>Take your research and skills to the next level with Springer Computer and Information Science.  Stop by our booth to discover an authoritative range of journals, books, and major reference works, including the highly respected Lecture Notes in Computer Science and Encyclopedias offering easy-access to important applications, concepts, and technology.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="36"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong>Booth 36</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>EGEE &#8212; Enabling Grids for E-sciencE</strong><br>
+<a href="http://www.eu-egee.org/">www.eu-egee.org</a></p>
+<p>The EGEE project brings together scientists and engineers from over 90 institutions world-wide to provide a seamless Grid infrastructure available to scientists 24/7. Expanding from two scientific fields, high energy physics and life sciences, EGEE now integrates applications from many other scientific fields, ranging from geology to computational chemistry.</p>
+<p><font size="1"><a href="#top">top</a></font></p>
+<p><a name="37"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#F2F2F2">
+<td><img id="image80" src="wp-content/uploads/2007/02/redbar.gif" alt="redbar.gif" height="2" width="100%"><br>
+<strong>Booth 37</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Chemical Computing Group (CCG)</strong><br>
+<a href="http://www.chemcomp.com/">www.chemcomp.com</a></p>
+<p>Chemical Computing Group (CCG) provides state-of-the-art discovery software for the pharmaceutical and biotech industry through its flagship product &#8211; MOE, the Molecular Operating Environment. MOE is a multi-applications product that addresses the needs of Medicinal and Computational Chemists.</p>
+			<!--	<p>View the Exhibit Floor Plan [584 KB PDF] </p>
+<p>Booth<br />
+Exhibitor<br />
+Booth<br />
+Exhibitor</p>
+<p>1<br />
+Hewlett-Packard Company<br />
+20<br />
+Active Motif</p>
+<p>2<br />
+SGI<br />
+21<br />
+&nbsp;</p>
+<p>3<br />
+SGI<br />
+22<br />
+&nbsp;</p>
+<p>4<br />
+IBM<br />
+23<br />
+&nbsp;</p>
+<p>5<br />
+Synamatix<br />
+24<br />
+EMBL — European Bioinformatics Institute</p>
+<p>6<br />
+Taylor &amp; Francis Group<br />
+25<br />
+EMBL — European Molecular Biology Laboratory</p>
+<p>7<br />
+Taylor &amp; Francis<br />
+26<br />
+BioMed Central</p>
+<p>8<br />
+Accelrys Inc.<br />
+27<br />
+BIOBASE GmbH</p>
+<p>9<br />
+Biomax Informatics AG<br />
+28<br />
+Geneious Software</p>
+<p>10<br />
+Apple Inc.<br />
+29<br />
+&nbsp;</p>
+<p>11<br />
+Cambridge University Press<br />
+30<br />
+&nbsp;</p>
+<p>12<br />
+International Society for Computational Biology (ISCB)<br />
+31<br />
+&nbsp;</p>
+<p>13<br />
+PLoS Computational Biology<br />
+32<br />
+&nbsp;</p>
+<p>14<br />
+CLC bio A/S<br />
+33<br />
+Journal of the Royal Society</p>
+<p>15<br />
+The MIT Press<br />
+34<br />
+The Mathworks GmbH</p>
+<p>16<br />
+Oxford Journals<br />
+35<br />
+Springer</p>
+<p>17<br />
+Elsevier B.V.<br />
+36<br />
+EGEE &#8212; Enabling [...]</p>
+   -->
+	
+<!-- turned comments off -->
+<!-- 		
+                        <p class="post-bot">
+			<span>Comments Off</span>			</p> 
+-->
+			<!--
+			<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				xmlns:dc="http://purl.org/dc/elements/1.1/"
+				xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+			<rdf:Description rdf:about="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitfloorplan"
+    dc:identifier="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitfloorplan"
+    dc:title="Exhibit Floor Plan"
+    trackback:ping="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitfloorplan/trackback" />
+</rdf:RDF>			-->
+		</div>
+		
+<!-- You can start editing here. -->
+
+
+  		<!-- If comments are closed. -->
+		<p class="nocomments"><font size="1"><a href="#top">top</a></font></p>
+		
+	
+
+	</div>
+   
+	<div class="pagenav"></div>
+	</div>
+<div id="sidebar">
+	<div id="intro">
+		
+	<div class="post">	
+		<h2 class="post-title">15th Annual International Conference on Intelligent Systems for Molecular Biology (ISMB)<br>& 6th European Conference on Computational Biology (ECCB)</h2>
+		<p class="post-info">Vienna, Austria: July 21-25, 2007</p>
+
+
+<!--	
+<img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/themes/crayonworld-10/img/profile.jpg" class="profile" /> 
+			<p><strong>ISMB/ECCB 2007</strong></p>
+			<p>Vienna, Austria: July 21-25, 2007</p>
+-->
+<!--			
+<p>There are 92 posts and 0 comments so far.</p>		      -->
+	</div>	
+</div>	
+		
+<div id="sideone"> 
+
+<!--
+
+	<h2>Quick Bits</h2>
+						<p>This is for the Asides functionality.<br/> Enter the id of the category you want to be treated as Asides, in the Main Template (index.php) <br/></p>
+			
+
+-->
+
+
+<!-- KEYNOTES START 
+
+	<h2>Keynotes</h2>
+
+  <div>
+
+<span class="feed">
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-f.gif" align="right" width="41" height="41"><strong>Keynote Speaker</strong><br>blah blah blah blah blah blah<br>
+
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-m.gif" align="right" width="41" height="41"><strong>Keynote Speaker</strong><br>yada yada yada yada yada yada<br>
+
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-m.gif" align="right" width="41" height="41"><strong>Keynote Speaker</strong><br>yada yada yada blah blah blah<br>
+
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-f.gif" align="right" width="41" height="41"><strong>Keynote Speaker</strong><br>blah blah blah blah blah blah<br>
+
+</span></div>
+
+ KEYNOTES END -->
+
+
+<!-- SPONSORS START 
+
+	<h2>Premier Sponsors</h2>
+
+
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-f.gif" width="41" height="41"><br>
+
+ SPONSORS END -->
+
+<!-- WEATHER START
+
+<div>
+
+<h2>Venue</h2>
+<p class="post-info">
+<a href="http://www.acv.at/evo/web/acv/1584_DE">Austria Center Vienna</a><br><a href="http://www.acv.at/evo/web/acv/1584_DE"><img id="image31" src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/centre.png" alt="Austria Center Vienna" border="0"></a>
+</p>
+
+<span class="feed">
+<br><script language=javascript>var LocationID = 'AUXX0025';</script>
+<script language=javascript src='http://www.theweathernetwork.com/weatherbutton/wxbutton.js'></script>
+
+</span>
+</div>
+
+-->
+
+
+<!--
+		<h2>Links</h2>
+	<ul> </ul>	
+
+-->
+		
+</div>
+		
+	<div id="sidetwo">
+
+<!-- <h2><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/">Home</a></h2> -->
+
+<!-- <h2>Menu</h2> -->
+
+<!-- MENU START -->
+
+          <!--Optional Expand/ Contact All links. Remove if desired-->
+        <p class="post-info">    <a href="javascript:sweeptoggle('expand')">+Expand 
+            All</a> | <a href="javascript:sweeptoggle('contract')">-Contract All</a></p>
+            <div></div>
+
+			
+<!--PROGRAM-->
+            <p onclick="expandcontent(this, 'sc1')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Program</b></p>
+            <div id="sc1" class="switchcontent"> 
+        <ul>
+         <li><a href="agenda.html">Agenda-at-a-Glance</a></li>
+         <li><a href="program/schedule.html">Conference Schedule</a></li>
+         <li><a href="program/bof.html">Birds of a Feather</a></li>
+         <li><a href="program/demonstrations.html">Demonstrations</a></li>
+         <li><a href="program/highlights.html">Highlights Track</a></li>
+         <li><a href="program/industry.html">Industry Posters</a></li>
+         <li><a href="program/industrytrack.html">Industry Track</a></li>
+         <li><a href="program/papers.html">Papers</a></li>
+         <li><a href="program/plostrack.html">PLoS Track</a></li>
+         <li><a href="program/posters.html">Posters</a></li>
+         <li><a href="program/sigs.html">Satellite Meetings and SIGs</a></li>
+         <li><a href="program/scientific.html">Scientific Program Information</a></li>
+         <li><a href="program/social.html">Social Events</a></li>
+         <li><a href="program/specialsessions.html">Special Sessions</a></li>
+         <li><a href="program/scs.html">Student Council Symposium</a></li>
+         <li><a href="program/tutorials.html">Tutorials</a></li>
+        </ul>
+            </div>
+
+
+<!--KEYNOTES-->
+
+            <div> 
++ <strong><font color="black"><a href="keynotes.html">Keynotes</a></font></strong>
+            </div>
+
+			
+<!--DEADLINES-->
+<!--
+            <p onClick="expandcontent(this, 'sc2')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Deadlines</b></p>
+
+            <div id="sc2" class="switchcontent"> 
+              <ul>
+                 <li><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/deadlines/">Deadlines</a></li>
+              </ul>
+            </div>
+-->
+
+            <div> 
++ <strong><a href="deadlines.html">Deadlines</a></strong>
+            </div>
+
+
+<!--SUBS GUIDELINES-->
+
+            <p onclick="expandcontent(this, 'sc3')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Submissions/Guidelines</b></p>
+            <div id="sc3" class="switchcontent"> 
+
+        <ul>         
+         <li><a href="bof.html">Birds of a Feather (BoF)</a></li>
+         <li><a href="posters-latecall.html">Call for Late Posters</a></li>
+         <li><a href="papers.html">Call for Papers</a></li>
+         <li><a href="specialsessions.html">Special Sessions</a></li>
+         <li><a href="highlights.html">Highlights Track</a></li>
+         <li><a href="plostrack.html">PLoS Track</a></li>
+         <li><a href="program/posters.html">Posters</a></li>
+         <li><a href="demonstrations.html">Demonstrations</a></li>
+         <li><a href="tutorials.html">Tutorials</a></li>
+         <li><a href="industry.html">Industry Track</a></li>
+         <li><a href="sigs.html">Special Interest Groups (SIGs)</a></li>
+         <li><a href="scs3.html">Student Council Symposium (SCS3)</a></li>
+         <li><a href="travelsupport.html">Travel Fellowships</a></li>
+        </ul>
+            </div>
+
+		
+			<!--submissions-->
+			<!--
+            <p onClick="expandcontent(this, 'sc4')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Submissions</b></p>
+            <div id="sc4" class="switchcontent"> 
+              <ul>
+                <li>Call for Papers</li>
+                <li>Call for Tutorials</li>
+                <li>Late Breaking Poster Session Call</li>
+                <li>Call for PLoS Track</li>
+                <li>Call for SCS2 Posters</li>
+                <li>Academic Demos</li>
+                <li>Industry Demos</li>
+                <li>Travel Fellowships</li>
+                <li>Poster Guidelines &amp; Schedule</li>
+                <li>BOF Sign-up</li>
+                <li>Paper Guidelines</li>
+              </ul>
+            </div>
+			-->
+			
+
+<!--REGISTRATION-->
+
+            <div> 
++ <strong><a href="registration.html">Registration</a></strong>
+            </div>
+
+		
+			<!--registration-->
+			<!--
+            <p onClick="expandcontent(this, 'sc5')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Registration</b></p>
+
+            <div id="sc5" class="switchcontent"> 
+              <ul>
+                <li><a href="">Keynotes</a></li>
+                <li><a href="">Tutorials</a></li>
+                <li><a href="">Demos</a></li>
+              </ul>
+            </div>
+			-->
+			
+
+<!--GENERAL INFO-->
+            <p onclick="expandcontent(this, 'sc6')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>General Information</b> </p>
+
+            <div id="sc6" class="switchcontent"> 
+
+<ul>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="airtravel.html">Air Travel</a></li>
+<li><a href="activities.html">Children/Family Activities</a></li>
+<li><a href="childcare.html">Child Care</a></li>
+<li><a href="venue.html">Conference Venue</a></li>
+<li><a href="housing.html">Housing</a></li>
+<li><a href="tours.html">Tours</a></li>
+<li><a href="transit.html">Transit Passes</a></li>
+<li><a href="volunteers.html">Volunteers</a></li>
+</ul>
+
+            </div>
+
+
+
+<!--SPONSORS/EXHIBITORS-->
+
+            <p onclick="expandcontent(this, 'sc7a')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Sponsors & Exhibitors</b></p>
+            <div id="sc7a" class="switchcontent"> 
+              <ul>
+                 <li><a href="sponsors.html">Conference Sponsors</a></li>
+                 <li><a href="exhibitfloorplan.html">Conference Exhibitors</a></li>
+              </ul>
+            </div>
+
+
+
+<!--SPONSORS/EXHIBITORS INFO-->
+
+            <p onclick="expandcontent(this, 'sc7')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Sponsors/Exhibitors Information</b></p>
+            <div id="sc7" class="switchcontent"> 
+              <ul>
+                 <li><a href="sponsoropps.html">Sponsor Opportunities</a></li>
+                 <li><a href="sponsorbrochure.html">Sponsor Brochure</a></li>
+                 <li><a href="http://www.iscb.org/cms_addon/conferences/ismb07/sponsor_signup.php">Sponsor & Exhibitor Sign-up</a></li>
+                 <li><a href="exhibitorinfo.html">Exhibitor Information</a></li> 
+            <!--     <li><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitresources/">Exhibitor Resources</a></li> -->
+            <li><a href="exhibitschedule.html">Exhibitor Schedule</a></li> 
+                <li><a href="exhibitfloorplan.html">Exhibitor Floor Plan</a></li> 
+              </ul>
+            </div>
+			
+			<!--committees-->
+            <p onclick="expandcontent(this, 'sc8')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Committees</b></p>
+
+            <div id="sc8" class="switchcontent"> 
+              <ul>
+<!-- <li><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/">All Committees</a></li> -->
+<li><a href="committees/chairs.html">Conference Chairs</a></li>
+<li><a href="committees/steeringcommittee.html">Steering Committee</a></li>
+<li><a href="committees/soc.html">Scientific Organizing Committee</a></li>
+<li><a href="committees/areachairs.html">Area Chairs</a></li>
+<li><a href="committees/highlights.html">Highlights Track</a></li>
+<li><a href="committees/plostrack.html">PLoS Track</a></li>
+            </ul>
+            </div>
+
+			<!--press pass-->
+<!--
+            <p onClick="expandcontent(this, 'sc9')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Press Pass</b> </p>
+            <div id="sc9" class="switchcontent"> 
+              <ul>
+                <li><a href="http://ismb.org/">Press Pass</a></li>
+              </ul>
+            </div>
+-->
+			
+<!--CONTACTS-->
+
+            <p onclick="expandcontent(this, 'sc10')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Contact Us</b> </p>
+            <div id="sc10" class="switchcontent"> 
+              <ul>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="submissioncontacts.html">Submission Contacts</a></li>
+              </ul>
+            </div>
+
+
+
+<!--CONFERENCE PROMO-->
+
+            <div> 
++ <strong><a href="promotion.html">Conference Promotion</a></strong>
+            </div>
+
+
+<!--PRESS PASS-->
+
+            <div> 
++ <strong><a href="http://www.iscb.org/cms_addon/conferences/ismb/presspass.php">Press Pass</a></strong>
+            </div>
+
+
+<!--UPDATES-->
+
+            <p onclick="expandcontent(this, 'sc11')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Blog Updates</b> </p>
+            <div id="sc11" class="switchcontent"> 
+
+              <ul><li><a href="feedhtml.html" title="Subscribe to Updates using RSS">Subscribe<img src="wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"></a></li>
+
+<li><a href="http://www.feedpass.com/ISMBECCB2007">How to Subscribe</a></li>
+
+
+		<li><a href='2007/09.html' title='September 2007'>September 2007</a>&nbsp;(2)</li>
+	<li><a href='2007/07.html' title='July 2007'>July 2007</a>&nbsp;(4)</li>
+	<li><a href='2007/06.html' title='June 2007'>June 2007</a>&nbsp;(2)</li>
+	<li><a href='2007/05.html' title='May 2007'>May 2007</a>&nbsp;(1)</li>
+	<li><a href='2007/03.html' title='March 2007'>March 2007</a>&nbsp;(2)</li>
+	<li><a href='2007/01.html' title='January 2007'>January 2007</a>&nbsp;(2)</li>
+	<li><a href='2006/12.html' title='December 2006'>December 2006</a>&nbsp;(3)</li>
+	<li><a href='2006/11.html' title='November 2006'>November 2006</a>&nbsp;(1)</li>
+	<li><a href='2006/10.html' title='October 2006'>October 2006</a>&nbsp;(1)</li>
+	<li><a href='2006/09.html' title='September 2006'>September 2006</a>&nbsp;(1)</li>
+	<li><a href='2006/07.html' title='July 2006'>July 2006</a>&nbsp;(1)</li>
+</ul>
+            </div>
+
+<!--MENU END-->
+
+
+
+<!--TAGS-->
+<!--	
+        <h2>Tags</h2>
+	<ul>
+			<li class="cat-item cat-item-4"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/category/announcements" title="View all posts filed under announcements">announcements</a> (11)
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/category/uncategorized" title="View all posts filed under Uncategorized">Uncategorized</a> (9)
+</li>
+	</ul>		
+-->
+
+
+<!--OLD UPDATES-->
+<!--
+	<h2>Updates</h2>
+
+<p class="post-info"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/feed" title="Syndicate this site using RSS"><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"> updates</a></span><br>
+
+	<ul>	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/09' title='September 2007'>September 2007</a>&nbsp;(2)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/07' title='July 2007'>July 2007</a>&nbsp;(4)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/06' title='June 2007'>June 2007</a>&nbsp;(2)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/05' title='May 2007'>May 2007</a>&nbsp;(1)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/03' title='March 2007'>March 2007</a>&nbsp;(2)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/01' title='January 2007'>January 2007</a>&nbsp;(2)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/12' title='December 2006'>December 2006</a>&nbsp;(3)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/11' title='November 2006'>November 2006</a>&nbsp;(1)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/10' title='October 2006'>October 2006</a>&nbsp;(1)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/09' title='September 2006'>September 2006</a>&nbsp;(1)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/07' title='July 2006'>July 2006</a>&nbsp;(1)</li>
+</ul>	
+-->
+
+
+<!-- 
+<a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/comments/feed" title="The latest comments to all posts in RSS"><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"> comments</a></span>
+-->
+
+<!--PAGES-->
+<!--	
+        <h2>Pages</h2>
+	<ul><li class="page_item page-item-7"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/agenda" title="Agenda-at-a-Glance">Agenda-at-a-Glance</a></li>
+<li class="page_item page-item-46"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/airtravel" title="Air Travel">Air Travel</a></li>
+<li class="page_item page-item-209"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/bof" title="Birds of a Feather (BoF)">Birds of a Feather (BoF)</a></li>
+<li class="page_item page-item-208"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters-latecall" title="Call for Late Posters">Call for Late Posters</a></li>
+<li class="page_item page-item-83"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/papers" title="Call for Papers">Call for Papers</a></li>
+<li class="page_item page-item-220"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/childcare" title="Child Care">Child Care</a></li>
+<li class="page_item page-item-202"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/activities" title="Children/Family Activities">Children/Family Activities</a></li>
+<li class="page_item page-item-90"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees" title="Committees">Committees</a>
+<ul>
+	<li class="page_item page-item-89"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/areachairs" title="Area Chairs">Area Chairs</a></li>
+	<li class="page_item page-item-87"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/papers-chairs" title="Call for Papers Area Chairs">Call for Papers Area Chairs</a></li>
+	<li class="page_item page-item-10"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/chairs" title="Conference Chairs">Conference Chairs</a></li>
+	<li class="page_item page-item-205"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/highlights" title="Highlights Track Area Chairs">Highlights Track Area Chairs</a></li>
+	<li class="page_item page-item-164"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/plostrack" title="PLoS Track">PLoS Track</a></li>
+	<li class="page_item page-item-42"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/soc" title="Scientific Organizing Committee">Scientific Organizing Committee</a></li>
+	<li class="page_item page-item-41"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/steeringcommittee" title="Steering Committee">Steering Committee</a></li>
+</ul>
+</li>
+<li class="page_item page-item-130"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/promotion" title="Conference Promotion">Conference Promotion</a></li>
+<li class="page_item page-item-112"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsors" title="Conference Sponsors">Conference Sponsors</a></li>
+<li class="page_item page-item-132"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/venue" title="Conference Venue">Conference Venue</a></li>
+<li class="page_item page-item-9"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/contacts" title="Contact Us">Contact Us</a></li>
+<li class="page_item page-item-68"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/demonstrations" title="Demonstrations">Demonstrations</a></li>
+<li class="page_item page-item-119"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitfloorplan" title="Exhibit Floor Plan">Exhibit Floor Plan</a></li>
+<li class="page_item page-item-186"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitorinfo" title="Exhibitor Information">Exhibitor Information</a></li>
+<li class="page_item page-item-194"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitresources" title="Exhibitor Resources">Exhibitor Resources</a></li>
+<li class="page_item page-item-193"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitschedule" title="Exhibitor Schedule">Exhibitor Schedule</a></li>
+<li class="page_item page-item-2"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/faq" title="FAQ">FAQ</a></li>
+<li class="page_item page-item-138"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/housing" title="Housing">Housing</a></li>
+<li class="page_item page-item-12"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/subscribe" title="How to Subscribe">How to Subscribe</a></li>
+<li class="page_item page-item-210"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/volunteers" title="ISMB/ECCB 2007 Conference Volunteers">ISMB/ECCB 2007 Conference Volunteers</a></li>
+<li class="page_item page-item-45"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/deadlines" title="ISMB/ECCB 2007 Deadlines">ISMB/ECCB 2007 Deadlines</a></li>
+<li class="page_item page-item-58"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/highlights" title="ISMB/ECCB 2007 Highlights Track: Call for Proposals">ISMB/ECCB 2007 Highlights Track: Call for Proposals</a></li>
+<li class="page_item page-item-86"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/industry" title="ISMB/ECCB 2007 Industry Track: Call for Proposals">ISMB/ECCB 2007 Industry Track: Call for Proposals</a></li>
+<li class="page_item page-item-125"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/registration" title="ISMB/ECCB 2007 Registration">ISMB/ECCB 2007 Registration</a>
+<ul>
+	<li class="page_item page-item-165"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/registration/membership" title="ISCB Membership Fee Chart">ISCB Membership Fee Chart</a></li>
+</ul>
+</li>
+<li class="page_item page-item-78"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/keynotes" title="Keynotes">Keynotes</a></li>
+<li class="page_item page-item-48"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/keynotespresentations" title="Keynotes Presentations">Keynotes Presentations</a></li>
+<li class="page_item page-item-85"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/plostrack" title="PLoS Track at ISMB/ECCB 2007">PLoS Track at ISMB/ECCB 2007</a></li>
+<li class="page_item page-item-121"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters" title="Posters">Posters</a>
+<ul>
+	<li class="page_item page-item-124"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters/posterboard" title="Poster Board Dimensions">Poster Board Dimensions</a></li>
+</ul>
+</li>
+<li class="page_item page-item-134"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program" title="Program">Program</a>
+<ul>
+	<li class="page_item page-item-185"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/papers" title="Accepted Papers">Accepted Papers</a></li>
+	<li class="page_item page-item-177"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/affiliate" title="Affiliate Meetings">Affiliate Meetings</a></li>
+	<li class="page_item page-item-234"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/bof" title="Birds of a Feather (BoF)">Birds of a Feather (BoF)</a></li>
+	<li class="page_item page-item-223"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/demonstrations" title="Demonstrations">Demonstrations</a></li>
+	<li class="page_item page-item-229"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/highlights" title="Highlights Track">Highlights Track</a></li>
+	<li class="page_item page-item-222"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/industry" title="Industry Posters">Industry Posters</a></li>
+	<li class="page_item page-item-228"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/industrytrack" title="Industry Track">Industry Track</a></li>
+	<li class="page_item page-item-219"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/schedule" title="ISMB/ECCB 2007 Conference Schedule">ISMB/ECCB 2007 Conference Schedule</a></li>
+	<li class="page_item page-item-227"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/plostrack" title="PLoS Track">PLoS Track</a></li>
+	<li class="page_item page-item-152"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/sigs" title="Satellite Meetings and SIGs">Satellite Meetings and SIGs</a></li>
+	<li class="page_item page-item-79"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/scientific" title="Scientific Program Information">Scientific Program Information</a></li>
+	<li class="page_item page-item-146"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/social" title="Social Events">Social Events</a></li>
+	<li class="page_item page-item-158"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/specialsessions" title="Special Sessions">Special Sessions</a>
+	<ul>
+		<li class="page_item page-item-167"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/specialsessions/details" title="Special Sessions Details">Special Sessions Details</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-153"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/scs" title="Student Council Symposium (SCS3)">Student Council Symposium (SCS3)</a></li>
+	<li class="page_item page-item-136"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/tutorials" title="Tutorials Program">Tutorials Program</a></li>
+</ul>
+</li>
+<li class="page_item page-item-54"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sigs" title="Special Interest Group Meetings (SIGs)">Special Interest Group Meetings (SIGs)</a></li>
+<li class="page_item page-item-35"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/specialsessions" title="Special Sessions">Special Sessions</a></li>
+<li class="page_item page-item-103"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsorbrochure" title="Sponsor Brochure">Sponsor Brochure</a></li>
+<li class="page_item page-item-100"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps" title="Sponsor Opportunities">Sponsor Opportunities</a>
+<ul>
+	<li class="page_item page-item-114"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/addpkg" title="Additional Sponsor Opportunities">Additional Sponsor Opportunities</a></li>
+	<li class="page_item page-item-116"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/demopkg" title="Demonstration Package">Demonstration Package</a></li>
+	<li class="page_item page-item-115"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/exhibitpkg" title="Exhibitor Package">Exhibitor Package</a></li>
+	<li class="page_item page-item-117"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/posterpkg" title="Industry Poster Package">Industry Poster Package</a></li>
+	<li class="page_item page-item-118"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/pastsponsors" title="Past Sponsors and Exhibitors">Past Sponsors and Exhibitors</a></li>
+	<li class="page_item page-item-113"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/sponsorpkg" title="Sponsor Package">Sponsor Package</a></li>
+</ul>
+</li>
+<li class="page_item page-item-174"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/scs3" title="Student Council Symposium (SCS3)">Student Council Symposium (SCS3)</a></li>
+<li class="page_item page-item-108"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/submissioncontacts" title="Submission Contacts">Submission Contacts</a></li>
+<li class="page_item page-item-139"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/tours" title="Tours">Tours</a></li>
+<li class="page_item page-item-111"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/travelsupport" title="Travel Fellowships">Travel Fellowships</a></li>
+<li class="page_item page-item-59"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/tutorials" title="Tutorials">Tutorials</a></li>
+<li class="page_item page-item-147"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/transit" title="Vienna Transit Pass">Vienna Transit Pass</a></li>
+<li class="page_item page-item-43"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/weather" title="Weather Today">Weather Today</a></li>
+</ul>	
+-->
+
+<!--SEARCH-->
+<!--	
+        <form id="searchform" method="get" action="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/">
+		<input type="text" class="text" name="s" id="s" value="" size="15" /><br/>
+		<input type="submit" name="submit" value="Search " />
+	</form>
+-->
+
+<div>
+
+<!--LOGOS-->
+
+<br>
+<!--
+<a id="p73" href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/12/FullPageAdvert.pdf"><img id="image26" src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/flyer.png" alt="2007 Flyer - 306 KB PDF" title="306 KB PDF" border="0" vspace="1"></a>
+-->
+
+<a href="program/sigs.html"><img id="image171" src="wp-content/uploads/2007/03/meetings1.png" alt="SIGs &amp; Satellite Meetings" vspace="1"></a>
+
+<a href="http://iscbsc.org/scs3/index.htm"><img id="image182" src="wp-content/uploads/2007/03/scs3-border2.jpg" alt="Student Council Symposium (SCS)" vspace="1" border="0"></a>
+
+<a href="program/affiliate.html">
+<img id="image175" src="wp-content/uploads/2007/03/affiliate.png" alt="Affiliate Meetings" vspace="1"></a>
+
+<a href="http://www.iscb.org/"><img src="wp-images/iscblogo.jpg" alt="International Society for Computational Biology" vspace="1" border="0"></a>
+
+</div>
+
+
+<!--       <h2>Subscribe</h2> 
+<p class="post-info"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/feed" title="Syndicate this site using RSS"><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"> updates</a></span><br>
+
+<a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/comments/feed" title="The latest comments to all posts in RSS"><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"> comments</a></span>
+-->
+
+<!--
+<div>
+<ul><br>
+<a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-login.php">Log in</a><br>
+</ul>
+</div>
+-->
+
+</p>
+</div></div><div id="footer">
+
+<!--
+  <div><span class="feed"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/feed" title="Syndicate this site using RSS">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></span><br/>
+		<span class="feed"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/comments/feed" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></span>
+</div>
+-->
+
+		<center><strong>ISMB/ECCB 2007 &copy; 2009</strong> <a href="http://www.iscb.org/ismbeccb2007/?feed=rss2"><img src="wp-content/uploads/2006/07/feed-icon-10x10.gif" vspace="0" align="absmiddle" border="0" hspace="0"></a> </center>
+</div>
+</div>
+
+<!-- 
+<center>based on wordpress theme <a href="http://wpthemes.info/crayon-world/"target="_blank">CrayonWorld</a></center>
+-->
+
+</body>
+
+
+</html>
