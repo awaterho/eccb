@@ -1,10 +1,60 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: EuclidCircularB,sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 24px;
-    background-color: #f0f0f0;
+    background-color: #374151;
+    color: white;
+}
+
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.homepage a {
+    text-decoration: none;
+    color: white;
+}
+.homepage a:visited {
+    color: white;
+}
+#about {
+    padding: 0px 128px;
+    align-items: center;
+}
+#banner {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+#banner svg {
+    max-width: 380px;
+}
+#contact {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+}
+#contact > div {
+    padding: 0px 128px;
+}
+#contact > div > div {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+}
+#socials  {
+    width: 100%;
+}
+#socials > div {
+    padding: 0px 128px;
+    display: flex;
+    gap: 24px;
 }
 
 .grid-container {
