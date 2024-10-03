@@ -13,6 +13,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 24px;
+    font-size: 1.3rem;
 }
 
 .homepage a {
