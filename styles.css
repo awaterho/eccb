@@ -57,6 +57,12 @@ body {
     display: flex;
     gap: 24px;
 }
+#contact svg, #socials svg {
+    transition: transform 0.3s ease;
+}
+#contact svg:hover, #socials svg:hover {
+    transform: scale(1.1);
+}
 
 .grid-container {
     display: grid;
