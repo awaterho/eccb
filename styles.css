@@ -1,8 +1,5 @@
 body {
     font-family: EuclidCircularB,sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 24px;
     background-color: #374151;
     color: white;
@@ -24,7 +21,6 @@ body {
     color: white;
 }
 #about {
-    padding: 0px 128px;
     align-items: center;
 }
 #banner {
@@ -41,19 +37,16 @@ body {
     flex-direction: column;
     display: flex;
 }
-#contact > div {
-    padding: 0px 128px;
-}
 #contact > div > div {
     display: flex;
-    gap: 48px;
+    flex-wrap: wrap;
+    gap: 32px;
     align-items: center;
 }
 #socials  {
     width: 100%;
 }
 #socials > div {
-    padding: 0px 128px;
     display: flex;
     gap: 24px;
 }
@@ -63,6 +56,13 @@ body {
 #contact svg:hover, #socials svg:hover {
     transform: scale(1.1);
 }
+
+@media (min-width: 600px) {
+    #socials > div, #contact > div, #about {
+        padding: 0px 128px;
+    }
+}
+
 
 .grid-container {
     display: grid;
