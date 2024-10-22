@@ -73,11 +73,25 @@ body {
 }
 
 .grid-item {
-   
+    position: relative;
+    width: 100%;
     padding: 4px;
     transition: background-color 0.3s ease;
     position: relative; /* Needed for absolute positioning inside */
-    aspect-ratio: 1/1;
+}
+
+.grid-item::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.grid-item > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .grid-item img {
