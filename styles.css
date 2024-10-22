@@ -102,6 +102,18 @@ body {
     background-color: white;
     transition: transform 0.3s ease;
 }
-.grid-item:hover img {
-    transform: scale(1.1); /* Zooms the image slightly on hover */
+
+/* For desktop devices */
+@media (hover: hover) and (pointer: fine) {
+  .grid-item:hover img {
+    transform: scale(1.1);
+  }
 }
+
+/* For mobile devices */
+@media (hover: none) and (pointer: coarse) {
+  .grid-item img:active {
+    transform: scale(1.1);
+  }
+}
+
