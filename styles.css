@@ -23,6 +23,10 @@ body {
 #about {
     align-items: center;
 }
+#about img {
+    height: 1em;
+    vertical-align: -.1em;
+}
 #banner {
     width: 100%;
     flex-direction: column;
