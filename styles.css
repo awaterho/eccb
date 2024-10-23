@@ -9,8 +9,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
-    font-size: 1.3rem;
+    gap: 32px;
+    font-size: 1.5rem;
 }
 
 .homepage a {
@@ -23,10 +23,17 @@ body {
 #about {
     align-items: center;
 }
-#about img {
-    height: 1em;
-    
+#about  {
+    line-height: 2.1rem;
 }
+#about img {
+    height: 1em;  
+}
+#about ul {
+    xlist-style-type: none;
+    padding-left: 18px;
+}   
+
 #banner {
     width: 100%;
     flex-direction: column;
@@ -53,6 +60,7 @@ body {
 #socials > div {
     display: flex;
     gap: 24px;
+    justify-content: center;
 }
 #contact svg, #socials svg {
     transition: transform 0.3s ease;
@@ -63,7 +71,7 @@ body {
 
 @media (min-width: 600px) {
     #socials > div, #contact > div, #about {
-        padding: 0px 128px;
+        padding: 0px 80px;
     }
 }
 
