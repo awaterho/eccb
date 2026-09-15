@@ -1,0 +1,39 @@
+/* white */
+#page_bg {
+	/*background: url(../images/raufaser.png);*/
+	background-color: #003c7e;
+}
+
+div#wrapper {
+	
+}
+
+div#wrapper_r {
+background-color:#010101;
+}
+
+div#header {
+
+background: url(../images/header/rotate.jpg); 
+
+}
+div#logo{
+
+}
+
+div#header_l {
+
+
+}
+div#header_r {
+
+
+}
+
+div#footer {
+
+}
+div#footer_l {
+
+}
+div#footer_r {

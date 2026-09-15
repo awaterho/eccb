@@ -1,0 +1,367 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+* { font-size:13px; font-family: Verdana, "Trebuchet MS", Arial, sans-serif; }
+div { width:800px; margin:5px 0; padding-bottom:5px;}
+div.titolo_pagina { font-weight:bold; font-size:15px; margin-bottom:20px; }
+div.poster { font-weight:bold; border-bottom:1px solid silver; font-size:14px; margin-top:20px;}
+div.titolo { font-weight:bold; font-size:14px; }
+div.autori { border-bottom:1px solid silver; }
+div.inst { border-bottom:1px solid silver; }
+div.shabs { font-style:italic; font-size:12px; border-bottom:1px solid gray;}
+div.exabs { font-size:12px;}
+div.keys { color:gray; }
+</style>
+</head>
+<body>
+<div class="titolo_pagina">
+Poster Abstracts for Category A: Algorithms and phylogeny
+</div>
+<a name="1
+"></a>
+<div class="poster">
+Poster A01
+</div>
+<div class="titolo">
+MaxAlign: maximizing usable data in an alignment
+</div>
+<div class="autori">
+Gouveia-Oliveira R., Sackett P.W., Pedersen A.G.
+</div>
+<div class="inst">
+Center for Biological Sequence Analysis, Technical University of Denmark
+</div>
+<div class="shabs">
+The presence of gaps in an alignment of nucleotide or protein sequences is often an inconvenience for bioinformatical studies. In phylogenetic and other analyses, for instance, gapped columns are often discarded entirely from the alignment.
+MaxAlign is a program that optimizes the alignment prior to such analyses. Specifically, it maximizes the number of nucleotide (or amino acid) symbols that are present in gap-free columns – the alignment area – by selecting the optimal subset of sequences to exclude from the alignment.
+MaxAlign is available at:http://www.cbs.dtu.dk/services/MaxAlign
+</div>
+<div class="exabs">
+Background
+The presence of gaps in an alignment of nucleotide or protein sequences is often an inconvenience for bioinformatical studies. In phylogenetic and other analyses, for instance, gapped columns are often discarded entirely from the alignment.
+Results
+MaxAlign is a program that optimizes the alignment prior to such analyses. Specifically, it maximizes the number of nucleotide (or amino acid) symbols that are present in gap-free columns – the alignment area – by selecting the optimal subset of sequences to exclude from the alignment.
+MaxAlign can be used prior to phylogenetic and bioinformatical analyses as well as in other situations where this form of alignment improvement is useful. In this work we test MaxAlign's performance in these tasks and compare the accuracy of phylogenetic estimates including and excluding gapped columns from the analysis, with and without processing with MaxAlign. We also introduce a new simple measure of tree similarity, Normalized Symmetric Similarity (NSS) that we consider useful for comparing tree topologies.
+Conclusion
+We demonstrate how MaxAlign is helpful in detecting misaligned or defective sequences without requiring manual inspection. We also show that it is not advisable to exclude gapped columns from phylogenetic analyses unless MaxAlign is used first. Finally, we find that the sequences removed by MaxAlign from an alignment tend to be those that would otherwise be associated with low phylogenetic accuracy, and that the presence of gaps in any given sequence does not seem to disturb the phylogenetic estimates of other sequences.
+The MaxAlign web-server is freely available online at http://www.cbs.dtu.dk/services/MaxAlign where supplementary information can also be found. The program is also freely available as a Perl stand-alone package.
+</div>
+<div class="keys">
+Keywords: alignment, sequence removal
+</div>
+<a name="2
+"></a>
+<div class="poster">
+Poster A02
+</div>
+<div class="titolo">
+Detection and correction of outliers in high-throughput experiments data
+</div>
+<div class="autori">
+Anton, MA, Rubio, A
+</div>
+<div class="inst">
+CEIT and TECNUN, University of Navarra
+</div>
+<div class="shabs">
+High-throughput (HT) experiments provide huge amounts of data about the condition under study. Our method identifies outliers in HT experiments and substitutes their values by a sensible estimation of expected real values. The method is based on SVD. It performs a partition of the expression matrix into four submatrices and estimates all the values of one of the submatrices using the others. We have applied our method to NMF analysis of gene expression and the results have improved significantly. This method enables to apply standard statistics to the data without distortion in the results.
+</div>
+<div class="exabs">
+High-throughput (HT) experiments give huge amounts of data that provide unprecedented information about the condition under study. Since the number of data is large, there can be some artifacts in the experiments which make outliers to appear and degrade the numerical analysis of the data. For example, a single outlier can modify unboundedly the mean of the expression of a gene. 
+Many statistical or algebraic methods are affected by outliers. One possibility to cope with outliers is to use robust methods (v. gr. use the median instead of the mean, norm-1 optimizations instead of least squares minimizations …). The method we propose goes in a different direction, it identifies the outliers of HT experiments, and substitute artificial values by a sensible estimation expected real values. This method enables to apply standard statistic measurements (mean and standard deviation) and classical numerical methods (least squares) without big distortion in the results. These statistics have the advantage over robust methods that are usually much faster to compute and have closed form density functions.
+There are a number of methods that can be applied to estimate real values of outliers when they are identified, for a comparative review for imputing missing data see [1]. The method we have applied is based on SVD [2] and is able to both identify and estimate outlier values. One of the advantages of this method over standard SVD estimation is that a proper permutation of the data matrix can be applied, so that, data from outliers are not used to estimate the value of other outliers.
+The algorithm works as follows. The data matrix is partitioned into four matrices and each of them is estimated using the others. This procedure is repeated a number of times for different partitions. If the difference between the given data and the median of values of estimated data is beyond a certain threshold, the entry is identified as an outlier and its value is estimated from the rest of data.
+We have applied our method to NMF analysis of gene expression and the results have improved significantly since we have detected NMF is strongly affected by outliers.
+[1] Troyanskaya O, Cantor M, Sherlock G, Brown P, Hastie T, Tibshirani R, Botstein D, Altman RB: Missing value estimation methods for DNA microarrays. Bioinformatics. 2001 Jun; 17(6):520-5.
+[2] Owen AB, Perry PO: Bi-cross-validation of the SVD and the non-negative matrix factorization. Stanford University. September 2007.
+</div>
+<div class="keys">
+Keywords: algorithm, SVD, outliers, high-throughput, NMF, microarrays
+</div>
+<a name="3
+"></a>
+<div class="poster">
+Poster A03
+</div>
+<div class="titolo">
+Investigating einkorn domestication using phylogenetic networks
+</div>
+<div class="autori">
+Ayling S.C., Bunning S.L., Brown T.A.
+</div>
+<div class="inst">
+University of Manchester, Manchester Interdisciplinary Biocentre, 131 Princess Street, Manchester, UK, M1 7DN
+</div>
+<div class="shabs">
+As an alternative to AFLPs and Neighbor-Joining analyses, pruned quasi-median networks are constructed for sets of 5S ribosomal spacer sequences from einkorn samples gathered in the Fertile Crescent. Comparison of networks for groups from different geographic regions has provided insights into the relationships between different einkorn populations in this region.
+</div>
+<div class="exabs">
+The transition from hunting-gathering to agriculture began 10,000 years ago in the Fertile Crescent, an area covering parts of present day Egypt, Gaza Strip, Iran, Iraq, Israel, Jordan, Lebanon, Syria, Turkey and West Bank. A number of founder crops are believed to have originated here including einkorn, emmer and barley. Much work has been conducted to investigate the origins of agriculture, however the mechanisms by which morphologically distinct domesticated crops were produced from cultivated progenitors is not yet fully understood.
+AFLPs and Neighbor-Joining trees have been used to explore the relationships between wild and domesticated crops which invariably produce trees that appear monophyletic, often in contrast to archaeological evidence. Simulations of AFLP evolution and analysis by Neighbor-Joining indicated that populations often appear to be monophyletic even if derived from multiple populations. These simulations, combined with the conflicting archaeological evidence suggest that AFLPs and Neighbor-Joining might not be a suitable approach when investigating the origins of agriculture.
+As an alternative we are using einkorn 5S spacer sequences to construct phylogenetic networks. Einkorn wheat has been chosen as a species which was domesticated in the Fertile Crescent but has had little agricultural use in the last 5000 years; as such modern domesticated einkorn will not have been through additional bottlenecks caused by modern agricultural intensive breeding. The 5S-DNA-A1 array consists of repeating 5S ribosomal gene and spacer units and is known to evolve rapidly, a property which is essential when looking at such recent evolutionary timescales. A disadvantage however is that the array evolves in a concerted fashion, with homogenisation processes which create reticulate relationships between sequences. For this reason we require phylogenetic networks rather than trees to depict these relationships. We use pruned quasi-median networks which retain shortest paths between pairs of sequences in the network, where the shortest path is equivalent to the minimum number of steps required to convert one sequence to the other.
+The wild einkorn samples are from Turkey, Syria, Iraq and Iran. We are in the process of generating thousands of 5S spacer sequences from these samples to investigate the variation within an individual and within a population. Analysis of the networks produced from single seeds has revealed the majority of sequences are contained within large consensus nodes with few duplicated non-consensus sequences. Comparisons of seeds from different geographic regions has provided insights into the relationships between different einkorn populations within the Fertile Crescent.
+</div>
+<div class="keys">
+Keywords: Phylogenetic network, 5s rDNA, Einkorn
+</div>
+<a name="4
+"></a>
+<div class="poster">
+Poster A04
+</div>
+<div class="titolo">
+Microarray Design using the Hilbert-Schmidt Independence Criterion
+</div>
+<div class="autori">
+Bedo J
+</div>
+<div class="inst">
+The Australian National University, NICTA
+</div>
+<div class="shabs">
+We study the problem of selecting a small subset of clones from a large pool for creation of a microarray plate.   A new kernel based unsupervised feature selection method is presented and evaluated on three microarray datasets: the Alon colon cancer dataset, the van 't Veer breast cancer dataset, and a multiclass cancer of unknown primary dataset.  The experiments show that subsets selected by the method resulted in equivalent or better performance than supervised feature selection, with the added benefit that the subsets are not target specific and may be used for prediction of any target.
+</div>
+<div class="exabs">
+# Introduction
+Feature selection is an important procedure in data mining.  The elimination of features leads to smaller and more interpretable models and can improve generalisation performance.  When labels are available, supervised feature selection methods can be used to produce feature subsets tailored towards the prediction target.  In contrast, unsupervised feature selection methods can be used when labels are not available, but a subset of features that captures much of the information contained within the whole dataset is desired.
+The problem studied herein is to design a microarray plate by choosing a subset of clones from a large initial pool.  The array must remain as general as possible and not be tailored towards specific phenotypes.  As such, this is an unsupervised selection problem.
+Here, an unsupervised feature selection method is presented based on the Hilbert-Schmidt independence criterion (HSIC).  The HSIC is a dependence measure between two random variables that is closely related to kernel target alignment and maximum mean discrepancy (MMD). Previous studies have used the HSIC for supervised selection and demonstrated good performance and flexibility.  Here, an unsupervised variant named the Unsupervised feature selection By the HSIC (UBHSIC) method is proposed.
+UBHSIC was evaluated on three cancer genomics datasets: the Alon colon cancer dataset, the van 't Veer breast cancer dataset, and a multiclass cancer of unknown primary (CUP) dataset.  The CUP dataset is an ideal dataset to study as the goal is to select a small subset of features for the development of a clinical test.
+# Methods
+The HSIC is a quantity that measures the mutual dependence between two variables.  For our task of unsupervised feature selection, the HSIC is used to measure the dependence between subsets of features and the full set of features.  What is desired is a subset with *maximum dependence* on the full dataset.
+The HSIC is a quantity that measure the dependence between two random variables.  In this sense, it is similar to mutual information, however it  can be measure dependenc with respect to any reproducing kernel hilbert space (RKHS) defined on the random variables.  This ability to use different kernels provides a large amount of flexibility as kernels may be selected or designed for the specific problem at hand.
+Using the HSIC dependence measure, a subset of features can be found by searching for a subset that maximises the HSIC with the full set.  This leads to a combinatorial optimisation problem where a solution can be found using a variety of methods (simulated annealing, nested subset selection, etc).  This procedure is refered to as Unsupervised feature selection By the HSIC (UBHSIC).
+# Experiments
+The proposed method was analysed on several cancer genomics datasets.  Several kernels (the Radial Basis Function (RBF), Linear, Polynomial, and a variance kernel) were evaluated to determine the effects and performance of different kernels.  The variance kernel was chosen to encode a preference for decorrelation.  Three cancer genomics datasets were analysed, the van 't Veer breast cancer dataset, a colon cancer dataset, and a cancer of unknown primary (CUP) dataset. The first two datasets are 2-class classification problems, while the last is a multiclass classification dataset where the aim is to develop a predictor for the site of origin of a tumour.  Each dataset was analysed by applying UBHSIC with the various kernels to reduce the full dataset.  The centroid classifier and supervised feature selector was then applied to the UBHSIC reduced datasets to evaluate the performance.  
+In summary, the results show that unsupervised pre-filtering does not degrade the classification performance and can actually improve the performance at few features.  The RBF and variance kernels perform very well across both two-class datasets, with the other kernels not performing as consistently.  On the multiclass dataset, the variance kernel is the only kernel that performed well.  Aggressive feature reduction down to 50 features for the two-class datasets and 100 features for the CUP dataset showed surprisingly good performance, suggesting that the full datasets contains significant redundancy and can be highly compressed without significant loss of performance.  Furthermore, the features selected by the variance kernel were decorrelated in comparison to the other kernels.
+# Conclusions
+The UBHSIC method was presented and evaluated on several bioinformatics datasets.  The results were very promising: on the cancer genomics datasets the classification performance after pre-filtering using UBHSIC was equivalent or better than the performance obtained using the full dataset.  The RBF and variance kernels show good performance on all two-class datasets, and the variance kernel showed good performance on the multiclass dataset.  Furthermore, the variance kernel produced highly decorrelated selections.
+The high level of classification performance observed after filtering strongly suggests shifting to a lower resolution platform by selecting a subset of clones using the presented method is a viable option.  Furthermore, the feature subsets obtained using UBHSIC procedure are not tailored for a specific target and thus may be used to predict many different phenotypes, though further supervised feature selection may be needed to reach the maximum performance.
+</div>
+<div class="keys">
+Keywords: kernel methods, unsupervised feature selection, microarray, cancer
+</div>
+<a name="5
+"></a>
+<div class="poster">
+Poster A05
+</div>
+<div class="titolo">
+Day-to-day variability in microarray experiment: a new algorithm to summarize probe levels and minimize this effect
+</div>
+<div class="autori">
+Roberta Bosotti (1), Paolo Magni (2), Angela Simeoni (2)
+</div>
+<div class="inst">
+(1) Biotechnology Dep., Genomics Unit, Nerviano Medical Science s.r.l. viale Pasteur 10,20014 Nerviano (MI) - Italy, (2) Dipartimento di Informatica e Sistemistica, Universita' di Pavia, Via Ferrata 1, 27100 Pavia, Italy
+</div>
+<div class="shabs">
+Microarray experiment is a multi-step process and, for its nature, each step is a potential source of variability. Usually, due to the different technical steps, samples in large studies are divided into small sets that are processed on different days, potentially introducing a day-to-day variability that renders more difficult the analysis of the whole experiment. To cope with this issue, we have implemented a new algorithm, based on a log-linear fixed effect model and validate its performance on microrrays data set.
+</div>
+<div class="exabs">
+DNA microarray technology provides a powerful tool to investigate simultaneously the expression levels of thousands of genes. Microarray experiment is a multi-step process and, for its nature, each step is a potential source of variability, either biological or technical. Biological variation is due to intrinsic differences in the gene expression levels of the samples studied. Technical variation refers to all the differences related to the microarray technology, sample preparation and processing. 
+Experiments conducted from different operators, at different times or in different laboratories can potentially increment the technical variability. 
+Usually, due to the different technical steps, samples in large studies are divided into small sets that are processed on different days, potentially introducing a day-to-day variability that renders more difficult the analysis of the whole experiment. 
+Recently, it has been reported that RNA labeling is the largest contributor to interlaboratory variation.
+In order to address this issue, in the present work, we randomized samples from a time-course microarray experiment and developed an algorithm to minimize the confounding “day-effect” on the biological analysis. We show that it can efficiently remove an important source of noise, making possible the analysis of the whole microarray data set. This algorithm naturally applies to large experiments, in which the individual subsets have a numerosity sufficient to obtain a good estimate of the model parameters. 
+</div>
+<div class="keys">
+Keywords: microarrays, day to day variability
+</div>
+<a name="6
+"></a>
+<div class="poster">
+Poster A06
+</div>
+<div class="titolo">
+Classification of HIV-1 Using Coalescent Theory
+</div>
+<div class="autori">
+Ingo Bulla (1), Anne-Kathrin Schulz (1), Ming Zhang (2), Thomas Leitner (2), Bette Korber (2), Burkhard Morgenstern (1), Mario Stanke (1)
+</div>
+<div class="inst">
+(1) University of Göttingen, Institute of Microbiology and Genetics, Department of Bioinformatics, Goldschmidtstr. 1, 37077 Göttingen, Germany, (2) Theoretical Biology and Biophysics, T-10, MS K710, Los Alamos National Laboratory, Los Alamos, New Mexico 87545, USA
+</div>
+<div class="shabs">
+The classification of HIV into genotypic subtypes currently in use is historically determined, not derived by an algorithm. We try to find an algorithm to perform this classification automatically. To a given classification of HIV, we reconstruct the genealogy of HIV imposing restrictions to the genealogy according to the given classification. Thereby, we can score a classification by the probability of the reconstructed genealogy. Then, we improve the classification iteratively.
+</div>
+<div class="exabs">
+Accurate classification of HIV and other viral sequence data into genotypic subtypes is crucial for epidemiological studies and for developing potential drugs and vaccines. This task is challenging, however, since HIV is one of the most genetically variable organisms known and genomic recombinations are frequent in HIV. There exist two types of HIV, HIV-1 and HIV-2. Based on phylogenetic analysis, HIV-1 is usually further classified into three major phylogenetic groups, called M, N and O. The M group, which is responsible for the HIV pandemic, is divided into subtypes, some of which have even been further subdivided into sub-subtypes. Inter-subtype recombination is extremely common in HIV-1. Identifying intersubtype recombinants is therefore important from many perspectives, giving insights into such issues as molecular epidemiology, viral evolution, and indirectly, the frequency of dual infections.
+Algorithms for determining whether a particular HIV-1 genome was formed by recombination and,
+- if so, detecting the breakpoints and assign the parental strains,
+- otherwise, determining the subtype of the examined sequence,
+are based on a classification of HIV-1 into genotypic subtypes. Hence, their quality highly depends on the underlying classification. Due to the history of creation of the current HIV-1 nomenclature, it contains several inconsistencies and is somehow arbitrary like all complex classification systems that were created manually. To this end, it is desirable to deduce the classification of HIV systematically by an algorithm.
+The main part of our method to obtain such a classification automatically consists in a scoring algorithm which rates a given classification. This algorithm reconstructs ancestral recombination graphs (ARG) of given HIV-1 sequences under restrictions determined by the given classification and finds an ARG with maximal probability by means of Markov Chain Monte Carlo methods. The probability of the most probable ARG is interpreted as a score for the classification. Afterwards, the classification is iteratively improved with respect to the score.
+The restrictions imposed by the classification are inter alia:
+- Only sequences labeled as recombinants in the current classification can undergo recombination events. Multiple breakpoints are possible and they have to be chosen such that the parental subtypes get separated by the recombination event.
+- In an early stage of the reconstruction process, only pairs of sequences belonging to the same subtype are allowed to coalesce. 
+</div>
+<div class="keys">
+Keywords: HIV, classification, ARG, recombination
+</div>
+<a name="7
+"></a>
+<div class="poster">
+Poster A07
+</div>
+<div class="titolo">
+A novel high-throughput profile-based sequence identification method
+</div>
+<div class="autori">
+Hekkelman M.L., Vroling B., Vriend G.
+</div>
+<div class="inst">
+CMBI, NCMLS, Radboud University Nijmegen Medical Centre, Geert Grooteplein 26-28, 6525 GA, Nijmegen
+</div>
+<div class="shabs">
+We present a novel BLAST-like method that uses sequence profiles for rapid identification and discrimination of sequences. Parts of the scoring process are pre-computed, resulting in a very efficient algorithm.
+</div>
+<div class="exabs">
+Protein similarities are recognizable through patterns of conservation that can be identified from the alignment of related sequences. Using these patterns, so-called sequence profiles can be created and used to identify and discriminate unknown sequences according to the characteristics of the profiles used.
+We present a novel high-throughput profile-based sequence identification method. Given a sequence, the method performs a BLAST-like search against a collection of profiles. For each of the profiles an E-value indicates the significance of the score, interpreted as the likelihood that the query sequence belongs to the target profile.
+The first step in the traditional BLAST algorithm is determining whether a small part of any of the sequences (a word) stored in the database forms a hit with the query sequence. This is a relatively low-cost operation because the scores for all the words in the query sequence can be stored in a lookup-table. When using profiles however, this step becomes much more time consuming since all the scores between the words in the query sequence and the words in the sequences from the database need to be calculated. In the method presented here a pre-computed index is used, containing all possible word hits above a certain cut-off for the profiles that is searched against, thereby eliminating the expensive word scoring phase.
+The method described here was used in the creation of the core of the GPCRDB. All sequences in the UniProt database were scored against a collection of GCPR class-specific profiles; depending on the scores of the individual sequences they were either discarded or assigned to a GPCR family and incorporated in the GPCRDB.
+</div>
+<div class="keys">
+</div>
+<a name="8
+"></a>
+<div class="poster">
+Poster A08
+</div>
+<div class="titolo">
+Haplotype Block Partitioning and TagSNP Selection using Mutual Information
+</div>
+<div class="autori">
+Katanforoush A. (1,2), Sadeghi M. (1,3), Pezeshk H. (4)
+</div>
+<div class="inst">
+(1) Department of Bioinformatics, Institute of Biochemistry and Biophysics, University of Tehran, Tehran, Iran, (2) Institute for Studies in Theoretical Physics and Mathematics (IPM), Niavaran Square, Tehran, Iran, (3) National Institute of Genetic Engineering and Biotechnology, Tehran, Iran, (4) School of Mathematics, Statistics and Computer Science, University College of Science, University of Tehran, Tehran, Iran
+</div>
+<div class="shabs">
+Most experimental and computational studies on high throughput SNP data are applicable only on a limited region of genome or limited subset of SNPs. Using mutual information of SNP pairs, we define the regions of high information consistency as haplotype blocks. Applying the dynamic programming approach with the proposed score on HapMap samples results wider chromosomal blocks than the ones by other works while admitting the hotspots of recombination. Also using an approach of the problem of dominating set, we develop an algorithm for tagSNP selection that outperforms on association studies.
+</div>
+<div class="exabs">
+Current high throughput techniques in molecular genetics can determine millions of single nucleotide polymorphism over human genome. These data provide informative materials for disease association studies and analyzing models of population genetic. Most practical and computational studies on these genome-wide data are applicable only on a limited region of genome or limited subset of SNPs. Using mutual information of SNP pairs; we define the chromosomal regions of high information consistency as haplotype blocks. We have incorporated dynamic programming to find the block partitioning maximizing the sum of block scores. Also using the linear programming approaches for the problem of dominating set, we develop an efficient algorithm for tagSNP selection. The power of the case-control association test obtained by this tagging method also compared with some other common methods. It is shown that the proposed SNP tagging improves significant levels performance while holding the desired accuracy. 
+Essentially the mutual information reflects the genetic association between two SNPs. By doing some algebra, it would be shown that n times mutual information asymptotically tends to the logarithm of Fisher exact test p-value. The association by itself may be affected by several kinds of evolutionary events such as selections, migrations and genetic drift. Such messy bunch of factors behaves like a noisy channel communicates words from one SNP to the other. Assuming that there is no other operation affecting SNPs then the capacity of such a channel is determined by the mutual information. Therefore high mutual information shows a strong associated pair of SNPs. The maximum value for the mutual information defined for bi-allelic SNPs is one bit per message and its minimum is zero. 
+We take the sum of all mutual information of SNP pairs in a block and introduce the score by dividing the sum by a normalization factor. We call the scores S. For each interval containing SNP's i to j, S(i,j) denotes the score of the block and shows how strong a certain set of SNPs tends to be integrated into a block. There is a parameter, theta incorporated in normalization factor that allows to alter average length of blocks obtained by the coming optimization step. For θ's close to zero, the algorithm tends to produce shorter blocks same as the 4-gametes test while for theta close to one, it produces larger blocks. The optimum solution is obtained using a dynamic programming approach. The number of fundamental operations to calculate blocks scores and to find optimal partitioning is O(n w L) where n is the number of haplotype samples, w is the window size, and L is the number of SNPs. In general, we refer to the method described above by “Infres” 
+Some widely-used and well documented methods capable of undertaking genome-scale haplotypes have been selected to perform the computation. The diversity based greedy algorithm introduced by Patil et al. implemented to HaploBlockFinder ver. 0.7, the pairwise LD based algorithm by Gabriel et al. implemented to Haploview , also the four-gametes-test method of the same software, Haploview along with different setups of our algorithm Infres are applied to the HapMap haplotypes. Hotspots could also be reasonably helpful to realize boundaries of haplotype blocks on genome. In hotspot regions the recombination rate is high and the probability of observing low diverse haplotype is small. Hotspots for all individuals are not necessarily the same. However, there are some regions on genome which could be recognized as some sort of consensus. The information about these hotspots is also available via HapMap bulk data. 
+It is observed that the blocks produced by SNP-association-based methods e.g. Gabriel, Infres and also the blocks defined by hotspots are broader than what determined by the greedy algorithm and 4-gametes test. In general, the methods producing broader blocks entail less number of tagSNPs. It reveals that there is not any essential relation between the minimal number of tagSNPs and grouping high associated SNPs within blocks. The higher numbers corresponded to the wider blocks indicate that a usual tagSNP is capable of capturing much longer haplotypes than those broken by diversity criteria. It shows evidence against block partitioning when tagSNP selection or other association studies are considered. 
+Block partitioning methods based on haplotype diversity constrain the tagSNP selection step with diversity conditions. It leads to an undesirable result in many cases. In such cases total number of tagSNPs in two neighboring blocks is bigger than the minimum number of tagSNPs when two blocks are merged into one. For the problem concerning with selecting as least as possible tagSNPs for genome, the conventional methods based on block diversity usually generate more redundant tagSNPs over all genome. 
+Finding minimum number of tagSNPs can pose a two fold object. The first is the problem concerning partition genome in such a way that reported blocks could be captured by as a limited number of tagSNPs as possible. The second object is to get fewer numbers of tagSNPs to be associated with all SNPs. The present results show that in practice there is a gap between such two extremes. The algorithms aimed to recognize evolutionary conserved haplotype blocks such as the greedy diversity based algorithm, four-gametes-test, and Gabriel’s LD based method obtain the blocks which are tagged by just few number of tagSNPs, but they assign too many tagSNPs for the whole chromosome. On the other hand, the blocks being introduced by hotspots neglect the diversity considerations while giving less number of tagSNPs for the genome. The information theoretic method, Infres, seems to fill in this gap by satisfying both the objects on average. 
+World Wide Web Availability. 
+http://bioinf.cs.ipm.ac.ir/softwares/infres
+</div>
+<div class="keys">
+Keywords: Haplotype Blocks, HapMap, TagSNP selection
+</div>
+<a name="9
+"></a>
+<div class="poster">
+Poster A09
+</div>
+<div class="titolo">
+A novel protein homology detection method based on the analytical theory of profile comparisons
+</div>
+<div class="autori">
+Margelevicius M., Venclovas C.
+</div>
+<div class="inst">
+Institute of Biotechnology
+</div>
+<div class="shabs">
+The detection of distant relationship between proteins is a common approach to structural/functional annotation of uncharacterized proteins. Currently, sequence profile-to-profile comparison is considered to be one of the most sensitive techniques for distant homology detection. This study presents a novel protein sequence profile search and comparison method, which was compared with other homology detection methods including PSI-BLAST, COMPASS, and HHsearch. An exhaustive all-to-all comparison showed that the new method outperforms these other methods.
+</div>
+<div class="exabs">
+The detection of distant relationship between proteins is a common approach to structural/functional annotation of uncharacterized proteins. Currently, sequence profile-to-profile comparison is considered to be one of the most sensitive techniques for distant homology detection. However, the performance of a profile-based method strongly depends on a number of individual steps, such as the scoring scheme (profile) construction, the profile-profile comparison approach, and the estimation of statistical significance. This study presents a novel protein sequence profile search and comparison method that is equipped with the newly developed theoretical considerations for all these three major steps. Some of the important new features include 1) position-dependent gap opening and extension penalties, 2) compositional adjustment of the profile-profile scoring scheme and 3) analytical solution of statistical parameters based on a probabilistic distribution of profile vectors in a given database. 
+To test the performance of the new method, we used reference-free criteria of structural similarity. In other words, a pair of aligned profiles are considered related (true positive) if the alignment implies a three-dimensional model structurally close to the native structure. The advantage of such benchmark setting is in that it does not depend on a reference â��gold standardâ�� structure classification scheme such as SCOP or CATH. In this way the performance of the new method was compared to several other methods including PSI-BLAST, COMPASS, and HHsearch. An exhaustive all-to-all comparison using profiles constructed from the ASTRAL 1.71 database showed that the new method outperforms these other methods. The results also revealed that although the overall performance of the methods differs markedly, each tested method could find a fraction of homologous relationships missed by others. This indicates that using multiple methods in homology detection is always advantageous.
+</div>
+<div class="keys">
+Keywords: Sequence analysis, alignment searching
+</div>
+<a name="10
+"></a>
+<div class="poster">
+Poster A10
+</div>
+<div class="titolo">
+Wavelet based sequence alignment.
+</div>
+<div class="autori">
+Menozzi G. (1), Cereda M. (1,2), Fumagalli M (1,3), Sironi M. (1), Comi G. P. (4), Bresolin N. (1,4), Pozzoli U. (1)
+</div>
+<div class="inst">
+(1) Scientific Institute IRCCS E. Medea, Bioinformatic Lab, Via don L. Monza 20, 23842 Bosisio Parini (LC), Italy , (2) Dip. di Fisica Teorica, Università di Torino, (3) Bioengineering Department, Politecnico di Milano, P.zza L. da Vinci, 32, 20133 Milan, Italy , (4) Dino Ferrari Centre, Department of Neurological Sciences, University of Milan, IRCCS Ospedale Maggiore Policlinico, Mangiagalli and Regina Elena Foundation, Via F. Sforza 35, 20100 Milan, Italy
+</div>
+<div class="shabs">
+The periodic structure of DNA sequences remains a controversial feature and wavelet transform is one of the most promising tools to overcome the noisy effects due to isochores and to other genomic features. We propose a procedure that, resuming the curvature information and the dinucleotide frequency of two sequences, can detect similarity in their periodic pathway. Given the strong relationship between genomic sequence periodicity and secondary structure our method can be used as a fast and easy survey of likeness independent from a strictly sequence alignment.
+</div>
+<div class="exabs">
+In recent years the fully sequenced genomes of different organisms have been available and the huge amount of data has created the need for computational tools to analyse it. One of the most debated aspect of DNA sequences is the periodicity structure of the genomic information and the presence of long range correlations (Audit et al. 2001, Arneodo et al. 1998).
+DNA in eukaryotic cells is packaged into nucleosomes and, despite their generally repressive action with respect to gene expression, their presence has been shown to contribute to gene transcription in a gene-specific manner (Wolffe et al. 1998, Wyrick et al. 1999). 
+Also, the presence of periodically spaced dinucleotide, important to facilitate a bend in the DNA helix, implyes a strong association to nucleosome positioning (Schieg et al. 2004, Herzel et al. 1999).
+In Ioshikhes et al. (1999) and Segal et al. (2006) the authors used dinucleotides to predict nucleosome location and their results suggest that the genomic sequence is partially responsable for the location of nucleosomes.
+The mosaic structure of DNA (Bernardi et al. 1985), which consists of a sort of patches showing different base composition, represents an obstacle for the study of periodicity pattern as they introduce some breaking of the scale invariance (Nee 1992, Karlin and Brendel 1993).
+To overcome the non uniform composition of DNA sequences an innovative study carried out by Arneodo and collegues has proposed the wavelet transform as an efficient method for fractal analysis of genomic sequence. One of the basic feature of this technique is the decomposition of the signal in both a frequency and time domain; also it has been demonstrated that by choosing appropriately the mother wavelet it is possible to overcome the noisy effect given by low frequency patterns.
+We propose a method to align two sequences based on the wavelet transforms of curvature profiles or dinucleotide content. The theoretical DNA curvature can be estimated, as in a recent work of Liu and collegues (2008), with a matrix of roll and tilt angles, and its modulus, that represents deviation from B-DNA, is than wavelet transformed. The dinucleotide frequency profile is calculated on a sliding window over the sequences.
+Given the fact that both variables are not binary valued there is no restriction on the type of mother wavelet that can be used on the transformation process.
+In our framework the comparison between the two sequences does not relies on base identity but on two other indexes, both calculated at each scale of the wavelet result:
+the spearman correlation score and a similarity measure based on euclidean distance. The results of the trasformation process is then graphically visualized: in addition to the periodicity patterns, displayed at different scale resolution, the plot contains also the indication of the regions where the sequences shows a good match in term of correlation or similarity.
+Given the strong correlation between genomic sequence and secondary structure this procedure can be used as an easy and fast tool to survey the likeness of two sequences with a different point of view, partially independent from usual alignments algorithm, much more oriented to subtle and background features.
+This computationa approach can be applied in different scenarios to different scenarios:
+- To test its capability to efficiently predict sequence-driven nucleosome positioning.
+- To identify low sequence conservation regions that are expected to share some conformational similarity (promoters, and in general regulatory regions)
+- To compare different species in terms of conservation of secondary structure.
+</div>
+<div class="keys">
+Keywords: wavelet, conservation, secondary structure
+</div>
+<a name="11
+"></a>
+<div class="poster">
+Poster A11
+</div>
+<div class="titolo">
+MAD-DPD: designing highly degenerate primers with maximum amplification specificity
+</div>
+<div class="autori">
+Hamed Shateri Najafabadi (1,2), Amir Saberi (2), Noorossadat Torabi (3,2), Mariam Okhovat Ghahfarokhi (2), Mahmood Chamankhah (4)
+</div>
+<div class="inst">
+(1) McGill University, Montreal, QC, Canada, (2) University of Tehran, Tehran, Iran, (3) Princeton University, Princeton, NJ, USA, (4) Nanobiotechnology Research Center, Avesina Research Institute, Shahid Beheshti University, Tehran, Iran
+</div>
+<div class="shabs">
+This work introduces minimum accumulative degeneracy, a variant of the degenerate primer design problem. A Boltzmann machine is designed to solve the minimum accumulative degeneracy degenerate primer design problem, called the MAD-DPD Boltzmann machine. This algorithm shows great flexibility, as it can be determined either to solve the problem with strict fidelity to covering all input sequences or to exclude some input sequences if it results in less degenerate primers.
+</div>
+<div class="exabs">
+This work introduces minimum accumulative degeneracy, a variant of the degenerate primer design problem, which is particularly useful when a large number of sequences are to be covered by a set of restricted number of primers. A primer set, which is designed on a minimum accumulative degeneracy basis, especially helps to reduce nonspecific PCR amplification of undesired DNA fragments, as fewer primer species are present in PCR. A Boltzmann machine is designed to solve the minimum accumulative degeneracy degenerate primer design problem, called the MAD-DPD Boltzmann machine. MAD-DPD can be considered as the problem of designing a set of m primers, each of length l, covering a set of strings of length l so that Sigma d(Pi) = min, where Pi is the ith primer. In other words, MAD-DPD finds a set of degenerate primers that cover all input sequences and, summing up the degeneracy values of the designed primers, have the minimum total degeneracy. MAD-DPD is particularly useful when there is a limit in the number of primers that can be used in PCR (e.g., by financial restrictions). This algorithm shows great flexibility, as it can be determined either to solve the problem with strict fidelity to covering all input sequences or to exclude some input sequences if it results in less degenerate primers. This Boltzmann machine is successfully implemented in designing a new set of primers for amplification of antibody variable fragments from mouse spleen cells, which theoretically covers more diverse antibody sequences than currently available primers.
+MAD-DPD can be considered as a first approach in primer design when the number of degenerate primers to be constructed is known—which may be determined by the financial restrictions applied to the number of primers to be synthesized throughout a project. Though other variants of a DPD problem may also give the same number of degenerate primers as MAD-DPD, MAD-DPD is the preferred variant due to the smaller total degeneracy of its generated primers. Different sets of parameters were used for both MAD-DPD and MIPS-TT, each resulting in a different number of output primers as well as a different total degeneracy. Although MIPS-TT is designed for obtaining the minimum number of primers, MAD-DPD always results in a smaller number of primers for each given accumulative degeneracy value, indicating that MAD-DPD is more successful than MIPS-TT in fulfilling the task that is given to it.
+</div>
+<div class="keys">
+Keywords: Degenerate Primer Design, Boltzman Machine, MAD-DPD
+</div>
+<a name="12
+"></a>
+<div class="poster">
+Poster A12
+</div>
+<div class="titolo">
+Evaluation of existing motif detection tools on their ability to retrieve regulatory motifs in sequence data
+</div>
+<div class="autori">
+Storms V. (1), Sanchez A. (2), Claeys M. (3), Marchal K. (3), De Moor B. (1)
+</div>
+<div class="inst">
+(1) Department of Electrical engineering, Katholieke Universiteit Leuven, Kasteelpark Arenberg 10, 3001 Leuven, Belgium, (2) Laboratory of Molecular Biology, Institute of Plant Biotechnology, Central University ‘Marta Abreu’ of Las Villas (UCLV), Santa Clara 54830, Cuba, (3) Department of Microbial and Molecular systems, Katholieke Universiteit Leuven, Kasteelpark Arenberg 20, 3001 Leuven, Belgium
+</div>
+<div class="shabs">
+Recently a number of motif detection tools have been developed which incorporate a phylogenetic model to improve motif detection in orthologs from closely related species. We evaluate two of these algorithms: Phylogibbs (Siddharthan et al., 2005) and The Gibbs Centroid Sampler (Thompson et al., 2007) to examine their ability to retrieve regulatory motifs in sequence data. Application of both tools on artificial and real data will learn how to use these algorithms in the most optimal way.
+</div>
+<div class="exabs">
+The identification of transcription factor binding sites (regulatory motifs) in the promoters of genes is critical to understand the transcriptional regulatory network of an organism. Detection of these regulatory motifs based on their overrepresentation in a set of co-expressed genes (identified by micro-arrays) is still prone to the detection of many false positives by the presence of a small signal to noise ratio exacerbated by the short motif length versus the long intergenic sequences. Comparative genomics can help to improve the performance of motif detection by the assumption that functional sequences like regulatory motifs evolve under certain constraints while non-functional sequences evolve neutrally. A lot of motif detection tools use this principle of ‘phylogenetic footprinting’ by adding orthologous genes from related organisms to delineate the functional regions and reducing in this way the search space for the regulatory motifs. Many of these tools treat the organisms under consideration as independent, ignoring the underlying phylogeny that connects the organisms with each other. This approach is not applicable when the organisms are closely related to each other; meaning that their genomic sequences are highly conserved what confounds the detection of functional sequences. Recently a number of motif detection tools have been developed which incorporate a phylogenetic model relating the organisms and so improve motif detection in orthologs from closely related species. We evaluate two of these algorithms: Phylogibbs (Siddharthan et al., 2005) and The Gibbs Centroid Sampler (Thompson et al., 2007) to examine their ability to retrieve regulatory motifs in sequence data. Our analysis is split up in three main parts: assessing the performance in 1) the co-regulation space, 2) the orthologous space and 3) the combination of both spaces. By making artificial data we can simulate these three main spaces and easily change the conditions for each of them. For example vary the number of co-regulated genes, the number of orthologs, the phylogenetic relationships between the orthologs, the strength of the embedded motifs, the degree of noise present in the dataset etc. We apply both tools on these artificial data and try to learn about their weaknesses and strengths for the different spaces. The drawback of using artificial datasets is that we can not capture the complexities present in real data and so we could be introducing biases that favour one tool over the other. There for we also test the performance of both tools on real data. For these real data we select some known regulators and their target genes in Escherichia coli and search for orthologs in the Gamma-proteobacteria group. From the analysis on the artificial data, supported by the real data, we hope to learn how we can exploit multiple species data in the best way to improve the performance of motif detection using the available tools. This knowledge will help other researchers to explore sequence data for unknown regulatory motifs.
+</div>
+<div class="keys">
+</div>
+</body>
+</html>

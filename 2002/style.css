@@ -1,0 +1,43 @@
+BODY{
+	text-align: justify;
+	font-family: Arial;
+	background : White;
+	}
+TD {
+	text-align: justify;
+}
+P{
+	margin: 0em;
+	padding: 0em;	
+	text-align : justify;
+}
+H1 {
+	font-family: Arial;
+	text-align : center;
+}
+H2 {
+	font-family: Arial;
+	text-align : center;
+}
+H3 {
+	font-family: Arial;
+	text-align : center;
+}
+A {
+	text-decoration: none;
+	font-family: Arial;
+	color : blue;
+}
+A:Hover {
+	text-decoration: underline;
+	font-family: Arial;
+}
+A:VISITED {
+	color : blue;
+}
+HR {
+	color: blue;
+}
+ul { 
+	font-family: Arial;
+}

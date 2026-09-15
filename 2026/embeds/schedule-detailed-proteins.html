@@ -1,0 +1,829 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="vendor/transition.iscb.org/templates/iscb/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/transition.iscb.org/templates/iscb/css/template.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/transition.iscb.org/templates/iscb/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/transition.iscb.org/templates/iscb/css/responsive.css" rel="stylesheet" type="text/css" />
+    <link
+      href="vendor/transition.iscb.org/components/com_comprofiler/plugin/templates/default/fontawesome.css"
+      rel="stylesheet"
+      type="text/css" />
+    <script src="vendor/ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="keywords"
+      content="ISCB, bioinformatics, cheminformatics, biocomputing, algorithm, biology, chemistry, computer" />
+    <meta name="description" content="ISCB -  International Society for Computational Biology" />
+    <meta name="generator" content="Joomla! - Open Source Content Management" />
+    <title>ISCB Transition Page</title>
+    <!-- Google api links -->
+    <link href="vendor/fonts.googleapis.com/roboto.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/fonts.googleapis.com/open-sans.css" rel="stylesheet" type="text/css" />
+    <link
+      href="vendor/transition.iscb.org/templates/iscb_29_01_2008/favicon.ico"
+      rel="shortcut icon"
+      type="image/vnd.microsoft.icon" />
+    <!-- CSS links -->
+    <link href="vendor/transition.iscb.org/templates/iscb/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/transition.iscb.org/templates/iscb/css/template.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/transition.iscb.org/templates/iscb/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/transition.iscb.org/templates/iscb/css/responsive.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="vendor/transition.iscb.org/media/logos/style/displayresult.css" type="text/css" />
+    <link rel="stylesheet" href="vendor/transition.iscb.org/media/logos/style/formfieldset1.css" type="text/css" />
+    <!-- JS scripts -->
+    <script src="vendor/transition.iscb.org/media/system/js/mootools-core.js" type="text/javascript"></script>
+    <script src="vendor/transition.iscb.org/media/system/js/core.js" type="text/javascript"></script>
+    <script src="vendor/transition.iscb.org/media/system/js/mootools-more.js" type="text/javascript"></script>
+    <script src="vendor/transition.iscb.org/media/jui/js/jquery.min.js" type="text/javascript"></script>
+    <script src="vendor/transition.iscb.org/media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
+    <script src="vendor/transition.iscb.org/media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
+    <script src="vendor/transition.iscb.org/media/system/js/html5fallback.js" type="text/javascript"></script>
+    <script src="vendor/ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+    <link
+      rel="stylesheet"
+      href="vendor/transition.iscb.org/js/datatables/media/css/jquery.dataTables.css"
+      type="text/css" />
+    <script src="vendor/transition.iscb.org/js/datatables/media/js/jquery.js" type="text/javascript"></script>
+    <script
+      src="vendor/transition.iscb.org/js/datatables/media/js/jquery.dataTables.js"
+      type="text/javascript"></script>
+    <link rel="stylesheet" href="../assets/archive.css" />
+    <script src="../assets/archive.js" defer></script>
+  </head>
+  <body>
+    <style>
+      html,
+      body {
+        background: transparent !important;
+        margin: 0;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="vendor/cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+    <script src="vendor/code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="vendor/cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="vendor/cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css" />
+    <script src="vendor/cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+    <script src="vendor/cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="vendor/cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="vendor/cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="vendor/cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+    <script src="vendor/cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js"></script>
+    <style>
+      #detailedTable th,
+      #detailedTable td {
+        border: 1px solid #ddd;
+      }
+    </style>
+    <a name="top"></a>
+    <p>
+      <a class="btn btn-primary" style="color: #ffffff" href="../index.html" target="_parent"
+        >Return to ECCB 2026 Homepage</a
+      >  
+      <a class="btn btn-primary" style="color: #ffffff" href="schedule-ataglance.html"
+        >Click here for the agenda at a glance</a
+      >
+    </p>
+    <hr />
+    <p style="text-align: center">
+      <em
+        >Select Track:
+        <a href="schedule-detailed-biodiversity.html">Biodiversity, sustainability, envirobioinformatic</a> |
+        <a href="schedule-detailed-keynotes.html">Distinguished keynotes</a> |
+        <a href="schedule-detailed-elixir.html">Elixir</a> |
+        <a href="schedule-detailed-genomics.html">Genomics, epigenomics, and genome editing</a> |
+        <a href="schedule-detailed-proteins.html">Proteins and structural biology</a> |
+        <a href="schedule-detailed-special.html">Special track</a> |
+        <a href="schedule-detailed-sysbio.html">Systems biology, multi-omics integration, modeling</a> |
+        <a href="schedule-detailed-transcriptomics.html">Transcriptomics and gene regulation</a> |
+        <a href="schedule-detailed.html">All</a></em
+      >
+    </p>
+    <hr />
+    <h1>Schedule for Proteins</h1>
+    <p>
+      <strong style="color: #ff0000">NOTE:</strong> Browser resolution may limit the width of the agenda and you may
+      need to scroll the iframe to see additional columns.<br />
+      Click the buttons below to download your current table in that format
+    </p>
+    <table id="detailedTable" class="display">
+      <thead>
+        <tr>
+          <th>
+            <strong style="text-decoration: underline">Date</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">Start time</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">End time</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">Room</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">Track</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">Title</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">Confrimed presenter</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">Authors</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">Abstract</strong>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2026-08-31</td>
+          <td>13:30:00</td>
+          <td>14:30:00</td>
+          <td>Room BC</td>
+          <td>Proteins and structural biology</td>
+          <td>Rapid Proteome-Wide Discovery of Protein-Protein Interactions With ppIRIS</td>
+          <td>Luiz Felipe Piochi</td>
+          <td>Luiz Felipe Piochi, Di Tang, Johan Malmström, Yasaman Karami, Hamed Khakzad</td>
+          <td>
+            Protein-protein interactions (PPIs) are central to cellular processes and host-pathogen dynamics across all
+            domains of life, yet comprehensive interactome mapping remains challenging at the proteome scale.
+            Experimental approaches provide only partial coverage, while existing computational methods often lack
+            generalizability across species or are too resource-intensive for large-scale screening. Here, we introduce
+            ppIRIS (protein-protein Interaction Regression via Iterative Siamese networks), a lightweight deep learning
+            framework that integrates evolutionary and structural embeddings to predict PPIs directly from sequence.
+            Evaluated on multi-species benchmarks, ppIRIS achieves state-of-the-art accuracy while enabling
+            proteome-wide screening in minutes. Trained on curated bacterial datasets and applied to the Group A
+            Streptococcus (GAS) proteome, ppIRIS identified functional clusters associated with virulence pathways, such
+            as nutrient transport, stress response, and metal scavenging. Extending to cross-species prediction, ppIRIS
+            recovered 56.2% of known GAS-human plasma interactions with enrichment in complement, coagulation, and
+            protease inhibition pathways. Experimental validation confirmed novel predictions, demonstrating the
+            applicability of ppIRIS for systematic discovery of bacterial and cross-species PPIs. The model together
+            with a Google Colaboratory is freely available at github.com/lupiochi/ppIRIS.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-08-31</td>
+          <td>13:30:00</td>
+          <td>14:30:00</td>
+          <td>Room BC</td>
+          <td>Proteins and structural biology</td>
+          <td>
+            PreFold-dG: estimating binding affinity of protein–protein interaction from intermediate representations of
+            protein folding model
+          </td>
+          <td>Sungjoon Park</td>
+          <td>
+            Sungjoon Park, Soorin Yim, Dongyun Kim, Kiwoong Yoo, Doyeong Hwang, Kyungwook Lee, Jongseong Jang, Kiyoung
+            Kim
+          </td>
+          <td>
+            Motivation: Binding affinity governs how proteins interact and underlies essential biological processes.
+            Computational approaches have been developed to simulate and predict protein binding, but the scarcity of
+            high-quality data has imposed significant constraints. One consequence is that most methods focus on
+            predicting mutational changes in binding affinity (ΔΔG), rather than binding affinity (ΔG) itself. This
+            practice risks overfitting to skewed data distributions, limiting the generalizability of predictions.
+            Recent advances in protein structure prediction have enabled computational modeling of protein conformations
+            in mass, providing rich structural information from which binding interactions can be largely explained.
+            However, leveraging these advances for effective prediction of binding affinity has yet to translate into
+            reliable predictions.<br />
+            Results: We present PreFold-dG, a model that estimates binding affinities of protein complexes utilizing
+            intermediate embeddings from Boltz-2, an open-source foundation model for protein structure prediction. Our
+            approach aggregates residue-level information weighted by interresidue distance, and predicts ΔG directly
+            rather than its derivative, ΔΔG. PreFold-dG achieved state-of-the-art performance on well-established
+            binding affinity prediction benchmarks and demonstrated robustness on independent test sets. Ablation
+            studies suggest that all intermediate embeddings are utilized in the prediction, whereas their contributions
+            to modeling ΔΔG and ΔG vary. We further validated our model through case studies on real-world broadly
+            neutralizing antibody data with evolutionary relevance.<br />
+            Availability: https://github.com/LGAI-Research/PreFold-dG.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-08-31</td>
+          <td>13:30:00</td>
+          <td>14:30:00</td>
+          <td>Room BC</td>
+          <td>Proteins and structural biology</td>
+          <td>Stoic: Fast and accurate protein stoichiometry prediction</td>
+          <td>Daniil Litvinov</td>
+          <td>
+            Daniil Litvinov, Lorenzo Pantolini, Peter Å krinjar, Gerardo Tauriello, Caitlyn McCafferty, Benjamin Engel,
+            Torsten Schwede, Janani Durairaj
+          </td>
+          <td>
+            Motivation: Protein complexes are central to cellular function, but experimental determination of their
+            structures remains challenging. Structure<br />
+            prediction methods require prior knowledge of stoichiometry - the number of copies of each protein entity
+            within a complex. Current approaches rely<br />
+            on computationally expensive brute-force methods that run structure prediction on multiple stoichiometry
+            combinations, often with limited accuracy.<br />
+            <br />
+            Results: We introduce Stoic, a method that uses protein language model embeddings to predict protein complex
+            stoichiometry. Our approach<br />
+            learns to identify interface residues that participate in protein-protein interactions, rather than relying
+            on global sequence features. By integrating<br />
+            these interface-aware embeddings into a graph neural network, Stoic achieves fast and accurate stoichiometry
+            prediction for both homomeric and<br />
+            heteromeric targets.<br />
+            <br />
+            Availability: Source code for inference and training along with web versions are available in the repository
+            at https://github.com/PickyBinders/stoic.<br />
+            <br />
+            Contact: janani.durairaj@unibas.ch
+          </td>
+        </tr>
+        <tr>
+          <td>2026-08-31</td>
+          <td>16:15:00</td>
+          <td>17:15:00</td>
+          <td>Room EF</td>
+          <td>Proteins and structural biology</td>
+          <td>
+            From transporter to motor: Evolutionary and structural insights into the emergence of prestin's area-motor
+            activity in mammals
+          </td>
+          <td>Raul Araya-Secchi</td>
+          <td>
+            Nicolas Fuentes-Ugarte, Tiaren Ruiz-Rojas, Felipe GarcÃ­a-Olave, Alvaro Ruiz-Fernandez, Jose Antonio Gatare,
+            Victor Castro-Fernandez, Raul Araya-Secchi
+          </td>
+          <td>
+            Prestin, a member of the SLC26A family, is essential for the electromotility of mammalian outer hair cells,
+            converting voltage changes into mechanical work. In contrast, nonmammalian orthologues function as anion
+            transporters. To investigate the molecular and structural basis of this functional divergence, we performed
+            ancestral sequence reconstruction (ASR) of prestin across vertebrates, followed by structural modeling using
+            AlphaFold2-multimer and molecular dynamics simulations. We identified more than 200 amino acid substitutions
+            along the lineage that lead to placental mammals, with early substitutions concentrated in the transmembrane
+            domain (TMD) and late substitutions clustering in the STAS domain, particularly in the intervening sequence
+            (IVS). Structural modeling and simulation revealed that early substitutions modulate proteinâ€“lipid
+            interactions and interhelical contacts. In placental mammals, the IVS-loop adopts a distinct conformation
+            that places a negatively charged patch near the chloride access pathway, potentially affecting the ion
+            dynamics and voltage responsiveness. These structural transitions occurred without major rearrangements of
+            the global fold of prestin, supporting a notion in which the novel function evolved through distributed
+            substitutions within a conserved scaffold. Our findings illustrate how molecular exaptation, and incremental
+            structural remodeling enabled the repurposing of an ancestral anion transporter into a voltage-sensitive
+            area-motor, providing a framework for understanding the molecular evolution of complex biophysical traits
+            central to auditory neuroscience.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-08-31</td>
+          <td>16:15:00</td>
+          <td>17:15:00</td>
+          <td>Room EF</td>
+          <td>Proteins and structural biology</td>
+          <td>
+            usiGrabber: Automating the curation of proteomics spectra data at scale, making large datasets ready for use
+            in machine learning systems
+          </td>
+          <td>Konstantin Ketterer</td>
+          <td>
+            Georg Auge, Matthis Clausen, Konstantin Ketterer, Jacob Schaefer, Nils Schmitt, Tom Altenburg, Yannick
+            Hartmaring, Hendrik Raetz, Christoph N. Schlaffner, Bernhard Y. Renard
+          </td>
+          <td>
+            Motivation: An unprecedented amount of mass spectrometry-based proteomics data is publicly available through
+            repositories such as the PRoteomics IDEntifications Database (PRIDE), and the field is increasingly
+            leveraging machine learning approaches. However, the available data is not ready to be reused in a scalable
+            way beyond the original acquisition purpose. Existing machine learning models commonly rely on a few
+            manually curated datasets that require deep domain expertise and tedious technical work to construct.
+            Importantly, these datasets have not been updated in recent years, so that newly published data remains
+            inaccessible. We present usiGrabber, a scalable framework for assembling large proteomic datasets.
+            usiGrabber is designed around portability and extensibility. It extracts spectra identification data from
+            mzIdentML files, stores additional project-level metadata retrieved through the PRIDE API, indexes raw
+            spectra using Universal Spectrum Identifiers (USIs), and offers download utilities to retrieve spectra data
+            at scale.<br />
+            Results: Within 49 hours, we parsed over 800 million peptide spectrum matches and corresponding USIs from
+            over 1,200 projects. As a proof of concept, we used usiGrabber to construct a phosphorylation-specific
+            training dataset of nearly 11 million spectra in under two days and used it to retrain a binary
+            phosphorylation classifier based on the AHLF model architecture. With a balanced accuracy of 0.78, our model
+            achieves comparable performance to the original model on an independent test set, showing that automated
+            data extraction is an alternative to manual curation of static datasets.<br />
+            Availability: All code is available at https://github.com/usiGrabber/usiGrabber; the data is available at
+            https://zenodo.org/records/18853258.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-08-31</td>
+          <td>16:15:00</td>
+          <td>17:15:00</td>
+          <td>Room EF</td>
+          <td>Proteins and structural biology</td>
+          <td>
+            Structure-Conditioned Self-Supervised Learning of Residue Interaction Constraints in Protein Kinases for
+            Variant Interpretation
+          </td>
+          <td>Shakiba Fadaei</td>
+          <td>Shakiba Fadaei, Fanny Krebs, Vincent Zoete</td>
+          <td>
+            Motivation: Protein kinases are key regulators of cellular signaling and are frequently implicated in human
+            diseases. Although kinase domains are structurally conserved, predicting the effects of amino acid
+            substitutions remains challenging as mutations often introduce subtle structural pertur-bations that are not
+            captured by sequence-based or evolutionary methods. Existing supervised approaches further rely on
+            pathogenicity annotations that are inconsistent across databases, thereby motivating the development of
+            structure-based, label-independent frameworks for mutation effect prediction.<br />
+            Results: We present a structure-based method using SE(3)-transformers to learn residue compati-bility with
+            the local structural environment from experimentally resolved kinase 3D structures. Pro-teins are
+            represented as atom-level graphs with physicochemical descriptors derived from the CHARMM force field and
+            spatial connectivity. The model is trained on two self-supervised tasks given local structural context:
+            masked residue atom reconstruction and masked residue classifica-tion. This formulation enables learning of
+            geometric and physicochemical constraints without relying on pathogenicity labels. Evaluation using
+            reconstruction loss, residue prediction accuracy, and comparison with BLOSUM substitution patterns indicate
+            that the model captures biologically mean-ingful relationships between residue identity and 3D structural
+            context. We interpret the scores as-signed to alternative amino acids as measures of structural fitness,
+            where low-scoring residues are hypothesized to be less compatible with the local environment and more likely
+            to induce deleterious effects on protein structure and activity.<br />
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-01</td>
+          <td>10:30:00</td>
+          <td>11:30:00</td>
+          <td>Room BC</td>
+          <td>Proteins and structural biology</td>
+          <td>De Novo Epitope-Specific Antibody Design via Time-Dependent Guidance</td>
+          <td>Yunji Kim</td>
+          <td>Yunji Kim, Minkyung Baek</td>
+          <td>
+            Motivation: De novo antibody design requires jointly determining the global binding orientation and shaping
+            flexible CDR loops to engage a target epitope. Diffusion-based approaches such as RFantibody are capable of
+            this joint task but frequently produce severe steric clashes requiring extensive post-hoc filtering.
+            Flow-based methods such as IgFlow and FlowDesign offer more stable generation but remain restricted to
+            pre-aligned frames, precluding true de novo design. Achieving structural integrity and epitope specificity
+            simultaneously under this setting remains an open challenge. Results: We propose TiDE-Ab, a conditional
+            SE(3) Flow Matching framework for de novo epitope-specific antibody design. By conditioning on unpaired
+            antigen and antibody structures without any pre-aligned frame, TiDE-Ab inherits the structural stability of
+            flow matching while enabling global binding pose search from scratch. To further improve epitope targeting,
+            we introduce Time-Dependent Classifier-Free Guidance (TD-CFG), which replaces static conditioning with an
+            adaptive schedule: strong guidance early to establish the global binding pose, followed by gradual
+            relaxation for precise local CDR refinement. On 55 non-redundant benchmark complexes, TiDE-Ab outperforms
+            RFantibody with higher epitope recall (0.93 vs. 0.88) and over 95% fewer steric clashes, with TD-CFG further
+            improving backbone designability as measured by scRMSD and iPAE. In therapeutic case studies on TGF- and
+            IL-17A, TiDE-Ab reproduced the binding profiles of clinical antibodies across isoform-selective and
+            cross-reactive epitopes, where RFantibody consistently failed to produce viable candidates.<br />
+            Availability: Source code, data, and pre-trained models are available at https://github.com/SNU-CSSB/TiDE-Ab
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-01</td>
+          <td>10:30:00</td>
+          <td>11:30:00</td>
+          <td>Room BC</td>
+          <td>Proteins and structural biology</td>
+          <td>ImmunoMatch learns and predicts cognate pairing of heavy and light immunoglobulin chains</td>
+          <td>Joseph Ng</td>
+          <td>Dongjun Guo, Deborah Dunn-Walters, Franca Fraternali, Joseph Ng</td>
+          <td>
+            The development of stable antibodies formed by compatible heavy (H) and light (L) chain pairs is crucial in
+            both in vivo maturation of antibody-producing cells and ex vivo designs of therapeutic antibodies. We
+            present ImmunoMatch, a machine-learning framework trained on paired H and L sequences from human B cells to
+            identify molecular features underlying chain compatibility. ImmunoMatch distinguishes cognate from random
+            Hâ€“L pairs and captures differences associated with lambda and kappa light chains, reflecting B cell
+            selection mechanisms in the bone marrow. We apply ImmunoMatch to reconstruct paired antibodies from spatial
+            VDJ sequencing data and study the refinement of Hâ€“L pairing across B cell maturation stages in health and
+            disease. We find further that ImmunoMatch is sensitive to sequence differences at the H-L interface. These
+            insights provide a computational lens into the broader biological principles governing antibody assembly and
+            stability.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-01</td>
+          <td>10:30:00</td>
+          <td>11:30:00</td>
+          <td>Room BC</td>
+          <td>Proteins and structural biology</td>
+          <td>Mitigating Goodhart's Law in Epitope-Conditioned TCR Generation Using Plug-and-Play Reward Designs</td>
+          <td>Fredo Guan</td>
+          <td>Pengfei Zhang, Xiaoyi He, Fredo Guan, Hao Mei, Gloria Grama, Seojin Bang, Heewook Lee</td>
+          <td>
+            Epitope-conditioned T cell receptor (TCR) generation extends protein language modeling to therapeutic design
+            of TCRs, with recent works demonstrating improved performance using reinforcement learning (RL)
+            post-training utilizing surrogate models. However, such frameworks suffer from Goodhart's Law: optimizing
+            imperfect surrogate rewards leads to reward hacking and biologically invalid sequences. We present a
+            plug-and-play reward design framework that mitigates reward hacking without altering the generator and its
+            training pipeline. The framework integrates multiple complementary strategies: heuristic biological priors
+            to reject degenerate sequences, model ensembling to reduce per-model biases, and binding-specificity
+            objectives to suppress cross-epitope overfitting and promote target-focused binding behavior. When applied
+            to the RL-based fine-tuning process of TCR generators, these rewards stabilize optimization, preserve
+            sequence diversity, and yield generations that are more biologically aligned with real TCR sequences. The
+            resulting models produce more authentic epitope-specific receptors, demonstrating that our
+            Goodhart-resistant reward design substantially improves reliability and controllability in biologically
+            grounded sequence generation.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-01</td>
+          <td>11:45:00</td>
+          <td>12:45:00</td>
+          <td>Room EF</td>
+          <td>Proteins and structural biology</td>
+          <td>Optimizing Protein Design Through Uncertainty-weighted Steering of Protein Language Models</td>
+          <td>Byung-Jun Yoon</td>
+          <td>Alif Bin Abdul Qayyum, Yingtong Zhou, Xiaoning Qian, Byung-Jun Yoon</td>
+          <td>
+            Motivation:<br />
+            Protein Language Models (PLMs) have revolutionized protein engineering by capturing the evolutionary
+            constraints inherent in natural protein sequences. However, precisely steering these models to engineer
+            novel proteins with targeted functionalities remains challenging due to the inherent difficulty in modifying
+            their latent representations considering the design objectives. Recently, activation steering of PLMs has
+            emerged as a potent, training-free intervention for directing PLM outputs. However, the requirement for
+            high-quality labeled datasets limits its application. In data-scarce or out-of-distribution (OOD) regimes,
+            researchers must rely on surrogate models for label prediction; however, deterministic surrogates fail to
+            account for the underlying uncertainty, often yielding steering vectors that result in suboptimal protein
+            design.<br />
+            Results:<br />
+            To address this, we propose PROSOUNDS (PROtein Sequence Optimization through UNcertainty-weighteD Steering),
+            a PLM-based protein design framework that integrates uncertainty quantification into the activation steering
+            logic. By weighting the steering activation calculation process based on uncertainty estimates of the
+            surrogate predictions, PROSOUNDS enables robust protein optimization through precise mutational design even
+            in the absence of ground-truth labels. Comprehensive performance evaluation reveals that PROSOUNDS
+            consistently outperforms deterministic alternatives across three different protein property optimization
+            tasks.<br />
+            Availability and Implementation:<br />
+            The datasets and implementation code for PROSOUNDS are available at
+            https://github.com/TeresaZhouTamu/PRO-SOUNDS.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-01</td>
+          <td>11:45:00</td>
+          <td>12:45:00</td>
+          <td>Room EF</td>
+          <td>Proteins and structural biology</td>
+          <td>
+            RIBEX: Predicting and Explaining RNA Binding Across Structured and Intrinsically Disordered Regions
+            (IDR)-rich Proteins
+          </td>
+          <td>Samuele Firmani</td>
+          <td>Samuele Firmani, Felix Steinbauer, Gjergji Kasneci, Marc Horlacher, Annalisa Marsico</td>
+          <td>
+            Motivation: RNA-binding proteins (RBPs) regulate post-transcriptional processes, yet many remain
+            undiscovered because RNA-binding activity often occurs outside canonical RNA-binding domains (RBDs),
+            including within intrinsically disordered regions (IDRs) or through protein complexes.<br />
+            Computational methods can help identify novel RBPs, but approaches relying solely on sequence-derived
+            features or ignoring the cellular interaction context are limited in capturing the complexity of RNA-binding
+            behavior. To date, no framework rigorously integrates both sequence information and protein interaction
+            context for RBP prediction. Results: We introduce RIBEX, a multimodal framework that combines protein
+            language model (pLM) embeddings with protein interactome topology to improve RBP prediction and
+            interpretation. Specifically, we integrate sequence representations with graph-derived positional encodings
+            (PE) from the human STRING protein-protein interaction (PPI) network. PE are computed using Personalized
+            PageRank, reduced with principal component analysis, and fused with pooled sequence embeddings through FiLM
+            conditioning, while Low-Rank Adaptation (LoRA) enables parameter-efficient task adaptation. Across both an
+            annotation-based benchmark and experimental RNA Interactome Capture (RIC) dataset, PE consistently improves
+            predictive performance, indicating that interactome topology provides complementary information beyond
+            sequence features. LoRA adaptation of ESM2-650M further yields larger gains than simply scaling frozen
+            backbone size. RIBEX outperforms state-of-the-art methods such as RBP-TSTL and HydRA, particularly on
+            challenging subsets including proteins lacking canonical RBDs and those enriched in IDRs. For
+            interpretability, we combine sequence-level computational alanine scanning with network-level
+            positional-encoding ablation and inverse-PCA mapping, recovering known RNA-binding domains, IDR-associated
+            contributions, and functional interactome communities linked to RBP predictions.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-01</td>
+          <td>11:45:00</td>
+          <td>12:45:00</td>
+          <td>Room EF</td>
+          <td>Proteins and structural biology</td>
+          <td>
+            STAR-GO: Improving Protein Function Prediction by Learning to Hierarchically Integrate Ontology-Informed
+            Semantic Embeddings
+          </td>
+          <td></td>
+          <td>Mehmet Efe Akça, Gökçe UludoÄŸan, Arzucan Ozgur, Inci BaytaÅŸ</td>
+          <td>
+            Motivation: Accurate prediction of protein function is essential for elucidating molecular mechanisms and
+            advancing biological and therapeutic discovery. Yet experimental annotation lags far behind the rapid growth
+            of protein sequence data. Computational approaches address this gap by associating proteins with Gene
+            Ontology (GO) terms, which encode functional knowledge through hierarchical relations and textual
+            definitions. However, existing models often emphasize one modality over the other, limiting their ability to
+            generalize, particularly to unseen or newly introduced GO terms that frequently arise as the ontology
+            evolves, and making the previously trained models outdated.<br />
+            Results: We present STAR-GO, a Transformer-based framework that jointly models the semantic and structural
+            characteristics of GO terms to enhance zero-shot protein function prediction. STAR-GO integrates textual
+            definitions with ontology graph structure to learn unified GO representations, which are processed in
+            hierarchical order to propagate information from general to specific terms. These representations are then
+            aligned with protein sequence embeddings to capture sequenceâ€“function relationships. STAR-GO achieves
+            state-of-the-art performance and superior zero-shot generalization, demonstrating the utility of integrating
+            semantics and structure for robust and adaptable protein function prediction.<br />
+            Availability: Code and pre-trained models are available at https://github.com/boun-tabi-lifelu/stargo
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-02</td>
+          <td>09:00:00</td>
+          <td>10:00:00</td>
+          <td>Room EF</td>
+          <td>Proteins and structural biology</td>
+          <td>Reconstructing Atomistic Biomolecular Dynamics from High-Speed Atomic Force Microscopy Data</td>
+          <td>Florence Tama</td>
+          <td>Florence Tama</td>
+          <td>
+            Understanding biomolecular function requires insight into both structure and dynamics. High-speed atomic
+            force microscopy (HS-AFM) enables direct visualization of biomolecular motions at the single-molecule level
+            under near-physiological conditions, producing two-dimensional (2D) topographical images in real time.
+            However, its limited resolution prevents direct determination of three-dimensional (3D) atomic structures,
+            necessitating computational approaches to bridge this gap.<br />
+            We present NMFF-AFM, a flexible fitting method that integrates normal mode analysis with AFM image fitting
+            to reconstruct 3D atomic models from HS-AFM data. The method leverages low-frequency normal modes to capture
+            large-scale, functionally relevant conformational changes while deforming a known protein structure to match
+            AFM images. Validation using simulated AFM data from proteins with known dynamics demonstrated robustness
+            and reliability. To facilitate broader use, NMFF-AFM was implemented in the BioAFMviewer platform, creating
+            a streamlined workflow from raw HS-AFM movies to atomistic modeling and visualization. This user-friendly
+            integration enables direct analysis of experimental data across diverse systems. Applications to a single
+            protein domain, a multi-protein complex, and a megadalton-scale filament highlight the method's versatility.
+            Furthermore, applying NMFF-AFM to time-resolved HS-AFM data allowed reconstruction of atomistic molecular
+            movies. Overall, NMFF-AFM and BioAFMviewer provide an efficient framework for extracting atomistic dynamics
+            from HS-AFM data, enabling large-scale analysis and advancing mechanistic understanding of biomolecular
+            function.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-02</td>
+          <td>09:00:00</td>
+          <td>10:00:00</td>
+          <td>Room EF</td>
+          <td>Proteins and structural biology</td>
+          <td>
+            Efficient sampling of large-scale transition pathways and intermediate conformations in sub-mesoscopic
+            protein complexes
+          </td>
+          <td>Domenico Scaramozzino</td>
+          <td>Domenico Scaramozzino, Byung Ho Lee, Laura Orellana</td>
+          <td>
+            Protein conformational changes are the cornerstone of biological function. While conformers captured
+            experimentally represent metastable states, the pathways connecting them have been elusive for experiments
+            and simulations alike. Nowadays, cryogenic Electron Microscopy is providing rich structural data on proteins
+            trapped in different states for increasingly large systems, but these are out of scope for most
+            computational methods which exhibit an N^2 dependence on size. Based on our previous eBDIMS algorithm, here
+            we present eBDIMS2, an optimized version with quasi-linear size dependence, able to simulate on a desktop
+            computer particularly complex transitions for megadalton protein assemblies, like the rotary motion of ATP
+            synthases. Not only eBDIMS2 pathways spontaneously visit experimental intermediates but also overlap with
+            enhanced and microsecond Molecular Dynamics simulations requiring extensive supercomputing resources. By
+            integrating Elastic Networks with Brownian Dynamics, eBDIMS2 allows an unprecedented exploration of
+            conformational changes of sub-mesoscopic systems previously inaccessible.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-02</td>
+          <td>09:00:00</td>
+          <td>10:00:00</td>
+          <td>Room EF</td>
+          <td>Proteins and structural biology</td>
+          <td>Accurate identification and mechanistic evaluation of pathogenic missense variants with Rhapsody-2</td>
+          <td>Ivet Bahar</td>
+          <td>Anupam Banerjee, Anthony Bogetti, Ivet Bahar</td>
+          <td>
+            Understanding the effects of missense mutations or single amino acid variants (SAVs) on protein function is
+            crucial for elucidating the molecular basis of diseases/disorders and designing rational therapies. We
+            introduce here Rhapsody-2, a machine learning tool for discriminating pathogenic and neutral SAVs,
+            significantly expanding on a precursor limited by the availability of structural data. With the advent of
+            AlphaFold2 as a powerful tool for structure prediction, Rhapsody-2 is trained on a significantly expanded
+            dataset of 117,525 SAVs corresponding to 12,094 human proteins reported in the ClinVar database. Adopting a
+            broad set of descriptors composed of sequence evolutionary, structural, dynamic, and energetics features in
+            the training algorithm, Rhapsody-2 achieved an AUROC of 0.94 in 10-fold cross-validation when all SAVs of a
+            particular test protein (mutant) were excluded from the training set. Benchmarking against a variety of
+            testing datasets demonstrated the high performance of Rhapsody-2. While sequence evolutionary descriptors
+            play a dominant role in pathogenicity prediction, those based on structural dynamics provide a mechanistic
+            interpretation. Notably, residues involved in allosteric communication and those distinguished by pronounced
+            fluctuations in the high-frequency modes of motion or subject to spatial constraints in soft modes usually
+            give rise to pathogenicity when mutated. Overall, Rhapsody-2 provides an efficient and transparent tool for
+            accurately predicting the pathogenicity of SAVs and unraveling the mechanistic basis of the observed
+            behavior, thus advancing our understanding of genotype-to-phenotype relations.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-02</td>
+          <td>13:15:00</td>
+          <td>14:15:00</td>
+          <td>Room EF</td>
+          <td>Proteins and structural biology</td>
+          <td>Attracting Cavities 3.0: Faster and More Versatile Molecular Docking for the SwissDock Webserver</td>
+          <td>Ute F. Röhrig</td>
+          <td>Ute F. Röhrig, Marine Mathieu-Bugnon, Vincent Zoete</td>
+          <td>
+            Motivation: Molecular docking is a pillar of structure-based drug design and shows advantages in structure
+            prediction of small-molecule ligandâ€“protein complexes over co-folding methods for novel ligands and novel
+            binding pockets. Here, we describe substantial improvements of our physics-based docking algorithm
+            Attracting Cavities, which is widely used through the SwissDock webserver.<br />
+            Results: AC 3.0 includes enhanced sampling features, new functionalities, and technical improvements. These
+            lead to better sampling at lower execution times and higher versatility. Comparison with AutoDock Vina
+            demonstrates better docking results on multiple test sets.<br />
+            Availability: AC 3.0 will be made freely accessible through the SwissDock webserver (www.swissdock.ch).
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-02</td>
+          <td>13:15:00</td>
+          <td>14:15:00</td>
+          <td>Room EF</td>
+          <td>Proteins and structural biology</td>
+          <td>PepGen: Conditional generation of peptides for MHC binding</td>
+          <td>Dani Korpela</td>
+          <td>
+            Dani Korpela, Alexandru Dumitrescu, Martin Strazar, Rui Li, Ramnik Xavier, Daniel Graham, Harri Lähdesmäki
+          </td>
+          <td>
+            Motivation: Peptide-MHC II binding drives adaptive immunity, yet discovery of novel binder peptides remains
+            challenging due to open binding grooves of MHC-II that accommodate variable-length peptides. While
+            discriminative models perform well, they are unfeasible for generation via enumeration due to vast peptide
+            space (20^13 ~ 8 * 10^16 for peptides of length 13 amino acids). Generative AI approaches could accelerate
+            binder design to enable vaccines targeted to particular MHC-II alleles or optimize other peptide chemical
+            properties.<br />
+            Results: We introduce PepGen, the first protein language model for MHC II peptide generation building on
+            Generalized Language Modeling. PepGen conditions on alleles, arbitrary partial peptides including putative
+            TCR- interacting motifs, and continuous binding affinity. Across multiple benchmarks including infilling and
+            de novo generation, PepGen outperformed frequency sampling, Gibbs clustering, and autoregressive baselines.
+            Adjusted log-probabilities enable good classification performance. Experimental validation confirmed that
+            the SARS-CoV-2 peptide TEGALNTPKDHIGTR binding the HLA-DQA101:03-DQB106:03 allele can be redesigned to bind
+            the HLA-DQA101:02-DQB105:02 allele. PepGen generated three TCR-motif-preserving binders gaining up to 70% of
+            original MFI. Overall, PepGen provides scalable, motif-constrained MHC II peptide re-design and de novo
+            generation, validated through thorough benchmarks and functional assays.<br />
+            Availability and implementation: Code and data is available at https://github.com/DaniTheOrange/PepGen
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-02</td>
+          <td>13:15:00</td>
+          <td>14:15:00</td>
+          <td>Room EF</td>
+          <td>Proteins and structural biology</td>
+          <td>
+            Pocket-PROTACs: An Interpretable Pocket-Aware Deep Learning Framework for Predicting PROTAC-Induced Protein
+            Degradation
+          </td>
+          <td>Kai Chen</td>
+          <td>Kai Chen, Zhijian Huang, Yinbo Wang, Siyuan Shen, Jinmiao Song, Lei Deng</td>
+          <td>
+            Motivation: Proteolysis-targeting chimeras (PROTACs) enable targeted protein degradation by recruiting an E3
+            ubiquitin ligase to a protein of interest (POI) and forming a ternary complex. Despite their therapeutic
+            promise, rational PROTAC design remains challenging, as degradation efficacy depends on subtle and highly
+            structure-dependent interactions among the POI, the E3 ligase, and the bifunctional molecule.<br />
+            Results: We propose Pocket-PROTACs, a pocket-aware attention-based framework for predicting PROTAC-induced
+            protein degradation from a triplet of POI, E3 ligase, and PROTAC. Pocket-PROTACs encodes protein sequences
+            using a pre-trained protein language model and represents PROTACs with a geometry-aware graph neural network
+            over an ensemble of three-dimensional conformers. Both POIâ€“PROTAC and E3 ligaseâ€“PROTAC interactions are
+            explicitly modeled through a residueâ€“atom cross-attention mechanism that captures fine-grained interaction
+            patterns. To improve model interpretability, we introduce a pocket-aware module that incorporates structural
+            context to guide residue-level relevance estimation, enabling multi-level attribution analysis. Experiments
+            on two benchmark datasets show that Pocket-PROTACs consistently outperforms fingerprint-based baselines and
+            recent deep learning methods. The learned relevance maps highlight localized interaction patterns on both
+            the POI and the E3 ligase that are qualitatively consistent with known pocket-level features. A case study
+            on KLHDC2-engaging BET PROTACs further demonstrates that our model accurately predicts degradation behavior
+            and provides biologically meaningful, attention-based interpretations, offering practical support for PROTAC
+            design and experimental investigation.<br />
+            Availability: Source code and datasets are available at https://github.com/Adochew/Pocket-PROTACs.<br />
+            Contact: leideng@csu.edu.cn<br />
+            Supplementary information: Supplementary data are available at Bioinformatics online.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="text-align: center">
+      <a href="#top">- top -</a>
+    </p>
+    <script>
+      $(document).ready(function () {
+        $("#detailedTable").DataTable({
+          paging: false,
+          order: [
+            [4, "asc"],
+            [0, "asc"],
+            [1, "asc"],
+          ],
+          responsive: true,
+          dom: "Bfrtip", // B = buttons, f = filter, r = processing, t = table, i = info, p = pagination
+          buttons: [
+            {
+              extend: "csvHtml5",
+              text: "CSV",
+              title: "ISMBECCB_2025_Proteins_Detailed_Schedule",
+            },
+            {
+              extend: "excelHtml5",
+              text: "Excel",
+              title: "ISMBECCB_2025_Proteins_Detailed_Schedule",
+            },
+            {
+              extend: "pdfHtml5",
+              text: "PDF",
+              title: "ISMBECCB_2025_Proteins_Detailed_Schedule",
+            },
+            "print",
+          ],
+        });
+      });
+    </script>
+    <script>
+      (function () {
+        function getHeight() {
+          var b = document.body,
+            e = document.documentElement;
+          return Math.max(
+            b.scrollHeight,
+            e.scrollHeight,
+            b.offsetHeight,
+            e.offsetHeight,
+            b.clientHeight,
+            e.clientHeight,
+          );
+        }
+        function sendHeight() {
+          var h = getHeight();
+          // send to the J5 parent; change to your exact parent origin if needed
+          parent.postMessage({ type: "iscb-wrapper-height", height: h, id: "blockrandom" }, "*");
+        }
+        window.addEventListener("load", sendHeight);
+        window.addEventListener("resize", sendHeight);
+        // update on DOM changes too
+        new MutationObserver(sendHeight).observe(document.body, { childList: true, subtree: true, attributes: true });
+      })();
+    </script>
+    <script>
+      (function () {
+        function postToParent(msg) {
+          // Parent will validate origin; using '*' lets this work on test/prod
+          parent.postMessage(msg, "*");
+        }
+        //Clicks that should navigate the PARENT to a site-relative path
+        document.addEventListener("click", function (e) {
+          const a = e.target.closest("a[data-nav-top]");
+          if (!a) return;
+          const href = a.getAttribute("href"); // e.g. "/membership-details/senior-members"
+          if (href && href.startsWith("/")) {
+            e.preventDefault();
+            postToParent({ type: "iscb-wrapper-cmd", action: "navigateParentToPath", path: href, id: "blockrandom" });
+          }
+        });
+        //“#top” links: scroll the parent to the top of the iframe
+        document.addEventListener("click", function (e) {
+          const a = e.target.closest('a[href="#top"]');
+          if (!a) return;
+          e.preventDefault();
+          postToParent({ type: "iscb-wrapper-cmd", action: "scrollParentTo", target: "iframeTop", id: "blockrandom" });
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        function post(msg) {
+          parent.postMessage(msg, "*");
+        }
+        document.addEventListener(
+          "submit",
+          function () {
+            post({ type: "iscb-wrapper-cmd", action: "loading", state: "start", id: "blockrandom" });
+          },
+          true,
+        );
+        const origSubmit = HTMLFormElement.prototype.submit;
+        HTMLFormElement.prototype.submit = function () {
+          post({ type: "iscb-wrapper-cmd", action: "loading", state: "start", id: "blockrandom" });
+          return origSubmit.apply(this, arguments);
+        };
+        window.addEventListener("beforeunload", function () {
+          post({ type: "iscb-wrapper-cmd", action: "loading", state: "start", id: "blockrandom" });
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        function notifyParentOfOffset() {
+          try {
+            // Where is the target in the child document?
+            const hash = decodeURIComponent(location.hash || "");
+            let offsetY = 0;
+            if (hash.length > 1) {
+              const id = hash.slice(1);
+              const el = document.getElementById(id) || document.getElementsByName(id)[0];
+              if (el) {
+                const r = el.getBoundingClientRect();
+                offsetY = Math.round(r.top + window.scrollY);
+              }
+            } else {
+              offsetY = Math.round(window.scrollY);
+            }
+            // Tell the parent to scroll to the corresponding spot
+            window.parent.postMessage(
+              { type: "iscb-wrapper-cmd", action: "scrollParentToChildOffset", offset: offsetY },
+              "*",
+            );
+          } catch (e) {
+            /* cross-origin safe */
+          }
+        }
+        // On load (handles initial #hash in URL)
+        window.addEventListener("load", function () {
+          // let layout settle
+          setTimeout(notifyParentOfOffset, 0);
+        });
+        // On in-page anchor changes
+        window.addEventListener("hashchange", notifyParentOfOffset);
+      })();
+    </script>
+  </body>
+</html>

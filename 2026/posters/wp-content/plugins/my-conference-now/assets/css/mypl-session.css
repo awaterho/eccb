@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'Futura PT';
+    src: url('fonts/FuturaPT-Heavy.eot');
+    src: url('fonts/FuturaPT-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('fonts/FuturaPT-Heavy.woff2') format('woff2'),
+        url('fonts/FuturaPT-Heavy.woff') format('woff'),
+        url('fonts/FuturaPT-Heavy.ttf') format('truetype'),
+        url('fonts/FuturaPT-Heavy.svg#FuturaPT-Heavy') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('fonts/MyriadPro-Regular.eot');
+    src: url('fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/MyriadPro-Regular.woff2') format('woff2'),
+        url('fonts/MyriadPro-Regular.woff') format('woff'),
+        url('fonts/MyriadPro-Regular.ttf') format('truetype'),
+        url('fonts/MyriadPro-Regular.svg#MyriadPro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* .oxygen-body p,
+.oxygen-body div,
+.oxygen-body a,
+.oxygen-body .ct-div-block a.ct-link-button {
+    font-family: 'Myriad Pro';
+} */
+
+/* .oxygen-body h1,
+.oxygen-body h2,
+.oxygen-body h3,
+.oxygen-body h4,
+.oxygen-body h5,
+.oxygen-body h6 {
+    font-family: 'Futura PT';
+} */
+
+/* session design */
+
+.show_all_pdf_session {
+    line-height: 150%;
+}
+.show_all_pdf_session *:empty,
+.show_all_pdf_session p:empty {
+    display: none;
+}
+.show_all_pdf_session h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #081f3f;
+    font-weight: bold;
+}
+.show_all_pdf_session .all_sche_time {
+    font-weight: 600;
+}
+.show_all_pdf_session h3 {
+    font-size: 24px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-weight: bold;
+    background: #fcbe19;
+    padding: 10px 15px;
+    color: #fff;
+    line-height: 150%;
+}
+
+.show_all_pdf_session .eve_session_title h3 {
+    background:transparent;
+    padding: 0;
+    color: #000;
+    line-height: 150%;
+}
+.show_all_pdf_session .parent_event_session {
+    margin: 0;
+    padding: 5px 0 0 20px;
+    position: relative;
+}
+.show_all_pdf_session .parent_event_session {
+    border-bottom: 1px solid #fcbe19;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+}
+
+ .handouts-section .handout {
+    display: flex;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.handouts-section .handout .handout_dwld_link {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+} 
+
+.handout_dwld_link:hover {
+text-decoration: unset;
+}
+
+.handouts-section .handout:hover{
+text-decoration: underline;
+}
+
+.handout-title{
+margin: 0;    
+}
+

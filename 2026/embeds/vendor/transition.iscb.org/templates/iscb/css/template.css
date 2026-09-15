@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+body.contentpane { width: auto; margin: 10px; text-align: left; }
+img { border: 0 none; }
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+.clear { margin: 0 !important; padding: 0 !important; line-height: 1px !important; font-size: 1pt !important; clear: both; }
+a { text-decoration: none; }
+p { color: #000; font-family: 'Open Sans', sans-serif; }
+/*joomla theme style is here*/
+
+body { font-family: 'Roboto', sans-serif; font-size: 14px; line-height: 16px; }
+.header-topbar { width: 100%; min-height: 25px; background: #242C35; }
+.header-mid-bg-repet { background: url(../images/header-repet.jpg) repeat-x center top; }
+.header-mid { width: 100%; background: url(../images/header-bg2.jpg) no-repeat center top; min-height: 125px; }
+.Nav-area { width: 100%; min-height: 45px; background: url(../images/menu-bg.jpg) repeat-x 0 0; }
+.mid-content-area { width: 100%; height: auto; padding-top: 24px; }
+.mid-content-area.bg-color { background: url(../images/mid-bg.jpg) repeat-x 0 0; }
+.mid-pos-top { margin-bottom: 30px; }
+.bottom-wrap { background: #464954; padding-top: 20px; }
+footer { background: #252525; }
+/*template style*/
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: inherit; font-weight: 500; line-height: 1.1; color: inherit; }
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small { font-weight: normal; line-height: 1; color: #777777; }
+h1, .h1, h2, .h2, h3, .h3 { margin-top: 17px; margin-bottom: 8.5px; }
+h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .small, h2 .small, .h2 .small, h3 .small, .h3 .small { font-size: 65%; }
+h4, .h4, h5, .h5, h6, .h6 { margin-top: 8.5px; margin-bottom: 8.5px; }
+h4 small, .h4 small, h5 small, .h5 small, h6 small, .h6 small, h4 .small, .h4 .small, h5 .small, .h5 .small, h6 .small, .h6 .small { font-size: 75%; }
+h1, .h1 { font-size: 22pt; }
+h2, .h2 { font-size: 20pt; }
+h3, .h3 { font-size: 18pt; }
+h4, .h4 { font-size: 16pt; }
+h5, .h5 { font-size: 14pt; }
+h6, .h6 { font-size: 12pt; }
+p { margin: 0 0 8.5px; }
+.lead { margin-bottom: 17px; font-size: 13pt; font-weight: 300; line-height: 1.4; }
+.joowarp a { color: #549bc4; }
+.joowarp p a { color: #549bc4; }
+.joowarp p a:hover, .joowarp a:hover :not(a.btn-warning)  { color: #f26c4f }
+.joowarp p { font-size: 12pt; line-height: 16px; margin-bottom: 25px; font-family: 'Open Sans', sans-serif; font-weight: normal; }
+.joowarp h1.pageheadeing_h1 { font-size: 25pt; color: #f26c4f; line-height: 27px; font-family: 'Roboto', sans-serif; font-weight: 300; border-bottom: solid 1px #f26c4f; padding-bottom: 5px; }
+.joowarp h2 { font-size: 20pt; color: #333; line-height: 22px; font-family: 'Roboto', sans-serif; font-weight: bold; margin-bottom: 10px; }
+.joowarp h3 { font-size: 18pt; color: #333; line-height: 20px; font-family: 'Roboto', sans-serif; font-weight: bold; margin-bottom: 10px; }
+.joowarp h4 { font-size: 16pt; color: #333; line-height: 18px; font-family: 'Roboto', sans-serif; font-weight: bold; margin-bottom: 10px; }
+.joowarp h5 { font-size: 14pt; color: #333; line-height: 16px; font-family: 'Roboto', sans-serif; font-weight: bold; margin-bottom: 10px; }
+blockquote footer { background: none; }
+.joowarp address { font-style: normal; line-height: 1.42857; margin-bottom: 17px; font-size: 12pt; }
+.joowarp { font-family: 'Open Sans', sans-serif; }
+.joowarp ul { margin-bottom: 10px; margin-top: 0; list-style-type: disc; margin-left: 25px; }
+.joowarp ol { margin-bottom: 10px; margin-top: 0; list-style-type: decimal; margin-left: 25px; }
+.joowarp ul li { font-family: 'Open Sans', sans-serif; font-weight: normal; color: #333; font-size: 12pt; line-height: 18px; }
+.joowarp ol li { font-family: 'Open Sans', sans-serif; font-weight: normal; color: #333; font-size: 12pt; line-height: 18px; }
+.joowarp label { display: inline-block; font-weight: bold; margin-bottom: 5px; max-width: 100%; font-family: 'Open Sans', sans-serif; }
+.joowarp .form-inline .form-group { margin: 5px 0; }
+.joowarp { font-family: 'Open Sans', sans-serif; }
+.joowarp blockquote { border-left: 15px solid #549BC4; margin-bottom: 10px; padding: 0 0 0 15px; }
+.joowarp .blockquote-reverse, blockquote.pull-right { border-left: 0; padding-left: 0; border-right: 15px solid #549BC4; padding-left: 0; padding-right: 15px; text-align: right; border-left: 0; }
+.joowarp blockquote { margin-bottom: 10px; }
+.joowarp .blockquote-reverse p, .joowarp blockquote.pull-right p { color: #292b2b; font-size: 30pt; line-height: 36px; font-weight: 300px; font-style: italic; font-family: 'Roboto', sans-serif; font-weight: 300; }
+.joowarp .blockquote-reverse footer, .joowarp blockquote.pull-right footer { font-size: 25pt; line-height: 30px; color: #292b2b; font-style: italic; }
+.joowarp dl { line-height: 18px; }
+.joowarp blockquote footer, .joowarp blockquote small, .joowarp blockquote .small { color: rgb(119, 119, 119); display: block; font-size: 90%; line-height: 1.42857; font-family: 'Roboto', sans-serif; font-weight: 300; }
+.joowarp div.success, .joowarp p.success { background-color: rgb(208, 233, 198); background-image: linear-gradient(to bottom, rgb(208, 233, 198), rgb(208, 233, 198)); background-repeat: repeat-x; border-radius: 4px; color: rgb(70, 136, 71); padding: 15px; }
+.joowarp div.warning, .joowarp p.warning { background-color: rgb(241, 229, 171); background-image: linear-gradient(rgb(241, 229, 171), rgb(241, 229, 171)); background-repeat: repeat-x; border-radius: 4px; color: rgb(160, 139, 76); padding: 15px; }
+.joowarp div.info, .joowarp p.info { background-color: rgb(161, 190, 210); background-image: linear-gradient(rgb(161, 190, 210), rgb(161, 190, 210)); background-repeat: repeat-x; border-radius: 4px; color: rgb(74, 103, 125); padding: 15px; }
+.joowarp div.error, .joowarp p.error { background-color: rgb(232, 192, 194); background-image: linear-gradient(rgb(232, 192, 194), rgb(232, 192, 194)); background-repeat: repeat-x; border-radius: 4px; color: rgb(204, 0, 0); padding: 15px; }
+.joowarp blockquote p { color: #292b2b; font-size: 30pt; line-height: 36px; font-weight: 300px; font-style: italic; font-family: 'Roboto', sans-serif; font-weight: 300; }
+.joowarp .pagination { display: block; }
+.joowarp .pagination p { margin: 0; text-align: center; }
+.joowarp .pagination ul { margin: 0; padding: 0; list-style-type: none; text-align: center; width: 100%; display: block; }
+.joowarp .pagination ul li { display: inline-block; padding: 5px; font-size: 14pt; font-family: 'Roboto', sans-serif; font-weight: 300; margin: 0; }
+.joowarp .pagination ul li a { display: inline-block !important; }
+.moduletable_loginmod input::-webkit-input-placeholder {color:#fff;}
+.moduletable_loginmod input::-moz-placeholder {color:#fff;}
+.moduletable_loginmod input:-ms-input-placeholder {color:#fff;}
+.moduletable_loginmod input:-moz-placeholder {color:#fff;}
+.mid-pos-top2 { margin-bottom: 30px; }
+/*bootstrap font style css override*/
+
+strong {font-weight: bold;}
+em {font-style: italic;}
+.joowarp strong {font-weight: bold;} 
+.joowarp em { font-style: italic;} 
+
+

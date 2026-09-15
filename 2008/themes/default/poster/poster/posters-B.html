@@ -1,0 +1,968 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+* { font-size:13px; font-family: Verdana, "Trebuchet MS", Arial, sans-serif; }
+div { width:800px; margin:5px 0; padding-bottom:5px;}
+div.titolo_pagina { font-weight:bold; font-size:15px; margin-bottom:20px; }
+div.poster { font-weight:bold; border-bottom:1px solid silver; font-size:14px; margin-top:20px;}
+div.titolo { font-weight:bold; font-size:14px; }
+div.autori { border-bottom:1px solid silver; }
+div.inst { border-bottom:1px solid silver; }
+div.shabs { font-style:italic; font-size:12px; border-bottom:1px solid gray;}
+div.exabs { font-size:12px;}
+div.keys { color:gray; }
+</style>
+</head>
+<body>
+<div class="titolo_pagina">
+Poster Abstracts for Category B: Databases
+</div>
+<a name="1
+"></a>
+<div class="poster">
+Poster B01
+</div>
+<div class="titolo">
+Genomic and proteomic information integration and query
+</div>
+<div class="autori">
+Nardelli M., Masseroli M.
+</div>
+<div class="inst">
+Dipartimento di Elettronica e Informazione, Politecnico di Milano, Piazza Leonardo da Vinci 32, Milan, 20133, Italy
+</div>
+<div class="shabs">
+Biological interpretation of biomolecular high-throughput experimental results requires enriching the produced lists of protein and gene IDs with several functional and phenotypic annotations available in heterogeneous and widely distributed databanks, and comprehensively analysing such annotations. These aims demand to integrate the annotations in a consistent data collection in order to effectively use them. We developed a software for easy creation and updating of genomic and proteomic data warehouses of integrated distributed annotations that ensures high quality of imported annotations.
+</div>
+<div class="exabs">
+Introduction
+Biomolecular high-throughput experimental technologies produce large amounts of data often summarized by lists of identifiers of several genes or proteins candidate to have a relevant role in the considered experimental conditions. In order to interpret the biological meaning of these lists, protein and gene IDs need to be annotated with numerous functional, structural, and phenotypic annotations available in many heterogeneous and widely distributed databanks. These databanks are continuously increasing in number (more than 1000 in January 2008) and provide their data in many different formats. For such reasons, information from these distributed databanks need to be retrieved and processed in order to create an integrated, consistent, easy to update and to extend data collection able to effectively support the interpretation of biomolecular high-throughput experimental results. Existing examples of genomic data warehouse design and implementation present limitations such as the need of a skilled informatician to create and update the data warehouse, and/or a complex data warehouse schema difficult to extend in order to include more data types. To overcome such limitations, we designed and implemented a software that allows easy creation, extension and automatic updating of a genomic and proteomic data warehouse (GDW), which integrates annotations from different databanks and guarantees the quality of the integrated annotations. This is obtained by strict correctness checking of performed data downloading, processing, and integration steps, and by consistency checking of imported annotations.
+Methods
+In order to design and implement our software we considered 33 different databanks chosen among the most relevant databanks belonging to the database categories defined in the Nucleic Acid Research database category list. Analysis of these 33 databanks, their data, and the formats in which they provide them, led us to define a taxonomy of provided data file formats. On the basis also of this taxonomy, we abstracted and generalized all phases required to import and integrate annotations from different biomolecular databanks in a data warehouse, and for each phase we defined a general workflow consisting of elementary parametric operations, namely atomic actions, that we implemented as individual classes in Java programming language. In the data warehouse the data import phase creates a database for each considered remote databank, containing only the data from that databank. In each created database, specific materialized data view(s), containing the databank main information in denormalized form, are created in order to optimize annotation analysis queries. From each generated database, the created views and other tables with data of interest are exported and integrated into a single database, namely Integrated DB. Each of them includes a field that associates the databank specific IDs with the internal IDs chosen for the created GDW (e.g. Entrez Gene IDs and UniProt accession numbers).
+Results and Discussion
+In order to allow easy composition and parameterization of implemented atomic actions in specific workflows for creating particular GDWs, we developed the GDW updater software. Then, we used it to create a prototypical GDW that integrates data from 12 out of the 33 previously chosen databanks (i.e., KEGG, BioCyc, Reactome, InterPro, Gene Ontology, GOA, eVOC, Homologene, Entrez Gene, UniProt/Swiss-Prot, IPI, NetAffx). The 12 selected databanks provide a pool of fundamental information describing existing biomolecular knowledge useful to better understand biomolecular genomic and proteomic experiment results. For each of these 12 databanks we built a specific workflow composed of specifically parameterized atomic actions composed according to the defined general workflow. By running such workflows, we built our prototypical GDW; we downloaded 153 data files for a total of 17 Gbyte and imported in the GDW 3,886,478 genes (3,643,098 protein-coding) of 4,986 different organisms (including 25,598 human protein-coding genes), 366,218 proteins (80.06% with the codifying gene known) of 11,341 species (including 19,293 human proteins), 26,158 Gene Ontology (GO) terms, 10,070 protein families and 4,683 protein domains, 486 different pathways, and several eVOC ontology terms (515 anatomical system, 187 cellular type, 156 developmental stage, and 198 pathology terms).
+	Our approach has been proved to be effective in different types of use. As an example, by taking advantage of the cross references existing between annotations provided by different databanks, presence of inconsistencies in information from different databanks can be checked with simple queries on the data integrated in the GDW. On the assumption that if a protein is annotated to a Gene Ontology term, also the gene that codifies that protein must be annotated to that Gene Ontology term, we checked cross references existing between Gene Ontology, UniProt and Entrez Gene databanks in May 2008. We found that 3,061 (1.75%) GO annotations (regarding 726 different GO terms) of 1,432 human proteins provided by GOA were not comprised in the GO annotations of the codifying genes provided by Entrez Gene, including also 2,375 (77.23%) annotations with evidence stronger than that Inferred from Electronic Annotation.
+Conclusions
+The defined and implemented parametric atomic actions, the designed methodology for their composition in workflows, the defined general workflows, and the developed software for their easy implementation enable also not skilled informaticians to create, maintain updated and extend a GDW that consistently integrates many different genomic and proteomic annotations from different databanks and supports their consistency checking and effective use for the biological interpretation of high-throughput biomolecular experiment results and the better understanding of complex cellular physio-pathological processes.
+</div>
+<div class="keys">
+</div>
+<a name="2
+"></a>
+<div class="poster">
+Poster B02
+</div>
+<div class="titolo">
+Unified access to bioinformatic resources: SRS, Biomart and EB-Eye
+</div>
+<div class="autori">
+Alberto Labarga (1), Evangelos Pafilis (2)
+</div>
+<div class="inst">
+(1) Integromics S.L., (2) European Molecular Biology Laboratory
+</div>
+<div class="shabs">
+Programmatic access to data and tools through the Web using so-called Web services has an important role in bioinformatics. In this poster we present an overview of three commonly used search and retrieval systems for biological information: EB-Eye, Biomart and SRS and present a web service built over WS-I and REST technologies that provides an integration layer and a common interface to them. We will also present an AJAX search application built on top of these webservices. 
+</div>
+<div class="exabs">
+As new technological developments in biological research have allowed the collection of larger and more diverse data types, major players in the bioinformatics field have endeavored to stay at the forefront of this research, providing new and increasingly sophisticated resources to access the data. There are a different open source and commercial systems that have been developed as a solution to the data integration challenge, for example, SRS [1],[2], BioMart [3] and the EB-Eye [4]. These tools are mainly accessed using browser-based interfaces, however, Web Services technology has gained much attention as an open architecture enabling interoperability among applications across heterogeneous platforms and different networks, and they also offer either REST or SOAP interfaces, that allow bioinformaticians to access the data programmatically.
+The aim of this work is to present an overview of these interfaces, and suggest a common API that provides a unique access point to the three interfaces. On top of this API, we have developed a web service that integrates the best mechanism of the different services: the SOAP interface of EB-Eye, the URL query language of SRS and the XML query syntax of Biomart, so we can interact with the three systems in the same way.
+[1] http://srs.ebi.ac.uk/
+[2] http://srs.embl.de
+[3] https://www.ebi.ac.uk/biomart
+[4] https://www.ebi.ac.uk/ebisearch/advancedsearch.ebi
+</div>
+<div class="keys">
+Keywords: EBI, SRS, Biomart, SOAP, REST, web services
+</div>
+<a name="3
+"></a>
+<div class="poster">
+Poster B03
+</div>
+<div class="titolo">
+Alternative splicing and protein structure: integration and analysis of available information
+</div>
+<div class="autori">
+D’Antonio M. (2), Masseroli M. (1)
+</div>
+<div class="inst">
+(1) Dipartimento di Elettronica e Informazione, Politecnico di Milano, Piazza Leonardo da Vinci 32, Milan, 20133, Italy, (2) IFOM-IEO Campus, Via Adamello 16, Milan, 20139, Italy
+</div>
+<div class="shabs">
+Alternative splicing affects most of the human genes by inserting or deleting functional units to alter the structure and function of codified proteins. The Alternative Splicing and Protein Structure Scrutinizer (PASS) is a Web application we developed to extract, integrate and analyze alternative splicing and protein structure data sparsely available in different databanks accessible through the Internet. It allows the users to perform several types of queries to analyze alternative splicing and structural data of their uploaded genes and proteins in order to detect correlations between them.
+</div>
+<div class="exabs">
+Introduction
+Most of the genes in higher eukaryotes contain introns, whose presence allows the expression of different proteins (isoforms) in different tissues from a single gene, a phenomenon known as alternative splicing (Lodish et al., 2004). This has led to the prediction of more than 100,000 human genes based on Expressed Sequence Tags (EST) clustering coming from just the 20,000-25,000 genes expected from the genome sequence (Liu et al., 2003; Ptisyn et al., 2005). Recent studies estimated that as much as 60% of human genes produces alternatively spliced forms (Modrek et al., 2002), but only for a small part of the human genes the alternative splicing variants have been detected because the regulatory processes leading to alternative splicing have not been well understood yet.
+One major mechanism of alternative splicing is the insertion/deletion of functional units to alter the function of a protein; these units may be domains, transmembrane helices, signal peptides or coiled-coil regions (Hiller et al., 2005). However, alternative splicing inserts or deletes do not occur within protein domains. This can be explained by the fact that exons may reflect domain boundaries, or it can reflect the fact that natural selection may eliminate meaningless alternative splicing variants that do not generate full domains (Kriventseva et al., 2003). Hence, the alternative residues, which are not conserved among the spliced forms, may be present in different secondary structures. In fact, the protein secondary structure is defined as the three-dimensional configuration of local parts of a protein, based upon hydrogen bonds.
+	In order to evaluate possible correlations between alternative splicing and protein structure differences associated with different protein functions, we created a Web application, called Alternative Splicing and Protein Structure Scrutinizer (PASS), which is able to automatically extract, combine and examine the alternative splicing and protein structure data available in distributed databanks.
+Methods
+Human alternative splicing data have been gathered from the Alternative Splicing Database (ASD), a computer-generated and large-scale databank of the European Bioinformatics Institute (EBI). All human reference protein sequences have been retrieved from the EnsEMBL databank. The protein structural data have been obtained from the Protein Data Bank (PDB). In order to retrieve, integrate and analyze all these data, several publicly available software tools have been used. The Protein Identifier Cross Reference (PICR), developed by EBI to map protein identifiers between different databanks, has been used to link protein sequence identifiers form EnsEMBL to PDB identifiers. BLAST and CLUSTAL W have been employed to compare the alternatively spliced protein sequences in order to define what residues are conserved between the spliced forms, and to annotate each residue based on the alignment result. Moreover, the FeatureMap3D Web server (http://genomedenmark.com/services/FeatureMap3D/) has been used to obtain protein structure information for each annotated alternatively spliced protein sequence. Based on BLAST searches against PDB, it allows investigating in detail the structure of a protein of interest.
+Results and Discussion
+The PASS database has been built to integrate and store the retrieved alternative splicing and protein structure data and the results of their analysis. Out of the 9,945 human genes with alternative splicing and their 32,079 isoforms gathered from the ASD databank (43.3% of the human genes and 68.3% of their isoforms contained in the EnsEMBL databank), 599 genes and 2,149 isoforms have been mapped to protein structures in the PDB databank; 3,951 alignments between isoforms have been performed and annotated; 5,604 secondary structures of proteins encoded by 480 human alternative splicing genes (4.8% of the genes in the ASD databank, which generates 1,569 isoforms) have been analyzed and results have been stored in the PASS database. A suite of Perl scripts has been developed to automatically create, populate and update the database, whose Web interface has been implemented by using JavaScript and Active Server Page scripts. Through the created PASS Web application, several types of queries can be easily performed. The main ones support: 1) mining of alternative splicing and protein structure information derived from the integration of the retrieved data, and 2) structural data analysis, i.e. evaluation of information derived from the performed protein structure analysis. The former ones allow the user to search for: the isoforms or the alternative splicing events related to a list of gene or protein identifiers, the genes that undergo a particular alternative splicing event, the isoforms that have a known protein structure, the alternatively spliced proteins, or the genes with a defined alternative splicing event or associated with a known protein structure. With the latter ones, the user can ask for the average secondary structures of each isoform or of all the proteins he/she has selected, or can simply ask for the secondary structure in which each individual residue of the selected proteins is present. Furthermore, he/she can group the search results by type of alignment between the spliced forms, as defined by CLUSTAL W, in order to investigate whether the inserted elements are present in a particular secondary structure.
+Conclusions
+Using the developed PASS application, available alternative splicing and protein structure data have been jointly analyzed and stored in the PASS database. Since all data are automatically processed, every time a new version of the primary data becomes available, the PASS database can be easily updated in order to get results with a better coverage of human genes. At present, only 2.1% of all human genes in the EnsEMBL databank both has at least an alternative splicing event and is associated with a known protein structure.
+</div>
+<div class="keys">
+Keywords: Alternative splicing, protein structure
+</div>
+<a name="4
+"></a>
+<div class="poster">
+Poster B04
+</div>
+<div class="titolo">
+Visual Exploration of Biological Data
+</div>
+<div class="autori">
+Alberto Labarga
+</div>
+<div class="inst">
+Integromics S.L.
+</div>
+<div class="shabs">
+Current access to the biological databases is commonly done through the web. Usually, the different search interfaces present results as lists of entities that correspond to a search query, with links to both the entry and entries in related databases. In this work we offer a visual approach to navigate subsets of the searched data. Exploiting the network-structure of data resources, we can search, retrieve and visualize multiple data related to a given query. We will present different case studies that show the feasibility and advantages of this approach. 
+</div>
+<div class="exabs">
+The vast quantity of biomedical data available presents two inmportant challenges, those of integration and interface design. In these work, we will focus on one of the most important and largest collections of biomedical data freely available on the internet, that of the European Bioinformatics Institute (EBI). The EBI maintains over 200 public databases containing biomedical information of various types, such as published medical documents (Medline), genomes (EnsEMBL), proteins (Uniprot), and DNA sequence information (Embl-Bank).
+To organize this data in a way useful for knowledge exploration, the EBI has endeavored to stay at the forefront of technological advance, providing new and increasingly sophisticated resources to meet the needs of its users. Different systems have been developed as a solution to the data integration challenge, for example, SRS, BioMart and the EB-Eye. Using any of these systems, multiple databases can be abstracted as a massive entity-relation graph. In this graph, individual knowledge points, such as documents, genes, proteins, and other object types correspond to nodes of the graph. Associations between database objects can then be modeled as links in the graph, connecting related nodes. 
+Even though the EBI databases form an implicit entity-relation graph, the EBI’s current web interfaces offer no option to explore multiple areas of the graph simultaneously. Researchers explore the EBI databases by retrieving a single page of information at a time, essentially limiting them to viewing a single node at a time. They must continuously click forward and backward to retrieve additional information from other EBI databases. However, we believe that explicitly viewing and exploring multiple nodes in parallel will lead to improved performance in exploration and discovery tasks. Exploiting the network-structure of data resources, we can enable this exploration by starting with a query based subset of nodes from the EBI databases, and dynamically exploring and expanding links with other database entries, in order of query relevance or user preference. We can then visualize the data retrieved using network visualization tools based on either a simple force-directed layout algorithm or a more advanced schema following the concept of semantic substrates. 
+</div>
+<div class="keys">
+Keywords: database exploration, visualization
+</div>
+<a name="5
+"></a>
+<div class="poster">
+Poster B05
+</div>
+<div class="titolo">
+The African Plasmodium falciparum database (afriPFdb)
+</div>
+<div class="autori">
+Ewejobi, I. (1), Adebiyi, E. (1), Ekenna, C (1), Rebai, A. (2), Koenig, R. (3,4), Brors, B. (3,4), Doumbia, S.  (5), Oyelade, J. (1), Osamor, V. (1), Fatumo, S. (1), Eils, R. (3,6), Lanzer, M. (1)
+</div>
+<div class="inst">
+(1) Department of Computer and Information Science, Covenant University, Ota, Ogun State, Nigeria., (2) Unit of Bioinformatics, Sfax Biotechnology Centre, BP ‘K’, 3038 Sfax, Tunisia., (3) Dept. of Theoretical Bioinformatics. German Cancer Research Centre (DKFZ), Heidelberg, Germany., (4) Division of Bioinformatics and Functional Genomics, Institute for Pharmacy and Molecular Biotechnology, University of Heidelberg, Heidelberg, Germany., (5) Malaria Research and Training Centre (MRTC), Bp: 1805, Bamako, Mali., (6) BIOQUANT, Im Neuenheimer Feld 267, Raum 741, Ruprecht-Karls-Universitaet Heidelberg, 69120 Heidelberg., (7) Department of Parasitology, University of Heidelberg, Germany.
+</div>
+<div class="shabs">
+Africa has suffered and is still suffering from the adverse socio-economic
+effects of malaria caused mostly by Plasmodium falciparum. This calls for
+increased speed in the search for more potent/ effective cure that will
+preserve the lives of many. This work is geared at building a publicly
+accessible database that will house the results that we obtained by applying
+in-silico tools. We hope that the experimental results that will be obtained
+thanks to our data will drive work in malaria research that will quicken the
+discovery pipeline of drugs and vaccines.
+</div>
+<div class="exabs">
+Introduction
+Presently the popular database that houses the Plasmodium falciparum (P.f) that causes mostly malaria that kills 1.5 to 1.7 million people annually is the PlasmoDB (www.plasmodb.org). The negative influence of these results is huge and its socio-economic impact is beyond measure. The popular treatment to malaria is chloroquine, which is becoming largely in effective as the parasite has grown resistance to it. Therefore, there is a huge need to discover and validate new drug or vaccine targets to enable the development of new treatments for malaria [4]. Genomics has the promise of ushering new generation of drugs and possibly vaccines and in-silico analysis has recently been a useful tool in helping life science to speed-up drug and vaccine discovery pipeline [4]. The database, afriPFdb, we project building in this on-going work is to play the role that KEGG (developed using in-silico analysis) did to BioCyc (experimentally curated). And our aim is that it will increase the rate of discovery in malaria research. 
+Materials and Methods
+Genes in P.f are classified into biological pathways using the Pathways mapping from PlasmoDB. Not all genes in P.f of PlasmoDB have been classified into biological pathway. To set up our database and classify the genes of P.f into functional modules (that is, biological pathways), we attempt using the following idea: “… the transcription factor machinery is sufficient for ensuring co-regulation, and that co-localization in the genome is not a general requirement”[2]. We classify P.f genes into several classes, find if they contain cis-box using MUSA[3] and use this to transform each class into connected components. At the last step, the task is to find a larger strongly connected components of the directed graph. The expectation is the larger connected components represented by the vertices, that is genes, form a biological pathway. 
+We will also be incorporating in the first version of afriPFdb a tRNA tool discussed in [1] and our in-silico results of [4,5]. The database will serve in the future as central place to collect such results for quick access.  
+Results and Discussion
+Using the tool described above on the genomic data of the genes of P.f, we obtained for example the following instances: two positive (glycolysis and phosphatidylcholine metabolism), one noise positive (glycolysis pathway plus some other genes) and two false positive classifications (does not represent any particular pathways) using the present Pathways mapping of Ginsburg as we have on PlasmoDB. In our analysis, we find classifications supporting the fact that transcription factor machinery is sufficient for ensuring co-regulation. However, we observed that there is a larger strongly connected component that contains all genes in the two false positive classifications. This also holds for the noise positive. This informed us that transcription factor machinery is not sufficient for ensuring co-regulation as earlier  claimed by Lee and Sonnhammer[2]. This finding informed us of the need to include high-throughput, large-scale data, such as transcriptomics, proteomics, and metabolomic data in our algorithm above to further validate the edges in our directed graph. 
+Conclusion
+In this work, we had designed a new database for the most deadly malaria parasite, Plasmodium falciparum that is aimed at quickening up the discovery pipelines of anti-malarial drugs and vaccines.
+References
+1.Adebiyi, E.F. On the tRNA Structures using graph-theory methods. Covenant           University TR, X, 2007.
+2.Lee, J. M. and Sonnhammer, E. L. L. Genomic gene clustering analysis of pathways in Eukaryotes. Genome Research, 13: 875-882, 2003.
+3.Mendes, N. D. et al. MUSA: a parameter free algorithm for the identification of biologically significant motifs. Bioinformatics, 22(24), 2996-3002, 2006.
+4.Bulashevska, S., Adebiyi, E. F., Brors, B., and Eils, R. New insights   into the genetic regulation of Plasmodium Falciparum obtained by Bayesian modelling.  Gene Regulation and System Biology, 1, 137-149, 2007
+5.Fatumo, S., Plaisma, K., Mallm, J-P., Schramm, G., Adebiyi, E., Oswald, M. Eils, R. and Koenig, R. Estimating novel potential drug targets of Plasmodium falciparum by analysing the metabolic network of knock-out strains in silico.  Genet. Evol. (2008), doi:10.1016/j.meegid.2008.01.007
+</div>
+<div class="keys">
+Keywords: Malaria, Database, Plasmodium falciparum, Genomics, in-silico, Pathway, Drugs, and tRNA.
+</div>
+<a name="6
+"></a>
+<div class="poster">
+Poster B06
+</div>
+<div class="titolo">
+MouseBook - Online integrated mouse information system
+</div>
+<div class="autori">
+Blake A, Mallon A, Greenaway S, Beck T, Hancock J
+</div>
+<div class="inst">
+MRC Harwell Oxfordshire OX11 0RD
+</div>
+<div class="shabs">
+MouseBook is a new database integration system and web search interface which has been created to help scientists source information on MRC mouse models at Harwell. MouseBook utilises the latests web technologies to simply enable the application of complex searches across multiple MySQL and XML databases containing mouse strains and stocks, mouse mutants, mouse genes with mutations, chromosomal anomalies, phenotype annotations, imprinted genes, mouse phenotyping standard operating procedures and raw phenotyping data on baseline and mutant lines. 
+</div>
+<div class="exabs">
+Mouse models are used to understand the genetic basis of disease and for the development of new drugs and other therapies. Scientists at MRC Harwell carry out research across a wide remit of human health areas, including congenital heart disease, neuromuscular disorders, diabetes, deafness, osteoporosis and osteoarthritis. 
+A new database integration system and web search interface has been created that helps scientists to source information on MRC mouse models at Harwell. MouseBook was conceived and developed by staff at the Mammalian Genetics Unit and Mary Lyon Centre and is a resource for integrating and sharing the wealth of primary data generated onsite with genetic, genomic and phenotypic data from a number of other databases. 
+MouseBook allows users to access primary data from: 
+•	The MRC Frozen Embryo and Sperm Archive, which is the sole UK archiving and distribution centre for mouse strains. 
+•	Mutants from the ENU mutagenesis programme which is generating and characterising a large and functionally diverse set of mouse disease models.
+•	Genes with mutations identified from the ENU DNA Archive, which comprises 6800 DNA samples from individual F1 ENU mutagenised mice paralleled by frozen sperm samples. 
+•	Standardised phenotyping procedures from EMPReSS, the European Mouse Phenotyping Resource of Standardised Screens. 
+•	Baseline phenotyping data from EuroPhenome, the online mouse phenotyping resource. 
+•	Over 25,000 oligos used in microarrays within the Molecular Phenotyping Core at Harwell
+•	Imprinting and anomaly data.
+MouseBook allows users to browse through the complete lists of primary data and a Google style search web interface has been implemented allowing them to easily and quickly find results that match their query. They can use the standard Google style search techniques such as “exact match” and “-“ search terms. There are also several “defined” data types which can be used to specify a search such as “gene~”, “stock~” or “chr~”.  
+The search results interface integrates all the data available from the differing data sources at Harwell that match the search.  It also includes relevant information from MGD (Mouse Genome Database), and provides links out to Uniprot (Universal Protein Resource), Ensembl and OMIM (Online Mendelian Inheritance in Man) where relevant. The system then facilitates the user directly contacting the department or person associated with those results allowing them to take their enquiry further. 
+Another feature of MouseBook combines a user login system with an opt-in email subscription. With this the users can save their important searches and specify when they receive an automatic email notification of new results found within the constantly updating underlying data of MouseBook. This functionality will enable the user to remain completely up-to-date with the minimum of effort. 
+MouseBook also makes use of Harwell’s Ontology Annotation database providing not only text based matching but also specific ontology term and hierarchy searching. This gives the user more ways into the data allowing them to narrow down their search to a single ontology term or with the aid of the ontology annotation instance tree interface return results for a higher more general term and all of it’s child terms.
+Future developments include the expansion of searchable data to incorporate data from EUMODIC. EUMODIC is a major European project which is undertaking a primary phenotype assessment of up to 650 mouse mutant lines derived from ES cells developed in the European Mouse Mutagenesis (EUCOMM) project. 
+New browser capabilities are also going to be incorporated into MouseBook including “activities” and “web slices”. These new web technologies will make it easier for the user to search MouseBook’s data from any web page they are visiting with the search functionality being seamlessly integrated within their browser as well as allowing them to subscribe to sections of the MouseBook website allowing them to see new data within MouseBook at a glance.
+MouseBook is seen as a great step forward in opening up Harwell’s scientific data and services to the wider research community. Harwell’s mission is to deliver to academia and industry the tools for systematic characterisation of mouse models of human disease, enhancing our understanding of their molecular basis and providing pre-clinical models to foster translational research and the development of new therapeutic strategies. MouseBook is an important part of this endeavour.
+MouseBook is accessible via the web address www.mousebook.org
+</div>
+<div class="keys">
+Keywords: database,integration,online,search,mouse,model,genomic,phenotypic,genetic
+</div>
+<a name="7
+"></a>
+<div class="poster">
+Poster B07
+</div>
+<div class="titolo">
+The Protein Model Portal
+</div>
+<div class="autori">
+Lorenza Bordoli (1,2), Konstantin Arnold (1,2), Jürgen Kopp (1,2),  James Battey (1,2), Florian Kiefer (1,2), Michael Podvinec (1,2), John Westbrook (3), Helen Berman (3), Torsten Schwede (1,2)
+</div>
+<div class="inst">
+(1) Biozentrum University of Basel, Switzerland, (2) Swiss Institute of Bioinformatics, Basel, Switzerland, (3) RCSB, Rutgers University, NJ, USA
+</div>
+<div class="shabs">
+The aim of the Protein Model Portal module of the PSI (Protein Structure Initiative) Structural Genomics Knowledgebase is to give access to structural models that can be leveraged from both Protein Structure Initiative targets and other experimental protein structures. The Protein Model Portal provides a single interface to query all existing pre-computed models at the various participating sites, as well as links to interactive services for template selection, target-template alignment, model building, and quality assessment.
+</div>
+<div class="exabs">
+Understanding the molecular function of proteins is greatly enhanced by insights gained from their three-dimensional structures. Still, the number of known protein sequences is much larger than the number of experimentally solved protein structures. Fortunately, the number of different protein fold families occurring in nature is limited, and within a protein family, structural similarity between two homologous proteins can be inferred from sequence similarity. This concept is exploited by homology (or comparative) modelling, a method for constructing a 3-dimensional protein structure model from its amino acid sequence ("target"). By identifying evolutionarily related proteins with experimentally solved structures (known as "templates"), a structural model for the target can be derived.
+The Protein Structure Initiative (PSI) has been successful in determining many novel protein structures in a high throughput manner. Structural genomics and homology modelling thereby complement each other in the exploration of the protein structure space. The products of the Protein Structure Initiative effort are made accessible to the biomedical research community trough the Structural Genomics Knowledgebase (PSI SGKB, http://kb.psi-structuralgenomics.org/KB/) to easily access a wealth of information about proteins enhancing our understanding for living systems and disease.
+The aim of the Protein Model Portal (http://www.proteinmodelportal.org/) module of the PSI SGKB is to give access to structural models that can be leveraged from both Protein Structure Initiative targets and other experimental protein structures. In order to facilitate the retrieval of this information for biomedical researchers, we have organized these data in a unified manner. We use a sequence centric scheme for organizing models by mapping each one to a unique reference sequence. Currently, the Protein Model Portal can be queried directly by submitting the sequence of a protein or a fragment thereof (exact matches or similar sequences will be identified), or by using one of the advanced query options: queries by sequence accession codes (UniProt, RefSeq, gi, …), template structures (PDB accession codes), or Structural Genomics target where all models built for a given target can be retrieved. Information about the corresponding models, including functional and structural annotations, is provided.
+In summary, The Protein Model Portal provides a single interface to query all existing pre-computed models at the various participating sites, as well as links to interactive services for template selection, target-template alignment, model building, and quality assessment. The current release (May 2008) consists of 5.8 million comparative protein models for 1.97 million distinct UniProt entries.
+</div>
+<div class="keys">
+Keywords: protein structure modeling, structural genomics, PSI SGKB, homology modeling
+</div>
+<a name="8
+"></a>
+<div class="poster">
+Poster B08
+</div>
+<div class="titolo">
+NORINE : database and efficient algorithms dedicated to nonribosomal peptides 
+</div>
+<div class="autori">
+Caboche S. (1,2), Pupin M. (1), Leclere V. (2), Jacques P. (2), Kucherov G. (1)
+</div>
+<div class="inst">
+(1) LIFL (UMR USTL/CNRS 8022) and INRIA, USTL, 59655 Villeneuve d'Ascq, France, (2) ProBioGEM (UPRES EA 1026), USTL, 59655 Villeneuve d'Ascq, France
+</div>
+<div class="shabs">
+Nonribosomal peptides are synthesized by huge enzymes called NonRibosomal Peptide Synthetases. Their primary structure can be linear, like the ribosomal peptides, but is often more complex (cyclic, poly-cyclic and branched). In spite of their important bioactivities (e.g. antibiotic, antitumor, immunosuppressor ...), few computational resources are currently available. We have developed NORINE, a resource for nonribosomal peptides, freely available at http://bioinfo.lifl.fr/norine/. It provides a manually curated database and efficient algorithms to manipulate the specific structures of NRPs.
+</div>
+<div class="exabs">
+In micro-organisms, nonribosomal peptides (NRPs) are not synthesized from mRNA by ribosomes but from scratch by huge enzymes called NonRibosomal Peptide Synthetases (NRPSs). NRPs present features different from classical (ribosomal) peptides. Their length varies from two to about fifty amino acids, but they can potentially contain more than 300 different amino acids (instead of the twenty amino acids composing regular proteins) and also carbohydrates or lipids. Their structure is not only linear, but can also be cyclic, poly-cyclic and branched (with non peptidic bounds). Those special properties confer to NRPs a large spectrum of biological activities (e.g. antibiotics, antitumors, siderophores, immunosuppressors, toxins ...). In spite of a great interest in NRPs due to their biosynthesis way and their important bioactivities, few computational resources and dedicated tools are currently available. 
+We have developed NORINE, a resource for NRPs, freely available at http://bioinfo.lifl.fr/norine/. It contains more than 700 NRPS peptides and is still growing. Each peptide is annotated with various features collected from scientific publications. Those include the peptide name, its molecular weight, producer organisms, bibliographical references and links to other databases (UniProt and PubChem). All those features can be queried via a friendly web interface. Another data, the most original, is the NRP structure. We chose to represent peptides at an amino acid level rather than at the classical chemical one to better correspond to their biosynthesis. The synthetases successively incorporate complete amino acids rather than atoms. As the precise structure of a NRP is not always resolved, searches based on peptides composition are available: by amino acid names, number of amino acids or approximate composition (error-tolerating composition). In NORINE, due to the possible non-linear structure of NRPs, they are encoded by graphs with nodes representing amino acids and edges the bonds between them. We developed specific tools to visualize or edit those graphs and we offer searches by structural features. 
+The undirected labeled graphs representing NRPs display particular properties requiring the development of dedicated algorithms. For the moment, we propose search for a complete and exact structure (graph isomorphism) or for a structural pattern (part of a structure possibly with jokers, subgraph isomorphism). In chemoinformatics, the problem of structure mapping between two molecule graphs is often resolved by constructing an association graph (AG) representing potential mappings between the two graphs and then, searching for the largest clique in the AG to find the maximum common substructure. We adapt this method to obtain an efficient structural pattern matching for NRPs. When a k-clique, with k the pattern size, is found in the AG, it means that the pattern graph matches with the peptide graph. However, the classical AG building rules often lead to AG with a high number of nodes and edges. Search for a k-clique is NP-complete so the more the AG is dense, the more the clique detection is long. To better the efficiency of the k-clique detection, we reduce the AG both in terms of the number of nodes and edges by filtration and refining the AG building rules (methods cannot be described here). The number of nodes is reduced by forty percents in some AG and the number of edges can be divided by ten. The search for a k-clique in this AG is also optimized for our purpose. As a result, a search for a pattern in the NORINE database currently containing 711 peptide structures takes typically less than one second. Applications of the pattern search are diverse. For example, one can find members of a family sharing structural features; can identify a predicted peptide or can also give rise to structure/function relationships. 
+NORINE is the first resource entirely devoted to NRPs. We believe that it can have various usages in a wide range of related biological studies and can be useful in different applications of NRPs including very important applications in pharmacology. Indeed, we hope that NORINE can contribute to biosynthetic engineering efforts to reprogram the NRP assembly lines, in particular because it makes possible systematic studies of the function-structure relationship of NRPs.
+</div>
+<div class="keys">
+Keywords: Nonribosomal peptide database, pattern search
+</div>
+<a name="9
+"></a>
+<div class="poster">
+Poster B09
+</div>
+<div class="titolo">
+EUROCARBDB: A DATABASE RESOURCE FOR THE AUTOMATIC ANNOTATION AND STORAGE OF HPLC PROFILES 
+</div>
+<div class="autori">
+Campbell M.P (1,2), Royle L (1,1), Rudd P.M (1,1)
+</div>
+<div class="inst">
+(1) Dublin-Oxford Glycobiology Laboratory, NIBRT, Conway Institute, University College Dublin, Ireland, (2) Glycobiology Institute, Dept. Biochemistry, University of Oxford, UK 
+</div>
+<div class="shabs">
+GlycoBase and autoGU are novel resources that have been developed to assist the interpretation of HPLC-glycan profiles in conjugation with the EUROCarbDB initiative. GlycoBase is a database which contains the NP-HPLC elution positions for over 350 2-AB labelled N-glycan structures together with predicted products of exoglycosidase digestions. AutoGU is an analytical tool that assigns glycan structures to each integrated HPLC peak and, when used in combination with a series of exoglycosidase digestions, progressively refines each assignment based on the supporting digest footprint data. 
+</div>
+<div class="exabs">
+The EUROCarbDB [1] initiative aims to establish a comprehensive framework for the deposition and automated analysis of carbohydrate data derived from HPLC, MS and NMR technologies. The databases and tools developed by the initiative will establish a central depository for carbohydrate data similar to those resources and data collections available to genomics and proteomics. The EUROCarbDB project is addressing the necessity for well-structured databases and analysis tools to enhance the development of glycobiology. 
+One of the major limiting factors restricting the development and application of glycobiology is the lack of rapid and automated high-throughput platforms. We have recently developed and validated a HPLC technology based on a 96-well plate format for the analysis of glycans at concentrations required for biomedical applications (low femtomoles of N-linked sugars released from micrograms of glycoproteins). However the interpretation, annotation and assignment of HPLC-glycan data is currently a manual and very time-consuming aspect of glycan analysis. We have built a relational database (GlycoBase [2]) and an analytical tool (autoGU) to assist the interpretation of HPLC-glycan profiles; both tools are fully integrated with the EUROCarbDB framework.
+The development of algorithms for automatic high-throughput interpretation of HPLC profiles is an active area of research which has previously been hampered by the lack of publicly available databases and bioinformatic tools.  We have developed and implemented an EUROCarbDB-HPLC data model  and submission work flow to store all information for the complete analysis of a glycan sample including: instrument settings and analysis methods; acquisition software; raw profile data; integrated data with peak areas and glucose unit values; and a description of exoglycosidase sequencing enzymes and conditions used for digestions. 
+GlycoBase is a relational database which contains over 350 published 2-AB labelled N-glycan structures supported by 800 referenced glucose unit (GU) values. Each glycan entry includes a pictorial representation of the structure depicting monosaccharide sequence and linkages using a defined encoding schema (GlycoCT), standardised NP-HPLC retention times expressed as an average GU with standard deviation values (calculated from all listed published data) and links to the supporting experimental exoglycosidase digest products.  
+The interpretation of a complete set of exoglycosidase digestions can be very time consuming and a difficult exercise for an inexperienced glycobiologists. We have developed database matching software (autoGU) which automatically assigns possible glycan structures to each integrated HPLC peak. When used in combination with data from a series of exoglycosidase digestions autoGU progressively creates a refined list of structures based on the digest footprint.  The tool utilizes the database of GU values and shifts in GU values to fully assign a profile based on the known specificities of the exoglycosidases and shifts in peak values due to the cleavage of terminal monosaccharides in specific linkages positions. 
+These glycan tools have been extensively evaluated and shown to assist and improve the accuracy of HPLC-glycan data interpretation (glycoprofiling) and have applications in high-throughput glycomic strategies. 
+Acknowledgments: 
+EUROCarbDB is a Research Infrastructure Design Study Funded by the 6th Research Framework Program of the European Union (Contract: RIDS Contract number 011952) 
+[1] For further information refer to www.eurocarbdb.org
+[2] http://glycobase.ucd.ie
+</div>
+<div class="keys">
+Keywords: database, glycobiology, HPLC, glycobase, eurocarbdb, glycosylation
+</div>
+<a name="10
+"></a>
+<div class="poster">
+Poster B10
+</div>
+<div class="titolo">
+EuroCarbDB-MS: bioinformatics resources for interpretation, annotation and storage of mass spectrometric data of glycans
+</div>
+<div class="autori">
+Alessio Ceroni (1), Kai Maass (2), René Ranzinger (3), Matt J. Harrison (4), Kim Henrick (4), Hildegard Geyer (2), Rudolf Geyer (2), Anne Dell (1), Stuart M. Haslam (1)
+</div>
+<div class="inst">
+(1) Division of Molecular Biosciences, Imperial College, Exhibition road, SW7 2AZ London, UK , (2) Institute of Biochemistry, Faculty of Medicine, University of Giessen, Rudolf-Buchheim-Strasse 6, D-35392 Giessen, Germany, (3) Molecular Structure Analysis (W160), German Cancer Research Center, Im Neuenheimer Feld 280, D-69120 Heidelberg, Germany, (4) European Bioinformatics Institute, Wellcome Trust Genome Campus, CB10 1SD Hinxton, UK
+</div>
+<div class="shabs">
+In contrast to genomics and proteomics, the glycosciences lack comprehensive data collections that would allow the realisation of tools for the automatic determination of glycan structures. The EUROCarbDB initiative aims to close this gap by developing a database of glycan structures and their associated experimental evidence. A specific section of the database has been created to store all information about a MS experiment, comprising both raw and processed data. Several tools have been developed to assist the interpretation of MS data and its preparation for deployment into the database.
+</div>
+<div class="exabs">
+Glycans are the third major class of biomolecules besides proteins and DNA molecules, and the most common and complex post-translational modification of proteins. Given their involvement in cell-to-cell communication and host-pathogen interaction, glycans are receiving increasing attentions as candidates for vaccines and as potential biomarkers for diseases. For this reason the field of glycoscience has been recognized as an increasingly important component of life science research. However, in contrast to the genomic and proteomic areas, the glycosciences lack accessible, curated and comprehensive data collections summarizing all basic results related to the structure and biological role / function of glycans that have been experimentally verified and reported in the literature. The sparseness of the currently available data hampers the realisation of bioinformatics tools for the automatic determination of glycan structures, therefore limiting the possibility of large scale glycomics studies. Previous attempts to create all-inclusive glycomics databases have failed due to insufficient funding for their curation. None of the current initiatives are aiming to fill this void, while a large amount of valuable data remains unavailable to bioinformatics analysis. 
+The EUROCarbDB design study aims to close this gap by developing an open access database and bioinformatics tools in the realm of glycobiology and glycomics. The database is designed to store glycan structural data supplemented by related biological information and supported by experimental evidence derived from HPLC, MS and NMR experiments. A web interface is provided to access the databases and to allow the deposition of annotated data with simple operations. The bioinformatics tools are developed to assist the interpretation of experimental data during sequencing of glycans. The tools allow the preparation of annotated data in a format which is suitable for immediate deployment into the EUROCarbDB database. The tools are designed for ease of use and for a faster analysis of raw data, in order to be attractive for the repetitive use in laboratories that are generating primary data. These resources will allow a community-wide effort towards the collection of annotated experimental data of glycans into a publicly accessible database.
+Mass spectrometry is the main analytical technique currently used for a rapid and reliable determination of glycan structures. Several software tools were developed by the EuroCarbDB initiative to assist the rapid interpretation of MS data. The Glyco-Peakfinder (1) web application is designed for de novo composition analysis of mass signals of glycans. The tool assigns all types of fragmentations including monosaccharide cross-ring cleavages and multiply charged ions. To provide access to known carbohydrates structures a 'composition search' in an open access database can be performed. The GlycanBuilder (2) has been developed as a fast and easy to use tool for drawing and displaying glycans in a chosen symbolic notation, thus facilitating the input of glycan structural information. Both tools are integrated into the GlycoWorkbench (3) software suite, a collection of resources for semi-automated profiling and sequencing of glycans from MS data. The structure candidates for a mass signal identified with Glyco-Peakfinder and/or drawn with the GlycanBuilder are used to generate theoretical lists of fragment masses that can be matched against a list of peaks derived from a MS spectrum to determine the most plausible structure. The resulting annotated list of peaks can be exported to file or used to generated graphical reports. This collection of software tools offers complete support for routine analysis of MS data and is available from: www.eurocarbdb.org/applications/ms-tools.
+The MS section of the database has been developed to store all necessary information for the description of a mass spectrometric experiment. The database can be used to store details of: the instrumentation, the experimental settings, the software used for acquisition and data processing, the raw data themselves, the processed data in the form of peak lists and the interpreted data in the form of annotated peak lists. Structural and biological information can be derived from other sections of the EUROCarbDB database. A user friendly web-interface has been designed to access the database and allows users to upload and store both their raw data as mzXML files and their processed experimental data. The software tools are completely integrated with the interface and are used to assist the input of annotated data. 
+EUROCarbDB is a Research Infrastructure Design Study Funded by the 6th Research Framework Program of the European Union (Contract: RIDS Contract number 011952).
+1) Maass, K., Ranzinger, R., Geyer, H., von der Lieth, C. W., and Geyer, R. (2007) Proteomics 7, 4435-4444
+2) Ceroni, A., Dell, A., and Haslam, S. M. (2007) Source Code Biol Med 2, 3
+3) Ceroni, A., Maass, K., Geyer, H., Geyer, R., Dell, A., and Haslam, S. M. (2008) J Proteome Res 7, 1650-1659
+</div>
+<div class="keys">
+Keywords: glycomics, mass spectrometry, database, data intepretation
+</div>
+<a name="11
+"></a>
+<div class="poster">
+Poster B11
+</div>
+<div class="titolo">
+GRIP: a genome research informatics pipeline with open and closed integration of biological databases
+</div>
+<div class="autori">
+Chan Hee Park (1), Mingoo Kim (1), Hee-Joon Chung (1), Young-Ji Na (1), Ju Han Kim (1,2)
+</div>
+<div class="inst">
+(1) Seoul National University Biomedical Informatics (SNUBI), (2) Human Genome Research Institute, Seoul National University College of Medicine
+</div>
+<div class="shabs">
+GRIP is a web-based integrated database for analyzing and accessing biological information of human, mouse and rat. GRIP consists of three parts – Closed, Open and Agent-GRIP. Closed-GRIP use closed integration (schema integration) approach with object oriented data model for biological objects, while Open-GRIP apply open integration(link integration) for integration about all possible databases , support plug and play function and undertake profiling of biological database's id. And Agent-GRIP combines these GRIPs. GRIP is available at http://grip.snubi.org
+</div>
+<div class="exabs">
+GRIP is a web-based integrated database for analyzing and accessing biological information of human, mouse and rat. GRIP has fundamental biological objects that are sequence, gene, protein, gene family, protein family, enzyme and biological knowledge – disease, biological pathway, stores information about association between each biological objects, the data extracted from a number of major biological databases for organization biological objects. GRIP consists of three parts – Closed-GRIP, Open-GRIP and Agent-GRIP. Closed-GRIP use closed integration (schema integration) approach for integration about a number major biological databases and design object oriented data model for biological objects. Open-GRIP apply open integration(link integration) for integration about all possible databases and previous version about each biological databases, support plug and play function and undertake database version trace and profiling of biological database's id.
+And Agent-GRIP uses searching two GRIPs simultaneously. Applied three integration approach and object oriented modeling, GRIP provides navigation and information of each biological objects from id of major databases, visualizes graph for profiling and version trace about id of biological databases and provides flexible and extensible platform for integration with computational tools and analysis environments. GRIP is available at http://grip.snubi.org
+</div>
+<div class="keys">
+Keywords: database integration
+</div>
+<a name="12
+"></a>
+<div class="poster">
+Poster B12
+</div>
+<div class="titolo">
+TollML: an XML database of Toll-like receptors
+</div>
+<div class="autori">
+Jing Gong (1), Tiandi Wei (1), Ferdinand Jamtzky (2,1), Wolfgang M. Heckl (3,1), Shaila C. Rössle (1)
+</div>
+<div class="inst">
+(1) Department of Earth and Environmental Sciences, University of Munich (LMU). Theresienstrasse 41, Munich 80333, Germany., (2) Leibniz Supercomputing Center of the Bavarian Academy of Sciences and Humanities. Boltzmannstraße 1, Garching 85748, Germany., (3) Deutsches Museum. Museumsinsel 1, Munich 80538, Germany.
+</div>
+<div class="shabs">
+TollML is an XML based database specialized for Toll-like receptors (TLRs). It integrates information from established databases (NCBI, PDB and KEGG), published articles and other projects. A remarkable feature of TollML is the user-editable system that allows a user to append or edit annotations for their favorite entries. URL: http://zeus.krist.geo.uni-muenchen.de/~tollml.
+This work was supported by Graduiertenkolleg 1202 of Deutsche Forchungsgemeinschaft.
+</div>
+<div class="exabs">
+Toll-like receptors (TLRs) play a key role in innate immune system, recognizing different kinds of pathogen-associated molecules and initiating an intracellular kinase cascade to cause an immediate defensive response. During recent years TLRs have spearheaded a tremendous research interest and the amount of sequenced relevant proteins grows exponentially. Nevertheless, most of the sequenced TLR proteins are poorly annotated. In this vein, a database specialized for TLRs is desired.
+A Toll-like receptor database called TollML has been developed using an XML database management system, providing comprehensive annotations and a convenient analysis bench for TLR sequences. It integrates original information from three sources: NCBI protein database, PDB and KEGG. Structural information of different TLRs achieved through our projects or extracted from published articles is then added into the database manually, e.g. the leucine-rich repeats partition and classification, the homology modeling of ectodomains of different TLRs. All entries have hyperlinks to various sources such as NCBI, Swiss-Prot, PDB, KEGG and PubMed, supplying broad external information. In addition, TollML provides users with an easy-to-use web interface, through which users can select an entry or a collective set of entries matching users’ criteria flexibly. Another remarkable feature of TollML is the user-editable system that allows a registered user to append or edit annotations for their favorite entries. This system realizes users’ participation in the database management. TollML is manually updated every two months and is freely available at http://zeus.krist.geo.uni-muenchen.de/~tollml.
+This work was supported by Graduiertenkolleg 1202 of Deutsche Forchungsgemeinschaft.
+</div>
+<div class="keys">
+Keywords: Toll-like recepor, XML database
+</div>
+<a name="13
+"></a>
+<div class="poster">
+Poster B13
+</div>
+<div class="titolo">
+ChEBI - Chemical Entities of Biological Interest
+</div>
+<div class="autori">
+Janna Hastings (1), Kirill Degtyarenko (1), Paula de Matos (1), Marcus Ennis (1), Alan McNaught (1), Kristian Axelsen (2), Christoph Steinbeck (1)
+</div>
+<div class="inst">
+(1) European Bioinformatics Institute, Wellcome Trust Genome Campus, Hinxton, UK, (2) Swiss Institute of Bioinformatics
+</div>
+<div class="shabs">
+Chemical Entities of Biological Interest (ChEBI) is a freely available, manually annotated database of small molecular compounds and concepts. It focuses on chemical nomenclature and structures and provides an ontology for the chemical space. Recent enhancements include chemical substructure and similarity searching, as well as the addition of data relevant for drugs such as Brand Names and INNs. ChEBI is available at https://www.ebi.ac.uk/chebi/.
+</div>
+<div class="exabs">
+Chemical Entities of Biological Interest (ChEBI) is a freely available, manually annotated database of small molecular entities [1]. It focuses on chemical nomenclature and structures, and provides a wide range of related chemical data such as formulae and links to other databases.
+Entries within ChEBI are interrelated by the ChEBI ontology, 
+representing the meaning of the data in a structured manner. The ChEBI ontology is divided into sub-ontologies for molecular
+structure, application, biological role and subatomic particles. It is available for download in OBO format and had been adopted by the 
+biomedical community for diverse applications such as chemical text mining.
+ChEBI has recently introduced chemical substructure and similarity 
+searching based on the Chemistry Development Kit [1, 2]. The facility allows a user to draw or upload a chemical structure and then perform either an exact, substructure or similarity search.
+We have further extended ChEBI's coverage of chemical nomenclature by 
+introducing brand names and International Nonproprietary Names (INNs). This is complemented by manually annotated names appearing in Patents and Patent identifiers, as well as by links to DrugBank and the NC-IUPHAR Receptor Nomenclature and Drug Classification databases. In addition, names can now appear in French, German, Latin and Spanish.
+ChEBI is freely available online at https://www.ebi.ac.uk/chebi/, for
+download in a variety of formats, and for programmatic access via
+WebServices.
+References:
+[1] Degtyarenko, K., de Matos, P., Ennis, M., Hastings, J., Zbinden, M., McNaught, A., Alcántara, R., Darsow, M., Guedj, M. and Ashburner, M. (2008) ChEBI: a database and ontology for chemical entities of 
+biological interest. Nucleic Acids Res. 36, D344–D350.
+[2] Steinbeck C., Hoppe C., Kuhn S., Guha R., Willighagen E.L. (2006)
+Recent Developments of The Chemistry Development Kit (CDK) - An Open-Source Java Library for Chemo- and Bioinformatics. Current Pharmaceutical Design 12: 2111-2120.
+[3] Steinbeck C., Han Y.Q., Kuhn S., Horlacher O., Luttmann E. et al. 
+(2003) The Chemistry Development Kit (CDK): An open-source Java library for chemo- and bioinformatics. Journal of Chemical Information and Computer Sciences 43: 493-500.
+</div>
+<div class="keys">
+Keywords: chemoinformatics, database, chemistry, ontology
+</div>
+<a name="14
+"></a>
+<div class="poster">
+Poster B14
+</div>
+<div class="titolo">
+Standardizing and Annotating Kinetic Data: The SABIO-RK Database
+</div>
+<div class="autori">
+Renate Kania, Ulrike Wittig, Martin Golebiewski, Olga Krebs, Andreas Weidemann, Saqib Mir, Henriette Engelken, Isabel Rojas
+</div>
+<div class="inst">
+EML Research gGmbH
+</div>
+<div class="shabs">
+SABIO-RK is a database system offering comprehensive information about biochemical reactions and their corresponding kinetic data, like kinetic parameters, mathematical expressions and experimental conditions. It merges information from other databases with data that we manually extract from literature. The data can be accessed by a web-interface or by web services.
+</div>
+<div class="exabs">
+Scientific communication needs standards and a shared vocabulary to avoid misinterpretations. Such standards are especially important when gathering data from different sources. To piece the puzzle of individual results together computer systems are needed that unify the information and make it comparable.
+SABIO-RK is a database system offering comprehensive information about biochemical reactions and their corresponding kinetic data, like kinetic parameters, mathematical expressions and experimental conditions. It merges information from other databases with data that we manually extract from literature. The data can be accessed by a web-interface or by web services.
+The collected data is standardized to a uniform format and structure. This comprises the usage and development of controlled vocabularies and algorithms applying natural language processing or mathematical methods to unify the data. Entities and expressions in SABIO-RK are annotated to other resources and biological ontologies to clarify the used vocabulary and to embed the data into its context. This enables users to collect further information through links to external databases.
+Standardized data can be exported from SABIO-RK in SBML (Systems Biology Markup Language) together with these annotations complying with the standard MIRIAM (Minimal Information Requested In the Annotation of biochemical Models). This facilitates the integration of such data into large quantitative biochemical models.
+</div>
+<div class="keys">
+</div>
+<a name="15
+"></a>
+<div class="poster">
+Poster B15
+</div>
+<div class="titolo">
+Establishment of Clinical Omics Database System by in-tegrating clinical and molecular biological information.
+</div>
+<div class="autori">
+Hiroshi Tanaka (1), Yasen Mahmut (1),  Jun Nakaya (1), Masahiro Nishibori (1), Kazuo Shimokawa (1), Kaoru Mogushi (1), Wataru Ohashi (1), Ken Miyaguchi (1), Masaya Itoda (1), Ayumi Kondo (1), Eiichi Araki (2), Ayako Fujisaki (2), Toshiaki Ishikawa (3), Narikazu Uzawa (3), Masahiko Miura (3), Shinji Tanaka (3), Hitoshi Shibuya (3), Mitsuo Amagasa (3), Kenichi Sugihara (3), Shigeki Arii (3), Joji Inazawa (4), Yoshio Miki (4), Hiroshi Mizushima (1)
+</div>
+<div class="inst">
+(1) Information Center for Medical Sciences, Tokyo Medical and Dental University Address1-5-45 Yushima, Bunkyo-ku, Tokyo 113-8510, JAPAN., (2) Bioinformatics Department, Life Science Division, Hitachi Software Engineering Co., Ltd., Yokohama, Japan., (3) Hospital, Tokyo Medical and Dental University, Address1-5-45 Yushima, Bunkyo-ku, Tokyo 113-8510, JAPAN, (4) Medical Research Institute, Tokyo Medical and Dental University, Address1-5-45 Yushima, Bunkyo-ku, Tokyo 113-8510, JAPAN.
+</div>
+<div class="shabs">
+Development of “TMDU Clinical Omics Database” has been conducted by integrating OMICS information and comprehensive clinical information. We are currently collecting more than 500 cases including hepatic, colon, and oral cancer. 
+Database server can be accessed through the internet at http://omix.tmd.ac.jp/ We have found several new relationships be-tween clinical and molecular information.
+This would be the first public integrated clinical database including both clinical information and molecular biological information. The target for this research is to realize “OMICS based Medicine”.
+</div>
+<div class="exabs">
+Development of “TMDU Clinical Omics Database” has been conducted as a national project funded by Ministry of Education, Culture, Sports, Science and Technology of Japan, under the direc-tion of Information Center for Medical Sciences at Tokyo Medical and Dental University by integrating OMICS information and comprehensive clinical information. We are currently collecting hepatic, colon, and oral cancer. We have developed “Clinical Om-ics Database System (COD)” to store and analyze clinical omics data, which facilitates the understandings of relations between omics data and clinical data. This database has three components, 1) Primary database for anonimized data storage, 2) Secondary Database for research and analysis, 3) Tertiary database for publi-cation.
+Publication database server can be accessed through the internet. In this database, the relationship is visualized as a network with three layers for each case, clinical layer, pathological layer and om-ics layer. 
+With the strong collaboration with the hospital at Tokyo Medical and Dental University, we are collecting Hepatic, Colon, and Oral Cancer samples. Samples are provided just after biopsy or surgery, and stored in liquid nitrogen. Meanwhile, Clinical Research Coor-dinator (CRC) is obtaining comprehensive clinical record and also performing interview to collect the lifestyle, medical history, etc. Personal information is anonimized and stored in the database. 
+ DNA and RNA are extracted from the surgical specimen. Laser Capture Micro-dissection (LCM) is performed when needed for Colon and Oral Cancer, to avoid bias by the contamination of nor-mal cells. Transcriptome and copy number variation are analyzed by DNA Microarray and array CGH method. We have collected more than 500 cases with 300 RNA expression analysis and 200 DNA copy number analysis. 
+All data are integrated in the database and analyzed by bioin-formatics and statistical methods.
+“Clinical Omics Map” displays the relationship between clinical and molecular information of the selected patient group. This map consists of two types of views. The left side view shows the over-view plots of patients with clinical, pathological and molecular layers. The right side view shows the detailed data list of the se-lected patients for each layer. Each point represents a patient. The screenshot displays the results of principle component analysis (PCA) performed with clinical and pathological layers using hepa-tocellular carcinoma cases.  Molecular layer displays the result of gene expression analysis by heatmap. In this heatmap patients are grouped by portal vein invasion (vp), then 100 genes are picked up by the criteria of p-value of t-test. By selecting a patient in a cer-tain layer, “Clinical Omics Map” draws lines between correspond-ing points of three layers, by which users can easily find out the relationship among different layers of an individual patient. Users can choose multiple points at the same time, and the selected pa-tients are shown in the data list. Users can change colors and shapes of a point. The selected patients in the screenshot above are female and relapse-free patients; relapsed patients are colored with red, relapse-free are blue; males are shown as a squares, females are circles. Relapse and relapse-free patients in the clinical layer shows different distributions. Especially female and relapse-free patients are plotted very closely together and the gene expression patterns are also similar.
+We also observed relation between clinical outcome and copy number change in the genome. Using the information provided in this database, we have analyzed HCC and other cancer samples by comparing clinical condition and expression profiles. Some of our findings are ; 1) Tanaka et. al has found Aurora Kinase B (AURKB) expression is increased in HCC which does not fit Mi-lan criteria for liver transplantation .(2) Tanaka et. al. has found that Omics analysis to predict the aggressive recurrence of hepato-cellular carcinoma after curatve hepatectomy. (3) Mahmut et. al. found the expression levels of splicing variants of AURKB is re-lated to the condition of HCC, such as Stage, Number of Tumor, AFP level, etc. (4 ) Miyaguchi et. al. found Copy number varia-tions in the Oral Cancer using High-Density SNP Microarrays. There were group of genes which gain their copy number with Recurrence, and group of genes which loss their copy number with Recurrence. (5) Nemoto et. al. found the group of genes whose amplification or loss relates to the clinical indexes of the HCC, such as HBV infection, Multiple cancer, Maximum tumor size > 5cm, Vascular invasion, Stage and Cirrhosis Background. 
+We are planning to integrate further clinical cases both ourselves and by accepting from other researchers by submission. We are already negotiating with Proteome researchers, Epi-genomics re-searchers, miRNA researchers for data inclusion and collaboration. Our preliminary research has found several new findings some typical miRNA characteristics in HCCs. 
+There are many projects using the OMICS data from clinical samples, but combining multiple omics data with conventional clinical information is not often performed, however, it is impor-tant to understand the mechanism of the disease, which is the key to the beginning of a new era of "Personalized Medicine". 
+This would be the first public integrated clinical database including both clinical information and molecular biological information. The target for this research is to realize “OMICS based Medicine” and to understand the relation between patho-biology and clinical outcome.
+This database can be accessed at http://omix.tmd.ac.jp/ 
+</div>
+<div class="keys">
+Keywords: Comprehensive Clinical OMICS Database
+</div>
+<a name="16
+"></a>
+<div class="poster">
+Poster B16
+</div>
+<div class="titolo">
+Symbiosis: the novel “one-design-fits-all” database for heterogeneous systems biology data 
+</div>
+<div class="autori">
+Fady Mohareb, Conrad Bessant
+</div>
+<div class="inst">
+Bioinformatics Group, Cranfield Health, Cranfield University, MK43 0AL, UK
+</div>
+<div class="shabs">
+Experimental data storage is a major challenge within the systems biology community, mainly due to the heterogeneous nature of the data. This often leads to complex and multi-modular database designs. SYMBIOSIS is a generic database suitable for almost any type of experimental data. This is done by classifying data according to their nature, being sets of integers, strings, or double, rather than their original biological attributes, allowing to store any experimental information without having prior knowledge of the data structure, while keeping the design in the simplest possible form.
+</div>
+<div class="exabs">
+With the rapid advances in the tools and technologies necessary to go deeper into the foundation of biological activities, it has become clear that the biological components such as genes and proteins never work alone. These components interact with each other as well as with other molecules in a way that makes it impossible to understand the organism behaviour by exclusively studying these individual components. One of the major challenges facing systems biology researches is the integration of highly divergent data. The heterogeneity of data generated can be due to the variety in research levels being genomic, proteomic or metabolomic research.
+The SYMBIOSIS-EU is a typical systems-study collaborative project between 14 international partners, with the aim to develop an innovative toolbox of novel methodologies for the reliable and inexpensive evaluation of meat freshness, spoilage and safety. The project involves the application of emerging molecular methods by means of high-throughput genomic and metabolic profiling for the detection of quality and safety parameters associated with emerging spoilage and pathogenic bacteria. Mathematical models to predict shelf life as well as formation of spoilage compounds will also be developed. Like most system–wide studies, this project will generate data covering genomic, proteomic, metabolomic, and phenotypic aspects. This requires therefore the integration of highly divergent data generated from the various high throughput analytical techniques into a central data repository that would act as a common framework for the research project. 
+The database design consists of two main modules: i) Passport Module, responsible of storing personal information about the framework users, researchers, and institutions. The module is also responsible of managing users-projects permission. Each group of experiments is assigned to a corresponding project defined within this module, and ii)Experimental module, which is the main storage module for experimental data. This module is truly generic and is able to store, within the same set of tables, almost any type of experimental data. This is done through a set of parsing programs that are able to classify the uploaded data based on their data type nature, being sets of integers, strings, or double, rather than their original biological attributes. The uploaded data is then stored into a set of generic tables accordingly while keeping track of all their original information sequence. This allows storing any experimental information without having prior knowledge of the data structure or the table formats, while keeping the database design in the simplest possible form. 
+The developed database is accessible through a JavaSever Pages (JSP) Web interface, where experimental information is uploaded as delimited worksheets. The uploaded raw data is then parsed using a set of embedded Java programs that determine the nature of each data attribute and create dynamic SQL queries on the fly to store it in the corresponding tables. The system interface also offers flexible means of browsing and downloading the stored information using another set of parsers capable of “back-engineering” the data into its original format. Users can also choose the columns and/or samples that they want to include in their queries. This is of particular interest when running the downloaded data through analysis pipelines, giving the users the possibility to associate only a particular subset of the data in the analysis.
+We describe the design and architecture of a truly generic and flexible storage system. Although the design was originally developed to serve as a framework for the Symbiosis-EU project, the proposed design can be implemented for other researches requiring a flexible storage of heterogeneous experimental data. This is of particular interest for systems biology community. The implemented Web front-end associated with the system allow users to publish and share knowledge with other project partners. Furthermore, the interface offers means of data analysis pipelines according to the data type being accessed. To date, only modules for metabolic data analysis are available. This includes multivariance data analysis such as Principle Components Analysis (PCA) and Hierarchical Cluster Analysis (HCA). Additional analysis pipelines and means of data visualisation developed by different workgroups throughout the course of this research will also be associated with the system in the near future. This would typically include genomic (microarray) analysis pipelines and kinetic models for prediction of metabolite formation in meat.
+</div>
+<div class="keys">
+Keywords: Databases, Systems Biology, Food and Meat Science
+</div>
+<a name="17
+"></a>
+<div class="poster">
+Poster B17
+</div>
+<div class="titolo">
+GePh-CARD: Genotype-Phenotype Correlation, Analysis and Research Database 
+</div>
+<div class="autori">
+Mordenti M. (1), D'Ascia S. (2), Pedrini E. (1), Frangiamone G. (2), Sangiorgi L. (1)
+</div>
+<div class="inst">
+(1) Genetic Unit - Rizzoli Orthopaedic Institute, Via di Barbiano 1/10, Bologna, 40136, Italy, (2) NSI - Nier Soluzioni Informatiche, Via Bonazzi, 2, Castel Maggiore -BO-, 40013, Italy
+</div>
+<div class="shabs">
+GePh-CARD is a new way to organize and screen genetic, genealogical, and clinical data. It has been tested on Multiple Osteochondromas, a disorder characterized by formation of cartilaginous caps on the long bones. The MO is leaded by EXT1/2 genes. This multifactorial disease and his genetic component are the perfect test-bed for a genotype-phenotype DB. GePh-CARD brings the user to a complete analysis of genetical and clinical evidences reporting information and collecting data. It is web-accessible through every internet browser by a user friendly interface, that requires a log-in. 
+</div>
+<div class="exabs">
+Analysis of inherited diseases and their associated phenotypes is of great importance to gain knowledge of underlying genetic interactions and could ultimately give useful insights on clinical processes. GePh-CARD is a practical way to organize, focalise and screen genetic, genealogical, and clinical data. 
+This database has been tested on Multiple Osteochondromas also known as Hereditary Multiple Exostoses (HME). This disease is a skeletal disorder characterized by formation of bone protuberances covered by cartilaginous caps named osteochondromas usually located at the meta-epiphysis of the long bones, especially in the limbs. These exostoses are rare at birth and increase in number and size gradually during childhood until the puberty, when the bones stop growing and the caps too. Sometimes the osteochondromas are associated with pain, deformity, limitation and nerve or vessel compression. Moreover, in a reduced cohort of patients (about 2-5%), an osteochondromas undergoes to malignant transformation, leading to peripheral chondrosarcoma (CSP). The HME is leaded by mutations on the EXT1, located on chromosome 8 and EXT2, on 11. Several mutations on EXT1/EXT2 genes have been identified in MO patients with DHPLC testing and confirmed by DNA sequencing.
+This multifactorial disease and its genetic components were considered the perfect test-bed for a genotype-phenotype database, due to the huge variability of clinical presentation.
+Understanding clinical phenotypes through their corresponding genotypes is paramount to unveil inherited mutations that should lead to pathological processes and syndromes. Find a link between DNA alterations and clinical evidences is the target and GePh-Card is focusing on this. 
+The whole database is articulated in various sections, organized to collect, manage, store and analyse the data. The database has been developed to support orthopaedics, clinicians and lab scientists. All the sections are strongly related and mutually dependent on each other, to integrate data coming from various resources, regarding different aspects of the diseases. Moreover this sub-division improves the information collection, facilitating the matching between genotype and phenotype data. 
+This software is articulated in six sections; four of those carry different kind of information about the patient (Private Data, Clinical Data, Genealogical Data, Genetic Data) and the other two sections are involved in statistical reports and implementation of the drop-down lists. All sections are provided of an user-friendly interface, finalized to simplify the management. 
+GePh-CARD acts like an information repository bringing the user to a complete analysis of genetical and clinical evidences. This database reports information, gets statistics and collects epidemiological data. 
+Another relief tool is the articulate multilevel access profile that takes care of the data legal protection, tutelaring the privacy of the patients. Due to this is required an authentication (username and password) able to identify a univocal user.
+The software is web-accessible (www.sisinfo626.it/sisinfoior) through internet browser (log-in is required) by a user friendly interface and it is based on a common intranet/internet connection. 
+The priority of GePh-CARD is the utilizing of information to achieve personalized health care, integrating different volumes of disparate data. Due to this we want to transform GePh-CARD in a HL7 compatible software, setting the database according to the statutory requirements. This is an huge aim and should increase the functionality, the exactness and the logical of the database.
+</div>
+<div class="keys">
+Keywords: Genotype-Phenotype Correlation, Database
+</div>
+<a name="18
+"></a>
+<div class="poster">
+Poster B18
+</div>
+<div class="titolo">
+EuroPhenome: A Mouse Phenotyping Resource
+</div>
+<div class="autori">
+Morgan, H., Beck, T., Blake, A., Mallon, A-M., Hancock, J.M.
+</div>
+<div class="inst">
+MRC Harwell, Oxfordshire, OX11 0RD, UK
+</div>
+<div class="shabs">
+EuroPhenome is an online mouse phenotyping resource which has been developed to store phenome data derived from mice using the standardised tests contained in EMPReSS. EuroPhenome is the repository for phenotype data generated by the EUMODIC project, which will phenotype up to 500 knock-out lines generated by the EUCOMM project.
+</div>
+<div class="exabs">
+The broad aim of biomedical science in the postgenomic era is to link genomic and phenotype information systematically to allow deeper understanding of the processes leading from genomic changes to altered phenotype and disease. Essential to developing such a linkage are databases which contain information on both normal phenotypes of inbred mouse strains and mutant phenotypes.
+EuroPhenome (http://www.europhenome.org) is an online mouse phenotyping resource that allows access to data generated by the EUMODIC (http://www.eumodic.org) project.  It holds data from a collection of standardised procedures (SOPs) called EMPReSSlim (http://empress.har.mrc.ac.uk) performed on knock-out lines derived from inbred mouse strains by the EUCOMM project with the ultimate aim of phenotyping 500 lines.  EMPReSS is the European Mouse Phenotyping Resource of Standardised Screens and was developed by groups of expert scientists to enable rapid, easy and reproducible assessment of phenotype in all major body systems with 20 distinct phenotyping SOPs representing 6 phenotyping domains.  The EuroPhenome database is a MySQL relational database and has been designed to allow data from new SOPs or new projects to be added easily.  
+The EuroPhenome web interface allows the user to access the data via the phenotype or genotype.  It allows the user to access the data in a variety of ways, including graphical display, statistical analysis and access to the raw data via web services or SQL.
+To assist with data definition and cross-database comparisons phenotype data within EuroPhenome are annotated using combinations of terms from OBO ontologies. The phenotypic quality ontology (PATO) will principally be used to assign traits to biological entities.
+</div>
+<div class="keys">
+Keywords: Phenotype,Genotype,Ontology,Online,Database
+</div>
+<a name="19
+"></a>
+<div class="poster">
+Poster B19
+</div>
+<div class="titolo">
+ASPICdb: a database resource for alternative splicing analysis 
+</div>
+<div class="autori">
+Castrignanò T (1), D'Antonio M (1), Anselmo A (2), Carrabino D (1), D'Onorio De Meo P (1), D'Erchia AM (3), Licciulli F (4), Mangiulli M (1), Mignone F (2), Pavesi G (1), Picardi E (3), Rizzi R (5), Bonizzoni P (5), Pesole G (3)
+</div>
+<div class="inst">
+(1) Consorzio Interuniversitario per le Applicazioni di Supercalcolo per Universita` e Ricerca, CASPUR, Rome, Italy, (2) University of Milan, Dipartimento di Scienze Biomolecolari e Biotecnologie, via Celoria 26, Milan 20133, Italy , (3) University of Bari, Dipartimento di Biochimica e Biologia Molecolare “E. Quagliariello”, via Orabona, 4, Bari 70126, Italy , (4) Istituto Tecnologie Biomediche del Consiglio Nazionale delle Ricerche, sede di Bari, via Amendola 122/D, Bari 70126, Italy , (5) DISCo, University of Milan Bicocca, via Bicocca degli Arcimboldi, 8, Milan, 20135, Italy
+</div>
+<div class="shabs">
+Alternative splicing is a key molecular mechanism expanding the complexity of transcriptomes and proteomes. We previously developed the ASPic algorithm that performing the multiple alignment of all available transcripts to the relevant genome sequence and using a DAG-based combinatorial procedure is able to predict all putative full length alternative transcripts for a given gene.
+We present here ASPicDB, a new and flexible database collecting the splicing pattern of human genes whose analysis shows that alternative splicing expands the human transcriptome complexity by one order of magnitude.
+</div>
+<div class="exabs">
+BACKGROUND
+Alternative splicing is emerging as a key molecular mechanism to expand the potential information content of eukaryotic genomes by increasing the complexity of their transcriptomes and proteomes. Although several online resources devoted to alternative splicing analysis are currently available, they suffer from limitations deriving from both the computational methodologies adopted and to the extent of the annotations they provide, that prevent the full exploitation of all the available data.
+In order to overcome these limitations, we previously developed the ASPic algorithm, that first identifies splicing sites according to the multiple alignment of all available transcripts (typically a Unigene cluster) to the relevant genome sequence, and then assembles putative full length transcripts through a graph-based combinatorial procedure (Bonizzoni et al., 2005; Castrignanò et al., 2006). 
+RESULTS
+We present here a new and flexible database named ASPicDB (Castrignanò et al., 2008), appropriately designed to provide access to the alternative splicing pattern of human genes and to the functional annotation of predicted splicing isoforms obtained from the genome-wide application of ASPic .
+ASPicDB can be accessed through simple or advanced query interfaces. The simple query form allows the user to obtain the ASPic output for one or more genes selected according to gene IDs, keywords or associated GO terms. The advanced query form allows the user to search for: 1) genes; 2) transcripts; 3) exons;  4) splice sites,  fulfilling a combination of user-defined criteria (e.g. type of splicing event, type of donor/acceptor site, etc.). Several tabular and ad hoc graphical views of the results are provided, as well as suitable download facilities, making easy the assessment of the functional implication of the alternative splicing in the gene set under investigation. Moreover, ASPicDB also includes information on tissue specific splicing in normal and cancer cells based on available expressed sequence tags and their source library annotations.
+The database is freely available at www.caspur.it/ASPicDB and is regularly updated on a monthly basis.
+CONCLUSIONS
+The analysis of the splicing pattern of the over 18,000 multi-exon genes collected in ASPicDB allowed us to conclude that alternative splicing expands the complexity of the human transcriptome and proteome by one order of magnitude. In fact we estimated that over 91% of multi-exon genes may generate alternative isoforms and that each gene—on average—may generate about 12 different transcripts and 11 different proteins, most of them translated in frame with the RefSeq annotated protein. 
+References
+Bonizzoni P, Rizzi R, Pesole G. ASPIC: a novel method to predict the exon-intron structure of a gene that is optimally compatible to a set of transcript sequences. BMC Bioinformatics. 2005 Oct 5;6:244. 
+Castrignano T, Rizzi R, Talamo IG, De Meo PD, Anselmo A, Bonizzoni P, Pesole G. ASPIC: a web resource for alternative splicing prediction and transcript isoforms characterization. Nucleic Acids Res. 2006 Jul 1;34(Web Server issue):W440-3. 
+Castrignanò T, D'Antonio M, Anselmo A, Carrabino D, D'Onorio DM, D'Erchia A, Licciulli F, Mangiulli M, Mignone F, Pavesi G, Picardi E, Riva A, Rizzi R, Bonizzoni P, Pesole G. ASPicDB: A database resource for alternative splicing analysis. Bioinformatics. 24:1300-1304, 2008
+</div>
+<div class="keys">
+Keywords: Alternative Splicing, Database, Transcriptome expansion
+</div>
+<a name="20
+"></a>
+<div class="poster">
+Poster B20
+</div>
+<div class="titolo">
+An XML format for peptide datasets
+</div>
+<div class="autori">
+Jelena Repar, Nives Škunca, Fran Supek, Tomislav Šmuc
+</div>
+<div class="inst">
+Rudjer Boskovic Institute, Bijenicka cesta 54, 10000 Zagreb, Croatia
+</div>
+<div class="shabs">
+A series of seemingly dissimilar bioinformatical problems has been the subject of extensive scrutiny for some time now.  However unconnected they seem at first glance (e.g. prediction of protein secondary structure, prediction of protein phosphorylation sites) they all consist of experimentally characterized peptide sequences upon which classification models are built by supervised machine learning approaches. In light of this, we are developing an XML format that will enable more efficient storage and exchange of such peptide data and foster comparative analysis. 
+</div>
+<div class="exabs">
+There is a number of papers in the recent scientific literature that deal with a set of seemingly dissimilar bioinformatic problems. Their connecting motif is that they all have sequences of peptides, or fragments of proteins, as the focus of their interest. 
+Generally, the peptide sequences in question have first been characterized by wet lab experiments. The results have been published in a paper, and possibly stored in a highly specialized database . In order to use the sequences for bioinformatics analyses of the processes that generated them a researcher needs to extract peptides from the database, analyze them and form a dataset. As the last step is time-consuming and arduous there is a general tendency for other scientists to re-use such datasets for trying to arrive to the even better bioinformatic models and, hopefully, understanding of the processes. 
+The peptide datasets we have collected so far can be roughly divided into four categories, with the possibility of adding more categories as the need arises:
+a)	posttranslational modification of proteins (e.g. phosphorylation)
+b)	cleavage by broad-specificity proteases (e.g. proteasome, HIV-I  protease)
+c)	determining protein secondary structure 
+d)	epitope recognition (e.g. T-cell epitope recognition)
+As many of these processes are not only of biological but also of a medical importance, there is great interest in their further study and explanation.
+The peptide datasets can all generally be viewed as sets of amino acid sequences to which a class label has been assigned experimentally. However unconnected their underlying problem may seem at the first glance (e.g. prediction of protein secondary structure, prediction of phosphorylation sites in proteins) they all often serve for construction of classification models by similar supervised machine learning approaches. The final aim of the computational approaches is to develop a model that will best serve for the in silico predictions of events occuring in live cells.
+Most attempted modelling of these problems has met with the question of numerical representations of amino acid sequences, numerical representation being necessary for many classification algorithms. Various approaches to finding the best representation have been taken and they commonly compare amino acid representations on the same problem using the same classification method. Only rarely have researchers compared optimal amino acid representations between different problems. In the light of similarity between various peptide classification problems one can not help wondering whether there is an optimal amino acid representation that would work best for different problems and that would explain the most prominent amino acid features in shaping the natural processes in question. It is the aim of our future research to address this question in more detail.
+Despite the striking similarity between the peptide modelling problems, there is not an established flow of information. Quite a few of the field-specialized databases are readily available but need to be extensively pre-processed to result in the modelling-appropriate dataset. Additionaly, due to the frequent database updates and vagueness of descriptions of dataset production it is hard for different scientists to arrive to exactly the same dataset, and even slight variations in the datasets would invalidate a comparison of modelling approaches. Although some datasets are available on request, there is not an established format of dataset exchange, resulting in more time wasted on managing different data formats. Therefore, easing the process of data exchange by standardizing peptide dataset formats is a fundamental requirement for the better research in protein structural biology.
+We have chosen Extensible Markup Language (XML) for the production of such a data format. XML has been shown to be highly efficient in storing data in an orderly, researcher-comprehensible manner. On the one hand it is robust and on the other hand extensible which assures not only correct data distribution, but also adaptability in the instances in which hindsight fails. 
+We hereby propose an xml format for the peptide sequences datasets which we hope will lead to the more efficient information exchange within this specific area of protein structural biology. In the future, we hope to further stimulate the information flow by building a peptide dataset repository.
+</div>
+<div class="keys">
+Keywords: XML, peptide, datasets, standardization
+</div>
+<a name="21
+"></a>
+<div class="poster">
+Poster B21
+</div>
+<div class="titolo">
+PRODORIC - a platform for the elucidation of gene regulatory networks in prokaryotes
+</div>
+<div class="autori">
+Johannes Klein, Ida Retter, Stefan Leupold, Richard Münch
+</div>
+<div class="inst">
+Technische Universität Braunschweig
+</div>
+<div class="shabs">
+Although the genomes of several hundreds of bacterial species are entirely sequenced, the elucidation of the corresponding gene regulatory networks is still a challenging process that requires extensive analyses on multiple levels. We present a platform for the retrieval, prediction and visualization of gene regulatory networks in prokaryotes that enables an integrated and interactive analysis. The framework consists of the PRODORIC database, the Virtual Footprint prediction tool and the ProdoNet visualization tool. The PRODORIC platform is accessible at http://www.prodoric.de.
+</div>
+<div class="exabs">
+PRODORIC, the Prokaryotic Database Of Gene Regulation, provides a comprehensive source of manually curated knowledge on regulation of gene expression in prokaryotes. The database provides integrated data of transcriptional regulators and their corresponding binding sites, gene expression patterns and related information. The pattern matching tool Virtual Footprint complements the data obtained from experimental evidence by the prediction of regulatory interactions and whole regulons in bacterial genomes. For the mapping of prokaryotic genes and corresponding proteins to common gene regulatory and metabolic networks, ProdoNet provides an intuitive tool for the visualization of experimental and predicted data. In our group, the PRODORIC platform is used for different approaches to create models for prokaryotic gene regulatory networks. Thus, in a process of data mining, prediction, visualization and modeling, the flow of data is turned into information and knowledge.
+</div>
+<div class="keys">
+Keywords: gene regulatory networks, visualization, transcriptomics, proteomics
+</div>
+<a name="22
+"></a>
+<div class="poster">
+Poster B22
+</div>
+<div class="titolo">
+GabiPD: The Gabi Primary Database - a plant integrative ‘omics’ database
+</div>
+<div class="autori">
+Diego Mauricio Riaño-Pachón (1), Axel Nagel (1), Robert Wagner (1), Jost Neigenfind (1), Elke Weber (1), Svenja Diehl (2), Birgit Kersten (1)
+</div>
+<div class="inst">
+(1) Bioinformatics group, Max Planck Institute of Molecular Plant Physiology, (2) Former RZPD German Resource Center for Genome Research GmbH
+</div>
+<div class="shabs">
+In the last eight years our team has developed the GabiPD – Gabi Primary Database, which constitutes a repository for ‘omics’ data in the plant field, mainly from projects funded by the German initiative “Genome Analysis of the Plant Biological System (Genomanalyse im biologischen System Pflanze, GABI)”. Integrated data is available to the scientific community via  http://www.gabipd.org/. The main goal of GabiPD is to collect, integrate, visualize and link primary information obtained from a wide array of heterogeneous data arising from high-throughput experiments of various plant species.
+</div>
+<div class="exabs">
+The GABI Primary Database, GabiPD, was established eight years ago in the frame of the German initiative for Genome Analysis of the Plant Biological System (Genomanalyse im biologischen System Pflanze, GABI), funded by the German Federal Ministry of Education, Research and Technology (BMBF) as well as a number of private enterprise companies.  The main goal of GabiPD is to collect, integrate, visualize and link primary information from GABI projects. GabiPD, in contrast to other plant databases constitutes a repository and analysis platform for a wide array of heterogeneous data arising from high-throughput experiments in several plant species. Currently, data from different 'omics' fronts are incorporated in GabiPD (i.e., genomics, transcriptomics, metabolomics, proteomics), originating from 14 different model or crop species.  We have developed the concept of GreenCards for text based retrieval of all data types in GabiPD (e.g., clones, genes, mutant plant lines, markers). All data types are pointing to the central Gene’s GreenCard, where gene information is integrated from genome annotation projects. Within the Gene’s GreenCards links to all GabiPD data related to the corresponding genes as well as cross references to large UniGene sets from NCBI and to useful gene-based external data bases are displayed. A collection of ~400000 ESTs from different species, generated in different GABI projects, is made publicly available though GabiPD.  These ESTs have been cross referenced to UniGene sets from NCBI and to sequences from different plant genome projects, in an effort to ease the transfer of functional information. The centralized Gene's GreenCard also allows visualizing ESTs aligned to annotated transcripts as well as identified protein domains and gene structure. Moreover GabiPD  makes available interactive genetic maps from Solanum tuberosum (potato) and Hordeum vulgare (barley).  Gene expression data in GabiPD can be visualized through MapManWeb, the web interface of MapMan. Access to the data in GabiPD is provided via either the web interface (http://www.gabipd.org) or webservices that are currently available for Arabidopsis-related information. GabiPD was accessed by more than 30000 unique visitors last year from around the world.
+</div>
+<div class="keys">
+Keywords: plants, systems biology, omics, integrative
+</div>
+<a name="23
+"></a>
+<div class="poster">
+Poster B23
+</div>
+<div class="titolo">
+Reporting Standards and Public Infrastructure for Omics Data @ EBI
+</div>
+<div class="autori">
+Philippe Rocca-Serra, Marco Brandizi, Nataliya Sklyar, Chris Taylor, Eamonn Maguire, Daniel Schober, and Susanna-Assunta Sansone
+</div>
+<div class="inst">
+The European Bioinformatics Institute (EMBL-EBI), www.ebi.ac.uk/net-project
+</div>
+<div class="shabs">
+As the size and complexity of scientific datasets and the corresponding information stores grow, reporting standards are playing an increasingly active role. Interoperability among standards, however, becomes pivotal for the development of software applications. Here we present the key synergistic standards activities in the omics domain and the motivation for, an oveview of, the BioInvestigation Index infrastructure at the EBI.
+</div>
+<div class="exabs">
+The marriage of conventional methods with (meta)genomics, transcriptomics, proteomics and metabol/nomics technologies (hereafter referred as 'omics') has created not only opportunities, but also substantial new informatics challenges. For example, consider the reporting of a complex multi-omics study looking at the effect on a number of subjects of a compound inducing liver damage by characterizing the metabolic profile of their urine (by mass spectroscopy), measuring protein and gene expression in the liver (by mass spectrometry and DNA microarrays, respectively), and conducting conventional histopathological analysis. It is pivotal that such datasets are reported in a standard manner to enable communication, interpretation and analysis. New approaches are required for describing, formatting, submitting and exchanging both data and metadata (i.e., sample characteristics, study design and execution) from such complex studies. 
+Many groups are rising to this challenge to this end, standards for data content (minimal information checklists), semantics (ontologies) and syntax (file formats) are being specifically developed to target a particular omics technology or a particular biologically-delineated community. However, remaining bounded by a particular discipline, standardisation efforts in general remain fragmented and cannot be easily integrated. This result in unnecessary duplication of effort, and more significantly, the development of (arbitrarily) different standards being developed, thereby limiting the scope for data exchange. Unfortunately, the result of such 'fragmentation' is also reflected in the implementations. For example, systems such as ArrayExpress [1] and Pride [2] at EBI -built to store microarray-based and proteomics experiments, respectively- employ different submission/exchange formats and terminologies as developed by the standardisation initiatives in their domain. In such scenario, description and submission of multi-omics studies will be difficult if not impossible. 
+Fortunately, several synergistic activities have begun fostering the harmonization and consolidation of the three kinds of standards being developed. Over 20 projects are registered in the 'Minimum Information about a Biomedical or Biological' (MIBBI) portal [3,4] set to created orthogonal checklist modules. At present, over 60 groups participate under the OBO Foundry umbrella [5,6] with the objective of developing interoperable ontologies. Several groups participate in the Functional Genomics (FuGE) project [7,8] which underpins the XML-based formats they have developed. Only very recently, another complementary initiative has sprung up from a growing number of communities that work collaboratively on a common tabular framework for presenting the experimental metadata (ISA-TAB) [9,10]. The reuse of common standards and ontologies will ease the task of software developers, vendors, and equipment manufacturers by reducing time and costs for implementing standards-compliant products. In turn, these will be valuable interoperable resources for the system biology community, simplifying the job of data integration. 
+Undoubtedly, the interoperability of reporting standards will ease the task of those developers working to implement standards-compliant systems for complex multi-omic studies, such as the BioInvestigation Index at the EBI [11]. This infrastructure aims to create a common structured representation of the metadata and the sample-data relationship for biological, biomedical and environmental studies employing omics-based technologies along with more conventional methodologies. The infrastructure will provide the users with: 
+• 'ISAcreator submission tool', a standalone system that will help the users to: 
+- to describe the experimental metadata with appropriate controlled terminologies or ontologies, using Ontology Lookup Service (OLS) and BioPortal; 
+- structure the metadata in ISA-TAB format and package it along with the associated data files into an ISArchive for submission to the BioInvIndex 
+• 'BioInvIndex database' for storing the experimental metadata and sample-data relationship; it will also store data from conventional methods, while microarray-based and proteomics data will be dispatched to ArrayExpress and Pride 
+- its model is based on the ISA-TAB structure, and can be easily mapped to FuGE model 
+- an interface will enable browsing, retrieval and search by experimental metadata 
+• 'Meda database' for storing data files from mass spectrometry and nuclear magnetic resonance based experiments 
+- initially this will be a basic file archive, later to be developed further in collaboration with the Pride team 
+- metabolite's name and chemical compounds -where applicable- will be linked to entries in ChEBI repository at EBI. 
+The BioInvestigation Index infrastructure - along with a first set of publicly available multi-omics datasets- will be lunched in Fall 2008. 
+1. https://www.ebi.ac.uk/arrayexpress 
+2. https://www.ebi.ac.uk/pride 
+3. http://mibbi.sf.net 
+4. Taylor, Field, Sansone,...Rocca-Serra,...Schober et al. Nat Biotechnol (in press). 
+5. http://www.obofoundry.org 
+6. Smith, Ashburner, Rosse,…Rocca-Serra, Sansone et al. (2007). Nat Biotechnol. 25(11):1251-5. 
+7. http://fuge.sf.org 
+8. Jones, Miller, Aebersold,...Sansone,...Taylor et al. (2007). Nat Biotechnol. 25(10):1127-33. 
+9. http://isa-tab.sf.net 
+10. Sansone, Rocca-Serra, Brandizi,...Sklyar, Taylor et al. OMICS (in press). 
+11. BioInvestigation Index main page coming soon at: www.ebi.ac.uk/net-project. 
+</div>
+<div class="keys">
+Keywords: database, reporting standards, omics
+</div>
+<a name="24
+"></a>
+<div class="poster">
+Poster B24
+</div>
+<div class="titolo">
+FunSimMat: a comprehensive functional similarity database and its application to phenotype similarity
+</div>
+<div class="autori">
+Schlicker A., Blankenburg H., Lengauer T., Albrecht M.
+</div>
+<div class="inst">
+Department of Computational Biology and Applied Algorithmics, Max Planck Institute for Informatics, Campus E1 4, 66123 Saarbrücken, Germany
+</div>
+<div class="shabs">
+We present the Functional Similarity Matrix (FunSimMat, http://www.funsimmat.de), a comprehensive database of similarity values quantifying semantic relationships of Gene Ontology (GO) terms and functional relationships of all UniProtKB proteins and of Pfam/SMART protein families. In addition, we describe the results of a new approach to the functional comparison of diseases using the GO annotation of known disease proteins. FunSimMat is accessible through a web front-end, an XML-RPC interface, and a DASMI web server (http://www.dasmi.de).
+</div>
+<div class="exabs">
+Functional similarity based on Gene Ontology (GO) annotation is used in diverse applications such as gene clustering, gene expression data analysis, text mining, and protein interaction prediction and evaluation. We present the Functional Similarity Matrix (FunSimMat, http://www.funsimmat.de), a comprehensive database of semantic and functional similarity values [1]. FunSimMat provides precomputed values of several semantic similarity measures for GO terms, as well as diverse functional similarity measures for all proteins from UniProtKB and for all protein families from Pfam and SMART. 
+	
+FunSimMat is accessible through a web front-end, an XML-RPC interface, and a web server for the Distributed Annotation System for Molecular Interactions (DASMI). The web front-end allows users to functionally compare a query protein or protein family against a list of proteins or protein families. This list of entities can be defined by entering accession numbers, selecting an arbitrary taxon from the NCBI Taxonomy, or choosing an OMIM entry. It is also possible to compare the query entity to the whole database. Additionally, the user may define a prototype entity by a set of GO terms and may search for functionally similar proteins and protein families in the database. Furthermore, the web front-end allows for retrieving semantic similarity values for GO terms. The results can be downloaded as tab-delimited text file, which facilitates their usage in different applications. The XML-RPC interface provides the same functionality as the web front-end, thus providing programmatic access to FunSimMat over the internet. This gives the opportunity for integrating FunSimMat into automatic bioinformatics pipelines and integrating functional similarity information into existing web services. DASMI is an extension of the Distributed Annotation System (DAS) for molecular interactions, which is part of the DAS1.53E specification. The FunSimMat DASMI server can be incorporated into any DASMI client for annotating protein and domain interaction data with functional similarity scores. The DASMI client DASMIweb (http://www.dasmi.de), for example, uses this server as a confidence measure to assess the quality of experimentally derived and predicted protein and domain interactions. 
+Recently, we have applied functional similarity for disease gene prioritization to identify causative genes and proteins for a given disease under study. Functional similarity has been shown to be one of the most important features for this application [2]. In the context of disease gene prioritization, Lage et al. introduced a text-mining approach for defining a similarity measure for disease phenotypes [3]. Here, we introduce a new approach of functionally comparing phenotypes based on the GO annotation of proteins known to be associated with the phenotype of interest. This new method allows for comparing phenotypes with each other, as well as for comparing single proteins to phenotypes. Our results indicate that our method greatly supports the discovery of disease genes and performs well in prioritizing potential candidate genes. 
+[1] Schlicker A and Albrecht M, FunSimMat: a comprehensive functional similarity database. Nucleic Acids Res, 2008, 36:D434-D439.
+[2] Franke L et al., Reconstruction of a functional human gene network, with an application for prioritizing positional candidate genes. Am J Hum Genet, 2006, 78:1011-1025.
+[3] Lage K et al., A human phenome-interactome network of protein complexes implicated in genetic disorders. Nat Biotechnol, 2007, 25:309-316.
+</div>
+<div class="keys">
+Keywords: functional similarity, Gene Ontology
+</div>
+<a name="25
+"></a>
+<div class="poster">
+Poster B25
+</div>
+<div class="titolo">
+NPIDB, a database of structures of nucleic acid – protein complexes
+</div>
+<div class="autori">
+Spirin S.A. (1), Alexeevski A.V. (1), Karyagina A.S. (2,3), Titov M.L. (4)
+</div>
+<div class="inst">
+(1) Belozersky Institute of Physical and Chemical Biology, Moscow State University, Moscow, 119991, Russia, (2) Gamaleya Institute of Epidemiology and Microbiology, 18 Gamaleya st., Moscow, 123098, Russia, (3) Institute of Agricultural Biotechnology, 42 Timiryazevskaya st., Moscow, 127550, Russia, (4) University of Minnesota, Saint Paul, MN, 55108, USA
+</div>
+<div class="shabs">
+The resource NPIDB (Nucleic acids - Protein Interaction DataBase) contains a collection of files in PDB format with structural information on DNA-protein and RNA-protein complexes, and a number of online tools for analysis of the complexes. Those tools are: a program for analysis of hydrophobic clusters on intermolecular interfaces, programs for detecting potential hydrogen bonds and water bridges, visualization of structures with Jmol. Pfam and SCOP domains presented in protein chains of structures are detected. NPIDB is available via Internet: http://monkey.belozersky.msu.ru/NPIDB/
+</div>
+<div class="exabs">
+Approximately two thousand structures of DNA-protein and RNA-protein complexes are currently available in Protein Data Bank (PDB). However, there exist significant difficulties in obtaining information concerning intermolecular contacts, mode of interaction, comparison of related complexes, etc. We created a web-based database NPIDB (Nucleic acids - Protein Interaction Data Base) for providing an access to adequately organized information about all available structures of such complexes. Also we developed several algorithms for the analysis of the complexes. Implementations of the algorithms are integrated into NPIDB as online tools. 
+Structures of protein - nucleic acid complexes are extracted from PDB as files in the PDB format representing both PDB entries (asymmetric units) and biological units. The structures are revised by our experts in order to correct possible mistakes (such as duplication of atoms) and inconvenience (such as two or more variants of a structure posed in one coordinate space: see, for example, PDB entry 1QPI, where two variants of each DNA chain are superimposed). The manually corrected entries are also included into the Database as "revised biological units". Thus, in some cases, the NPIDB content differs from the original PDB one; in particular, for some complexes (1FJL, 1QPI, etc.) there are some additional biological units in NPIDB compared with the PDB.
+Pfam and SCOP domains presented in protein chains of structures are detected. The information on the domain types and their representatives in NPIDB is organized as a set of dynamical web pages.
+Each NPIDB entry has its own web page containing information on biological units, the list of presented protein domains, and interfaces to the online tools for structural analysis of the complex. The online tools include homemade programs for detecting hydrophobic clusters at intermolecular interface (CluD), for detecting possible hydrogen bonds and for detecting water bridges between protein and nucleic acid molecules. Visualization of the structures with the open-source program Jmol (http://jmol.sourceforge.net/) is provided, too. All structural files of NPIDB are downloadable.
+The NPIDB content is regularly updated with a special program module. NPIDB is available via Internet: http://monkey.belozersky.msu.ru/NPIDB/
+The work is supported by the Russian Foundation of Basic Research, grants 06-07-89143 and 06-04-49558, and INTAS, grant 05-1000008-8028.
+</div>
+<div class="keys">
+Keywords: protein, DNA, RNA, 3D structure, database
+</div>
+<a name="26
+"></a>
+<div class="poster">
+Poster B26
+</div>
+<div class="titolo">
+Analysing Experimental Data in the context of Integrated Biological Networks
+</div>
+<div class="autori">
+Taubert J., Weile J., Hindle M., Lysenko A., Hassani-Pak K., Canevet C., Rawlings C.J.
+</div>
+<div class="inst">
+Rothamsted Research, Harpenden, AL5 2JQ, UK
+</div>
+<div class="shabs">
+Current high throughput genomic technologies generate large amounts of experimental data. Analysing these data remains a major challenge for bioinformatics. To address this problem we have developed the ONDEX platform for analysing experimental data in context, using integrated biological networks. The results can be analysed using the ONDEX visualisation tool (OVTK). The OVTK provides graph layout and sub-graph extraction methods to enable the user to narrow the analysis down to a particular pathway or group of genes.
+</div>
+<div class="exabs">
+Current high throughput genomic technologies generate large amounts of experimental data. Analysing these data remains a major challenge for bioinformatics. To address this problem we have developed the ONDEX platform for analysing experimental data in context, using integrated biological networks. ONDEX uses a three stage process to create an integrated dataset from heterogeneous data sources up to millions of linked elements. In the first stage, the required databases are converted into a unified graph based data structure. In the second stage, equivalent and related entities are identified in the data sources. In the third stage, ONDEX analyses the integrated data and extracts knowledge of interest. 
+Parsers for a wide range of biological databases, e.g. AraCyc, BRENDA, KEGG, and TRANSFAC have been developed for ONDEX. Biological networks extracted from these sources can be used directly and integrated with experimental data, e.g. transcript levels from microarray expression studies. The results can be analysed using the ONDEX visualisation tool (OVTK). The OVTK provides graph layout and sub-graph extraction methods to enable the user to narrow the analysis down to a particular pathway or group of genes. Multiple time points from the experimental data can be analysed using separate visualisation canvasses. It is also possible to export the visualisation to vector or bitmap graphics. Furthermore general statistics methods are available, which, for example, display expression value distributions.
+Availability: The ONDEX system is freely available for download from http://ondex.sourceforge.net/
+</div>
+<div class="keys">
+Keywords: datawarehouse,microarray analysis,integration
+</div>
+<a name="27
+"></a>
+<div class="poster">
+Poster B27
+</div>
+<div class="titolo">
+LRRML: a conformational LRR database
+</div>
+<div class="autori">
+Tiandi Wei (1), Jing Gong (1), Ferdinand Jamtzky (2,1), Wolfgang M. Heckl (3,1), Shaila C. Rössle (1)
+</div>
+<div class="inst">
+(1) Department of Earth and Environmental Sciences, University of Munich (LMU). Theresienstrasse 41, Munich 80333, Germany., (2) Leibniz Supercomputing Center of the Bavarian Academy of Sciences and Humanities. Boltzmannstrasse 1, Garching 85748, Germany., (3) Deutsches Museum. Museumsinsel 1, Munich 80538, Germany.
+</div>
+<div class="shabs">
+LRRML is an XML based conformational leucine-rich repeats (LRRs) database useful for homology modeling and structural analysis of LRR containing proteins. LRRs contained in structure-known proteins were manually detected and classified into 9 classes. The homology search returns LRR structures with significant sequence similarity to the entered LRR sequence. URL: http://zeus.krist.geo.uni-muenchen.de/~lrrml.
+This work was supported by Graduiertenkolleg 1202 of Deutsche Forchungsgemeinschaft.
+</div>
+<div class="exabs">
+Leucine-rich repeats (LRRs) are 20-30 amino acid sequence motifs that are unusually rich in the hydrophobic amino acid leucine. They are present in over 6000 proteins from viruses to eukaryotes with the repeat number ranging from 2 to 45. To date more than 80 crystal structures of LRR containing proteins have been determined which have increased our ability to model LRR containing proteins with unknown structures.
+A conformational LRR database called LRRML has been developed using an XML database management system, providing abundant resources for homology modeling and structural analysis of LRR containing proteins. Initially, the structures of LRR containing proteins were extracted from PDB using search keys leucine rich repeat(s) and lrr. We standardized the LRR definition in such a manner that a LRR always begins at the beginning of its highly conserved segment, LxxLxLxxN/C(x)xL, and ends at the end of its variable segment (VS) before the next LRR. Then the regular LRRs contained in these proteins were recognized using pattern matching while the irregular LRRs were observed using molecular 3D structure viewers and identified by human intelligence. And then, the LRRs were classified manually into 9 commonly accepted classes: "typical", "bacterial", "RI-like", "C", "PS", "SDS22-like", "Tp", "CD42b-like", and "irregular", according to their length and consensus sequence. The structure file in PDB format of each LRR entry can be downloaded or viewed online using Jmol. LRRML provides users with an easy-to-use web interface. The Blast search with different optional restrictions permits users to enter a single LRR sequence and obtain a list of LRR structures to which it has significant levels of sequence similarity. The PDB ID search provides all the LRRs contained in the protein with the entered PDB ID. The current release contains 957 LRRs, of which 414 are distinct in sequence, from 81 PDB structures. LRRML is updated every two months and is freely available at http://zeus.krist.geo.uni-muenchen.de/~lrrml.
+This work was supported by Graduiertenkolleg 1202 of Deutsche Forschungsgemeinschft.
+</div>
+<div class="keys">
+Keywords: Leucine-rich repeats, homology modeling
+</div>
+<a name="28
+"></a>
+<div class="poster">
+Poster B28
+</div>
+<div class="titolo">
+Large Scale Prediction of Computational Hot Spots in Protein Interfaces
+</div>
+<div class="autori">
+Guney E. (1), Tuncbag N. (2), Gursoy A. (2), Keskin O. (2)
+</div>
+<div class="inst">
+(1) Universitat Pompeu Fabra, (2) Koc University, Center for Computational Biology and Bioinformatics
+</div>
+<div class="shabs">
+We present a new database of computational hot spots at protein interfaces: HotSprint. Sequence conservation and solvent accessibility of interface residues are used to detect the computational hot spots. Hot spots are residues comprising only a small fraction of interfaces yet accounting for the majority of the binding energy. The predicted hot spots are observed to correlate with the experimental hot spots with an accuracy of 71% and a positive predictive value of 79%. We believe that the results provide insights for researchers working on characterization of protein interaction sites.
+</div>
+<div class="exabs">
+Hot spots are residues comprising only a small fraction of interfaces yet accounting for the majority of the binding energy. These residues are critical in understanding principles of protein interactions.  Experimental studies like alanine scanning mutagenesis require significant effort; therefore, there is a need for computational methods to predict hot spots in protein interfaces. There are some computational methods like energy calculation based, sequence based or structure based to predict hotspots.
+We present a new efficient method to determine computational hot spots based on sequence conservation, amino acid propensity and solvent accessibility of the interface residues. 
+Proteins that have experimental hot spot data and available crystal structures are used in developing a scoring formula. Alanine scanning data was obtained from the Alanine Scanning Energetics database (Thorn and Bogan 2001), and a previously compiled data set from Kortemme and Baker (Kortemme and Baker 2002; Kortemme et al. 2004). The combined data set contains experimental single protein side-chain mutations for 519 residues on 46 distinct monomers coming from various protein-protein dimeric complexes. The redundancy in this data set is removed using PISCES sequence culling server (Wang and Dunbrack 2003) such that no monomer in the data set has sequence identity more than 35% similar to the procedure of Darnell et al. (Darnell et al. 2007). The resulting non-redundant training data set contains 412 residues on 36 distinct monomers. Among all these residues, the interface residues whose observed binding free energies are greater or equal to 2.0 kcal/mol are considered as hot spots. Actual training set used during prediction model construction consists of 119 residues for which both conservation and solvent accessibility information is available. An independent test set, used assessing performance of proposed prediction models, is taken from Binding Interface Database (BID) (Fischer et al. 2003). BID contains binding free energy strengths of 114 residues on 28 monomers. The test set is filtered for identical sequences in a similar fashion to the training set, resulting in 112 residues on 27 monomers. The test set shrinks to 45 residues when residues with known conservation scores and solvent accessibility values are considered.
+For each residue, accessible surface area (ASA) is computed by NACCESS in the monomer and complex forms, and conservation scores by Rate4Site. 
+The computational hotspot score of ith residue is defined as pScorei = scorei * Pkasa  where scorei is the conservation score obtained from Rate4Site, k is the type of residue i, Pkasa  is the ASA normalized propensity of residue type k. We defined hot spot as; 
+pScorei > tpScore & (ΔASAi > tΔASA  or ASAcomplexi < tASAcomplex ) 
+where tpScore, tΔASA and  tASAcomplex are user defined thresholds, and currently the default values are set to 6.2, 72 Å2 and 12 Å2, respectively. The predicted hot spots are observed to correlate with the experimental hot spots with an accuracy of 71% and a positive predictive value of 79%. Several machine learning methods (SVM, Decision Trees and Decision Lists) are also applied to predict hot spots and compared to our method. The results reveal that our empirical approach performs better. We observe that both the change in accessible surface area upon complexation and residue accessibility in the complex forms improve detection of hot spots. Furthermore, when we compared prediction performance of our formulation on the test data with computational alanine scanning method (Robetta-Ala), HotSprint (PPV of 79% at 62.5 % sensitivity level) achieved a substantially better success rate compared to Robetta-Ala (PPV of 64% at 28% sensitivity level). Darnell et al. obtained a PPV of 53% with 48% sensitivity (data taken from Darnell et al.).
+Predicted computational hot spots for all protein interfaces (49512 interfaces as of 2006) are available at HotSprint database. HotSprint (a database of computational hot spots in protein interfaces) can be accessed at http://prism.ccbb.ku.edu.tr/hotsprint.
+We believe that the results provide insights for researchers working on characterization of protein interaction sites. Such studies provide insights for function when clear evolutionary structural relationship between the sequences being compared exists and insights into what residues are most important in defining particular protein interface signatures.
+</div>
+<div class="keys">
+Keywords: computational hot spot, database, hotsprint
+</div>
+<a name="29
+"></a>
+<div class="poster">
+Poster B29
+</div>
+<div class="titolo">
+SIMBIOMS: – an integrated software system for managing information in biomedical studies
+</div>
+<div class="autori">
+Alvis Brazma (2), Sudeshna Guha Neogi (2), Maria Krestyaninova (2), Natalja Kurbatova (1), Karlis Podnieks (1), Ugis Sarkans (2), Juris Viksna (1), Andris Zarins (1)
+</div>
+<div class="inst">
+(1) Institute of Mathematics and Computer Science, Rainis boulevard 29, Riga, LV1459, Latvia , (2) European Bioinformatics Institute, Hinxton, Cambridge, CB10 1SD, nited Kingdom
+</div>
+<div class="shabs">
+SIMBIOMS is an open source software developed for collection, storage, management and retrieval of data and information about biomedical samples and experiment results using various experimental technologies. The system is highly configurable and customizable for use on different kinds of biosamples and/or with different high-density molecular analytical platforms for sample analysis. The system provides sets of metadata describing several technological platforms including Bisulfate sequencing, CLINPROT MS, Genotyping, LC-MS, Microarray, NMR, Protein Array, Suspension Bead Array, Tissue Array.
+</div>
+<div class="exabs">
+One of the important problems in biomedical research is collection, storage and retrieval of information about research subjects as well as storage, retrieval and analysis of experiment results obtained from samples taken from these research subjects. An imperative for a successful outcome from a biomedical study is efficient link between sample data and experiment results. Another important aspect is the possibility to integrate experimental results obtained from the same samples by using different experimental technologies.
+SIMBIOMS is an open source software system that has been developed for the above mentioned purpose for international collaborative project – Molecular Phenotyping to Accelerate Genomic Epidemiology (MolPAGE). This is a web based system that allows data submission and retrieval to/from database and comprises two parts that could be used either separately, or integrated in a single system: SIMS (Sample Information Management System) that allows researchers to track information related to sample collection, processing, location, transportation and storage conditions, and AIMS (Assay Information Management System) that stores the experimental data produced by different experimental technologies (genomic, transcriptomic, proteomic, metabolomic or any other data).
+One of the most innovative aspects of the system is its high configurability and customizability regarding its use for different kinds of biosamples and/or with different experimental platforms for sample analysis. Although SIMS was initially designed for processing of biosample in relation with metabolic diseases, the system can be easily adapted for use with biosamples obtained in any other context or even for use with a pre-existing sample information database. This part of configuration requires describing of a correct mapping between a system and a database and designing of web pages providing appropriate interface. To facilitate the second task a special library of “web page components” is provided that allows easy binding between graphical features and mapping of the system to the database.
+SIMS can be used to manage human research subject data. It provides a lightweight solution to the anonymity issue, by providing a simple patient database that is separated from the main system. 
+The AIMS system has already been specifically designed for use with experimental data obtained from different technologies, e.g., for use of genotyping data for the ENGAGE project (ref).. The system allows for the storage of data from multiple experimental platforms in a single database; new experimental platforms (technologies) can be added/modified to an already existing system via a web interface. Although this part of the system is still under development, but AIMS has been designed with intention that ontologies providing links between experimental data collected with different technologies could be added to the system and used for data retrieval and analysis. The feasibility of such integration has been demonstrated by the current ad-hoc solution that allows to adapt successfully data analysis provided by ArrayExpress (microarray data repository) to AIMS data from several technological platforms.
+One of the non-trivial outcomes from the project is collections of metadata for several technological platforms that have been validated in practice. Currently these are the following: Bisulfate sequencing, CLINPROT MS, Genotyping, LC-MS, Microarray, NMR, Protein Array, Suspension Bead Array, Tissue Array. These metadata are provided as xml files and can be easily be imported/exported to/from an existing AIMS system.
+The system is web based, and can be used by collaborators that are geographically distributed, as well as on an intranet. 
+References
+1. J.Vīksna, E.Celms, M.Opmanis, K.Podnieks, P.Ručevskis, A.Zariņš, A.Barrett, S.Guha Neogi, M.Krestyaninova, M.McCarthy, A.Brāzma, U.Sarkans. PASSIM - an open source software system for managing information in biomedical studies. BMC Bioinformatics, vol. 8:52, 2007.
+2..A. Brazma, H. Parkinson, U. Sarkans, M. Shojatalab, J. Vilo, N. Abeygunawardena, E. Holloway, M. Kapushesky, P. Kemmeren, G.G. Lara, A. Oezcimen, P. Rocca-Serra and S. Sansone. ArrayExpress – a public repository for microarray gene expression data at the EBI. Nucleic Acids Research, 2003, 31: 68-71.
+</div>
+<div class="keys">
+Keywords: biosample, database, web application, integrated analytical platforms
+</div>
+<a name="30
+"></a>
+<div class="poster">
+Poster B30
+</div>
+<div class="titolo">
+GPCRDB: an information system for G protein-coupled receptors
+</div>
+<div class="autori">
+Vroling B. (1), Oliveira L. (2), Hekkelman M.L. (1), Vriend G. (1)
+</div>
+<div class="inst">
+(1) CMBI, NCMLS, Radboud University Nijmegen Medical Centre, Geert Grooteplein 26-28, 6525 GA, Nijmegen, (2) Escola Paulista de Medicina, Universidade Federal de São Paulo, São Paulo, Brazil.
+</div>
+<div class="shabs">
+The GPCRDB is a molecular class-specific information system that collects, combines, validates and disseminates heterogeneous data on GPCRs. The GPCRDB is designed to be a data storage medium, as well as a tool to aid biomedical scientists with answering questions by offering a single point of access to many types of data that are integrated and visualized in a user-friendly way.
+</div>
+<div class="exabs">
+The amount of genomic and proteomic data that is entered each day into databases and the experimental literature is outstripping the ability of experimental scientists to keep pace. While generic databases derived from automated curation efforts are useful, most biological scientists tend to focus on a class or family of molecules and their biological impact. Consequently, there is a need for molecular class-specific or other specialized databases. The GPCRDB is a molecular class-specific information system that collects, combines, validates and disseminates heterogeneous data on GPCRs. The GPCRDB is designed to be a data storage medium, as well as a tool to aid biomedical scientists with answering questions by offering a single point of access to many types of data that are integrated and visualized in a user-friendly way.
+For the new release of the GPCRDB, GPCR sequences were collected from UniProt using a novel high-throughput profile-based method. Mutation data was collected from the recently revived tinyGRAP database and by automated extraction of mutation data from literature using MuteXt2. To aid in transferring information from one GPCR to another, profile-based multiple sequence alignments (MSAs) are available for all families in various formats. Various types of information can be accessed through MSAs, including conservation scores, correlated mutation scores and mutation data. Two-dimensional snake-like diagrams are used to represent and combine GPCR sequence, 2D structure and mutation information. For each single protein detailed information retrieved from various sources is available. Query systems and various data accession methods are available so that the data can be accessed in i.e. biological workflow management systems like Taverna. The GPCRDB is available at http://www.gpcr.og/7tm. We show how the combination of highly heterogeneous data can lead to many, sometimes surprising, in silico conclusions that initiate new in vitro and in vivo experiments.
+</div>
+<div class="keys">
+</div>
+<a name="31
+"></a>
+<div class="poster">
+Poster B31
+</div>
+<div class="titolo">
+PROTOPOLO: PROtein complex TOPOLOgy database
+</div>
+<div class="autori">
+Isakh Weheliye, Jeyaram Deivachandran, Jean-Christophe Nebel
+</div>
+<div class="inst">
+Faculty of Computing, Information Systems & Mathematics, Kingston University, Kingston-upon-Thames, KT1 2EE, UK
+</div>
+<div class="shabs">
+Oligomeric proteins are composed of several polypeptide chains. Their arrangement, known as quaternary structure, varies in term of composition and topography. Their systematic study could contribute to protein annotation and a better understanding of some biological processes. We have produced a database which contains features extracted from PDB 3D structures. Information provided includes complex composition, 2D/3D rotational symmetry and details about subunit interactions. Each complex is also represented by a 2D cartoon and a graph which can be analysed by network analysis tools.
+</div>
+<div class="exabs">
+Oligomeric proteins are proteins which are composed of two or more polypeptide chains, or subunits. The arrangement of subunits is known as quaternary structure and varies in term of composition and topography. These proteins are essential to key biological processes such as proteolytic cleavage, protein folding and translation. Moreover, it is suggested they provide evolutionary benefit [Kl70, Pr94 & Pe06]. Therefore, their systematic study could contribute to protein annotation [Yu06], a better understanding of some biological processes and the evaluation of organism complexity. 
+In order to facilitate comparisons of protein quaternary structures, we have produced a database which contains features extracted from the 3D structure of oligomeric proteins present in the Protein Data Bank (PDB) [Be00]. Information provided by this database includes protein complex composition, 2D/3D topography and rotational symmetry and details about subunit interactions. Each quaternary structure description is completed by a visual representation, i.e. a 2D cartoon. Moreover, the topology of each protein is provided in a standard graph format, i.e. Graph Modelling Language (GML). GML graphs can then be analysed or compared using standard network analysis tools such as MAVisto [Sc05].
+The process to produce this data is the following. Firstly, the homogeneity of all polypeptide chains belonging to a biologically functional molecule is calculated. Their sequences are aligned pairwise using an implementation of the Needleman-Wunsch algorithm [Ne70] and the homogeneity of the complex can be calculated. Secondly, interactions between subunits are analysed. They include the presence of disulphide bridges, interchain beta sheets and symmetrical protein-protein interfaces. Thirdly, each subunit is represented by the 3D coordinates of its centre of mass [He06]. By calculating the eigenvalues of these 3D data, planarity [Jo96] of the protein can be evaluated. Then the process of detecting cyclic symmetry (Cn) starts. Data are projected in the plane defined by the relevant eigenvectors and a cyclic string matching algorithm is applied [Ll97]. This matching procedure is applied twice to detect purely geometrical symmetries and symmetries based on identical subunits. Finally, the presence of 3D rotational symmetries is revealed by comparing the number and type of detected rotational axes with those of the plutonic solids.   
+This database can be accessed from: http://staffnet.kingston.ac.uk/~ku33185/PROTOPOLO
+Acknowledgement
+We are grateful to Majid Akbary-Gasany for his earlier work on this project.
+References
+[Be00] Berman,H.M. et al. (2000) The Protein Data Bank, Nucleic Acids Research, 28, 235-242. 
+[He06] Henschel,A., Kim, W.K., and Schroeder,M. (2006) Equivalent binding sites reveal convergently evolved interaction motifs, Bioinformatics, 22(5):550-5.
+[Jo96] Jones,S. and Thornton,J.M. (1996) Principles of protein-protein interactions, Proc. Natl. Acad. Sci. USA 93:13-20.
+[Kl70] Klotz,I.M., Langerman,N.R. and Darnall,D.W. (1970) Quaternary structure of proteins, Annu. Rev. Biochem., 39:25-62. 
+[Ll97] Lladós,J., Bunke,H. and Martí,E. (1997) Finding rotational symmetries by cyclic string matching, Pattern Recognition Letters, 18(14):1435-1442.
+[Ne70] Needleman,S.B. and Wunsch,C.S. (1970) A general method applicable to the search for similarities in the amino acid sequence of two proteins, J. Molecular Biol., 48:443-453.
+[Pe06] Pereira-Leal,J.B., Levy,E.D. and Teichmann,S.A. (2006) The origins and evolution of functional modules: lessons from protein complexes, Phil. Trans. B, 361:507-517.
+[Pr94] Price,N.C. (1994) Assembly of multi-subunit structures. In Mechanisms of protein folding (ed. RH Pain) New York, Oxford University Press; 160-193. 
+[Sc05] Schreiber,F. and Schwöbbermeyer,H. (2005) MAVisto: a tool for the exploration of network motifs. Bioinformatics, 21: 3572-3574.
+[Yu06] Yu,X., Wang,C. and Li,Y. (2006) Classification of protein quaternary structure by functional domain composition, BMC Bioinformatics, 7:187.
+</div>
+<div class="keys">
+Keywords: PDB structure, topology, graph, symmetry
+</div>
+</body>
+</html>

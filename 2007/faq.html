@@ -1,0 +1,1037 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>ISMB/ECCB 2007 &raquo; FAQ</title>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+
+<script type="text/javascript">
+/***********************************************
+* Switch Content script- © Dynamic Drive (www.dynamicdrive.com)
+* This notice must stay intact for legal use. Last updated April 2nd, 2005.
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var enablepersist="on" //Enable saving state of content structure using session cookies? (on/off)
+var collapseprevious="no" //Collapse previously open content when opening present? (yes/no)
+
+var contractsymbol='- ' //HTML for contract symbol. For image, use: <img src="whatever.gif">
+var expandsymbol='+ ' //HTML for expand symbol.
+
+
+if (document.getElementById){
+document.write('<style type="text/css">')
+document.write('.switchcontent{display:none;}')
+document.write('</style>')
+}
+
+function getElementbyClass(rootobj, classname){
+var temparray=new Array()
+var inc=0
+var rootlength=rootobj.length
+for (i=0; i<rootlength; i++){
+if (rootobj[i].className==classname)
+temparray[inc++]=rootobj[i]
+}
+return temparray
+}
+
+function sweeptoggle(ec){
+var thestate=(ec=="expand")? "block" : "none"
+var inc=0
+while (ccollect[inc]){
+ccollect[inc].style.display=thestate
+inc++
+}
+revivestatus()
+}
+
+
+function contractcontent(omit){
+var inc=0
+while (ccollect[inc]){
+if (ccollect[inc].id!=omit)
+ccollect[inc].style.display="none"
+inc++
+}
+}
+
+function expandcontent(curobj, cid){
+var spantags=curobj.getElementsByTagName("SPAN")
+var showstateobj=getElementbyClass(spantags, "showstate")
+if (ccollect.length>0){
+if (collapseprevious=="yes")
+contractcontent(cid)
+document.getElementById(cid).style.display=(document.getElementById(cid).style.display!="block")? "block" : "none"
+if (showstateobj.length>0){ //if "showstate" span exists in header
+if (collapseprevious=="no")
+showstateobj[0].innerHTML=(document.getElementById(cid).style.display=="block")? contractsymbol : expandsymbol
+else
+revivestatus()
+}
+}
+}
+
+function revivecontent(){
+contractcontent("omitnothing")
+selectedItem=getselectedItem()
+selectedComponents=selectedItem.split("|")
+for (i=0; i<selectedComponents.length-1; i++)
+document.getElementById(selectedComponents[i]).style.display="block"
+}
+
+function revivestatus(){
+var inc=0
+while (statecollect[inc]){
+if (ccollect[inc].style.display=="block")
+statecollect[inc].innerHTML=contractsymbol
+else
+statecollect[inc].innerHTML=expandsymbol
+inc++
+}
+}
+
+function get_cookie(Name) { 
+var search = Name + "="
+var returnvalue = "";
+if (document.cookie.length > 0) {
+offset = document.cookie.indexOf(search)
+if (offset != -1) { 
+offset += search.length
+end = document.cookie.indexOf(";", offset);
+if (end == -1) end = document.cookie.length;
+returnvalue=unescape(document.cookie.substring(offset, end))
+}
+}
+return returnvalue;
+}
+
+function getselectedItem(){
+if (get_cookie(window.location.pathname) != ""){
+selectedItem=get_cookie(window.location.pathname)
+return selectedItem
+}
+else
+return ""
+}
+
+function saveswitchstate(){
+var inc=0, selectedItem=""
+while (ccollect[inc]){
+if (ccollect[inc].style.display=="block")
+selectedItem+=ccollect[inc].id+"|"
+inc++
+}
+
+document.cookie=window.location.pathname+"="+selectedItem
+}
+
+function do_onload(){
+uniqueidn=window.location.pathname+"firsttimeload"
+var alltags=document.all? document.all : document.getElementsByTagName("*")
+ccollect=getElementbyClass(alltags, "switchcontent")
+statecollect=getElementbyClass(alltags, "showstate")
+if (enablepersist=="on" && ccollect.length>0){
+document.cookie=(get_cookie(uniqueidn)=="")? uniqueidn+"=1" : uniqueidn+"=0" 
+firsttimeload=(get_cookie(uniqueidn)==1)? 1 : 0 //check if this is 1st page load
+if (!firsttimeload)
+revivecontent()
+}
+if (ccollect.length>0 && statecollect.length>0)
+revivestatus()
+}
+
+if (window.addEventListener)
+window.addEventListener("load", do_onload, false)
+else if (window.attachEvent)
+window.attachEvent("onload", do_onload)
+else if (document.getElementById)
+window.onload=do_onload
+
+if (enablepersist=="on" && document.getElementById)
+window.onunload=saveswitchstate
+
+</script><style type="text/css">
+.switchcontent{display:none;}body {
+	background-image: url();
+	background-color: #017DBB;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.style1 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.style5 {color: #017DBB}
+</style>
+
+
+
+
+
+
+
+	<link rel="stylesheet" href="wp-content/themes/crayonworld-10/style.css" type="text/css" media="screen">
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="feedhtml.html">
+	<link rel="alternate" type="text/xml" title="RSS .92" href="feed/rsshtml.html">
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="feed/atomhtml.html">
+	<link rel="pingback" href="xmlrpc.html">
+
+	<link rel="alternate" type="application/rss+xml" title="ISMB/ECCB 2007 &raquo; FAQ Comments Feed" href="faq/feedhtml.html">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.html?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml"> 
+<link rel='index' title='ISMB/ECCB 2007' href='index.html'>
+<meta name="generator" content="WordPress 2.8.4">
+
+<a name="top"></a>
+</head>
+
+<body>	
+<div id="container">
+
+<!-- <div id="header"> -->
+
+
+<div id="header" onclick="location.href='index.html';" style="cursor: pointer;">
+
+
+ <h1><a href="index.html" title="ISMB/ECCB 2007"> 	 ISMB/ECCB 2007 </a></h1>  
+
+</div>
+
+<!--
+<ul id="gnav">
+	<li ><a href="index.html" title="Home">Home</a></li>
+	<li class="page_item page-item-7"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/agenda" title="Agenda-at-a-Glance">Agenda-at-a-Glance</a></li>
+<li class="page_item page-item-46"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/airtravel" title="Air Travel">Air Travel</a></li>
+<li class="page_item page-item-209"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/bof" title="Birds of a Feather (BoF)">Birds of a Feather (BoF)</a></li>
+<li class="page_item page-item-208"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters-latecall" title="Call for Late Posters">Call for Late Posters</a></li>
+<li class="page_item page-item-83"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/papers" title="Call for Papers">Call for Papers</a></li>
+<li class="page_item page-item-220"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/childcare" title="Child Care">Child Care</a></li>
+<li class="page_item page-item-202"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/activities" title="Children/Family Activities">Children/Family Activities</a></li>
+<li class="page_item page-item-90"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees" title="Committees">Committees</a></li>
+<li class="page_item page-item-130"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/promotion" title="Conference Promotion">Conference Promotion</a></li>
+<li class="page_item page-item-112"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsors" title="Conference Sponsors">Conference Sponsors</a></li>
+<li class="page_item page-item-132"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/venue" title="Conference Venue">Conference Venue</a></li>
+<li class="page_item page-item-9"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/contacts" title="Contact Us">Contact Us</a></li>
+<li class="page_item page-item-68"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/demonstrations" title="Demonstrations">Demonstrations</a></li>
+<li class="page_item page-item-119"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitfloorplan" title="Exhibit Floor Plan">Exhibit Floor Plan</a></li>
+<li class="page_item page-item-186"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitorinfo" title="Exhibitor Information">Exhibitor Information</a></li>
+<li class="page_item page-item-194"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitresources" title="Exhibitor Resources">Exhibitor Resources</a></li>
+<li class="page_item page-item-193"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitschedule" title="Exhibitor Schedule">Exhibitor Schedule</a></li>
+<li class="page_item page-item-2 current_page_item"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/faq" title="FAQ">FAQ</a></li>
+<li class="page_item page-item-138"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/housing" title="Housing">Housing</a></li>
+<li class="page_item page-item-12"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/subscribe" title="How to Subscribe">How to Subscribe</a></li>
+<li class="page_item page-item-210"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/volunteers" title="ISMB/ECCB 2007 Conference Volunteers">ISMB/ECCB 2007 Conference Volunteers</a></li>
+<li class="page_item page-item-45"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/deadlines" title="ISMB/ECCB 2007 Deadlines">ISMB/ECCB 2007 Deadlines</a></li>
+<li class="page_item page-item-58"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/highlights" title="ISMB/ECCB 2007 Highlights Track: Call for Proposals">ISMB/ECCB 2007 Highlights Track: Call for Proposals</a></li>
+<li class="page_item page-item-86"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/industry" title="ISMB/ECCB 2007 Industry Track: Call for Proposals">ISMB/ECCB 2007 Industry Track: Call for Proposals</a></li>
+<li class="page_item page-item-125"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/registration" title="ISMB/ECCB 2007 Registration">ISMB/ECCB 2007 Registration</a></li>
+<li class="page_item page-item-78"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/keynotes" title="Keynotes">Keynotes</a></li>
+<li class="page_item page-item-48"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/keynotespresentations" title="Keynotes Presentations">Keynotes Presentations</a></li>
+<li class="page_item page-item-85"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/plostrack" title="PLoS Track at ISMB/ECCB 2007">PLoS Track at ISMB/ECCB 2007</a></li>
+<li class="page_item page-item-121"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters" title="Posters">Posters</a></li>
+<li class="page_item page-item-134"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program" title="Program">Program</a></li>
+<li class="page_item page-item-54"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sigs" title="Special Interest Group Meetings (SIGs)">Special Interest Group Meetings (SIGs)</a></li>
+<li class="page_item page-item-35"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/specialsessions" title="Special Sessions">Special Sessions</a></li>
+<li class="page_item page-item-103"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsorbrochure" title="Sponsor Brochure">Sponsor Brochure</a></li>
+<li class="page_item page-item-100"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps" title="Sponsor Opportunities">Sponsor Opportunities</a></li>
+<li class="page_item page-item-174"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/scs3" title="Student Council Symposium (SCS3)">Student Council Symposium (SCS3)</a></li>
+<li class="page_item page-item-108"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/submissioncontacts" title="Submission Contacts">Submission Contacts</a></li>
+<li class="page_item page-item-139"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/tours" title="Tours">Tours</a></li>
+<li class="page_item page-item-111"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/travelsupport" title="Travel Fellowships">Travel Fellowships</a></li>
+<li class="page_item page-item-59"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/tutorials" title="Tutorials">Tutorials</a></li>
+<li class="page_item page-item-147"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/transit" title="Vienna Transit Pass">Vienna Transit Pass</a></li>
+<li class="page_item page-item-43"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/weather" title="Weather Today">Weather Today</a></li>
+ 
+</ul> --><div id="content">
+
+
+
+
+	  
+		<div class="post">	
+			<h2 class="post-title"><a href="faq.html" rel="bookmark" title="Permanent Link: FAQ">FAQ</a></h2>
+			<p class="post-info">posted <em>18 Jul 2006</em> </p>
+			<div class="post-content">
+	<p>Frequently Asked Questions</p>
+<ul>
+<li><a href="#iscb">What is ISCB?</a></li>
+<li><a href="#eccb">What is ECCB?</a></li>
+<li><a href="#conference">What is the ISMB conference?</a></li>
+<li><a href="#jointconference">Why are ISMB and ECCB joined for 2007?</a></li>
+<li><a href="#chairs">Who are the ISMB/ECCB 2007 Conference Chairs?</a></li>
+<li><a href="#contact">Who do I contact for information on the conference?</a></li>
+<li><a href="#location">Where will the conference be held?</a></li>
+<li><a href="#address">What is the address of the Austria Center Vienna?</a></li>
+<li><a href="#vienna">Where is Vienna, Austria?</a></li>
+<li><a href="#visa">Do I need a visa to visit Vienna, Austria?</a></li>
+<li><a href="#airport">Vienna International Airport</a></li>
+<li><a href="#timezone">What is Vienna&#8217;s Time Zone?</a></li>
+<li><a href="#power">What is the Electrical Current?</a></li>
+<li><a href="#areacode">What is the International area code?</a></li>
+<li><a href="#language">What language is spoken in Austria?</a></li>
+<li><a href="#language">What language will the conference sessions and materials be<br>
+presented?</a></li>
+<li><a href="#climate">Climate</a></li>
+<li><a href="#information">Where do I get more information on Vienna?</a></li>
+<li><a href="#hotels">Hotels</a></li>
+<li><a href="#medical">Where can I find medical information?</a></li>
+<li><a href="#transport">How do get around Vienna?</a></li>
+<li><a href="#tipping">Tipping</a></li>
+<li><a href="#safety">What can I do to ensure my personal safety?</a></li>
+<li><a href="#currency">What is the currency?</a></li>
+<li><a href="#payment">How can I pay to register for ISMB?</a></li>
+<li><a href="#shuttle">How do I get from the airport to my hotel?</a></li>
+<li><a href="#transport-airport">How do I get from the Vienna Schwechat Airport to Vienna city centre?</a></li>
+<li><a href="#registration">Where do I register when I arrive?</a></li>
+<li><a href="#vat">Can I get a refund on the Austrian Value Added Tax?</a></li>
+<li><a href="#lostfound">What should I do if I lose something?</a></li>
+</ul>
+<p><a name="iscb"></a>Q: <strong>What is ISCB?</strong></p>
+<p>A:The <a href="http://www.iscb.org/">International Society                      for Computational Biology</a> (ISCB) is the parent organization of the annual conference on Intelligent Systems for Molecular Biology (ISMB). The ISCB is dedicated to advancing the scientific understanding of living systems through computation. The ISCB communicates the significance of our science to the larger  scientific community, governments, and the public at large. The ISCB serves a global membership by impacting government                      and scientific policies, providing high quality publications and meetings, and through distribution of valuable information about training, education, employment and relevant news from  related fields. ISCB membership offers many benefits including reduced conference registration fees to several high impact events and reduced subscription prices for a selection of journals of Computational Biology and Bioinformatics. The                      2005 membership roster included over 1800 active members from 51 countries including more than 700 students and trainee members. A member&#8217;s meeting and a meeting of the Board of Directors for the Society are held annually in conjunction with the ISMB conference.</p>
+<p><a href="#top">top</a></p>
+<p><a name="eccb"></a>Q: <strong>What is ECCB?</strong></p>
+<p>A: The European Conference on Computational Biology (ECCB)                      is a multi-disciplinary conference that bridges the fields of computer science, mathematics, physics, chemistry and biology by bringing together involved scientists from all over the world. It has a revolving scheme in which, each year, one  of the European countries hosts the European conference, often jointly with the national conference on computational biology.</p>
+<p><a href="#top">top</a></p>
+<p><a name="conference"></a>Q: <strong>What is the ISMB conference?</strong></p>
+<p>A: Intelligent Systems for Molecular Biology (ISMB) is the                      annual meeting of the International Society for Computational                      Biology (ISCB). Over the past fourteen years the ISMB conference                      has grown to become the largest bioinformatics conference                      in the world. The ISMB conferences provide a multidisciplinary                      forum for disseminating the latest developments in bioinformatics.                      ISMB brings together scientists from computer science, molecular                      biology, mathematics, and statistics. Its principal focus                      is on the development and application of advanced computational                      methods for biological problems.</p>
+<p><a href="#top">top</a></p>
+<p><a name="jointconference"></a>Q: <strong>Why are ISMB and ECCB joined for 2007?</strong><br>
+A: ISMB/ECCB 2007 will offer the strongest scientific program                      and the broadest scope of any international bioinformatics                      conference in 2007. Building on the success of the joint ISMB                      – ECCB conference in 2004, the Vienna conference is                      designed to cater to variety of disciplines within the bioinformatics                      community. ISMB/ECCB 2007 will be the largest and most important                      computational biology event globally in 2007.</p>
+<p><a href="#top">top</a></p>
+<p><a name="chairs"></a>Q: <strong>Who are the ISMB/ECCB 2007 Conference Chairs?</strong></p>
+<p>A: The conference chairs for ISMB/ECCB 2007 are:</p>
+<ul>
+<li>
+<a href="chairs.html#lengauer">Thomas Lengauer</a>, Conference Chair, Max-Planck Institute for Informatics, Saarbrücken, Germany</li>
+<li>
+<a href="chairs.html#rost">Burkhard Rost</a>, Conference Co-chair, Columbia University, New York, NY, USA</li>
+<li>
+<a href="chairs.html#schuster">Peter Schuster</a>, Conference Co-chair, University of Vienna, Vienna Austria</li>
+</ul>
+<p><a href="#top">top</a></p>
+<p><a name="contact"></a>Q: <strong>Who do I contact for information                      on the conference?</strong></p>
+<p>A: You can get information on the conference from:<br>
+<a name="contact"></a><a name="contact"></a><br>
+c/o BJ Morrison McKay<br>
+International Society for Computational Biology<br>
+Pharmaceutical Sciences Building, Room 3230<br>
+9500 Gilman Drive, MC 0743<br>
+La Jolla, CA 92093-0743  USA</p>
+<p>Phone: +1-780-414-1663<br>
+Fax: +1-780-414-1664<br>
+Email: steven@iscb.org</p>
+<p><a href="#top">top</a></p>
+<p><a name="location"></a>Q: <strong>Where will the conference be held?</strong></p>
+<p>A: The conference will be held at the <a href="http://www.acv.at/">Austria                      Center Vienna</a> in Vienna.</p>
+<p><a href="#top">top</a></p>
+<p><a name="address"></a>Q: <strong>What is the address of the Austria Center Vienna?</strong></p>
+<p>A: AUSTRIA CENTER VIENNA<br>
+Internationales Amtssitz- und<br>
+Konferenzzentrum Wien, AG<br>
+Bruno-Kreisky-Platz 1<br>
+1220 Wien</p>
+<p>Nearest Subway station:<br>
+U1, &#8220;Kaisermühlen &#8211; Vienna International Center</p>
+<p><a href="#top">top</a></p>
+<p><a name="vienna"></a>Q: <strong>Where is Vienna, Austria?</strong></p>
+<p>A: Vienna is the Capital of Austria and also one of the nine                      States of Austria. Vienna has a population of about 1.6 million                      (2.2 million within the metro area) and is the largest city                      in Austria as well as its cultural, economic and political                      centre.</p>
+<p>Situated on both sides of the River Danube, and only 60 kilometers                      off Austria&#8217;s Eastern border, Vienna lies in the South East                      corner of Central Europe and is close to the Czech Republic,                      Slovakia and Hungary.</p>
+<p>Vienna is the seat of a number of United Nations offices                      and various international institutions and companies, including                      the United Nations Industrial Development Organization (UNIDO),                      the Organization of Petroleum Exporting Countries (OPEC),                      the International Atomic Energy Agency (IAEA) and the Organization                      for Security and Co-operation in Europe (OSCE).</p>
+<p><a href="#top">top</a></p>
+<p><a name="visa"></a>Q: <strong>Do I need a visa to visit Vienna, Austria?</strong></p>
+<p>A: Austria has signed the Schengen Treaty, which eliminated                      the border controls between 15 European countries. The countries                      are: Belgium, Denmark, Germany, Finland, France, Greece, Ireland,                      Italy, Luxembourg, the Netherlands, Norway, Portugal, Sweden,                      and Spain. For visitors traveling from one of these countries,                      at this time there are no personal controls when entering                      Austria.</p>
+<p>To maintain public order and safety, however, border controls                      between these countries may be executed at any time. Visitors                      from a country which is not a member of the Schengen Treaty                      require only a valid passport or a valid passport with a valid                      visa.</p>
+<p><a href="http://www.bmaa.gv.at/view.php3?f_id=1343&LNG=en">More details on entering Austria from your country</a></p>
+<p><a href="#top">top</a></p>
+<p><a name="airport"></a>Q: <strong>Vienna International Airport</strong></p>
+<p>A: Information on <a href="http://www.viennaairport.com/">Vienna International Airport</a> includes constantly updated arrival and departure times.</p>
+<p><a href="#top">top</a></p>
+<p><a name="timezone"></a>Q: <strong>What is Vienna&#8217;s Time Zone?</strong></p>
+<p>A: Vienna lies within the Central European time zone (CET).                      From the last Sunday in March to the last Sunday in October,                      summer time is in effect (MESZ).</p>
+<p><a name="power"></a>Q: <strong>What is the Electrical Current?</strong></p>
+<p>A: The voltage in Vienna is 230 Volts (Alternating Current)</p>
+<p><a href="#top">top</a></p>
+<p><a name="areacode"></a>Q: <strong>What is the International area                      code?</strong></p>
+<p>A: The area code for Vienna from abroad is: + 43 1</p>
+<p><a href="#top">top</a></p>
+<p><a name="language"></a>Q: <strong>What language is spoken in Austria?</strong></p>
+<p>A: In Austria, German is the primary language. The most common foreign language is English</p>
+<p><a href="#top">top</a></p>
+<p><a name="language"></a>Q. <strong>In what language will the conference sessions and materials be presented?</strong></p>
+<p>A. All conference presentations and materials will be presented in English.<br>
+<a href="#top">top</a></p>
+<p><a name="climate"></a>Q: <strong>What is the climate?</strong></p>
+<p>A: The climate in Vienna is generally mild and continental.                      Often there is a moderate westerly wind in the city making                      cool days even cooler. But the Viennese appreciate this wind                      because it brings fresh air from the surrounding Vienna Woods                      to the city. On some summer days the heat sizzles in the center                      of the city, most days of the year the weather is like the                      inhabitants of the city: friendly, mild, and moderate in every                      sense&#8230;</p>
+<p><a href="http://www.wien.info/wtv/wetter/wetter-e.html">Current Vienna Weather</a><br>
+(includes annual temperature and precipitation information)</p>
+<p><a href="#top">top</a></p>
+<p><a name="information"></a>Q: <strong>Where do I get more information                      on Vienna?</strong></p>
+<p>A: Visit the <a href="http://www.info.wien.at/">Die offizielle Website des WienTourismus</a>, the official website of the Vienna                      Tourist Board, for more information.</p>
+<p><a href="#top">top</a></p>
+<p><a name="hotels"></a>Q: <strong>What are the conference hotels?</strong></p>
+<p>A: The ISMB/ECCB organizers will have a selection of hotels                      available at special discounted rates for conference attendees.                      Remember most hotels offer breakfast part of their room rate.</p>
+<p><a href="#top">top</a></p>
+<p><a name="medical"></a>Q: <strong>Where can I find medical information?</strong></p>
+<p>A: Emergency Numbers:</p>
+<ul>
+<li>Ambulance Tel 144</li>
+<p><a name="medical"></a></p>
+<li>Physicians on Standby Tel 141</li>
+<p><a name="medical"></a></p>
+<li>Euro Emergency Tel. 112</li>
+<p><a name="medical"></a></p>
+<li>Physicians Hotline for Visitors (24 hours a day) Tel.                        513 95 95</li>
+<li>Dentists &#038; emergency service during the night and                        weekends Tel. 512 20 78</li>
+<li>Pharmacies, night and weekend service (recorded message)                        Tel. 15 50</li>
+</ul>
+<p><a href="#top">top</a></p>
+<p><a name="transport"></a>Q: <strong>How do get around Vienna?</strong></p>
+<p>A: Various options exist including Taxis, Public Transit                      including The Vienna Card</p>
+<p><em>Taxis</em></p>
+<p>Taxis are available in most areas of the city and are reasonably                      priced. The fare is shown on officially calibrated taximeters.                      The starting rate during the day is 2.50 €; at night                      (11:00 pm – 6:00 am) and on Sundays and public holidays                      2.60 €, surcharge for radio taxis: 2.&#8211; €. For rides                      from and to the airport, which is located outside of the city                      limits: surcharge 10.&#8211; €. Also, you can inquire about                      special airport rates. <a href="http://www.info.wien.at/article.asp?IDArticle=10163">More information</a>.</p>
+<p><em>The Vienna Card</em></p>
+<p>With the Vienna Card, you can go further&#8230; This discount                      card at a price of 16.90 € offers 72 hours of free use                      of the underground, streetcars, and buses as well as more                      than 200 discounts at museums, sightseeing attractions, and                      shops as well as in cafés and restaurants.</p>
+<p>Additional information on the <a href="http://www.info.wien.at/article.asp?IDArticle=9400">Vienna Card</a></p>
+<p><em>Public Transportation</em></p>
+<p>To visit Vienna’s sights individually and discover                      the city, it is best to use public transportation: underground,                      streetcar, bus and city train. Vienna offers a very good transportation                      network and cheap tickets (1.50 Euro for a single ride if                      the ticket is bought ahead of time, 2 Euro for a single ride                      when bought on the vehicle itself). What is available and                      different prices can be found here></p>
+<p><a href="#top">top</a></p>
+<p><a name="tipping"></a>Q: <strong>What is the custom on tipping?</strong></p>
+<p>A: In many areas such as restaurants, taxis, hairdressers,                      service stations, tipping is traditionally expected. Usually,                      the tip amounts to about 5 to 10 percent, but the size of                      the tip should be according to your satisfaction with the                      services rendered.</p>
+<p><a href="#top">top</a></p>
+<p><a name="safety"></a>Q: <strong>What can I do to ensure my personal                      safety?</strong></p>
+<p>A: Vienna is a safe city and the Viennese are friendly and                      helpful – as are most visitors to the city. Unfortunately,                      there are always exceptions. Download <a href="http://www.wien.info/wtv/Sicherheitstipps-e.doc">Tips for your personal safety</a> (Word Document).</p>
+<p>Important emergency numbers:</p>
+<ul>
+<li>Fire Department Tel. 122</li>
+<p><a name="safety"></a></p>
+<li>Police Tel 133</li>
+<p><a name="safety"></a></p>
+<li>Ambulance Tel 144</li>
+</ul>
+<p><a href="#top">top</a></p>
+<p><a name="currency"></a><strong>Q: What is the currency?</strong></p>
+<p>A: The legal tender in Austria is the Euro. Banks in Vienna are usually open:</p>
+<p>Mon to Wed, Fri 8:00 am &#8211; 3:00 pm<br>
+Thu 8:00 am &#8211; 5:30 pm</p>
+<p>Some branches are closed 12:30 &#8211; 1:30 pm<br>
+In the city center many banks are open continuously from:</p>
+<p>Mon to Wed, Fri 8:30 am &#8211; 3:00 pm<br>
+Thu 8:30 am &#8211; 5:30 pm</p>
+<p>If possible, exchange money at a bank during regular opening                      hours or use Automatic Teller Machines (ATMs), which are called                      Bankomats in Austria, or with your credit card. You can also                      exchange money at Eurotours or at the Vienna Tourist Information (<a href="http://www.wien.info/article.asp?IDArticle=9428">Tourist-Info Wien</a>).</p>
+<p><a href="#top">top</a></p>
+<p><a name="payment"></a>Q: <strong>How can I pay to register for ISMB?</strong></p>
+<p>A: Delegates can pay on-line using the following credit cards                      or mail in a Check. Accepted credit cards are: Mastercard,                      Visa, Diners Club and American Express.</p>
+<p><a href="#top">top</a></p>
+<p><a name="shuttle"></a>Q: <strong>How do I get from the airport to                      my hotel?</strong></p>
+<p>A: See <a href="http://www.info.wien.at/article.asp?IDArticle=10163">Taxis</a> and <a href="http://www.info.wien.at/article.asp?IDArticle=10263">Trains</a> information for transportation from the airport.</p>
+<p><a href="#top">top</a></p>
+<p><a name="transport-airport"></a>Q. <strong>How do I get from the Vienna Schwechat Airport to Vienna city centre?</strong></p>
+<p>A. CAT &#8211; City Airport Train to Landstrasse, Wien Mitte, ACROSS FROM THE HILTON:</p>
+<p>every 30 min. (EUR 9,00 one way / EUR 16,00 both ways)<br>
+&#8220;Schnellbahn&#8221; (railway) to Landstrasse, Wien Mitte ACROSS FROM THE HILTON</p>
+<p>Departure from the airport: at least every 30 min. (Price: EUR 3,00 one way)<br>
+Vienna Airport Lines, shuttle bus to Schwedenplatz, Westbahnhof, Sudbahnhof or Kagran. </p>
+<p>Departure from the airport: every 30 min.(Price: EUR 6,00 one way/ EUR 11,00 both ways)</p>
+<p>Taxi (approx. EUR 40,00), from the airport to the city)</p>
+<p>Limousine transfer is available for EUR 36,00 one way.</p>
+<p>For further information please contact <a href="mailto:imsbeccb2007@mondial-congress.com">imsbeccb2007@mondial-congress.com</a></p>
+<p><a href="#top">top</a></p>
+<p><a name="registration"></a>Q: <strong>Where do I register when I arrive?</strong></p>
+<p>A: Conference Registration is available from Thursday, July 19 to Wednesday, July 25 at the Austria Center Vienna.</p>
+<p><a href="#top">top</a></p>
+<p><a name="vat"></a>Q: <strong>Can I get a refund on the Austrian Value Added Tax?</strong></p>
+<p>A: All visitors residing outside the EU have the right to receive a refund on the <a href="http://www.info.wien.at/article.asp?IDArticle=10528">Austrian Value Added Tax</a>, which is included in the purchase price and on a purchase of a Minimum 75.01 Euro.</p>
+<p><a href="#top">top</a></p>
+<p><a name="lostfound"></a>Q: <strong>What should I do if I lose something?</strong></p>
+<p>A: A lost and found will be located at the information booth located at the Austria Center Vienna.</p>
+<p><a href="#top">top</a></p>
+			<!--	<p>Frequently Asked Questions</p>
+<p>What is ISCB?<br />
+What is ECCB?<br />
+What is the ISMB conference?<br />
+Why are ISMB and ECCB joined for 2007?<br />
+Who are the ISMB/ECCB 2007 Conference Chairs?<br />
+Who do I contact for information on the conference?<br />
+Where will the conference be held?<br />
+What is the address of the Austria Center Vienna?<br />
+Where is Vienna, Austria?<br />
+Do I need a visa to visit Vienna, [...]</p>
+   -->
+	
+<!-- turned comments off -->
+<!-- 		
+                        <p class="post-bot">
+			<a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/faq#respond" title="Comment on FAQ">No Comments &#187;</a>			</p> 
+-->
+			<!--
+			<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+				xmlns:dc="http://purl.org/dc/elements/1.1/"
+				xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+			<rdf:Description rdf:about="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/faq"
+    dc:identifier="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/faq"
+    dc:title="FAQ"
+    trackback:ping="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/faq/trackback" />
+</rdf:RDF>			-->
+		</div>
+		
+<!-- You can start editing here. -->
+
+
+  		<!-- If comments are closed. -->
+		<p class="nocomments"><font size="1"><a href="#top">top</a></font></p>
+		
+	
+
+	</div>
+   
+	<div class="pagenav"></div>
+	</div>
+<div id="sidebar">
+	<div id="intro">
+		
+	<div class="post">	
+		<h2 class="post-title">15th Annual International Conference on Intelligent Systems for Molecular Biology (ISMB)<br>& 6th European Conference on Computational Biology (ECCB)</h2>
+		<p class="post-info">Vienna, Austria: July 21-25, 2007</p>
+
+
+<!--	
+<img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/themes/crayonworld-10/img/profile.jpg" class="profile" /> 
+			<p><strong>ISMB/ECCB 2007</strong></p>
+			<p>Vienna, Austria: July 21-25, 2007</p>
+-->
+<!--			
+<p>There are 92 posts and 0 comments so far.</p>		      -->
+	</div>	
+</div>	
+		
+<div id="sideone"> 
+
+<!--
+
+	<h2>Quick Bits</h2>
+						<p>This is for the Asides functionality.<br/> Enter the id of the category you want to be treated as Asides, in the Main Template (index.php) <br/></p>
+			
+
+-->
+
+
+<!-- KEYNOTES START 
+
+	<h2>Keynotes</h2>
+
+  <div>
+
+<span class="feed">
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-f.gif" align="right" width="41" height="41"><strong>Keynote Speaker</strong><br>blah blah blah blah blah blah<br>
+
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-m.gif" align="right" width="41" height="41"><strong>Keynote Speaker</strong><br>yada yada yada yada yada yada<br>
+
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-m.gif" align="right" width="41" height="41"><strong>Keynote Speaker</strong><br>yada yada yada blah blah blah<br>
+
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-f.gif" align="right" width="41" height="41"><strong>Keynote Speaker</strong><br>blah blah blah blah blah blah<br>
+
+</span></div>
+
+ KEYNOTES END -->
+
+
+<!-- SPONSORS START 
+
+	<h2>Premier Sponsors</h2>
+
+
+<p><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-images/keynote-f.gif" width="41" height="41"><br>
+
+ SPONSORS END -->
+
+<!-- WEATHER START
+
+<div>
+
+<h2>Venue</h2>
+<p class="post-info">
+<a href="http://www.acv.at/evo/web/acv/1584_DE">Austria Center Vienna</a><br><a href="http://www.acv.at/evo/web/acv/1584_DE"><img id="image31" src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/centre.png" alt="Austria Center Vienna" border="0"></a>
+</p>
+
+<span class="feed">
+<br><script language=javascript>var LocationID = 'AUXX0025';</script>
+<script language=javascript src='http://www.theweathernetwork.com/weatherbutton/wxbutton.js'></script>
+
+</span>
+</div>
+
+-->
+
+
+<!--
+		<h2>Links</h2>
+	<ul> </ul>	
+
+-->
+		
+</div>
+		
+	<div id="sidetwo">
+
+<!-- <h2><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/">Home</a></h2> -->
+
+<!-- <h2>Menu</h2> -->
+
+<!-- MENU START -->
+
+          <!--Optional Expand/ Contact All links. Remove if desired-->
+        <p class="post-info">    <a href="javascript:sweeptoggle('expand')">+Expand 
+            All</a> | <a href="javascript:sweeptoggle('contract')">-Contract All</a></p>
+            <div></div>
+
+			
+<!--PROGRAM-->
+            <p onclick="expandcontent(this, 'sc1')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Program</b></p>
+            <div id="sc1" class="switchcontent"> 
+        <ul>
+         <li><a href="agenda.html">Agenda-at-a-Glance</a></li>
+         <li><a href="program/schedule.html">Conference Schedule</a></li>
+         <li><a href="program/bof.html">Birds of a Feather</a></li>
+         <li><a href="program/demonstrations.html">Demonstrations</a></li>
+         <li><a href="program/highlights.html">Highlights Track</a></li>
+         <li><a href="program/industry.html">Industry Posters</a></li>
+         <li><a href="program/industrytrack.html">Industry Track</a></li>
+         <li><a href="program/papers.html">Papers</a></li>
+         <li><a href="program/plostrack.html">PLoS Track</a></li>
+         <li><a href="program/posters.html">Posters</a></li>
+         <li><a href="program/sigs.html">Satellite Meetings and SIGs</a></li>
+         <li><a href="program/scientific.html">Scientific Program Information</a></li>
+         <li><a href="program/social.html">Social Events</a></li>
+         <li><a href="program/specialsessions.html">Special Sessions</a></li>
+         <li><a href="program/scs.html">Student Council Symposium</a></li>
+         <li><a href="program/tutorials.html">Tutorials</a></li>
+        </ul>
+            </div>
+
+
+<!--KEYNOTES-->
+
+            <div> 
++ <strong><font color="black"><a href="keynotes.html">Keynotes</a></font></strong>
+            </div>
+
+			
+<!--DEADLINES-->
+<!--
+            <p onClick="expandcontent(this, 'sc2')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Deadlines</b></p>
+
+            <div id="sc2" class="switchcontent"> 
+              <ul>
+                 <li><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/deadlines/">Deadlines</a></li>
+              </ul>
+            </div>
+-->
+
+            <div> 
++ <strong><a href="deadlines.html">Deadlines</a></strong>
+            </div>
+
+
+<!--SUBS GUIDELINES-->
+
+            <p onclick="expandcontent(this, 'sc3')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Submissions/Guidelines</b></p>
+            <div id="sc3" class="switchcontent"> 
+
+        <ul>         
+         <li><a href="bof.html">Birds of a Feather (BoF)</a></li>
+         <li><a href="posters-latecall.html">Call for Late Posters</a></li>
+         <li><a href="papers.html">Call for Papers</a></li>
+         <li><a href="specialsessions.html">Special Sessions</a></li>
+         <li><a href="highlights.html">Highlights Track</a></li>
+         <li><a href="plostrack.html">PLoS Track</a></li>
+         <li><a href="program/posters.html">Posters</a></li>
+         <li><a href="demonstrations.html">Demonstrations</a></li>
+         <li><a href="tutorials.html">Tutorials</a></li>
+         <li><a href="industry.html">Industry Track</a></li>
+         <li><a href="sigs.html">Special Interest Groups (SIGs)</a></li>
+         <li><a href="scs3.html">Student Council Symposium (SCS3)</a></li>
+         <li><a href="travelsupport.html">Travel Fellowships</a></li>
+        </ul>
+            </div>
+
+		
+			<!--submissions-->
+			<!--
+            <p onClick="expandcontent(this, 'sc4')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Submissions</b></p>
+            <div id="sc4" class="switchcontent"> 
+              <ul>
+                <li>Call for Papers</li>
+                <li>Call for Tutorials</li>
+                <li>Late Breaking Poster Session Call</li>
+                <li>Call for PLoS Track</li>
+                <li>Call for SCS2 Posters</li>
+                <li>Academic Demos</li>
+                <li>Industry Demos</li>
+                <li>Travel Fellowships</li>
+                <li>Poster Guidelines &amp; Schedule</li>
+                <li>BOF Sign-up</li>
+                <li>Paper Guidelines</li>
+              </ul>
+            </div>
+			-->
+			
+
+<!--REGISTRATION-->
+
+            <div> 
++ <strong><a href="registration.html">Registration</a></strong>
+            </div>
+
+		
+			<!--registration-->
+			<!--
+            <p onClick="expandcontent(this, 'sc5')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Registration</b></p>
+
+            <div id="sc5" class="switchcontent"> 
+              <ul>
+                <li><a href="">Keynotes</a></li>
+                <li><a href="">Tutorials</a></li>
+                <li><a href="">Demos</a></li>
+              </ul>
+            </div>
+			-->
+			
+
+<!--GENERAL INFO-->
+            <p onclick="expandcontent(this, 'sc6')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>General Information</b> </p>
+
+            <div id="sc6" class="switchcontent"> 
+
+<ul>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="airtravel.html">Air Travel</a></li>
+<li><a href="activities.html">Children/Family Activities</a></li>
+<li><a href="childcare.html">Child Care</a></li>
+<li><a href="venue.html">Conference Venue</a></li>
+<li><a href="housing.html">Housing</a></li>
+<li><a href="tours.html">Tours</a></li>
+<li><a href="transit.html">Transit Passes</a></li>
+<li><a href="volunteers.html">Volunteers</a></li>
+</ul>
+
+            </div>
+
+
+
+<!--SPONSORS/EXHIBITORS-->
+
+            <p onclick="expandcontent(this, 'sc7a')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Sponsors & Exhibitors</b></p>
+            <div id="sc7a" class="switchcontent"> 
+              <ul>
+                 <li><a href="sponsors.html">Conference Sponsors</a></li>
+                 <li><a href="exhibitfloorplan.html">Conference Exhibitors</a></li>
+              </ul>
+            </div>
+
+
+
+<!--SPONSORS/EXHIBITORS INFO-->
+
+            <p onclick="expandcontent(this, 'sc7')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Sponsors/Exhibitors Information</b></p>
+            <div id="sc7" class="switchcontent"> 
+              <ul>
+                 <li><a href="sponsoropps.html">Sponsor Opportunities</a></li>
+                 <li><a href="sponsorbrochure.html">Sponsor Brochure</a></li>
+                 <li><a href="http://www.iscb.org/cms_addon/conferences/ismb07/sponsor_signup.php">Sponsor & Exhibitor Sign-up</a></li>
+                 <li><a href="exhibitorinfo.html">Exhibitor Information</a></li> 
+            <!--     <li><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitresources/">Exhibitor Resources</a></li> -->
+            <li><a href="exhibitschedule.html">Exhibitor Schedule</a></li> 
+                <li><a href="exhibitfloorplan.html">Exhibitor Floor Plan</a></li> 
+              </ul>
+            </div>
+			
+			<!--committees-->
+            <p onclick="expandcontent(this, 'sc8')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Committees</b></p>
+
+            <div id="sc8" class="switchcontent"> 
+              <ul>
+<!-- <li><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/">All Committees</a></li> -->
+<li><a href="committees/chairs.html">Conference Chairs</a></li>
+<li><a href="committees/steeringcommittee.html">Steering Committee</a></li>
+<li><a href="committees/soc.html">Scientific Organizing Committee</a></li>
+<li><a href="committees/areachairs.html">Area Chairs</a></li>
+<li><a href="committees/highlights.html">Highlights Track</a></li>
+<li><a href="committees/plostrack.html">PLoS Track</a></li>
+            </ul>
+            </div>
+
+			<!--press pass-->
+<!--
+            <p onClick="expandcontent(this, 'sc9')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Press Pass</b> </p>
+            <div id="sc9" class="switchcontent"> 
+              <ul>
+                <li><a href="http://ismb.org/">Press Pass</a></li>
+              </ul>
+            </div>
+-->
+			
+<!--CONTACTS-->
+
+            <p onclick="expandcontent(this, 'sc10')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Contact Us</b> </p>
+            <div id="sc10" class="switchcontent"> 
+              <ul>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="submissioncontacts.html">Submission Contacts</a></li>
+              </ul>
+            </div>
+
+
+
+<!--CONFERENCE PROMO-->
+
+            <div> 
++ <strong><a href="promotion.html">Conference Promotion</a></strong>
+            </div>
+
+
+<!--PRESS PASS-->
+
+            <div> 
++ <strong><a href="http://www.iscb.org/cms_addon/conferences/ismb/presspass.php">Press Pass</a></strong>
+            </div>
+
+
+<!--UPDATES-->
+
+            <p onclick="expandcontent(this, 'sc11')" style="cursor: pointer;"><span class="showstate">+ 
+              </span><b>Blog Updates</b> </p>
+            <div id="sc11" class="switchcontent"> 
+
+              <ul><li><a href="feedhtml.html" title="Subscribe to Updates using RSS">Subscribe<img src="wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"></a></li>
+
+<li><a href="http://www.feedpass.com/ISMBECCB2007">How to Subscribe</a></li>
+
+
+		<li><a href='2007/09.html' title='September 2007'>September 2007</a>&nbsp;(2)</li>
+	<li><a href='2007/07.html' title='July 2007'>July 2007</a>&nbsp;(4)</li>
+	<li><a href='2007/06.html' title='June 2007'>June 2007</a>&nbsp;(2)</li>
+	<li><a href='2007/05.html' title='May 2007'>May 2007</a>&nbsp;(1)</li>
+	<li><a href='2007/03.html' title='March 2007'>March 2007</a>&nbsp;(2)</li>
+	<li><a href='2007/01.html' title='January 2007'>January 2007</a>&nbsp;(2)</li>
+	<li><a href='2006/12.html' title='December 2006'>December 2006</a>&nbsp;(3)</li>
+	<li><a href='2006/11.html' title='November 2006'>November 2006</a>&nbsp;(1)</li>
+	<li><a href='2006/10.html' title='October 2006'>October 2006</a>&nbsp;(1)</li>
+	<li><a href='2006/09.html' title='September 2006'>September 2006</a>&nbsp;(1)</li>
+	<li><a href='2006/07.html' title='July 2006'>July 2006</a>&nbsp;(1)</li>
+</ul>
+            </div>
+
+<!--MENU END-->
+
+
+
+<!--TAGS-->
+<!--	
+        <h2>Tags</h2>
+	<ul>
+			<li class="cat-item cat-item-4"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/category/announcements" title="View all posts filed under announcements">announcements</a> (11)
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/category/uncategorized" title="View all posts filed under Uncategorized">Uncategorized</a> (9)
+</li>
+	</ul>		
+-->
+
+
+<!--OLD UPDATES-->
+<!--
+	<h2>Updates</h2>
+
+<p class="post-info"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/feed" title="Syndicate this site using RSS"><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"> updates</a></span><br>
+
+	<ul>	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/09' title='September 2007'>September 2007</a>&nbsp;(2)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/07' title='July 2007'>July 2007</a>&nbsp;(4)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/06' title='June 2007'>June 2007</a>&nbsp;(2)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/05' title='May 2007'>May 2007</a>&nbsp;(1)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/03' title='March 2007'>March 2007</a>&nbsp;(2)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2007/01' title='January 2007'>January 2007</a>&nbsp;(2)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/12' title='December 2006'>December 2006</a>&nbsp;(3)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/11' title='November 2006'>November 2006</a>&nbsp;(1)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/10' title='October 2006'>October 2006</a>&nbsp;(1)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/09' title='September 2006'>September 2006</a>&nbsp;(1)</li>
+	<li><a href='http://www.iscb.org/cms_addon/conferences/ismbeccb2007/2006/07' title='July 2006'>July 2006</a>&nbsp;(1)</li>
+</ul>	
+-->
+
+
+<!-- 
+<a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/comments/feed" title="The latest comments to all posts in RSS"><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"> comments</a></span>
+-->
+
+<!--PAGES-->
+<!--	
+        <h2>Pages</h2>
+	<ul><li class="page_item page-item-7"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/agenda" title="Agenda-at-a-Glance">Agenda-at-a-Glance</a></li>
+<li class="page_item page-item-46"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/airtravel" title="Air Travel">Air Travel</a></li>
+<li class="page_item page-item-209"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/bof" title="Birds of a Feather (BoF)">Birds of a Feather (BoF)</a></li>
+<li class="page_item page-item-208"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters-latecall" title="Call for Late Posters">Call for Late Posters</a></li>
+<li class="page_item page-item-83"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/papers" title="Call for Papers">Call for Papers</a></li>
+<li class="page_item page-item-220"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/childcare" title="Child Care">Child Care</a></li>
+<li class="page_item page-item-202"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/activities" title="Children/Family Activities">Children/Family Activities</a></li>
+<li class="page_item page-item-90"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees" title="Committees">Committees</a>
+<ul>
+	<li class="page_item page-item-89"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/areachairs" title="Area Chairs">Area Chairs</a></li>
+	<li class="page_item page-item-87"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/papers-chairs" title="Call for Papers Area Chairs">Call for Papers Area Chairs</a></li>
+	<li class="page_item page-item-10"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/chairs" title="Conference Chairs">Conference Chairs</a></li>
+	<li class="page_item page-item-205"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/highlights" title="Highlights Track Area Chairs">Highlights Track Area Chairs</a></li>
+	<li class="page_item page-item-164"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/plostrack" title="PLoS Track">PLoS Track</a></li>
+	<li class="page_item page-item-42"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/soc" title="Scientific Organizing Committee">Scientific Organizing Committee</a></li>
+	<li class="page_item page-item-41"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/committees/steeringcommittee" title="Steering Committee">Steering Committee</a></li>
+</ul>
+</li>
+<li class="page_item page-item-130"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/promotion" title="Conference Promotion">Conference Promotion</a></li>
+<li class="page_item page-item-112"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsors" title="Conference Sponsors">Conference Sponsors</a></li>
+<li class="page_item page-item-132"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/venue" title="Conference Venue">Conference Venue</a></li>
+<li class="page_item page-item-9"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/contacts" title="Contact Us">Contact Us</a></li>
+<li class="page_item page-item-68"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/demonstrations" title="Demonstrations">Demonstrations</a></li>
+<li class="page_item page-item-119"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitfloorplan" title="Exhibit Floor Plan">Exhibit Floor Plan</a></li>
+<li class="page_item page-item-186"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitorinfo" title="Exhibitor Information">Exhibitor Information</a></li>
+<li class="page_item page-item-194"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitresources" title="Exhibitor Resources">Exhibitor Resources</a></li>
+<li class="page_item page-item-193"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/exhibitschedule" title="Exhibitor Schedule">Exhibitor Schedule</a></li>
+<li class="page_item page-item-2"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/faq" title="FAQ">FAQ</a></li>
+<li class="page_item page-item-138"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/housing" title="Housing">Housing</a></li>
+<li class="page_item page-item-12"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/subscribe" title="How to Subscribe">How to Subscribe</a></li>
+<li class="page_item page-item-210"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/volunteers" title="ISMB/ECCB 2007 Conference Volunteers">ISMB/ECCB 2007 Conference Volunteers</a></li>
+<li class="page_item page-item-45"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/deadlines" title="ISMB/ECCB 2007 Deadlines">ISMB/ECCB 2007 Deadlines</a></li>
+<li class="page_item page-item-58"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/highlights" title="ISMB/ECCB 2007 Highlights Track: Call for Proposals">ISMB/ECCB 2007 Highlights Track: Call for Proposals</a></li>
+<li class="page_item page-item-86"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/industry" title="ISMB/ECCB 2007 Industry Track: Call for Proposals">ISMB/ECCB 2007 Industry Track: Call for Proposals</a></li>
+<li class="page_item page-item-125"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/registration" title="ISMB/ECCB 2007 Registration">ISMB/ECCB 2007 Registration</a>
+<ul>
+	<li class="page_item page-item-165"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/registration/membership" title="ISCB Membership Fee Chart">ISCB Membership Fee Chart</a></li>
+</ul>
+</li>
+<li class="page_item page-item-78"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/keynotes" title="Keynotes">Keynotes</a></li>
+<li class="page_item page-item-48"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/keynotespresentations" title="Keynotes Presentations">Keynotes Presentations</a></li>
+<li class="page_item page-item-85"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/plostrack" title="PLoS Track at ISMB/ECCB 2007">PLoS Track at ISMB/ECCB 2007</a></li>
+<li class="page_item page-item-121"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters" title="Posters">Posters</a>
+<ul>
+	<li class="page_item page-item-124"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/posters/posterboard" title="Poster Board Dimensions">Poster Board Dimensions</a></li>
+</ul>
+</li>
+<li class="page_item page-item-134"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program" title="Program">Program</a>
+<ul>
+	<li class="page_item page-item-185"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/papers" title="Accepted Papers">Accepted Papers</a></li>
+	<li class="page_item page-item-177"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/affiliate" title="Affiliate Meetings">Affiliate Meetings</a></li>
+	<li class="page_item page-item-234"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/bof" title="Birds of a Feather (BoF)">Birds of a Feather (BoF)</a></li>
+	<li class="page_item page-item-223"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/demonstrations" title="Demonstrations">Demonstrations</a></li>
+	<li class="page_item page-item-229"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/highlights" title="Highlights Track">Highlights Track</a></li>
+	<li class="page_item page-item-222"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/industry" title="Industry Posters">Industry Posters</a></li>
+	<li class="page_item page-item-228"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/industrytrack" title="Industry Track">Industry Track</a></li>
+	<li class="page_item page-item-219"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/schedule" title="ISMB/ECCB 2007 Conference Schedule">ISMB/ECCB 2007 Conference Schedule</a></li>
+	<li class="page_item page-item-227"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/plostrack" title="PLoS Track">PLoS Track</a></li>
+	<li class="page_item page-item-152"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/sigs" title="Satellite Meetings and SIGs">Satellite Meetings and SIGs</a></li>
+	<li class="page_item page-item-79"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/scientific" title="Scientific Program Information">Scientific Program Information</a></li>
+	<li class="page_item page-item-146"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/social" title="Social Events">Social Events</a></li>
+	<li class="page_item page-item-158"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/specialsessions" title="Special Sessions">Special Sessions</a>
+	<ul>
+		<li class="page_item page-item-167"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/specialsessions/details" title="Special Sessions Details">Special Sessions Details</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-153"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/scs" title="Student Council Symposium (SCS3)">Student Council Symposium (SCS3)</a></li>
+	<li class="page_item page-item-136"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/program/tutorials" title="Tutorials Program">Tutorials Program</a></li>
+</ul>
+</li>
+<li class="page_item page-item-54"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sigs" title="Special Interest Group Meetings (SIGs)">Special Interest Group Meetings (SIGs)</a></li>
+<li class="page_item page-item-35"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/specialsessions" title="Special Sessions">Special Sessions</a></li>
+<li class="page_item page-item-103"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsorbrochure" title="Sponsor Brochure">Sponsor Brochure</a></li>
+<li class="page_item page-item-100"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps" title="Sponsor Opportunities">Sponsor Opportunities</a>
+<ul>
+	<li class="page_item page-item-114"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/addpkg" title="Additional Sponsor Opportunities">Additional Sponsor Opportunities</a></li>
+	<li class="page_item page-item-116"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/demopkg" title="Demonstration Package">Demonstration Package</a></li>
+	<li class="page_item page-item-115"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/exhibitpkg" title="Exhibitor Package">Exhibitor Package</a></li>
+	<li class="page_item page-item-117"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/posterpkg" title="Industry Poster Package">Industry Poster Package</a></li>
+	<li class="page_item page-item-118"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/pastsponsors" title="Past Sponsors and Exhibitors">Past Sponsors and Exhibitors</a></li>
+	<li class="page_item page-item-113"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/sponsoropps/sponsorpkg" title="Sponsor Package">Sponsor Package</a></li>
+</ul>
+</li>
+<li class="page_item page-item-174"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/scs3" title="Student Council Symposium (SCS3)">Student Council Symposium (SCS3)</a></li>
+<li class="page_item page-item-108"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/submissioncontacts" title="Submission Contacts">Submission Contacts</a></li>
+<li class="page_item page-item-139"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/tours" title="Tours">Tours</a></li>
+<li class="page_item page-item-111"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/travelsupport" title="Travel Fellowships">Travel Fellowships</a></li>
+<li class="page_item page-item-59"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/tutorials" title="Tutorials">Tutorials</a></li>
+<li class="page_item page-item-147"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/transit" title="Vienna Transit Pass">Vienna Transit Pass</a></li>
+<li class="page_item page-item-43"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/weather" title="Weather Today">Weather Today</a></li>
+</ul>	
+-->
+
+<!--SEARCH-->
+<!--	
+        <form id="searchform" method="get" action="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/">
+		<input type="text" class="text" name="s" id="s" value="" size="15" /><br/>
+		<input type="submit" name="submit" value="Search " />
+	</form>
+-->
+
+<div>
+
+<!--LOGOS-->
+
+<br>
+<!--
+<a id="p73" href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/12/FullPageAdvert.pdf"><img id="image26" src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/flyer.png" alt="2007 Flyer - 306 KB PDF" title="306 KB PDF" border="0" vspace="1"></a>
+-->
+
+<a href="program/sigs.html"><img id="image171" src="wp-content/uploads/2007/03/meetings1.png" alt="SIGs &amp; Satellite Meetings" vspace="1"></a>
+
+<a href="http://iscbsc.org/scs3/index.htm"><img id="image182" src="wp-content/uploads/2007/03/scs3-border2.jpg" alt="Student Council Symposium (SCS)" vspace="1" border="0"></a>
+
+<a href="program/affiliate.html">
+<img id="image175" src="wp-content/uploads/2007/03/affiliate.png" alt="Affiliate Meetings" vspace="1"></a>
+
+<a href="http://www.iscb.org/"><img src="wp-images/iscblogo.jpg" alt="International Society for Computational Biology" vspace="1" border="0"></a>
+
+</div>
+
+
+<!--       <h2>Subscribe</h2> 
+<p class="post-info"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/feed" title="Syndicate this site using RSS"><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"> updates</a></span><br>
+
+<a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/comments/feed" title="The latest comments to all posts in RSS"><img src="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-content/uploads/2006/07/feed-icon-16x16.jpg" vspace="3" align="absmiddle" border="0" hspace="0"> comments</a></span>
+-->
+
+<!--
+<div>
+<ul><br>
+<a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/wp-login.php">Log in</a><br>
+</ul>
+</div>
+-->
+
+</p>
+</div></div><div id="footer">
+
+<!--
+  <div><span class="feed"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/feed" title="Syndicate this site using RSS">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></span><br/>
+		<span class="feed"><a href="http://www.iscb.org/cms_addon/conferences/ismbeccb2007/comments/feed" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></span>
+</div>
+-->
+
+		<center><strong>ISMB/ECCB 2007 &copy; 2009</strong> <a href="http://www.iscb.org/ismbeccb2007/?feed=rss2"><img src="wp-content/uploads/2006/07/feed-icon-10x10.gif" vspace="0" align="absmiddle" border="0" hspace="0"></a> </center>
+</div>
+</div>
+
+<!-- 
+<center>based on wordpress theme <a href="http://wpthemes.info/crayon-world/"target="_blank">CrayonWorld</a></center>
+-->
+
+</body>
+
+
+</html>

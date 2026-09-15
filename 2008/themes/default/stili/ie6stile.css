@@ -1,0 +1,22 @@
+/* Variazioni di stile specifiche per IE6 */
+#leftcolumn, #rightcolumn, #content
+{
+	height: 560px;
+}
+#header h2.bits
+{
+	
+	margin-left: 692px;
+}
+#menu ul li a span
+{
+	width: 186px;
+	height: 22px;
+	display: block;
+	visibility: hidden;
+}
+#menu li ul 
+{
+	left: 188px; /* Set 1px less than menu width */
+      
+}

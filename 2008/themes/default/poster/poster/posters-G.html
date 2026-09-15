@@ -1,0 +1,453 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+* { font-size:13px; font-family: Verdana, "Trebuchet MS", Arial, sans-serif; }
+div { width:800px; margin:5px 0; padding-bottom:5px;}
+div.titolo_pagina { font-weight:bold; font-size:15px; margin-bottom:20px; }
+div.poster { font-weight:bold; border-bottom:1px solid silver; font-size:14px; margin-top:20px;}
+div.titolo { font-weight:bold; font-size:14px; }
+div.autori { border-bottom:1px solid silver; }
+div.inst { border-bottom:1px solid silver; }
+div.shabs { font-style:italic; font-size:12px; border-bottom:1px solid gray;}
+div.exabs { font-size:12px;}
+div.keys { color:gray; }
+</style>
+</head>
+<body>
+<div class="titolo_pagina">
+Poster Abstracts for Category G: Proteomics
+</div>
+<a name="1
+"></a>
+<div class="poster">
+Poster G01
+</div>
+<div class="titolo">
+A procedure for the analysis of MALDI imaging data
+</div>
+<div class="autori">
+Nicola Barbarini (1), Christian Fuchsberger (2), Wolfgang Wieder (3), Georg Bartsch (2), Günther Bonn (3), Helmut Klocker (2), Riccardo Bellazzi (1)
+</div>
+<div class="inst">
+(1) Laboratory for Biomedical Informatics, Department of Computer Science and Systems, University of Pavia, Pavia, Italy, (2) Department of Urology, Medical University of Innsbruck , Innsbruck, Austria, (3) Institute of Analytical Chemistry and Radiochemistry, Leopold-Franzens University, Innsbruck, Austria
+</div>
+<div class="shabs">
+MALDI imaging is a technique able to visualize the spatial distribution of the proteomic profile of a biological tissue section.
+Analysis and visualization of these high-dimensional data cubes is challenging.
+Before to utilize it for biomarker discovery by a supervised approach, it’s necessary to demonstrate the ability of this technique to describe the spatial variability of a tissue by an unsupervised approach. 
+We present an extended procedure for the analysis of MALDI imaging data for this type of study. To show the validity of our approach we analyzed prostate cancer tissue sections.
+</div>
+<div class="exabs">
+Mass spectrometry imaging (MSI) is a technique able to visualize the spatial distribution of metabolites, peptides or proteins of a biological tissue section. It combines the chemical specificity and parallel detection of MS with microscopic imaging capabilities. An emerging technology in the field of MSI is MALDI imaging. Its application to disease processes is of special interest, in particular as a promising approach for the discovery of new biomarkers. Analysis and visualization of these high-dimensional data cubes is challenging.
+Because this technology is quite young, before to utilize it for biomarker discovery by a supervised approach, it’s necessary to demonstrate the ability of this technique to describe the spatial variability of a tissue following an unsupervised approach. 
+We present a framework for the analysis of MALDI imaging data for this type of unsupervised studies and its application on a dataset from prostate cancer tissue. Within this framework we developed a novel feature identification and reduction algorithm for the preprocessing step and propose a kernel-density based clustering algorithm for the unsupervised analysis.
+The data acquisition includes the collection and the freezing of the tissue and the cutting of thin sections. Spectra are acquired every 150µm.
+The preprocessing phase is composed of the following tasks: (1) quality control, (2) noise removal, and (3) spectra normalization.
+The most innovative preprocessing step of our framework is the method used for the feature identification and reduction. We propose the following strategy: first, we identify the features of every single spectrum with an algorithm able to extract the isotopic distribution; second, we generate a matrix containing all the identified features (isotopic distributions) for all the spectra. 
+As a matter of fact, for classification purposes it is convenient to create a common matrix composed of all spectra (cols) and commonly identified features (rows). Therefore, it is essential to align the different features among spectra. The proposed method consists of the following steps: (a) The set of all the identified features are considered in decreasing order of intensity; given a specific feature all the other ones that are within a window of tolerance are aligned with the feature considered. (b) The features that are only common in a very low number of spectra are eliminated. (c)  Because every feature requires a value for all the spectra, since a feature is a isotopic distribution that takes up a known range of m/z, that value for spectra, to which this feature does not belong, is assigned calculating the maximum value in that range of remaining spectrum after peak extraction.
+For the classification of the different tissue regions we considered a prototype based clustering approach, namely K-means, and extended Pixelmap, a kernel-density based algorithm.
+Density based clustering is based on the idea that dense regions of similar tissue are surrounded by low density regions. This definition favours the identification of irregular clusters in noisy environments, such as in the highly heterogeneous prostate tissue. Therefore, the idea is to find clusters of related spectra using the mass dimension and then to perform a second kernel density based clustering on the spatial dimensions.
+We applied our framework to a MSI dataset obtained from a section of prostate cancer tissue, collected at the time of surgery from men undergoing radical prostatectomy. The raw dataset is composed of 7410 spectra, acquired in a 144x56 grid. Each spectrum is composed of 89862 points between 2,000 and 20,000 m/z.
+After removing all spectra without signal during quality control, 5872 spectra remain. In the case of this specific dataset the normalization of the spectra has not been considered necessary, while an alignment procedure has been implemented for the creation of the analysis matrix.
+For the feature identification step, the 10 most abundant isotopic distributions have been extracted for every profile. Then groups are formed utilizing a window of tolerance equal to six times the resolution of the instrument, obtaining 512 groups (features). The features common to less than 0.3% of the spectra were removed. Hence we obtained a data matrix with 117 rows/features and 5872 columns/spectra.
+For the K-means clustering the EM method estimated 19 (SD: 15-22) clusters for the different tissue slides. The clusters distribution reflects the high heterogeneity of the prostate tissue. The clusters identified by the kernel density based approach were more homogeneous. Furthermore many low quality spectra were treated as noise and excluded.
+The reported unsupervised results were interpreted by a clinical expert by overlapping a progressive Haematoxilin Eosin (HE) stained slice. The slice was recorded with a microscope (magnitude 10x) and overlapped based on tissue borders and cuttings. A senior pathologist assigned the obtained clusters of one tissue slide to three different types (i) benign, (ii) cancer and (iii) prostatic intraepithelial neoplasia (PIN). The last one is believed to be the most likely precursor of prostate cancer. Additionally subjective confidence levels were asked. In the table below the assignments for 19 identified clusters are shown.
+Only four clusters could not be assigned, mainly due to the overlap of different tissue subtypes. Furthermore, prostatic cells are 4µm in size, the machine resolution is around 50µm; therefore, transition zone between different cell structures are critical to classify.	
+In conclusion, our findings suggest that the developed framework could be an effective solution for the analysis of MSI data and that MALDI imaging data can well describe the histological variability of the analyzed tissue.
+</div>
+<div class="keys">
+Keywords: Mass spectrometry, MALDI imaging, biomarker discovery, peak detection
+</div>
+<a name="2
+"></a>
+<div class="poster">
+Poster G02
+</div>
+<div class="titolo">
+Backing up 2DE Depletion with Wavelet Detection Methods
+</div>
+<div class="autori">
+Soggiu A.  (1), Marullo O.  (2), Roncada P.  (3), Capobianco E.  (4)
+</div>
+<div class="inst">
+(1) Proteotech s.r.l., (2) CRS4 Bioinformatics Laboratory, (3) Istituto Spallanzani-Sezione di Proteomica, Un. Milano, (4) CRS4 Bioinformatics Laboratory
+</div>
+<div class="shabs">
+High-abundant proteins are the target of depletion methods usually applied to 2D electrophoresis (2DE) of human biological fluids (serum, plasma). Detection of low-abundant proteins is of interest for biomarkers of disease when being studied by 2DE or LC/MS. After depletion of very abundant proteins, serum samples consist of an enriched pool of low-abundant proteins that can be further studied without significant interferences, and whose spots become visible. We have successfully denoised the 2DE images with wavelets methods and reproduced in silico the performance obtained by depletion. 
+</div>
+<div class="exabs">
+1. Introduction 
+Typical high-abundant proteins, including albumin, IgG, IgA and others, are the target of depletion methods usually applied to 2D electrophoresis (2DE) of human biological fluids like serum and plasma. 
+Detection of low-abundant proteins is of interest with regard to biomarkers for disease when being studied by 2DE or liquid chromatography-mass spectrometry (LC/MS). 
+After depletion of very abundant proteins, serum samples consist of an enriched pool of low-abundant proteins that can be further studied without significant interferences, thus allowing for a full identification of the low abundant proteins, whose spots become now more visible. 
+2. Sample description 
+Human blood samples were collected into BD Vacutainer serum separation tubes. Blood was allowed to clot at room temperature for 1 hour. Samples were centrifuged at 3000 x g for 30 min after which serum was collected. Serum was stored at -80°C until analyzed. 
+3. Technical explanation of depletion tool and action. 
+Albumin and immunoglobulins were depleted from human serum samples (n=8) by using a dedicated kit (Albumin and IgG Removal Kit - GE Healthcare), according to the manufacturer's instructions. Efficiency and specificity of albumin and IgG removal have been monitored by 1D and 2D-PAGE. 
+4. Computational Methods 
+A wavelet transform maps an observed signal or image from a noisy function domain to a noisy wavelet coefficients domain. It is possible to achieve a sparse system decomposition through de-noising, and then map back to the original domain so as to compactly reconstruct the original signal after having explored its different time-scale components. 
+In a wavelet representation of signals and images, seeking to achieve sparsity means to eliminate redundant information, sometimes not clearly separable from noise. As only a few coefficients can be used to reconstruct the signal at hand, a practical goal is achieving near-optimality with regard to both the signal compression power and the bias-variance trade-off of its estimator. Suitable thresholding makes such estimators effective in practice. 
+We have employed wavelet-based techniques and their derived denoisers to explore 2DE from disease-control human samples. We have pursued the goal of mimicking in silico the spot detection performance experimentally obtained by depletion methods, thus hoping to read through the critical high-abundant protein regions. 
+The depleted samples have been treated as the target templates to refer to with the computational detection methods, starting from the non-depleted input images. This choice offered the opportunity to establish quality benchmarks functional to calibrate the application of various possible wavelet-based denoisers. As a result, we were able to perform model selection based on the similarity of the images elaborated before and after computational depletion. 
+5. Results 
+Our outcomes are extremely encouraging: not only we are able to denoise the images and can inspect the critical regions without the initial interferences, but by looking at the original non-depleted images we also recover shadow spots that have been eliminated by depletion despite their potential interest for further identification analysis. We show and compare the outcomes of two techniques which both return quite satisfactory performance. 
+6. Future Work 
+We are currently extending this analysis to the whole sample that we have available, before and after depletion, and we plan to embed the analysis with other types of controls for the best possible identification of the shadow spots. 
+Acknowledgments: Progetto Cluster, PR. Tome, CRS4 Bioinformatics Lab
+</div>
+<div class="keys">
+Keywords: Proteomics, 2DE Depletion, Wavelet Denoising
+</div>
+<a name="3
+"></a>
+<div class="poster">
+Poster G03
+</div>
+<div class="titolo">
+Novel visualization tools for proteomics data
+</div>
+<div class="autori">
+Luca Bianco, Eleonora Grosso, Jennifer A. Mead, Conrad Bessant
+</div>
+<div class="inst">
+Cranfield Health
+</div>
+<div class="shabs">
+The Genome Annotating Proteomic Pipeline (GAPP) is a freely accessible web-based pipeline for high throughput peptide identification from proteomic mass spectrometry (MS) data.  
+We describe some different ways of visualizing proteomics data within the context of GAPP. They comprise an experiment-centric view, a protein-centric view and a novel differential view which allow users to compare the results of different experiments, in terms of identified gene products, in an intuitive and graphical way. Peptides filtering by a Gene Ontology based solution that we implemented is also described.
+</div>
+<div class="exabs">
+Abstract
+The Genome Annotating Proteomic Pipeline (GAPP) [1,2], a freely accessible web-based pipeline for high throughput peptide identification from proteomic mass spectrometry (MS) data. 
+The key features of GAPP are its low false positive identification rate, its ability to identify variant peptides such as PTMs and splice variants, and its capability for high throughput due to parallel coding (the parallel version of the GAPP is, at present, up to 32 times faster than a sequential implementation). The importance of highly reliable protein identifications, such as those produced by GAPP, cannot be overestimated. Such identifications have obvious value in specific applications, such as a biomarker discovery studies, but to get the most out of this kind of information some meaningful and intuitive ways of displaying identifications have to be adopted. 
+In this poster we describe some different ways of visualizing proteomics data, which are a response to the demand for various views of peptide identifications within the context of GAPP. They include the experiment view and protein view, which respectively are an experiment-centric and protein-centric view reporting all the information known by the GAPP on particular experiments and gene products identified. The novel differential view is a comparative view whereby several experiments can be graphically compared in terms of identifications. This view is particularly important since it can highlight differences in protein expression across different experiments (i.e. different experimental conditions, different sample types, disease states, time points, etc.). Experiment selection can be accomplished by feature selection as well as by direct choice of interesting experiments. Once experiments have been selected, particular gene products to compare across experiments can be selected too.  This is achieved thanks to a new piece of software that we developed in order to link gene products with the Gene Ontology [3], allowing to navigate the ontology structure and focus specifically on peptides of interest. The linkage between gene products (from the Ensembl database [4]) is performed by using BioMart querying system ([5]). The transitive closure of the Gene Ontology graph involving the terms referred to by the known annotations of all the gene products in the Ensembl database is afterwards computed and stored locally. Despite requiring a periodic update of the local database, this choice considerably enhanced the performances of the system. Once this local structure has been created, the user has the chance to navigate upwards and downwards through it to filter peptides identifications according to the known annotations in terms of Biological Process, Molecular Function and Cellular Component as well as to see in a graphical way (i.e. pie chart) their distribution within these three classes of the Gene Ontology.
+The three aforementioned views are integrated within the GAPP web-interface (accessible at the url [1]) and are linked with each other in such a way to provide the user with the most intuitive way of accessing the desired information. This latter task is also accomplished by using graphical elements such as charts. 
+Faced challenges and implemented solutions will be highlighted in the poster. 
+References
+[1] GAPP’s website: www.gapp.info
+[2] GAPP: A fully automated sftware pipeline for the confident identification of human peptides from tandem mass spectra, Journal of Proteome Research, 2006, 5(10), 2849-2852.
+[3] The Gene Ontology: www.geneontology.org
+[4] Ensembl Genome Browser: www.ensembl.org
+[5] BioMart Project: www.biomart.org
+</div>
+<div class="keys">
+Keywords: proteomics, high throughput, pipelines, peptides identification
+</div>
+<a name="4
+"></a>
+<div class="poster">
+Poster G04
+</div>
+<div class="titolo">
+Processing Enhancement In Image Proteomics Allow To Derive Protein Differential Fingerprint Via Machine Learning
+</div>
+<div class="autori">
+Cannistraci C.V. (1,2), Montevecchi F. M. (1), Alessio M. (2)
+</div>
+<div class="inst">
+(1) Department of Mechanics, Polytechnic of Turin, Turin, Italy, (2) Proteome Biochemistry Unit, Scientific Institute San Raffaele, Milan, Italy
+</div>
+<div class="shabs">
+2D-electrophoresis (2DE) and western blot (WB) are used to investigate protein differential expression in cells and tissues by comparative image analysis.
+A problematic data set of 2DE maps and a second one of 2D-WB images are used to examine the pitfalls of the existing image processing techniques offering novel solutions validated by means of different machine learning evaluations.
+We also apply affinity propagation obtaining excellent sample clustering in both cases, and propose a mixed SVD/SVM technique generating a protein differential fingerprint for automatic expression analysis
+</div>
+<div class="exabs">
+Despite substantial improvements in automated protein separation by multidimensional liquid chromatography combined with MS (MDLC/MS) - aka shotgun proteomics (SP) - 2DE and WB are still point of reference in differential proteomics investigations especially in the characterization of  small sample fractions and post-translation modifications (1).
+We propose the expression image proteomics (IP), contrary to shotgun proteomics, to identify the collection of techniques, like 2DE and WB, that are based on codification of  biological information by images in which protein separation is represented. 
+Unfortunately IP techniques suffer of a great limitation: although they show strong analytical power, they are invalidated by experimental uncertainty and low repeatability. Systematic errors, such as background and regional expression inhomogeneities, as well as casting and current leakage geometric distortions, are aberrations frequently visible in gel images (1-5).
+This suggest that any artificial intelligence approach - like machine learning for sample clustering and feature (protein) selection - on high-throughput proteomics data derived from IP is forbidden until congruous image processing  is applied.
+Thus we developed a complete computational approach that offers novel solution and consists of seven principal sequential steps: image denoising, background subtraction, image registration, image information codification, sample dimensionality reduction, sample clustering, protein differential fingerprint extraction.
+A problematic data set of 2DE maps and a second one of 2D-WB images are used to test the efficiency of the proposed approach. Both 2DE maps and WB images are composed of two biologically different sub-groups: different intracellular compartments, and pathological vs. control subjects, respectively.
+First, in the image denoising stage, we propose a ‘fusion filter’ that is a non linear adaptive filter that improves denoising and preserves spot edge and morphology in 2DE image processing. 
+Second we gave an effective solution to some pitfalls of 3-D mathematical morphology approach (2, 3, 5) for background subtraction.
+Third and fourth step - consisting of image registration and image information codification – were performed by standard techniques (3, 6). The result of the codification is a representative matrix of the data set, which is the input for the following machine learning evaluations to test the efficiency of the proposed image processing approach. The validation is performed only on the first set of images, the 2DE maps, because their processing is a more demanding task than the WB image processing. 
+The evaluation by machine learning was performed by comparison of the linear and non linear dimensionality reduction (DR) of the denoised original images  versus the  linear and non linear DR of the complete processed images. A support vector machine (SVM) was used to evaluate the best DR. Results show that denoised original images are linearly separated by SVM in two homogeneous groups only in the DR space obtained by an non linear machine learning, confirming that the presence of background introduces high non linearity in the data set that can be solved only using a non linear machine learning. On the other hand, the DR of the complete processed images is linearly separated by SVM both by linear and non linear machine learning approach, and in particular, in the linear DR space the two groups are more compact and distant. This demonstrates the efficacy of the proposed background subtraction algorithm that is able to remove the non linearity in the data set due to background presence.
+Thus we chose to use, as fifth step of the computational pipeline, the linear dimensionality reduction of the samples.
+In the following step we applied affinity propagation (AP) clustering to the samples represented in the linear DR space. It was implemented both for 2DE and WB samples. AP was able to identify, in an unsupervised way, the two sub-groups present in the 2DE and WB samples: no samples misclassification occurred during the clustering by AP.
+The last and conclusive stage, the sixth, of the computational approach was developed only for 2DE total proteins differential analysis. It consists of a mixed algorithm for supervised feature selection that uses the singular value decomposition and support vector machine (SVD/SVM technique) generating a protein differential fingerprint (PDF) from the 2DE maps.
+Summary representation of protein differential gel regions is collected in the PDF: protein over-expressed gel region are highlighted in red color while down-regulated gel region are in cyan-blue color.
+In conclusion the emergent computational biology approaches are crucial to rescue information obtained with techniques – such as 2DE – which, although showing a strong analytical power, are frequently invalidated by experimental uncertainty and low repeatability.  
+Our results suggest that the unsupervised classification of high-throughput problematic image proteomics (IP) data appears possible even in spite of the high variability and experimental uncertainty. Moreover, the use of the direct image method (4), considering the total amount of pixel information without spot detection and segmentation, demonstrates - in support of the recent trend in computational tool kit - high capability to save the differential pattern information stored in the original images.
+1.	A. W. Dowsey, M. J. Dunn, G. Z. Yang, Bioinformatics 24, 950 (Apr 1, 2008).
+2.	M. Berth, F. M. Moser, M. Kolbe, J. Bernhardt, Appl Microbiol Biotechnol 76, 1223 (Oct, 2007).
+3.	A. W. Dowsey, M. J. Dunn, G. Z. Yang, Proteomics 3, 1567 (Aug, 2003).
+4.	J. S. Morris, B. N. Clark, H. B. Gutstein, Bioinformatics 24, 529 (Feb 15, 2008).
+5.	M. M. Skolnick, Computer Vision, Graphics, And Image Processing 35, 306 (1986).
+6.	E. Marengo, E. Robotti, P. G. Righetti, F. Antonucci, J Chromatogr A 1004, 13 (Jul 4, 2003).
+</div>
+<div class="keys">
+Keywords: proteomics, machine learning, image processing
+</div>
+<a name="5
+"></a>
+<div class="poster">
+Poster G05
+</div>
+<div class="titolo">
+A Comparison of Time Warping Algorithms based on High Quality Mass Traces
+</div>
+<div class="autori">
+Christin Christin (1), Age Smilde (2), Huub Hoefsloot (2), Frank Suits (3), Rainer Bischoff (1), Peter Horvatovich (1)
+</div>
+<div class="inst">
+(1) Department of Analytical Biochemistry, University Centre for Pharmacy, A. Deusinglaan 1, 9713 AV Groningen, The Netherlands, (2) Swammerdam Institute for Life Sciences, University of Amsterdam, Nieuwe Achtergracht 166, 1018 WV Amsterdam. The Netherlands, (3) IBM TJ Watson Research Centre, Yorktown Heights, 10598 New York, USA
+</div>
+<div class="shabs">
+This work presents a comparison of three time alignment algorithms for complex LC-MS datasets. Dynamic Time Warping, Correlation Optimized Warping and Parametric Time Warping were originally designed to work with one-dimensional information such as the TIC or the BPC, which may lead to misalignment for compounds that have different m/z values but elute at similar retention times. We have modified these algorithms to combine them with Component Detection Algorithm to align LC-MS chromatograms based on high-quality mass traces. We show that this greatly reduces the risk of misalignment. 
+</div>
+<div class="exabs">
+Biomarker discovery studies commonly use label-free liquid chromatography coupled to mass spectrometry (LC-MS) to detect differences between pre-classified sample sets from body fluids such as blood or urine. LC-MS detects a large number of diverse compounds and produces enormous amounts of raw data that need to be processed automatically prior to statistical analysis. LC-MS is prone to small shifts in retention time, especially in complex mixtures, such as trypsin-digested serum or acid-precipitated urine samples. This often leads to incorrectly matched peaks across multiple samples resulting in artifacts and possibly incorrectly assigned biomarker candidates. This must be avoided by correcting time shifts between different LC-MS analyses.
+Widely used time alignment methods, such as Dynamic Time Warping (DTW)[1], Parametric Time Warping (PTW)[2], and Correlation Optimized Warping (COW)[3] have been originally applied to one-dimensional information based on the Total Ion Current (TIC) or the Base Peak Chromatogram (BPC). These approaches may work for chromatograms with similar and well-defined profiles containing few components and little concentration variability. On the contrary, these methods fail in aligning LC-MS datasets from complex proteomics or metabolomics samples containing many compounds with high concentration variability that often elute at similar retention times. One reason for this failure is that neither TICs nor BPCs consider the m/z values of the compounds in their benefit functions. 
+We propose to use a Component Detection Algorithm (CODA)[4] to select high-quality mass traces prior to alignment and to include only information from the selected traces in the benefit function. We have adapted the trace selection method to suit the different time alignment algorithms. For example, different mass traces are selected for each segment when using the COW algorithm while different high quality mass traces are chosen for each point when DTW or PTW are applied. The performance of these approaches will be compared using LC-MS datasets obtained from ongoing biomarker studies in serum or urine.
+Reference List
+[1] Ramaker, H. J.; van Sprang, E. N. M.; Westerhuis, J. A.; Smilde, A. K. Analytica Chimica Acta 2003, 498, 133-53.
+[2] Eilers, P. H. Anal.Chem. 2004, 76, 404-11.
+[3] Nielsen, N. P. V.; Carstensen, J. M.; Smedsgaard, J. J.Chromatogr.A 1998, 805, 17-35.
+[4] Windig, W.; Phalp, J. M.; Payne, A. W. Anal.Chem. 1996, 68, 3602-06.
+</div>
+<div class="keys">
+Keywords: time alignment, warping algorithm, comparative proteomics, LC-MS data analysis
+</div>
+<a name="6
+"></a>
+<div class="poster">
+Poster G06
+</div>
+<div class="titolo">
+KINASE- specific phosphorylation site prediction based on a Conditional Random Fields model
+</div>
+<div class="autori">
+Dang H.T., Leemput K.V., Verschoren A., Laukens K.
+</div>
+<div class="inst">
+Intelligent Systems Laboratory, Department of Mathematics and Computer Science, University of Antwerp, Middelheimlaan 1, B-2020 Antwerpen, Belgium
+</div>
+<div class="shabs">
+Phosphorylation is one of the most important and widely studied post-translational protein modifications. Databases of a number of experimentally validated kinase-specific phosphorylation sites have previously been created. However, implementing experiments to create these databases is often time-consuming, labor-intensive and very expensive. Several computational models (e.g. SVM, HMM, ...) have been built to predict the phosphorylation sites of specific kinases. Here we present a new model using Conditional Random Fields that overcomes some limitations of existing approaches. 
+</div>
+<div class="exabs">
+Phosphorylation is one of the most important and widely studied post-translational protein modifications. About one-third of proteins are estimated to be phosphorylated (Huang et al., 2005; Marks et al., 1996) by kinases. And half of  protein kinases are presumably disease- or cancer-related (Wong et al., 2007). Kinase-specific phosphorylation sites on substrates are experimentally identified by several techniques, mainly using Mass Spectrometry (MS) Heazlewood et al., 2008). However, the fact that these experiments are often time-consuming, labor-intensive and expensive (Wong et al., 2007) drives efforts to build high performance predictive models. This may significantly reduce the number of potential phosphorylation sites (kinase substrates) that need to be confirmed by MS experiments. 
+So far, several computational models have been built to predict the phosphorylation sites of specific kinases. They are Hidden Markov Models (HMM) (Huang et al., 2005), Neural Networks (Blom et al., 1999; Blom et al., 2004; Ingrell et al. 2007), Group-based Scoring Method (Xue et al. 2005; Zhou et al., 2004), Bayesian decision theory (Xue et al. 2006), Support Vectors Machine (Wong et al., 2007) and algorithms to identify short protein sequence motifs on substrates that are recognized and phosphorylated by kinases (Obenauer et al., 2003). These models often take 4 amino acids on each side surrounding the potentially phosphorylated residue as features. In the classification task, these features are assumed to be independent of each other. In practice however, this assumption may not necessarily be valid within protein sequences. 
+We are currently investigating the potential of the application of the Conditional Random Fields (CRFs) (Lafferty et al., 2001) technique to phosphorylation site prediction. CRFs have several advantages for sequence labeling as compared to Hidden Markov Models (Freitag & McCallum, 2000) and Maximum Entropy Markov Models (McCallum et al., 2000). Given that X and Y are a set of data observations and label sequences, respectively, HMMs require enumerating all possible data observation sequences to maximize the probability P(X, Y). The CRFs model does not have to model the observation sequences explicitly. It, maximizes the conditional probability P(Y|X) from the training datasets. Furthermore, it is still valid if dependencies between arbitrary features exist in observation sequences. The models don't need to account for these arbitrary dependencies. The probability of transition between labels may not only depend on the current observation but also on past and future observations. Moreover, the CRFs model overcomes a weakness called the label bias problem (Lafferty et al., 2001) of which HMMs and MEMMs fall victim.
+We applied CRFs approach to build a phosphorylation prediction model for a specific kinase. The model is built from a benchmark dataset (Phospho.ELM) that has been widely used in previous works (Huang et al., 2005; Blom et al., 1999; Blom et al., 2004; Ingrell et al. 2007; Xue et al. 2005; Zhou et al., 2004; Xue et al. 2006; Wong et al., 2007). Flanking sequence surrounding phosphorylated and non-phosphorylated sites on the same protein sequence are extracted as positive data and negative data respectively. The weights of features which are amino acid at a specific position surrounding potential phosphorylated residues and combinations of these amino acids are learned from training dataset. 
+Apart from using only a particular number of amino acids on each side surrounding the potential phosphorylated residues, we also incorporated additional useful chemical information of each amino acid (e.g. hydropathicity, accessible surface area, bulkiness,. ..) into the CRFs-based phosphorylation model. The chemical values or any combinations of those are complemented to the feature set and learned in globally fashion from training dataset. 
+The performance of CRFs model on phosphorylation site prediction is validated by a k-fold cross validation procedure. The sensitivity and specificity values are calculated to allow for comparison with other techniques. Because the size of the positive dataset is much smaller than that of the negative dataset, the Matthews Correlation Coefficient (MCC) and the area under the ROC (Receiver operating characteristic) curve (or AUC) are also generated for comparative purposes. When compared to previous approaches, our approach in general yielded better performances.
+References:
+Blom,N., Gammeltoft, S.and Brunak, S. (1999), J Mol Biol, 294, 1351-1362.
+Blom N,Sicheritz-Ponten T, Gupta R, Gammeltoft S, Brunak S. (2004), Proteomics. 2004 Jun;4(6):1633-49.
+Christian. Ingrell, Martin L. Miller, Ole N. Jensen, Nikolaj Blom (2007), Bioinformatics 23(7): 895-897
+Freitag, D. and McCallum, A., Proc. AAAI/IAAI, pp. 584–589.
+Heazlewood JL, Durek P, Hummel J, Selbig J, Weckwerth W, Walther D, Schulze W (2008), Nucleic Acids Research 36(Database-Issue): 1015-1021 (2008)
+Hsien-Da Huang, Tzong-Yi Lee, Shih-Wei Tzeng, Jorng-Tzong Horng (2005), Nucleic Acids Research 33(Web-Server-Issue): 226-229
+John C. Obenauer, Lewis C. Cantley1 and Michael B. Yaffe (2003), Nucleic Acids Research, 2003, Vol. 31, No. 13 3635–3641 
+John Lafferty, Andrew McCallum, Fernando Pereira (2001), In Proceedings of the Eighteenth International Conference on Machine Learning (ICML-2001).
+Marks, F. (1996) Protein Phosphorylation. VCH Weinheim, New York, Basel, Cambridge, Tokyo.
+McCallum, A., Freitag, D., & Pereira, F. (2000), Proc. ICML 2000 (pp. 591–598). Stanford, California.
+Y.H. Wong, T.Y. Lee, H.K. Liang, C.M. Huang, Y.H. Yang, C.H. Chu,H.D. Huang, M.T. Ko, and J.K. Hwang (2007), Nucleic Acids Research, Vol 35, W588-594.
+Yu Xue, Ao Li, Lirong Wang, Huanqing Feng, Xuebiao Yao (2006), BMC Bioinformatics 7: 163 
+Y. Xue, F. Zhou, M. Zhu, G. Chen, and X.Yao (2005), Nucleic Acids Research, 33, 2005.
+Zhou FF, Xue Y, Chen GL, Yao X (2004), Biochem Biophys Res Commun 2004, 325(4):1443-1448
+</div>
+<div class="keys">
+Keywords: Phosphorylation prediction, Condtional Random Fields (CRFs), 
+</div>
+<a name="7
+"></a>
+<div class="poster">
+Poster G07
+</div>
+<div class="titolo">
+Machine learning based membrane protein identification from tandem mass spectra
+</div>
+<div class="autori">
+Tejas Gandhi, Hjalmar Permentier, Bert Poolman, Rainer Breitling
+</div>
+<div class="inst">
+University of Groningen
+</div>
+<div class="shabs">
+Accurate peptide identification from tandem mass spectrometry (MS) forms the cornerstone of proteomics. Membrane proteins, however, are difficult to identify in MS, because their low natural abundance and large hydrophobic stretches interfere with protein digestion and peptide detection. Consequently few peptides are experimentally accessible. Machine learning has been shown to improve peptide identification by exploiting peak intensity as a reservoir of extra information. Here we use decision or classification trees to enhance the peptide identification process for membrane proteins.
+</div>
+<div class="exabs">
+Introduction
+Accurate peptide identification from tandem mass spectrometry (MS) forms the cornerstone of proteomics. Membrane proteins, however, are difficult to identify in MS, because their low natural abundance and large hydrophobic stretches interfere with protein digestion and peptide detection. Consequently few peptides are experimentally accessible. Machine learning has been shown to improve peptide identification by exploiting peak intensity as a reservoir of extra information (1). Here we use decision or classification trees to enhance the peptide identification process for membrane proteins.
+Methods
+A set of singly-charged MALDI-TOF/TOF MS/MS spectra was assembled by selecting non-redundant peptides from membrane proteins that have been confidently identified by Mascot. For each peptide in the list all the identified y, b, and a-ions were selected. The training data set was then created by calculating 36 attribute values for each ion, based on its sequence and chemical properties. The rank of the intensity of the ion in the MS/MS spectra was used as the dependent variable. The QUEST algorithm was used for building the decision tree (2).
+Results
+A decision tree with 46 terminal nodes was created, with the path from the root node to each terminal node representing a potential predictive pattern.  Initial analysis of the decision tree shows the presence of expected spectral patterns.  For instance, the presence of aspartic acid at the fragmentation site has been shown to enhance the intensity of the y-ions (3). Similarly, the enhanced effect of proline at the fragmentation site is also correctly represented. Additionally, there are novel patterns present for which the underlying biophysical explanation can now be explored experimentally. We can use these patterns or rules to create a probabilistic scoring model for membrane protein identification that can work with traditional mass-based algorithms like Mascot and Sequest.
+References
+(1)Nature Biotechnology 22, 214-219 (2004)
+(2)Statistica Sinica 7, 815-840 (1997)
+(3)Analytical Chemistry 75, 6251-6264 (2003)
+</div>
+<div class="keys">
+Keywords: mass spectrometry
+</div>
+<a name="8
+"></a>
+<div class="poster">
+Poster G08
+</div>
+<div class="titolo">
+Fuzzy Clustering of Likelihood Curves to Reveal Protein Modifications
+</div>
+<div class="autori">
+Claudia Hundertmark (1), Frank Klawonn (2), Lothar Jänsch (1)
+</div>
+<div class="inst">
+(1) Helmholtz Centre for Infection Research, Department of Cell Biology, Inhoffenstr. 7, D-38124 Braunschweig, Germany, (2) University of Applied Sciences BS/WF, Department of Computer Science, Salzdahlumer Str. 46/48, D-38302 Wolfenbuettel, Germany
+</div>
+<div class="shabs">
+Based on statistical analyses we developed a new approach for the calculation and visualization of protein expression regulation based on iTRAQ data resulting in likelihood curves. Regulatory information can be evaluated representatively at the peptide level in consideration of the underlying MS data quality.
+We suppose that this novel concept significantly facilitates the a priori detection of unknown protein modifications (PTMs). Fuzzy Clustering of likelihood curves identify differentially regulated protein regions that can then be screened for the presence of known or novel PTMs.
+</div>
+<div class="exabs">
+Comparative quantitative proteomics requires statistical procedures to determine the reliability of regulatory information. We developed a mathematical model for the estimation of noise inherent in quantitative data generated by LC-MS/MS and iTRAQ (Klawonn et al., 2006). The established mathematical model then returns information on the robustness of experimental observations. Our analytical strategy allows to determine the most suitable regulation factor but also to calculate the chance of variant regulations resulting in so-called likelihood curves. Finally, both peptide and protein regulations can be investigated comparatively at the level of likelihood curves representatively summarizing quantity and quality of regulatory events.
+We can demonstrate that likelihood curves from peptides belonging to the same protein usually display a similar most suitable regulation, as expected. However, an object (peptide) must be differentially regulated if its corresponding likelihood curve does not show significant overlap with other curves. (Hundertmark et al., submitted). Previous data analysis concepts focused only on the rejection of false-positive regulations. However, further reasons have to be considered to explain variantly regulated peptides. Interestingly, such regulatory events can be often correlated to post-translational modifications occurring dynamically at particular regions of proteins.
+In this study we established a Fuzzy Clustering approach utilizing the representative peptide likelihood curves for the automated detection of regulatory outliers for each individual protein. Our new workflow facilitates the generation of biological hypotheses and consists of the following steps: (i) Fuzzy Clustering of likelihood curves from peptides belonging to the same protein. (ii) Verification that potentially regulated peptide sequences exclusively match only one protein sequence in species-specific databases. (iii) Prediction of the involved type of modification based on database queries and known consensus sequence search algorithms.
+Applicability and a first proof-of-concept are demonstrated by proteome analyses of kinases that are themselves frequently the subject of post-translational modifications.
+</div>
+<div class="keys">
+Keywords: proteomics, ptm, iTRAQ, clustering, likelihood curve
+</div>
+<a name="9
+"></a>
+<div class="poster">
+Poster G09
+</div>
+<div class="titolo">
+Applying community standard MS/MS datasets to evaluate proteomic data analysis pipeline performance
+</div>
+<div class="autori">
+Mead J.A., Bianco L., Bessant C.
+</div>
+<div class="inst">
+Cranfield University
+</div>
+<div class="shabs">
+When standard MS/MS data is analysed by a proteomic pipeline, the resulting protein identifications can be compared to the known protein content of the sample to determine the false positive rate (FPR). Assuming the list of constituents is correct, and contaminants have been avoided, this approach can accurately demonstrate the reliability of the search method applied.  This poster describes the application of standard data to determine the protein identification performance of the Genome Annotating Proteomic Pipeline, and includes an investigation of the effect of different decoy databases.  
+</div>
+<div class="exabs">
+In the biological community, tandem mass spectrometry (MS/MS) is increasingly being applied to understand mechanisms of disease and regulation, with the aim of stimulating design of new medicines and diagnostics.  Consequently, the volume of data being generated is expanding, and the desire to better understand how to improve the analysis methods is increasing.  To address this issue standard MS/MS datasets have recently become available; examples include: The Association of Biomolecular Resource Facilities (ABRF) sPRG2006 datasets, derived from a study involving multiple labs; The Institute of Systems Biologys (ISB) multi-instrument Standard Protein Mix Database (SPMDB); and Falkner and co-workers MALDI-derived Aurum dataset.  These publicly available standard protein mixtures can support design of novel and improved proteomic data analysis software by providing training data.  They may also be used to answer fundamental research questions, such as understanding MS instrument effects on peptide visibility in MS (SPMD), or the influence of researcher expertise/skill on identification accuracy (ABRF sPRG2006).   However, a key use of this kind of dataset is evaluation of analysis pipeline performance providing a reliable way to assess error rate and benchmark performance against other systems.  In the work presented here, ABRF sPRG2006 standard data was applied to determine the relative protein identification performance of one such pipeline, Genome Annotating Proteomic Pipeline (GAPP), and includes an investigation into the effect of different decoy databases on false positive rate (FPR).     
+GAPP is an X!Tandem-based pipeline,  which includes a validative step exploiting the advanced average peptide score (APS) method.  This method calculates the sum of X!Tandem scores for each peptide in the protein, and divides this by the number of peptides found.  This accounts for low scoring peptides which, when several are combined, could lead to incorrect proteins identifications.  
+In each run, peptide assignments to proteins with an APS score below a defined threshold are discarded.  This threshold is derived ab initio by setting it to the maximum score from a simultaneous decoy search.  Various methods have been published for generating the decoy databases for this purpose, but there is no consensus about which decoy performs best, so nine different decoy designs were applied to analysis of the sPRG2006 standard in this study.  sPRG2006 was chosen because it allowed a comparison between a fully automated pipeline, namely GAPP, with published results from labs using a combination of automated analysis and human interpretation.  
+For the experiment, datasets and accompanying metadata were downloaded via Tranche at ProteomeCommons.  Ensembl, which contains all the proteins known to be in the standard was used as the target database, and for speed, mpi parallel X!Tandem was exploited.  The decoys used included a reverse, a shuffle and two different randomised decoy database at both the protein and peptide levels.  The randomised decoys included one with uniform amino acid composition and another with weightings from the target proteome.   The ninth decoy was a mass conservation decoy, created at the peptide level only, which preserved the peptide masses of the target database in the decoy. On re-assembly of peptide level decoys cleavage sites were preserved.  
+Each dataset (from each individual lab submitter) was analysed ten times so an average distribution could be derived and variation between runs measured.  Variation occurred because each time a non-reverse decoy was generated the sequences produced were slightly different.  The analysis was performed using the target and decoy as a composite, achieved by appending an identifier to the decoy entries.  FPRs were calculated as FP/(FP + TP), where FP is a false positive (protein identification made when the protein was not in the sample) and TP is true positive (a correct protein identification).  Average FPR values were analysed for statistical significance using ANOVA.  
+As detailed in the poster, the results of the searches showed that in many cases more proteins had been identified by GAPP than were reported by the ABRF report (www.abrf.org), but analysis of some datasets resulted in poorer performance.  The variation can be accounted for by considering the different analysis platforms and human expertise which went into the data interpretation process, which naturally differed between groups submitting to ABRF.  
+For the decoy analysis, the peptide level with uniform distribution outperformed other decoys in reducing FPs, whereas the protein level reverse decoy produced on average the highest number of true identifications and highest average number of peptides seen per protein identification.  In spite of these observations, however, no single decoy was shown to be significantly better than the others using statistical testing.  For this reason, we can use this study to recommend a reverse protein level decoy database for GAPP and equivalent searches.    
+In summary, this study was successful in applying a community data standard to the validation of a proteomic pipeline and included selection of the optimal decoy search database.
+</div>
+<div class="keys">
+Keywords: decoy database,false positive rate,pipeline
+</div>
+<a name="10
+"></a>
+<div class="poster">
+Poster G10
+</div>
+<div class="titolo">
+MsPI: a tool for the analysis of peptide mass fingerprinting data
+</div>
+<div class="autori">
+Tiengo A. (1), Barbarini N. (1), Troiani S. (2), Rusconi L. (2), Magni P. (1)
+</div>
+<div class="inst">
+(1) Dipartimento di Informatica e Sistemistica, Universita' degli Studi di Pavia, Via Ferrata 1, Pavia, I-27100, Italy, (2) Biotechnology dep., Nerviano Medical Sciences, Via Pasteur 10, I-20014, Nerviano, Italy
+</div>
+<div class="shabs">
+Protein identification is one of the hardest tasks in proteomics. It can be achieved by Peptide Mass Fingerprinting (PMF), a technique based on mass spectrometry (MS) that allows to generate a list of candidate proteins for a biological sample by comparing using several scores the acquired mass/charge ratio (m/z) with the ones stored in a database of proteins digested in silico. This paper presents a Perl software tool, called MsPI, to create the search database and to generate the list of candidates. Some preliminary results will be presented and compared with those obtained by Mascot.
+</div>
+<div class="exabs">
+Introduction
+MS is a technique to determine the m/z of a charged molecule. Nowadays, it is a fundamental instrument for protein identification, even if, due to the large amount of generated data, it represents one of the major challenges in proteomics. One of the main problems is the lack of a standardized procedure of data analysis [1]. MS protein identification can be performed following two approaches: the PMF and the tandem mass spectrometry. This work presents a tool for the analysis of PMF data.
+Methods
+PMF combines MS with the search in a suitable protein database. It consists of three steps: i) the sample preparation and the spectrum acquisition; ii) the generation of the protein database; iii) the search of the acquired spectrum in the generated database.
+i) The proteins are separated from other cellular components and resolved by 2D-gel electrophoresis. Proteins on the same band are removed together from gel and digested by a protease, which cuts proteins in specific positions depending on the aminoacid sequence. However, the protease misses some cleavages randomly (missed cleavages – MCs). These fragments (peptides) are analyzed by MS and a peak list is extracted from the acquired spectrum [2].
+ii) The search database is created reproducing in silico for each known protein the digestion process, through the following substeps.
+- Definition of the protein set
+A protein database is chosen (e.g. SwissProt) from which a temporary database is created, adding also some missing information, such as molecular weight (MW) and isoelectric point (pI).
+- Proteolytic in silico digestion and MCs/PTMs
+To simulate the proteolytic digestion by the selected enzyme, a routine embedding the complex cleavage rules was implemented. The generated peptides account for the presence of MCs, even if, to avoid an excessive growth of peptide database and a consequently search complexity, the maximum number of consecutive MCs is fixed to two. Moreover, the peptide database considers the post-transcriptional modifications (PTMs), i.e. chemical modifications of specific aminoacids affecting the MW that occur in cells or that are induced by the preparation procedure. PTMs can be fixed or variable: in the first case, a PTM is present at each occurrence of the respective aminoacid, while in the second one the modification may or not be present.
+- Removing masses of contaminants from experimental data
+The contaminants considered are skin keratins and peptides produced by the autolysis of the protease used for enzymatic digestion.
+iii) The m/z in the peak list are searched in the database to build a list of candidate proteins, comparing the detected masses with “theoretical” ones stored in the peptide database. This step is achieved starting from [3], in which three different probabilistic scores are proposed. Each score is based on different probabilistic hypotheses:
+- fixed absolute mass tolerance on measured masses and uniform distribution of peptides on the considered range of masses;
+- fixed relative mass tolerance and uniform peptides distribution;
+- fixed relative mass tolerance and a not necessary uniform peptides distribution.
+Only the first score has been implemented and it is now available in an on-line software tool (Piums). On the contrary, MsPI implements all the score models, allowing to analyze, in a suitable way, also data with fixed relative mass tolerance.
+All the considered proteins are ranked through the scores. To limit the number of false positives (proteins wrongly included in the candidates list) a statistical validation of the results was also implemented, through the construction of a randomly generated protein database.
+Results
+MsPI was preliminary tested on 10 human proteins [4] with the following parameters: up to two MCs, fixed carbamidomethyl modification, variable methionine oxidation modification (up to two for peptide) and relative mass tolerance of 100 ppm. The results obtained by MsPI was compared with those obtained by Mascot. The performance of MsPI is better than that of Mascot. In fact, although in the considered dataset both the MsPI and Mascot correctly include in the candidates lists the proteins really present in the sample 9 times over 10, MsPI includes in the list only other 12 proteins instead of the 53 proteins considered by Mascot. Therefore, MsPI has a small number of false positives. Moreover, some of the false positive proteins included by MsPI have a bigger MW than the real proteins and then they can be easily removed from the list on the basis of MW determined through the electrophoresis. In such case the number of false positives decreases to 0 for MsPI and to 5 for Mascot, highlighting that in this dataset MsPI correctly identifies 9 proteins over 10, whereas Mascot for some bands does not provide an unambiguous identification.
+Acknowledgements
+This work was funded by the Italian “Ministero dell'Università e della Ricerca” through the FIRB-ITALBIONET project. A.T. was supported by an investigator fellowship from the LABORLAB program of the Regione Lombardia.
+References
+[1] Elias, J., Haas, W., Faherty, B., and Gygi, S., Comparative evaluation of mass spectrometry platforms used in large-scale proteomics investigations, Nature Methods, Vol.2, no. 9, 2005, pp. 667-675.
+[2] Barbarini, N., Magni, P., and Bellazzi, R., A procedure to decompose high resolution mass spectra, BMC Bioinformatics, Vol.8, Supp.8, 2007, p. 6.
+[3] Samuelsson, J., Dalevi, D., Levander, F., and Rögnvaldsson, T., Modular, scriptable, and automated analysis tools for high-throughput peptide mass fingerprinting, Bioinformatics, Vol.20, no. 18, 2004, pp. 3628-3635.
+[4] Troiani, S., Uggeri, M., Moll, J., Isacchi, A., Kalisz, H., Rusconi, L., and Valsasina, B., Searching for biomarkers of Aurora A kinase activity: Identification of in vitro substrates through a modified kestrel approach, Journal of Proteome Research, Vol.4, no. 4, 2005, pp. 1296-1303.
+</div>
+<div class="keys">
+Keywords: Protein identification, Peptide Mass Fingerprinting (PMF), Protein mass spectrometry, Software tool
+</div>
+<a name="11
+"></a>
+<div class="poster">
+Poster G11
+</div>
+<div class="titolo">
+A model-based method for the analysis of enzymatic stable-isotope labeled peptides in MALDI-TOF mass-spectra.
+</div>
+<div class="autori">
+Valkenborg D., Burzykowski T.
+</div>
+<div class="inst">
+Center for Statistics, Hasselt University, Agoralaan - building D, 3590 Diepenbeek, Belgium.
+</div>
+<div class="shabs">
+ To facilitate the comparison of different peptide measurement from a mass spectrometer, one often make use of isotope labeling methods such that peptides from different conditions can be pooled together and appear in a single mass spectrum making a direct comparison possible. However, variable isotope incorporation rate and isotope impurities lead to multiple overlapping peptide peaks from the labeled peptide superimposing with the unlabeled peptide. Since these overlapping peaks will hamper a simple comparison, we propose a numerical method to disentangle the observed peak intensities.
+</div>
+<div class="exabs">
+The intention of quantitative proteomics is to compare distinct proteomes between two or more conditions to obtain a set of proteins, which can be differentially expressed between these conditions. Several experimental techniques are available for this purpose. Typically, they involve electrophoresis and/or chromatography for separating the complex biological samples and mass spectrometry for analyzing the content of the samples. However, the random noise introduced by chromatography and mass spectrometry makes it difficult to compare the proteomic profiles coming from the groups of samples. Therefore, to detect differences in the data obtained by such platforms, a thorough statistical analysis is required involving multiple technical replicates.
+To reduce the sources of variability and facilitate a statistical analysis, stable-isotope coding is often used, such that peptides from distinct groups can be pooled together and analyzed simultaneously on the mass spectrometer (cfr. two-channel cDNA microarrays). In other words, protein information about different conditions appear together in a single mass spectrum and  are affected by the same machine variability making a direct comparison possible (in terms of, e.g, the ratio of measured total intensities).
+A powerful and relatively new technique for stable-isotope coding is the enzymatic labeling with oxygen isotopes containing 18 neutrons (18O) instead of the 16 neutrons (16O) most commonly observed in nature. In this setting, oxygen atoms (16O) from the carboxyl-terminus (COO) of peptides are replaced with the oxygens (18O) from heavy-oxygen-water during an enzymatic reaction with trypsine. Ideally, the series of peptide peaks (i.e. the isotopic distribution) of labeled peptides will shift 4 dalton to the right in the mass spectrum due to the incorporation of 2 heavy-oxygen isotopes. However, peptide-specific oxygen incorporation rate and impurities of oxygen isotopes present in the heavy-oxygen-water result in multiple isotopic distributions from the labeled peptide superimposing with the unlabeled peptide. Thus, it is by no means an easy task to determine the exact abundance ratio from the observed spectrum.
+We propose a model, similar in spirit to that developed by Eckel-Passow et al. [1], which estimates the isotopic distribution, peptide-specific incorporation rate, and the intensity ratio directly from the observed mixture of peptide peaks. The model is composed of three parts; the first part describes the observed peak intensities in the mass spectrum in function of the unobserved peptide peak intensities as a system of linear equations. The second part describes the enzymatic reaction by means of a Poisson-process-triggered-discrete-time-Markov-chain conditioning on the composition of the heavy-oxygen water. Finally, the third part models the unobserved peptide peak intensities as a non-linear function of the isotopic distribution of the specific peptide. The model is fitted in MATLAB as a normal non-linear regression model and requires 0.01 seconds to converge.
+We also include a possibility to process data obtained from a reversed-labeling experiment (cfr. dye-swap with cDNA microarrays) and argue that it can improve the identifiability and estimability of the model. The performance of the method is illustrated using real-life datasets.
+</div>
+<div class="keys">
+Keywords: high resolution mass spectrometry, enzymatic stable-isotope labeling, non-linear normal regression.
+</div>
+<a name="12
+"></a>
+<div class="poster">
+Poster G12
+</div>
+<div class="titolo">
+Applying statistical feature selection to Proteomics and Metabolomic data for Prostate Cancer biomarkers identification
+</div>
+<div class="autori">
+Yue Fan (1,4), Brendan Murphy (2), Jennifer Byrne (4), Lorraine Brennan (3,4), John Fitzpatrick (1), William Watson (1,4)
+</div>
+<div class="inst">
+(1) UCD School of Medicine and Medical Science, (2) UCD School of Mathematical Sciences, (3) UCD School of Biomolecular and Biomedical Sciences, (4) UCD Conway Institute of Biomolecular and Biomolecular Research
+</div>
+<div class="shabs">
+The diagnostic biomarker PSA does not provide enough confidence in the diagnosis of Prostate Cancer (PCa). Panels of potential biomarkers in the serum and urine might well represent a more reliable tool for monitoring PCa that can lead to appropriate treatment strategies.
+2-D DIGE and NMR were deployed to explore the Proteomics and Metabolomics changes in serum and urine samples (cancer and BPH control patients). Panels biomarkers selected from two statistical feature selection methods have superior prediction ability in the evaluation. The validation work is undergoing.
+</div>
+<div class="exabs">
+Background and Hypothesis
+Prostate cancer is a highly prevalent disease in men and second leading cause of male cancer deaths. The elevated level of diagnostic biomarker PSA do not provide enough specificity and sensitivity in the routine screening for the presence of PCa. Panels of potential biomarkers in the serum might well represent a more reliable tool for monitoring prostate cancer presence and pathological progression that leads to appropriate treatment strategies. The aim of this study is to identify panels of biomarkers with multiple diagnostic purposes by applying appropriate statistical approaches in serum Proteomics and Metabolomics data.
+Methods
+Both 2d DIGE and NMR are deployed to analyze the Proteomics and Metabolomics changes in serum samples collected from cancer (Gleason 5 and 7) and BPH control patients as part of the Prostate Cancer Research Consortium BioResource. Two statistical feature selection methods were developed in the selection of potential biomarkers that aim to separate cancer and non-cancer patients, within cancer groups (Gleason 5 vs. Gleason 7) and the presence of extracapsular extension (ECE). The lists of features are further tested using different discriminate methods through cross validation to evaluate the sensitivity and specificity of these biomarkers.
+Results
+Classifiers are built up from potential biomarkers in the training dataset and the predictions are made for the testing data. The cross-validation results based on LDA, QDA, PCR and PLSR give comparable performance for different panels of biomarkers. The features selected from Stepwise T test feature selection are superior than coefficients based feature selection method in the prediction of testing samples. 
+Conclusion
+Panels of potential biomarkers have been identified using different feature selection methods and the performance of those biomarkers in classifying the serum samples are compared through cross validation. These panels of potential biomarkers provide higher sensitivity and specificity for multiple diagnostic purposes. The undergoing validation work would give hope to the clinical utilization of these biomarkers.
+</div>
+<div class="keys">
+Keywords: Prostate Cancer, Biomarker discovery, Feature selection, Proteomics, Metabolomics
+</div>
+</body>
+</html>

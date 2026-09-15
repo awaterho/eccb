@@ -1,0 +1,48 @@
+/* Archive-only styles. Not part of the original eccb2026.org theme. */
+
+.archive-notice {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  max-width: 48rem;
+  margin: 0 0 1.75rem;
+  padding: 1.1rem 1.25rem 1.1rem 3.25rem;
+  position: relative;
+  border: 2px solid #b8860b;
+  border-left-width: 8px;
+  border-radius: 8px;
+  background: #fff8e1;
+  color: #4a3b00;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* Warning mark, drawn rather than loaded so the archive stays self-contained. */
+.archive-notice::before {
+  content: "!";
+  position: absolute;
+  top: 1.15rem;
+  left: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #b8860b;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.archive-notice__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.archive-notice__body {
+  font-size: 0.95rem;
+}

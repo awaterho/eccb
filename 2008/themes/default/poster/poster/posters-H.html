@@ -1,0 +1,809 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+* { font-size:13px; font-family: Verdana, "Trebuchet MS", Arial, sans-serif; }
+div { width:800px; margin:5px 0; padding-bottom:5px;}
+div.titolo_pagina { font-weight:bold; font-size:15px; margin-bottom:20px; }
+div.poster { font-weight:bold; border-bottom:1px solid silver; font-size:14px; margin-top:20px;}
+div.titolo { font-weight:bold; font-size:14px; }
+div.autori { border-bottom:1px solid silver; }
+div.inst { border-bottom:1px solid silver; }
+div.shabs { font-style:italic; font-size:12px; border-bottom:1px solid gray;}
+div.exabs { font-size:12px;}
+div.keys { color:gray; }
+</style>
+</head>
+<body>
+<div class="titolo_pagina">
+Poster Abstracts for Category H: Pathways and interactions
+</div>
+<a name="1
+"></a>
+<div class="poster">
+Poster H01
+</div>
+<div class="titolo">
+Photoperception in Halobacterium salinarum: a systems biology approach.
+</div>
+<div class="autori">
+Cangelosi D. (1), Cercignani G. (4,3), Chiarugi D. (2), Felicioli C. (1), Freschi L. (1), Fulgentini L. (5,3), Marangoni R. (1,3)
+</div>
+<div class="inst">
+(1) Dipartimento di Informatica, Universita' di Pisa, Italy., (2) Dipartimento di Matematica e Informatica, Universita' di Siena, Italy., (3) Istituto di Biofisica del CNR, Pisa, Italy., (4) Dipartimento di Biologia, Universita' di Pisa, Italy., (5) Dipartimento di Scienze dell'Ambiente e della Vita, Universita' del Piemonte Orientale "Amedeo Avogadro", Italy.
+</div>
+<div class="shabs">
+The photoperception signaling pathway in <I>Halobacterium salinarum</I> is a multi-scale system, which confers the bacterium a very complex behavior in response to different irradiation regimes. We developed a stochastic simulation of such signaling pathway. In the present work we detailed the simulation strategies, along with the harvesting strategies of biological data. We investigated the accord between the real and the simulated systems: the discrepancies are explained by proposing alternative hypotheses, the biological reliability of which is discussed in detail.
+</div>
+<div class="exabs">
+One of the hot themes in contemporary systems biology is the description of signaling pathways. Differently from the usually simulated metabolic pathways, like glycolysis, in which the metabolites have always comparable concentrations and the reactions show comparable kinetic constants, often the reactions involved in signaling pathways show huge differences in kinetic constants and intermediates concentrations.
+This implies that the simulation approach is non trivial.
+In this work we focused our interest on a specific signaling pathway: the photoperception in Halobacterium salinarum. It belongs to Archea and can swim by means of some flagella located in the distal region of the cell body. It is able to move forwards and backwards, dependently on the flagella rotation direction: clockwise and counterclockwise, respectively. The switch between forwards to backwards is called "reversal", and takes place spontaneously with a quasi-regular frequency (spontaneous reversal frequency, SRF). H. salinarum can also respond to external stimuli by altering the reversal frequency (RF): an attractive stimulus decreases RF, whereas a repellent stimulus increases it.
+With respect to similar signaling pathways, e.g. the chemotaxis, photoperception is more interesting because it offers a wide spectrum of behavioral responses, in dependence of different characteristics of the actinic light (spectral composition, intensity, orientation, gradient, polarity, etc.). In particular, H. salinarum, responds in different ways to different spectral bands: for example, orange light acts as an attractant, while blue light acts as a repellent. The simultaneous exposure to both the bands can give rise to very complex behavior. Therefore, the in-silico model can be tested against a large variety of experimental situations.
+The first step of simulation activity was to design the topology of photoperception signaling pathway: here we summoned the results published in the literature. H. salinarium show two rhodopsins which are responsible for photoreception: Sensory rhodopsin I and Sensory rhodopsin II. Both these pigments show a photocycle: i.e., they change absorption peak, once they are excited by a photon. The photocycle can have several intermediate states, and, therefore, the response of the molecule to polychromatic irradiation can be very complex. Apart from the early steps involving the photon absorption, the consequent transduction chain is relatively simple, and very close to that of chemotaxis in Escherichia coli. Since no experimental data are available for the kinetic values of most of the reactions in H. salinarium photoreception transduction chain, we have imported, where possible, the data from the chemotactic transduction chain of E. coli. The poster will detail the complete list of reactions, specifying the kinetic coefficients used, providing the reference of their source and the justification of eventual modifications or arbitrary assignations.
+We refer to this model as "ground model", since it attempts to take into account all the data known from the literature. It can be arranged into three main blocks: 
+the proper photoreception and the early signal transfer, by the receptor-transductor complex;
+the phosphorylation block, concerning some intermediates, the biological activity of which changes dependently on their phosphorylation state;
+the methylation block, which show a large interaction with the phosphorylation block, since the propensity to be methylated or demethylated changes dependingly also on the phosphorylation state (and vice versa).
+There is also a fourth block, represented by the flagellar motor: it has 4 different binding sites that the last intermediate of the transduction chain can occupy, only when it is in its phosphorylated status: when more than 3 sites are occupied, the flagellar motor switches and the virtual bacterium makes a reversal. 
+We can, therefore, establish a direct link between the simulated system and the real behavioral measurements, using the light energy as input and the RF as output of the model.
+The time evolution of the model was simulated by using the well-known Direct Method proposed in 1977 by Gillespie, in particular we implemented the fastest exact version of it, called Logarithmic Direct Method. Nevertheless, we have, where possible, approximated or modified the description of some reactions in order to make them fully compatible with Gillespie's algorithm. These approximations have been chosen to keep preserved their biological reliability.
+We run several simulations of such model, aimed at testing the behavior of the simulated systems under different irradiation regimes, experimented on the real bacterium and described in the literature.
+We focused our interest on four different regimes:
+1. the dark
+2. a continuous orange light;
+3. a continuous blue light
+4. flashes of blue light under a continuous orange light.
+We firstly explored the qualitative accord between the behavior of the simulated system and that of the real one. We found several discrepancies under the different regimes: we used the model as hypotheses test instrument and we have screened different possible explanations that take into account:
+- possible incompleteness in the pathway topology (i.e., some reactions not yet described);
+- possible incorrectness in kinetic coefficient measurements
+- possible divergence between E.coli chemotaxis and H.salinarum phototaxis transduction chains, which makes false the hypothesis to import values measured in E.coli for simulating H.salinarum phototaxis.
+Focusing our interest on the pathway main blocks and deducing some minimal hypotheses to recover a qualitative correspondence with the real behavior, we selected three hypotheses which can account for the observed discrepancies, and have a biological reliability. We propose them for a further experimental investigation.
+</div>
+<div class="keys">
+Keywords: Signaling pathways, photoperception, Halobacterium salinarum, Gillespie's algorithm
+</div>
+<a name="2
+"></a>
+<div class="poster">
+Poster H02
+</div>
+<div class="titolo">
+FUNCTIONAL Module Identification through Protein Interaction Network Alignment
+</div>
+<div class="autori">
+Ali W, Deane CM
+</div>
+<div class="inst">
+Department of Statistics , University of Oxford , 1 South Parks Road , Oxford , OX1 3TG , United Kingdom 
+</div>
+<div class="shabs">
+Network alignment can be used to identify conserved sub-graphs in protein networks across species. These identified motifs can then be used to transfer annotation in a wide variety of ways. We investigated the use of functional similarity for alignment of protein networks from two species and found the results comparable to sequence alignment. More biological similarity measures could enable much better alignment.
+</div>
+<div class="exabs">
+Recent proliferation of protein interaction network data for a number of species has paved the way for using interaction data for functional and structural annotation of proteins. Network alignment can be used to identify conserved sub-graphs in protein networks across species. The premise when applying this technique is that the motifs must have functional importance. As such these identified motifs can then be used to transfer annotation in a wide variety of ways, within the modules: both inter and intra-species.
+Most existing network alignment programs use sequence similarity exclusively to identify homologous proteins in different species. We are investigating the possibility of using various other biological similarity measures to produce better results. In particular we have used functional similarity for alignment of two networks from S.Crevisiae and H.Sapiens. The interaction data was taken from the Database of Interacting Proteins. Gene Ontology annotations were used for assignment of function to the proteins in each species. A similarity score between each pair of proteins was calculated, that takes into account the specificity of their annotation terms. The results we obtained show that the modules extracted by using functional similarity give slightly better scores than sequence based alignment, in terms of their overlap with identified protein complexes in MIPS, as well as in terms of inter-module functional homogeneity. Moreover, function based alignment produced a surprisingly high number of novel modules which were not identified by the sequence based approach. Thus, combining these two measures may reveal much more information about the modular structure of protein networks.    
+We are building upon this idea to design alignment techniques capable of not only aligning multiple networks, but also using multiple available data sources of biological similarity between proteins.
+</div>
+<div class="keys">
+Keywords: proteins,networks,alignment,modules
+</div>
+<a name="3
+"></a>
+<div class="poster">
+Poster H03
+</div>
+<div class="titolo">
+Discovering Geometric Structure in Protein-Protein Interaction Networks: The Embedding Algorithm
+</div>
+<div class="autori">
+Desmond J. Higham (1), Marija Rasajski (2,3), Natasa Przulj (2)
+</div>
+<div class="inst">
+(1) Department of Mathematics, University of Strathclyde, Glasgow G1 1XH, UK, (2) Department of Computer Science, UC Irvine, Irvine, CA, USA, (3) Faculty of Electrical Engineering, University of Belgrade, Belgrade, Serbia
+</div>
+<div class="shabs">
+Finding a good network null model for protein-protein interaction (PPI) networks is of great importance. It has been proposed that geometric random graphs are a good model for PPI networks. To verify this we design an algorithm that embeds a network into a low dimensional Euclidean space. The algorithm is based on Multi-Dimensional Scaling, with pathlength playing the role of the distance. It exploits sparsity for computational efficiency. We have tested the algorithm on 19 PPI networks of various organisms. The results yield support to the hypothesis that PPI networks are indeed geometric.
+</div>
+<div class="exabs">
+Introduction 
+Networks (also called graphs) are widely used to describe natural phenomena explored in computational and systems biology. Nodes in networks represent biomolecules such as genes, proteins, or metabolites, and edges connecting the nodes indicate functional, physical, or chemical interactions between them. Understanding, summarizing and extracting information from these networks are key goals in systems biology.
+Constructing a good network null model for protein-protein interaction (PPI) networks is a fundamental issue, since such a model would provide insight into the biological structure and function and could be used as a guide for further biological experiments. It has been established that random geometric graphs give an excellent fit for various global and local measures of PPI network structure such as pathlengths, clustering coefficients, relative graphlet frequencies [1], and graphlet degree distributions [2]. 
+We design an algorithm to test directly whether PPI networks are geometric by embedding them into a low dimensional Euclidean space. If a geometric network model fits the PPI data, then it is expected that PPI networks could be embedded into the Euclidean space. The algorithm is based on Multi-Dimensional Scaling, with pathlengths playing the role of the Euclidean distances. We judge the sensitivity and specificity of the fit by computing the areas under the Receiver Operator Characteristic (ROC) curve. We test the algorithm on 19 PPI networks of various organisms. The results yield support to the hypothesis that PPI networks are geometric.
+The Algorithm
+Geometric random graphs in 2-dimensional Euclidean space are generated in the following way: we place N nodes uniformly at random in the unit square, and two nodes are connected by an edge if they are within a given Euclidean distance. The 3- and 4-dimensional cases are defined analogously.
+Our task is to embed the proteins into n-dimensional Euclidean space given only their PPI network connectivity information. The new algorithm consists of the following steps:
+- Define a pairwise distance d(i,j) between each pair of  proteins i and j as the square root of their pathlength, unless this value exceeds a prescribed cutoff. In the latter case, set the distance to some value Kmax. 
+- Double center the distance information, giving a symmetric positive semi-definite matrix A. 
+- Compute v1, v2, ..., vn, the n dominant eigenvalues of A, using the subspace iteration algorithm.
+- Give each protein i coordinates in n-dimensional Euclidean space from the i-th coordinates of the eigenvectors v1, ..., vn.
+- Each possible choice of radius now corresponds to a geometric graph. By varying the radius, measure specificity and sensitivity and record the overall goodness of fit by computing the area under the ROC curve.
+Results
+The algorithm is applied to 19 real-world PPI networks of 4 eucaryotic organisms, as well as to artificial networks generated using 7 types of random graph models. We analyze 9 yeast S. cerevisiae, 1 fruitfly D. melanogaster, 3 worm C. elegans, and 6 human PPI networks from different studies. We embed these networks into 2D, 3D and 4Dspace. The resulting areas under the ROC curve (AUC) are 0.8924, 0.8934, 0.8957 corresponding to the embeddings of the yeast high-confidence (YHC) [4] network into 2D, 3D and 4D space. The AUCs for the remaining PPI networks are between 0.6207 and 0.8651. We focus our further analyses on YHC network.
+We construct random graphs corresponding to YHC network (i.e., having the same number of nodes and edges as YHC network) using the following random graph models: Erdos-Renyi random graphs, random graphs with the same degree distribution as the data, d-dimensional geometric random graphs (GEO-dD) for d=2, 3, 4, scale-free Barabasi-Albert networks, and stickiness-index based networks (see [5] for details). For each of these random graph models, we generate 30 model networks corresponding to YHC network, embed them into 2-D, 3-D and 4-D space and compute the means and the standard deviations of the AUCs. For geometric random networks we get means between 0.9055 and 0.9867. For non-geometric networks we get means between 0.6465 and 0.7803.  All standard deviations are O(10^-2) or lower.
+PPI networks are noisy. Thus, to test whether PPI networks have a geometric structure, we add noise to GEO-3D networks by randomly rewiring 10%, 20% and 30% of their edges. We generate 30 networks for each of these re-wiring regimes, embed them into 2D, 3D and 4D space and compute their AUCs. The mean values of AUCs for the 10% rewired GEO-3D networks are 0.81098, 0.87491, and 0.91779, corresponding to 2D, 3D and, 4D space, respectively. This suggests structural similarity between noisy GEO-3D networks and YHC network.
+Conclusion
+We provide a method for embedding networks into low dimensional Euclidean space. The method provides a direct test of whether PPI networks have a geometric graph structure. Our results yield support to the hypothesis that the structure of currently available PPI networks is consistent with the structure of noisy geometric graphs.  This work has been published in [3]. 
+[1] Przulj et al., Bioinformatics, 20(18): 3508-15, 2004.
+[2] Przulj, Bioinformatics, 23(2):e177-83, 2006.
+[3] Higham et al., Bioinformatics 24(8):1093-9, 2008.
+[4] von Mering et al., Nature,417(6887):399-403, 2002.
+[5] Przulj and Higham, J. Roy. Soc. Interface, 3(10):711-716, 2006.
+</div>
+<div class="keys">
+Keywords: interactome, random graph models, multi-dimensional scaling, sparse matrix computations, spectral algorithms
+</div>
+<a name="4
+"></a>
+<div class="poster">
+Poster H04
+</div>
+<div class="titolo">
+An Efficient Method for Identifying Statistical Interactors in Graphical Models
+</div>
+<div class="autori">
+Alina Andrei, Christina Kendziorski
+</div>
+<div class="inst">
+Department of Biostatistics and Medical Informatics, University of Wisconsin-Madison, 1300 Univ. Ave, Madison, Wisconsin, 53703, U.S.A.
+</div>
+<div class="shabs">
+Network reconstruction is a main goal of many biological endeavors. Graphical Gaussian models (GGMs) are often employed as an effective way to summarize gene associations. However,GGMs are limited in that interactions are not accommodated. When applied in the presence of interactions, the GGM framework can lead to incorrect inference regarding dependence. We present a computationally efficient approach to identify interactions in networks. Simulations suggest that the method works well, even in fairly complicated scenarios. The approach is applied on microarray data from a breast cancer study.
+</div>
+<div class="exabs">
+ 
+The reconstruction of biological networks is a key component of efforts to better understand, diagnose, and treat disease. With advances in high throughput technologies, the data necessary for reconstruction are now available and so 
+too are a variety of statistical reconstruction methods (see Hartemink, Nature Biotechnology 2005; Werhli et al., Bioinformatics 2006). Graphical Gaussian models (GGMs) are often used since the underlying assumptions are well understood, edges are easy to interpret, and estimation algorithms are readily available (Schafer and Strimmer, Bioinformatics 2005a, SAGMB 2005b; Li and Gui Biostatistics 2006; Yuan and Lin, Biometrika 2007). In short, nodes are assumed to follow a multivariate normal (MVN) distribution and an edge represents conditional dependence between two nodes, given all other nodes. Thus, the estimation of the graph is equivalent to estimation of the partial correlation (paCor) matrix. This simple, yet effective, framework has proven useful in a number of genomic studies (Toh and Horimoto, Bioinformatics 2002; Wille et al., Genome Biology 2004; Ma et al., Genome Research 2007; Keller et al., Genome Research 2008).
+ In spite of the clear advantages, GGMs are limited in that they do not account for multiplicative dependence among nodes, due to the underlying MVN assumption. This limitation is an important one, since interactions are common in biological studies of individual complex traits (Wittenburg et al., Physiological Genomics 2001; Carlborg et al., Genome Research 2003), studies of groups of metabolites (Wentzell et al., PLoS Genetics 2007), and high-throughput studies of gene expression (Kirst et al., Genetics 2005; Brem and Kruglyak PNAS 2005; West et al., Genetics 2007).
+In practice, one often proceeds with GGM estimation and inference in the presence of interactions.  A simple motivating example presented in this paper shows that, doing so can lead to incorrect inference regarding dependence.
+Inferring the correct dependence structure is challenging when interactions are present,since an analogue of the paCor matrix that completely determines
+the dependence structure is not available, and dependencies can involve many nodes.  The difficulty is exacerbated for studies with a large number of nodes (p) and relatively small sample size (n).
+Cox and Wermuth (Applied Statistics, 1994) recognized this problem. In an
+investigation of the possible reasons for departures from MVN, they focused on the presence of pairwise interactions, noting concern "that the reduction of the observations to covariance matrices overlooks important features of the dependences of intrinsic interest". They proposed an approach to identify the interactions that evaluates all possible linear regression models among the variables considered allowing for single pairwise interaction terms. Interactions with large t-statistics are identified as important and considered for further empirical investigation. Although useful when few nodes are available, the approach cannot be easily scaled to cases with large p, and is not possible when n is smaller than p.  
+As in Cox and Wermuth, we too consider the special case of non-MVN where the full conditional distributions are Gaussian, but the joint is not, due to pairwise interactions. Within this context, we propose a computationally efficient approach that uses GGM estimation techniques to identify variables affected by interactions, and thereby identify regions in a resulting graph where edges may not imply direct or linear dependencies. A key element is recognizing that interactions have a marginal linear effect, and as a result, information about their presence can be obtained from the paCor matrix. Theoretical derivations for the exact effect motivate the approach. The method relies on estimation of multiple paCor matrices, and as a result is only slightly more computationally demanding than traditional GGM reconstruction. Simulation studies show that the approach identifies interactors with high sensitivity for practical levels of heritability and moderate sample sizes, including cases where n is smaller than p, while controlling the FDR.
+We applied our approach to microarray data from a study of breast cancer, where we identify novel interactors. The graph derived reveals information regarding direct dependencies (additive or multiplicative effects), and perhaps more importantly, highlights variables that warrant further investigation, namely those involving interactions. As a way to further investigate the interactors found, we fitted local linear regression models with and without the interaction term. 69% of the interactors detected with our method were also found significant with regression models (pvalue<0.05). The interaction models resulted in comparably lower BICs, and heritabilities of expresssion traits were significantly increased when accounting for interactors. Supporting plots reinforcing the presence of interactors are shown.
+In summary, we have presented an approach to identify statistical interactions in gene association networks. The main advantages compared with other network reconstruction approaches that allow for non-linear relationships among nodes (e.g. Friedman et al., J.of Comp. Biology 2000) are that the approach makes relatively few, but testable, assumptions, does not rely on prior specification, and is computationally efficient, requiring little increase in computation over traditional GGM fitting. Extensions to more general networks are underway and should prove useful particularly for network reconstructions involving continuous phenotype and discrete genotype data.
+</div>
+<div class="keys">
+Keywords: graphical  models, gene association networks, partial correlation, microarray data
+</div>
+<a name="5
+"></a>
+<div class="poster">
+Poster H05
+</div>
+<div class="titolo">
+GraphCrunch: a tool for large network analyses
+</div>
+<div class="autori">
+Milenkovic, T., Lai, J., Przulj, N.
+</div>
+<div class="inst">
+Department of Computer Science, University of California, Irvine
+</div>
+<div class="shabs">
+GraphCrunch (http://www.ics.uci.edu/~bio-nets/graphcrunch/) is a software tool that implements the latest research on network analyses and modeling. It is the first tool for comparing large real networks against a series of random network models with respect to a variety of global and local network properties. GraphCrunch is a comprehensive, parallelizable, and easily extendible open-source research software tool for analyzing and modeling of large real-world networks.  Our paper describing GraphCrunch has been labeled as Highly Accessed by BMC Bioinformatics where it was published.
+</div>
+<div class="exabs">
+Modeling biological networks is a vibrant research area.  A good model should generate graphs that resemble real data as closely as possible across a wide range of statistical measures.  Testing the efficacy of a model entails comparing model-derived random graphs to real data. GraphCrunch is an open-source software tool that implements the latest research on biological network models and properties: it compares real-world networks against a series of graph models with respect to a variety of network properties. It currently supports five different types of random graphs: Erdos-Renyi random graphs (Erdos and Renyi, 1559), generalized random graphs with the same degree distribution as the real-world network, Barabasi-Albert type scale-free networks (Barabasi and Albert, 1999), n-dimensional geometric random graphs, where n is any positive integer (Penrose, 2003), and stickiness-index-based model networks (Przulj and Higham, 2006). 
+ 
+Comparing large networks relies on heuristics, such as global and local network properties, due to NP-completeness of the underlying subgraph isomorphism problem. GraphCrunch currently supports two computationally expensive graphlet-based similarity measures of local network structure, where graphlets are small connected non-isomorphic induced subgraphs of large networks. These two local network properties are the relative graphlet frequency distance, which compares the frequencies of the appearance of graphlets in two networks (Przulj et al., 2004) and the graphlet degree distribution agreement, which is a graphlet-based generalization of the degree distribution (Przulj, 2006).  GraphCrunch also computes five standard global network properties: degree distributions, distributions of shortest path lengths, average network diameters, average clustering coefficients, and clustering spectra.  
+GraphCrunch automates the process of generating random networks drawn from user specified random graph models and evaluating the fit of the network models to a real-world network with respect to global and local network properties. In a single command, GraphCrunch performs all of the following tasks: 1) computes user specified global and local properties of an input real-world network, 2) creates a user specified number of random networks belonging to user specified random graph models, 3) compares how closely each model network reproduces a range of global and local properties (specified in point 1 above) of the real-world network, and 4) produces the statistics of network property similarities between the data and the model networks. GraphCrunch is capable of producing these statistics both in tabular and in graphical format. 
+GraphCrunch is the first software tool that compares real-world networks against a series of network models with respect to a variety of local and global network properties. It is easily extendible to include additional network models and properties. GraphCrunch has parallel computing capabilities -- it allows for a user specified list of machines on which to distribute computationally expensive searches for local network properties. This is the first network analysis software that has built-in parallel computing capabilities, a feature that will become crucial as biological network data sets grow.  We introduce GraphCrunch as a comprehensive, parallelizable, and easily extendible open-source research software tool for analyzing and modeling large real-world networks. It is freely available at http://www.ics.uci.edu/~bio-nets/graphcrunch/. Although our paper describing GraphCrunch has just recently appeared in BMC Bioinformatics, it has already been labeled as Highly Accessed at the BMC Bioinformatics web-site. 
+</div>
+<div class="keys">
+Keywords: protein-protein interaction networks, network analysis and modeling, network analysis software tools, network properties
+</div>
+<a name="6
+"></a>
+<div class="poster">
+Poster H06
+</div>
+<div class="titolo">
+Random generation of metabolic networks with biochemical constraints
+</div>
+<div class="autori">
+Georg Basler (1), Zoran Nikoloski (1), Oliver Ebenhöh (1,2)
+</div>
+<div class="inst">
+(1) University of Potsdam, Institute for Biochemistry and Biology, Karl-Liebknecht-Str. 24-25, D-14476 Potsdam, Germany, (2) Max-Planck-Institute for Molecular Plant Physiology, Am Mühlenberg 1, D-14476 Potsdam, Germany
+</div>
+<div class="shabs">
+Random metabolic networks may be used to determine the statistical significance of biologically relevant structural properties. We present a novel method for randomizing a given metabolic network, which captures the underlying biochemical principle of mass conservation. The method further preserves the salient graph-theoretic properties of metabolic networks and, thus, allows for testing the significance of complex network properties in a biological context.
+</div>
+<div class="exabs">
+When analysing the structural properties of metabolic networks, randomly generated networks may be used to determine whether an investigated property is of statistical significance. In order to accurately identify complex properties that have emerged in a biochemically constrained environment, it is necessary for the random network generation to capture as many of the underlying biochemical principles as possible. The existing random methods aim at preserving the graph-theoretic properties of the template network, but do not take into account the biochemical constraints of the metabolic reaction network at hand.
+We present an approach to the random generation of metabolic networks, which preserves the fundamental biochemical laws of mass conservation. Given a realistic metabolic network, we randomize it by: (1) determining equivalence classes with respect to the conservation of chemical elements and (2) adding reactions to the network by randomly choosing reactants and products from these equivalence classes, while conserving the left and right side chemical elements. Our approach preserves graph-theoretic properties of metabolic networks such as: degree distribution and coupling relationships.
+We apply the method to the problem of finding the statistical significance of properties related to the biosynthetic potentials of a given metabolic network. Therefore, our method provides a novel contribution to the extraction of biologically relevant information from structural network models.
+</div>
+<div class="keys">
+Keywords: random reaction networks, metabolic pathways
+</div>
+<a name="7
+"></a>
+<div class="poster">
+Poster H07
+</div>
+<div class="titolo">
+Pathway analysis improves comparability of different data sets: an application to the study of renal carcinoma
+</div>
+<div class="autori">
+Luca Beltrame (1), Ingrid Cifola (1), Roberta Spinelli (1), Clelia Peano (1), Duccio Cavalieri (2), Cristina Battaglia (3)
+</div>
+<div class="inst">
+(1) Institute of Biomedical Technologies (ITB), National Research Council (CNR), Milan, Italy, (2) Dept. of Pharmacology, University of Florence,Italy, (3) Dept. of Biomedical Science and Technologies, University of Milan,Italy
+</div>
+<div class="shabs">
+Microarray technology has been used widely in the study of tumors,  to recognize and classify different histological subtypes, to identify differentially expressed genes, or to discover new molecular markers useful for diagnostic and prognostic applications. Unfortunately most gene profiling studies suffered from a lack of overlap and reproducibility with other similar datasets published by different groups. Here we propose an approach aimed at grouping similar microarray samples from different data sets using pathway analysis coupled with standard hierarchical clustering methods.
+</div>
+<div class="exabs">
+Microarray technology has been extensively used in the study of tumor pathologies to recognize and classify different histological subtypes, to identify differentially expressed genes, or to discover new molecular markers useful for diagnostic and prognostic applications. Unfortunately, most gene profiling studies suffered from a lack of overlap and reproducibility with other similar datasets published by different groups (Ein-Dor et al., 2005). A solution is the use of "group testing" (also called "pathway analysis") (Manoli et al., 2006) approach, an analysis method that identifies alterations of predefined groups of genes, organized in cellular networks or metabolic pathways, instead of single genes. 
+In order to study the molecular processes involved in renal cell carcinoma (RCC) etiology, we used both a traditional transcriptomic analysis and the novel "pathway analysis" approach, and compared the results obtained with these two methods. To do so, we collected data about RCC samples from three distinct public data sets, with different experimental designs and microarray platforms (Cifola et al., 2008; Zhao et al., 2006; Jones et al., 2005). Using the traditional differential analysis method, the overlap of differentially expressed genes (DEGs) among the three data sets was less than 50%. 
+In order to investigate the similarities between these data sets in terms of disregulated cellular pathways, we used Eu.Gene (Cavalieri et al., 2007), a freely available software, to calculate Enrichment Scores (ES) over a set of more than 1000 pathways and cellular networks applying the Gene Set Enrichment Analysis (GSEA) algorithm. The ES for each data set were then clustered using standard hierarchical clustering methods. Showing a large similarity between the three data sets, the clustering analysis identified recurrent disregulated pathways common to all data sets and revealed similar expression profiles on pathways such as VEGF, IL-6 and HIF signaling pathways, all important for the development and progression of RCC. The results were similar independently of the experimental design and the microarray platform used. 
+In conclusion,  results from traditional whole-genome transcriptomic analysis on different data sets overlap poorly, so causing difficulty in the extraction of reliable and biologically meaningful results. Differently, the novel "pathway analysis" approach improves the comparability of different data sets and microarray platforms, thus aiding the interpretation of the results and the study of complex biological systems. 
+REFERENCES
+Cavalieri, D., Castagnini, C., Toti, S., Maciag, K., Kelder, T., Gambineri, L., Angioli, S., and Dolara, P.
+(2007). Eu.Gene analyzer a tool for integrating gene expression data with pathway databases.
+Bioinformatics, 1.
+Cifola I, Spinelli R, Beltrame L, Peano C, Fasoli E, Ferrero S, Bosari S, Signorini S, Rocco F, Perego R, Proserpio V, Raimondo F, Mocarelli P and Battaglia C. Genome-wide screening of copy number alterations and LOH events in renal cell carcinomas and integration with gene expression profile. Molecular Cancer 2008, 7:6 (14 January 2008)
+Ein-Dor, L., Kela, I., Getz, G., Givol, D., and Domany, E. (2005). Outcome signature genes in breast
+cancer: is there a unique set? Bioinformatics, 21(2):171–178.
+Jones, J., Otu, H., Spentzos, D., Kolia, S., Inan, M., Beecken, W. D., Fellbaum, C., Gu, X., Joseph, M.,
+Pantuck, A. J., Jonas, D., and Libermann, T. A. (2005). Gene signatures of progression and
+metastasis in renal cell cancer. Clin Cancer Res, 11(16):5730–5739.
+Manoli, T., Gretz, N., Gröne, H.-J., Kenzelmann, M., Eils, R., and Brors, B. (2006). Group testing for
+pathway analysis improves comparability of different microarray datasets. Bioinformatics,
+22(20):2500–2506.
+Zhao, H., Ljungberg, B., Grankvist, K., Rasmuson, T., Tibshirani, R., and Brooks, J. D. (2006). Gene
+expression profiling predicts survival in conventional renal cell carcinoma. PLoS Med, 3(1):e13.
+ACKNOWDLEGEMENTS
+This work was supported by MIUR grants no. RBLA03ER38 and no. PRIN2006069373 and funds from University of Milan no. FIRST2007
+</div>
+<div class="keys">
+Keywords: microarray, pathway analysis, cancer
+</div>
+<a name="8
+"></a>
+<div class="poster">
+Poster H08
+</div>
+<div class="titolo">
+Integrative Analysis of the Oct-4 Regulatory Network in hESCs
+</div>
+<div class="autori">
+Chavez L., Adjaye J., Lehrach H., Herwig R.
+</div>
+<div class="inst">
+Max-Planck-Institute for Molecular Genetics, Department of Vertebrate Genomics, Ihnestrasse 73, 14195 Berlin, Germany.
+</div>
+<div class="shabs">
+Pluripotency and self-renewing is controlled by a transcription regulatory network governed by Oct4 regulation and the down-regulation of Oct4 is a crucial initiating for early embryonic differentiation. We have carried out a systematic survey of available experiments for analyzing transcriptional dependencies as ChIP-on-Chip and RNAi along with sequence based analysis of the promoter regions of putative target genes in order to identify a core Oct4 regulatory network. 
+</div>
+<div class="exabs">
+The transcription factor Oct4 is highly expressed in the inner cell mass of the human blastocyst and recent studies on reprogramming human somatic cells to induced pluripotent stem cells emphasize its function as a key regulator on top of a transcriptional regulatory network controlling the maintanance of pluripotency in hESCs. It is supposed, that pluripotency and self-renewing is controlled by a transcription regulatory network governed by Oct4 regulation and the down-regulation of Oct4 is a crucial initiating for early embryonic differentiation. Several studies employed high-throughput experiments such as ChIP-on-Chip and RNAi in order to identify direct targets of Oct4 transcriptional regulation. We have carried out a systematic survey of these experiments along with sequence analysis of the promoter regions of putative target genes in order to identify a core regulatory network. Direct target genes of Oct4 and of the transcription factors Sox2 and Nanog were already identified in hESCs by ChIP-on-Chip experiments. For obtaining a more stringent set of DNA-Protein interactions, the available ChIP-on-Chip data was quality controlled and a subset of target genes was isolated by an additional analysis. The information about validated direct target genes was complemented by the results taken from a study that examined global transcriptional changes after RNAi-mediated suppression of the Oct4 function in hESCs. Thirdly, transcriptional dependencies were analyzed by a sequence based approach. Here, experimental identified DNA-Protein interactions were validated by mapping known Oct4 related motifs to the promotor regions of potential target genes. Functional annotation analysis revealed that the enrichment of genes connected to pluripotency and differentiation increases by integrating the results of the individual studies. Finally, a core transcriptional regulatory network was constructed composed of the core Oct4 target genes. The network highlighting putative key regulators and transcription factors controlling the maintance of pluripotency as well as genes involved in the process of differentiation that are either activated or suppressed by Oct4 in hESCs. 
+</div>
+<div class="keys">
+Keywords: Human embryonic stem cells, Oct4, ChIP-on-Chip, RNAi, Transcription Factor Binding Motifs, Regulatory Network
+</div>
+<a name="9
+"></a>
+<div class="poster">
+Poster H09
+</div>
+<div class="titolo">
+CENTRALITY of immunolgy proteins in the human interactome
+</div>
+<div class="autori">
+Clancy T, Hovig E
+</div>
+<div class="inst">
+Department of Tumor Biology, Rikshopitalet - Radiumhospitalet Medical Center, 0310 Oslo, Norway.
+</div>
+<div class="shabs">
+We have analyzed human protein interactions to ascertain the importance of immunology related proteins in governing the hierarchy of the human interactome. We derived the immunology related proteins from a composite approach of text mining and manual curation.  We demonstrate that key topological features of centrality are dominated by proteins related to immunology.  A hiearachical network strucuture in human intacterome is characterized in the context of immunology proteins, showing their positions in the higher echelons of the hierarchy and their neighborhoods are computationally derived
+</div>
+<div class="exabs">
+A classification of human protein-protein interactions in the context of the immune response would provide researchers with a framework to study protein relationships in complex diseases where the immune response is implicated. We have analyzed computationally human protein interactions from the peer reviewed interaction database Intact to ascertain the importance of immunology related proteins in governing the hierarchy of the human interactome. We have derived immunology related proteins from a composite approach of text mining and manual curation from the Immport database.  We demonstrate that key topological features of centrality including degree, betweeness and eigenvector centrality are dominated by genes related to immunology. The topological parameters have statistically significant confidence intervals compared to when the parameters are analyzed in the context of the interactome as a whole and in non-immunology genes. The network neighborhood of immunology genes encompass more than 80% of the entire human binary interactions detected in Intact, highlighting the dominance of immunological genes in the scope of human biological processes. Furthermore a hierarchical network structure in the human interactome is characterized and described in the context of immunology genes, showing their positions in the higher echelons of the hierarchy. A comparison is made of this hierarchy from an evolutionary perspective and the network motifs governing the higher echelon proteins are described with associations by gene set enrichment to key immonology GO terms and KEGG pathways. 
+</div>
+<div class="keys">
+Keywords: protein-protein interactions, centrality, immune response
+</div>
+<a name="10
+"></a>
+<div class="poster">
+Poster H10
+</div>
+<div class="titolo">
+The identification of similarities between biological networks 
+</div>
+<div class="autori">
+Cootes A.P. (1), Sternberg M.J.E. (2), Muggleton S.H. (3), Ranganathan S. (1)
+</div>
+<div class="inst">
+(1) ARC Centre of Excellence in Bioinformatics, Macquarie University, Australia, (2) Division of Molecular Biosciences, Imperial College London, UK, (3) Department of Computing, Imperial College London, UK
+</div>
+<div class="shabs">
+PHUNKEE is a newly developed method for locating similar subgraphs in a pair of biological networks. PHUNKEE explicitly considers the graphical form of the data, allows for gaps and also considers the wider context of each subgraph in the network. In previous work, significant similar subgraphs were located in the D. melanogaster and S. Cerevisiae interaction networks. We are extending this to the comparison of these two species and H. sapiens. The similar subgraphs were analysed with respect to their functions and subcellular locations using data from the LOCATE database. 
+</div>
+<div class="exabs">
+The development of high-throughput experimental techniques has resulted in extensive data describing networks of interactions (or associations) between molecules in metabolism, protein protein interactions and gene regulation. Comparative analysis of these networks is central to understanding biological systems. A newly developed method PHUNKEE (Pairing subgrapHs Using NetworK Environment Equivalence) can indentify similar subgraphs in a pair of networks. PHUNKEE explicitly considers the graphical form of the data and allows for gaps. In a departure from other methods, PHUNKEE also includes information about the context of the subgraph within the adjacent network. This approach enables more similar subgraphs of consistent function to be located. Similar subgraphs in metabolic pathways and in protein protein interaction networks have previously been located using PHUNKEE. The most similar pairs of protein interaction subgraphs found in D. melanogaster and S. cerevisiae included central processes such as cell division but interestingly also included protein sub networks involved in pre mRNA processing. We have extended this work by comparing the protein interaction networks of these two species to that of H. sapiens. The functions of the resulting similar subgraphs were analysed and compared to previous results. We also studied the subcellular locations of the resulting H. sapiens subgraphs using data taken from the LOCATE database.
+</div>
+<div class="keys">
+Keywords: protein interactions, metabolism, network comparison, similar subgraphs, subcellular location 
+</div>
+<a name="11
+"></a>
+<div class="poster">
+Poster H11
+</div>
+<div class="titolo">
+Pathway Alignment: A Comparative Approach in Understanding Metabolic Evolution
+</div>
+<div class="autori">
+Dutta A., Paul S., Bag S.K., Dutta C.
+</div>
+<div class="inst">
+Indian Institute of Chemical Biology, 4 Raja S.C.Mullick Road, Kolkata 700032, INDIA
+</div>
+<div class="shabs">
+A model is proposed for metabolic network analysis with a directed effort to study the evolution of metabolic complexity from the analysed data. Reaction data collected from the KEGG Pathway database has been modeled into labeled graphs and corresponding adjacency/incidence matrices have been derived. An algorithm for graph alignment based on the works of Berg & Lassig (2004, PNAS) was implemented to multiply align some common pathways from different organisms. Phylogeny was reconstructed from the alignment score and the suggested evolutionary relationship between the networks studied.
+</div>
+<div class="exabs">
+Pathway Alignment: A Comparative Approach in Understanding Metabolic Evolution
+While the genome may be the blue-print of a living organism, it is the well coordinated metabolic system that actually keeps it alive. To better understand the numerous complex cascades of enzyme substrate interactions that provide every living organism with their “vital force”, a thorough analysis of the structural design and capabilities of the cellular metabolic networks is necessary.
+The current work proposes an efficient model for metabolic network analysis with a directed effort to study the evolution of metabolic complexity from the analysed data. The metabolic data - enzymes, metabolites and reactions, are primarily collected from the KEGG Pathway database (Kyoto Encyclopedia of Genes and Genomes). For the sake of simplicity and also due the paucity of data in current public databases, kinetic parameters for the reactions are not considered for this stage of the work. The pathways are then mapped with the help of Graph theory into a connected network of nodes and edges. This can be done in two ways, (i) the nodes may represent the metabolites while the edges represent the enzymes driving the reactions, or (ii) the nodes being the enzymes (centres of reaction) while the edges denoting the metabolite ‘flux’ entering or leaving the nodes. The “labeled graph” is then transformed onto corresponding adjacency and incidence matrices for better mathematical handling. These matrices may then be used to predict shortest path between metabolites and also for subgraph matching of short portions of pathways, as have been previously shown by some researchers (Pinter et. al., 2005, Bioinformatics). However, this work focuses on generating such matrices for a particular pathway from different organisms, preferably from different taxonomic levels, and comparing them. Graph alignment is a more challenging task than simple sequence alignment which may be done in polynomial time using dynamic programming algorithms. Therefore, for this work a strategy quite similar to the local graph alignment algorithm as described by Berg and Lassig (2004, PNAS) has been adapted. The algorithm is based upon efficient heuristic search logic where graph alignment is mapped onto a “spin model” familiar in statistical physics. This combined with the earlier methods of finding “largest common subgraphs” and re- occurring motifs, gives a fairly efficient platform to compare between metabolic networks from different organisms and imply evolutionary relationships.
+To start with, the model has been tested on some common metabolic pathways from 10 different microbes and a phylogeny has been reconstructed based on alignment scores from the metabolic data. Although analyses made on very few pathways from a few organisms are not rewarding enough data to conclude anything from the evolutionary viewpoint, it is hoped that future efforts encompassing more number of pathways (on a full metabolic scale, if possible), will help us to understand the evolution of metabolic complexity. The data generated may not only be useful for the emerging field of metabolic engineering, but also for designing new drugs by studying the “choke points” from the network topology (Rahman and Schomburg, 2006, Bioinformatics).
+</div>
+<div class="keys">
+Keywords: Metabolic Pathways, Graphs, Evolution
+</div>
+<a name="12
+"></a>
+<div class="poster">
+Poster H12
+</div>
+<div class="titolo">
+Constructing and Investigating mouse gene and phenotype networks
+</div>
+<div class="autori">
+Octavio Espinosa (1,2), John M. Hancock (1)
+</div>
+<div class="inst">
+(1) Mammalian Genetics Unit, Medical Research Council, Harwell, Oxfordshire, OX11 0RD, UK, (2) Department of Biochemistry, University of Oxford, South Parks Road, Oxford, OX1 3QU, UK
+</div>
+<div class="shabs">
+From the bipartite graph of gene-phenotype associations obtained from the The Mouse Genome Informatics (MGI) database, a gene network and a phenotype network was constructed. These networks give an integrated holistic approach to study how the mouse genome relates to the phenome and give a new angle on gene and phenotype relationships at the cellular and organismal level. The potential of proteins of interacting communities for predicting mouse knockout/RNAi knockdown phenotypes is also addressed in this study.
+</div>
+<div class="exabs">
+Background
+In a new approach by [1], the relationships between diseases and disease genes are explored in a single graph theoretic framework by using the bipartite graph of disorder-gene association pairs to create a disease network and a disease gene network. Both of these networks’ graphs show a giant component that contains most of the nodes, indicating that physiological and cellular pathways could be more intimately connected than previously thought.
+Mouse knockout (KO) experiments and genome-wide mutagenesis has resulted in an extensive collection of genotype-phenotype associations that is valuable for mammalian functional genomics. The Mouse Genome Informatics (MGI) database contains numerous gene-phenotype associations annotated using a mammalian phenotype (MP) ontology. This ontology was constructed by human intuition with physiological expertise and represents a structured view of the mouse phenome. From the bipartite graph of gene-phenotype associations, a gene network and a phenotype network can be constructed. These networks give an integrated holistic approach to study how the mouse genome relates to the phenome and give a new angle on gene and phenotype relationships at the cellular and organismal level. Previous studies by [2], have shown that in yeast the best predictor of a gene’s phenotype is the phenotype of the proteins in the complex it interacts with. Using the mouse phenotype data in MGI and the data available in protein-protein interaction network (PPIN) databases, it is possible that the phenotypes of mouse knockouts/RNAi knockdowns might be usefully predicted. Coupled with orthology data, this might give useful insights in to human gene function.
+Aims
+1. In both the gene and phenotype networks, application of graph theory could characterize the network and show its properties. Using this approach, the network properties and comparisons to the human disease network could yield functional information about the genes and the system as a whole.
+2. To investigate the potential of communities of interacting proteins in the mouse PPIN as predictors of mouse phenotypes.
+Methods
+1. Building the mouse gene and phenotype networks
+A list of gene-phenotype associations was downloaded and parsed. An adjacency matrix of the mouse gene network and mouse phenotype network was constructed by connecting the genes via shared phenotypes and phenotypes via shared genes respectively. The node degree distribution was obtained for both networks.
+2. Assessing the predictive power of interacting protein communities
+A mouse PPIN was obtained by combining IntAct, BioGRID and DIP into a single binary list of genes representing the PPIN list of genes whose protein products interact. Coupled with the gene-phenotype associations obtained previously, a completely phenotype-annotated PPIN was obtained. Communities of interacting proteins were obtained by applying PVCLUST on the PPIN. Random networks of the mouse PPIN have also been made to assess the statistical significance of the detected protein communities.
+Overrepresentation of MP terms in the communities was assessed using a statistical measure and with a Fisher’s exact test. The predictive power of MP terms overrepresented with a particular p-value threshold was used to attempt to predict the phenotypes of all members of the interacting community. Simulations of random versions of the data, keeping the same number of MPs for each community and the same amount of communities, has also been set up.
+Results
+1. The gene network made using high level phenotypes shows a non power law degree distribution, indicating that it is not scale-free. The phenotype network is virtually completely connected. The gene and phenotype networks made using low level phenotypes show a mixed node degree distribution.
+2. For the lowest level annotations, it seemed that a surprisingly low p-value is needed to give a good specificity in the prediction.
+Future work
+Further characterization of the network is envisaged such as network measures and possible investigation of conservation properties and correlation with expression.
+The prediction potential is trying to be improved by substituting the MP terms with terms higher up in the MGI ontology, given a particular level. An algorithm to substitute the terms of an OBO ontology was developed for this purpose.
+References
+1.	Goh, K.I., et al., The human disease network. Proc Natl Acad Sci U S A, 2007. 104(21): p. 8685-90.
+2.	Fraser, H.B.-P., J. B., Using protein complexes to predict phenotypic effects of gene mutation. Genome Biol, 2007.
+</div>
+<div class="keys">
+Keywords: gene, phenotype, network, ontology, mouse
+</div>
+<a name="13
+"></a>
+<div class="poster">
+Poster H13
+</div>
+<div class="titolo">
+Insights into protein-protein interface patterns.
+</div>
+<div class="autori">
+Iakes Ezkurdia (1), Michael Tress (1), Alfonso Valencia (1), Lisa Bartoli (2), Rita Casadio (2), Piero Fariselli (2)
+</div>
+<div class="inst">
+(1) CNIO Spanish National Cancer Research Centre. C/ Melchor Fernández Almagro, 28029 Madrid, (2) University of Bologna, via Irnerio 42, 40126 Bologna, Italy
+</div>
+<div class="shabs">
+Identification of protein-protein interaction sites is an essential intermediate step for the mutant design and prediction of protein-protein networks. We present a review about the current status of this field analising the impact of the different choosen features, algorithms and highlighting the arising problems involved with the protein datasets and posterior analisis of the results. Suggestions on reliable feature selection, performance measures and testing
+procedures are given for future developments.
+</div>
+<div class="exabs">
+Interactions between proteins play a crucial part in cellular function and form the backbone of almost all biochemical processes. Identification of protein-protein interaction sites is an essential intermediate step for the mutant design and prediction of protein-protein networks. Several attempts have been done during the last few years to predict these interface residues.
+Although some improvements have been done during these years, the under-represented complex types and unknown interfaces remain as the mayor drawbacks for improvement. We present a review about the current status of this field assessing the current limitations of the predictive capacity of protein-protein interface prediction methods and analising the impact of different choosen features in an attempt to answer the main questions surrounding the prediction of residue-residue interfaces. Sequence-based features such as predicted primary structure, physicochemical properties, evolutionary conservation and predicted solvent exposure are analised as features extracted from the three-dimensional structures of protein complexes.
+We performed multiple experiments using various classifiers and feature combinations with different datasets taking into account unbound proteins.
+Arising problems involved with the protein datasets and posterior analisis of the results along with suggestions on reliable feature selection, performance measures and testing procedures are highlited providing a general and informative view useful for future users and developers.
+</div>
+<div class="keys">
+Keywords: protein-protein interaction, interface, features, unbound, residues, hot spots
+</div>
+<a name="14
+"></a>
+<div class="poster">
+Poster H14
+</div>
+<div class="titolo">
+Extracting Sub-Networks of Knowledge (SNK) from Protein-Protein Interaction data. 
+</div>
+<div class="autori">
+Luis Fernandes, Franca Fraternali
+</div>
+<div class="inst">
+Kings College London,Randall Division,New Hunt's House ,Guy's Campus ,London, SE1 1UL 
+</div>
+<div class="shabs">
+High-throughput proteomics has allowed for the drafting of large protein-interaction networks and systems biology devotes a large effort in the statistical analysis of these. But rather than just a 'dot' connected in a network, each protein is a complex and dynamic three-dimensional object with sophisticated chemical properties.Networks of protein-protein interactions portrait a global picture of proteins connectivity, nevertheless the detailed analysis of a particular cellular function may benefit from the study of smaller, accurately selected sub-networks. 
+</div>
+<div class="exabs">
+High-throughput proteomics has allowed for the drafting of large protein-interaction networks and systems biology devotes a large effort in the statistical analysis of these. But rather than just a 'dot' connected in a network, each protein is a complex and dynamic three-dimensional object with sophisticated chemical properties. Accurate descriptions of these assemblies, in turn, must reflect the cellular context in which they usually operate, a factor that also conditioned their evolution.  The availability of a series of datasets from different experiments combined with an integrative bioinformatics analysis provides a framework to study specific cellular process such as the cell cycle and cdc42 signal cascade. Networks of protein-protein interactions portrait a global picture of proteins connectivity, nevertheless the detailed analysis of a particular cellular function may benefit from the study of smaller, accurately selected sub-networks. Such sub-networks contain high confidence interactions and multiple sources of information for its nodes (proteins) such as tissue specific expression data, gene expression data, domain profiles and structural information. The complex knowledge of the system can be embedded in what we call Sub-Networks of Knowledge (SNK). SNK analysis provides the basis for the identification of fundamental components and pathways that can be carefully selected to accelerate experimental research and help the design of new experiments.
+Here we present the SNK elaboration for two systems:  
+-An analysis of the transition through the G0G1 commitment point of T-Cells cell cycle [1].
+-Study of cdc42 Signalling Oscillations during Natural Killer Cells Immune Surveillance [2].
+We demonstrate here that the pipeline used for the SNK construction and its subsequent analysis leads to the identification of potential crucial elements for the two studied systems.
+</div>
+<div class="keys">
+Keywords: ppin, SNK, cdc42, cell cycle, networks
+</div>
+<a name="15
+"></a>
+<div class="poster">
+Poster H15
+</div>
+<div class="titolo">
+TAG_TSEMA: Enhancing the prediction of protein pairings between interacting families using “a-priori” information
+</div>
+<div class="autori">
+Izarzugaza JM G.  (1), Juan D. (1), Valencia A. (1), Pazos F. (2)
+</div>
+<div class="inst">
+(1) CNIO - Spanish National Cancer Research Centre, (2) CNB-CSIC - Spanish National Center for Biotechnology
+</div>
+<div class="shabs">
+TAG_TSEMA is a webserver implementing an algorithm to predict the mapping (i.e. which proteins from one family interact with which members of the other) between the members of two interacting families (based on the principles of coevolution) which is able to incorporate any kind of knowledge in order to assign "classes" to the proteins that may restrict possible mappings. (Imagine an example regarding several orthologues, the classes wil be the organisms and only proteins of the same organism will be paired). The server is freely available at http://tagtsema.bioinfo.cnio.es
+</div>
+<div class="exabs">
+The theory of co-evolution of protein families states that interacting protein families tend to have similar phylogenetic trees. These similarities can be used to predict the mapping between two families of interacting proteins (i.e. which proteins from one family interact with which members of the other). The correct mapping will be the one that maximizes the similarity between the two trees. Moreover, additional a-priori information can be used to improve the results. For example, provided these two families comprise orthologs and paralogs, this is, members of the two families are present in more than one organism, this fact can be exploited to restrict the possible mappings, simply by impeding links between proteins of different organisms. We present here TAG_TSEMA, a server implementing an algorithm to predict the mapping between families of interacting proteins which is able to incorporate information regarding orthologs, or any other assignment of proteins to "classes" that may restrict possible mappings in order to improve the results. The method accurately predicts around 80% in the most favorable cases on a large number of interacting protein domains. We also analyzed in detail the results of the method for a well defined case of interacting families, the sensor and kinase components of the Ntr-type two-component system, for which up to 98% of the pairings predicted by the method were correct. The server is available at http://tagtsema.bioinfo.cnio.es.
+References:
+Izarzugaza et al. Enhancing the prediction of protein pairings between interacting families using orthology information. BMC Bioinformatics (2008) vol. 9 pp. 35
+Izarzugaza et al. TSEMA: interactive prediction of protein pairings between interacting families. Nucleic Acids Res (2006) vol. 34 (Web Server issue) pp. W315-9
+Pazos et al. Similarity of phylogenetic trees as indicator of protein-protein interaction. Protein Eng (2001) vol. 14 (9) pp. 609-14
+Ramani et al. Exploiting the co-evolution of interacting proteins to discover interaction specificity. J Mol Biol (2003) vol. 327 (1) pp. 273-84
+</div>
+<div class="keys">
+Keywords: Coevolution, Protein Interaction, Tree Similarity
+</div>
+<a name="16
+"></a>
+<div class="poster">
+Poster H16
+</div>
+<div class="titolo">
+The gene expression networks of Clostridium perfringens strain 13 from gene expression profiles
+</div>
+<div class="autori">
+Hirakawa H. (1), Ohno M. (1), Furuichi E. (2), Ohtani K. (3), Shimizu T. (3), Kuhara S. (1)
+</div>
+<div class="inst">
+(1) Faculty of Agriculture, Kyushu University, Fukuoka, Japan, (2) Faculty of Digital Media, Fukuoka International University, Fukuoka, Japan, (3) Graduate School of Medical Science, Kanazawa University, Ishikawa, Japan
+</div>
+<div class="shabs">
+The gene expression networks of Clostridium perfringens strain 13 were constructed using gene expression patterns in 95 experimental conditions. We made a matrix whose column was the ratio of intensity of a single experiment, and each row was ratio of a gene across all experiments. Pearson's correlations of the ratios for all of the  experimental data were calculated for all pairs of genes. The largest network was divided into 22 small ones containing virulence factors. The network correlated well to the already known one, which indicated that our method to construct the network was useful.
+</div>
+<div class="exabs">
+Clostridium perfringens is a Gram-positive anaerobic spore forming bacterium known to be the most widely distributed pathogen in nature. It is commonly found in the environment (in soil and sewage) and in the intestines of animals and humans as a member of the normal flora. C. perfringens produces many of the extracellular toxins (virulence factors) and enzymes related to the pathogenicity. 
+We have determined the whole genome sequence of C. perfringens strain 13. Total length of the chromosome is 3,031,430 bp and of the plasmid is 54,310 bp. C. perfringens strain 13 comprises 2,660 and 63 ORFs in the chromosome and plasmid, respectively. Currently, 26 virulence-related and 47 TCS-related genes were identified in C. perfringens strain 13.
+Further studies about the mechanism of the genetic regulation of toxic genes are important for understanding the pathogenicity of C. perfringens strain 13. The two-component regulatory system (TCS) named VirR/VirS has been reported to be involved in global regulation of the production of many virulence factors. A regulatory RNA molecule named VR-RNA, was found to be responsible for the transcriptional regulation of the virulence factor. In addition, C. prefringens has regulatory cascades to control its virulence and housekeeping genes, and it would be interesting to investigate other regulatory networks controlling the pathogenicity. 
+We have made the custom microarray of C. prefringens strain 13. In the microarray, cDNA probes for 2,660 and 63 ORFs in the chromosome and plasmid were spotted, and 144 intergenic regions (IGRs) were also spotted to find the regulatory RNA molecules. We have obtained 95 expression profiles in the cases of the knockout mutants, overexpression, various mediums (serums of human, horse, addition of sialic acid, hyaluronic acid etc), and cultivation with other bacteria (Staphylococcus aureus, Escherichia coli, and Bacteroides). 
+Before we analyze the microarray profile, we first made a matrix whose column was the ratio of the intensity (sample / control (wild type)) of a single experiment, and each row was the ratio of a gene across all experiments. Next, Pearson’s correlations of the ratios for the all of the 95 experimental data were calculated for all pairs of genes. We extracted the positive and negative correlated genes by using the thresholds = +0.65 and -0.57 for the Pearson’s correlations, respectively. The positive correlated genes were considered as being co-expressed. Moreover, the co-expressed genes which were contiguously located and on same DNA strand were predicted to be transcribed into one operon. Then we could predict 95 operons containing 915 ORFs, and most of them were corresponded to the prediction results of the operon using the genomic sequence in the operon database (ODB; http://odb.kuicr.kyoto-u.ac.jp/). 
+To construct the restricted gene expression networks, the genes with high Pearson’s correlation (≥ 0.65) for other genes were selected. Thus the small networks of each gene were constructed. Next, the small networks sharing same genes were combined. The gene in the network was called ‘node’, and the connection on the network were called ‘edge’. In addition, the regulation was whether positive or negative was noted to all of the edges. To visualize the constructed gene expression networks, the Cytoscape software (http://www.cytoscape.org/) was used. As results, 42 networks were constructed. In the largest network, 1,163 ORFs were included. The 22 small networks were assembled into one largest network containing the virulence factor, two-component system, IGR, and the transcription factors. We also found the following representative three gene expression networks, 1) network including VirR/VirS, VR-RNA (regulatory RNA molecule), and various virulence factors, 2) network including hyaluronidases (virulence factor), 3) network including the genes producing capsular polysaccharide (virulence factor). The network 1 correlated well to the already known one, which indicated that the method for constructing the gene expression network was useful. We suggested that the biological meaningful networks could be constructed by our method.
+</div>
+<div class="keys">
+Keywords: Gene expression network, Clostridium perfringens
+</div>
+<a name="17
+"></a>
+<div class="poster">
+Poster H17
+</div>
+<div class="titolo">
+Characterization of Protein Interfaces in the Human Cancer Protein-Protein Interaction Network
+</div>
+<div class="autori">
+Kar G., Gursoy A., Keskin O.
+</div>
+<div class="inst">
+Koc University, Center for Computational Biology and Bioinformatics, Rumelifeneri Yolu Sariyer, Istanbul Turkey
+</div>
+<div class="shabs">
+We study the interface and network properties of the cancer and non-cancer proteins in the human protein-protein interaction network. We predict the interfaces of hub proteins by PRISM web-server and classify hub proteins as singlish-interface or multi-interface according to the number of distinct binding interfaces. We analyze the interface properties (such as interface area, amino acid composition and conservation of the interface) of these transient and permanent interactions. We can distinguish the interface properties of these interactions in the cancer and non-cancer proteins.
+</div>
+<div class="exabs">
+Recent studies have shown that proteins involved in cancer exhibit a different network topology than that of non-cancer proteins.  Here, we study the interface and network properties of the cancer and non-cancer proteins in the human protein-protein interaction network constructed by Jonsson and Bates [1]. Including structural information into the protein networks provides a better understanding of protein-protein interactions. We predict the interfaces of hub proteins by PRISM web-server and classify hub proteins as singlish-interface or multi-interface according to the number of distinct binding interfaces of the hub proteins. The interactions associated with singlish-interface hubs and multi-interface hubs are the so-called transient and permanent interactions, respectively. We analyze the interface properties (such as interface area, amino acid composition of the interface, and conservation of the interface) of these transient and permanent interactions. The interface properties of these interactions show different patterns. Furthermore, we can distinguish the interface properties of cancer and non-cancer proteins as well. In order to include structural information into the topological analysis, we relate interface properties to the network properties. Interestingly, we find that the singlish-interface hubs correspond mostly to hub-bottlenecks (hubs with high betweenness value), constituting dynamic components of the network, whereas the multi-interface hubs correspond mostly to the hub-nonbottlenecks (hubs with low betweenness value). 
+[1] Jonsson PF, Bates PA. Global topological features of cancer proteins in the human interactome. Bioinformatics, (2006) 22: 2291–2297
+</div>
+<div class="keys">
+Keywords: protein-protein interactions, protein interfaces, cancer proteins
+</div>
+<a name="18
+"></a>
+<div class="poster">
+Poster H18
+</div>
+<div class="titolo">
+Differential equations method for clustering gene expression time-courses.
+</div>
+<div class="autori">
+Krawczyk M.J. (1), Dziedzicka-Wasylewska M. (2), Kulakowski K. (1)
+</div>
+<div class="inst">
+(1) AGH University of Science and Technology, Faculty of Physics and Applied Computer Science, (2) Polish Academy of Sciences, Institute of Pharmacology
+</div>
+<div class="shabs">
+Functioning of living organisms is under control of genetic systems. Understanding of the interactions between genes is one of the most important tasks in biology and medicine. Interactions between genes can be represented as a network. In our work we compare results obtained within two clusterisation algorithms: the agglomerative Girvan and Newman algorithm and the method introduced previously by the present authors which is based on a set of differential equations. Obtained result are analysed from the point of view of the biological functions of genes classified to a given cluster.
+</div>
+<div class="exabs">
+Functioning of living organisms is under control of genetic systems. These systems consist of thousands of elements, and their co-regulation controls action of vital functions. Understanding of the interactions between genes is one of the most important tasks in biology and medicine. Interactions between genes do not change in time, so their description involves an analysis of the time courses of the expression levels. The problem which occurs in the analysis of biological systems is that a broadly conceived use of statistical methods is often restricted by limited number of samples. This is important problem, as we must remember about an individual variability, which is a source of significant noise of a data. The second important source of a noise comes from the method used for their collecting.
+Interactions between genes can be represented as a network. In such a network nodes represent analysed genes and edges mark interactions between them. This network can be constructed on a basis of the experimental data, e.g. the micro- or macroarrays data of the time courses of the levels of expression of genes. On the basis of these data, the interactions between any two genes can be expressed via the correlation coefficients c_ij. The values of these quantities are in the range [-1,1]. Value c_ij equal to 1(-1) means full correlation(anti-) between genes i and j. c_ij is equal to 0 indicates that the character of time changes of the expression levels is completely different for two given genes. Obtained values of the correlation coefficients for all analysed genes enable for the construction of a weighted network. The structure of the network can be shown in a form of connectivity matrix A. Analysis of this network is possible by the application of clustering algorithms, which allow for the division of the whole set of analysed genes into groups fulfilling given conditions.
+In our work we compare results obtained within two clusterisation algorithms. The first one is the well known algorithm introduced by Girvan and Newman (1). This is an example of an agglomerative, hierarchical algorithm and it is based on the maximisation of the modularity Q. The modularity is a quantity which allows to distinguish networks with real structure from a random network. The value of Q measures the ratio of the density of inner edges to the density of outer ones. By the inner edges we mean the edges within the clusters, whereas the outer edges are those which connect nodes of a given cluster with nodes in other clusters. In the GN-algorithm at the beginning each node (gene) is classified to the separate cluster. Then successively clusters are connected to each other in a way which leads to the maximal increase of the value of modularity. The results obtained within the GN-algorithm are compared with results obtained by the method introduced previously by the present authors (2). Our algorithm is a new approach in which the state of the edges of the network changes in time according to a set of differential equations. At each iteration step the values of the connectivity matrix elements evolve due to the interactions between nodes in the whole network. The rate of change of the A_ij is expressed as a sum of a products of weights of edges connecting nodes i and j to all remaining nodes in the network minus some parameter beta. The structure of the network varies because during evolution some values of A_ij decrease to 0. The structure of the network at given iteration step forms the basis for the calculation of the parameter Q. Because we are interested in the finding of the subnetworks in the initial network, and not in the network obtained because of the change of the connectivity matrix, the value of Q is calculated according to the values of the initial connectivity matrix.
+The division which we accept as a proper one is the one with the highest value of the modularity. In many cases this approach works better than the GN-algorithm (3).
+Obtained result are analysed from the point of view of the biological functions of genes classified to a given cluster.
+(1) Girvan M. and Newman M.E.J., PNAS 99, 7821-7826 (2002)
+(2) M.J.Krawczyk and K.Kulakowski, arXiv:0709.0923v5
+(3) M.J.Krawczyk, (submitted)
+</div>
+<div class="keys">
+</div>
+<a name="19
+"></a>
+<div class="poster">
+Poster H19
+</div>
+<div class="titolo">
+Panel Screening & Network Analysis: Better understanding of compound profiling
+</div>
+<div class="autori">
+Gonzalez Couto, E.  (1), Felciano, R.  (2), Kremer, A. (1)
+</div>
+<div class="inst">
+(1) Siena Biotech S.p.A., via Fiorentina 1, 53100 Siena, Italy, (2) Ingenuity Systems, 1700 Seaport Boulevard, Redwood City, CA 94063, USA
+</div>
+<div class="shabs">
+Pathway models or protein-interaction networks are excellent tools in the drug discovery process. Highly reliable targets for a given disease hypothesis can be identified by combining information from diverse sources potentially transforming protein-interaction networks into detailed descriptions of cellular pathways.
+He we present the use of pathway analysis tools to provide knowledge around proteins used for compound profiling (enzyme or receptor) and therefore provide deeper knowledge into the pharmacological consequences of potential off-side effects.
+</div>
+<div class="exabs">
+Pathway models or protein-interaction networks are excellent tools in the drug discovery process. Highly reliable targets for a given disease hypothesis can be identified by combining information from diverse sources (in house experiments as well as literature) potentially transforming protein-interaction networks into detailed descriptions of cellular pathways.
+Target-specific assays, as well as those that assess off-target effects, are helpful in generating (broad) profiles of compound reactivity important for the drug discovery process. Many times, results from diverse assays can drive lead selection and optimization for preclinical testing. This process, sometimes called "compound profiling" is being used very frequently throughout the drug discovery process.
+He we present the use of pathway analysis tools to provide knowledge around proteins used for compound profiling (enzyme or receptor) and therefore provide deeper knowledge into the pharmacological consequences of potential off-side effects. IPA and other analysis tools can facilitate the prioritization of proteins to be included in assays based on contextual information, Pathway diagrams are used as communication tool, particularly for interdisciplinary project teams, thus ensuring a common understanding and facilitating critical interrogations about (specific) target and off-target effects.
+</div>
+<div class="keys">
+Keywords: pathway, compound screening, off-target effect, drug discovery
+</div>
+<a name="20
+"></a>
+<div class="poster">
+Poster H20
+</div>
+<div class="titolo">
+Combining Molecular Dynamics Simulations with Experiment to design Antibiotics with Improved Permeation Properties
+</div>
+<div class="autori">
+Amit Kumar, Eric Hajjar, Enrico Spiga, Paolo Ruggerone, Matteo Ceccarelli
+</div>
+<div class="inst">
+Univeristy of Cagliari
+</div>
+<div class="shabs">
+ We investigate the diffusion of antibiotics through OmpF at a molecular scale. We perform molecular dynamics (MD) simulations, combined with the metadynamic algorithm that accelerate rare events. Combining accelerated MD simulations and experiments (liposome swelling assays, electrophysiology) we followed the paradigm for designing antibiotics of improved diffusion properties.                                                                                                                                 
+</div>
+<div class="exabs">
+ Bacteria's can resist to antibiotic either by (i) chemical modification of antibiotic, (ii) play it inactive through physical removal from cell (efflux mechanism) or (iii) modify target site (by mutation) so that it is not recognized by the antibiotic. A fundamental understanding of  transport mechanism might aid to future design of antibiotics with an improved permeation properties so as to tackle the problem of bacterial resistance.
+     General diffusion porins (such as OmpF, OmpC) present in large abundance in the cell membrane form the main pathway for diffusion of  Betalactam antibiotics. Recent Electrophysiology (BLM) experiments have pointed out that the diffusion of antibiotics through the Outer membrane protein (OmpF) is controlled mainly by interactions at the molecular scale. The shape of the OmpF is  a hourglass with the central region rich in charged amino acids. The presence of oppositely charged residues facing each other is known to produce strong transverse electric field which facilitates the translocation of zwitterionic antibiotics (such as Ampicillin) through OmpF.
+    Molecular Dynamics (MD) simulations describe the translocation process at a very high resolution in space (Å) and time (fs). However the long time scale for the translocation process, hundreds of microseconds, do not permit the use of standard simulations. We used a recent algorithm, the metadynamics, that allows to overcome the timescale problem and at the same time to obtain a quantification of the free energy barriers for the translocation processes.
+     The porin OmpF was taken as a wild type (WT) and variants with substitutions. We elucidate the correlation of the size and charge of  amino acids with the translocation process. We find the free energy surface to change drastically for the mutants with respect to that of wild type. We  tune the interaction between OmpF and ampicillin by following the translocation process of ampicillin through mutant D113N OmpF (change in charge) and D113A OmpF (change in charge and size). Led by these results, we used an antibiotic that potentially interact less with this residue, such as penicillin-G(which lacks positive group of ampicillin), and predict the correct diffusion pathway. Our simulation results are in good agreement with BLM  and  liposome swelling assay experiments. Moreover, we further extended this investigation to carbenicillin (charged -2) and  Cephalosporins, (fourth generation antibiotics) which are the most frequently prescribed class of antibiotics in the world. Summing up we propose  for the antibiotics in study a reaction pathway for the translocation process , with an effort  to rationalize with the experimental findings.
+</div>
+<div class="keys">
+Keywords: Drug design , Translocation 
+</div>
+<a name="21
+"></a>
+<div class="poster">
+Poster H21
+</div>
+<div class="titolo">
+BIOGRANAT - Molecular Biology Graph Visualisation and Analysis Tool
+</div>
+<div class="autori">
+Lehne B. (1), Bente I. (2), Hellmann B. (2), Kammeyer H. (2), Kirstein S. (2), Mendig A. (2), Schulz A. (2), Steinmetz M. (2), Vieweg J. (2), Zimmer B. (2), Sprengel F. (2), Ahlers V. (2), Schlitt T. (1)
+</div>
+<div class="inst">
+(1) King's College London School of Medicine, Department of Medical & Molecular Genetics and Kings College London Centre for Bioinformatics, 8th floor Guy's Hospital Tower Wing, Guy's Campus, London SE1 9RT, United Kingdom, (2) University of Applied Sciences and Arts Hannover, Faculty IV, Department of Computer Science, Ricklinger Stadtweg 120, 30459 Hannover, Germany
+</div>
+<div class="shabs">
+Biogranat is a new molecular biology graph visualisation and analysis tool. It is based on the Java OSGi bundle architecture and currently provides a graphical user interface, input and output routines for various graph file formats, a facility to use the JUNG library, 2D graph layout routines, 3D visualisation of graphs, JAVA scripting and graph analysis algorithms. Further developments address graphics export (jpeg, vector formats), generation of random graphs and the import of biological meta-information. We will apply Biogranat to integrate and analyse large scale gene networks.
+</div>
+<div class="exabs">
+Large-scale approaches and miniaturization vastly increased the scope of bio-molecular and biomedical studies. Now thousands of genes can be studied in parallel which has led to new challenges for the analysis and integration of large datasets. For model organisms such as Escherichia coli, Saccharomyces cerevisiae (baker’s yeast), Mus musculus (mouse) and Homo sapiens (human) several comprehensive datasets are now available including protein-protein interactions, metabolic reactions, gene regulatory interactions and large scale microarray analysis. Through the integration of different datasets one can improve the annotation of previously un- or little characterised genes by identifying functional relationships between genes (“guilt by association approach”).
+Based on previous work we are creating a new software tool called Biogranat (Molecular Biology Graph Visualisation and Analysis Tool) for the analysis and visualisation of large datasets. Biogranat is currently developed by groups from University of Applied Sciences and Arts Hannover (Department of Computer Science) and King’s College London (Bioinformatics @ Department of Medical and Molecular Genetics). Our motivation is to provide an easy-to-use, platform independent tool that allows rapid implementation of graph analysis and visualisation methods with very little performance deficits for large datasets. 
+Being implemented in Java, Biogranat is completely platform independent. It is based on the Java Open Services Gateway initiative (OSGi) bundle architecture (www.osgi.org). This framework provides a plugin mechanism that significantly reduces the overall complexity of building, maintaining and deploying applications. This makes Biogranat a very flexible tool that can easily be extended to meet future developments.
+So far we have implemented several bundles, which provide the graphical user interface, a data model for graphs, input and output routines for various graph file formats, a facility to use the Java Universal Network/Graph Framework (JUNG) library (jung.sourceforge.net), 2D graph layout routines, 3D visualisation of graphs (based on OpenGL), JAVA scripting and graph analysis algorithms. Further bundles are currently being implemented. They address e.g. the generation of random graphs, 3D layout routines and the import of biological meta-information from the Gene Ontology and Ensembl. To facilitate the generation of publishable images we are also implementing a high quality image and vector graphics export function. 
+We will apply Biogranat to analyse large scale gene networks to the end of annotating previously uncharacterised genes and improve the annotation of known genes. More in particular we want to explore the feasibility of these techniques to identify genes potentially involved in human diseases.
+We plan to make Biogranat available as Open Source Software. We would like to acknowledge funding from the German Academic Exchange Service (DAAD PPP D/07/09921) and the British Council (ARC1297).
+</div>
+<div class="keys">
+Keywords: network, graph visualisation, graph analysis, large scale data analysis, OSGi framework
+</div>
+<a name="22
+"></a>
+<div class="poster">
+Poster H22
+</div>
+<div class="titolo">
+Uncovering Biological Network Function via Graphlet Degree Signatures
+</div>
+<div class="autori">
+Milenkovic, T., Przulj, N.
+</div>
+<div class="inst">
+Department of Computer Science, University of California, Irvine
+</div>
+<div class="shabs">
+Proteins are essential macromolecules of life and understanding their function is important. We use graphlet degree signatures of proteins in protein-protein interaction (PPI) networks to design a method that demonstrates that biological function and network structure are closely related. We successfully uncover groups of topologically similar proteins that share common biological properties. We apply our method to infer function of unclassified proteins and we provide biological validation of these predictions. Our method can provide valuable guidelines the future experimental research.
+</div>
+<div class="exabs">
+Proteins are essential macromolecules of life and understanding their function is important. The number of functionally unclassified proteins is large even for simple and well studied organisms such as yeast. Methods for determining protein function have shifted their focus from targeting specific proteins based solely on sequence homology to analyses of the entire proteome using protein-protein interaction (PPI) networks. PPI networks are commonly represented as graphs in which nodes correspond to proteins and undirected edges represent physical interactions between them. Since proteins aggregate to perform a certain function, PPI networks by definition reflect the interconnected nature of biological processes. Therefore, analyzing structural properties of PPI networks may provide useful clues about the function of individual proteins, protein complexes, and even larger cellular machines. Defining the relationship between the PPI network topology and biological function and determining protein function from it is one of the most challenging problems in the post-genomic era.
+The method we propose addresses this challenge. First, we use it to demonstrate that in numerous PPI networks of yeast and human, biological function and local network structure are closely related, by successfully grouping topologically similar proteins belonging to the same complex, functional, subcellular localization, and tissue expression categories. Next, we apply this technique to infer biological function of yet unclassified proteins in yeast. 
+Our method generalizes the degree of a node, which measures the number of edges that the node touches, into the vector of additional 72 graphlet degrees, measuring the number of graphlets that the node touches, where graphlets are small connected non-isomorphic induced subgraphs of a large network (Przulj et al., 2004). Clearly, the degree of a node is the first one in this vector, since an edge is the only 2-node graphlet. Thus, for each node we generate this vector and we call it the signature of the node. We design a signature-based node similarity measure as a number in [0, 1], where 1 means the identity between the signatures of two nodes. We call this measure the node signature similarity.
+For a node of interest, we form a cluster containing that node, and all nodes in a network that are similar to it. We define two nodes to be similar if their signature similarity is above a certain threshold. Next, we identify the common protein complex, functional, subcellular localization, and tissue expression categories that nodes in each cluster belong to. Ideally, we expect to find a category common to all nodes in a cluster. We demonstrate that our method is capable of identifying groups of topologically similar nodes that share common biological properties. Thus, our technique can be applied to identify biological properties of yet unclassified proteins by forming a cluster of proteins
+that are similar to the unclassified protein of interest and assigning it the most common biological properties of the classified proteins in the cluster. We validate our predictions in the literature.
+We present proteome-scale network-topology-based method for detecting protein complexes, function, subcellular localization, and tissue expression. Additionally, it can be used to infer other biological properties. Moreover, the method can be applied to PPI networks of other organisms as well as to other
+types of biological networks. Our method can give insight into complex biological mechanisms and provide valuable guidelines for the future experimental research.
+</div>
+<div class="keys">
+Keywords: protein-protein interaction networks, network structure, protein function prediction, local network topology
+</div>
+<a name="23
+"></a>
+<div class="poster">
+Poster H23
+</div>
+<div class="titolo">
+Human metabolic pathways in the small molecule chemical space
+</div>
+<div class="autori">
+Macchiarulo A. (1), Thornton J. M. (2), Nobeli I. (3)
+</div>
+<div class="inst">
+(1) Dipartimento di Chimica e Tecnologia del Farmaco, Università di Perugia, (2) EMBL-European Bioinformatics Institute, (3) School of Crystallography, Birkbeck College, University of London
+</div>
+<div class="shabs">
+This work is a study of human metabolic pathways, as projected in the chemical space of the small molecules they comprise. It consists of three parts: A) We examine the distribution and relationships of human metabolic pathways in the chemical space. B) We use physicochemical descriptors to build a small molecule classifier, whose aim is to predict metabolic class and pathway membership of any small molecule. C) We study the extend of overlap of a set of known drugs to the human metabolome, and use the classifier to predict the overlap between drugs and the major metabolic pathways in humans.
+</div>
+<div class="exabs">
+As metabolic pathways are defined by sets of reactions involving small molecules, it should be possible to project them onto, and analyse their relationships in, the chemical space defined by these molecules. In the first part of this study we project a dataset of 61 human metabolic pathways from the KEGG database (Kanehisa & Goto, 2000), comprising 881 small molecules onto the chemical space defined by either the small molecule 2D structures or their physicochemical descriptors, and compare visually and quantitatively the extent of pathway overlap using either method.  We also calculate the mean within-pathway similarity, which allows us to estimate the tightness of each pathway in chemical space.
+In the second part of this study, we build a classifier that, given a small molecule, can assign the probability for this molecule to “belong” to any of the pathways in our dataset. A set of descriptors suggested for QSAR applications and derived from connection table information (Labute, 2000) are used to train a Random Forest classifier (Breiman, 2001) that estimates the closeness of a small molecule to any of a set of human metabolic pathways. Classification error rates are calculated and compared for the individual pathways and the classes of pathways as defined by KEGG. Such a classifier would be particularly useful for assigning “orphan” molecules to existing metabolic pathways, a problem that is likely to become more common with the advent of metabolomics experiments.
+Finally, in the third part of this study we compare a dataset of drugs downloaded from DrugBank (Wishart et al., 2001) to the human metabolome and use our random forest classifier to estimate possible interactions between drugs and the human metabolic pathways in our dataset.
+References:
+Breiman, L. (2001). Machine Learning 45, 5-32.
+Kanehisa, M. and Goto, S. (2000). Nucleic Acids Res. 28, 27-30.
+Labute, P. (2000). J Mol Graph Model 18, 464-477.
+Wishart, D.S. et al. (2008). Nucleic Acids Res. 36, D901-D906.
+</div>
+<div class="keys">
+Keywords: metabolic pathways, chemical space, random forest, drugs
+</div>
+<a name="24
+"></a>
+<div class="poster">
+Poster H24
+</div>
+<div class="titolo">
+Discovering new apoptosis proteins from protein interaction networks: determination of the best cadidates
+</div>
+<div class="autori">
+Joan Planas-Iglesias (1), Kevin A. Robertson (2), Sobia Raza (2), Tom C. Freeman (2), Peter Ghazal (2), Baldo Oliva (1)
+</div>
+<div class="inst">
+(1) Structural Bioinformatics Lab. Unitat de Recerca en Informàtica Biomèdica (GRIB) Universitat Pompeu Fabra. C/ Dr. Aiguader 88, Barcelona 08003, Catalonia, Spain. , (2) Division of Pathway Medicine. University of Eedinburgh, 49 Little France Crescent, Edinburgh EH16 4SB, UK
+</div>
+<div class="shabs">
+Signalling pathways transport biological signals from receptor to the final effectors, generally resulting in alterations of gene expression. Several pathologic processes disrupt the physiological information flow in signalling pathways. Finding novel pathway-involved proteins may be a crucial in order to find new therapeutic targets.  Here we show how integrating and analyzing different protein interaction sources very few (19) new apoptosis protein candidates can be selected among hundreds of thousands potential candidates. 
+</div>
+<div class="exabs">
+Motivation: Signalling pathways are exploited by cells during responses to either external or internal environmental changes. Typically, a signal is propagated from a receptor through different components of a pathway in order to generate a response, resulting generally in an alteration of gene expression. Processes related to signal transduction are often modulated during disease. As a result, the identification of proteins responsible for these disease-related changes is essential for the diagnostics and development of therapeutics. Particularly, proposing a reduced number of proteins to be involved in a signalling pathway can foster the development of treatments against signalling pathway-related diseases.  
+Protein interactions play a key role in the communication between different components of signalling pathways. High- throughput experiments have yielded an enormous quantity of protein interaction data which holds potential in the prediction of new signalling pathway members. Significantly; however, the validity of this data has been questioned due to a) the high rate of false positives among experimental results and b) the small overlap across different experiments. The analysis of protein interaction networks and their properties can shed light discerning which interactions can be used to predict new members of signalling pathways. 
+Results: In this study we present the results obtained for the analysis of the protein interaction networks obtained from 52 well studied members of the human apoptosis pathway and its properties. The apoptosis system has been related to numerous pathologies. Specifically, this study focuses on the number of both databases and experimental methods describing a protein-protein interaction, the Apoptosis Linking Degree -a topological property of the networks, and the score associated to some protein interaction predictions. We demonstrate that these parameters can be used to select the most reliable protein candidates to be involved in the apoptosis signalling pathway. Further more, the combination of all these parameters allows to propose 19 protiens as novel participatants of apoptosis related pathways among hundreds of thousands of possible candidates.
+</div>
+<div class="keys">
+Keywords: Protein-Protein interaction, Networks, Apoptosis
+</div>
+<a name="25
+"></a>
+<div class="poster">
+Poster H25
+</div>
+<div class="titolo">
+Comparison and assessment of structural domain-domain intercations to improve protein-protein interaction data
+</div>
+<div class="autori">
+Carlos Prieto, Javier De Las Rivas
+</div>
+<div class="inst">
+Cancer Research Center (CIC, CSIC/USAL) 37007 Salamanca, Spain
+</div>
+<div class="shabs">
+The assessment of the reliability of protein interaction data is a critical issue to work in a correct way with interactomes. To address this problem the integration of structural domain domain interactions could help to improve the reliability of protein interactomes. With this goal we have compared six resources that define structural domain-domain interactions (sddi) to probe if they could validate protein-protein interactions (ppi) and if they are complementary.
+</div>
+<div class="exabs">
+BACKGROUND
+Nowadays work in proteomics is producing vast amounts of biological data that are been stored in public databases. One of the most productive areas of new data and knowledge is the one of protein–protein interactions (ppi). The large growth of interaction data is mainly due to the high-throughput experimental techniques recently developed. Despite these advances, scientist agree about the large amounts of false positives given by many proteomic techniques (von Mering et al. 2002). This is a critical issue to be addressed before any bioinformatics or biological study on protein interactomes, because without solid data it will bring this research to a pitfall.
+On the other hand 3D structural information about proteins is growing fast and starts to have a significant coverage of whole proteomes. Using this information several bioinformatics studies have attempted to describe structural domain-domain interactions (sddi) mediated by a structural interface. These studies have explored the structural information stored in the Protein Data Bank (PDB) to define interacting structural families or structural domains. To achieve this they have identified small distances between atoms in interacting domains, specific bonding patterns between them or the conservation of interacting faces.
+Integration of sddi data with ppi could be useful to address the problem of improving the accuracy of protein interaction data, because it is clear that physical ppi occurs via sddi. This integration is not trivial due to the different methods by which sddi datasets have been built and the consequent heterogeneity between them. Therefore, a prior study of the interactome confidence improvement by sddi data is needed.
+RESULTS
+We have integrated the main structural resources that have defined domain-domain interactions (3DID (Stein et al. 2005), CBM (Shoemaker et al. 2006), iPFAM (Finn et al. 2005), PIBASE (Davis and Sali 2005), PSIBASE (Gong et al. 2005), SNAPPI (Jefferson et al. 2007)). All these resources are based on 3D structural data but they have developed different approaches and methods to define sddi and have produced different outputs. We have compared all these available sddi data sets and found that they are heterogeneous, and so they can be combined. 
+In order to see how each sddi resource could help to validate ppis, we have defined three ppi reference sets derived from APID (Prieto and De Las Rivas 2006), tool that unifies data from six ppi databases. These reference sets were defined taking i) ppis validated with several experimental methods, ii) ppis with interactors that are present in similar cellular locations or iii) ppis with interactors that work together in a KEGG pathway. These reference sets taken as true positives were used to measure the coverage of each sddi data set.  In addition, equivalent random sddi data sets were constructed for each sddi resource and we calculated the number of interactions found in each reference set that were validated by chance from these sddi random sets.
+In conclusion, we have proven that sddi can help to improve the confidence of the interactomes and despite of the heterogeneity and the variety of sddi methodologies they could be combined to improve the coverage and the accuracy of a structural protein interaction assessment method (Prieto and De Las Rivas 2006).
+REFERENCES
+Davis, F.P. and Sali, A. 2005. PIBASE: a comprehensive database of structurally defined protein interfaces. Bioinformatics 21: 1901-1907.
+Finn, R.D., Marshall, M., and Bateman, A. 2005. iPfam: visualization of protein-protein interactions in PDB at domain and amino acid resolutions. Bioinformatics 21: 410-412.
+Gong, S., Yoon, G., Jang, I., Bolser, D., Dafas, P., Schroeder, M., Choi, H., Cho, Y., Han, K., Lee, S. et al. 2005. PSIbase: a database of Protein Structural Interactome map (PSIMAP). Bioinformatics 21: 2541-2543.
+Jefferson, E.R., Walsh, T.P., Roberts, T.J., and Barton, G.J. 2007. SNAPPI-DB: a database and API of Structures, iNterfaces and Alignments for Protein-Protein Interactions. Nucleic Acids Res 35: D580-589.
+Prieto, C. and De Las Rivas, J. 2006. APID: Agile Protein Interaction DataAnalyzer. Nucleic Acids Res 34: W298-302.
+Shoemaker, B.A., Panchenko, A.R., and Bryant, S.H. 2006. Finding biologically relevant protein domain interactions: conserved binding mode analysis. Protein Sci 15: 352-361.
+Stein, A., Russell, R.B., and Aloy, P. 2005. 3did: interacting protein domains of known three-dimensional structure. Nucleic Acids Res 33: D413-417.
+von Mering, C., Krause, R., Snel, B., Cornell, M., Oliver, S.G., Fields, S., and Bork, P. 2002. Comparative assessment of large-scale data sets of protein-protein interactions. Nature 417: 399-403.
+</div>
+<div class="keys">
+Keywords: Protein Interactions, Domain Interactions, Assessment of Interactions
+</div>
+<a name="26
+"></a>
+<div class="poster">
+Poster H26
+</div>
+<div class="titolo">
+Enabling a Remote Collaboration Environment for Integration of Quantitative Molecular Pathways
+</div>
+<div class="autori">
+Eva Sciacca (2,1), V A Shiva Ayyadurai (1), C Forbes Dewey (1)
+</div>
+<div class="inst">
+(1) Massachusetts Institute of Technology, (2) University of Catania
+</div>
+<div class="shabs">
+Developing complex models of cellular functions requires the collaboration of multiple teams of researchers remotely distributed worldwide. A challenge of computational systems biology is to find easy and accessible mechanisms to enable such collaboration. This poster presents the development of an on-line web portal for enabling open access to Cytosolve, an existing, proven and scalable computational architecture for integrating quantitative molecular pathways. The developed GUI will allow ease-of-use for developers of models to remotely collaborate to build larger and complex models.
+</div>
+<div class="exabs">
+A grand challenge of Systems Biology is to model the whole cell. A cell consists of a set of organelles that interact to provide cellular functions such as protein synthesis, metabolism, apoptosis, or motility. Systems Biology aims to develop a model of the cell by connecting the biochemical kinetics of these interactions at the molecular mechanistic level to derive the quantitative descriptions of higher-level cellular functions. There is a worldwide movement in the computational systems biology community to find powerful ways to integrate the growing number of biological pathway models. 
+The open-access on-line web portal discussed in this poster is based on the scalable computational architecture of Cytosolve, which allows the integration of an ensemble of distributed biological pathway models [Ayyadurai, PhD. Thesis, 2007]. The Cytosolve architecture has been validated on well-known biological models in the systems biology community by comparing solutions obtained with the existing approaches. Moreover, new integrative models, such as the interferon (IFN) response to virus infection, were developed using Cytosolve.  Cytosolve architecture [Ayyadurai and Dewey, BMC Bioinformatics, 2008] directly addresses the integration and scalability problems of coupling multiple biological pathways by providing a parallel and distributed architecture. 
+The computational architecture used by Cytosolve is based on the dynamic messaging approach, which implies that the models remain independently executing programs that interact only by exchanging data via message passing during execution. This kind of architecture removes the need to manually load, understand and interconnect each individual pathway into a single monolithic program as is required in other systems. 
+The logical software architecture of Cytosolve provides a Controller, a Presentation and Communications Layer that includes a Web Server with its Graphical User Interface and the Web Services, and finally the Remote Node machines.
+The Controller mediates the execution and messaging between the models. It consists of three main components: the Monitor that serves to track the progress of each pathway’s solution time, the Communications Manager (Comm Mgr) and the Mass Balance algorithm. The Controller serves two purposes. First, by means of the Comm Mgr, it mediates communication across all pathway models. Second, using the Mass Balance algorithm, it provides computational steering by ensuring mass conservation across all integrated models for each time step. 
+The Web Services are designed for remote model simulations. During a run, the web service can be instructed by a remote computer to perform two major operations. First, the web service can be instructed to simulate a local model over a single time step. After the simulation, the service sends back new concentration values calculated by the model. In the second operation, the web service can be instructed to insert new species concentration values into the model simulation. This allows external control of the simulation. The model simulator on the Remote Node machines is the SBML ODE Solver Library (SOSlib) [Machné et al., 2006] but other solvers supporting CellML, MML, and other pathway description dialects can be used interchangeably with SOSlib. 
+The Graphical User Interface (GUI) was developed by means of the JavaServer Pages (JSP) technology. JSP are supported with Java Server Faces (JSF) that provides tag libraries with custom actions for representing the standard UI components in the JSP pages. 
+A User from a Remote Node machine, by means of the GUI and the interaction with the Web Server, can: 
+1. Single model local simulation; 
+2. Single model remote simulation; 
+3. Integration of multiple models simulation (local and remote).
+A remote user by means of the web GUI is driven step by step on the simulation. When the topology of simulation is chosen, the user will be asked to submit the model (or the models in the case of multiple simulations) that should be a file resident on the local machine, a URL linking to a specific model or a model inside the database on the remote server. The local simulation requires that a solver is installed on the machine, if it is not available, the user will be asked to download it. The local solver is also needed when a multiple simulation is chosen and the user wants to simulate a model locally coupling the simulation with the other remote node machines on the network. After the setting of the parameters for each model, the simulation can be executed and the results will be displayed and stored. 
+The local simulation of the model implies a use of the local computational resources of the Remote Node machines but on the other hand it ensures protection of the proprietary models. Many pharmaceutical companies, for example, will not want to share the inner source code of their particular proprietary models; however, they are interested in coupling their models with other models to gain better understanding of a larger cellular process. On the other hand the black-box simulations of the models allow researchers to integrate Public models with existing Proprietary models to learn some new aspect of science, without violating confidentiality issues. 
+In summary, the main features of the on-line GUI-based web portal to Cytosolve presented in this poster are: 
+- Ease of access to the Cytosolve distributed and scalable architecture. The architecture is able to integrate new pathway models with the same ease as it is to integrate the first one.
+- Multiple platform availability for the simulations. The computational system allows models developed on different hardware and computing environments.
+- Open accessibility. The architecture and the implementation of the web application support protocols for communicating with models anywhere without regard to geographical location.
+</div>
+<div class="keys">
+Keywords: Integrate multiple remote model simulation
+</div>
+</body>
+</html>

@@ -1,0 +1,402 @@
+/*
+ * Foglio di stile base per ECCB08
+ * Autore Carmine Lia
+ */
+ 
+ /*** Impostazioni Globali e tag***/
+html 
+{
+  overflow-y: scroll;
+}
+html * {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #fff;
+	font-family: Verdana, "Trebuchet MS", Arial, sans-serif;
+	font-size: x-small;
+}
+a {
+	
+	color: #84898d;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+/*	color: #e46929; */
+ 
+}
+img {
+	border: 0;
+}
+p {
+	padding: 0.5em;
+        padding-left: 0;
+}
+ul
+{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+	
+address {
+	
+	font-weight: bold;
+	font-style: normal;
+}
+/*** Layout ***/
+#document {
+	width: 950px;
+/*	min-height: 700px; */
+	margin: 0 auto;
+	padding: 0;
+	background-color: #fff;
+	min-width: 800px;
+/*	 border-bottom: solid 1px; */
+	background-color: #fff;
+	display: table;
+}
+#header {
+	width: 100%;
+	height: 90px;  
+	background-image: url("img/header.bg.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+/*      border: solid 1px; */
+	cursor:pointer;
+}
+div#content {
+	float: left;
+	width: 755px;
+	min-height: 560px;
+	padding-top: 0em;
+	color: #0086a9;
+	background-image: url("img/content.bottom.bg.png");
+    background-position: center bottom;
+	background-repeat: no-repeat;
+	border: solid 1px #67ede4;
+	border-right: 0;border-top: 0;
+	font-size: 11px;
+}
+div#leftcolumn {
+	float: left;
+	width: 187px;
+	min-height: 560px;
+	background-image: url("img/leftcol.bg.png");
+	background-repeat: repeat-x;
+	background-position: left 254px;
+	background-color: #beeffd;
+	border-bottom: solid 1px #67ede4;
+}
+div#rightcolumn {
+	float: left;
+	width: 256px;
+	min-height: 560px;
+	color: #0086a9;
+	background-image: url("img/rightcol.bottom.bg.png");
+    background-position: center bottom;
+	background-repeat: no-repeat;
+	background-color: #fff;
+    border-bottom: solid 1px #67ede4; 
+    display: none;
+}
+div#footer {
+	clear: left;
+	width: 100%;
+	height: 130px;
+	background-image: url("img/footer.bg.png");
+	background-repeat: no-repeat;
+	background-position: left 6px;
+	
+}
+/* ### HEADER  */
+#header h1 
+{
+	position: absolute;
+	width:950px;
+}
+#header h1 span
+{
+	visibility: hidden;
+}
+#header h1 a:hover
+{
+	text-decoration: none;
+}
+	
+#header div.barra
+{
+    position: absolute;
+	width: 693px;
+	height: 17px;
+	top: 73px;
+	background-image: url("img/barra.bg.png");
+	background-repeat: repeat-x;
+}
+#header h2.bits
+ {
+    position: absolute;
+    width: 258px;
+	height: 37px;
+	top: 65px;
+	margin-left: 691px;
+	background-image: url("img/title.bits.bg.gif");
+	background-repeat: no-repeat;
+	text-align: right;
+}
+#header h2.bits span 
+{
+	visibility: hidden;	
+}
+#header h2.bits a:hover
+{
+	text-decoration: none;
+}
+/* ### FINE HEADER  */
+/* ### LEFTcolumn */
+#leftcolumn div.announcements
+{
+	width: 188px;
+	height: 216px;
+	background-image: url("img/announcements.bg.png");
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+/* ### FINE LEFTcolumn */
+/* ### CONTENT */
+#content div.section div
+{
+        padding: 0.5em;
+}
+#content h2.head
+{
+	width: 761px; 
+	height: 121px;
+	background-image: url("img/content.head.bg.jpg");
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#content h2.head span
+{
+	display: none;
+}
+#content h3
+{
+/*	width: 754px;
+	height: 21px;
+*/
+	color: #009ec1;
+	margin: 0 auto;
+	padding: 0.3em;
+	font-size: 13px;
+/*
+	background-image: url("img/title.bg.gif");
+        background-position: left top;
+	background-repeat: no-repeat;
+*/
+}
+#content h3.title
+{
+	width: 754px;
+	height: 21px;
+	color: #009ec1;
+	margin: 0 auto;
+	padding-top: 2px;
+	font-size: 13px;
+	background-image: url("img/title.bg.gif");
+        background-position: left top;
+	background-repeat: no-repeat;
+}
+#content h3 span
+{
+	padding-left: 1em;
+}
+	
+#content h4
+{
+	padding: 0.0em;
+	padding-bottom: 0.3em;
+	font-size: larger;
+	/*font-weight: lighter;*/
+}
+#content h4.title
+{
+	width: 740px;
+	height: 21px;
+	color: #009ec1;
+	margin: 0 auto;
+	padding-top: 2px;
+	font-size: 13px;
+	background-image: url("img/title1.bg.gif");
+        background-position: left top;
+	background-repeat: no-repeat;
+}
+#content h4 span
+{
+	padding-left: 1em;
+}
+#content div.topbg
+{
+	width: 761px;
+	height: 100%;
+	background-image: url("img/content.top.bg.png");
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#content div.topbg div.section
+{
+	width: 754px;
+	margin: 0 auto;
+	border: 0;
+}
+#content div.box
+{
+	width: 491px;
+	height: 117px;
+/*	margin-top: 177px; */
+	margin-left: auto;
+	margin-right: auto;
+	border: solid 1px #b4b6b5;
+	border-top: 0;
+    background-image: url("img/box.bg.png");
+    /* 20px a compensare il titolo */
+    background-position: 0 20px;
+	background-repeat: repeat-x;
+}
+#content div.box h3
+{
+	width: 491px;
+	background-image: url("img/title.box.bg.png");
+}
+#content div.sponsors
+{
+	width: 437px;
+	height: 129px;
+	margin: 0 auto;
+}
+#content a 
+{
+	
+	font-weight: bold;
+}
+#content span a
+{
+	
+	padding-left: 2em;
+	background-image: url("img/link.bg.png");
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+/* ### FINE CONTENT */
+/* ### RIGHTcolumn */
+#rightcolumn div.topbg
+{
+	width: 256px;
+	height: 100%;
+	background-image: url("img/rightcol.top.bg.png");
+    background-position: center top;
+	background-repeat: no-repeat;
+}
+#rightcolumn div.section
+{
+	width: 90%;
+	margin: 0px auto;
+	padding: 0em;
+	padding-bottom: 0.5em;	
+}
+#rightcolumn h3
+{
+	padding-bottom: 0.4em;
+	padding-top: 0.5em;
+	font-weight: lighter;
+	font-size: medium;
+}
+#rightcolumn p
+{
+	padding-bottom: 0.3em;
+	padding-left: 0;
+	padding-top: 0em;
+	font-size: 11px;
+}
+/* ### FINE RIGHTcolumn */
+/* ### FOOTER */
+#footer p
+{
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 2em;
+	text-align: center;
+	font-size: x-small;
+}
+/* ### FINE FOOTER */
+/* classi */
+div.hr {
+	width: 95%;
+	height: 4px;
+	margin: 0 auto;
+        margin-top: 0.5em;
+	border: 0;
+	background-image: url("img/hr.bg.gif");
+	background-repeat: repeat-x;
+}
+div.hr hr
+{
+	display: none;
+}
+ul.links
+{
+    list-style-image: url('img/link.bg.png');
+    list-style-type: circle;
+    list-style-position: inside;
+}
+ul.links li
+{
+   padding-bottom: 0.5em;
+   padding-left: 0em;
+}
+ul.links li a
+{
+	margin-top: -2px;
+	position: absolute;
+}
+ul.list
+{
+    margin-left: 0.3em;
+    list-style-image: url('img/list.bg.gif');
+    list-style-type: square;
+    list-style-position: inside;
+}
+ul.list li
+{
+	
+   padding-bottom: 0.3em;
+   padding-left: 0em;
+}
+.hidden {
+	display: none;
+}
+.grassetto {
+	font-weight: bold;
+}
+.center
+{
+  text-align: center;
+}
+.clear
+{
+	clear: both;
+}
+.ident 
+{
+	padding-left: 0.5em;
+}
+.ident1 
+{
+	padding-left: 1.0em;
+}
+.ident2 
+{
+	padding-left: 1.5em;
+}

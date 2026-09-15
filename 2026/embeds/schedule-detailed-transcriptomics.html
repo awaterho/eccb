@@ -1,0 +1,767 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="vendor/transition.iscb.org/templates/iscb/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/transition.iscb.org/templates/iscb/css/template.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/transition.iscb.org/templates/iscb/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/transition.iscb.org/templates/iscb/css/responsive.css" rel="stylesheet" type="text/css" />
+    <link
+      href="vendor/transition.iscb.org/components/com_comprofiler/plugin/templates/default/fontawesome.css"
+      rel="stylesheet"
+      type="text/css" />
+    <script src="vendor/ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="keywords"
+      content="ISCB, bioinformatics, cheminformatics, biocomputing, algorithm, biology, chemistry, computer" />
+    <meta name="description" content="ISCB -  International Society for Computational Biology" />
+    <meta name="generator" content="Joomla! - Open Source Content Management" />
+    <title>ISCB Transition Page</title>
+    <!-- Google api links -->
+    <link href="vendor/fonts.googleapis.com/roboto.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/fonts.googleapis.com/open-sans.css" rel="stylesheet" type="text/css" />
+    <link
+      href="vendor/transition.iscb.org/templates/iscb_29_01_2008/favicon.ico"
+      rel="shortcut icon"
+      type="image/vnd.microsoft.icon" />
+    <!-- CSS links -->
+    <link href="vendor/transition.iscb.org/templates/iscb/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/transition.iscb.org/templates/iscb/css/template.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/transition.iscb.org/templates/iscb/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/transition.iscb.org/templates/iscb/css/responsive.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="vendor/transition.iscb.org/media/logos/style/displayresult.css" type="text/css" />
+    <link rel="stylesheet" href="vendor/transition.iscb.org/media/logos/style/formfieldset1.css" type="text/css" />
+    <!-- JS scripts -->
+    <script src="vendor/transition.iscb.org/media/system/js/mootools-core.js" type="text/javascript"></script>
+    <script src="vendor/transition.iscb.org/media/system/js/core.js" type="text/javascript"></script>
+    <script src="vendor/transition.iscb.org/media/system/js/mootools-more.js" type="text/javascript"></script>
+    <script src="vendor/transition.iscb.org/media/jui/js/jquery.min.js" type="text/javascript"></script>
+    <script src="vendor/transition.iscb.org/media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
+    <script src="vendor/transition.iscb.org/media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
+    <script src="vendor/transition.iscb.org/media/system/js/html5fallback.js" type="text/javascript"></script>
+    <script src="vendor/ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+    <link
+      rel="stylesheet"
+      href="vendor/transition.iscb.org/js/datatables/media/css/jquery.dataTables.css"
+      type="text/css" />
+    <script src="vendor/transition.iscb.org/js/datatables/media/js/jquery.js" type="text/javascript"></script>
+    <script
+      src="vendor/transition.iscb.org/js/datatables/media/js/jquery.dataTables.js"
+      type="text/javascript"></script>
+    <link rel="stylesheet" href="../assets/archive.css" />
+    <script src="../assets/archive.js" defer></script>
+  </head>
+  <body>
+    <style>
+      html,
+      body {
+        background: transparent !important;
+        margin: 0;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="vendor/cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+    <script src="vendor/code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="vendor/cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="vendor/cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css" />
+    <script src="vendor/cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+    <script src="vendor/cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="vendor/cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="vendor/cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="vendor/cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+    <script src="vendor/cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js"></script>
+    <style>
+      #detailedTable th,
+      #detailedTable td {
+        border: 1px solid #ddd;
+      }
+    </style>
+    <a name="top"></a>
+    <p>
+      <a class="btn btn-primary" style="color: #ffffff" href="../index.html" target="_parent"
+        >Return to ECCB 2026 Homepage</a
+      >  
+      <a class="btn btn-primary" style="color: #ffffff" href="schedule-ataglance.html"
+        >Click here for the agenda at a glance</a
+      >
+    </p>
+    <hr />
+    <p style="text-align: center">
+      <em
+        >Select Track:
+        <a href="schedule-detailed-biodiversity.html">Biodiversity, sustainability, envirobioinformatic</a> |
+        <a href="schedule-detailed-keynotes.html">Distinguished keynotes</a> |
+        <a href="schedule-detailed-elixir.html">Elixir</a> |
+        <a href="schedule-detailed-genomics.html">Genomics, epigenomics, and genome editing</a> |
+        <a href="schedule-detailed-proteins.html">Proteins and structural biology</a> |
+        <a href="schedule-detailed-special.html">Special track</a> |
+        <a href="schedule-detailed-sysbio.html">Systems biology, multi-omics integration, modeling</a> |
+        <a href="schedule-detailed-transcriptomics.html">Transcriptomics and gene regulation</a> |
+        <a href="schedule-detailed.html">All</a></em
+      >
+    </p>
+    <hr />
+    <h1>Schedule for Transcriptomics</h1>
+    <p>
+      <strong style="color: #ff0000">NOTE:</strong> Browser resolution may limit the width of the agenda and you may
+      need to scroll the iframe to see additional columns.<br />
+      Click the buttons below to download your current table in that format
+    </p>
+    <table id="detailedTable" class="display">
+      <thead>
+        <tr>
+          <th>
+            <strong style="text-decoration: underline">Date</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">Start time</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">End time</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">Room</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">Track</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">Title</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">Confrimed presenter</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">Authors</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">Abstract</strong>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2026-08-31</td>
+          <td>16:15:00</td>
+          <td>17:15:00</td>
+          <td>Room BC</td>
+          <td>Transcriptomics and gene regulation</td>
+          <td>
+            SlotDeconv: Spatial Transcriptomics Deconvolution via Diversity Constrained Prototype Learning and Spatial
+            Refinement
+          </td>
+          <td>Zhi Wei</td>
+          <td>Hanzhang Fang, Cong Qi, Yuanjie Zou, Yeqing Chen, Zhi Wei</td>
+          <td>
+            Motivation: Spatial transcriptomics (ST) measures gene expression in intact tissues, but each spot typically
+            contains mixtures of multiple cell types. Deconvolution is particularly challenging when closely related
+            cell subtypes share highly similar expression profiles and when spatial context is underutilized during
+            proportion estimation.<br />
+            Results: We present SlotDeconv, a method for ST deconvolution consisting of a single-cell reference module
+            and a spatial inference module. The reference module learns discriminative cell-type signatures using slot
+            based prototype vectors decoded into a reference matrix, trained with a negative binomial reconstruction
+            loss and a max-margin diversity constraint that discourages similar cell-type signatures. Ablation studies
+            confirm that both components are essential: removing the diversity constraint reduces spot-wise Pearson
+            correlation by 49%, and replacing learned prototypes with cell-type mean expression reduces it to near zero.
+            The spatial inference module initializes spot level proportions via<br />
+            gene weighted nonnegative least squares, then refines them by minimizing KL divergence between observed and
+            reconstructed spot expression under a spatial neighborhood consistency regularizer. Benchmarked against
+            CARD, RCTD, Cell2location, and Spotiphy on a 27 cell type mouse brain dataset, SlotDeconv achieves the
+            highest spot wise Pearson correlation (0.561) and cosine similarity (0.633), outperforming the next best
+            method by 7.5% in spot-wise correlation, with particularly strong gains on transcriptionally similar
+            cortical neuronal subtypes. Biological validation on human pancreatic cancer and mouse olfactory bulb
+            datasets further confirms spatial specificity.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-08-31</td>
+          <td>16:15:00</td>
+          <td>17:15:00</td>
+          <td>Room BC</td>
+          <td>Transcriptomics and gene regulation</td>
+          <td>SPIDER: Spatially Integrated Denoising via Embedding Regularization with Single Cell Supervision</td>
+          <td>Md Istiaq Ansari</td>
+          <td>Md Istiaq Ansari, Muhtasim Noor Alif, Wei Zhang</td>
+          <td>
+            Motivation: Spatial transcriptomics (ST) technologies profile gene expression while preserving tissue
+            architecture, enabling the study of spatial cellular organization and microenvironmental interactions.
+            However, raw ST data are heavily affected by technical noise, sparsity, and dropout events, which obscure
+            true biological signals and hinder downstream analyses. While recent denoising methods incorporate spatial
+            neighborhood information, they lack explicit supervision due to missing cell-type annotations in ST data. To
+            address this challenge, we introduce SPIDER, a semi-supervised framework that leverages independently
+            generated, annotated single-cell RNA-seq (scRNA-seq) references to guide ST denoising. SPIDER synthesizes
+            pseudo-ST data from scRNA-seq to inject cell-type information without requiring paired measurements. The
+            method constructs three graphs capturing spatial proximity, transcriptional similarity in real-ST data, and
+            transcriptional structure in pseudo-ST data. Graph encoders map these representations into a shared latent
+            space, and a domain-alignment module transfers biologically meaningful structure from pseudo-ST to real-ST
+            embeddings. A graph-attention decoder with a zero-inflated negative binomial objective reconstructs denoised
+            ST expression profiles. <br />
+            <br />
+            Results: We benchmark SPIDER on human dorsolateral prefrontal cortex and breast cancer datasets. SPIDER
+            consistently enhances spatial gene expression patterns, recovers known tissue structures, and achieves
+            superior clustering performance compared to existing approaches. Marker gene analyses demonstrate improved
+            spatial continuity and clearer anatomical organization. By directly producing denoised expression matrices,
+            SPIDER improves both accuracy and interpretability, providing a generalizable solution for robust ST data
+            denoising. <br />
+            <br />
+            Availability and Implementation: The source code is available at: https://github.com/compbiolabucf/SPIDER
+          </td>
+        </tr>
+        <tr>
+          <td>2026-08-31</td>
+          <td>16:15:00</td>
+          <td>17:15:00</td>
+          <td>Room BC</td>
+          <td>Transcriptomics and gene regulation</td>
+          <td>DESpace2: detection of differential spatial patterns in spatial omics data</td>
+          <td>Peiying Cai</td>
+          <td>Peiying Cai, Mark Robinson, Simone Tiberi</td>
+          <td>
+            Motivation: Spatially resolved transcriptomics (SRT) enables the investigation of mRNA expression in a
+            spatial context. While several SRT analysis<br />
+            frameworks have been developed, the vast majority of them focus on analyzing individual samples, and do not
+            allow for comparisons of spatial gene<br />
+            expression patterns across experimental conditions, such as healthy vs. diseased states.<br />
+            Results: Here, we present an approach to identify so-called differential spatial patterns (DSP), i.e., genes
+            that exhibit changes in spatial expression<br />
+            between groups of samples across conditions. Our framework processes diverse SRT data types and detects DSP
+            by performing differential gene<br />
+            expression testing across conditions. Notably, this comparison is not currently available in any other
+            spatial omics method. In addition to detecting<br />
+            DSP across conditions, our framework includes two key features. First, it can identify tissue regions where
+            expression changes across conditions.<br />
+            Second, it can detect spatial gene expression pattern changes across more than two experimental conditions,
+            with flexible models. With ad hoc<br />
+            simulations, we demonstrate that our approach has good true positive rates and well-calibrated false
+            discovery rates. Applied to experimental data,<br />
+            our method identifies biologically relevant DSP genes while maintaining computational efficiency.<br />
+            Availability: Our framework has been implemented within DESpace Bioconductor R package (from version 2.0.0).
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-01</td>
+          <td>11:45:00</td>
+          <td>12:45:00</td>
+          <td>Room BC</td>
+          <td>Transcriptomics and gene regulation</td>
+          <td>
+            Prognostic RNA-splicing archetypes in breast cancer identified by extended pre-training of histopathology
+            foundation models
+          </td>
+          <td>Lisa Fournier</td>
+          <td>
+            Lisa Fournier, Garance Haefliger, Albin Vernhes, Vincent Jung, Lena Loye, Valentine Du Bois, Intidhar
+            Labidi-Galy, Pascal Frossard, Igor Letovanec, Cédric Vincent-Cuaz, RaphaÃ«lle Luisier
+          </td>
+          <td>
+            Intra-tumor heterogeneity (ITH) is a major driver of cancer progression and therapeutic resistance. Although
+            ITH has been extensively profiled at the molecular level, revealing the coexistence of tumor subpopulations
+            with distinct molecular identities, how these programs organize spatially within tumors, forming recurrent
+            regions with unique molecular profiles, tissue architecture, and cellular composition, remains poorly
+            understood. In this study, we push the boundaries of histopathology foundation models (hFMs) to reveal
+            molecularly distinct tumor regions that are invisible to human experts, offering new insights into the
+            molecular organization of invasive breast tumors.<br />
+            We specialized generalist hFMs through extended pre-training on invasive tumor tissue, enhancing their
+            ability to encode richer, tumor-specific biological concepts. Based solely on these image-derived features,
+            the model identified distinct tumor regions, termed tumor archetypes, that subsequently mapped to unique
+            molecular signatures. Characterizing these tumor archetypes by integrating spatial transcriptomics data, we
+            uncovered distinct patterns of RNA splicing dysregulation alongside other pathways such as TGF-Î² signaling.
+            Notably, aberrant RNA splicing emerged as the main driver of one archetype across both HER2+ breast cancer
+            and triple-negative breast cancer (TNBC).<br />
+            Strikingly, these archetypes coexist as spatially distinct regions within the same tumors and recur across
+            patients. Survival analysis revealed that enrichment of the RNA splicingâ€“dysregulated archetype is
+            associated with poorer overall survival, highlighting its clinical relevance.<br />
+            This work provides a scalable method to uncover tumor archetypes from H&amp;E images, linking tissue
+            morphology to RNA programs and opening new avenues for precision oncology and RNA-focused therapeutic
+            stratification.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-01</td>
+          <td>11:45:00</td>
+          <td>12:45:00</td>
+          <td>Room BC</td>
+          <td>Transcriptomics and gene regulation</td>
+          <td>ExoShorkie: Predicting RNA-seq coverage of exogenous genomes in yeast by transfer learning</td>
+          <td>Jonathan Mandl</td>
+          <td>Jonathan Mandl, Yaron Orenstein</td>
+          <td>
+            Motivation: Predicting the RNA-seq coverage of native and exogenous sequences is central to many molecular-
+            and synthetic-biology applications. Substantial progress has been made in developing methods to predict the
+            RNA-seq coverage of native genomic sequences, with the recently developed Shorkie achieving state-of-the-art
+            performance in yeast. However, prediction performance of these methods over exogenous DNA is still unknown.
+            Recent studies measured RNA-seq coverage of large exogenous genomes in yeast, providing a unique opportunity
+            to train machine-learning models on a large exogenous sequence space and to improve both prediction
+            performance and our understanding of regulatory mechanisms.<br />
+            <br />
+            Results: We introduce ExoShorkie, a method we developed by extending Shorkie through transfer learning
+            across multiple exogenous RNA-seq datasets. We demonstrate that ExoShorkie significantly improves prediction
+            performance on held-out exogenous genomes and outperforms both a native-genome-trained Shorkie baseline and
+            Yorzoi, the only competing method in predicting exogenous RNA-seq coverage in yeast, in cross-validation and
+            in leave-one-genome-out evaluations. Furthermore, through interpretability analyses we reveal biologically
+            meaningful regulatory motifs and distinct regulatory rules in exogenous genomes in yeast, providing new
+            insights into transcriptional regulation.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-01</td>
+          <td>11:45:00</td>
+          <td>12:45:00</td>
+          <td>Room BC</td>
+          <td>Transcriptomics and gene regulation</td>
+          <td>miRBind2 enables sequence-only prediction of miRNA binding and transcript repression.</td>
+          <td>David Cechak</td>
+          <td>
+            David Cechak, Dimosthenis Tzimotoudis, Stephanie Sammut, Katarina Gresova, Eva Marsalkova, David Farrugia,
+            Panagiotis Alexiou
+          </td>
+          <td>
+            Motivation: MicroRNAs (miRNAs) regulate gene expression by guiding Argonaute proteins to partially
+            complementary sites on target RNAs. While classical prediction methods rely on engineered features such as
+            seed match categories, evolutionary conservation, and site context, recent advances in deep learning offer
+            the potential to learn targeting rules directly from sequence. We developed a sequence-based deep learning
+            model that improves miRNA target site prediction, and further validated the learned target site
+            representations by extending the model to gene-level functional repression prediction.<br />
+            Results: We introduce miRBind2, a deep learning method for miRNA target site prediction that incorporates a
+            novel pairwise nucleotide representation capturing all possible miRNA-target nucleotide interactions, with a
+            CNN-based architecture. miRBind2 outperforms previous SotA models across four independent datasets from the
+            debiased miRBench benchmark, while using 92% fewer parameters. We show that the convolutional features and
+            weights learned by miRBind2 can be transferred to transcript-level prediction by extending the miRBind2
+            architecture and fine-tuning it on miRNA perturbation experiments. This miRBind2-3UTR model predicts gene
+            repression from sequence alone. On a dataset of 50,549 miRNA-gene pairs, miRBind2-3UTR significantly
+            outperforms TargetScan. These results show that deep models pretrained on target site data can capture
+            regulatory signals and predict functional repression without requiring conventional engineered biological
+            features.<br />
+            Availability: Models and source code are freely available via GitHub
+            (https://github.com/BioGeMT/miRBind_2.0). A publicly available web-tool for novel predictions and
+            visualization is available at : (https://huggingface.co/spaces/dimostzim/BioGeMT-miRBind2)
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-01</td>
+          <td>15:15:00</td>
+          <td>16:15:00</td>
+          <td>Room EF</td>
+          <td>Transcriptomics and gene regulation</td>
+          <td>
+            Chiron3D: an interpretable deep learning framework for understanding the DNA code of chromatin looping
+          </td>
+          <td>Sebastian Hoenig</td>
+          <td>Sebastian Hoenig, Aayush Grover, Piero Neri, Didier Surdez, Valentina Boeva</td>
+          <td>
+            Motivation: Three-dimensional folding of the genome into structures such as chromatin loops is essential for
+            gene regulation. Current experimental methods for mapping these structures, like Hi-C and HiChIP, are
+            labor-intensive and require repeated assays to test hypothesized mutation effects. This motivates the need
+            for predictive approaches that reveal the sequence determinants of chromatin loops.<br />
+            <br />
+            Results: In this work, we present a novel and interpretable computational pipeline for predicting
+            CTCF-mediated chromatin loops. We propose Chiron3D, a DNA-only model trained in a cell-type-specific manner
+            to predict CTCF HiChIP contact maps. By leveraging pre-trained embeddings from a foundation model, our
+            approach is competitive with baselines that take CTCF ChIP-seq as additional input, while enabling
+            nucleotide-level attribution to the input DNA sequence. Using our framework, we provide likely mechanistic
+            insights into the physical control of loop dynamics. Specifically, we find that the strength of the loop
+            extrusion anchorage site is largely governed by the amount and binding affinity of CTCF sites at the
+            boundaries. Furthermore, we reveal that loop stability is regulated by the amount of intra-loop CTCF binding
+            sites, where fewer sites within the loop lead to a more stable domain. Using targeted, single-nucleotide
+            edit simulations with Chiron3D, we show that both loop strength and stability can be precisely controlled.
+            Together, these results provide novel mechanistic insights into the physical control of genome organization
+            and highlight the potential of decoding the DNA sequence logic in silico.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-01</td>
+          <td>15:15:00</td>
+          <td>16:15:00</td>
+          <td>Room EF</td>
+          <td>Transcriptomics and gene regulation</td>
+          <td>
+            Network-based stratification of allele-specific expression reveals patient subgroups in Huntington's disease
+          </td>
+          <td>Aishwarya Iyer</td>
+          <td>
+            Aishwarya Iyer, Daan van Beek, Friederike Ehrhart, Chris Evelo, Theo de Kok, Ilja Arts, Michiel Adriaens,
+            Martina Summer-Kutmon
+          </td>
+          <td>
+            Motivation: Huntington's disease (HD) exhibits substantial variability in age of onset and disease
+            progression that is not fully explained by CAG repeat length alone. Part of this residual variation is
+            heritable, implicating additional genetic mechanisms. Cis-regulatory variation, genetic variants that alter
+            transcription and splicing of nearby genes, represents one such mechanism that can be quantified through
+            allele-specific expression (ASE) analysis. However, methods for integrating ASE profiles into patient
+            stratification frameworks remain underdeveloped, particularly for rare diseases with small cohorts and
+            sparse data.<br />
+            Results: We adapt a network-based stratification algorithm, originally developed for somatic tumor
+            mutations, to ASE data. By propagating gene-level ASE imbalance profiles through a protein-protein
+            interaction network, we stratified 20 HD patients into three distinct biological patient subgroups.
+            Differential ASE and gene expression analyses both highlight neuroinflammatory pathways, including IL6
+            signaling, microglial activation, and cytokine regulation, supporting their role as key sources of
+            inter-patient heterogeneity. Intersection of differentially imbalanced and expressed genes identified four
+            candidate genes with potential eQTL-mediated regulation, MAGI3, HLA-B, CCND3, and PSMB1. These<br />
+            genes implicate synaptic organization, immune modulation, and proteasomal dysfunction as potential drivers
+            of molecular heterogeneity between patient subgroups. Differences in cortical and striatal neuropathological
+            scores between clusters, even when adjusted for CAG repeat length, provide clinical support for the
+            biological relevance of the identified subgroups.<br />
+            Availability: All analysis code, Docker containers, and conda environments are available at
+            https://github.com/macsbio/HD-ASE-NBS.<br />
+            Contact: martina.kutmon@maastrichtuniversity.nl<br />
+            Supplementary information: Supplementary data are available at Bioinformatics online.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-01</td>
+          <td>15:15:00</td>
+          <td>16:15:00</td>
+          <td>Room EF</td>
+          <td>Transcriptomics and gene regulation</td>
+          <td>An End-to-End Computational Framework for 'Record-seq' Transcriptional Recording Data</td>
+          <td>Florian Hugi</td>
+          <td>Florian Hugi, Tanmay Tanna, Randall J Platt</td>
+          <td>
+            Motivation: Record-seq captures transcriptional activity over time in engineered E. coli by integrating
+            cellular RNA-derived spacer sequences into CRISPR arrays, which are subsequently read out by sequencing.
+            Unlike the approximately uniform transcript sampling of RNA-seq, Record-seq records biological signal as
+            spacers sampled by the CRISPR spacer acquisition machinery. Consequently, standard RNA-seq analysis
+            strategies are not directly applicable, limiting sensitivity and interpretability. Our previous pipeline
+            addressed these challenges only partially, retained inherited RNA-seq assumptions, and had limited
+            algorithmic efficiency. <br />
+            Results: Here, we present an end-to-end computational framework for Record-seq data. To address the primary
+            computational bottleneck â€“ spacer sequence extraction â€“ we implemented a wavefront-alignment approach
+            for efficient quasi-local pattern matching, achieving a 30-fold speedup. We also introduce transcription
+            unit-based feature counting as an alternative to gene-body quantification to better represent prokaryotic
+            transcription and increase statistical power by capturing signal from untranslated regions, which are spacer
+            acquisition hotspots. For downstream analyses, we incorporate multiple normalization strategies and a
+            nonparametric differential expression testing framework specifically designed for sparse datasets. Further,
+            we analyze spacer acquisition patterns and train sequence-based neural models that predict acquisition
+            propensity from genomic sequence and annotations, providing a framework to assess whether acquisition rules
+            generalize as Record-seq is extended to new microbial hosts. <br />
+            Availability and Implementation: The primary analysis workflow, recoRdseq package, acquisition modelling
+            repository and relevant data are all linked at https://github.com/plattlab/Record-seq-Framework. Acquisition
+            models and training data are on Zenodo at https://doi.org/10.5281/zenodo.18891434. <br />
+            Supplementary Information: Supplementary data are available online.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-02</td>
+          <td>09:00:00</td>
+          <td>10:00:00</td>
+          <td>Room AD</td>
+          <td>Transcriptomics and gene regulation</td>
+          <td>
+            Unexpectedly high intrinsic sequence specificity and complex DNA binding of human transcription factors
+          </td>
+          <td>Hamed Najafabadi</td>
+          <td>
+            Arttu Jolma, Aldo Hernandez-Corchado, Ally Yang, Ali Fathi, Kaitlin Laverty, Alexander Brechalov, Rozita
+            Razavi, Mihai Albu, Hong Zheng, Ivan Kulakovskiy, Hamed Najafabadi, Tim Hughes
+          </td>
+          <td>
+            There is ongoing controversy regarding the degree to which transcription factors (TFs) independently specify
+            genomic binding: TF binding motifs are short and degenerate, producing excessive binding site predictions.
+            Here, we present a computational framework, developed in conjunction with large-scale genomic HT-SELEX
+            (GHT-SELEX), to examine intrinsic sequence-specificities of human TFs.<br />
+            <br />
+            The first component of this framework is MAGIX, a hierarchical Bayesian model that explicitly captures the
+            exponential enrichment dynamics of TF-bound genomic DNA fragments across SELEX cycles, producing
+            quantitative enrichment scores and statistical confidence estimates for genomic binding regions. Applied to
+            in vitro GHT-SELEX data for 179 TFs across 25 families, we find that genomic binding regions discovered by
+            MAGIX often display surprisingly high overlap with ChIP-seq peaks for the same TF, suggesting much higher
+            intrinsic sequence specificity than anticipated.<br />
+            <br />
+            The second component, RCADEEM, leverages a protein sequence-derived recognition code to model alternative
+            DNA-binding modes of C2H2 zinc finger (C2H2-ZF) TFs. RCADEEM integrates machine learning-based prediction of
+            C2H2-ZF sequence preferences with GHT-SELEX/MAGIX binding profiles to infer which subsets of ZFs are engaged
+            at individual loci. Applied to 86 C2H2-ZF proteins, RCADEEM reveals that modular, alternative engagement of
+            C2H2-ZF domains is the norm, leading to recognition of multiple distinct motifs by the same TF. These
+            alternative motifs often evolve by internal duplication and divergence within the C2H2-ZF array.<br />
+            <br />
+            Together, this framework reveals that it is common for TFs to delineate a large fraction of their in vivo
+            genomic binding sites independently of other cellular factors, often through complex, context-dependent
+            DNA-binding behaviours.<br />
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-02</td>
+          <td>09:00:00</td>
+          <td>10:00:00</td>
+          <td>Room AD</td>
+          <td>Transcriptomics and gene regulation</td>
+          <td>STAN, a computational framework for inferring spatially informed transcription factor activity</td>
+          <td>Hatice Ulku Osmanbeyoglu</td>
+          <td>Linan Zhang, April Sagan, Bin Qin, Haoyu Wang, Elena Kim, Baoli Hu, Hatice Ulku Osmanbeyoglu</td>
+          <td>
+            Transcription factors (TFs) orchestrate cellular responses to environmental signals and intercellular
+            communication. The activity of TFs is influenced by neighboring cells, impacting cellular fate and function.
+            Spatial transcriptomics (ST) allows for the mapping of mRNA expression across tissue samples, providing
+            insights into the local microenvironment. However, the potential of ST data to systematically infer TF
+            activity and its role in cell identity has not been fully exploited. We introduce STAN (Spatially informed
+            Transcription factor Activity Network), a linear mixed-effects computational approach that predicts
+            spatially informed, spot-specific TF activities by integrating curated TFâ€“target gene priors, mRNA
+            expression, spatial coordinates, and histological features. We demonstrate the utility of STAN on lymph
+            node, dorsolateral prefrontal cortex, breast cancer, and glioblastoma ST datasets, identifying TFs
+            associated with specific cell types, spatial regions, pathological zones, and ligandâ€“receptor pairs. STAN
+            enhances the utility of ST data, revealing the intricate interplay between TFs and spatial organization in
+            diverse biological contexts.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-02</td>
+          <td>09:00:00</td>
+          <td>10:00:00</td>
+          <td>Room AD</td>
+          <td>Transcriptomics and gene regulation</td>
+          <td>From enhancer-scale to locus-scale: modelling gene regulation with sequence-to-function models</td>
+          <td>Casper H. Blaauw</td>
+          <td>
+            Ibrahim Taskiran, Stein Aerts, David R. Kelley, Oliver Hobert, Alexander van Oudenaarden, Lukas Mahieu, Ludo
+            Van Den Bosch, Valerie Christiaens, Gert Hulselmans, Casper H. Blaauw, Valérie Bercier, Darina AbaffyovÃ¡,
+            Sam Dieltiens, Eren Can EkÅŸi, Vasilieios Konstantakos, Seppe De Winter, Niklas Kempynck
+          </td>
+          <td>
+            The main goal of regulatory genomics is to decipher how spatiotemporal regulation of genes is encoded in the
+            genome. Sequence-to-function models, which learn to link sequence to readouts like chromatin accessibility
+            or gene expression, are the state-of-the-art for this task. These models primarily operate at two levels:
+            predicting the scATAC-seq-based chromatin accessibility for individual enhancers and predicting
+            scRNA-seq-based expression genes based on their surrounding locus.<br />
+            <br />
+            Here, we present CREsted, a user-friendly package for enhancer modelling covering all steps from
+            preprocessing to interpretation. Starting from scATAC-seq data, CREsted provides tools to preprocess the
+            data, train sequence-to-function models, decipher the learned sequence grammar, and design new cell
+            type-specific enhancers. We showcase CREsted's performance on a variety of tissues and species, ranging from
+            mouse brain cortex and human cancer states to a whole-organism zebrafish developmental atlas.<br />
+            <br />
+            Furthermore, we discuss the evolution of the field towards modelling cell type-specific gene
+            expression-predicting models. Using the toolkit provided in CREsted, we trained a model to predict gene
+            expression across every cell type of an entire animal, the nematode C. elegans. Using this model, we extract
+            and cluster high-importance sequence motifs from the genome, which we use to build an organism-wide motif
+            grammar across tissues. Furthermore, we use in-silico perturbations to link regulatory elements to genes,
+            and fine-map eQTLs by scoring naturally occurring variants. Finally, we use atlases from two related
+            nematode species to for cross-species comparison and augmentation. Altogether, this provides a view into
+            genome regulation at a unique scale. <br />
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-02</td>
+          <td>13:15:00</td>
+          <td>14:15:00</td>
+          <td>Room AD</td>
+          <td>Transcriptomics and gene regulation</td>
+          <td>scTimeBench: A streamlined benchmarking platform for single-cell time-series analysis</td>
+          <td>Eric Haoran Huang</td>
+          <td>Adrien Osakwe, Eric Haoran Huang, Yue Li</td>
+          <td>
+            Temporal modelling of single-cell gene expression is essential for capturing dynamic cellular processes, yet
+            a systematic framework for evaluating time-aware trajectory inference methods has not yet been established.
+            Here, we present a modular and scalable benchmark designed to assess methods across three critical tasks:
+            forecast accuracy (temporal cell alignment) for projecting cells to unseen time points, embedding coherence
+            between original and projected data, and cell-type lineage fidelity. We evaluated ten state-of-the-art
+            methods, which are broadly categorized into 8 forecasting-based and 2 optimal transport (OT)-based methods
+            across eight diverse datasets spanning four species. Our results show that while several methods achieve
+            high forecast accuracy, they often fail to preserve biological signals, both in their latent spaces and in
+            cell lineage reconstruction. Notably, most methods confer low lineage fidelity and often underperform
+            compared to a correlation baseline. We further demonstrate that integrating pseudotime can effectively
+            denoise trajectories by aligning the data snapshots with the intrinsic biological clock in each cell.
+            Finally, to streamline benchmarking for temporal single-cell analysis, we built one of the first
+            self-contained Python packages for the research community: https://github.com/li-lab-mcgill/scTimeBench.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-02</td>
+          <td>13:15:00</td>
+          <td>14:15:00</td>
+          <td>Room AD</td>
+          <td>Transcriptomics and gene regulation</td>
+          <td>CellTypeAI: cell annotation for scRNA-seq using local generative-AI</td>
+          <td>Rufus Daw</td>
+          <td>Rufus Daw, Harry Deijnen, Magnus Rattray, John Grainger</td>
+          <td>
+            Single-cell RNA sequencing (scRNA-seq) cell annotation techniques rely on the matching of known defining
+            marker genes to a given cell population. However, these methods may lack robustness to dynamic fluctuations
+            in cell marker expression between patients, samples and pathologies. The advent of easy-to-implement
+            predictive technologies, like generative-AI (gen-AI), has facilitated the introduction of computational
+            workflows that improve otherwise inaccurate context-dependent cell type annotation. Here, we introduce
+            CellTypeAI, a streamlined, scalable program developed for tissue context-dependent cell annotation of
+            scRNA-seq datasets using modern gen-AI models, enhanced by retrieval augmented generation methods. Our
+            implementation builds upon local gen-AI hosting technologies and directly integrates into scRNA-seq analysis
+            pipelines. We show that CellTypeAI provides improved annotation accuracy compared to current conventional
+            annotation methods and nascent cloud-based gen-AI approaches. As CellTypeAI leverages locally-run AI models,
+            it can be applied to sensitive datasets, unlike approaches utilising online gen-AI tools such as ChatGPT,
+            DeepSeek, or Claude. CellTypeAI presents a novel solution for tissue-specific cell type identification,
+            overcoming traditional marker-based limitations via locally-deployed gen-AI models.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-02</td>
+          <td>13:15:00</td>
+          <td>14:15:00</td>
+          <td>Room AD</td>
+          <td>Transcriptomics and gene regulation</td>
+          <td>Sensitivity Analysis of Cell Fate Trajectories from Single-Cell Transcriptomics</td>
+          <td>Abdullah Al Noman</td>
+          <td>Abdullah Al Noman, Palash Sashittal</td>
+          <td>
+            Cell differentiation is a dynamic process in which cells traverse through high-dimensional gene expression
+            space under the influence of gene regulatory networks and environmental cues. Recent advances in single-cell
+            RNA sequencing (scRNA-seq) have enabled us to measure high-resolution snapshots of this dynamic process.
+            Several computational methods have been developed to reconstruct cellular flow maps from these snapshots,
+            revealing the trajectories taken by cells in gene expression space. While existing methods provide
+            increasingly detailed descriptions of cellular trajectories, the stability of these trajectories to
+            perturbations is largely unexplored. As such, it remains unclear how robust inferred trajectories are to
+            perturbations, which genes most strongly influence long-term fate outcomes, and where instability arises
+            between competing fate commitments. While sensitivity and stability analysis tools from dynamical systems
+            theory provide a principled way to study the stability of differentiation trajectories, existing approaches
+            are not designed for the high-dimensionality and sparsity of scRNA-seq data. Here, we introduce FateSens, a
+            sensitivity-based computational framework for analyzing gene regulatory dynamics using flow maps derived
+            from scRNA-seq data. FateSens performs sensitivity analysis of differentiation trajectories derived from
+            scRNA-seq data to identify regulatory genes and fate boundaries. To demonstrate its utility, we applied
+            FateSens to study neutrophil-monocyte differentiation using scRNA-seq data of mouse hematopoiesis. While
+            FateSens relies only on transcriptomic measurements, this dataset also contains lineage tracing barcodes
+            that provide ground-truth fate relationships. Our results show that FateSens accurately recovers regulators
+            consistent with known biology and identifies fate boundaries that are supported by lineage tracing data.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="text-align: center">
+      <a href="#top">- top -</a>
+    </p>
+    <script>
+      $(document).ready(function () {
+        $("#detailedTable").DataTable({
+          paging: false,
+          order: [
+            [4, "asc"],
+            [0, "asc"],
+            [1, "asc"],
+          ],
+          responsive: true,
+          dom: "Bfrtip", // B = buttons, f = filter, r = processing, t = table, i = info, p = pagination
+          buttons: [
+            {
+              extend: "csvHtml5",
+              text: "CSV",
+              title: "ISMBECCB_2025_Transcriptomics_Detailed_Schedule",
+            },
+            {
+              extend: "excelHtml5",
+              text: "Excel",
+              title: "ISMBECCB_2025_Transcriptomics_Detailed_Schedule",
+            },
+            {
+              extend: "pdfHtml5",
+              text: "PDF",
+              title: "ISMBECCB_2025_Transcriptomics_Detailed_Schedule",
+            },
+            "print",
+          ],
+        });
+      });
+    </script>
+    <script>
+      (function () {
+        function getHeight() {
+          var b = document.body,
+            e = document.documentElement;
+          return Math.max(
+            b.scrollHeight,
+            e.scrollHeight,
+            b.offsetHeight,
+            e.offsetHeight,
+            b.clientHeight,
+            e.clientHeight,
+          );
+        }
+        function sendHeight() {
+          var h = getHeight();
+          // send to the J5 parent; change to your exact parent origin if needed
+          parent.postMessage({ type: "iscb-wrapper-height", height: h, id: "blockrandom" }, "*");
+        }
+        window.addEventListener("load", sendHeight);
+        window.addEventListener("resize", sendHeight);
+        // update on DOM changes too
+        new MutationObserver(sendHeight).observe(document.body, { childList: true, subtree: true, attributes: true });
+      })();
+    </script>
+    <script>
+      (function () {
+        function postToParent(msg) {
+          // Parent will validate origin; using '*' lets this work on test/prod
+          parent.postMessage(msg, "*");
+        }
+        //Clicks that should navigate the PARENT to a site-relative path
+        document.addEventListener("click", function (e) {
+          const a = e.target.closest("a[data-nav-top]");
+          if (!a) return;
+          const href = a.getAttribute("href"); // e.g. "/membership-details/senior-members"
+          if (href && href.startsWith("/")) {
+            e.preventDefault();
+            postToParent({ type: "iscb-wrapper-cmd", action: "navigateParentToPath", path: href, id: "blockrandom" });
+          }
+        });
+        //“#top” links: scroll the parent to the top of the iframe
+        document.addEventListener("click", function (e) {
+          const a = e.target.closest('a[href="#top"]');
+          if (!a) return;
+          e.preventDefault();
+          postToParent({ type: "iscb-wrapper-cmd", action: "scrollParentTo", target: "iframeTop", id: "blockrandom" });
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        function post(msg) {
+          parent.postMessage(msg, "*");
+        }
+        document.addEventListener(
+          "submit",
+          function () {
+            post({ type: "iscb-wrapper-cmd", action: "loading", state: "start", id: "blockrandom" });
+          },
+          true,
+        );
+        const origSubmit = HTMLFormElement.prototype.submit;
+        HTMLFormElement.prototype.submit = function () {
+          post({ type: "iscb-wrapper-cmd", action: "loading", state: "start", id: "blockrandom" });
+          return origSubmit.apply(this, arguments);
+        };
+        window.addEventListener("beforeunload", function () {
+          post({ type: "iscb-wrapper-cmd", action: "loading", state: "start", id: "blockrandom" });
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        function notifyParentOfOffset() {
+          try {
+            // Where is the target in the child document?
+            const hash = decodeURIComponent(location.hash || "");
+            let offsetY = 0;
+            if (hash.length > 1) {
+              const id = hash.slice(1);
+              const el = document.getElementById(id) || document.getElementsByName(id)[0];
+              if (el) {
+                const r = el.getBoundingClientRect();
+                offsetY = Math.round(r.top + window.scrollY);
+              }
+            } else {
+              offsetY = Math.round(window.scrollY);
+            }
+            // Tell the parent to scroll to the corresponding spot
+            window.parent.postMessage(
+              { type: "iscb-wrapper-cmd", action: "scrollParentToChildOffset", offset: offsetY },
+              "*",
+            );
+          } catch (e) {
+            /* cross-origin safe */
+          }
+        }
+        // On load (handles initial #hash in URL)
+        window.addEventListener("load", function () {
+          // let layout settle
+          setTimeout(notifyParentOfOffset, 0);
+        });
+        // On in-page anchor changes
+        window.addEventListener("hashchange", notifyParentOfOffset);
+      })();
+    </script>
+  </body>
+</html>

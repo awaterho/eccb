@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr" >
+<head>
+  <base href="" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="ECCB10, ECCB2010, Computational Biology, Bioinformatics, Conference, Ghent" />
+  <meta name="description" content="ECCB10 is the key European computational biology event in 2010 uniting scientists working in a broad range of disciplines, including bioinformatics, computational biology, biology, medicine, and systems biology." />
+  <title>Tutorial 3: Current methods and applications for regulatory sequence analysis</title>
+  <link rel="stylesheet" href="../../templates/eccb10/css/template.css" type="text/css" />
+  <link rel="stylesheet" href="../../templates/eccb10/lib/js/lightbox/css/shadowbox.css" type="text/css" />
+  <script type="text/javascript" src="../../templates/eccb10/lib/js/mootools.js.php"></script>
+  <script type="text/javascript" src="../../media/system/js/caption.js"></script>
+  <script type="text/javascript" src="../../plugins/content/phocagalleryslideshow.js"></script>
+  <script type="text/javascript">
+var YtSettings = { tplurl: '/Rebholz-srv/eccb2010/templates/eccb10', color: 'blue', layout: 'left', fontDefault: 'font-medium', widthDefault: 'width-wide', widthThinPx: 780, widthWidePx: 940, widthFluidPx: 0.9 };
+  </script>
+  <script type="text/javascript" src="../../templates/eccb10/lib/js/template.js.php"></script>
+
+<link rel="apple-touch-icon" href="../../templates/eccb10/apple_touch_icon.png" />
+</head>
+
+<body id="page" class="font-medium width-wide left  ">
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-15308130-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+	
+	<div id="page-body">
+		<div class="wrapper floatholder">
+			<div class="wrapper-tl">
+				<div class="wrapper-tr">
+					<div class="wrapper-bl">
+						<div class="wrapper-br">
+
+							<div id="header">
+								<div class="header-l">
+									<div class="header-r">
+								
+										<div id="toolbar">
+											<div class="floatbox ie_fix_floats">
+											
+																								<div id="date">
+													Friday, 01 April 2011												</div>
+																							
+												
+																								<div id="styleswitcher">
+																																							<a id="switchfontlarge" href="javascript:void(0)" title="Increase font size"></a>
+													<a id="switchfontmedium" href="javascript:void(0)" title="Default font size"></a>
+													<a id="switchfontsmall" href="javascript:void(0)" title="Decrease font size"></a>
+																									</div>
+																								
+											</div>
+										</div>
+										
+										<div id="headerbar">
+											<div class="floatbox ie_fix_floats">
+
+												
+											</div>
+										</div>
+										
+																				
+																				
+																				
+																		
+									</div>
+								</div>
+							</div>
+							<!-- header end -->
+					
+														
+							<div id="middle">
+								<div class="background">
+				
+																		<div id="left">
+										<div id="left_container" class="clearfix">
+
+													<div class="module_menu">
+			<div>
+				<div>
+					<div>
+													<h3>Main Menu</h3>
+											<ul class="menu"><li class="level1 item1 first"><a href="../../index.html" class="level1 item1 first"><span>Home</span></a></li><li class="level1 item2 parent"><a href="../eccb10info.html" class="level1 item2 parent"><span>ECCB10 Info</span></a></li><li class="level1 item5"><a href="../schedule.html" class="level1 item5"><span>Schedule</span></a></li><li class="level1 item7"><a href="../keynotes.html" class="level1 item7"><span>Keynotes</span></a></li><li class="level1 item9"><a href="../proceedings.html" class="level1 item9"><span>Proceedings</span></a></li><li class="level1 item10"><a href="../best-posters.html" class="level1 item10"><span>Best Posters</span></a></li><li class="level1 item11"><a href="http://escs.iscbsc.org" target="_blank" class="level1 item11"><span>ISCB Student Symposium</span></a></li><li class="level1 item13 parent"><a href="../workshops.html" class="level1 item13 parent"><span>Workshops</span></a></li><li class="level1 item16 parent active"><a href="../tutorials.html" class="level1 item16 parent active"><span>Tutorials</span></a><ul class="level2"><li class="level2 item1 first"><a href="tutorial1.html" class="level2 item1 first"><span>Tutorial 1</span></a></li><li class="level2 item2"><a href="tutorial2.html" class="level2 item2"><span>Tutorial 2</span></a></li><li class="level2 item3 active current"><a href="tutorial3.html" class="level2 item3 active current"><span>Tutorial 3</span></a></li><li class="level2 item4 last"><a href="tutorial4.html" class="level2 item4 last"><span>Tutorial 4</span></a></li></ul></li><li class="level1 item18"><a href="../registration.html" class="level1 item18"><span>Registration</span></a></li><li class="level1 item19 parent"><a href="../travel.html" class="level1 item19 parent"><span>Travel</span></a></li><li class="level1 item20 parent"><a href="../guidelines.html" class="level1 item20 parent"><span>Guidelines</span></a></li><li class="level1 item22"><a href="../fellowships.html" class="level1 item22"><span>Fellowships</span></a></li><li class="level1 item23 parent"><a href="../sponsoring-eccb10.html" class="level1 item23 parent"><span>Sponsoring ECCB10</span></a></li><li class="level1 item24"><a href="../committees.html" class="level1 item24"><span>Committees</span></a></li><li class="level1 item25"><a href="../contact-us.html" class="level1 item25"><span>Contact Us</span></a></li><li class="level1 item26"><a href="../credits.html" class="level1 item26"><span>Credits</span></a></li><li class="level1 item29 last"><a href="../photos.html" class="level1 item29 last"><span>Photos</span></a></li></ul>					</div>
+				</div>
+			</div>
+		</div>
+			<div class="module">
+			<div>
+				<div>
+					<div>
+													<h3>Follow us on</h3>
+											<p style="text-align: center;" mce_style="text-align: center;">
+<a mce_href="http://www.facebook.com/group.php?gid=252053815757" href="http://www.facebook.com/group.php?gid=252053815757" target="_blank"><img alt="Facebook" src="../../images/photos/facebook.png" mce_src="/Rebholz-srv/eccb2010/images/photos/facebook.png" width="50" height="50"></a>
+<a mce_href="http://www.linkedin.com/groupRegistration?gid=2662253" href="http://www.linkedin.com/groupRegistration?gid=2662253"><img src="../../images/photos/linkedin.jpg" mce_src="/Rebholz-srv/eccb2010/images/photos/linkedin.jpg" alt="linkedin" width="52" height="52"> </a><br mce_bogus="1"></p>					</div>
+				</div>
+			</div>
+		</div>
+			<div class="module">
+			<div>
+				<div>
+					<div>
+													<h3>Platinum Sponsors</h3>
+											<p style="text-align: center;" mce_style="text-align: center;"><a href="http://www.ibm.com" mce_href="http://www.ibm.com" target="_blank"><img alt="IBM" src="../../images/photos/sponsors/IBM_logo.jpg" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/IBM_logo.jpg"></a><br mce_bogus="1"></p>					</div>
+				</div>
+			</div>
+		</div>
+			<div class="module">
+			<div>
+				<div>
+					<div>
+													<h3>Gold Sponsors</h3>
+											<p style="text-align: center;" mce_style="text-align: center;">
+<a href="http://www.nbic.nl" mce_href="http://www.nbic.nl" target="_blank"><img alt="NBIC" src="../../images/photos/sponsors/nbic_logo.jpg" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/nbic_logo.jpg"></a>
+</p>					</div>
+				</div>
+			</div>
+		</div>
+			<div class="module">
+			<div>
+				<div>
+					<div>
+													<h3>Silver Sponsors</h3>
+											<p style="text-align: center;" mce_style="text-align: center;">
+<a href="http://www.enfin.org" mce_href="http://www.enfin.org" target="_blank"><img alt="ENFIN" src="../../images/photos/sponsors/ENFIN_logo.jpg" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/ENFIN_logo.jpg"></a>
+<a href="https://www.ebi.ac.uk/" mce_href="https://www.ebi.ac.uk/" target="_blank"><img alt="EMBL-EBI" src="../../images/photos/sponsors/EMBL-EBI_logo.png" mce_src="/Rebholz-srv/eccb2010/images/photos/spon&lt;mce:script type=" text="" javascript"=""></a>
+<a href="http://www.illumina.com/" mce_href="http://www.illumina.com/" target="_blank"><img alt="Illumina" src="../../images/photos/sponsors/Illumina_logo.png" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/Illumina_logo.png"></a>
+
+<a href="http://www.elixir-europe.org/" mce_href="http://www.elixir-europe.org/" target="_blank"><img alt="Elixir" src="../../images/photos/sponsors/elixir_logo.jpg" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/elixir_logo.jpg"></a>
+<br>
+<a href="http://www.conveycomputer.com/" mce_href="http://www.conveycomputer.com/" target="_blank"><img alt="Convey Computer" src="../../images/photos/sponsors/Convey_logo.png" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/Convey_logo.png"></a>
+<br>
+<a href="http://www.clcbio.com/" mce_href="http://www.clcbio.com/" target="_blank"><img alt="CLC Bio" src="../../images/photos/sponsors/CLCbio_logo.png" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/CLCbio_logo.png"></a>
+<a href="http://www.mygrid.org.uk/" mce_href="http://www.mygrid.org.uk/" target="_blank"><img alt="myGrid" src="../../images/photos/sponsors/mygrid_logo.png" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/mygrid_logo.png" height="41" width="125"></a><br><a href="http://www.omixon.com/omixon/" mce_href="http://www.omixon.com/omixon/"><img src="http://homes.esat.kuleuven.be/~asifrim/ECCB10/omixon-JPG.jpg" alt="Omixon" mce_src="http://homes.esat.kuleuven.be/~asifrim/ECCB10/omixon-JPG.jpg"></a></p>					</div>
+				</div>
+			</div>
+		</div>
+			<div class="module">
+			<div>
+				<div>
+					<div>
+													<h3>Fellowships</h3>
+											<p style="text-align: center;" mce_style="text-align: center;">
+<a href="http://www.iscb.org/" mce_href="http://www.iscb.org/" target="_blank"><img alt="ISCB" src="../../images/photos/sponsors/ISCB_logo.jpg" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/ISCB_logo.jpg"></a>
+</p>					</div>
+				</div>
+			</div>
+		</div>
+			<div class="module">
+			<div>
+				<div>
+					<div>
+													<h3>Other Sponsors</h3>
+											<p style="text-align: center;" mce_style="text-align: center;">
+<a href="http://www1.frs-fnrs.be/" mce_href="http://www1.frs-fnrs.be/" target="_blank"><img alt="FNRS" src="../../images/photos/sponsors/FNRS-logo.png" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/FNRS-logo.png"></a>
+
+<a href="http://www.fwo.be/" mce_href="http://www.fwo.be/" target="_blank"><img alt="FWO" src="../../images/photos/sponsors/FWO_logo.jpg" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/FWO_logo.jpg"></a>
+</p>
+
+<p style="text-align: center;" mce_style="text-align: center;">
+<a href="http://www.kuleuven.be/" mce_href="http://www.kuleuven.be/" target="_blank"><img alt="kuleuven" src="../../images/photos/sponsors/KULeuven_logo.jpg" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/KULeuven_logo.jpg"></a>
+</p>
+
+<p style="text-align: center;" mce_style="text-align: center;">
+<a href="http://www.belspo.be/" mce_href="http://www.belspo.be/" target="_blank"><img alt="Belspo" src="../../images/photos/sponsors/belspo_logo.png" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/belspo_logo.png"></a><br mce_bogus="1">
+
+<a href="http://www.microsoft.com/" mce_href="http://www.microsoft.com" target="_blank"><img alt="Microsoft" src="../../images/photos/sponsors/microsoft_logo.png" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/microsoft_logo.png"></a><br mce_bogus="1">
+
+<a href="http://www.tibco.com/" mce_href="http://www.tibco.com" target="_blank"><img alt="TIBCO" src="../../images/photos/sponsors/tibco_logo.png" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/tibco_logo.png"></a><br mce_bogus="1"></p>
+
+<p style="text-align: center;" mce_style="text-align: center;">
+<a href="http://www.keygene.com" mce_href="http://www.keygene.com" target="_blank"><img alt="Keygene" src="../../images/photos/sponsors/keygene_logo.png" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/keygene_logo.png"></a><br mce_bogus="1">
+
+<a href="http://www.baseclear.com/" mce_href="http://www.baseclear.com/" target="_blank"><img alt="BaseClear" src="../../images/photos/sponsors/baseclear_logo.png" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/baseclear_logo.png"></a><br mce_bogus="1"></p>					</div>
+				</div>
+			</div>
+		</div>
+			<div class="module">
+			<div>
+				<div>
+					<div>
+													<h3>Exhibitors</h3>
+											<p style="text-align: center;" mce_style="text-align: center;">
+<a href="http://www.crcpress.com/" mce_href="http://www.crcpress.com/" target="_blank"><img alt="CRC Press" src="../../images/photos/sponsors/CRC_logo.jpg" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/CRC_logo.jpg"></a>
+<br></p>
+<p style="text-align: center;" mce_style="text-align: center;">
+<a href="http://www.oup.co.uk" mce_href="http://www.oup.co.uk" target="_blank"><img alt="Oxford University Press" src="../../images/photos/sponsors/OUP_logo.jpg" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/OUP_logo.jpg"></a><br></p>
+<p style="text-align: center;" mce_style="text-align: center;">
+<a href="http://www.springer.com" mce_href="http://www.springer.com" target="_blank"><img src="../../images/photos/sponsors/Springer_logo.jpg" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/Springer_logo.jpg" alt="Springer"></a><br mce_bogus="1"></p>
+<p style="text-align: center;" mce_style="text-align: center;"><a href="http://www.cambridge.org" mce_href="http://www.cambridge.org" target="_blank"><img src="../../images/photos/sponsors/CUP_logo.png" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/CUP_logo.png" alt="Cambridge University Press"></a><br mce_bogus="1"></p>
+<p style="text-align: center;" mce_style="text-align: center;"><a href="http://www.applied-maths.com/" mce_href="/Rebholz-srv/eccb2010/http//www.applied-maths.com/" target="_blank"><img src="../../images/photos/sponsors/applied_maths_logo.png" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/applied_maths_logo.png" alt="Applied Maths NV"></a><br mce_bogus="1"><br>
+<a href="http://www.korilog.com/" mce_href="http://www.korilog.com/" target="_blank"><img src="../../images/photos/sponsors/Korilog_logo.png" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/Korilog_logo.png" alt="Korilog"></a><br mce_bogus="1">
+<a href="http://www.sciengines.com/joomla/index.php" mce_href="http://www.sciengines.com/joomla/index.php" target="_blank"><img src="../../images/photos/sponsors/sciengines_logo.png" mce_src="/Rebholz-srv/eccb2010/images/photos/sponsors/sciengines_logo.png" alt="Korilog"></a><br mce_bogus="1"></p>					</div>
+				</div>
+			</div>
+		</div>
+			<div class="module">
+			<div>
+				<div>
+					<div>
+											<p>
+
+<map name="embo">
+<area shape="rect" mce_shape="rect" coords="15,3,67,99" mce_coords="15,3,67,99" href="http://2011.the-embo-meeting.org/" mce_href="http://2011.the-embo-meeting.org/" alt="EMBO 2011" target="_blank">
+<area shape="rect" mce_shape="rect" coords="75,29,170,109" mce_coords="75,29,170,109" href="http://www.the-embo-meeting.org/" mce_href="http://www.the-embo-meeting.org/" target="_blank" alt="EMBO 2010">
+</map>
+</p>
+
+<p style="text-align: center;" mce_style="text-align: center;"><a href="http://www.biomedcentral.com" mce_href="http://www.biomedcentral.com" target="_blank"><img src="../../images/photos/logo_bmc.png" mce_src="/Rebholz-srv/eccb2010/images/photos/logo_bmc.png" alt="BioMed Central"></a><br mce_bogus="1"></p>
+<p style="text-align: center;" mce_style="text-align: center;"><img src="../../images/photos/embo.png" mce_src="/Rebholz-srv/eccb2010/images/photos/embo.png" alt="EMBO meeting 2010 (4-7 September, Barcelona) &amp; EBMO Meeting 2011 (Vienna)" usemap="#embo"></p>					</div>
+				</div>
+			</div>
+		</div>
+	
+
+										</div>
+									</div>
+									<!-- left end -->
+														
+									<div id="main">
+										<div id="main_container" class="clearfix">
+			
+											
+											<div id="mainmiddle" class="floatbox">
+
+																				
+												<div id="content">
+													<div id="content_container" class="clearfix">
+
+																		
+																						
+														<div class="floatbox">
+															
+															<table class="contentpaneopen">
+<tr>
+		<td class="contentheading" width="100%">
+					Tutorial 3: Current methods and applications for regulatory sequence analysis			</td>
+				
+		
+					</tr>
+</table>
+
+<table class="contentpaneopen">
+
+
+
+<tr>
+<td valign="top">
+<H1>Presenters</H1>
+<TABLE class="mceItemTable">
+<TBODY>
+<TR>
+<TD>
+<P style="TEXT-ALIGN: center" mce_style="text-align: center;"><IMG alt="Jacques Van Helden" src="../../images/photos/speakers/JacquesVanHelden.jpg" mce_src="/Rebholz-srv/eccb2010/images/photos/speakers/JacquesVanHelden.jpg" /></P></TD>
+<TD>
+<P><B>Jacques van Helden</B>, PhD, is heading the Laboratory of Genome and network Bioinformatics (BiGRe - ULB, <A href="http://www.bigre.ulb.ac.be/" target="_blank mce_href=http://www.bigre.ulb.ac.be/">http://www.bigre.ulb.ac.be/</A>). The BiGRe laboratory is specialized in the development, evaluation and application of bioinformatics approaches to analyze genome regulation, biomolecular networks, metabolic pathways and mobile genetic elements. Since 1997, Jacques van Helden has been developing a suite of specialized software tools for the analysis of genome regulation, the Regulatory Sequence Analysis Tools (RSAT, <A href="http://rsat.ulb.ac.be/" target="_blank mce_href=http://rsat.ulb.ac.be/">http://rsat.ulb.ac.be/</A>), which integrates a variety of algorithms for motif discovery, sequence scanning for motifs, phylogenetic footprinting, analysis of ChIP-seq data, etc.</P></TD></TR>
+<TR>
+<TD>
+<P style="TEXT-ALIGN: center" mce_style="text-align: center;"><IMG alt="Stein Aerts" src="../../images/photos/speakers/SteinAerts.jpg" width="142 height=129 mce_src=images/photos/speakers/SteinAerts.jpg" /></P></TD>
+<TD>
+<P><B>Stein Aerts</B>, PhD, is heading the Laboratory of Computational Biology at the University of Leuven (<A href="http://med.kuleuven.be/bioinformatics" target="_blank mce_href=http://med.kuleuven.be/bioinformatics">http://med.kuleuven.be/bioinformatics</A>). The lab focuses on computational identification of <I>cis</I>-regulatory elements, on mapping transcriptional networks, on "omics" data integration, and on next-generation sequencing (NGS) data analysis. Stein Aerts is the developer of the TOUCAN software for regulatory sequence analysis, of several other motif and module discovery algorithms and text-mining applications, of the ENDEAVOUR application for gene prioritization, and of the cisTargetX method for transcriptional target identification in <I>Drosophila</I>.</P></TD></TR></TBODY></TABLE>
+<H1>Motivation</H1>
+<P>The annotation of the non-coding genome with gene regulatory function is lagging far behind the annotation of protein-coding genes and improved annotation will depend both on deeper biological insight into <I>cis</I>-regulatory logic and on more efficient computational prediction algorithms. While the identification of proximal core promoters has improved thanks to better annotation of a gene's 5' end, the determination of distal <I>cis</I>-regulatory modules (CRM) and the mapping of gene regulatory networks remain challenging. State-of-the art methods for CRM and transcription factor binding site prediction use position weight matrices as DNA recognition models, cross-species sequence conservation, clustering of binding sites, and leverage by gene expression data. When sets of similar CRMs are available, models incorporating combinatorial binding can be trained and used for genome-wide predictions of novel CRMs. Recent data obtained by high-throughput experiments accelerate the genome-wide identification of regulatory elements but also provide additional bioinformatics challenges. In the light of these developments, this tutorial will focus on bioinformatics methods to predict cis-regulatory elements and to aid the process of regulatory annotation.</P>
+<H1>Goals</H1>
+<P>Participants will be provided with an overview of existing resources (databases, tools) and methods for detecting cis-regulatory elements in genome sequences, and generate testable hypotheses about the binding specificity of transcription factors (motifs discovery), their precise binding locations (binding site prediction), and their target genes (target identification), and go towards regulatory networks.<BR />Each session will include a summary of the theory (with slides), illustrated with demos of the exiting databases and analysis tools.<BR />Hands-on exercises will allow students to put concepts into practice on selected test cases.</P>
+<H1>Prerequisites</H1>
+<UL>
+<LI>a list of software will be provided in advance, in order to allow participants to install it on their laptop</LI>
+<LI>some knowledge of Unix interface</LI></UL>
+<H1>Outline</H1>
+<UL>
+<LI>Retrieving regulatory sequences from UCSC, EnsEMBL, RSAT, Toucan, ....<BR />Upstream sequences, introns, repeat masking, multi-genome sequence retrieval, ...<BR />Web-server, Web service or command-line access to resources </LI>
+<LI>From binding sites to binding motifs 
+<UL>
+<LI>Public databases about transcriptional regulation : motifs, sites and regulatory regions.<BR />JASPAR, PAZAR, ORegAnno, FlyReg </LI>
+<LI>Regular expressions.</LI>
+<LI>Position-specific scoring matrices (PSSM).<BR />Concepts: counts, frequencies, pseudo-counts, weights, information content </LI>
+<LI>PSSM formats and their inter-conversions</LI></UL></LI>
+<LI>Pattern matching: predicting binding sites 
+<UL>
+<LI>String-based pattern matching</LI>
+<LI>Matrix-based pattern matching 
+<UL>
+<LI>matching scores</LI>
+<LI>estimation of the risks (P-value distribution)</LI></UL></LI>
+<LI>Cis-regulatory modules (clusters of motifs) 
+<UL>
+<LI>homotypic</LI>
+<LI>heterotypic</LI></UL></LI></UL></LI>
+<LI>Pattern discovery: methods and applications 
+<UL>
+<LI>String-based pattern discovery</LI>
+<LI>PSSM-based pattern discovery</LI>
+<LI>PSSM enrichment detection</LI>
+<LI>Combinations of PSSMs</LI></UL></LI>
+<LI>Phylogenetic footprinting 
+<UL>
+<LI>detecting conserved binding sites by comparative genomics</LI></UL></LI>
+<LI>Applications 
+<UL>
+<LI>Clusters of co-expressed genes</LI>
+<LI>Motif discovery using high-throughput data (ChIP-seq, ...)</LI>
+<LI>Genome-wide target prediction</LI>
+<LI>Gene regulatory networks</LI></UL></LI>
+<LI>Evaluation of prediction performances 
+<UL>
+<LI>Benchmark datasets</LI>
+<LI>Strength and pitfalls of evaluation: sensitivity, positive predictive value, accuracy, ROC curves, ...</LI>
+<LI>Method comparisons</LI></UL></LI>
+<LI>Browsing genomes for cis-regulatory elements 
+<UL>
+<LI>Visualization.</LI>
+<LI>Integration of predictions and annotations.</LI></UL></LI></UL>
+<H1>Practical issues</H1>
+<UL>
+<LI>Wireless internet will be available at the conference venue</LI>
+<LI>An indicative reading list will be available a few weeks before the tutorial</LI>
+<LI>The hands-on will be organized in a cookbook mode: we will distribute protocols that will allow to solve a selection of test cases</LI>
+<LI>For the hands-on, participants are encouraged to bring a laptop if possible, or to meet up with another participant having a laptop</LI>
+<LI>the ECCB tutorial will combine Web servers, stand-alone software, and command-line programs</LI></UL>
+<H1>Dedicated tutorial website</H1>
+<P><A href="http://rsat.bigre.ulb.ac.be/rsat/tutorial_ECCB_2010/" mce_href="http://rsat.bigre.ulb.ac.be/rsat/tutorial_ECCB_2010/">http://rsat.bigre.ulb.ac.be/rsat/tutorial_ECCB_2010/</A></P>
+
+</td>
+</tr>
+
+</table>
+<span class="article_separator">&nbsp;</span>
+
+														</div>
+				
+														
+													</div>
+												</div>
+												<!-- content end -->
+				
+											</div>
+											<!-- mainmiddle end -->
+		
+											
+										</div>
+									</div>
+									<!-- main end -->
+						
+								</div>
+							</div>
+							<!-- middle end -->
+							
+												
+						</div>	
+					</div>	
+				</div>	
+			</div>	
+		</div>		
+	</div>
+	<!-- page-body end -->
+	
+	<div id="page-footer">
+		<div class="wrapper floatholder">
+	
+						<div id="footer">
+				<a class="anchor" href="tutorial3.html#page">&nbsp;</a>
+				<div>Copyright &#169; 2011 eccb2010. All Rights Reserved.</div>
+
+			</div>
+						
+			
+			
+		</div>
+	</div>
+	<!-- page-footer end -->
+	
+</body>
+</html>

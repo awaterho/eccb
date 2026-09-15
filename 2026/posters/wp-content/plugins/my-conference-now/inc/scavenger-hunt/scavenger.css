@@ -1,0 +1,9 @@
+
+/* Scavanger Css Start */
+.ct-inner-content{position:relative;}
+.scavanger{position: absolute;}
+.scavanger img{cursor: pointer;}
+.scavanger {
+	z-index: 999 !important;
+}
+/* Scavanger Css Ends */

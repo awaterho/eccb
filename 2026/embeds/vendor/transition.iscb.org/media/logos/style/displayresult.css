@@ -1,0 +1,69 @@
+
+/*	-------------------------------------------------------------
+	2. TABELLE
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -	*/
+
+               table#myresults table {
+                    font: normal 0.8em "Lucida Sans Unicode", "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+                    margin: 1em 0;
+                    border-collapse: collapse;
+                    border-spacing: 0;
+               }
+               table#myresults caption{
+                    font: italic 0.9em "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+                    text-align: right;
+                    caption-side: bottom;
+               }
+               table#myresults th {
+                    font: bold 0.85em Arial, "Trebuchet MS", Verdana,
+                    Arial, Helvetica, sans-serif;
+                    color: #116688;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    text-align: center;
+                    background-color: #cceeff;
+                    border: 1px solid #bbdddd;
+                    padding: 0.4em 0.4em 0.4em 0.8em;
+               }
+               table#myresults td {
+                    color: #666677;
+                    border: 1px solid #bbdddd;
+                    padding: 0.4em 0.4em 0.4em 0.8em;
+               }
+               table#myresults tfoot td {
+                    background-color: #fff;
+                    color: #333;
+                    font-weight: bold;
+                    empty-cells: hide;
+                    border: 0;
+                    text-align: center;                     
+               }
+               table#myresults td.preis {
+                    border: 1px solid #c1dad7;
+                    background-color: #e8f6fc;
+               }
+               table#myresults tr.other {
+                    background-color: #f7f7f7;
+               }
+               table#myresults tr:hover {
+                    background-color: #FFFFDD;
+                    cursor: pointer;
+               }
+               table#myresults table tr th.sub {
+                    background-color: #e4f4fc;
+               }
+            
+              table.contentmyheader {
+                border:0px;
+                border-spacing: 1px;
+              }
+
+              td.contentmyheader {
+              	background-color:#99ccff;
+              	font-family:Arial,Helvetica,sans-serif;
+              	font-style:normal;
+              	font-variant:normal;
+              	font-weight:bold;
+                padding: 3px;
+                width: 500px;
+             }  

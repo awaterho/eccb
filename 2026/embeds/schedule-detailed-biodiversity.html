@@ -1,0 +1,659 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="vendor/transition.iscb.org/templates/iscb/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/transition.iscb.org/templates/iscb/css/template.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/transition.iscb.org/templates/iscb/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/transition.iscb.org/templates/iscb/css/responsive.css" rel="stylesheet" type="text/css" />
+    <link
+      href="vendor/transition.iscb.org/components/com_comprofiler/plugin/templates/default/fontawesome.css"
+      rel="stylesheet"
+      type="text/css" />
+    <script src="vendor/ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="keywords"
+      content="ISCB, bioinformatics, cheminformatics, biocomputing, algorithm, biology, chemistry, computer" />
+    <meta name="description" content="ISCB -  International Society for Computational Biology" />
+    <meta name="generator" content="Joomla! - Open Source Content Management" />
+    <title>ISCB Transition Page</title>
+    <!-- Google api links -->
+    <link href="vendor/fonts.googleapis.com/roboto.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/fonts.googleapis.com/open-sans.css" rel="stylesheet" type="text/css" />
+    <link
+      href="vendor/transition.iscb.org/templates/iscb_29_01_2008/favicon.ico"
+      rel="shortcut icon"
+      type="image/vnd.microsoft.icon" />
+    <!-- CSS links -->
+    <link href="vendor/transition.iscb.org/templates/iscb/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/transition.iscb.org/templates/iscb/css/template.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/transition.iscb.org/templates/iscb/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/transition.iscb.org/templates/iscb/css/responsive.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="vendor/transition.iscb.org/media/logos/style/displayresult.css" type="text/css" />
+    <link rel="stylesheet" href="vendor/transition.iscb.org/media/logos/style/formfieldset1.css" type="text/css" />
+    <!-- JS scripts -->
+    <script src="vendor/transition.iscb.org/media/system/js/mootools-core.js" type="text/javascript"></script>
+    <script src="vendor/transition.iscb.org/media/system/js/core.js" type="text/javascript"></script>
+    <script src="vendor/transition.iscb.org/media/system/js/mootools-more.js" type="text/javascript"></script>
+    <script src="vendor/transition.iscb.org/media/jui/js/jquery.min.js" type="text/javascript"></script>
+    <script src="vendor/transition.iscb.org/media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
+    <script src="vendor/transition.iscb.org/media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
+    <script src="vendor/transition.iscb.org/media/system/js/html5fallback.js" type="text/javascript"></script>
+    <script src="vendor/ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+    <link
+      rel="stylesheet"
+      href="vendor/transition.iscb.org/js/datatables/media/css/jquery.dataTables.css"
+      type="text/css" />
+    <script src="vendor/transition.iscb.org/js/datatables/media/js/jquery.js" type="text/javascript"></script>
+    <script
+      src="vendor/transition.iscb.org/js/datatables/media/js/jquery.dataTables.js"
+      type="text/javascript"></script>
+    <link rel="stylesheet" href="../assets/archive.css" />
+    <script src="../assets/archive.js" defer></script>
+  </head>
+  <body>
+    <style>
+      html,
+      body {
+        background: transparent !important;
+        margin: 0;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="vendor/cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+    <script src="vendor/code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="vendor/cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="vendor/cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css" />
+    <script src="vendor/cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+    <script src="vendor/cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="vendor/cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="vendor/cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="vendor/cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+    <script src="vendor/cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js"></script>
+    <style>
+      #detailedTable th,
+      #detailedTable td {
+        border: 1px solid #ddd;
+      }
+    </style>
+    <a name="top"></a>
+    <p>
+      <a class="btn btn-primary" style="color: #ffffff" href="../index.html" target="_parent"
+        >Return to ECCB 2026 Homepage</a
+      >  
+      <a class="btn btn-primary" style="color: #ffffff" href="schedule-ataglance.html"
+        >Click here for the agenda at a glance</a
+      >
+    </p>
+    <hr />
+    <p style="text-align: center">
+      <em
+        >Select Track:
+        <a href="schedule-detailed-biodiversity.html">Biodiversity, sustainability, envirobioinformatic</a> |
+        <a href="schedule-detailed-keynotes.html">Distinguished keynotes</a> |
+        <a href="schedule-detailed-elixir.html">Elixir</a> |
+        <a href="schedule-detailed-genomics.html">Genomics, epigenomics, and genome editing</a> |
+        <a href="schedule-detailed-proteins.html">Proteins and structural biology</a> |
+        <a href="schedule-detailed-special.html">Special track</a> |
+        <a href="schedule-detailed-sysbio.html">Systems biology, multi-omics integration, modeling</a> |
+        <a href="schedule-detailed-transcriptomics.html">Transcriptomics and gene regulation</a> |
+        <a href="schedule-detailed.html">All</a></em
+      >
+    </p>
+    <hr />
+    <h1>Schedule for Biodiversity</h1>
+    <p>
+      <strong style="color: #ff0000">NOTE:</strong> Browser resolution may limit the width of the agenda and you may
+      need to scroll the iframe to see additional columns.<br />
+      Click the buttons below to download your current table in that format
+    </p>
+    <table id="detailedTable" class="display">
+      <thead>
+        <tr>
+          <th>
+            <strong style="text-decoration: underline">Date</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">Start time</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">End time</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">Room</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">Track</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">Title</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">Confrimed presenter</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">Authors</strong>
+          </th>
+          <th>
+            <strong style="text-decoration: underline">Abstract</strong>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2026-08-31</td>
+          <td>13:30:00</td>
+          <td>14:30:00</td>
+          <td>Room EF</td>
+          <td>Biodiversity, sustainability, envirobioinformatic</td>
+          <td>A Spectrum of Gut Microbiota Signatures Predicts Long-Term Health Status</td>
+          <td>Himmi Lindgren</td>
+          <td>
+            Himmi Lindgren, Chandler Ross, Matti Ruuskanen, Veikko Salomaa, Rob Knight, Teemu Niiranen, Aki Havulinna,
+            Leo Lahti
+          </td>
+          <td>
+            Motivation: The human gut microbiota is a complex ecosystem composed of hundreds of unique microbial species
+            in a typical adult individual. Its composition has been linked to an individual's current and future health.
+            At the population level, joint analysis of co-abundant species can capture associations with health status
+            and other variables that cannot be robustly detected by analyzing individual taxa alone. Recently, the
+            concept of enterosignatures was proposed to detect such co-abundant groups, decomposing microbial community
+            variation into a mixture of five broad components of co-varying microbial taxa. However, their overall
+            robustness, generalizability, and prospective potential in predicting long-term health status remain to be
+            evaluated.<br />
+            Results: We demonstrate that robust signatures of co-abundant species can be prospectively associated with
+            mortality, diabetes, liver disease, and sepsis risk among Finnish adults in the FINRISK population cohort
+            based on a 20-year follow-up. We characterized dysbiosis-associated signatures across varying levels of
+            sub-ecosystem granularity, encompassing a previously reported Escherichia-driven signature as well as novel
+            Prevotella subspecies-driven signatures linked to compromised future health status. These results illustrate
+            the benefits of analyzing latent signatures across multiple levels of ecosystem granularity.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-08-31</td>
+          <td>13:30:00</td>
+          <td>14:30:00</td>
+          <td>Room EF</td>
+          <td>Biodiversity, sustainability, envirobioinformatic</td>
+          <td>Improving metagenome binning by integrating intrinsic features and taxonomy</td>
+          <td>Simon Rasmussen</td>
+          <td>
+            Simon Rasmussen, Svetlana Kutuzova, Jakob Nybo Andersen, Mads Nielsen, Lars Hestbjerg Hansen, Knud Nor
+            Nielsen
+          </td>
+          <td>
+            A common procedure for studying the microbiome is binning the sequenced contigs into metagenome-assembled
+            genomes. State-of-the-art binning methods use co-abundance and sequence based motifs such as tetranucleotide
+            frequencies while taxonomic labels derived from alignment based classification have not been widely used.
+            Here, we propose TaxVAMB, a metagenome binning tool based on semi-supervised bi-modal variational
+            autoencoders, combining tetranucleotide frequencies and contig co-abundances with taxonomic information.
+            TaxVAMB outperformed all other binners on CAMI2 human microbiome datasets, returning on average 29% more
+            high quality assemblies than the next best binner, and performed on par with the best binners on short-read
+            datasets. On a human gut long-read dataset TaxVAMB recovered 41% more high quality bins and 29% more
+            species. In a typical single-sample setup, TaxVAMB on average returns 83% more high quality bins compared to
+            VAMB. Furthermore, TaxVAMB enables high quality binning of eukaryotic organisms. Finally, TaxVAMB binned
+            incomplete genomes better than any other tool, returning on average 300% more high quality bins of
+            incomplete genomes than the next best binner.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-08-31</td>
+          <td>13:30:00</td>
+          <td>14:30:00</td>
+          <td>Room EF</td>
+          <td>Biodiversity, sustainability, envirobioinformatic</td>
+          <td>Exploring functional insights into the human gut microbiome via the structural proteome</td>
+          <td>Yu Li</td>
+          <td>Hongbin Liu, Jiuming Wang, Yu Li, Lei Dai</td>
+          <td>
+            Most gut microbiome proteins remain functionally uncharacterized because sequence-based methods miss remote
+            homologs from deep evolutionary divergence. We leverage AI-driven protein structure prediction and
+            representation learning to systematically decode this functional landscape.<br />
+            <br />
+            We constructed the Human Gut Microbial Protein Structure (GMPS) database of ~2.7 million
+            AlphaFold2-predicted structures from 968 bacterial and 1,255 phage genomes. Structural alignment and
+            clustering substantially outperformed sequence-based annotation, raising putative functional assignments for
+            phage proteins from 24.8% to 54.5%. This revealed structural diversification of phage endolysins through
+            domain shuffling; we experimentally validated nine endolysins with lytic activity against gut pathobionts,
+            including Enterococcus gallinarum and Clostridium innocuum. Structural searches also identified bacterial
+            enzymes for melatonin biosynthesis (DDC, AANAT, and ASMT), whose physiological roles were confirmed by
+            enzymatic assays and in vivo mouse experiments showing direct impacts on host melatonin levels and colitis
+            severity.<br />
+            <br />
+            To surpass the sensitivity ceiling of alignment-based methods, we developed Dense Enzyme Retrieval (DEER),
+            an alignment-free model fusing pre-trained protein language models (ESM-2 and SaProt) through contrastive
+            learning to project enzymes into a unified latent space where functionally related proteins cluster
+            regardless of sequence or structural divergence. On a cross-kingdom benchmark, DEER outperformed sequence
+            (BLASTp, MMseqs2) and structure (Foldseek, US-align, DALI) aligners for bacteriaâ€“human isozyme detection
+            while being orders of magnitude faster, and recovered validated bacterial melatonin enzymes among its top
+            candidates.<br />
+            <br />
+            Our work establishes an AI-powered framework for functional discovery in the human gut microbiome,
+            illuminating uncharacterized protein space across microbial ecosystems, with broad implications for
+            microbiome-targeted therapeutics and hostâ€“microbe interaction discovery.<br />
+          </td>
+        </tr>
+        <tr>
+          <td>2026-08-31</td>
+          <td>14:45:00</td>
+          <td>15:45:00</td>
+          <td>Room 8</td>
+          <td>Biodiversity, sustainability, envirobioinformatic</td>
+          <td>
+            TheBIGbam: compression and interactive exploration of large-scale sequencing alignments with circular
+            mapping support
+          </td>
+          <td>Martin Boutroux</td>
+          <td>Martin Boutroux, Evan Thomas, Wai Hoe Chin, Hannes Peter</td>
+          <td>
+            TheBIGbam (https://github.com/bhagavadgitadu22/theBIGbam) is a genome browser and alignment viewer designed
+            for massive metagenomic and metatranscriptomic datasets. The tool accepts genome assemblies in FASTA format
+            or annotated genome sequences in GenBank format, together with BAM files containing read alignments.
+            Alternatively, it can start from raw FASTQ reads and generate alignments using a modified mapper that
+            supports circular genomes, enabling seamless read mapping across genome ends. TheBIGbam can compress
+            hundreds of gigabytes of input files 10- to 100-fold into dedicated databases while retaining key
+            per-position information, including coverage depth and recurrent mismatches, insertions, and deletions
+            between reads and the reference. These databases can be served to a local web browser, enabling interactive
+            exploration of any contig in any sample using DNAFeaturesViewer for genome maps and Bokeh for
+            mapping-derived features. Contig-sample pairs available for visualization can be filtered using a range of
+            summary metrics calculated per contig, per sample, and per contig-sample pair to guide users toward the most
+            relevant signals. Through its interactive visualization, theBIGbam facilitates the exploration of complex
+            datasets, while its integrated database, combining assembly features, annotated features, and
+            mapping-derived features, provides the information needed to investigate biological hypotheses
+            systematically. Designed to complement existing browsing tools like IGV and Anvi'o, theBIGbam is
+            particularly suited for examining misassemblies, subpopulations, microdiversity, and contig topology in
+            large-scale datasets.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-08-31</td>
+          <td>14:45:00</td>
+          <td>15:45:00</td>
+          <td>Room 8</td>
+          <td>Biodiversity, sustainability, envirobioinformatic</td>
+          <td>
+            Cleanifier: contamination removal from microbial sequences using spaced seeds of a human pangenome index
+          </td>
+          <td>Jens Zentgraf</td>
+          <td>Johanna Elena Schmitz, Jens Zentgraf, Sven Rahmann</td>
+          <td>
+            Motivation: The first step when working with DNA data of human-derived microbiomes is to remove human
+            contamination for two reasons. First, many countries have strict privacy and data protection guidelines for
+            human sequence data, so microbiome data containing partly human data cannot be easily further processed or
+            published. Second, human contamination may cause problems in downstream analysis, such as metagenomic
+            binning or genome assembly. For large-scale metagenomics projects, fast and accurate removal of human
+            contamination is therefore critical.<br />
+            <br />
+            Results: We introduce Cleanifier, a fast and memory frugal alignment-free tool for detecting and removing
+            human contamination based on gapped k-mers, or spaced seeds. Cleanifier uses a pangenome index of known
+            human gapped k-mers, and the creation and use of alternative references is also possible. Reads are
+            classified and filtered according to their gapped k-mer content. Cleanifier supports two filtering modes:
+            one that queries all gapped k-mers and one that queries only a sample of them. A comparison of Cleanifier
+            with other state-of-the-art tools shows that the sampling mode makes Cleanifier the fastest method with
+            comparable accuracy. When using a probabilistic Cuckoo filter to store the complete k-mer set, Cleanifier
+            has similar memory requirements to methods that use a sampled minimizer index. At the same time, Cleanifier
+            is more flexible, because it can use different sampling methods on the same index.<br />
+            <br />
+            Availability and implementation: Cleanifier is available via gitlab
+            (https://gitlab.com/rahmannlab/cleanifier), PyPi (https://pypi.org/project/cleanifier/), and Bioconda
+            (https://anaconda.org/bioconda/cleanifier). The pre-computed human pangenome index is available at Zenodo
+            (https://doi.org/10.5281/zenodo.15639519).
+          </td>
+        </tr>
+        <tr>
+          <td>2026-08-31</td>
+          <td>14:45:00</td>
+          <td>15:45:00</td>
+          <td>Room 8</td>
+          <td>Biodiversity, sustainability, envirobioinformatic</td>
+          <td>
+            TPMM: Three-component Posterior Mixture Model Enables Robust Inverton Detection in Low-Depth Metagenomes and
+            Suggests Potential Viral Invertons
+          </td>
+          <td>Yi Lu</td>
+          <td>Yi Lu, Jiaojiao Guan, Yang Shen, Jiayu Shang, Yanni Sun</td>
+          <td>
+            Bacterial phase variation enables reversible, locus-specific phenotypic switching, often driven by DNA
+            inversion (invertons). To identify these events, researchers commonly rely on sequencing reads that provide
+            orientation-specific support. Metagenomic sequencing, which captures total genetic material independent of
+            cultivation, offers a powerful platform for the comprehensive study of invertons. However, computational
+            inverton calling from metagenomic data is difficult at low sequencing depth: hard read-support cutoffs can
+            miss true events, while sequence-only predictors lack read-backed interpretability and uncertainty
+            quantification. To address this, we present TPMM, a three-component posterior mixture model for inverton
+            calling in metagenomic data. TPMM explicitly incorporates sequencing depth to formulate inverton detection
+            as a probabilistic mixture problem. Starting from candidates flanked by inverted repeats, the model
+            classifies the candidates into noise, low-probability, or high-probability inversion signals using read
+            evidence. Finally, TPMM assigns posterior probabilities as soft labels and applies cumulative Bayesian False
+            Discovery Rate control to robustly identify true invertons. On two real gut metagenomic datasets, TPMM
+            agrees well with PhaseFinder at high depth but recovers substantially more invertons under systematic
+            downsampling, demonstrating superior performance in sparse-data regimes. We further examine potential
+            reversible inversion elements in viral genomes and provide supporting analyses, suggesting a broader scope
+            for inversion-mediated regulation.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-01</td>
+          <td>10:30:00</td>
+          <td>11:30:00</td>
+          <td>Room EF</td>
+          <td>Biodiversity, sustainability, envirobioinformatic</td>
+          <td>Agent-Based Modelling Identifies many paths for Inflammation Resolution</td>
+          <td>Hermes Desgrez Dautet</td>
+          <td>Hermes Desgrez Dautet, David Bernard, Cousin Beatrice, Paul Monsarrat, Sylvain Cussat-Blanc</td>
+          <td>
+            Sterile inflammation emerges from spatially coordinated interactions between immune recruitment,
+            polarization, signal diffusion, and tissue turnover. Capturing this complexity requires modeling frameworks
+            that integrate stochasticity, spatial heterogeneity, and functional redundancy across immune cell types. We
+            present a spatially explicit agent-based model of sterile inflammation based on a functional mono-agent
+            abstraction, in which immune cells share core capabilities, e.g. polarization, chemotaxis, signal
+            production, and phagocytosis, while differing through parameterization rather than rigid rule sets. Using
+            large-scale global parameter exploration via Latin Hypercube Sampling, we generated 300,000 simulations to
+            characterize the model's dynamical landscape. Dimensionality reduction suggested a continuous manifold of
+            inflammatory trajectories. Applying biologically informed temporal criteria identified a highly constrained
+            subspace consistent with canonical sterile inflammation. Within this region, multiple distinct yet
+            self-consistent kinetic regimes achieved successful resolution. These results indicate that sterile
+            inflammation is not a single dynamical attractor but an emergent coordination constraint in a
+            high-dimensional functional space, providing a systems-level framework for exploring immune regulation and
+            dysregulation.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-01</td>
+          <td>10:30:00</td>
+          <td>11:30:00</td>
+          <td>Room EF</td>
+          <td>Biodiversity, sustainability, envirobioinformatic</td>
+          <td>
+            ProteomeLM: A proteome-scale language model enables accurate and rapid prediction of protein-protein
+            interactions and gene essentiality across taxa
+          </td>
+          <td>Cyril Malbranke</td>
+          <td>Cyril Malbranke, Gionata Paolo Zalaffi, Anne-Florence Bitbol, Cecilia Fruet</td>
+          <td>
+            Language models trained on biological sequences are advancing inference tasks from the scale of single
+            proteins to that of genomic neighborhoods. Here, we introduce ProteomeLM, a transformer-based language model
+            that uniquely operates on entire proteomes from species spanning the tree of life. ProteomeLM is trained to
+            reconstruct masked protein embeddings using the whole proteomic context, yielding contextualized protein
+            representations that reflect proteome-scale functional constraints.<br />
+            Notably, ProteomeLM's attention coefficients encode protein-protein interactions (PPI), despite being
+            trained without interaction labels. Furthermore, it enables interactome-wide PPI screening that is
+            substantially more accurate, and orders of magnitude faster, than amino-acid coevolution-based methods.<br />
+            We further develop ProteomeLM-PPI, a supervised model that combines ProteomeLM embeddings and attention
+            coefficients to achieve state-of-the-art PPI prediction across benchmarks and species. Finally, we introduce
+            ProteomeLM-Ess, a supervised gene essentiality predictor that generalizes across diverse taxa. Our results
+            demonstrate the potential of proteome-scale language models for addressing function and interactions at the
+            organism level.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-01</td>
+          <td>10:30:00</td>
+          <td>11:30:00</td>
+          <td>Room EF</td>
+          <td>Biodiversity, sustainability, envirobioinformatic</td>
+          <td>
+            Relation Extraction for Diet, Non-Communicable Disease and Biomarker Associations (RECoDe): A CoDiet study
+          </td>
+          <td>Donghee Choi</td>
+          <td>
+            Donghee Choi, Yajie Gu, Kai Qi Zong, Antoine Lain, Dimitrios Zaikis, Thomas Rowlands, Marek Rei, Tim Beck,
+            Joram Posma
+          </td>
+          <td>
+            Diet plays a critical role in human health, with growing evidence linking dietary habits to disease
+            outcomes. However, extracting structured dietary knowledge from biomedical literature remains challenging
+            due to the lack of dedicated relation extraction datasets. To address this gap, we introduce RECoDe, a novel
+            relation extraction (RE) dataset designed specifically for diet, disease, and related biomedical
+            entities.<br />
+            RECoDe captures a diverse set of relation types, including a broad spectrum of positive association patterns
+            and explicit negative examples, with over 5,000 human-annotated instances validated by up to five
+            independent annotators. Furthermore, we benchmark various natural language processing (NLP) RE models,
+            including BERT-based architectures and enhanced prompting techniques with locally deployed large language
+            models (LLMs) to improve classification performance on underrepresented relation types.<br />
+            The best performing model was gpt-oss-20B, a locally-deployed open-weight LLM, achieving an F1-score of 61%
+            (macro) for multi-class classification and 89% for binary classification using a hierarchical prompting
+            strategy with a separate reflection step built in. To demonstrate the practical utility of RECoDe, we
+            introduce the Contextual Co-occurrence Summarisation (CoCoS) framework, which aggregates sentence-level
+            relation extractions into document-level summaries and further integrates evidence across multiple
+            documents. CoCoS produces effect estimates consistent with established dietary knowledge, demonstrating its
+            validity as a general framework for systematic evidence synthesis. <br />
+            <br />
+            Availability: The code, models, and dataset are publicly available at https://github.com/omicsNLP/RECoDe.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-02</td>
+          <td>10:30:00</td>
+          <td>11:30:00</td>
+          <td>Room EF</td>
+          <td>Biodiversity, sustainability, envirobioinformatic</td>
+          <td>Coral microbiomes as reservoirs of unknown genomic and biosynthetic diversity</td>
+          <td>Lucas Paoli</td>
+          <td>
+            Denis Allemand, Rebecca Vega Thurber, Romain Trouble, Christian Voolstra, Patrick Wincker, Maren Ziegler,
+            Joern Piel, Shinichi Sunagawa, Eric Douville, Chris Bowler, Sylvain Agostini, Olivier Thomas, Serge Planes,
+            Sarah Romac, Julie Poulain, Guillaume Iwankow, Juliette Cailliau, Guillaume Bourdin, Emilie Boissin,
+            Clémentine Moulin, Maggie Reddy, Aude Perdereau, Taylor Priest, Daniel Richter, Lucas Paoli, Dora Racunica,
+            Hans-Joachim Ruscheweyh, Martin Sperfeld, James O'Brien, Samuel Miravet-Verde, Alena Streiff, Jessica
+            Ransome, Clara Chepkirui, Fabienne Wiederkehr, Anna Sintsova, Guillem Salazar, Kalia Bistolas, Teresa
+            Sawyer, Karine Labadie, Kim-Isabelle Mayer, Didier Forcioli, Pierre Galand, Fabien Lombard, Pedro Oliveira
+          </td>
+          <td>
+            Coral reefs are marine biodiversity hotspots that provide a wide range of ecosystem services. They are
+            reservoirs of bioactive metabolites, many produced by microorganisms associated with reef invertebrate
+            hosts. However, for the keystone species of coral reefsâ€”the reef-building coralsâ€”we still lack a
+            systematic assessment of their microbially encoded biosynthetic potential and the molecular resources at
+            stake due to the alarming decline in reef biodiversity. Here we analysed microbial genomes reconstructed
+            from 820 reef-building coral samples of three representative coral genera collected at 99 reefs across 32
+            islands throughout the Pacific Ocean (Tara Pacific expedition). By contextualizing our analyses with the
+            microbiomes of other reef species, we found that only 10% of the 4,224 microbial species and less than 1% of
+            the 645 species exclusively identified in Tara Pacific samples had genomic information available.
+            Furthermore, the biosynthetic potential of reef-building coral microbiomes rivalled or surpassed that of
+            traditional natural product sources such as sponges. Among the biosynthetically rich bacteria in the reef
+            microbiome, we identified new groups of Acidobacteriota that encode previously unknown enzymology, in turn
+            opening promising avenues for functional protein engineering. Together, this study underscores the
+            importance of conserving coral reefs as vital reservoirs of molecular diversity.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-02</td>
+          <td>10:30:00</td>
+          <td>11:30:00</td>
+          <td>Room EF</td>
+          <td>Biodiversity, sustainability, envirobioinformatic</td>
+          <td>GiantHost: A Domain-Adaptive and Uncertainty-Aware Framework for Giant Virus Host Prediction</td>
+          <td>Fuchuan Qu</td>
+          <td>Fuchuan Qu, Guowei Chen, Yanni Sun</td>
+          <td>
+            Motivation: Nucleocytoplasmic large DNA viruses (NCLDVs) play crucial roles in global ecosystems. Although
+            metagenomics has vastly accelerated the discovery of novel NCLDVs, predicting their hosts from fragmented
+            contigs remains a critical bottleneck, with no dedicated end-to-end computational tools currently available.
+            Addressing this gap requires overcoming three fundamental challenges: the extreme scarcity of labeled
+            reference genomes, the severe domain shift between laboratory isolates and diverse environmental
+            metagenomes, and the inability of traditional deterministic models to quantify prediction uncertaintyâ€”a
+            crucial requirement for reliable ecological profiling where novel, divergent viruses are prevalent.<br />
+            Results: We present GiantHost, the first NCLDV host prediction tool with domain adaptation and uncertainlty
+            awareness. GiantHost employs a dual-tower neural network to integrate dense genome traits and sparse GVOG
+            profiles, allowing better integration of heterogeneous features. To overcome label scarcity and domain
+            shift, we leverage 1,400 environmental viral genomes (GVMAGs) via semi-supervised multi-task learning and
+            Domain Adversarial Neural Networks (DANN), effectively bridging the distributional gap between RefSeq and
+            environmental data. Additionally, GiantHost incorporates Conformal Prediction (CP) to output statistically
+            guaranteed prediction sets rather than overconfident single labels. Evaluated under rigorous genome-level
+            cross-validation, GiantHost demonstrates robust predictive power. Applied to the Tara Ocean dataset,
+            GiantHost successfully captured the vertical stratification of NCLDV hostsâ€”revealing a depth-dependent
+            decline of phytoplankton-infecting viruses and a relative enrichment of Amoebozoa-infecting viruses in the
+            mesopelagic zone.
+          </td>
+        </tr>
+        <tr>
+          <td>2026-09-02</td>
+          <td>10:30:00</td>
+          <td>11:30:00</td>
+          <td>Room EF</td>
+          <td>Biodiversity, sustainability, envirobioinformatic</td>
+          <td>ViralQC: A Tool for Assessing Completeness and Contamination of Predicted Viral Contigs</td>
+          <td>Cheng Peng</td>
+          <td>Cheng Peng, Jiayu Shang, Jiaojiao Guan, Yanni Sun</td>
+          <td>
+            Viruses represent the most abundant biological entities on Earth, playing vital roles in diverse ecosystems.
+            Cataloging viruses across various environments is essential for understanding their properties and
+            functions. Metagenomic sequencing has emerged as the most comprehensive method for virus discovery. However,
+            distinguishing viral sequences from the vast background of microbial organisms in metagenomic data remains a
+            significant challenge. Existing tools experience varying degrees of false positive rates due to noise in
+            sequencing and assembly, and the integration of proviruses into microbial genomes. This highlights the
+            urgent need for an accurate and efficient method to evaluate the quality of viral contigs.<br />
+            To address these challenges, we introduce ViralQC, a tool designed to assess the quality of viral contigs or
+            bins. ViralQC identifies microbial contamination within putative viral sequences using a multi-modal
+            framework powered by DNA and protein foundation models and estimates completeness by analyzing protein
+            organization. We evaluated ViralQC on multiple datasets and compared its performance against the
+            state-of-the-art tool, CheckV. Leveraging both DNA and protein foundation models, ViralQC achieves higher
+            recall on contamination detection for contigs longer than 10 kbp while maintaining comparable precision.
+            Additionally, ViralQC delivers more accurate estimation on contigs with completeness&gt;50%.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="text-align: center">
+      <a href="#top">- top -</a>
+    </p>
+    <script>
+      $(document).ready(function () {
+        $("#detailedTable").DataTable({
+          paging: false,
+          order: [
+            [4, "asc"],
+            [0, "asc"],
+            [1, "asc"],
+          ],
+          responsive: true,
+          dom: "Bfrtip", // B = buttons, f = filter, r = processing, t = table, i = info, p = pagination
+          buttons: [
+            {
+              extend: "csvHtml5",
+              text: "CSV",
+              title: "ISMBECCB_2025_Biodiversity_Detailed_Schedule",
+            },
+            {
+              extend: "excelHtml5",
+              text: "Excel",
+              title: "ISMBECCB_2025_Biodiversity_Detailed_Schedule",
+            },
+            {
+              extend: "pdfHtml5",
+              text: "PDF",
+              title: "ISMBECCB_2025_Biodiversity_Detailed_Schedule",
+            },
+            "print",
+          ],
+        });
+      });
+    </script>
+    <script>
+      (function () {
+        function getHeight() {
+          var b = document.body,
+            e = document.documentElement;
+          return Math.max(
+            b.scrollHeight,
+            e.scrollHeight,
+            b.offsetHeight,
+            e.offsetHeight,
+            b.clientHeight,
+            e.clientHeight,
+          );
+        }
+        function sendHeight() {
+          var h = getHeight();
+          // send to the J5 parent; change to your exact parent origin if needed
+          parent.postMessage({ type: "iscb-wrapper-height", height: h, id: "blockrandom" }, "*");
+        }
+        window.addEventListener("load", sendHeight);
+        window.addEventListener("resize", sendHeight);
+        // update on DOM changes too
+        new MutationObserver(sendHeight).observe(document.body, { childList: true, subtree: true, attributes: true });
+      })();
+    </script>
+    <script>
+      (function () {
+        function postToParent(msg) {
+          // Parent will validate origin; using '*' lets this work on test/prod
+          parent.postMessage(msg, "*");
+        }
+        //Clicks that should navigate the PARENT to a site-relative path
+        document.addEventListener("click", function (e) {
+          const a = e.target.closest("a[data-nav-top]");
+          if (!a) return;
+          const href = a.getAttribute("href"); // e.g. "/membership-details/senior-members"
+          if (href && href.startsWith("/")) {
+            e.preventDefault();
+            postToParent({ type: "iscb-wrapper-cmd", action: "navigateParentToPath", path: href, id: "blockrandom" });
+          }
+        });
+        //“#top” links: scroll the parent to the top of the iframe
+        document.addEventListener("click", function (e) {
+          const a = e.target.closest('a[href="#top"]');
+          if (!a) return;
+          e.preventDefault();
+          postToParent({ type: "iscb-wrapper-cmd", action: "scrollParentTo", target: "iframeTop", id: "blockrandom" });
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        function post(msg) {
+          parent.postMessage(msg, "*");
+        }
+        document.addEventListener(
+          "submit",
+          function () {
+            post({ type: "iscb-wrapper-cmd", action: "loading", state: "start", id: "blockrandom" });
+          },
+          true,
+        );
+        const origSubmit = HTMLFormElement.prototype.submit;
+        HTMLFormElement.prototype.submit = function () {
+          post({ type: "iscb-wrapper-cmd", action: "loading", state: "start", id: "blockrandom" });
+          return origSubmit.apply(this, arguments);
+        };
+        window.addEventListener("beforeunload", function () {
+          post({ type: "iscb-wrapper-cmd", action: "loading", state: "start", id: "blockrandom" });
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        function notifyParentOfOffset() {
+          try {
+            // Where is the target in the child document?
+            const hash = decodeURIComponent(location.hash || "");
+            let offsetY = 0;
+            if (hash.length > 1) {
+              const id = hash.slice(1);
+              const el = document.getElementById(id) || document.getElementsByName(id)[0];
+              if (el) {
+                const r = el.getBoundingClientRect();
+                offsetY = Math.round(r.top + window.scrollY);
+              }
+            } else {
+              offsetY = Math.round(window.scrollY);
+            }
+            // Tell the parent to scroll to the corresponding spot
+            window.parent.postMessage(
+              { type: "iscb-wrapper-cmd", action: "scrollParentToChildOffset", offset: offsetY },
+              "*",
+            );
+          } catch (e) {
+            /* cross-origin safe */
+          }
+        }
+        // On load (handles initial #hash in URL)
+        window.addEventListener("load", function () {
+          // let layout settle
+          setTimeout(notifyParentOfOffset, 0);
+        });
+        // On in-page anchor changes
+        window.addEventListener("hashchange", notifyParentOfOffset);
+      })();
+    </script>
+  </body>
+</html>

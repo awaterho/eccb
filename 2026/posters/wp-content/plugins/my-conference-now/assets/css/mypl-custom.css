@@ -1,0 +1,1169 @@
+body.preview_mode #INDWrap,
+body.preview_mode #_header-12-2181,
+body.preview_mode #section-banner,
+body.preview_mode #section-20-225,
+body.preview_mode.page-id-47158 #headline-10-389,
+body.preview_mode #notification-40397,
+body.preview_mode.page-id-41296 #headline-10-389,
+body.preview_mode #cookie-law-info-bar,
+body.preview_mode #_header-100-159,
+body.preview_mode #section-109-159{
+  display: none !important;
+}
+
+body.preview_mode #inner_content-6-389,
+body.preview_mode #div_block-13-389,
+body.preview_mode #div_block-11-143 {
+  padding: 0 !important;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+#section-75-159 > .ct-section-inner-wrap {
+  padding: 50px 0px 0px 0px !important;
+}
+
+ul.hello_bar_section_wraper {
+  margin-bottom: 0;
+}
+
+div#div_block-34-21175 {
+  padding: 0;
+}
+
+#section-75-159 {
+  margin: 0;
+}
+
+.accordion-body .pdf_btn {
+  padding: 10px 25px;
+  background-color: #5dbae8;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s all;
+  border: none;
+}
+
+.accordion-body .pdf_btn a {
+  color: #fff;
+}
+
+.accordion-body .pdf_btn a:hover {
+  text-decoration: none;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.tabcontent .da_schedule_wrapper {
+  display: none;
+}
+.tabcontent .da_schedule_wrapper.active {
+  display: block;
+}
+.tab_by_conference {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+/*
+ul#menu-main-menu {
+    display: none;
+}*/
+
+/* Style the buttons inside the tab */
+.tab_by_conference button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab_by_conference button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab_by_conference button.active {
+  background-color: #ccc;
+}
+
+/* Accordian code */
+
+section.ct-section {
+  margin: 20px auto;
+}
+
+.oxy-tabs .oxy-tab {
+  border-right: 1px solid #ccc;
+  padding: 4px 10px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #757575;
+  cursor: pointer;
+}
+
+.oxy-tabs .oxy-tab.tabs-3170-tab-active {
+  color: #6fbe4a;
+}
+.home-custom-sessions .tab.inside.shelf-slide,
+.home-custom-sessions .oxy-tab-content .tab.carousel-frame {
+  white-space: nowrap;
+  scrollbar-width: none;
+  margin-top: -20px;
+  padding: 0 40px 10px 40px;
+  font-size: 0;
+}
+.home-custom-sessions .tab.inside.shelf-slide::-webkit-scrollbar,
+.home-custom-sessions .oxy-tab-content .tab.carousel-frame::-webkit-scrollbar {
+  display: none;
+}
+.tab button.tablinks {
+  background-color: #eeeeee;
+  color: #000 !important;
+  font-weight: 500;
+  margin: 0;
+  padding: 15px 20px;
+  transition: 0.3s;
+  font-size: 18px;
+  display: inline-block;
+  float: none;
+  white-space: normal;
+  vertical-align: top;
+}
+
+.da_Schedule_header {
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+
+.da_schedule_single .daSche_time {
+  font-size: 26px;
+  font-weight: 500;
+  width: 24%;
+  display: inline-block;
+  vertical-align: middle;
+  border-right: 1px solid #fff;
+  padding: 10px 5px;
+}
+
+div.da_schedule_single::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+div.da_schedule_single {
+  padding: 20px 70px 20px 10px;
+  position: relative;
+}
+
+.da_schedule_single .daSche_title {
+  width: 60%;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 22px;
+  color: #656464;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.da_schedule_single .daSche_speaker_image {
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.da_Schedule_content p {
+  /* border-bottom: 1px solid #ccc; */
+  padding: 0 0 15px;
+  margin-bottom: 15px;
+  float: none;
+}
+.da_Schedule_content p:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.daSche_speaker_image img {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: 0.3rem solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/*div.da_schedule_single:nth-child(2n) {
+    background-color: #cfe3ff;
+}*/
+
+div.da_schedule_single:before {
+  display: block;
+  height: auto;
+  padding: 0;
+  content: '\f0d7';
+  width: 4rem;
+  text-align: center;
+  color: #222;
+  font-size: 2.8rem;
+  font-family: 'FontAwesome';
+  position: absolute;
+  top: 20px;
+  right: 15px;
+}
+
+.da_Schedule_footer b {
+  float: left;
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.da_Schedule_footer .show_schedule-speaker-list h4 {
+  display: inline-block;
+	color: #000;
+	text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 2.5rem;
+  margin: 0 0 0 6px;
+  word-break: break-word;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 150px;
+  margin-top: 0px;
+  vertical-align: middle;
+	float: left;
+}
+
+.tabcontent {
+  padding: 0;
+  border: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  width: 100%;
+  margin: 15px auto;
+}
+
+.home-custom-sessions h1.ct-headline {
+  padding: 0px 36px;
+}
+
+.home-custom-sessions h1.ct-headline .oxy-tabs {
+  padding: 0 36px;
+}
+
+.oxy-tabs-contents .oxy-tab-content {
+  padding: 20px 36px !important;
+  position: relative;
+}
+
+.oxy-tabs .oxy-tab:last-child {
+  border-right: 0;
+}
+
+.da_Schedule_footer .show_schedule-speaker-list a img {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #eefcfd !important;
+  border-radius: 50%;
+  overflow: hidden !important;
+}
+
+.da_Schedule_footer .show_schedule-speaker-list p {
+  display: none;
+}
+
+.da_Schedule_footer .session-add-btn {
+  display: block;
+  margin: 0 auto;
+  float: right;
+  width: 25%;
+}
+
+section#section-banner {
+  margin-top: 0;
+}
+
+.show_schedule-speaker-list a {
+  background-color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5px 10px;
+  border-radius: 55px;
+  border: 2px solid var(--primary);	
+}
+
+.oxy-posts div.oxy-post a.oxy-post-image {
+  border-radius: 50% !important;
+  overflow: hidden;
+}
+
+.oxy-posts div.oxy-post {
+  width: 25% !important;
+}
+
+button.remove_my_schedule.btn_my_schedule,
+button.add_my_schedule.btn_my_schedule {
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  padding: 16px 25px;
+  background-color: #1e73be;
+  color: #fff;
+  border-radius: 30px;
+}
+.session-add-btn button.add_my_schedule.btn_my_schedule {
+  padding: 10px 25px 10px 25px;
+}
+
+#_nav_menu-154-50 .menu-item a {
+  padding-right: 20px !important;
+}
+
+.da_Schedule_footer .watch_now_btn_show {
+  display: inline-block;
+  background-color: #fff;
+  padding: 10px 25px 10px 25px;
+  position: relative;
+  color: #999;
+  border-radius: 50px;
+  margin: 0 auto;
+}
+.da_Schedule_footer .watch_now_btn_show + .show_schedule_speaker_wrapper {
+  margin-top: 15px;
+}
+
+.da_schedule_single .accordion-body {
+  display: block;
+  cursor: pointer !important;
+  padding: 0 30px;
+  max-height: 0;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  opacity: 1;
+/*   visibility: hidden; */
+	display: none;
+}
+
+.da_schedule_single .accordion-body.accordion_active {
+  display: block;
+  cursor: pointer !important;
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 30px;
+  transition: all 0.5s ease;
+  max-height: 5000px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s ease-in-out;
+}
+.accordion-body .da_Schedule_content {
+  max-height: 0;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+.accordion-body.accordion_active .da_Schedule_content {
+  max-height: 5000px;
+  opacity: 1;
+  transition: all 0.8s ease-in-out;
+}
+.accordion-body.accordion_active .da_Schedule_content + .da_Schedule_footer {
+  margin-top: 14px;
+}
+section#section-20-225 {
+  margin-bottom: 0;
+}
+
+.show_schedule-speaker-list {
+  width: 30%;
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 20px;
+}
+.show_schedule-speaker-list:last-child {
+  margin-bottom: 0;
+}
+.da_Schedule_footer:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.hidden_watch_live_btn .mycn-btn-sub-session {
+  display: none;
+}
+
+.show_watch_live_btn .mycn-btn-sub-session {
+  display: block;
+}
+
+#award-recipients-home .ct-headline {
+  font-weight: 400;
+  text-align: center;
+  color: #25639e;
+  font-size: 43px;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+section#award-recipients-home .ct-section-inner-wrap,
+section.ct-section.home-custom-sessions .ct-section-inner-wrap {
+  margin: 20px auto;
+  background-color: #fff;
+  max-width: 1180px;
+  padding: 0 15px;
+}
+
+section.Award_modal_section {
+  width: 944px;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+section.Award_modal_section iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* Award files */
+
+p.awardee-files a {
+  display: inline-block;
+  width: 30px;
+  font-size: 0;
+}
+
+p#awardee-files img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  transition: 0.25s all;
+  border-radius: 0;
+  border: 0;
+}
+
+p.awardee-files {
+  text-align: center;
+}
+
+p.award-title {
+  margin: 0px auto 10px;
+  padding: 0;
+  text-align: center;
+}
+
+a.oxy-post-title {
+  font-size: 20px;
+  line-height: 100%;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.carousel-frame {
+  width: 100%;
+  margin-bottom: 0.5em;
+  padding-bottom: 1em;
+  position: relative;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.carousel-frame button {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px 0 0;
+  padding: 0;
+}
+
+.tab.inside.shelf-slide {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+.shelf {
+  position: relative;
+  padding: 0 40px;
+}
+.scroll-arrow {
+  width: 40px;
+  height: 75px;
+  background-color: #9ad076;
+  display: block;
+  position: absolute;
+  z-index: 99;
+  text-align: center;
+  line-height: 73px;
+  font-size: 34px;
+  color: #fff;
+  top: 0;
+}
+.scroll-arrow.left {
+  left: 36px;
+}
+.scroll-arrow.right {
+  right: 36px;
+}
+
+/* 02 July 2020 */
+
+/* form#adduser h2 {
+  display: none;
+} */
+
+.section_my_profile table.form-table .acf-field {
+  padding: 0px !important;
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.section_my_profile table.form-table .acf-field td.acf-input,
+.section_my_profile table.form-table .acf-field td.acf-label {
+  padding: 0px !important;
+  margin: 0px;
+  display: block;
+  width: 100%;
+}
+
+.section_my_profile table.form-table .acf-field td.acf-label label {
+  margin: 0 0 0.5rem;
+}
+
+.users_profile_info_section .show_custom_author_details_list a {
+  color: #333;
+  text-decoration: none;
+}
+.users_profile_info_section .show_custom_author_details_list a:hover {
+  color: #6fbe4a;
+}
+.users_profile_info_right_section > a {
+  margin-top: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+.users_profile_info_right_section > a:hover {
+  opacity: 0.9;
+  text-decoration: none;
+  color: #fff;
+}
+.users_profile_info_right_section .author-cutom-detqils_wrappers_right {
+  padding-left: 0;
+}
+.home-custom-sessions .tabcontent .da_schedule_wrapper {
+  position: relative;
+  max-height: 885px;
+  padding-right: 5px;
+  overflow: auto;
+  scrollbar-color: #6fbe4a #f1f1f1;
+  scrollbar-width: thin;
+}
+.home-custom-sessions .tabcontent {
+  position: relative;
+}
+.home-custom-sessions .tabcontent:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 5px;
+  bottom: 0;
+  height: 30px;
+  z-index: 1;
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(255, 255, 255, 0.65) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(255, 255, 255, 0.65) 100%
+  );
+}
+.home-custom-sessions .tabcontent .da_schedule_wrapper::-webkit-scrollbar {
+  width: 10px !important;
+}
+.home-custom-sessions
+  .tabcontent
+  .da_schedule_wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.home-custom-sessions
+  .tabcontent
+  .da_schedule_wrapper::-webkit-scrollbar-thumb {
+  background: #6fbe4a;
+  border-radius: 10px;
+}
+.mp_my_profile .bg-white a.view_profile_page.ct-link-button {
+  float: right;
+  clear: both;
+  color: #fff;
+  text-decoration: none;
+}
+.mp_my_profile .bg-white a.view_profile_page.ct-link-button:hover {
+  opacity: 0.9;
+}
+.mp_my_profile .bg-white a.view_profile_page.ct-link-button + form {
+  float: left;
+  width: 100%;
+  clear: both;
+}
+table.form-table + p.form-submit {
+  margin-top: 20px;
+}
+.section_my_profile
+  table.form-table
+  .acf-field[data-name='session_assigned_dates'],
+.section_my_profile
+  table.form-table
+  .acf-field[data-name='session_assigned_date'],
+.section_my_profile table.form-table .acf-field[data-name='event_tracks'] {
+  display: none;
+}
+.mp_edit_page
+  .acf-field[data-name='sponsor_logo']
+  .acf-image-uploader
+  .image-wrap {
+  max-width: 300px !important;
+}
+#wpua-preview-existing > span.description {
+  display: none;
+}
+p#wpua-thumbnail-existing {
+  display: none;
+}
+.section_my_profile .oxy-tabs .oxy-tab {
+  border-right: none;
+  border-bottom: 1px solid #ececec;
+}
+#oct.sponser_dash_calender .calendar-wrapper {
+  border: thin solid #e5e5e5;
+}
+.mp_edit_page .acf-form-submit {
+  position: relative;
+}
+.mp_edit_page .acf-form-submit span.acf-spinner {
+  position: absolute;
+  right: -10px;
+  top: 13px;
+}
+
+/* #wpua-remove-button-existing {
+  display: none;
+}
+#wpua-undo-button-existing {
+  display: none;
+} */
+
+p#wpua-thumbnail-existing {
+  display: none !important;
+}
+  
+div#wpua-images-existing {
+  display: flex;
+  align-items: center;
+}
+
+#wpua-remove-existing, #wpua-undo-existing {
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: .20s all;
+}
+
+#wpua-remove-existing:hover, #wpua-undo-existing:hover {
+  opacity: 0.9;
+}
+
+.multi-tab-section > div:last-child {
+  display: none;
+}
+.multi-tab-section > ul + .container-tab {
+  display: block;
+}
+
+.multi-tab-section > ul + .container-tab ~ .container-tab {
+  display: none;
+}
+
+.page-all-spk .fs-img-wrapper,
+#speakers-section .fs-img-wrapper {
+  margin-bottom: 0;
+  position: relative;
+  padding-top: 102%;
+}
+
+.page-all-spk .fs-img-wrapper img,
+#speakers-section .fs-img-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.pm-watch-now-button {
+  position: absolute;
+  right: 340px;
+  top: 40px;
+}
+.pm-watch-now-button .menu li {
+  list-style: none;
+  max-width: 200px;
+  text-align: center;
+  border: 2px solid #48c397;
+  border-radius: 40px;
+  background: #ffffff;
+  padding: 5px 16px;
+}
+.pm-watch-now-button .menu li a {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 0.7;
+  color: #1a1d48;
+  text-decoration: none;
+}
+.pm-watch-now-button .menu li a span {
+  display: block;
+  font-size: 14px;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+/* New CSS Starts */
+body .da_Schedule_footer .session-add-btn {
+  position: relative;
+}
+.show_loader {
+  top: 11px !important;
+  left: 87px !important;
+  color: #1ea0e0 !important;
+  width: 18px;
+}
+
+.page-id-30903 section#section-20-225,
+.page-id-30903 #my_profile_page h1,
+.page-id-30903 #section-banner,
+.page-id-30903 header,
+.page-id-30850 section#section-20-225,
+.page-id-30850 #my_profile_page h1,
+.page-id-30850 #section-banner,
+.page-id-30850 header {
+  display: none !important;
+}
+
+.page-id-30903 #my_profile_page .ct-inner-content,
+.page-id-30850 #my_profile_page .ct-inner-content {
+  padding: 0 0 0 25px;
+}
+
+.page-id-30903 #my_profile_page .ct-section-inner-wrap,
+.page-id-30850 #my_profile_page .ct-section-inner-wrap {
+  max-width: 100%;
+  padding-top: 0 !important;
+}
+
+.page-id-30903 #my_profile_page .ct-section-inner-wrap > .ct-div-block,
+.page-id-30850 #my_profile_page .ct-section-inner-wrap > .ct-div-block {
+  padding-top: 0 !important;
+}
+
+.page-id-30903 #my_profile_page .ct-section-inner-wrap .ct-section-inner-wrap,
+.page-id-30850 #my_profile_page .ct-section-inner-wrap .ct-section-inner-wrap {
+  padding: 0;
+}
+
+.page-id-30903 #my_profile_page .ct-section-inner-wrap .ct-section,
+.page-id-30850 #my_profile_page .ct-section-inner-wrap .ct-section {
+  margin-top: 15px;
+}
+
+.page-id-30903 #my_profile_page .ct-section-inner-wrap .oxy-posts,
+.page-id-30850 #my_profile_page .ct-section-inner-wrap .oxy-posts {
+  margin: 0;
+}
+
+.page-id-30903 #my_profile_page .ct-section-inner-wrap .col-lg-3,
+.page-id-30850 #my_profile_page .ct-section-inner-wrap .col-lg-3 {
+  margin-bottom: 10px;
+  padding: 0 5px;
+  flex: 0 0 14%;
+  max-width: 14%;
+}
+
+.page-id-30903 #my_profile_page .ct-section-inner-wrap .pxy-section-inner,
+.page-id-30850 #my_profile_page .ct-section-inner-wrap .pxy-section-inner {
+  margin: 0;
+  border: 2px solid #f9f9f9;
+  padding: 0;
+}
+
+.page-id-30903 #my_profile_page .ct-section-inner-wrap .oxy-post-image img,
+.page-id-30903 #my_profile_page .ct-section-inner-wrap .oxy-post-image,
+.page-id-30850 #my_profile_page .ct-section-inner-wrap .oxy-post-image img,
+.page-id-30850 #my_profile_page .ct-section-inner-wrap .oxy-post-image {
+  margin: 0;
+}
+
+.page-id-30903 #my_profile_page .ct-section-inner-wrap .oxy-post-image img,
+.page-id-30850 #my_profile_page .ct-section-inner-wrap .oxy-post-image img {
+  max-width: 130px;
+  width: 100%;
+}
+
+.watch_now_btn_ondemand,
+body .da_Schedule_footer .session-add-btn {
+  margin-top: 20px !important;
+}
+
+button.btn_my_schedule[disabled='disabled'] {
+  cursor: not-allowed;
+}
+
+.chatbox-main ul.table-list li span {
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-description[data-name='description'],
+.acf-field[data-name='description'] .add_media {
+  display: none;
+}
+.acf-field[data-name='description'] {
+  display: block;
+}
+.acf-field[data-name='description'] td.acf-label {
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+}
+.acf-field[data-name='description'] td.acf-label,
+.acf-field[data-name='description'] td.acf-input {
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.sec-sub-heading img {
+  max-width: 100%;
+  height: auto;
+}
+
+.upload_handout .acf-field-61c61b0e0b29e .ui-sortable .acf-field-text {
+  vertical-align: middle;
+}
+
+.upload_handout .acf-field-61c61b7b0b2a1 {
+  display: none !important;
+}
+
+/* swal css */
+.swal2-confirm {
+  background-color: var(--primary);
+}
+
+/* watch now */
+a.select_track.header-watch-now-button:hover {
+  color: var(--watch-live-color);
+}
+
+a.select_track.header-watch-now-button {
+  text-align: center;
+}
+
+a.header-watch-now-button.sub-track span {
+  display: inline-block;
+}
+
+/* New CSS Ends */
+
+@media (max-width: 1100px) {
+  .pm-watch-now-button {
+    right: 40px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .page-id-30903 #my_profile_page .ct-inner-content,
+  .page-id-30850 #my_profile_page .ct-inner-content {
+    padding: 0 0 0 20px;
+  }
+
+  .page-id-30903 #my_profile_page .ct-section-inner-wrap .col-lg-3,
+  .page-id-30850 #my_profile_page .ct-section-inner-wrap .col-lg-3 {
+    flex: 0 0 16%;
+    max-width: 16%;
+  }
+
+  .page-id-30903 #my_profile_page .ct-section-inner-wrap .pxy-section-inner,
+  .page-id-30850 #my_profile_page .ct-section-inner-wrap .pxy-section-inner {
+    height: 100px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .page-id-30903 #my_profile_page .ct-inner-content h2,
+  .page-id-30850 #my_profile_page .ct-inner-content h2 {
+    font-size: 24px;
+  }
+
+  .page-id-30903 #my_profile_page .ct-section-inner-wrap .pxy-section-inner {
+    height: 100px;
+  }
+  .page-id-30850 #my_profile_page .ct-section-inner-wrap .pxy-section-inner {
+    height: 80px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .page-id-30903 #my_profile_page .ct-inner-content,
+  .page-id-30850 #my_profile_page .ct-inner-content {
+    padding: 0 0 0 10px;
+  }
+
+  .page-id-30903 #my_profile_page .ct-inner-content h2,
+  .page-id-30850 #my_profile_page .ct-inner-content h2 {
+    font-size: 18px;
+  }
+
+  .page-id-30903 #my_profile_page .ct-section-inner-wrap .pxy-section-inner {
+    height: 70px;
+  }
+  .page-id-30850 #my_profile_page .ct-section-inner-wrap .pxy-section-inner {
+    height: 35px;
+  }
+
+  .page-id-30903 #my_profile_page .ct-section-inner-wrap .col-lg-3,
+  .page-id-30850 #my_profile_page .ct-section-inner-wrap .col-lg-3 {
+    flex: 0 0 33%;
+    max-width: 33%;
+  }
+
+  .page-id-30903 #my_profile_page .ct-section-inner-wrap .oxy-post-image img,
+  .page-id-30850 #my_profile_page .ct-section-inner-wrap .oxy-post-image img {
+    max-height: 100%;
+    width: unset;
+    max-width: 80%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .page-id-30903 #my_profile_page .ct-inner-content h2,
+  .page-id-30850 #my_profile_page .ct-inner-content h2 {
+    font-size: 12px;
+    margin-left: -15px;
+  }
+
+  .page-id-30903 #my_profile_page .ct-section-inner-wrap .col-lg-3,
+  .page-id-30850 #my_profile_page .ct-section-inner-wrap .col-lg-3 {
+    flex: 0 0 33%;
+    max-width: 33%;
+  }
+}
+
+@media (max-width: 768px) {
+  .oxy-tab-content .custom_session_search {
+    padding: 0;
+  }
+  .custom_session_search input.search_sessions {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .pm-watch-now-button {
+    top: 25px;
+    right: 0;
+  }
+  .pm-watch-now-button .menu li a {
+    font-size: 10px;
+  }
+  .pm-watch-now-button .menu li a span {
+    font-size: 12px;
+  }
+}
+
+/* -- registration pricing table -- */
+/* #pricing-info-wrapper {
+  font-family: Arial, sans-serif;
+  margin: 10px;
+} */
+
+#pricing-info-wrapper h2 {
+  color: #333;
+  font-size: 1.5em;
+}
+
+#pricing-info-wrapper p {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+#pricing-info-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+
+#pricing-info-wrapper .transcript-for-prices {
+  display: block;
+  margin-bottom: 25px;
+}
+
+#pricing-info-wrapper .pricing-discounts-info {
+  margin-bottom: 50px;
+}
+
+#pricing-info-wrapper th, #pricing-info-wrapper td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+#pricing-info-wrapper th {
+  background-color: #f4f4f4;
+  color: #000;
+}
+
+/* #pricing-info-wrapper tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+} */
+
+/* #pricing-info-wrapper tbody tr:hover {
+  background-color: #e0e0e0;
+} */
+
+#pricing-info-wrapper th:focus, #pricing-info-wrapper td:focus {
+  outline: 2px solid #000;
+}
+
+/** TSP Pricing table **/
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: 1rem;
+  text-align: left;
+  color: #000000;
+}
+
+.pricing-table caption {
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 0.5em;
+}
+
+.pricing-table th,
+.pricing-table td {
+  border: 1px solid #ddd;
+  padding: 0.75em;
+}
+
+.pricing-table th {
+  background-color: #f4f4f4;
+}
+
+.pricing-table th[scope="col"] {
+  text-align: center;
+}
+
+.pricing-table th[scope="row"] {
+  font-weight: bold;
+}
+
+/* .pricing-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+} */
+
+/* .pricing-table tbody tr:hover {
+  background-color: #e9e9e9;
+} */
+
+#pricing-table-description{
+	    color: #000;
+}
+
+/** wawability pricing table **/
+.pricing-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  margin: 1em 0;
+  font-family: Arial, sans-serif;
+}
+.pricing-table caption {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: #000;
+}
+.pricing-table th,
+.pricing-table td {
+  border: 1px solid #222;
+  padding: 8px 16px;
+  text-align: left;
+}
+.pricing-table th[scope="col"] {
+  background: #f9f9f9;
+}
+
+/*-- poster video style --*/
+
+.video-embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+.video-embed-container iframe, .video-embed-container object, .video-embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }

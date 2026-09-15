@@ -1,0 +1,1251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sign in - ECCB 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="../themes/eccb/assets/images/favicon.svg" />
+
+    <meta property="og:url" content="login.html" />
+    <meta property="og:title" content="Sign in" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="" />
+
+    <link rel="stylesheet" href="../themes/eccb/assets/build/assets/css-vBygDTCJ.css" />
+    <style>
+      [x-cloak] {
+        display: none !important;
+      }
+    </style>
+    <link rel="stylesheet" href="../assets/archive.css" />
+    <script src="../assets/archive.js" defer></script>
+  </head>
+  <body class="has-layout layout-default page-account-login">
+    <div class="relative">
+      <header
+        id="header"
+        class="fixed inset-x-0 z-30 p-4 lg:p-8 eccb-bar-header"
+        x-cloak
+        x-data="{
+        open: false,
+        scrolled: false,
+        scrollTop: false,
+        scrollHide: true,
+        prevScroll: 0,
+        checkScroll() {
+            if (window.scrollY > 100) {
+                this.scrolled = true;
+            } else {
+                this.scrolled = false;
+            }
+            if (window.scrollY > 0) {
+                this.scrollTop = false;
+            } else {
+                this.scrollTop = true;
+            }
+            const currentScrollPos = window.scrollY;
+            if (this.prevScroll > currentScrollPos && this.scrolled) {
+                this.scrollHide = false;
+            } else {
+                this.scrollHide = true;
+            }
+
+            this.prevScroll = currentScrollPos;
+        }
+    }"
+        x-init="
+        prevScroll = window.scrollY;
+        checkScroll();
+    "
+        x-on:scroll.window="checkScroll()">
+        <nav
+          class="flex items-center gap-4 p-2 rounded-full xl:px-4 xl:text-base bg-white/90 shadow-custom_black/5 text-custom_black"
+          x-show="!scrollHide || scrollTop"
+          x-transition:enter="transition ease-out duration-300"
+          x-transition:enter-start="transform -translate-y-full"
+          x-transition:enter-end="transform translate-y-0"
+          x-transition:leave="transition ease-in duration-300"
+          x-transition:leave-start="transform translate-y-0"
+          x-transition:leave-end="transform -translate-y-full">
+          <div class="ml-4 logo-container">
+            <a href="../index.html" class="flex items-center space-x-2 xl:space-x-4 hover:opacity-80">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.1 107.6" height="24" width="53.6">
+                <path
+                  d="M238.9 0c-15.5 0-28.399 5.2-38.699 15.5-1.3 1.3-2.501 2.6-3.601 4 0 0-.1.2-.3.4-3.4 4.4-39.499 51-42.099 54.3-3.5 4.4-8.901 8.9-12.701 11.3-5.6 3.6-8.699 5.4-19.299 5.4s-19.3-3.5-26-10.7C89.501 73.1 86.1 64.3 86.1 53.8c0-3.1.3-6.1.9-8.9L69.5 66.6c2.2 9.7 6.8 18.1 14 25.4 10.2 10.3 23.101 15.5 38.701 15.5 10.5 0 19.9-2.4 28.2-7.4 6.3-3.7 11.6-8.5 15.8-14.3l-.101-.3 19.2-24 25.2-31.6c.2-.3.501-.5.701-.8.6-.6 1.1-1.3 1.7-1.9 6.7-7.1 15.4-10.7 26-10.7H240V0ZM122.201.1C106.701.1 93.8 5.3 83.5 15.6c-1.9 2-5.2 6-5.2 6S38 70.8 35.3 74.3c-3.5 4.3-8.9 8.9-12.7 11.3-3.1 2-6.399 3.5-9.899 4.5-3.5.7-7.1 1.1-10.9 1.1H0v16.3h3.201c10.5 0 19.9-2.4 28.2-7.4 6.3-3.7 11.6-8.5 15.8-14.3L68.5 60.6v-.2l26.1-31.3c.5-.6 1.001-1.3 1.601-1.9 6.7-7.1 15.4-10.7 26-10.7 7.3 0 13.699 1.8 19.299 5.4 5.6 3.6 9.9 8.4 12.9 14.5l15.5-8.7c-4.7-8.5-11.2-15.2-19.5-20.2-8.3-4.9-12.699-7.4-28.199-7.4ZM0 .3V16h1.1c8 0 14.9 2.4 20.8 7.3S31.401 34.7 32.701 43v14.8l11.399-.3 6.7-8.4c-.5-14.5-5.2-26.2-14-34.9C27.4 4.9 15.7.3 1.8.3Zm203.701 45.2L186.6 67.7c2.2 9.2 6.7 17.4 13.7 24.4 10.2 10.3 23.1 15.5 38.7 15.5h1.1V91H239c-10.6 0-19.3-3.5-26-10.7-6.7-7.1-10.1-15.9-10.1-26.4 0-3 .301-5.7.801-8.4z"
+                  fill="currentColor" />
+              </svg>
+              <span class="font-semibold font-display whitespace-nowrap">eccb 2026</span>
+            </a>
+          </div>
+
+          <div class="flex items-center gap-4 ml-auto lg:gap-8">
+            <div class="hidden lg:block">
+              <ul
+                id="main-menu"
+                class="flex items-stretch font-semibold text-center font-display menu"
+                x-data="{ current: null }">
+                <li class="relative menu-item level-0">
+                  <div class="flex flex-col items-stretch justify-center h-full">
+                    <a
+                      href="https://genevalovesdata.org/"
+                      class="block text-custom_black/80 hover:text-custom_black leading-tight px-2 xl:px-4 2xl:px-8 py-2 menu-link"
+                      target="_blank">
+                      #GenevaLovesData
+                    </a>
+                  </div>
+                </li>
+                <li
+                  class="relative menu-item level-0 parent"
+                  x-data="{
+                    id: '4',
+                    submenu: false,
+                    timeout: null
+                }"
+                  x-on:submenu-open.window="
+                    if (id != $event.detail.id) {
+                        submenu = false
+                    }
+                "
+                  x-on:mouseenter="
+                    clearTimeout(timeout)
+                    submenu = true
+                    if (id != current) {
+                        $dispatch('submenu-open', { id: id })
+                        current = id
+                    }
+                "
+                  x-on:mouseleave="
+                    timeout = setTimeout(() => submenu = false, 400)">
+                  <div class="flex flex-col items-stretch justify-center h-full">
+                    <a
+                      href="../oral-presentations.html"
+                      class="block text-custom_black/80 hover:text-custom_black leading-tight px-2 xl:px-4 2xl:px-8 py-2 menu-link">
+                      Presenter guidelines
+                    </a>
+                  </div>
+
+                  <div
+                    x-cloak
+                    x-show="submenu"
+                    x-transition.origin.top
+                    class="dropdown-container absolute pt-5 min-w-[325px]">
+                    <ul class="py-1 text-left rounded-lg bg-white/90 shadow-md">
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../oral-presentations.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Oral presentation
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../poster-presentations.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Poster presentations
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../session-chairs.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Session chairs
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li
+                  class="relative menu-item level-0 parent"
+                  x-data="{
+                    id: '5',
+                    submenu: false,
+                    timeout: null
+                }"
+                  x-on:submenu-open.window="
+                    if (id != $event.detail.id) {
+                        submenu = false
+                    }
+                "
+                  x-on:mouseenter="
+                    clearTimeout(timeout)
+                    submenu = true
+                    if (id != current) {
+                        $dispatch('submenu-open', { id: id })
+                        current = id
+                    }
+                "
+                  x-on:mouseleave="
+                    timeout = setTimeout(() => submenu = false, 400)">
+                  <div class="flex flex-col items-stretch justify-center h-full">
+                    <a
+                      href="../programme.html"
+                      class="block text-custom_black/80 hover:text-custom_black leading-tight px-2 xl:px-4 2xl:px-8 py-2 menu-link">
+                      Programme
+                    </a>
+                  </div>
+
+                  <div
+                    x-cloak
+                    x-show="submenu"
+                    x-transition.origin.top
+                    class="dropdown-container absolute pt-5 min-w-[325px]">
+                    <ul class="py-1 text-left rounded-lg bg-white/90 shadow-md">
+                      <li
+                        class="relative menu-item level-1 parent"
+                        x-data="{ l2open: false, l2timeout: null }"
+                        x-on:mouseenter="clearTimeout(l2timeout); l2open = true"
+                        x-on:mouseleave="l2timeout = setTimeout(() => l2open = false, 400)">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <button
+                            type="button"
+                            class="flex items-center justify-between gap-2 w-full text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            <span>Schedule</span>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="w-3.5 h-3.5 shrink-0 opacity-50"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              aria-hidden="true">
+                              <path d="m9 18 6-6-6-6" />
+                            </svg>
+                          </button>
+                        </div>
+
+                        <div
+                          x-cloak
+                          x-show="l2open"
+                          x-transition.origin.top.left
+                          x-on:mouseenter="clearTimeout(l2timeout)"
+                          x-on:mouseleave="l2timeout = setTimeout(() => l2open = false, 400)"
+                          class="dropdown-container level-2-floating absolute left-full top-0 pl-2 min-w-[220px]">
+                          <ul class="py-1 text-left rounded-lg bg-white/90 shadow-md">
+                            <li class="relative menu-item level-2">
+                              <div class="flex flex-col items-stretch justify-center h-full">
+                                <a
+                                  href="../schedule/interactive-schedule.html"
+                                  class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-1.5 text-sm menu-link">
+                                  Schedule at a glance
+                                </a>
+                              </div>
+                            </li>
+                            <li class="relative menu-item level-2">
+                              <div class="flex flex-col items-stretch justify-center h-full">
+                                <a
+                                  href="../schedule/parallel-sessions.html"
+                                  class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-1.5 text-sm menu-link">
+                                  Parallel sessions
+                                </a>
+                              </div>
+                            </li>
+                            <li class="relative menu-item level-2">
+                              <div class="flex flex-col items-stretch justify-center h-full">
+                                <a
+                                  href="../schedule/poster-sessions.html"
+                                  class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-1.5 text-sm menu-link">
+                                  Poster sessions
+                                </a>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../programme.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Overview
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../keynote-speakers.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Keynote speakers
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../programme.html#opening-ceremony"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Opening ceremony (incl. performance)
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../scientific-areas.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Scientific areas
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../focus-sessions.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Focus sessions
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../industry-and-innovation.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Industry, innovation &amp; career
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../elixir-programme.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Elixir
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../tutorials-workshops.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Tutorials &amp; workshops
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../social-programme.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Social programme
+                          </a>
+                        </div>
+                      </li>
+                      <li
+                        class="relative menu-item level-1 parent"
+                        x-data="{ l2open: false, l2timeout: null }"
+                        x-on:mouseenter="clearTimeout(l2timeout); l2open = true"
+                        x-on:mouseleave="l2timeout = setTimeout(() => l2open = false, 400)">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <button
+                            type="button"
+                            class="flex items-center justify-between gap-2 w-full text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            <span>Satellite events</span>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="w-3.5 h-3.5 shrink-0 opacity-50"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              aria-hidden="true">
+                              <path d="m9 18 6-6-6-6" />
+                            </svg>
+                          </button>
+                        </div>
+
+                        <div
+                          x-cloak
+                          x-show="l2open"
+                          x-transition.origin.top.left
+                          x-on:mouseenter="clearTimeout(l2timeout)"
+                          x-on:mouseleave="l2timeout = setTimeout(() => l2open = false, 400)"
+                          class="dropdown-container level-2-floating absolute left-full top-0 pl-2 min-w-[220px]">
+                          <ul class="py-1 text-left rounded-lg bg-white/90 shadow-md">
+                            <li class="relative menu-item level-2 parent">
+                              <div class="flex flex-col items-stretch justify-center h-full">
+                                <a
+                                  href="https://genevalovesdata.org/forum-public"
+                                  class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-1.5 text-sm menu-link">
+                                  Public forum (in French)
+                                </a>
+                              </div>
+
+                              <div class="dropdown-container level-3">
+                                <ul class="py-1 text-left"></ul>
+                              </div>
+                            </li>
+                            <li class="relative menu-item level-2">
+                              <div class="flex flex-col items-stretch justify-center h-full">
+                                <a
+                                  href="../communities-day.html"
+                                  class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-1.5 text-sm menu-link">
+                                  Communities Day
+                                </a>
+                              </div>
+                            </li>
+                            <li class="relative menu-item level-2">
+                              <div class="flex flex-col items-stretch justify-center h-full">
+                                <a
+                                  href="../iscb-student-council.html"
+                                  class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-1.5 text-sm menu-link">
+                                  ISCB Student Council
+                                </a>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li
+                  class="relative menu-item level-0 parent"
+                  x-data="{
+                    id: '7',
+                    submenu: false,
+                    timeout: null
+                }"
+                  x-on:submenu-open.window="
+                    if (id != $event.detail.id) {
+                        submenu = false
+                    }
+                "
+                  x-on:mouseenter="
+                    clearTimeout(timeout)
+                    submenu = true
+                    if (id != current) {
+                        $dispatch('submenu-open', { id: id })
+                        current = id
+                    }
+                "
+                  x-on:mouseleave="
+                    timeout = setTimeout(() => submenu = false, 400)">
+                  <div class="flex flex-col items-stretch justify-center h-full">
+                    <a
+                      href="../become-partner.html"
+                      class="block text-custom_black/80 hover:text-custom_black leading-tight px-2 xl:px-4 2xl:px-8 py-2 menu-link">
+                      Partnering &amp; exhibiting
+                    </a>
+                  </div>
+
+                  <div
+                    x-cloak
+                    x-show="submenu"
+                    x-transition.origin.top
+                    class="dropdown-container absolute pt-5 min-w-[325px]">
+                    <ul class="py-1 text-left rounded-lg bg-white/90 shadow-md">
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../become-partner.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Become a partner or exhibitor
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../our-sponsors.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Our partners
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../exhibitor-information.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Exhibitor information
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li
+                  class="relative menu-item level-0 parent"
+                  x-data="{
+                    id: '8',
+                    submenu: false,
+                    timeout: null
+                }"
+                  x-on:submenu-open.window="
+                    if (id != $event.detail.id) {
+                        submenu = false
+                    }
+                "
+                  x-on:mouseenter="
+                    clearTimeout(timeout)
+                    submenu = true
+                    if (id != current) {
+                        $dispatch('submenu-open', { id: id })
+                        current = id
+                    }
+                "
+                  x-on:mouseleave="
+                    timeout = setTimeout(() => submenu = false, 400)">
+                  <div class="flex flex-col items-stretch justify-center h-full">
+                    <a
+                      href="../registration-information.html"
+                      class="block text-custom_black/80 hover:text-custom_black leading-tight px-2 xl:px-4 2xl:px-8 py-2 menu-link">
+                      Registration
+                    </a>
+                  </div>
+
+                  <div
+                    x-cloak
+                    x-show="submenu"
+                    x-transition.origin.top
+                    class="dropdown-container absolute pt-5 min-w-[325px]">
+                    <ul class="py-1 text-left rounded-lg bg-white/90 shadow-md">
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../registration-information.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Registration info
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../certificate-attendance.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Certificate of attendance
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../registration-information.html#registration-eccb-tutorials-and-workshops"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Registration to ECCB Tutorials &amp; Workshops
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../volunteers.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Volunteering
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../fellowships.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Fellowships
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../childcare-support.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Childcare support
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../visa-letter-request.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            VISA letter request
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li
+                  class="relative menu-item level-0 parent"
+                  x-data="{
+                    id: '9',
+                    submenu: false,
+                    timeout: null
+                }"
+                  x-on:submenu-open.window="
+                    if (id != $event.detail.id) {
+                        submenu = false
+                    }
+                "
+                  x-on:mouseenter="
+                    clearTimeout(timeout)
+                    submenu = true
+                    if (id != current) {
+                        $dispatch('submenu-open', { id: id })
+                        current = id
+                    }
+                "
+                  x-on:mouseleave="
+                    timeout = setTimeout(() => submenu = false, 400)">
+                  <div class="flex flex-col items-stretch justify-center h-full">
+                    <a
+                      href="../about-eccb.html"
+                      class="block text-custom_black/80 hover:text-custom_black leading-tight px-2 xl:px-4 2xl:px-8 py-2 menu-link">
+                      About
+                    </a>
+                  </div>
+
+                  <div
+                    x-cloak
+                    x-show="submenu"
+                    x-transition.origin.top
+                    class="dropdown-container absolute pt-5 min-w-[325px]">
+                    <ul class="py-1 text-left rounded-lg bg-white/90 shadow-md">
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../about-eccb.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            About ECCB
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../practical-information.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Practical information
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../committees.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Committees
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../news.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            News
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../code-conduct.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Code of conduct
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../inclusion-accessibility.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Inclusion &amp; accessibility
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../sustainability-and-environmental-impact.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Sustainability and environmental impact
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../faq.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            FAQ
+                          </a>
+                        </div>
+                      </li>
+                      <li class="relative menu-item level-1">
+                        <div class="flex flex-col items-stretch justify-center h-full">
+                          <a
+                            href="../contact.html"
+                            class="block text-custom_black/80 hover:text-custom_black leading-tight px-4 py-2 menu-link">
+                            Contact
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <button type="button" class="mr-4 lg:hidden" x-on:click="open = !open">
+              <span class="sr-only">Toggle main menu</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+
+            <div class="hidden w-8 lg:block"></div>
+          </div>
+        </nav>
+        <template x-teleport="body">
+          <div x-cloak x-show="open" x-trap.noscroll="open" class="fixed z-40 xl:hidden">
+            <div
+              class="fixed inset-0 bg-white/60 backdrop-blur"
+              x-show="open"
+              x-transition.opacity
+              x-on:click="open = false"></div>
+            <div
+              class="fixed inset-y-0 z-40 right-0 w-[80vw] max-w-[400px] bg-white text-custom_black shadow-lg"
+              x-show="open"
+              x-transition:enter="transition ease-out duration-300"
+              x-transition:enter-start="transform translate-x-full"
+              x-transition:enter-end="transform translate-x-0"
+              x-transition:leave="transition ease-in duration-300"
+              x-transition:leave-start="transform translate-x-0"
+              x-transition:leave-end="transform translate-x-full">
+              <div class="flex flex-col h-full">
+                <button x-on:click="open = false" class="flex items-center justify-end p-4 shadow">
+                  <div class="flex items-center flex-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.1 107.6" height="30" width="67">
+                      <path
+                        d="M238.9 0c-15.5 0-28.399 5.2-38.699 15.5-1.3 1.3-2.501 2.6-3.601 4 0 0-.1.2-.3.4-3.4 4.4-39.499 51-42.099 54.3-3.5 4.4-8.901 8.9-12.701 11.3-5.6 3.6-8.699 5.4-19.299 5.4s-19.3-3.5-26-10.7C89.501 73.1 86.1 64.3 86.1 53.8c0-3.1.3-6.1.9-8.9L69.5 66.6c2.2 9.7 6.8 18.1 14 25.4 10.2 10.3 23.101 15.5 38.701 15.5 10.5 0 19.9-2.4 28.2-7.4 6.3-3.7 11.6-8.5 15.8-14.3l-.101-.3 19.2-24 25.2-31.6c.2-.3.501-.5.701-.8.6-.6 1.1-1.3 1.7-1.9 6.7-7.1 15.4-10.7 26-10.7H240V0ZM122.201.1C106.701.1 93.8 5.3 83.5 15.6c-1.9 2-5.2 6-5.2 6S38 70.8 35.3 74.3c-3.5 4.3-8.9 8.9-12.7 11.3-3.1 2-6.399 3.5-9.899 4.5-3.5.7-7.1 1.1-10.9 1.1H0v16.3h3.201c10.5 0 19.9-2.4 28.2-7.4 6.3-3.7 11.6-8.5 15.8-14.3L68.5 60.6v-.2l26.1-31.3c.5-.6 1.001-1.3 1.601-1.9 6.7-7.1 15.4-10.7 26-10.7 7.3 0 13.699 1.8 19.299 5.4 5.6 3.6 9.9 8.4 12.9 14.5l15.5-8.7c-4.7-8.5-11.2-15.2-19.5-20.2-8.3-4.9-12.699-7.4-28.199-7.4ZM0 .3V16h1.1c8 0 14.9 2.4 20.8 7.3S31.401 34.7 32.701 43v14.8l11.399-.3 6.7-8.4c-.5-14.5-5.2-26.2-14-34.9C27.4 4.9 15.7.3 1.8.3Zm203.701 45.2L186.6 67.7c2.2 9.2 6.7 17.4 13.7 24.4 10.2 10.3 23.1 15.5 38.7 15.5h1.1V91H239c-10.6 0-19.3-3.5-26-10.7-6.7-7.1-10.1-15.9-10.1-26.4 0-3 .301-5.7.801-8.4z"
+                        fill="currentColor" />
+                    </svg>
+                    <span class="font-semibold font-display whitespace-nowrap">eccb 2026</span>
+                  </div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>
+                </button>
+                <div class="flex-1 p-4 overflow-auto">
+                  <ul id="menu-mobile">
+                    <li class="menu-item level-0">
+                      <a href="https://genevalovesdata.org/" class="menu-link" target="_blank"> #GenevaLovesData </a>
+                    </li>
+                    <li class="menu-item level-0 parent">
+                      <a href="../oral-presentations.html" class="menu-link"> Presenter guidelines </a>
+                      <ul class="dropdown-container">
+                        <li class="menu-item level-1">
+                          <a href="../oral-presentations.html" class="menu-link"> Oral presentation </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../poster-presentations.html" class="menu-link"> Poster presentations </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../session-chairs.html" class="menu-link"> Session chairs </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-item level-0 parent">
+                      <a href="../programme.html" class="menu-link"> Programme </a>
+                      <ul class="dropdown-container">
+                        <li class="menu-item level-1 parent" x-data="{ open: false }">
+                          <button
+                            type="button"
+                            class="menu-link flex items-center justify-between w-full"
+                            x-on:click="open = !open">
+                            <span>Schedule</span>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="w-4 h-4 shrink-0 opacity-60 transition-transform duration-200"
+                              :class="open ? 'rotate-180' : ''"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              aria-hidden="true">
+                              <path d="m6 9 6 6 6-6" />
+                            </svg>
+                          </button>
+                          <ul class="dropdown-container" x-show="open" x-collapse>
+                            <li class="menu-item level-2">
+                              <a href="../schedule/interactive-schedule.html" class="menu-link">
+                                Schedule at a glance
+                              </a>
+                            </li>
+                            <li class="menu-item level-2">
+                              <a href="../schedule/parallel-sessions.html" class="menu-link"> Parallel sessions </a>
+                            </li>
+                            <li class="menu-item level-2">
+                              <a href="../schedule/poster-sessions.html" class="menu-link"> Poster sessions </a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../programme.html" class="menu-link"> Overview </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../keynote-speakers.html" class="menu-link"> Keynote speakers </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../programme.html#opening-ceremony" class="menu-link">
+                            Opening ceremony (incl. performance)
+                          </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../scientific-areas.html" class="menu-link"> Scientific areas </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../focus-sessions.html" class="menu-link"> Focus sessions </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../industry-and-innovation.html" class="menu-link">
+                            Industry, innovation &amp; career
+                          </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../elixir-programme.html" class="menu-link"> Elixir </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../tutorials-workshops.html" class="menu-link"> Tutorials &amp; workshops </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../social-programme.html" class="menu-link"> Social programme </a>
+                        </li>
+                        <li class="menu-item level-1 parent" x-data="{ open: false }">
+                          <button
+                            type="button"
+                            class="menu-link flex items-center justify-between w-full"
+                            x-on:click="open = !open">
+                            <span>Satellite events</span>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="w-4 h-4 shrink-0 opacity-60 transition-transform duration-200"
+                              :class="open ? 'rotate-180' : ''"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              aria-hidden="true">
+                              <path d="m6 9 6 6 6-6" />
+                            </svg>
+                          </button>
+                          <ul class="dropdown-container" x-show="open" x-collapse>
+                            <li class="menu-item level-2 parent">
+                              <a href="https://genevalovesdata.org/forum-public" class="menu-link">
+                                Public forum (in French)
+                              </a>
+                              <ul class="dropdown-container"></ul>
+                            </li>
+                            <li class="menu-item level-2">
+                              <a href="../communities-day.html" class="menu-link"> Communities Day </a>
+                            </li>
+                            <li class="menu-item level-2">
+                              <a href="../iscb-student-council.html" class="menu-link"> ISCB Student Council </a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-item level-0 parent">
+                      <a href="../become-partner.html" class="menu-link"> Partnering &amp; exhibiting </a>
+                      <ul class="dropdown-container">
+                        <li class="menu-item level-1">
+                          <a href="../become-partner.html" class="menu-link"> Become a partner or exhibitor </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../our-sponsors.html" class="menu-link"> Our partners </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../exhibitor-information.html" class="menu-link"> Exhibitor information </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-item level-0 parent">
+                      <a href="../registration-information.html" class="menu-link"> Registration </a>
+                      <ul class="dropdown-container">
+                        <li class="menu-item level-1">
+                          <a href="../registration-information.html" class="menu-link"> Registration info </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../certificate-attendance.html" class="menu-link"> Certificate of attendance </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a
+                            href="../registration-information.html#registration-eccb-tutorials-and-workshops"
+                            class="menu-link">
+                            Registration to ECCB Tutorials &amp; Workshops
+                          </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../volunteers.html" class="menu-link"> Volunteering </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../fellowships.html" class="menu-link"> Fellowships </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../childcare-support.html" class="menu-link"> Childcare support </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../visa-letter-request.html" class="menu-link"> VISA letter request </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-item level-0 parent">
+                      <a href="../about-eccb.html" class="menu-link"> About </a>
+                      <ul class="dropdown-container">
+                        <li class="menu-item level-1">
+                          <a href="../about-eccb.html" class="menu-link"> About ECCB </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../practical-information.html" class="menu-link"> Practical information </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../committees.html" class="menu-link"> Committees </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../news.html" class="menu-link"> News </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../code-conduct.html" class="menu-link"> Code of conduct </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../inclusion-accessibility.html" class="menu-link">
+                            Inclusion &amp; accessibility
+                          </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../sustainability-and-environmental-impact.html" class="menu-link">
+                            Sustainability and environmental impact
+                          </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../faq.html" class="menu-link"> FAQ </a>
+                        </li>
+                        <li class="menu-item level-1">
+                          <a href="../contact.html" class="menu-link"> Contact </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </template>
+      </header>
+      <main class="">
+        <div class="page-sections page-default">
+          <section class="section-container default-page-section has-bg-color bg-custom_gray is-light">
+            <div class="container content-area flex flex-col text-base lg:text-lg items-center text-center">
+              <div class="section-title page-section-title">
+                <h1 id="mainPageTitle">Sign in</h1>
+              </div>
+              <div class="w-full p-4 mx-auto space-y-4 bg-white lg:p-12 lg:max-w-xl rounded-large">
+                <div class="prose lg:prose-lg"></div>
+                <div class="login-container" x-data="{ recover: false }">
+                  <section x-show="!recover">
+                    <form
+                      method="POST"
+                      action="https://eccb2026.org/account/login"
+                      accept-charset="UTF-8"
+                      data-request="onSignin">
+                      <input name="_session_key" type="hidden" value="7BQgiK4Rg0J3nToUXBSx2ePBZ7xKApbIag77GP5v" /><input
+                        name="_token"
+                        type="hidden"
+                        value="jHZHSJBXAwDyt7jxHIVRFeSjW1v9pCPlVSwVKHCY" />
+
+                      <input type="hidden" name="redirect" value="account/account_edit" />
+                      <div class="form-group">
+                        <label for="email"> Email </label>
+
+                        <input
+                          type="text"
+                          name="email"
+                          id="email"
+                          class="form-control white borderless"
+                          value=""
+                          placeholder="Your email adress" />
+
+                        <span data-validate-for="email"></span>
+                      </div>
+                      <div class="form-group">
+                        <label for="password"> Password </label>
+
+                        <input
+                          type="password"
+                          name="password"
+                          id="password"
+                          class="form-control white borderless"
+                          value=""
+                          placeholder="Your password" />
+
+                        <span data-validate-for="password"></span>
+                      </div>
+                      <div class="flex flex-wrap justify-between space-x-4 text-sm lg:space-x-8 lg:text-base">
+                        <a href="javascript:;" class="small" @click.prevent="recover = true"> Forgot your password? </a>
+                      </div>
+                      <div class="my-4">
+                        <button
+                          type="submit"
+                          data-attach-loading
+                          class="btn inline-block rounded-full font-bold no-underline transition border-[unset] border-4 px-8 py-4 lg:px-8 lg:border-4 text-lg lg:text-xl xl:text-2xl hover:bg-custom_red hover:border-custom_red hover:text-white w-full text-center">
+                          Sign in
+                        </button>
+                      </div>
+                    </form>
+                  </section>
+
+                  <section x-show="recover" style="display: none">
+                    <form
+                      method="POST"
+                      action="https://eccb2026.org/account/login"
+                      accept-charset="UTF-8"
+                      data-request="onRecoverPassword"
+                      data-request-flash>
+                      <input name="_session_key" type="hidden" value="7BQgiK4Rg0J3nToUXBSx2ePBZ7xKApbIag77GP5v" /><input
+                        name="_token"
+                        type="hidden"
+                        value="jHZHSJBXAwDyt7jxHIVRFeSjW1v9pCPlVSwVKHCY" />
+
+                      <div class="prose-sm prose lg:prose-base">
+                        <p>
+                          <strong>Lost your password?</strong><br />
+                          Enter your email address and we will send you a link to choose a new one.
+                        </p>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="recoverEmail"> Email </label>
+
+                        <input
+                          type="email"
+                          name="email"
+                          id="recoverEmail"
+                          class="form-control white borderless"
+                          value=""
+                          placeholder="Your email adress" />
+
+                        <span data-validate-for="recoverEmail"></span>
+                      </div>
+                      <div class="my-4">
+                        <button
+                          type="submit"
+                          data-attach-loading
+                          class="btn inline-block rounded-full font-bold no-underline transition border-[unset] border-4 px-8 py-4 lg:px-8 lg:border-4 text-lg lg:text-xl xl:text-2xl hover:bg-custom_red hover:border-custom_red hover:text-white w-full text-center">
+                          Send reset link
+                        </button>
+                      </div>
+
+                      <div class="text-sm lg:text-base">
+                        <a href="javascript:;" @click.prevent="recover = false"> Back to sign in </a>
+                      </div>
+                    </form>
+                  </section>
+
+                  <div class="pt-8 mt-8 border-t">
+                    <div class="prose-sm prose lg:prose-base">
+                      <p>
+                        Don't have an account yet? <br />
+                        <a href="sign-up.html">Create an account</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <div data-ajax-partial="template/footer">
+        <footer id="footer" class="flex flex-col items-stretch justify-end text-base lg:text-lg">
+          <div class="px-4 py-12 space-y-12 lg:px-8 lg:py-24 lg:space-y-20">
+            <div
+              id="footer-grid"
+              class="grid grid-cols-1 gap-8 md:grid-cols-[auto_auto] lg:grid-cols-[auto_auto_auto_auto] md:gap-12 xl:gap-16">
+              <div class="prose lg:prose-lg prose-invert lg:row-span-2">
+                <h4>About SIB</h4>
+                <p>
+                  The SIB Swiss Institute of Bioinformatics is an internationally recognized non-profit organization,
+                  dedicated to biological and biomedical data science. Its data scientists are passionate about creating
+                  knowledge and solving complex questions in many fields, from biodiversity and evolution to medicine.
+                  They provide essential databases and software platforms as well as bioinformatics expertise and
+                  services to academic, clinical, and industry groups. SIB federates the Swiss bioinformatics community
+                  of some 800 scientists, encouraging collaboration and knowledge sharing.
+                </p>
+              </div>
+
+              <div class="prose lg:prose-lg prose-invert lg:row-span-2">
+                <h4>Contact</h4>
+                <p>SIB Swiss Institute of Bioinformatics<br />Switzerland</p>
+                <p><a class="btn btn-primary" href="../contact.html">contact us</a></p>
+              </div>
+
+              <div>
+                <div class="prose lg:prose-lg prose-invert">
+                  <h4>Follow us</h4>
+                </div>
+
+                <div class="social-icons">
+                  <div class="flex flex-wrap items-center -mx-4">
+                    <a
+                      class="px-4 py-2 transition hover:opacity-80"
+                      href="https://www.linkedin.com/company/eccb-european-conference-on-computational-biology"
+                      title="LinkedIn"
+                      target="_blank">
+                      <div class="social-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-auto h-10 lg:h-12"
+                          fill="currentColor"
+                          height="30"
+                          width="26"
+                          viewBox="0 0 448 512">
+                          <path
+                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                        </svg>
+                      </div>
+                      <span class="sr-only">on LinkedIn</span>
+                    </a>
+                    <a
+                      class="px-4 py-2 transition hover:opacity-80"
+                      href="https://bsky.app/profile/eccb-europe.bsky.social"
+                      title="Bluesky"
+                      target="_blank">
+                      <div class="social-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-auto h-10 lg:h-12"
+                          fill="currentColor"
+                          viewBox="0 0 512 512">
+                          <path
+                            d="M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2c42.1-31.6 110.3-56 110.3 21.8c0 15.5-8.9 130.5-14.1 149.2C478.2 298 412 314.6 353.1 304.5c102.9 17.5 129.1 75.5 72.5 133.5c-107.4 110.2-154.3-27.6-166.3-62.9l0 0c-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8l0 0c-12 35.3-59 173.1-166.3 62.9c-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1C10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z" />
+                        </svg>
+                      </div>
+                      <span class="sr-only">on Bluesky</span>
+                    </a>
+                    <a
+                      class="px-4 py-2 transition hover:opacity-80"
+                      href="https://mstdn.science/@SIB"
+                      title="Mastodon"
+                      target="_blank">
+                      <div class="social-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-auto h-10 lg:h-12"
+                          fill="currentColor"
+                          height="30"
+                          width="26"
+                          viewBox="0 0 448 512">
+                          <path
+                            d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z" />
+                        </svg>
+                      </div>
+                      <span class="sr-only">on Mastodon</span>
+                    </a>
+                    <a
+                      class="px-4 py-2 transition hover:opacity-80"
+                      href="https://www.youtube.com/channel/UCPo4ED_WAKjwQ878cca6_oQ"
+                      title="YouTube"
+                      target="_blank">
+                      <div class="social-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="w-auto h-10 lg:h-12"
+                          fill="currentColor"
+                          height="30"
+                          width="33.75"
+                          viewBox="0 0 576 512">
+                          <path
+                            d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
+                        </svg>
+                      </div>
+                      <span class="sr-only">on YouTube</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lg:mr-4 xl:mr-8 2xl:mr-12">
+                <div class="prose lg:prose-lg prose-invert">
+                  <h4>More</h4>
+                </div>
+                <div id="footer-more-links">
+                  <ul>
+                    <li role="presentation" class="  ">
+                      <a href="https://www.sib.swiss/" target="_blank"> More information </a>
+                    </li>
+                    <li role="presentation" class="  ">
+                      <a href="https://www.sib.swiss/privacy-policy" target="_blank"> Privacy Policy </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="lg:col-start-3 lg:col-span-2 lg:self-end">
+                <div class="flex items-center justify-center gap-4 lg:justify-start lg:gap-8">
+                  <h5 class="py-0 my-0">Organized by</h5>
+                  <img
+                    src="../themes/eccb/assets/images/sib_logo_white.svg"
+                    class="h-24 w-auto"
+                    width="180"
+                    height="96"
+                    alt="SIB Swiss Institute of Bioinformatics" />
+                </div>
+                <div
+                  class="mt-8 lg:mt-12 flex flex-col items-center justify-center lg:items-start gap-2 lg:justify-start">
+                  <h5 class="py-0 my-0">With the generous support of</h5>
+                  <div class="flex flex-wrap items-center justify-center gap-6 lg:justify-start">
+                    <a href="https://elixir-europe.org/" target="_blank" class="text-center">
+                      <img
+                        src="../storage/app/media/SPONSORING/ELIXIR_logo_negative_orange.svg"
+                        class="h-[9rem]"
+                        alt="Elixir" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="py-8 text-center">
+            <p>&copy; 2026 - SIB Swiss Institute of Bioinformatics</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="../assets/vendor/jquery-3.5.1.min.js"></script>
+
+    <script src="../themes/eccb/assets/build/assets/main-Cxy1tbCd.js"></script>
+  </body>
+</html>

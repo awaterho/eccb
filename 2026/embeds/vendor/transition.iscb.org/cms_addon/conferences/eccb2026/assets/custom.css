@@ -1,0 +1,65 @@
+label.area{
+    margin-left: 25px;
+    margin-right: 5px;
+}
+.areagroup{
+    float: right;
+    margin-right: 8px;
+}
+label.theme{
+    margin-left: 0px;
+}
+.subheading2{
+    margin-top: 25px;
+
+}
+div.index>a{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.speaker{
+    text-decoration: underline;
+    font-weight: bold;
+}
+.bigSessionDate{
+   /* margin-top: -10px; */
+    font-size: 20px;
+    margin: 15px;
+}
+.timeSpans{
+    font-weight: bold;
+    color: green;
+    margin-top: 8px;
+	width: 25%;
+	float: left;
+}
+.scheduledetails {
+	width: 75%;
+	float: right;
+}
+.schedulerow {
+	padding-bottom: 20px;
+}
+.scheduletitlerow {
+	margin: 0;
+}
+sup{
+    font-size: 75%;
+}
+.room{
+    margin-top: -10px;
+    font-size: 12pt;
+}
+.cosiRow{
+    margin: -10px 0 10px 0;
+}
+.showToggle3{
+    cursor:pointer;
+}
+ul.authorsList{
+    list-style-type:none;
+    margin-left:0;
+}
+.modal-dialog{
+    background-color: white;
+}

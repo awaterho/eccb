@@ -1,0 +1,10 @@
+#page_bg{background:#fff;}
+div#wrapper{background:#f7f7f7 url(../images/white/mw_shadow_l.png) 0 0 repeat-y;}
+div#wrapper_r{background:url(../images/white/mw_shadow_r.png) 100% 0 repeat-y;}
+div#header{background:url(../images/white/mw_header_t.png) 0 0 repeat-x;}
+div#header_l{background:url(../images/white/mw_header_t_l.png) 0 0 no-repeat;}
+div#header_r{background:url(../images/white/mw_header_t_r.png) 100% 0 no-repeat;}
+div#footer{background:#f7f7f7 url(../images/white/mw_footer_b.png) 0 100% repeat-x;}
+div#footer_l{background:url(../images/white/mw_footer_b_l.png) 0 0 no-repeat;}
+div#footer_r{background:url(../images/white/mw_footer_b_r.png) 100% 0 no-repeat;font-size:9px;}
+div#iscb_banner{background:url(../../../../../../images/stories/banners-iscb/misc-banner5.jpg) no-repeat 0px 0px;height:44px;width:97%;margin:0px 0px 10px;background-position:center top;}
